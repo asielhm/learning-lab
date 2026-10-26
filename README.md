@@ -6,7 +6,7 @@ An educational activity platform with a landing page and a **Year → Subject �
 
 **Y9 → Science → Circulatory system → Inside the human heart**
 
-Heart Lab retains its body-location illustration, rotatable 3D heart, re-center control and 12-stage guided dissection. Its standalone page and files are in `activities/y9/science/circulatory-system/`. The lesson has breadcrumb links back to its topic, subject, year and the platform home. The anatomical source model is unchanged; see [model attribution](MODEL-ATTRIBUTION.md) and the [lesson documentation](activities/y9/science/circulatory-system/README.md) for anatomy limitations.
+Heart Lab retains its body-location illustration, rotatable 3D heart, re-center control and separate revision page. Its dissection step now opens the user-selected [Heart Lab](https://asielhm.github.io/heart-lab-y9/) in a new tab; the previous local dissection has been retired. Its standalone page and files are in `activities/y9/science/circulatory-system/`. The lesson has breadcrumb links back to its topic, subject, year and the platform home. The anatomical source model is unchanged; see [model attribution](MODEL-ATTRIBUTION.md) and the [lesson documentation](activities/y9/science/circulatory-system/README.md) for anatomy limitations.
 
 **Y9 → Science → Breathing system → Inside the breathing system**
 
@@ -16,7 +16,7 @@ Both topic pages have a separate **revision simulator**, with **60 questions per
 
 **Y9 → Science → Gas laws → Gas laws: the particle lab**
 
-A sealed-gas simulator explores Boyle–Mariotte (constant temperature), Charles (constant pressure), and Gay-Lussac/Amontons (constant volume). Live P/V/T values, a particle diagram, graphs and measurement tables help students investigate each relationship. Nine gated observations and questions supply contextual feedback. All calculations use Kelvin. The ideal-gas model is illustrative, with a fixed particle count and no experiments at absolute zero. Files are in `activities/y9/science/gas-laws/`.
+A sealed-gas simulator explores Boyle–Mariotte (constant temperature), Charles (constant pressure), and Gay-Lussac/Amontons (constant volume). Live P/V/T values, a particle diagram, graphs and measurement tables help students investigate each relationship. Nine gated observations and questions supply contextual feedback. The classroom layout includes learning goals, three original labelled pictures, worked examples, and real-life connections to a capped syringe, a balloon and tyre pressure. Each example explains the limits of the idealised model. All calculations use Kelvin. The ideal-gas model is illustrative, with a fixed particle count and no experiments at absolute zero. Files are in `activities/y9/science/gas-laws/`.
 
 Y9 Science shows exactly three main web-app cards: Circulatory system, Breathing system and Gas laws. Each topic's `primaryActivity` ID selects its main card and `appTitle` supplies its label. Revision simulators stay on separate pages, linked from the main apps and as secondary study links; they are not extra main app cards. Direct topic routes remain available for bookmarks and breadcrumbs.
 
@@ -58,7 +58,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Use the server for local browsing; opening files with `file://` prevents catalogue and model loading in some browsers. The landing page needs no third-party network requests. Heart Lab loads its pinned Three.js modules from `cdn.jsdelivr.net`.
 
-Check home, all years, the Y9 Science topic/activity path, an empty year, browser Back, direct catalogue links, an invalid route, and the lesson's breadcrumb links. In Heart Lab, verify model loading, re-centering, practical/question gates and incision tracing on desktop and touch viewports.
+Check home, all years, the Y9 Science topic/activity path, an empty year, browser Back, direct catalogue links, an invalid route, and the lesson's breadcrumb links. In Heart Lab, verify model loading, re-centering, anatomy selection, touch navigation and both links to the replacement dissection page.
 
 ## GitHub Pages
 

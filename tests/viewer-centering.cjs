@@ -24,8 +24,9 @@ for(const [topic,script,object,loading,recenter] of [['circulatory-system','app.
   await page.locator('[data-section="1"]').click();await page.locator('#inhale').click();await page.locator('#breathDepth').fill('100');await page.locator(recenter).click();await check('full inhalation');await page.locator('#exhale').click();await page.locator(recenter).click();await check('exhalation');await page.locator('[data-section="0"]').click();await check('return to anatomy');
  }else{
   await page.locator('[data-page="0"]').click();await page.locator('[data-page="1"]').click();await check('return to anatomy');
-  await page.locator('[data-page="2"]').click();await page.evaluate(()=>{for(let i=0;i<4;i++){document.querySelector(`[data-tool="${['observe','forceps','observe','probe'][i]}"]`).click();document.querySelectorAll('#dissectTasks button').forEach(b=>b.click());document.querySelectorAll('#dissectAnswers button')[[0,1,0,2][i]].click();document.querySelector('#actionDissect').click()}});await page.locator('[data-tool="scissors"]').click();await page.locator('#nextCut').click();await page.locator(recenter).click();assert.match(await page.locator('#nextCut').innerText(),/2 of 4/);await check('cutting stage; progress preserved');
-  const points=await page.locator('#incisionGuide g').evaluateAll(nodes=>nodes.map(node=>{const b=node.getBoundingClientRect(),r=node.ownerSVGElement.getBoundingClientRect();return{x:b.x+b.width/2-r.x,y:b.y+b.height/2-r.y,w:r.width,h:r.height}}));assert(points.every(p=>p.x>0&&p.x<p.w&&p.y>0&&p.y<p.h),'Incision guide stays inside framed heart');
+  assert.equal(await page.locator('.step.dissection-link').getAttribute('href'),'https://asielhm.github.io/heart-lab-y9/');
+  assert.equal(await page.locator('#panelDissect').count(),0,'The previous dissection is replaced');
+
  }
  await page.setViewportSize({width:390,height:844});await page.locator(recenter).click();await check('mobile final');await page.screenshot({path:`/tmp/${topic}-centered.png`,fullPage:true});assert.deepEqual(errors,[]);await page.close();
 }

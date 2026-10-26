@@ -30,7 +30,7 @@
                 {
                   "id": "heart-lab",
                   "title": "Inside the human heart",
-                  "description": "Locate the heart, explore its 3D anatomy and work through a guided 12-stage virtual dissection.",
+                  "description": "Locate the heart, explore its rotatable 3D anatomy and open the dedicated Heart Lab page for virtual dissection.",
                   "format": "Interactive 3D lab",
                   "duration": "20\u201330 min",
                   "image": "activities/y9/science/circulatory-system/models/heart-anterior.png",
