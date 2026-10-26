@@ -1,4 +1,4 @@
-import {recorder} from '../records/records.js?v=sheets-1';
+import {recorder} from '../records/records.js?v=identity-2';
 const root = document.querySelector('#revision-app');
 const escape = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const difficulties = ['Foundation', 'Application', 'Challenge'];
@@ -41,15 +41,16 @@ function focus(selector) {
 }
 function renderSetup(moveFocus = false) {
   session = null;
-  root.innerHTML = `${header()}<section class="revision-setup" aria-labelledby="setup-title"><div class="revision-section-heading"><div><p class="revision-eyebrow">MAKE IT YOUR SESSION</p><h2 id="setup-title" tabindex="-1">How would you like to practise?</h2></div><span class="revision-session-icon" aria-hidden="true">?</span></div><form id="revision-settings">${recorder.fields()}<div class="revision-filters"><label>Question area<select id="revision-category" name="category"><option value="all">Mixed: all areas</option>${bank.categories.map(category=>`<option value="${escape(category)}" ${settings.category===category?'selected':''}>${escape(category)}</option>`).join('')}</select></label><label>Question level<select id="revision-difficulty" name="difficulty"><option value="all">Mixed: all levels</option>${difficulties.map(difficulty=>`<option ${settings.difficulty===difficulty?'selected':''}>${escape(difficulty)}</option>`).join('')}</select></label><label>Session length<select id="revision-length" name="length">${[['10','10 questions'],['20','20 questions'],['all','All matching questions']].map(([value,label])=>`<option value="${value}" ${settings.length===value?'selected':''}>${label}</option>`).join('')}</select></label></div><fieldset class="revision-mode"><legend>Choose a mode</legend><label class="revision-mode-card"><input type="radio" name="mode" value="practice" ${settings.mode==='practice'?'checked':''}><span><b>Practice</b><small>Get an explanation after each answer.</small></span></label><label class="revision-mode-card"><input type="radio" name="mode" value="test" ${settings.mode==='test'?'checked':''}><span><b>Test yourself</b><small>Review answers and explanations at the end.</small></span></label></fieldset><div class="revision-setup-bottom"><p id="revision-availability" role="status" aria-live="polite"></p><button class="revision-btn revision-primary" id="start-session" type="submit">Start session <span aria-hidden="true">→</span></button></div></form>${recorder.markup()}</section><aside class="revision-study-note"><b>A fresh mix, every session.</b><p>Questions and answer positions are shuffled. Each question appears once per session. Afterwards, review the explanations or retry only the questions you missed.</p></aside>`;
-  root.querySelector('#revision-settings').addEventListener('submit', event => {event.preventDefault(); if (recorder.identify(event.currentTarget)) startSession();});
+  root.innerHTML = `${header()}<section class="revision-setup" aria-labelledby="setup-title"><div class="revision-section-heading"><div><p class="revision-eyebrow">MAKE IT YOUR SESSION</p><h2 id="setup-title" tabindex="-1">How would you like to practise?</h2></div><span class="revision-session-icon" aria-hidden="true">?</span></div><form id="revision-settings"><div class="revision-filters"><label>Question area<select id="revision-category" name="category"><option value="all">Mixed: all areas</option>${bank.categories.map(category=>`<option value="${escape(category)}" ${settings.category===category?'selected':''}>${escape(category)}</option>`).join('')}</select></label><label>Question level<select id="revision-difficulty" name="difficulty"><option value="all">Mixed: all levels</option>${difficulties.map(difficulty=>`<option ${settings.difficulty===difficulty?'selected':''}>${escape(difficulty)}</option>`).join('')}</select></label><label>Session length<select id="revision-length" name="length">${[['10','10 questions'],['20','20 questions'],['all','All matching questions']].map(([value,label])=>`<option value="${value}" ${settings.length===value?'selected':''}>${label}</option>`).join('')}</select></label></div><fieldset class="revision-mode"><legend>Choose a mode</legend><label class="revision-mode-card"><input type="radio" name="mode" value="practice" ${settings.mode==='practice'?'checked':''}><span><b>Practice</b><small>Get an explanation after each answer.</small></span></label><label class="revision-mode-card"><input type="radio" name="mode" value="test" ${settings.mode==='test'?'checked':''}><span><b>Test yourself</b><small>Review answers and explanations at the end.</small></span></label></fieldset>${recorder.fields()}<div class="revision-setup-bottom"><p id="revision-availability" role="status" aria-live="polite"></p><button class="revision-btn revision-primary" id="start-session" type="submit">Start session <span aria-hidden="true">→</span></button></div></form>${recorder.markup()}</section><aside class="revision-study-note"><b>A fresh mix, every session.</b><p>Questions and answer positions are shuffled. Each question appears once per session. Afterwards, review the explanations or retry only the questions you missed.</p></aside>`;
+  root.querySelector('#revision-settings').addEventListener('submit', event => {event.preventDefault(); if (settings.mode !== 'test' || recorder.identify(event.currentTarget)) startSession();});
   root.querySelector('#revision-settings').addEventListener('change', () => {
     const form = new FormData(root.querySelector('#revision-settings'));
     settings = Object.fromEntries(['category','difficulty','length','mode'].map(key=>[key,form.get(key)]));
+    recorder.syncMode(root, settings.mode);
     updateAvailability();
   });
   updateAvailability();
-  recorder.refresh(root);
+  recorder.syncMode(root, settings.mode);
   if (moveFocus) focus('#setup-title');
 }
 function updateAvailability() {
@@ -72,6 +73,7 @@ function startSession(retryQuestions = null) {
   renderQuestion(true);
 }
 function renderQuestion(moveFocus = false, feedbackFocus = false) {
+  root.dataset.recordingMode = session.mode;
   const item = session.items[session.index];
   const {question} = item;
   const answered = session.items.filter(entry=>entry.submitted).length;
@@ -106,6 +108,7 @@ function renderQuestion(moveFocus = false, feedbackFocus = false) {
   else if (moveFocus) focus('#revision-question-title');
 }
 function renderResults() {
+  root.dataset.recordingMode = session.mode;
   const correct = session.items.filter(isCorrect).length;
   const total = session.items.length;
   const missed = session.items.filter(item=>!isCorrect(item));

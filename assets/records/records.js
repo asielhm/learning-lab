@@ -15,11 +15,13 @@ function store(key, value) {
   try {sessionStorage.setItem(key, JSON.stringify(value)); return true;} catch {return false;}
 }
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let profile = read(PROFILE_KEY, {name:'', classroom:''});
-if (typeof profile.name !== 'string' || typeof profile.classroom !== 'string') profile = {name:'', classroom:''};
+let profile = read(PROFILE_KEY, {name:'', classroom:'', teacherName:''});
+if (typeof profile.name !== 'string' || typeof profile.classroom !== 'string') profile = {name:'', classroom:'', teacherName:''};
+if (typeof profile.teacherName !== 'string') profile.teacherName = '';
 let queue = read(QUEUE_KEY, []);
 if (!Array.isArray(queue)) queue = [];
-queue = queue.filter(item => item && typeof item.eventId === 'string' && typeof item.studentName === 'string');
+queue = queue.filter(item => item && typeof item.eventId === 'string' && typeof item.studentName === 'string' && item.mode === 'test' && item.retry === false);
+store(QUEUE_KEY, queue);
 let config, sending = false, lastError = '', savedCount = 0, retryTimer;
 let durable = true;
 const notify = () => document.dispatchEvent(new Event('learning-lab-recording-change'));
@@ -78,16 +80,26 @@ export const recorder = {
   get enabled() {return !!config?.url;},
   fields() {
     if (!this.enabled) return '';
-    return `<fieldset class="record-student"><legend>Your teacher’s record</legend><p>Your name, class and quiz answers will be sent to your teacher’s private results sheet. Use the name your teacher asks you to use.</p><div class="record-identity"><label>Student name<input id="record-student-name" name="studentName" required maxlength="100" autocomplete="off" value="${escape(profile.name)}"></label><label>Class <span>(optional)</span><input name="classroom" maxlength="60" autocomplete="off" value="${escape(profile.classroom)}"></label></div><p>On a shared device, check that these details are yours.</p></fieldset>`;
+    return `<fieldset id="record-student-fields" class="record-student" hidden disabled><legend>Your teacher’s record</legend><p>Complete all three fields for Test yourself. Your details and test answers will be sent to your teacher’s private results sheet.</p><div class="record-identity"><label>Student name<input id="record-student-name" name="studentName" required maxlength="100" autocomplete="off" value="${escape(profile.name)}"></label><label>Class<input name="classroom" required maxlength="60" autocomplete="off" value="${escape(profile.classroom)}"></label><label>Teacher’s name<input name="teacherName" required maxlength="100" autocomplete="off" value="${escape(profile.teacherName)}"></label></div><p>Use the names your teacher asks you to use. On a shared device, check that these details are yours.</p></fieldset>`;
+  },
+  syncMode(scope, mode) {
+    scope.dataset.recordingMode = mode;
+    const fields = scope.querySelector('#record-student-fields');
+    if (fields) {fields.hidden = mode !== 'test'; fields.disabled = mode !== 'test';}
+    this.refresh(scope);
   },
   identify(form) {
     if (!this.enabled) return true;
-    const input = form.querySelector('[name=studentName]');
     const data = new FormData(form);
-    const name = String(data.get('studentName') || '').trim();
-    input.setCustomValidity(name ? '' : 'Enter the name your teacher asks you to use.');
-    if (!name) {input.reportValidity(); input.addEventListener('input', () => input.setCustomValidity(''), {once:true}); return false;}
-    profile = {name, classroom:String(data.get('classroom') || '').trim()};
+    const identity = {};
+    for (const [field, key, message] of [['studentName','name','Enter your student name.'],['classroom','classroom','Enter your class.'],['teacherName','teacherName','Enter your teacher’s name.']]) {
+      const input = form.querySelector(`[name=${field}]`);
+      const value = String(data.get(field) || '').trim();
+      input.setCustomValidity(value ? '' : message);
+      if (!value) {input.reportValidity(); input.addEventListener('input', () => input.setCustomValidity(''), {once:true}); return false;}
+      identity[key] = value;
+    }
+    profile = identity;
     store(PROFILE_KEY, profile);
     return true;
   },
@@ -98,15 +110,16 @@ export const recorder = {
     if (!node) return;
     if (!config?.url) node.textContent = config?.available ? 'Practice only: teacher recording has not been connected yet.' : 'Teacher recording is unavailable. Answers will not be sent.';
     else if (queue.length) node.textContent = `${queue.length} answer${queue.length === 1 ? '' : 's'} waiting to save. ${lastError ? 'Connection not confirmed. ' : ''}Keep this tab open.${!durable ? ' This browser cannot retain pending answers after a reload.' : ''}`;
-    else node.textContent = savedCount ? 'All submitted answers in this tab have been saved to your teacher’s record.' : `Recording for ${profile.name || 'your teacher'}. Answers are sent when you submit them.`;
+    else if (scope.dataset.recordingMode !== 'test') node.textContent = 'Practice and retry rounds are not sent to your teacher. Only Test yourself results are recorded.';
+    else node.textContent = savedCount ? 'All submitted test answers in this tab have been saved to your teacher’s record.' : `Test recording for ${profile.name || 'your teacher'}. Answers are sent when you submit them.`;
     const button = scope.querySelector('[data-record-retry]');
     if (button) {button.hidden = !config?.url || !queue.length || sending; button.onclick = flush;}
   },
   record(session, item, topic, course) {
-    if (!this.enabled || !session.student.name) return;
+    if (!this.enabled || session.mode !== 'test' || session.retry || !session.student.name || !session.student.classroom || !session.student.teacherName) return;
     queue.push({
-      version:1, eventId:`${session.id}-${session.index + 1}`, sessionId:session.id,
-      studentName:session.student.name, classroom:session.student.classroom,
+      version:2, eventId:`${session.id}-${session.index + 1}`, sessionId:session.id,
+      studentName:session.student.name, classroom:session.student.classroom, teacherName:session.student.teacherName,
       course, topic, mode:session.mode, retry:session.retry,
       startedAt:session.startedAt, questionNumber:session.index + 1, totalQuestions:session.items.length,
       questionId:item.question.id, selectedAnswer:item.options[item.selection].text
