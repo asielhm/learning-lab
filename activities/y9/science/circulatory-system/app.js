@@ -1,3 +1,4 @@
+import { centerSpecimen } from '../../../../assets/viewer-framing.js';
 import { stages, anatomyDiagram } from './dissection.js';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -18,7 +19,6 @@ const descriptions={
 const list=Object.keys(descriptions); let page=0,stage=0,selected=null,model=null,camera,scene,renderer,controls,ready=false,mouse=new THREE.Vector2(),raycaster=new THREE.Raycaster();
 const progress = stages.map(() => ({tasks:new Set(), cut:0, answer:null, correct:false}));
 let tool='observe', completed=false, guideNodes=[], tracing=false, membrane=null;
-const specimenBounds=new THREE.Box3();
 let viewerWidth=0,viewerHeight=0;
 const reveal={right:{value:0},left:{value:0},aorta:{value:0}};
 const revealTargets={right:0,left:0,aorta:0};
@@ -39,7 +39,7 @@ function setPage(n){
  $('#modelCaption').textContent=n===0?'Anatomical heart in an illustrative torso · not to scale':'BodyParts3D model · CC BY 4.0';
  if(n>0)loadModel();
  if(n===2)renderStage();else {setHidden([]);select(null);$('#incisionGuide').setAttribute('hidden','');$('#specimenStatus').hidden=true;$('#completionPanel').hidden=true;}
- updateSpecimen();resize();
+ updateSpecimen();resize();if(n>0)recenterModel();
 }
 function practicalDone(){const s=stages[stage],p=progress[stage];return [...(s.targets||[]),...(s.tasks||[]).map(x=>x[0])].every(id=>p.tasks.has(id))&&(!s.cut||p.cut===4)}
 function updateGates(){
@@ -193,26 +193,14 @@ function loadModel(){if(ready)return;ready=true;
  });
  new GLTFLoader().load('./models/heart.glb',g=>{
  model=g.scene;model.traverse(o=>{if(o.isMesh)installCutaway(o)});
- const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());const scale=3.6/Math.max(size.x,size.y,size.z);model.scale.setScalar(scale);model.position.copy(center).multiplyScalar(-scale);scene.add(model);specimenBounds.setFromObject(model);
+ const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());const scale=3.6/Math.max(size.x,size.y,size.z);model.scale.setScalar(scale);model.position.copy(center).multiplyScalar(-scale);scene.add(model);
  membrane=new THREE.Mesh(new THREE.SphereGeometry(1,40,28),new THREE.MeshPhysicalMaterial({color:0xcee3df,transparent:true,opacity:.19,roughness:.35,side:THREE.DoubleSide,depthWrite:false}));membrane.scale.set(1.27,1.5,1.35);membrane.position.set(0,-.16,.1);membrane.userData.helper=true;model.add(membrane);
  recenterModel();$('#loading').hidden=true;updateSpecimen();if(page===2)updateGates();resize();
  },undefined,err=>{$('#loading').textContent='Could not load the heart model. Check models/heart.glb and reload. '+(err.message||'')});
  function frame(){requestAnimationFrame(frame);controls.update();for(const key of Object.keys(reveal)){reveal[key].value=THREE.MathUtils.lerp(reveal[key].value,revealTargets[key],.085);if(Math.abs(reveal[key].value-revealTargets[key])<.001)reveal[key].value=revealTargets[key];}if(page>0)renderer.render(scene,camera);}frame();new ResizeObserver(resize).observe(holder);resize();
 }
 function recenterModel(){
- if(!model||!camera||!controls||specimenBounds.isEmpty())return;
- const holder=$('#canvas');
- if(holder.clientWidth&&holder.clientHeight){camera.aspect=holder.clientWidth/holder.clientHeight;camera.updateProjectionMatrix();}
- const center=specimenBounds.getCenter(new THREE.Vector3());
- const size=specimenBounds.getSize(new THREE.Vector3());
- const halfFov=THREE.MathUtils.degToRad(camera.fov/2);
- // Fit both dimensions with space around the specimen, including its depth.
- const distance=Math.max(size.y,size.x/camera.aspect)/(2*Math.tan(halfFov)) * 1.15+size.z/2;
- const damping=controls.enableDamping;
- controls.enableDamping=false;controls.update(); // Consume any remaining rotation momentum.
- controls.maxDistance=Math.max(14,distance*2);
- controls.target.copy(center);camera.position.copy(center).add(new THREE.Vector3(0,0,distance));
- controls.update();controls.enableDamping=damping;
+ centerSpecimen(THREE,camera,controls,model,$('#canvas'));
  updateGuidePosition();
 }
 function resize(){

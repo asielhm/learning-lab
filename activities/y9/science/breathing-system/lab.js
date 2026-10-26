@@ -1,3 +1,4 @@
+import { centerSpecimen } from '../../../../assets/viewer-framing.js';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const structures = {
@@ -50,7 +51,7 @@ function setSection(index) {
   $('#sceneTag').textContent = index === 2 ? 'ENLARGED TEACHING SECTION' : '3D TEACHING MODEL';
   $('#modelCaption').textContent = index === 2 ? 'Alveolus and capillary · schematic section' : 'Schematic teaching model · not to scale';
   if(index === 2) renderInvestigation();
-  resize(); updateBreathing();
+  resize(); updateBreathing(); if(index !== 2) recenter();
 }
 function updatePlayback() { $('#playBreath').textContent = playing ? 'Pause breathing' : 'Play breathing'; $('#playBreath').setAttribute('aria-pressed',String(playing)); }
 function updateBreathing() {
@@ -111,11 +112,7 @@ function setupKnowledgeChecks() {
   addAnswers($('#breathingAnswers'),$('#breathingFeedback'),['The diaphragm relaxes upward and thoracic volume falls','The diaphragm contracts and flattens; thoracic volume rises','The lungs contract like skeletal muscles'],1,'The diaphragm and external intercostal muscles increase thoracic volume. The lungs follow the expanding chest wall; air enters because of a pressure difference.');
 }
 function recenter() {
-  if(!camera||!controls)return;
-  const previousDamping=controls.enableDamping;controls.enableDamping=false;controls.update();
-  const aspect=$('#canvas').clientWidth/Math.max(1,$('#canvas').clientHeight);
-  const distance=Math.max(7.6,6.8/Math.max(.6,aspect));
-  controls.maxDistance=Math.max(14,distance*1.6);controls.target.set(0,.18,0);camera.position.set(0,.18,distance);controls.update();controls.enableDamping=previousDamping;
+  if(THREE) centerSpecimen(THREE,camera,controls,specimen,$('#canvas'));
 }
 function resize() {
   if(!camera||!renderer)return;
