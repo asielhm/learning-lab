@@ -75,6 +75,7 @@ async function study(page, name, topic) {
     const errors = [];page.on('pageerror',e=>errors.push(e.message));
     await page.goto(base+'/');await page.locator('.year-tiles').waitFor();
     assert.equal(await page.locator('.year-tile').count(),6);
+    assert.match(await page.locator('.year-tile[href="#/years/y9"]').innerText(),/3 activities/);
     assert.equal(await page.locator('a[href="#/years/y13"]').count(),0);
     await page.goto(base+'/#/years/y9/science');await page.locator('.topic-apps .activity-card').first().waitFor();
     assert.equal(await page.locator('.topic-apps .activity-card').count(),3);

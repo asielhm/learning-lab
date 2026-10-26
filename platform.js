@@ -15,7 +15,8 @@ document.querySelector('.skip-link').addEventListener('click', event => {
 let catalogue;
 const escape = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const plural = (count, word) => `${count} ${count === 1 ? word : word === 'activity' ? 'activities' : word + 's'}`;
-const topicCount = subject => subject.topics.reduce((count, topic) => count + topic.activities.length, 0);
+// Main-app counts exclude the separate revision links shown below each app.
+const topicCount = subject => subject.topics.reduce((count, topic) => count + (topic.primaryActivity ? 1 : topic.activities.length), 0);
 const yearCount = year => year.subjects.reduce((count, subject) => count + topicCount(subject), 0);
 const route = (...ids) => '#/years' + (ids.length ? '/' + ids.map(encodeURIComponent).join('/') : '');
 const countLabel = count => count ? plural(count, 'activity') : 'Activities coming later';
