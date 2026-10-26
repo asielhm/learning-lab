@@ -74,7 +74,7 @@ The live root URL opens the platform. The heart lesson is at `activities/y9/scie
 
 ## Revision question banks and browser checks
 
-Questions live in `assets/revision/questions/algebra.json`, `circulatory.json`, `breathing.json` and `gas-laws.json`. Every question has a stable `id`, a category, a Foundation/Application/Challenge difficulty, four options, a zero-based `answer`, and an explanation. Practice gives immediate feedback; test mode waits until completion. Questions and choices shuffle independently, with no repeated question within a session. Students can review all answers and retry only their mistakes. Scores are per session and are not stored as accounts or shared with teachers.
+Questions live in `assets/revision/questions/algebra.json`, `circulatory.json`, `breathing.json` and `gas-laws.json`. Every question has a stable `id`, a category, a Foundation/Application/Challenge difficulty, four options, a zero-based `answer`, and an explanation. Practice gives immediate feedback; test mode waits until completion. Questions and choices shuffle independently, with no repeated question within a session. Students can review all answers and retry only their mistakes. Scores can be sent to the teacher’s private Google Sheet once its Apps Script deployment is configured. Without a deployment URL, the quizzes remain practice-only and clearly say recording is not connected.
 
 Run `python3 tools/validate_questions.py` after editing a bank. This checks unique IDs and prompts, four distinct choices, answer indices, categories and explanations. With Playwright installed and the static server running, `node tests/study-simulators.cjs` checks the catalogue, practice/test scoring, shuffled answers, targeted retries, filters, mobile keyboard/touch navigation and request-failure recovery. `BROWSER_HOME` can point to an environment-trusted Chromium home when the proxy certificate needs to be installed there; TLS verification stays enabled.
 
@@ -85,3 +85,11 @@ The rotatable heart and lung viewers start centered. One finger rotates; two fin
 The live platform is now https://asielhm.github.io/learning-lab/ and the Git origin is `asielhm/learning-lab`. Internal page and asset paths remain relative. `primaryActivity` determines each topic's main app card; additional revision pages remain secondary links. Shared revision wrappers can set `data-course` to their year/subject; existing Science pages keep their Year 9 default.
 
 For the algebra lesson, run `node tests/algebra-math.mjs` for symbolic checks, then `node tests/algebra-lab.cjs` with the static server and Playwright available for classroom interactions and revision scoring on desktop/mobile.
+
+## Teacher results and Google Sheets
+
+The teacher entry is `teacher/`, with a one-time installation guide at `teacher/setup.html`. Source files in `google-apps-script/` are preconfigured for the spreadsheet supplied by the teacher. They must be installed and authorised by its owner; the cloud environment has no authenticated Google access. After receiving the Apps Script Web app URL ending in `/exec`, set `deploymentUrl` in `assets/records/config.json` and publish. Never put the teacher password, Google credentials or student records in this repository.
+
+The shared revision engine records each submitted answer and the server creates a summary on quiz completion, across all four revision simulators. The teacher dashboard requires a server-validated password and supports filtered, paginated results. See [Google deployment and security notes](google-apps-script/README.md). Inline lesson checks and the external Heart Lab are outside this recorder.
+
+Run `node tests/google-records-server.cjs` and `node tests/google-records-browser.cjs` (with the static server available) for the recording-specific checks. The server test uses an in-memory Apps Script simulation; browser checks use simulated Google receipts. Live Google authorisation, deployment and a real sheet-write test remain required before claiming recording is active.
