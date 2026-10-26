@@ -1,32 +1,54 @@
-# Heart Lab — Y9 Circulatory System
+# Learning Lab
 
-A GitHub Pages–ready learning website built from the uploaded OrganUI heart model (`heart-3d-main`). No build tools are needed.
+An educational activity platform with a landing page and a **Year → Subject → Topic → Activity** catalogue. It is a static website, ready for GitHub Pages, with no build tools, accounts or backend required.
 
-## Lesson flow
+## Current activity
 
-1. **In the body** — illustrated location of the heart between the lungs.
-2. **Zoom into the heart** — a real rotatable anatomical GLB heart model; clicking structures displays their function.
-3. **Guided virtual dissection** — the 12-stage sequence supplied by the user from [Biology Junction’s heart dissection](https://biologyjunction.com/heart-dissection/): orientation; pericardium; external landmarks; major vessels; pulmonary/right ventricular incision; right-side opening; tricuspid apparatus and septum; pulmonary valve; left ventricular incision; left-side opening and mitral valve; aortic incision and valve; blood flow and ventricular comparison.
+**Y9 → Science → Circulatory system → Inside the human heart**
 
-Each stage requires its practical actions and a correct answer. Select Observe, Probe, Scissors or Forceps as directed. For incisions, press at checkpoint 1 and trace through the remaining highlighted checkpoints with a mouse or finger. A keyboard-accessible guided-cut button provides equivalent actions. Previous preserves completed work; resetting the dissection clears all tasks, answers, incisions and openings. The first two lesson sections retain their existing interactions. The body view uses an anatomical heart image rendered from the attributed GLB model (`models/heart-anterior.png`).
+Heart Lab retains its body-location illustration, rotatable 3D heart, re-center control and 12-stage guided dissection. Its standalone page and files are in `activities/y9/science/circulatory-system/`. The lesson has breadcrumb links back to its topic, subject, year and the platform home. The anatomical source model is unchanged; see [model attribution](MODEL-ATTRIBUTION.md) and the [lesson documentation](activities/y9/science/circulatory-system/README.md) for anatomy limitations.
 
-**Scientific limitations:** The pericardium is a simulated translucent teaching shell. The source GLB has one combined ventricular-wall mesh and solid cavity surfaces, so independent, animated viewing windows represent opening the free walls. They preserve the rest of the mesh but do not simulate tissue cutting, mechanical flaps or measured incision paths. Valve cusps, chordae tendineae, papillary muscles, pulmonary veins and inferior vena cava are not included in the source model. Labelled teaching sections supply the missing internal anatomy and identify the septum schematically. Wall thickness comparisons are illustrative, not measurements from the GLB. The torso is an illustrative SVG. The original source webpage could not be fetched in this environment; the stage mapping follows the 12-stage procedure text supplied by the user.
+The platform uses **Learning Lab** as a working name. Its branding is in `index.html` and `platform.css`.
 
-## Local development and validation
+## Add another activity
 
-No installation or build is needed. From this repository run `python3 -m http.server 8000 --bind 127.0.0.1`. The browser needs access to `cdn.jsdelivr.net` for the pinned Three.js modules. A complete browser check should exercise all 12 stages, verify action/question gates, retry an incorrect answer, trace each incision, and verify Previous, reset, exploration and body-view interactions. Check on both desktop and a touch viewport. No automated test framework is required by the application.
+1. Put the activity's `index.html` and supporting files in an activity folder, for example `activities/y8/maths/fractions/`. Keep its asset and script URLs relative to its own page.
+2. Open `catalog.json`. Find or add the year, then its subject, then its topic. Each year has `subjects`, each subject has `topics`, and each topic has `activities`. IDs are stable URL slugs; names are the text students see.
+3. Add the activity under the topic's `activities` array. Supply a unique `id`, `title`, `description`, `format`, `duration`, `href` and optional `image`. Paths are relative to the platform root, including on GitHub Pages.
+4. Add breadcrumb links from the lesson back to the platform. Use the existing Heart Lab as an example and adjust the relative path for the new folder depth.
+5. Run `python3 tools/validate_catalog.py`, then browse the activity locally. Publish the files and the catalogue together.
 
-## Publish on GitHub Pages
+Example activity entry:
 
-1. Create a new public GitHub repository (e.g. `y9-heart-lab`).
-2. Upload **all files**, retaining the `models/heart.glb` folder and `index.html` at repository root.
-3. Go to Settings → Pages → Build and deployment → Deploy from a branch → `main` → `/ (root)` → Save.
-4. Open `https://YOUR-USERNAME.github.io/y9-heart-lab/` after deployment.
+```json
+{
+  "id": "fractions-lab",
+  "title": "Explore fractions",
+  "description": "A short explanation of what students will do.",
+  "format": "Interactive activity",
+  "duration": "10–15 min",
+  "href": "activities/y8/maths/fractions/",
+  "image": "activities/y8/maths/fractions/cover.png"
+}
+```
 
-You can also publish from a repository you already have, by placing these files at its root (be aware that replacing its `index.html` will replace its old homepage).
+Year 7 through Year 13 have been reserved in the catalogue. Years without lessons display an honest empty state and links to available activities. Adding a subject, topic or activity to the catalogue automatically updates the navigation and counts; there are no extra menu files to edit. The landing page features the first available activity in catalogue order.
 
-The 3D viewer loads Three.js modules from jsDelivr CDN. Internet is needed at least on initial load. Opening `index.html` directly as a `file://` local file may not work because the browser blocks module/model loading. Use GitHub Pages or a local web server such as `python -m http.server 8000`.
+## Local development
 
-## Attribution
+From the repository root:
 
-The model `models/heart.glb` comes from the supplied OrganUI project and its BodyParts3D anatomical reconstruction. Model attribution and license information is in `MODEL-ATTRIBUTION.md`. BodyParts3D material is CC BY 4.0. Preserve attribution if you republish. The app page implementation is an original educational adaptation.
+```sh
+python3 tools/validate_catalog.py
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Use the server for local browsing; opening files with `file://` prevents catalogue and model loading in some browsers. The landing page needs no third-party network requests. Heart Lab loads its pinned Three.js modules from `cdn.jsdelivr.net`.
+
+Check home, all years, the Y9 Science topic/activity path, an empty year, browser Back, direct catalogue links, an invalid route, and the lesson's breadcrumb links. In Heart Lab, verify model loading, re-centering, practical/question gates and incision tracing on desktop and touch viewports.
+
+## GitHub Pages
+
+The repository already publishes from `main` at the repository root. Keep the new platform's `index.html`, `platform.js`, `platform.css`, `catalog.json` and the complete `activities/` tree together. All paths work under the repository subpath; no custom domain or deployment setting change is required.
+
+The live root URL opens the platform. The heart lesson is at `activities/y9/science/circulatory-system/`. Catalogue URLs use hash routes, such as `#/years/y9/science/circulatory-system`, so direct links and refreshes work on GitHub Pages without server-side routing.

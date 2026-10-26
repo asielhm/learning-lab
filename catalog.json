@@ -1,0 +1,40 @@
+{
+  "years": [
+    { "id": "y7", "name": "Year 7", "shortName": "Y7", "subjects": [] },
+    { "id": "y8", "name": "Year 8", "shortName": "Y8", "subjects": [] },
+    {
+      "id": "y9",
+      "name": "Year 9",
+      "shortName": "Y9",
+      "subjects": [
+        {
+          "id": "science",
+          "name": "Science",
+          "description": "Explore the natural world through observation, investigation and discovery.",
+          "topics": [
+            {
+              "id": "circulatory-system",
+              "name": "Circulatory system",
+              "description": "Discover how the heart and blood vessels keep the body supplied with oxygen.",
+              "activities": [
+                {
+                  "id": "heart-lab",
+                  "title": "Inside the human heart",
+                  "description": "Locate the heart, explore its 3D anatomy and work through a guided 12-stage virtual dissection.",
+                  "format": "Interactive 3D lab",
+                  "duration": "20–30 min",
+                  "image": "activities/y9/science/circulatory-system/models/heart-anterior.png",
+                  "href": "activities/y9/science/circulatory-system/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { "id": "y10", "name": "Year 10", "shortName": "Y10", "subjects": [] },
+    { "id": "y11", "name": "Year 11", "shortName": "Y11", "subjects": [] },
+    { "id": "y12", "name": "Year 12", "shortName": "Y12", "subjects": [] },
+    { "id": "y13", "name": "Year 13", "shortName": "Y13", "subjects": [] }
+  ]
+}

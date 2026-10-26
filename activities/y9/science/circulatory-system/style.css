@@ -6,3 +6,5 @@ button:disabled{cursor:default;opacity:.48}.next:disabled:hover{filter:none}
 @media(prefers-reduced-motion:reduce){#bodyHeart{animation:none}.progress div{transition:none}}
 @media(max-width:500px){.tools button{font-size:10px}.specimen-status{font-size:8px;padding:6px;left:10px;top:10px}.teaching-diagram{padding:10px}}
 @media(min-width:851px){.visual{position:sticky;top:16px;align-self:start}}
+
+.platform-breadcrumbs{background:#0c1421;border-bottom:1px solid #304257;font-size:12px}.platform-breadcrumbs>div{max-width:1250px;margin:auto;padding:12px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.platform-breadcrumbs a{color:#b6cddd;text-decoration:none}.platform-breadcrumbs a:hover{text-decoration:underline;color:#fff}.platform-breadcrumbs span{color:#637e91}
