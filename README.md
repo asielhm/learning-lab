@@ -14,6 +14,12 @@ Breathing Lab explores respiratory anatomy, ventilation and alveolar gas exchang
 
 Both topic pages have a separate **revision simulator**, with **60 questions per topic** (120 total), at `revision.html`. Students can choose practice (immediate explanations) or a test (review at the end), filter their question pool and retry mistakes. The common engine is in `assets/revision/`; each topic has its own JSON question bank in `assets/revision/questions/`. Revision pages are also listed as activities in the catalogue.
 
+**Y9 → Science → Gas laws → Gas laws: the particle lab**
+
+A sealed-gas simulator explores Boyle–Mariotte (constant temperature), Charles (constant pressure), and Gay-Lussac/Amontons (constant volume). Live P/V/T values, a particle diagram, graphs and measurement tables help students investigate each relationship. Nine gated observations and questions supply contextual feedback. All calculations use Kelvin. The ideal-gas model is illustrative, with a fixed particle count and no experiments at absolute zero. Files are in `activities/y9/science/gas-laws/`.
+
+Y9 Science shows exactly three main web-app cards: Circulatory system, Breathing system and Gas laws. Each topic's `primaryActivity` ID selects its main card and `appTitle` supplies its label. Revision simulators stay on separate pages, linked from the main apps and as secondary study links; they are not extra main app cards. Direct topic routes remain available for bookmarks and breadcrumbs.
+
 The platform uses **Learning Lab** as a working name. Its branding is in `index.html` and `platform.css`.
 
 ## Add another activity
@@ -65,3 +71,5 @@ The live root URL opens the platform. The heart lesson is at `activities/y9/scie
 Questions live in `assets/revision/questions/circulatory.json` and `breathing.json`. Every question has a stable `id`, a category, a Foundation/Application/Challenge difficulty, four options, a zero-based `answer`, and an explanation. Practice gives immediate feedback; test mode waits until completion. Questions and choices shuffle independently, with no repeated question within a session. Students can review all answers and retry only their mistakes. Scores are per session and are not stored as accounts or shared with teachers.
 
 Run `python3 tools/validate_questions.py` after editing a bank. This checks unique IDs and prompts, four distinct choices, answer indices, categories and explanations. With Playwright installed and the static server running, `node tests/study-simulators.cjs` checks the catalogue, practice/test scoring, shuffled answers, targeted retries, filters, mobile keyboard/touch navigation and request-failure recovery. `BROWSER_HOME` can point to an environment-trusted Chromium home when the proxy certificate needs to be installed there; TLS verification stays enabled.
+
+Additional browser checks: `node tests/breathing-lab.cjs` exercises the rendered lungs, anatomy, ventilation endpoints, pause and gas-exchange gates on desktop/mobile. `node tests/gas-laws.cjs` verifies the three app cards, numerical gas-law predictions, nine observation/question gates, recording/reset, Kelvin conversion and mobile controls.

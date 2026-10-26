@@ -55,7 +55,11 @@ def validate():
             for topic in children(subject, "topics", subject_path):
                 topic_path = subject_path + "/" + topic["id"]
                 text(topic, ("name", "description"), topic_path)
-                for activity in children(topic, "activities", topic_path):
+                activities = children(topic, "activities", topic_path)
+                if "primaryActivity" in topic:
+                    require(any(activity["id"] == topic["primaryActivity"] for activity in activities),
+                            f"{topic_path}: primaryActivity must reference an activity in this topic")
+                for activity in activities:
                     activity_path = topic_path + "/" + activity["id"]
                     text(activity, ("title", "description", "format", "duration", "href"), activity_path)
                     local_file(activity["href"], activity_path, directory=True)

@@ -45,7 +45,9 @@
                   "image": "activities/y9/science/circulatory-system/models/heart-anterior.png",
                   "href": "activities/y9/science/circulatory-system/revision.html"
                 }
-              ]
+              ],
+              "primaryActivity": "heart-lab",
+              "appTitle": "Circulatory system web app"
             },
             {
               "id": "breathing-system",
@@ -70,7 +72,27 @@
                   "image": "activities/y9/science/breathing-system/cover.svg",
                   "href": "activities/y9/science/breathing-system/revision.html"
                 }
-              ]
+              ],
+              "primaryActivity": "breathing-lab",
+              "appTitle": "Breathing system web app"
+            },
+            {
+              "id": "gas-laws",
+              "name": "Gas laws",
+              "description": "Investigate how pressure, volume and temperature are linked in a fixed amount of gas.",
+              "activities": [
+                {
+                  "id": "gas-laws-lab",
+                  "title": "Gas laws: the particle lab",
+                  "description": "Explore Boyle\u2013Mariotte, Charles and Gay-Lussac laws with a movable piston, live graphs, recorded measurements and guided challenges.",
+                  "format": "Interactive simulation",
+                  "duration": "20\u201330 min",
+                  "image": "activities/y9/science/gas-laws/cover.svg",
+                  "href": "activities/y9/science/gas-laws/"
+                }
+              ],
+              "primaryActivity": "gas-laws-lab",
+              "appTitle": "Gas laws web app"
             }
           ]
         }

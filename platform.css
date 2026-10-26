@@ -8,3 +8,5 @@
 .credits-link{display:block;font-size:9px;color:var(--muted);margin-top:5px;text-decoration:underline;text-underline-offset:3px}
 
 .inline-icon,.star-icon{display:inline-block;width:1em;height:1em;vertical-align:-.14em;flex-shrink:0}.brand-symbol>span .star-icon{display:block}.site-header nav a,.text-link,.activity-meta>span,.site-footer>a:last-child{align-items:center}.hero-note>span .star-icon{display:block}.card-arrow .inline-icon,.feature-open .inline-icon{width:17px;height:17px}.selection-icon .inline-icon{width:29px;height:29px}.button .inline-icon{width:17px;height:17px}.hero-empty .star-icon{width:90px;height:90px}.feature-specimen>.fallback-art{position:relative;z-index:1}
+
+.topic-entry{min-width:0}.topic-entry>.activity-card{display:block}.topic-study-links{padding:15px 5px;display:flex;flex-wrap:wrap;gap:12px}.topic-study-links a{font-size:12px;font-weight:650;text-decoration:underline;text-underline-offset:4px}.topic-study-links a:hover{color:#a3504c}

@@ -76,8 +76,8 @@ async function study(page, name, topic) {
     await page.goto(base+'/');await page.locator('.year-tiles').waitFor();
     assert.equal(await page.locator('.year-tile').count(),6);
     assert.equal(await page.locator('a[href="#/years/y13"]').count(),0);
-    await page.goto(base+'/#/years/y9/science');await page.locator('.selection-card').first().waitFor();
-    assert.equal(await page.locator('.selection-card').count(),2);
+    await page.goto(base+'/#/years/y9/science');await page.locator('.topic-apps .activity-card').first().waitFor();
+    assert.equal(await page.locator('.topic-apps .activity-card').count(),3);
     for (const [name,topic] of [['circulatory','circulatory-system'],['breathing','breathing-system']]) {
       await page.goto(base+'/#/years/y9/science/'+topic);await page.locator('.activity-card').first().waitFor();
       assert.equal(await page.locator('.activity-card').count(),2);
@@ -103,6 +103,6 @@ async function study(page, name, topic) {
     await failure.goto(`${base}/activities/y9/science/breathing-system/revision.html`);
     await failure.locator('#retry-bank').waitFor();await failure.unroute('**/questions/breathing.json');
     await failure.locator('#retry-bank').click();await failure.locator('#start-session').waitFor();
-    console.log('Catalogue: Y13 removed, two topics and separate lab/revision pages. Mobile keyboard/touch, focus, no overflow, bank-error recovery passed.');
+    console.log('Catalogue: Y13 removed, three main Science apps, and separate breathing/circulation revision pages. Mobile keyboard/touch, focus, no overflow, bank-error recovery passed.');
   } finally { await browser.close(); }
 })().catch(error=>{console.error(error);process.exitCode=1;});
