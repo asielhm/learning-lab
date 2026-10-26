@@ -7,6 +7,7 @@ BANKS = {
     "algebra.json": "algebra",
     "circulatory.json": "circulatory-system",
     "breathing.json": "breathing-system",
+    "gas-laws.json": "gas-laws",
 }
 DIFFICULTIES = {"Foundation", "Application", "Challenge"}
 

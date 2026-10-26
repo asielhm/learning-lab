@@ -1,0 +1,1136 @@
+{
+  "topicId": "gas-laws",
+  "title": "Gas laws",
+  "categories": [
+    "Temperature heat and Kelvin",
+    "Changes of state and thermal expansion",
+    "Pressure force and units",
+    "Boyle–Mariotte pressure and volume",
+    "Charles volume and temperature",
+    "Gay-Lussac pressure and temperature",
+    "Combined law and ideal-gas calculations",
+    "Avogadro moles and gas volume"
+  ],
+  "questions": [
+    {
+      "id": "g01",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Foundation",
+      "prompt": "Which quantity describes thermal energy transferred because of a temperature difference?",
+      "options": [
+        "Heat",
+        "Temperature",
+        "Pressure",
+        "Volume"
+      ],
+      "answer": 0,
+      "explanation": "Heat is energy transferred from a hotter body to a colder body because their temperatures differ."
+    },
+    {
+      "id": "g02",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Foundation",
+      "prompt": "Which is a unit of heat transferred?",
+      "options": [
+        "Pascal (Pa)",
+        "Joule (J)",
+        "Kelvin (K)",
+        "Degree Celsius (°C)"
+      ],
+      "answer": 1,
+      "explanation": "Heat is an energy transfer, so it is measured in joules. Kelvin and Celsius measure temperature."
+    },
+    {
+      "id": "g03",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Foundation",
+      "prompt": "For an ideal gas, a higher Kelvin temperature means a higher average…",
+      "options": [
+        "mass of each particle",
+        "volume of each particle",
+        "translational kinetic energy per particle",
+        "number of particles in every container"
+      ],
+      "answer": 2,
+      "explanation": "Kelvin temperature is proportional to the mean translational kinetic energy of ideal-gas particles."
+    },
+    {
+      "id": "g04",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Foundation",
+      "prompt": "Thermal energy transfers spontaneously between two touching bodies in which direction?",
+      "options": [
+        "From lower temperature to higher temperature",
+        "Always from the larger object to the smaller",
+        "Always from the denser object to the less dense",
+        "From higher temperature to lower temperature"
+      ],
+      "answer": 3,
+      "explanation": "The temperature difference determines the spontaneous direction of heat transfer."
+    },
+    {
+      "id": "g05",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Application",
+      "prompt": "Convert 27°C to Kelvin using 273.15.",
+      "options": [
+        "300.15 K",
+        "246.15 K",
+        "27 K",
+        "273.15 K"
+      ],
+      "answer": 0,
+      "explanation": "T(K) = temperature(°C) + 273.15, so 27 + 273.15 = 300.15 K."
+    },
+    {
+      "id": "g06",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Application",
+      "prompt": "Convert 300 K to Celsius.",
+      "options": [
+        "−26.85°C",
+        "26.85°C",
+        "573.15°C",
+        "300°C"
+      ],
+      "answer": 1,
+      "explanation": "Subtract 273.15: 300 − 273.15 = 26.85°C."
+    },
+    {
+      "id": "g07",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Foundation",
+      "prompt": "Which change doubles absolute temperature?",
+      "options": [
+        "0°C to 20°C",
+        "200 K to 300 K",
+        "300 K to 600 K",
+        "20°C to 40°C"
+      ],
+      "answer": 2,
+      "explanation": "Only Kelvin ratios describe changes in absolute temperature. 20°C to 40°C is about 293 K to 313 K, not a doubling."
+    },
+    {
+      "id": "g08",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Foundation",
+      "prompt": "Absolute zero corresponds to which temperature?",
+      "options": [
+        "0°C, or 273.15 K",
+        "−273.15 K",
+        "273.15°C",
+        "0 K, or −273.15°C"
+      ],
+      "answer": 3,
+      "explanation": "Absolute zero is the lower limit of thermodynamic temperature, not the freezing point of water."
+    },
+    {
+      "id": "g09",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Application",
+      "prompt": "An ideal gas is heated from 200 K to 400 K. What happens to its mean translational kinetic energy?",
+      "options": [
+        "It doubles",
+        "It stays the same",
+        "It halves",
+        "It becomes four times larger"
+      ],
+      "answer": 0,
+      "explanation": "Mean translational kinetic energy is proportional to Kelvin temperature."
+    },
+    {
+      "id": "g10",
+      "category": "Temperature heat and Kelvin",
+      "difficulty": "Challenge",
+      "prompt": "Which statement about extrapolating gas graphs toward 0 K is most accurate?",
+      "options": [
+        "A real gas can be cooled to negative Kelvin temperatures by simple cooling",
+        "It is an ideal-model extrapolation; a real gas may condense before reaching very low temperatures",
+        "Every gas stays gaseous all the way to 0 K",
+        "0 K means every material has no internal energy of any kind"
+      ],
+      "answer": 1,
+      "explanation": "Real gases can depart from the ideal-gas model, especially near changes of state. A backwards line is not a measurement made at 0 K."
+    },
+    {
+      "id": "g11",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Foundation",
+      "prompt": "What is the change from liquid to gas at the surface of a liquid called?",
+      "options": [
+        "Condensation",
+        "Melting",
+        "Evaporation",
+        "Freezing"
+      ],
+      "answer": 2,
+      "explanation": "Evaporation occurs at the surface and can happen below the boiling point."
+    },
+    {
+      "id": "g12",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Foundation",
+      "prompt": "Which statement distinguishes boiling from evaporation?",
+      "options": [
+        "Only evaporation changes a liquid into a gas",
+        "Boiling always occurs at 0°C",
+        "Evaporation requires bubbles throughout the liquid",
+        "Boiling forms vapour bubbles throughout the liquid; evaporation occurs at its surface"
+      ],
+      "answer": 3,
+      "explanation": "Boiling occurs throughout the liquid at its boiling temperature for the prevailing pressure."
+    },
+    {
+      "id": "g13",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Foundation",
+      "prompt": "What is condensation?",
+      "options": [
+        "Gas changing into liquid",
+        "Liquid changing into gas",
+        "Solid changing into liquid",
+        "Solid changing directly into gas"
+      ],
+      "answer": 0,
+      "explanation": "Cooling water vapour can lead to condensation into liquid droplets."
+    },
+    {
+      "id": "g14",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Foundation",
+      "prompt": "Dry ice changes directly from solid to gas. What is this called?",
+      "options": [
+        "Boiling",
+        "Sublimation",
+        "Melting",
+        "Condensation"
+      ],
+      "answer": 1,
+      "explanation": "Sublimation is a direct solid-to-gas change."
+    },
+    {
+      "id": "g15",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Foundation",
+      "prompt": "At ordinary atmospheric pressure of about 101 kPa, pure water boils at approximately…",
+      "options": [
+        "273°C",
+        "−100°C",
+        "100°C",
+        "0°C"
+      ],
+      "answer": 2,
+      "explanation": "Water boils at about 100°C near standard atmospheric pressure. Its boiling temperature changes when pressure changes."
+    },
+    {
+      "id": "g16",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Application",
+      "prompt": "During the melting plateau of a pure substance heated steadily at constant pressure, why does temperature remain nearly constant?",
+      "options": [
+        "The heater supplies no energy",
+        "All particles stop moving",
+        "The sample loses all its mass",
+        "Energy is used in the phase change rather than raising the mean kinetic energy"
+      ],
+      "answer": 3,
+      "explanation": "During the phase change, supplied energy changes the arrangement/interactions of particles instead of raising temperature."
+    },
+    {
+      "id": "g17",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Application",
+      "prompt": "A cooling curve has a flat section while a pure gas becomes liquid at constant pressure. Which change is occurring?",
+      "options": [
+        "Condensation",
+        "Sublimation",
+        "Melting",
+        "Evaporation"
+      ],
+      "answer": 0,
+      "explanation": "Gas and liquid may coexist while energy leaves during condensation."
+    },
+    {
+      "id": "g18",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Foundation",
+      "prompt": "Which statement best describes thermal expansion?",
+      "options": [
+        "Expansion always means a chemical reaction",
+        "Particle separations usually increase; the particles themselves do not simply swell",
+        "Every particle becomes a larger particle",
+        "The mass always doubles"
+      ],
+      "answer": 1,
+      "explanation": "Heating can increase average particle separation. The individual molecules do not expand like balloons."
+    },
+    {
+      "id": "g19",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Application",
+      "prompt": "A sealed balloon is cooled while outside pressure stays approximately constant. What usually happens to its volume?",
+      "options": [
+        "It doubles whatever the temperature change",
+        "It becomes zero at 0°C",
+        "It decreases",
+        "It must remain exactly fixed"
+      ],
+      "answer": 2,
+      "explanation": "Cooling lowers Kelvin temperature; a flexible gas container can contract. A balloon is only approximate because its rubber affects pressure."
+    },
+    {
+      "id": "g20",
+      "category": "Changes of state and thermal expansion",
+      "difficulty": "Challenge",
+      "prompt": "Which point is essential when comparing melting or boiling temperatures?",
+      "options": [
+        "Assume every substance melts at 0°C",
+        "Assume boiling points never depend on pressure",
+        "Ignore the identity of the substance",
+        "State the external pressure and whether the substance is pure"
+      ],
+      "answer": 3,
+      "explanation": "Changes-of-state temperatures depend on substance, purity and pressure."
+    },
+    {
+      "id": "g21",
+      "category": "Pressure force and units",
+      "difficulty": "Foundation",
+      "prompt": "Pressure is defined as…",
+      "options": [
+        "force divided by contact area",
+        "contact area divided by force",
+        "force multiplied by temperature",
+        "volume divided by temperature"
+      ],
+      "answer": 0,
+      "explanation": "P = F/A: pressure is force per unit area."
+    },
+    {
+      "id": "g22",
+      "category": "Pressure force and units",
+      "difficulty": "Foundation",
+      "prompt": "One pascal is equivalent to…",
+      "options": [
+        "1 J/K",
+        "1 N/m²",
+        "1 N·m",
+        "1 N/cm"
+      ],
+      "answer": 1,
+      "explanation": "The SI pressure unit is the pascal, one newton per square metre."
+    },
+    {
+      "id": "g23",
+      "category": "Pressure force and units",
+      "difficulty": "Application",
+      "prompt": "For the same force, halving the contact area makes the pressure…",
+      "options": [
+        "unchanged",
+        "four times smaller",
+        "twice as large",
+        "half as large"
+      ],
+      "answer": 2,
+      "explanation": "P = F/A; pressure increases when the same force acts over less area."
+    },
+    {
+      "id": "g24",
+      "category": "Pressure force and units",
+      "difficulty": "Foundation",
+      "prompt": "Why do skis help distribute a skier’s weight on soft snow?",
+      "options": [
+        "They remove the skier’s weight",
+        "They increase pressure by reducing area",
+        "They turn snow into gas",
+        "Their larger contact area reduces pressure"
+      ],
+      "answer": 3,
+      "explanation": "For the same weight, a larger supporting area means lower pressure."
+    },
+    {
+      "id": "g25",
+      "category": "Pressure force and units",
+      "difficulty": "Application",
+      "prompt": "A force of 500 N acts over 20 cm². What is the pressure in N/cm²?",
+      "options": [
+        "25 N/cm²",
+        "10,000 N/cm²",
+        "0.04 N/cm²",
+        "520 N/cm²"
+      ],
+      "answer": 0,
+      "explanation": "500 ÷ 20 = 25 N/cm². This is the worked pressure example in the presentation."
+    },
+    {
+      "id": "g26",
+      "category": "Pressure force and units",
+      "difficulty": "Application",
+      "prompt": "A force of 600 N acts over 0.03 m². What pressure is produced?",
+      "options": [
+        "60,000 Pa",
+        "20,000 Pa",
+        "18 Pa",
+        "200 Pa"
+      ],
+      "answer": 1,
+      "explanation": "P = 600/0.03 = 20,000 N/m² = 20,000 Pa."
+    },
+    {
+      "id": "g27",
+      "category": "Pressure force and units",
+      "difficulty": "Application",
+      "prompt": "Convert 125,000 Pa to kPa.",
+      "options": [
+        "12.5 kPa",
+        "125,000,000 kPa",
+        "125 kPa",
+        "1,250 kPa"
+      ],
+      "answer": 2,
+      "explanation": "Divide pascals by 1000 to obtain kilopascals."
+    },
+    {
+      "id": "g28",
+      "category": "Pressure force and units",
+      "difficulty": "Application",
+      "prompt": "Convert 2.5 dm³ to cm³.",
+      "options": [
+        "25 cm³",
+        "0.0025 cm³",
+        "250 cm³",
+        "2,500 cm³"
+      ],
+      "answer": 3,
+      "explanation": "1 dm³ = 1000 cm³, so 2.5 dm³ = 2500 cm³."
+    },
+    {
+      "id": "g29",
+      "category": "Pressure force and units",
+      "difficulty": "Foundation",
+      "prompt": "Which pair describes the STP convention used in your presentation?",
+      "options": [
+        "273.15 K and 100 kPa",
+        "273.15°C and 100 kPa",
+        "0 K and 100 kPa",
+        "300 K and 1 Pa"
+      ],
+      "answer": 0,
+      "explanation": "This course uses 0°C (273.15 K) and 100 kPa as its standard reference."
+    },
+    {
+      "id": "g30",
+      "category": "Pressure force and units",
+      "difficulty": "Challenge",
+      "prompt": "A tyre gauge measures pressure above atmospheric pressure. What pressure is used in gas-law ratios?",
+      "options": [
+        "Zero pressure for every tyre",
+        "Absolute pressure, including atmospheric pressure",
+        "Only the gauge reading in every calculation",
+        "Temperature divided by gauge pressure"
+      ],
+      "answer": 1,
+      "explanation": "Gas-law equations require absolute pressure. Gauge pressure is relative to the atmosphere."
+    },
+    {
+      "id": "g31",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Foundation",
+      "prompt": "Which condition must be constant for Boyle–Mariotte’s law, besides the amount of gas?",
+      "options": [
+        "Pressure",
+        "Particle speed must increase continuously",
+        "Temperature",
+        "Volume"
+      ],
+      "answer": 2,
+      "explanation": "For a fixed amount of gas at constant temperature, pressure is inversely proportional to volume."
+    },
+    {
+      "id": "g32",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Foundation",
+      "prompt": "At fixed temperature, a sealed sample is compressed from 100 mL to 50 mL. Its pressure…",
+      "options": [
+        "halves",
+        "stays the same",
+        "becomes zero",
+        "doubles"
+      ],
+      "answer": 3,
+      "explanation": "Halving volume doubles pressure because PV remains constant."
+    },
+    {
+      "id": "g33",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Foundation",
+      "prompt": "Why does compressing a sealed sample at constant temperature increase pressure?",
+      "options": [
+        "Particles collide with the walls more frequently in the smaller space",
+        "Each particle gains mass",
+        "Particles disappear",
+        "Temperature must double"
+      ],
+      "answer": 0,
+      "explanation": "The same particles have less space. At fixed temperature, mean kinetic energy stays constant."
+    },
+    {
+      "id": "g34",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Foundation",
+      "prompt": "Which equation expresses Boyle–Mariotte’s law?",
+      "options": [
+        "P₁ + V₁ = P₂ + V₂",
+        "P₁V₁ = P₂V₂",
+        "P₁/T₁ = P₂/T₂",
+        "V₁/T₁ = V₂/T₂"
+      ],
+      "answer": 1,
+      "explanation": "The product of absolute pressure and gas volume is constant when temperature and amount are fixed."
+    },
+    {
+      "id": "g35",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Application",
+      "prompt": "A gas occupies 100 cm³ at 100,000 Pa. It is compressed to 80 cm³ at constant temperature. Find its final pressure.",
+      "options": [
+        "100,000 Pa",
+        "180,000 Pa",
+        "125,000 Pa",
+        "80,000 Pa"
+      ],
+      "answer": 2,
+      "explanation": "P₂ = P₁V₁/V₂ = 100,000 × 100/80 = 125,000 Pa."
+    },
+    {
+      "id": "g36",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Application",
+      "prompt": "A fixed gas sample occupies 4.00 dm³ at 210 kPa. What pressure gives 2.50 dm³ at the same temperature?",
+      "options": [
+        "131.25 kPa",
+        "84 kPa",
+        "525 kPa",
+        "336 kPa"
+      ],
+      "answer": 3,
+      "explanation": "P₂ = 210 × 4.00/2.50 = 336 kPa, matching the presentation example."
+    },
+    {
+      "id": "g37",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Application",
+      "prompt": "If pressure rises from 100 kPa to 400 kPa at constant temperature, an initial volume of 8 L becomes…",
+      "options": [
+        "2 L",
+        "32 L",
+        "4 L",
+        "8 L"
+      ],
+      "answer": 0,
+      "explanation": "Pressure becomes four times larger, so volume becomes one-quarter as large."
+    },
+    {
+      "id": "g38",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Foundation",
+      "prompt": "What does a graph of pressure against volume look like for Boyle–Mariotte’s law?",
+      "options": [
+        "A curve that increases as volume increases",
+        "A decreasing inverse curve",
+        "A straight line through the origin with positive slope",
+        "A horizontal line for every volume"
+      ],
+      "answer": 1,
+      "explanation": "P is proportional to 1/V, so the P–V relationship is an inverse curve."
+    },
+    {
+      "id": "g39",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Challenge",
+      "prompt": "Which graph is linear through the origin for an ideal Boyle–Mariotte experiment?",
+      "options": [
+        "Pressure against volume squared",
+        "Pressure against Celsius temperature with changing amount",
+        "Pressure against 1/volume",
+        "Pressure against volume"
+      ],
+      "answer": 2,
+      "explanation": "Rearranging gives P = constant × (1/V)."
+    },
+    {
+      "id": "g40",
+      "category": "Boyle–Mariotte pressure and volume",
+      "difficulty": "Challenge",
+      "prompt": "Which procedure better approximates a constant-temperature syringe experiment?",
+      "options": [
+        "Compress rapidly and assume temperature cannot change",
+        "Add more gas during each reading",
+        "Keep the plunger fixed while heating",
+        "Compress slowly so thermal energy can be exchanged with the surroundings"
+      ],
+      "answer": 3,
+      "explanation": "Rapid compression can heat gas; slow changes allow closer thermal equilibrium."
+    },
+    {
+      "id": "g41",
+      "category": "Charles volume and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Charles’s law links which two quantities at fixed pressure and fixed gas amount?",
+      "options": [
+        "Volume and Kelvin temperature",
+        "Pressure and volume",
+        "Mass and Celsius temperature",
+        "Pressure and force"
+      ],
+      "answer": 0,
+      "explanation": "Volume is directly proportional to absolute temperature when pressure is constant."
+    },
+    {
+      "id": "g42",
+      "category": "Charles volume and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Which apparatus best represents Charles’s law?",
+      "options": [
+        "A sealed syringe whose volume is forcibly fixed",
+        "A gas cylinder with a freely moving piston under a fixed load",
+        "A completely rigid sealed vessel that is heated",
+        "An open empty beaker with gas freely escaping"
+      ],
+      "answer": 1,
+      "explanation": "The piston can move so that gas pressure balances a constant external load."
+    },
+    {
+      "id": "g43",
+      "category": "Charles volume and temperature",
+      "difficulty": "Foundation",
+      "prompt": "A gas at constant pressure is warmed from 300 K to 600 K. What happens to its volume?",
+      "options": [
+        "It stays constant",
+        "It becomes four times as large",
+        "It doubles",
+        "It halves"
+      ],
+      "answer": 2,
+      "explanation": "V/T remains constant, so doubling Kelvin temperature doubles volume."
+    },
+    {
+      "id": "g44",
+      "category": "Charles volume and temperature",
+      "difficulty": "Application",
+      "prompt": "A gas has volume 22 L at 280 K. At the same pressure, what is its volume at 320 K, to one decimal place?",
+      "options": [
+        "19.3 L",
+        "44.0 L",
+        "22.0 L",
+        "25.1 L"
+      ],
+      "answer": 3,
+      "explanation": "V₂ = 22 × 320/280 = 25.142… L, which rounds to 25.1 L."
+    },
+    {
+      "id": "g45",
+      "category": "Charles volume and temperature",
+      "difficulty": "Application",
+      "prompt": "A gas occupies 2.32 dm³ at 40°C. It is heated to 75°C at constant pressure. What is its final volume, approximately?",
+      "options": [
+        "2.58 dm³",
+        "4.35 dm³",
+        "1.24 dm³",
+        "2.32 dm³"
+      ],
+      "answer": 0,
+      "explanation": "Convert to 313.15 K and 348.15 K: V₂ = 2.32 × 348.15/313.15 ≈ 2.58 dm³."
+    },
+    {
+      "id": "g46",
+      "category": "Charles volume and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Why is using 20°C to 40°C as a doubling in Charles’s law incorrect?",
+      "options": [
+        "Volume never changes when gas is heated",
+        "The ratio must use absolute Kelvin temperatures",
+        "Charles’s law only allows cooling",
+        "Celsius and Kelvin increments have different sizes"
+      ],
+      "answer": 1,
+      "explanation": "20°C and 40°C correspond to 293.15 K and 313.15 K, not a factor of two."
+    },
+    {
+      "id": "g47",
+      "category": "Charles volume and temperature",
+      "difficulty": "Application",
+      "prompt": "A gas occupies 3 L at 300 K. What volume is predicted at 200 K with pressure constant?",
+      "options": [
+        "1 L",
+        "3 L",
+        "2 L",
+        "4.5 L"
+      ],
+      "answer": 2,
+      "explanation": "V₂ = 3 × 200/300 = 2 L."
+    },
+    {
+      "id": "g48",
+      "category": "Charles volume and temperature",
+      "difficulty": "Foundation",
+      "prompt": "On a graph of volume against Kelvin temperature at fixed pressure, the ideal relationship is…",
+      "options": [
+        "an inverse curve",
+        "a straight line with negative slope",
+        "a horizontal line",
+        "a straight line extrapolating through the origin"
+      ],
+      "answer": 3,
+      "explanation": "V is directly proportional to T in the ideal-gas model."
+    },
+    {
+      "id": "g49",
+      "category": "Charles volume and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Which gas property stays constant as a loaded piston moves outward in a Charles experiment?",
+      "options": [
+        "Pressure at equilibrium",
+        "Volume",
+        "Temperature",
+        "The total number of gas particles must double"
+      ],
+      "answer": 0,
+      "explanation": "Volume increases so the pressure can continue balancing the fixed external load."
+    },
+    {
+      "id": "g50",
+      "category": "Charles volume and temperature",
+      "difficulty": "Challenge",
+      "prompt": "Why is an ordinary balloon only an approximate Charles-law model?",
+      "options": [
+        "Its gas temperature can never change",
+        "Its rubber membrane changes the pressure as it stretches",
+        "It contains no particles",
+        "It must always be a rigid container"
+      ],
+      "answer": 1,
+      "explanation": "Membrane tension affects internal pressure; a fixed-load piston is a closer constant-pressure model."
+    },
+    {
+      "id": "g51",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Which conditions are fixed in the pressure–temperature law?",
+      "options": [
+        "Temperature and volume",
+        "Pressure and temperature",
+        "Volume and amount of gas",
+        "Pressure and amount of gas"
+      ],
+      "answer": 2,
+      "explanation": "For a fixed amount of gas at constant volume, P is proportional to Kelvin T."
+    },
+    {
+      "id": "g52",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Two identical sealed 2 L cylinders contain the same amount of gas at 400 K and 800 K. Which has greater pressure?",
+      "options": [
+        "The 400 K cylinder",
+        "Both must have equal pressure",
+        "The 800 K cylinder has zero pressure",
+        "The 800 K cylinder"
+      ],
+      "answer": 3,
+      "explanation": "The temperature doubles at fixed volume and amount, so pressure doubles."
+    },
+    {
+      "id": "g53",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Foundation",
+      "prompt": "How do particles explain higher pressure when a rigid sealed container is heated?",
+      "options": [
+        "They move faster and transfer more momentum in more frequent wall collisions",
+        "They gain more mass",
+        "The walls remove particles",
+        "Each molecule becomes much bigger"
+      ],
+      "answer": 0,
+      "explanation": "Heating raises mean kinetic energy; wall collisions create the pressure."
+    },
+    {
+      "id": "g54",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Which equation represents the constant-volume pressure law?",
+      "options": [
+        "P₁T₁ = P₂T₂",
+        "P₁/T₁ = P₂/T₂",
+        "P₁V₁ = P₂V₂",
+        "V₁/T₁ = V₂/T₂"
+      ],
+      "answer": 1,
+      "explanation": "Pressure divided by Kelvin temperature stays constant for a fixed gas amount and volume."
+    },
+    {
+      "id": "g55",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Application",
+      "prompt": "A rigid tank contains gas at 3.20 atm and 22°C. At 60°C, its pressure is approximately…",
+      "options": [
+        "1.17 atm",
+        "3.20 atm",
+        "3.61 atm",
+        "8.73 atm"
+      ],
+      "answer": 2,
+      "explanation": "Use 295.15 K and 333.15 K: P₂ = 3.20 × 333.15/295.15 ≈ 3.61 atm."
+    },
+    {
+      "id": "g56",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Application",
+      "prompt": "A rigid container holds gas at 100 kPa and 300 K. What pressure is predicted at 450 K?",
+      "options": [
+        "66.7 kPa",
+        "300 kPa",
+        "50 kPa",
+        "150 kPa"
+      ],
+      "answer": 3,
+      "explanation": "P₂ = 100 × 450/300 = 150 kPa."
+    },
+    {
+      "id": "g57",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Foundation",
+      "prompt": "At fixed volume, a gas is cooled from 400 K to 200 K. What happens to its pressure?",
+      "options": [
+        "It halves",
+        "It doubles",
+        "It quadruples",
+        "It stays constant"
+      ],
+      "answer": 0,
+      "explanation": "Pressure changes in the same ratio as Kelvin temperature."
+    },
+    {
+      "id": "g58",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Foundation",
+      "prompt": "Which graph is expected for pressure against Kelvin temperature at constant volume?",
+      "options": [
+        "A downward-sloping straight line",
+        "A straight line extrapolating through the origin",
+        "A decreasing inverse curve",
+        "A horizontal line"
+      ],
+      "answer": 1,
+      "explanation": "Absolute pressure is directly proportional to Kelvin temperature."
+    },
+    {
+      "id": "g59",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Application",
+      "prompt": "If the pressure–Celsius-temperature line is extended backwards in the ideal model, where does zero pressure occur?",
+      "options": [
+        "100°C",
+        "273.15°C",
+        "About −273.15°C",
+        "0°C"
+      ],
+      "answer": 2,
+      "explanation": "The Celsius-axis intercept corresponds to 0 K; it is an ideal-model extrapolation, not a real zero-pressure measurement."
+    },
+    {
+      "id": "g60",
+      "category": "Gay-Lussac pressure and temperature",
+      "difficulty": "Challenge",
+      "prompt": "Why can heating affect pressure differently in a rigid tank and a freely moving piston?",
+      "options": [
+        "The gas has no mass inside a tank",
+        "The piston changes Kelvin into Celsius",
+        "Pressure can only exist in a rigid tank",
+        "The tank fixes volume; the loaded piston allows volume to change at approximately fixed pressure"
+      ],
+      "answer": 3,
+      "explanation": "The constraint determines whether thermal expansion appears mainly as changing volume or changing pressure."
+    },
+    {
+      "id": "g61",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Foundation",
+      "prompt": "Which quantity must remain fixed when applying the combined gas law P₁V₁/T₁ = P₂V₂/T₂?",
+      "options": [
+        "Amount of gas",
+        "Every individual pressure reading",
+        "Every volume reading",
+        "Every temperature reading"
+      ],
+      "answer": 0,
+      "explanation": "The combined law compares states of the same amount of ideal gas."
+    },
+    {
+      "id": "g62",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Challenge",
+      "prompt": "Gas at 110 kPa, 30°C and 2.0 dm³ is changed to 440 kPa and 80°C. What is the new volume, approximately?",
+      "options": [
+        "0.14 dm³",
+        "0.58 dm³",
+        "2.33 dm³",
+        "8.0 dm³"
+      ],
+      "answer": 1,
+      "explanation": "V₂ = P₁V₁T₂/(P₂T₁) = 110 × 2.0 × 353.15/(440 × 303.15) ≈ 0.58 dm³."
+    },
+    {
+      "id": "g63",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Application",
+      "prompt": "For a fixed gas amount, both pressure and Kelvin temperature double. What happens to volume?",
+      "options": [
+        "It halves",
+        "It becomes four times larger",
+        "It stays the same",
+        "It doubles"
+      ],
+      "answer": 2,
+      "explanation": "From PV/T = constant, V is proportional to T/P, so equal doubling factors cancel."
+    },
+    {
+      "id": "g64",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Foundation",
+      "prompt": "A fixed gas sample doubles its volume while its Kelvin temperature stays fixed. Which change is required?",
+      "options": [
+        "Pressure doubles",
+        "Pressure stays fixed",
+        "The amount must double",
+        "Pressure halves"
+      ],
+      "answer": 3,
+      "explanation": "The combined law reduces to Boyle–Mariotte when temperature is fixed."
+    },
+    {
+      "id": "g65",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Foundation",
+      "prompt": "When using the combined gas law, what is essential about the units in the two states?",
+      "options": [
+        "Use consistent pressure/volume units and Kelvin temperatures",
+        "Use Celsius ratios without conversion",
+        "Use kPa in one state and Pa in the other without conversion",
+        "Use litres in one state and cm³ in the other without conversion"
+      ],
+      "answer": 0,
+      "explanation": "Matching units allow like quantities to form meaningful ratios."
+    },
+    {
+      "id": "g66",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Foundation",
+      "prompt": "Which equation is the ideal gas equation?",
+      "options": [
+        "PT = nRV",
+        "PV = nRT",
+        "PV = n/R/T",
+        "P = nVT/R"
+      ],
+      "answer": 1,
+      "explanation": "P is absolute pressure, V volume, n amount in moles, R the gas constant and T Kelvin temperature."
+    },
+    {
+      "id": "g67",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Challenge",
+      "prompt": "Which unit combination is consistent with R = 8.31 J mol⁻¹ K⁻¹?",
+      "options": [
+        "P in Pa, V in dm³ and T in °C",
+        "P in atm, V in cm³ and T in K without converting R",
+        "P in kPa, V in dm³ and T in K",
+        "P in kPa, V in cm³ and T in °C"
+      ],
+      "answer": 2,
+      "explanation": "1 kPa·dm³ = 1 J. Pa with m³ and Kelvin is also consistent."
+    },
+    {
+      "id": "g68",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Challenge",
+      "prompt": "Using PV = nRT, estimate n for gas at 200 kPa in 10 dm³ at 300 K, with R = 8.31.",
+      "options": [
+        "8.0 mol",
+        "80 mol",
+        "0.008 mol",
+        "0.80 mol"
+      ],
+      "answer": 3,
+      "explanation": "n = PV/(RT) = 200 × 10/(8.31 × 300) ≈ 0.80 mol."
+    },
+    {
+      "id": "g69",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Application",
+      "prompt": "Convert 0.025 m³ to dm³ before using kPa with R = 8.31.",
+      "options": [
+        "25 dm³",
+        "0.000025 dm³",
+        "2.5 dm³",
+        "2500 dm³"
+      ],
+      "answer": 0,
+      "explanation": "1 m³ = 1000 dm³, so 0.025 × 1000 = 25 dm³."
+    },
+    {
+      "id": "g70",
+      "category": "Combined law and ideal-gas calculations",
+      "difficulty": "Challenge",
+      "prompt": "An ideal gas has n = 0.50 mol, T = 300 K and P = 100 kPa. Find V using R = 8.31.",
+      "options": [
+        "About 0.125 dm³",
+        "About 12.5 dm³",
+        "About 1.25 dm³",
+        "About 125 dm³"
+      ],
+      "answer": 1,
+      "explanation": "V = nRT/P = 0.50 × 8.31 × 300/100 = 12.465 dm³."
+    },
+    {
+      "id": "g71",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Foundation",
+      "prompt": "Equal volumes of ideal gases at the same pressure and temperature contain equal…",
+      "options": [
+        "molecular sizes",
+        "numbers of atoms per molecule",
+        "numbers of particles",
+        "masses"
+      ],
+      "answer": 2,
+      "explanation": "This is Avogadro’s principle. Different gases can have different masses per particle."
+    },
+    {
+      "id": "g72",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Foundation",
+      "prompt": "At fixed pressure and temperature, doubling the amount of ideal gas makes its volume…",
+      "options": [
+        "half as large",
+        "unchanged",
+        "four times smaller",
+        "twice as large"
+      ],
+      "answer": 3,
+      "explanation": "Avogadro’s law gives V proportional to n when P and T are fixed."
+    },
+    {
+      "id": "g73",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Foundation",
+      "prompt": "At the course STP of 273.15 K and 100 kPa, one mole of an ideal gas occupies approximately…",
+      "options": [
+        "22.7 dm³",
+        "2.27 dm³",
+        "227 dm³",
+        "1.00 dm³"
+      ],
+      "answer": 0,
+      "explanation": "This convention gives a molar volume of about 22.7 dm³/mol; the standard pressure must be specified."
+    },
+    {
+      "id": "g74",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Application",
+      "prompt": "At STP (273.15 K and 100 kPa), what volume does 5 mol of ideal carbon dioxide occupy?",
+      "options": [
+        "22.7 dm³",
+        "113.5 dm³",
+        "27.7 dm³",
+        "4.54 dm³"
+      ],
+      "answer": 1,
+      "explanation": "V = n × molar volume = 5 × 22.7 = 113.5 dm³."
+    },
+    {
+      "id": "g75",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Application",
+      "prompt": "At STP (273.15 K and 100 kPa), how many moles are in 45.4 dm³ of an ideal gas?",
+      "options": [
+        "22.7 mol",
+        "45.4 mol",
+        "2.0 mol",
+        "0.5 mol"
+      ],
+      "answer": 2,
+      "explanation": "n = volume/molar volume = 45.4/22.7 = 2.0 mol."
+    },
+    {
+      "id": "g76",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Foundation",
+      "prompt": "Equal volumes of oxygen and nitrogen are at the same P and T. Which statement is correct?",
+      "options": [
+        "They must contain equal masses",
+        "Oxygen must contain more molecules because it is heavier",
+        "Nitrogen must contain more molecules because it is lighter",
+        "They contain equal numbers of molecules, but need not have equal masses"
+      ],
+      "answer": 3,
+      "explanation": "Equal gas volumes at equal P and T have equal particle numbers; molecular masses can differ."
+    },
+    {
+      "id": "g77",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Foundation",
+      "prompt": "What does n represent in PV = nRT?",
+      "options": [
+        "Amount of gas in moles",
+        "Number of litres",
+        "Pressure in newtons",
+        "Temperature in degrees Celsius"
+      ],
+      "answer": 0,
+      "explanation": "n is amount of substance measured in moles."
+    },
+    {
+      "id": "g78",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Application",
+      "prompt": "Why must pressure and temperature be stated when giving the volume of one mole of gas?",
+      "options": [
+        "Only the container colour determines the volume",
+        "Gas volume changes when pressure or temperature changes",
+        "A mole has a different number of particles every day",
+        "All gases always occupy 22.7 dm³ whatever the conditions"
+      ],
+      "answer": 1,
+      "explanation": "Molar volume depends on the specified conditions, even for ideal gases."
+    },
+    {
+      "id": "g79",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Application",
+      "prompt": "At STP (273.15 K and 100 kPa), 0.25 mol of ideal gas occupies approximately…",
+      "options": [
+        "22.95 dm³",
+        "0.011 dm³",
+        "5.68 dm³",
+        "90.8 dm³"
+      ],
+      "answer": 2,
+      "explanation": "0.25 × 22.7 = 5.675 dm³, about 5.68 dm³."
+    },
+    {
+      "id": "g80",
+      "category": "Avogadro moles and gas volume",
+      "difficulty": "Application",
+      "prompt": "A sealed gas sample is heated without a leak or chemical reaction. What happens to its amount in moles?",
+      "options": [
+        "It necessarily doubles",
+        "It becomes zero",
+        "It always halves",
+        "It stays the same"
+      ],
+      "answer": 3,
+      "explanation": "Heating changes energy and may change pressure or volume; it does not by itself change the number of gas particles."
+    }
+  ]
+}

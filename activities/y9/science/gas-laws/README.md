@@ -15,3 +15,9 @@ Particles have a fixed count and illustrative speed proportional to the square r
 ## Classroom visuals and connections
 
 The classroom edition adds explicit learning goals, worked substitutions and three self-contained original SVG concept pictures. Sealed-syringe compression connects to Boyle–Mariotte; a balloon is an approximate Charles example because membrane tension also affects pressure; a tyre approximates constant volume, while a rigid vessel is the closer Gay-Lussac model. The breathing connection explicitly notes that lungs are an open system, not a sealed Boyle experiment. All pictures are labelled illustrations, not photos or quantitative measurements. Example buttons load matching simulator conditions.
+
+## Revision simulator
+
+`revision.html` uses the shared revision engine and `assets/revision/questions/gas-laws.json`: 80 questions in eight categories, adapted from the supplied “Weather - pressure and Temperature” presentation. Topics cover heat and Kelvin; changes of state and expansion; pressure and units; Boyle–Mariotte; Charles; Gay-Lussac; combined laws and PV = nRT; Avogadro and moles. Students choose topic, difficulty and session length, then immediate-feedback practice or an end-of-test review. Missed answers can be retried. No results are sent to a server or spreadsheet.
+
+STP questions specify 273.15 K and 100 kPa (22.7 dm³/mol). Temperature ratios use Kelvin; pressure is absolute. Phase-change questions specify pressure and purity where needed. Absolute-zero graph intercepts are ideal-model extrapolations. The user-provided slide deck remains outside the published site.

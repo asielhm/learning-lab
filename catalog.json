@@ -124,6 +124,15 @@
                   "duration": "20\u201330 min",
                   "image": "activities/y9/science/gas-laws/cover.svg",
                   "href": "activities/y9/science/gas-laws/"
+                },
+                {
+                  "id": "gas-laws-revision",
+                  "title": "Gas laws: revision simulator",
+                  "description": "Practise 80 questions on temperature, pressure, changes of state and gas-law calculations, with explanations and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y9/science/gas-laws/cover.svg",
+                  "href": "activities/y9/science/gas-laws/revision.html"
                 }
               ],
               "primaryActivity": "gas-laws-lab",

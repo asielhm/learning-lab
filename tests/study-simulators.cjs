@@ -35,6 +35,10 @@ async function study(page, name, topic) {
   await page.goto(`${base}/activities/y9/science/${topic}/revision.html`);
   await page.locator('#start-session').waitFor();
   assert((await page.locator('.revision-bank-meta').innerText()).includes(String(bank.questions.length)));
+  assert.equal(await page.locator('#revision-category option').count(),bank.categories.length+1);
+  await page.locator('#revision-length').selectOption('all');
+  assert((await page.locator('#revision-availability').innerText()).includes(`${bank.questions.length} matching`));
+  await page.locator('#revision-length').selectOption('10');
   await page.locator('#start-session').click();
   const seen = [];
   for (let index = 0; index < 10; index++) seen.push(await answer(page,bank,index < 2));
@@ -79,7 +83,7 @@ async function study(page, name, topic) {
     assert.equal(await page.locator('a[href="#/years/y13"]').count(),0);
     await page.goto(base+'/#/years/y9/science');await page.locator('.topic-apps .activity-card').first().waitFor();
     assert.equal(await page.locator('.topic-apps .activity-card').count(),3);
-    for (const [name,topic] of [['circulatory','circulatory-system'],['breathing','breathing-system']]) {
+    for (const [name,topic] of [['circulatory','circulatory-system'],['breathing','breathing-system'],['gas-laws','gas-laws']]) {
       await page.goto(base+'/#/years/y9/science/'+topic);await page.locator('.activity-card').first().waitFor();
       assert.equal(await page.locator('.activity-card').count(),2);
       await study(page,name,topic);
@@ -87,7 +91,7 @@ async function study(page, name, topic) {
     // Phone-sized revision page: readable setup and answer, no overflow, keyboard answer choice.
     const phone = await browser.newPage({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
     phone.on('pageerror',e=>errors.push(e.message));
-    await phone.goto(`${base}/activities/y9/science/breathing-system/revision.html`);
+    await phone.goto(`${base}/activities/y9/science/gas-laws/revision.html`);
     await phone.locator('#start-session').waitFor();
     assert(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
     await phone.locator('#start-session').tap();
@@ -104,6 +108,6 @@ async function study(page, name, topic) {
     await failure.goto(`${base}/activities/y9/science/breathing-system/revision.html`);
     await failure.locator('#retry-bank').waitFor();await failure.unroute('**/questions/breathing.json');
     await failure.locator('#retry-bank').click();await failure.locator('#start-session').waitFor();
-    console.log('Catalogue: Y13 removed, three main Science apps, and separate breathing/circulation revision pages. Mobile keyboard/touch, focus, no overflow, bank-error recovery passed.');
+    console.log('Catalogue: Y13 removed, three main Science apps, and separate breathing/circulation/gas-laws revision pages. Mobile keyboard/touch, focus, no overflow, bank-error recovery passed.');
   } finally { await browser.close(); }
 })().catch(error=>{console.error(error);process.exitCode=1;});

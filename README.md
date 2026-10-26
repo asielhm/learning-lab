@@ -8,7 +8,7 @@ An educational activity platform with a landing page and a **Year → Subject �
 
 The algebra activity follows the teacher's three starter presentations: translating pen/clip-box stories; collecting linear, square and cube terms in x, y and z; then expanding brackets using identical bags. Students build pictures, sort terms by letter and power, enter equivalent expressions, and open/count every bag. Optional stretch examples explain negative factors, variable factors and double brackets. Original presentation files are not hosted. See the [lesson notes](activities/y7/maths/algebra/README.md).
 
-The separate algebra revision simulator contains **60 questions** across six categories. It uses the same practice/test/retry engine as the science simulators, with a Year 7 Maths heading. The platform therefore has **180 revision questions** in total.
+The separate algebra revision simulator contains **60 questions** across six categories. It uses the same practice/test/retry engine as the science simulators, with a Year 7 Maths heading. The platform therefore has **260 revision questions** in total.
 
 **Y9 → Science → Circulatory system → Inside the human heart**
 
@@ -22,7 +22,7 @@ Both topic pages have a separate **revision simulator**, with **60 questions per
 
 **Y9 → Science → Gas laws → Gas laws: the particle lab**
 
-A sealed-gas simulator explores Boyle–Mariotte (constant temperature), Charles (constant pressure), and Gay-Lussac/Amontons (constant volume). Live P/V/T values, a particle diagram, graphs and measurement tables help students investigate each relationship. Nine gated observations and questions supply contextual feedback. The classroom layout includes learning goals, three original labelled pictures, worked examples, and real-life connections to a capped syringe, a balloon and tyre pressure. Each example explains the limits of the idealised model. All calculations use Kelvin. The ideal-gas model is illustrative, with a fixed particle count and no experiments at absolute zero. Files are in `activities/y9/science/gas-laws/`.
+A sealed-gas simulator explores Boyle–Mariotte (constant temperature), Charles (constant pressure), and Gay-Lussac/Amontons (constant volume). Live P/V/T values, a particle diagram, graphs and measurement tables help students investigate each relationship. Nine gated observations and questions supply contextual feedback. The classroom layout includes learning goals, three original labelled pictures, worked examples, and real-life connections to a capped syringe, a balloon and tyre pressure. Each example explains the limits of the idealised model. All calculations use Kelvin. The ideal-gas model is illustrative, with a fixed particle count and no experiments at absolute zero. Files are in `activities/y9/science/gas-laws/`. A separate revision simulator adds 80 questions across eight areas, adapted from the supplied “Weather - pressure and Temperature” classroom presentation, with optional challenge calculations on combined laws, moles and PV = nRT.
 
 Y9 Science shows exactly three main web-app cards: Circulatory system, Breathing system and Gas laws. Each topic's `primaryActivity` ID selects its main card and `appTitle` supplies its label. Revision simulators stay on separate pages, linked from the main apps and as secondary study links; they are not extra main app cards. Direct topic routes remain available for bookmarks and breadcrumbs.
 
@@ -74,7 +74,7 @@ The live root URL opens the platform. The heart lesson is at `activities/y9/scie
 
 ## Revision question banks and browser checks
 
-Questions live in `assets/revision/questions/algebra.json`, `circulatory.json` and `breathing.json`. Every question has a stable `id`, a category, a Foundation/Application/Challenge difficulty, four options, a zero-based `answer`, and an explanation. Practice gives immediate feedback; test mode waits until completion. Questions and choices shuffle independently, with no repeated question within a session. Students can review all answers and retry only their mistakes. Scores are per session and are not stored as accounts or shared with teachers.
+Questions live in `assets/revision/questions/algebra.json`, `circulatory.json`, `breathing.json` and `gas-laws.json`. Every question has a stable `id`, a category, a Foundation/Application/Challenge difficulty, four options, a zero-based `answer`, and an explanation. Practice gives immediate feedback; test mode waits until completion. Questions and choices shuffle independently, with no repeated question within a session. Students can review all answers and retry only their mistakes. Scores are per session and are not stored as accounts or shared with teachers.
 
 Run `python3 tools/validate_questions.py` after editing a bank. This checks unique IDs and prompts, four distinct choices, answer indices, categories and explanations. With Playwright installed and the static server running, `node tests/study-simulators.cjs` checks the catalogue, practice/test scoring, shuffled answers, targeted retries, filters, mobile keyboard/touch navigation and request-failure recovery. `BROWSER_HOME` can point to an environment-trusted Chromium home when the proxy certificate needs to be installed there; TLS verification stays enabled.
 
