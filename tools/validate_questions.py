@@ -4,6 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BANKS = {
+    "algebra.json": "algebra",
     "circulatory.json": "circulatory-system",
     "breathing.json": "breathing-system",
 }

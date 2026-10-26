@@ -29,7 +29,7 @@ function isCorrect(item) {
   return item.submitted && item.options[item.selection]?.originalIndex === item.question.answer;
 }
 function header() {
-  return `<header class="revision-heading"><p class="revision-eyebrow">YEAR 9 SCIENCE · STUDY SIMULATOR</p><h1>${escape(bank.title)}<span>revision</span></h1><p>Build your understanding, one question at a time. Choose a focus or mix the whole topic.</p><div class="revision-bank-meta"><span>${bank.questions.length} questions in the bank</span><span>${bank.categories.length} areas to explore</span><span>No timer. Learn at your pace.</span></div></header>`;
+  return `<header class="revision-heading"><p class="revision-eyebrow">${escape((root.dataset.course || "Year 9 Science").toUpperCase())} · STUDY SIMULATOR</p><h1>${escape(bank.title)}<span>revision</span></h1><p>Build your understanding, one question at a time. Choose a focus or mix the whole topic.</p><div class="revision-bank-meta"><span>${bank.questions.length} questions in the bank</span><span>${bank.categories.length} areas to explore</span><span>No timer. Learn at your pace.</span></div></header>`;
 }
 function focus(selector) {
   const target = root.querySelector(selector);

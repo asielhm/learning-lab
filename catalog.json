@@ -4,7 +4,42 @@
       "id": "y7",
       "name": "Year 7",
       "shortName": "Y7",
-      "subjects": []
+      "subjects": [
+        {
+          "id": "maths",
+          "name": "Maths",
+          "description": "Build mathematical understanding through visual models, reasoning and practice.",
+          "topics": [
+            {
+              "id": "algebra",
+              "name": "Algebra",
+              "description": "Translate stories into expressions, collect like terms and expand brackets using boxes, shapes and bags.",
+              "primaryActivity": "algebra-lab",
+              "appTitle": "Algebra web app",
+              "activities": [
+                {
+                  "id": "algebra-lab",
+                  "title": "Algebra: from boxes to brackets",
+                  "description": "Build expressions with pen and clip boxes, sort linear, square and cube terms, and open identical bags to discover the distributive law.",
+                  "format": "Interactive maths lab",
+                  "duration": "Work at your pace",
+                  "image": "activities/y7/maths/algebra/cover.svg",
+                  "href": "activities/y7/maths/algebra/"
+                },
+                {
+                  "id": "algebra-revision",
+                  "title": "Algebra: revision simulator",
+                  "description": "Practise translating, vocabulary, like terms, powers, substitution and expanding brackets with explanations and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y7/maths/algebra/cover.svg",
+                  "href": "activities/y7/maths/algebra/revision.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "y8",

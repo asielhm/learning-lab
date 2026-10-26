@@ -4,6 +4,12 @@ An educational activity platform with a landing page and a **Year → Subject �
 
 ## Current activities
 
+**Y7 → Maths → Algebra → Algebra: from boxes to brackets**
+
+The algebra activity follows the teacher's three starter presentations: translating pen/clip-box stories; collecting linear, square and cube terms in x, y and z; then expanding brackets using identical bags. Students build pictures, sort terms by letter and power, enter equivalent expressions, and open/count every bag. Optional stretch examples explain negative factors, variable factors and double brackets. Original presentation files are not hosted. See the [lesson notes](activities/y7/maths/algebra/README.md).
+
+The separate algebra revision simulator contains **60 questions** across six categories. It uses the same practice/test/retry engine as the science simulators, with a Year 7 Maths heading. The platform therefore has **180 revision questions** in total.
+
 **Y9 → Science → Circulatory system → Inside the human heart**
 
 Heart Lab retains its body-location illustration, rotatable 3D heart, re-center control and separate revision page. Its dissection step now opens the user-selected [Heart Lab](https://asielhm.github.io/heart-lab-y9/) in a new tab; the previous local dissection has been retired. Its standalone page and files are in `activities/y9/science/circulatory-system/`. The lesson has breadcrumb links back to its topic, subject, year and the platform home. The anatomical source model is unchanged; see [model attribution](MODEL-ATTRIBUTION.md) and the [lesson documentation](activities/y9/science/circulatory-system/README.md) for anatomy limitations.
@@ -68,10 +74,14 @@ The live root URL opens the platform. The heart lesson is at `activities/y9/scie
 
 ## Revision question banks and browser checks
 
-Questions live in `assets/revision/questions/circulatory.json` and `breathing.json`. Every question has a stable `id`, a category, a Foundation/Application/Challenge difficulty, four options, a zero-based `answer`, and an explanation. Practice gives immediate feedback; test mode waits until completion. Questions and choices shuffle independently, with no repeated question within a session. Students can review all answers and retry only their mistakes. Scores are per session and are not stored as accounts or shared with teachers.
+Questions live in `assets/revision/questions/algebra.json`, `circulatory.json` and `breathing.json`. Every question has a stable `id`, a category, a Foundation/Application/Challenge difficulty, four options, a zero-based `answer`, and an explanation. Practice gives immediate feedback; test mode waits until completion. Questions and choices shuffle independently, with no repeated question within a session. Students can review all answers and retry only their mistakes. Scores are per session and are not stored as accounts or shared with teachers.
 
 Run `python3 tools/validate_questions.py` after editing a bank. This checks unique IDs and prompts, four distinct choices, answer indices, categories and explanations. With Playwright installed and the static server running, `node tests/study-simulators.cjs` checks the catalogue, practice/test scoring, shuffled answers, targeted retries, filters, mobile keyboard/touch navigation and request-failure recovery. `BROWSER_HOME` can point to an environment-trusted Chromium home when the proxy certificate needs to be installed there; TLS verification stays enabled.
 
 Additional browser checks: `node tests/breathing-lab.cjs` exercises the rendered lungs, anatomy, ventilation endpoints, pause and gas-exchange gates on desktop/mobile. `node tests/gas-laws.cjs` verifies the three app cards, numerical gas-law predictions, nine observation/question gates, recording/reset, Kelvin conversion and mobile controls.
 
 The rotatable heart and lung viewers start centered. One finger rotates; two fingers pan and pinch to zoom. Desktop mouse rotation, wheel zoom and right-button panning are supported. Re-center restores the centered front view and zoom. `node tests/viewer-touch.cjs` checks actual touch gestures on both models; `node tests/viewer-centering.cjs` checks visual centering and fitting across screen sizes and lesson states.
+
+The live platform is now https://asielhm.github.io/learning-lab/ and the Git origin is `asielhm/learning-lab`. Internal page and asset paths remain relative. `primaryActivity` determines each topic's main app card; additional revision pages remain secondary links. Shared revision wrappers can set `data-course` to their year/subject; existing Science pages keep their Year 9 default.
+
+For the algebra lesson, run `node tests/algebra-math.mjs` for symbolic checks, then `node tests/algebra-lab.cjs` with the static server and Playwright available for classroom interactions and revision scoring on desktop/mobile.
