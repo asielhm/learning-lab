@@ -5,6 +5,25 @@ var PLATFORM_ORIGIN_ = 'https://asielhm.github.io';
 var ANSWER_HEADERS_ = ['Event ID','Received at','Session ID','Student name','Class','Course','Topic','Mode','Retry','Started at','Question number','Total questions','Question ID','Category','Difficulty','Question','Selected answer','Correct answer','Correct'];
 var SESSION_HEADERS_ = ['Session ID','Completed at','Student name','Class','Course','Topic','Mode','Retry','Started at','Questions','Correct','Score (%)'];
 
+// Visible editor entries. The owner check also protects them if called by the web app.
+function setupLearningLab() {
+  requireOwner_();
+  setupLearningLab_();
+}
+
+function resetTeacherPassword() {
+  requireOwner_();
+  resetTeacherPassword_();
+}
+
+function requireOwner_() {
+  var active = Session.getActiveUser().getEmail();
+  var owner = Session.getEffectiveUser().getEmail();
+  if (!active || !owner || active.toLowerCase() !== owner.toLowerCase()) {
+    throw new Error('Open the Apps Script editor using the Google account that owns this deployment, then run the setup or reset function there.');
+  }
+}
+
 // Run once from the Apps Script editor. Creates NEW tabs, leaving existing tabs intact.
 function setupLearningLab_() {
   var book = SpreadsheetApp.openById(SPREADSHEET_ID_);
@@ -12,7 +31,7 @@ function setupLearningLab_() {
   ensureSheet_(book, 'Sessions', SESSION_HEADERS_);
   var properties = PropertiesService.getScriptProperties();
   if (!properties.getProperty('TEACHER_PASSWORD_HASH')) resetTeacherPassword_();
-  else console.log('Recording tabs are ready. Existing teacher password is unchanged.');
+  else console.log('Recording tabs are ready. Existing teacher password is unchanged. If you did not save it, run resetTeacherPassword to generate a new one.');
 }
 
 // Run in the editor only to issue a new password and invalidate all teacher logins.
@@ -65,7 +84,7 @@ function ensureSheet_(book, name, headers) {
   var sheet = book.getSheetByName(name) || book.insertSheet(name);
   if (!sheet.getLastRow()) {sheet.appendRow(headers); sheet.setFrozenRows(1);}
   var actual = sheet.getRange(1, 1, 1, headers.length).getValues()[0];
-  if (JSON.stringify(actual) !== JSON.stringify(headers)) throw new Error('The ' + name + ' tab has different columns. Rename that tab and run setupLearningLab_ again.');
+  if (JSON.stringify(actual) !== JSON.stringify(headers)) throw new Error('The ' + name + ' tab has different columns. Rename that tab and run setupLearningLab again.');
   return sheet;
 }
 function rows_(sheet, columns) {

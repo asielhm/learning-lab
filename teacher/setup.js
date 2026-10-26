@@ -3,7 +3,7 @@ for (const button of document.querySelectorAll('[data-copy]')) {
   button.addEventListener('click', async () => {
     button.disabled = true;
     try {
-      const response = await fetch(new URL(`../google-apps-script/${button.dataset.copy}`, import.meta.url));
+      const response = await fetch(new URL(`../google-apps-script/${button.dataset.copy}`, import.meta.url), {cache:'no-store'});
       if (!response.ok) throw new Error();
       const code = await response.text();
       await navigator.clipboard.writeText(code);
