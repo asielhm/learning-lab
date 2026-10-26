@@ -1,0 +1,854 @@
+{
+  "topicId": "breathing-system",
+  "title": "Breathing system",
+  "categories": [
+    "Airways and anatomy",
+    "Ventilation mechanics",
+    "Alveoli and diffusion",
+    "Respiration and exercise",
+    "Health and protection",
+    "Evidence and investigations"
+  ],
+  "questions": [
+    {
+      "id": "b01",
+      "category": "Airways and anatomy",
+      "difficulty": "Foundation",
+      "prompt": "Which sequence follows inhaled air towards the gas-exchange surfaces?",
+      "options": [
+        "Trachea → bronchi → bronchioles → alveoli",
+        "Alveoli → bronchioles → bronchi → trachea",
+        "Trachea → alveoli → bronchi → bronchioles",
+        "Bronchioles → trachea → alveoli → bronchi"
+      ],
+      "answer": 0,
+      "explanation": "The trachea branches into bronchi, then smaller bronchioles, which lead to the alveoli."
+    },
+    {
+      "id": "b02",
+      "category": "Airways and anatomy",
+      "difficulty": "Foundation",
+      "prompt": "What is the trachea commonly called?",
+      "options": [
+        "The food pipe",
+        "The windpipe",
+        "The diaphragm",
+        "The chest wall"
+      ],
+      "answer": 1,
+      "explanation": "The trachea is the windpipe, the airway leading from the throat towards the bronchi."
+    },
+    {
+      "id": "b03",
+      "category": "Airways and anatomy",
+      "difficulty": "Foundation",
+      "prompt": "What are alveoli?",
+      "options": [
+        "Muscles that pull the ribs upwards",
+        "Blood vessels that carry blood from the lungs",
+        "Tiny air sacs where gases are exchanged with the blood",
+        "Rings of cartilage that support the trachea"
+      ],
+      "answer": 2,
+      "explanation": "Alveoli are microscopic air sacs surrounded by capillaries. They form the main gas-exchange surface."
+    },
+    {
+      "id": "b04",
+      "category": "Airways and anatomy",
+      "difficulty": "Foundation",
+      "prompt": "Where is the diaphragm found?",
+      "options": [
+        "Inside the trachea",
+        "Between the left atrium and ventricle",
+        "At the end of every alveolus",
+        "Below the lungs, separating the chest from the abdomen"
+      ],
+      "answer": 3,
+      "explanation": "The diaphragm is a sheet of muscle forming the floor of the thoracic cavity."
+    },
+    {
+      "id": "b05",
+      "category": "Airways and anatomy",
+      "difficulty": "Application",
+      "prompt": "What is the main role of cartilage in the trachea?",
+      "options": [
+        "To help keep the airway open",
+        "To pump air into the blood",
+        "To carry most oxygen around the body",
+        "To digest dust trapped in mucus"
+      ],
+      "answer": 0,
+      "explanation": "Cartilage supports the tracheal wall so the airway does not easily collapse during breathing."
+    },
+    {
+      "id": "b06",
+      "category": "Airways and anatomy",
+      "difficulty": "Application",
+      "prompt": "How does the nose help prepare inhaled air?",
+      "options": [
+        "It removes all nitrogen from the air",
+        "It warms, moistens and helps filter the air",
+        "It turns carbon dioxide into oxygen",
+        "It makes the air completely free of every pathogen"
+      ],
+      "answer": 1,
+      "explanation": "The nasal passages warm and moisten air, while hairs and mucus trap some particles. This is not perfect sterilisation."
+    },
+    {
+      "id": "b07",
+      "category": "Airways and anatomy",
+      "difficulty": "Application",
+      "prompt": "What is the main function of the epiglottis during swallowing?",
+      "options": [
+        "To exchange oxygen with capillaries",
+        "To flatten the diaphragm",
+        "To help prevent food entering the airway",
+        "To keep the pulmonary valve open"
+      ],
+      "answer": 2,
+      "explanation": "The epiglottis helps cover the laryngeal opening during swallowing, reducing the chance of food entering the trachea."
+    },
+    {
+      "id": "b08",
+      "category": "Airways and anatomy",
+      "difficulty": "Application",
+      "prompt": "Which statement about the bronchi is correct?",
+      "options": [
+        "They carry blood from the heart to the lungs",
+        "They are the only muscles used in breathing",
+        "They join the lungs directly to the stomach",
+        "The two main bronchi carry air from the trachea into the lungs"
+      ],
+      "answer": 3,
+      "explanation": "The trachea divides into a right and left main bronchus, carrying air into the corresponding lung."
+    },
+    {
+      "id": "b09",
+      "category": "Airways and anatomy",
+      "difficulty": "Challenge",
+      "prompt": "Why does air travelling through a bronchus not yet mean that oxygen has entered the blood?",
+      "options": [
+        "Oxygen must reach a gas-exchange surface and diffuse across it",
+        "Blood is absent from the entire chest",
+        "Bronchi convert oxygen into carbon dioxide before it reaches alveoli",
+        "Oxygen enters blood only through the mouth"
+      ],
+      "answer": 0,
+      "explanation": "Conducting airways move air. Most oxygen transfer to blood occurs across the alveolar-capillary barrier."
+    },
+    {
+      "id": "b10",
+      "category": "Airways and anatomy",
+      "difficulty": "Challenge",
+      "prompt": "A blockage in a small bronchiole would most directly reduce what?",
+      "options": [
+        "The number of chambers in the heart",
+        "Ventilation of the alveoli supplied by that airway",
+        "All oxygen in the surrounding atmosphere",
+        "Glucose production in every body cell"
+      ],
+      "answer": 1,
+      "explanation": "A narrowed or blocked bronchiole restricts airflow to the alveoli beyond it, reducing their ventilation."
+    },
+    {
+      "id": "b11",
+      "category": "Ventilation mechanics",
+      "difficulty": "Foundation",
+      "prompt": "What happens to the diaphragm during a normal inhalation?",
+      "options": [
+        "It relaxes and becomes more domed",
+        "It contracts and moves upwards into the chest",
+        "It contracts and moves downwards, becoming flatter",
+        "It turns into an air-filled balloon"
+      ],
+      "answer": 2,
+      "explanation": "When the diaphragm contracts it flattens, increasing the volume of the thoracic cavity."
+    },
+    {
+      "id": "b12",
+      "category": "Ventilation mechanics",
+      "difficulty": "Foundation",
+      "prompt": "During normal inhalation, what happens to chest volume?",
+      "options": [
+        "It decreases",
+        "It stays exactly constant",
+        "It falls to zero",
+        "It increases"
+      ],
+      "answer": 3,
+      "explanation": "Diaphragm contraction and rib movement increase the volume of the chest during inhalation."
+    },
+    {
+      "id": "b13",
+      "category": "Ventilation mechanics",
+      "difficulty": "Foundation",
+      "prompt": "Why does air move into the lungs during inhalation?",
+      "options": [
+        "Pressure inside the lungs becomes slightly lower than atmospheric pressure",
+        "Oxygen actively pulls itself through the mouth",
+        "The lungs create a permanent vacuum",
+        "Atmospheric pressure falls below lung pressure"
+      ],
+      "answer": 0,
+      "explanation": "Air flows down a pressure gradient. Increasing lung volume makes internal pressure slightly lower than atmospheric pressure."
+    },
+    {
+      "id": "b14",
+      "category": "Ventilation mechanics",
+      "difficulty": "Foundation",
+      "prompt": "During quiet exhalation, what normally happens to the diaphragm?",
+      "options": [
+        "It contracts and flattens further",
+        "It relaxes and moves upwards into a more domed shape",
+        "It pumps blood towards the heart",
+        "It remains maximally contracted"
+      ],
+      "answer": 1,
+      "explanation": "Relaxation allows the diaphragm to rise as the lungs and chest recoil, reducing lung volume."
+    },
+    {
+      "id": "b15",
+      "category": "Ventilation mechanics",
+      "difficulty": "Application",
+      "prompt": "What do the external intercostal muscles do during inhalation?",
+      "options": [
+        "They relax to pull the ribs down and in",
+        "They close the alveoli to all airflow",
+        "They contract, helping move the ribs up and out",
+        "They pump oxygen directly into red blood cells"
+      ],
+      "answer": 2,
+      "explanation": "Contraction of the external intercostal muscles raises and expands the rib cage, helping increase chest volume."
+    },
+    {
+      "id": "b16",
+      "category": "Ventilation mechanics",
+      "difficulty": "Application",
+      "prompt": "Which pressure change is associated with air flowing out during exhalation?",
+      "options": [
+        "Pressure inside the lungs becomes lower than atmospheric pressure",
+        "Atmospheric pressure must become zero",
+        "Lung pressure stays lower than outside pressure throughout",
+        "Pressure inside the lungs becomes slightly greater than atmospheric pressure"
+      ],
+      "answer": 3,
+      "explanation": "Reducing lung volume increases pressure above atmospheric pressure, driving air out."
+    },
+    {
+      "id": "b17",
+      "category": "Ventilation mechanics",
+      "difficulty": "Application",
+      "prompt": "Why is quiet exhalation usually described as largely passive?",
+      "options": [
+        "Elastic recoil helps air leave after inspiratory muscles relax",
+        "No pressure difference exists during exhalation",
+        "The diaphragm contracts more strongly than during inhalation",
+        "Alveoli actively pump every air molecule out"
+      ],
+      "answer": 0,
+      "explanation": "In quiet breathing, relaxation of inspiratory muscles and elastic recoil usually produce exhalation without strong additional muscle contraction."
+    },
+    {
+      "id": "b18",
+      "category": "Ventilation mechanics",
+      "difficulty": "Application",
+      "prompt": "What is tidal volume?",
+      "options": [
+        "The number of breaths in one minute",
+        "The volume of air moved in or out during one normal breath",
+        "The maximum amount of blood in a lung",
+        "The amount of oxygen in the atmosphere"
+      ],
+      "answer": 1,
+      "explanation": "Tidal volume measures the air volume of an ordinary breath. It is different from breathing rate."
+    },
+    {
+      "id": "b19",
+      "category": "Ventilation mechanics",
+      "difficulty": "Challenge",
+      "prompt": "In a sealed bell-jar lung model, the rubber sheet is pulled down. Why do the balloons inflate?",
+      "options": [
+        "The rubber sheet forces air directly into the balloons through itself",
+        "The balloons make oxygen that expands them",
+        "The enclosed volume increases, lowering pressure so air enters the balloons",
+        "The pressure inside the jar becomes greater than outside pressure"
+      ],
+      "answer": 2,
+      "explanation": "Pulling the sheet down increases the surrounding volume. The pressure decrease lets outside air enter the balloons through the tube."
+    },
+    {
+      "id": "b20",
+      "category": "Ventilation mechanics",
+      "difficulty": "Challenge",
+      "prompt": "Which is an important limitation of a simple bell-jar lung model?",
+      "options": [
+        "It shows a volume change when the sheet moves",
+        "Air enters through a tube",
+        "The balloons can become larger",
+        "Its rigid jar does not show the movement of a real rib cage"
+      ],
+      "answer": 3,
+      "explanation": "A rigid jar cannot represent rib movement and intercostal muscles. The model illustrates only some features of ventilation."
+    },
+    {
+      "id": "b21",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Foundation",
+      "prompt": "In healthy lungs, which way does oxygen diffuse across the alveolar wall?",
+      "options": [
+        "From alveolar air into capillary blood",
+        "From capillary blood into alveolar air only",
+        "From the tracheal cartilage into the bronchi",
+        "From the diaphragm into the ribs"
+      ],
+      "answer": 0,
+      "explanation": "Oxygen diffuses from alveoli, where its concentration is higher, into the blood arriving in pulmonary capillaries."
+    },
+    {
+      "id": "b22",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Foundation",
+      "prompt": "Which way does carbon dioxide normally diffuse at the alveoli?",
+      "options": [
+        "From alveolar air into the blood only",
+        "From capillary blood into alveolar air",
+        "From the ribs into the trachea",
+        "From the heart valves into the bronchi"
+      ],
+      "answer": 1,
+      "explanation": "Blood arriving at the lungs has more carbon dioxide than alveolar air, so carbon dioxide diffuses into the alveoli."
+    },
+    {
+      "id": "b23",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Foundation",
+      "prompt": "Why are there so many alveoli in the lungs?",
+      "options": [
+        "To make the diffusion barrier thicker",
+        "To replace the need for blood vessels",
+        "To provide a large total surface area for gas exchange",
+        "To store solid food until it is digested"
+      ],
+      "answer": 2,
+      "explanation": "Many alveoli provide a very large surface area, supporting rapid diffusion of respiratory gases."
+    },
+    {
+      "id": "b24",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Foundation",
+      "prompt": "Why are alveolar and capillary walls very thin?",
+      "options": [
+        "To prevent any diffusion of oxygen",
+        "To increase the distance between air and blood",
+        "To allow air to flow through the veins as bubbles",
+        "To create a short diffusion distance"
+      ],
+      "answer": 3,
+      "explanation": "The thin alveolar-capillary barrier gives gases a short path between air and blood."
+    },
+    {
+      "id": "b25",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Application",
+      "prompt": "How does a good blood supply help alveolar gas exchange?",
+      "options": [
+        "It brings carbon dioxide and carries oxygen away, maintaining concentration gradients",
+        "It stops oxygen from leaving the alveoli",
+        "It replaces alveolar air with liquid blood",
+        "It makes the alveolar walls thicker"
+      ],
+      "answer": 0,
+      "explanation": "Continuous blood flow helps maintain gradients by supplying oxygen-poor blood and removing blood that has gained oxygen."
+    },
+    {
+      "id": "b26",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Application",
+      "prompt": "How does ventilation help maintain oxygen diffusion into the blood?",
+      "options": [
+        "It makes oxygen diffuse against its gradient",
+        "It refreshes alveolar air so its oxygen level remains relatively high",
+        "It seals every alveolus permanently",
+        "It stops blood reaching the lungs"
+      ],
+      "answer": 1,
+      "explanation": "Ventilation replenishes oxygen in alveoli and removes carbon dioxide, helping maintain gradients for diffusion."
+    },
+    {
+      "id": "b27",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Application",
+      "prompt": "Which change would usually slow gas exchange across an alveolar wall?",
+      "options": [
+        "An increase in total functioning alveolar surface area",
+        "A greater oxygen concentration difference between air and blood",
+        "An increase in the thickness of the diffusion barrier",
+        "A shorter diffusion distance"
+      ],
+      "answer": 2,
+      "explanation": "A thicker barrier gives gases a longer diffusion path and usually reduces the rate of exchange."
+    },
+    {
+      "id": "b28",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Application",
+      "prompt": "Why is a moist alveolar surface useful?",
+      "options": [
+        "It prevents all gases from moving",
+        "It turns nitrogen into oxygen",
+        "It makes the entire lung fill with water",
+        "Respiratory gases can dissolve before crossing the surface"
+      ],
+      "answer": 3,
+      "explanation": "Gases dissolve in the thin moist lining before diffusing across the alveolar surface."
+    },
+    {
+      "id": "b29",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Challenge",
+      "prompt": "An alveolus is ventilated normally but receives very little blood flow. What is the likely result?",
+      "options": [
+        "Less oxygen can be transferred into circulating blood from that alveolus",
+        "More oxygen must enter the blood than normal",
+        "Gas exchange no longer needs a concentration gradient",
+        "All nearby bronchi become blood vessels"
+      ],
+      "answer": 0,
+      "explanation": "Effective exchange needs both ventilation and perfusion. Poor blood flow limits how much oxygen can be carried away."
+    },
+    {
+      "id": "b30",
+      "category": "Alveoli and diffusion",
+      "difficulty": "Challenge",
+      "prompt": "Why does blood leave the lungs with more oxygen but less carbon dioxide than when it arrived?",
+      "options": [
+        "Oxygen is converted into carbon dioxide inside the alveoli",
+        "The two gases diffuse in different directions down their own gradients",
+        "Carbon dioxide carries oxygen out of the blood",
+        "The pulmonary artery adds oxygen directly from the ribs"
+      ],
+      "answer": 1,
+      "explanation": "Oxygen diffuses from alveolar air into blood while carbon dioxide diffuses from blood into alveoli. Each follows its own gradient."
+    },
+    {
+      "id": "b31",
+      "category": "Respiration and exercise",
+      "difficulty": "Foundation",
+      "prompt": "What is the difference between breathing and cellular respiration?",
+      "options": [
+        "Breathing releases energy inside cells; respiration moves air",
+        "They are two names for exactly the same process",
+        "Breathing moves air; cellular respiration releases energy in cells",
+        "Respiration occurs only in the lungs and breathing only in muscles"
+      ],
+      "answer": 2,
+      "explanation": "Breathing is ventilation. Cellular respiration is a set of chemical reactions in cells that release usable energy."
+    },
+    {
+      "id": "b32",
+      "category": "Respiration and exercise",
+      "difficulty": "Foundation",
+      "prompt": "Which word equation summarises aerobic respiration?",
+      "options": [
+        "Carbon dioxide + water → glucose + oxygen",
+        "Glucose + carbon dioxide → oxygen + water",
+        "Oxygen + water → glucose + nitrogen",
+        "Glucose + oxygen → carbon dioxide + water"
+      ],
+      "answer": 3,
+      "explanation": "Aerobic respiration uses glucose and oxygen and produces carbon dioxide and water, releasing energy in the process."
+    },
+    {
+      "id": "b33",
+      "category": "Respiration and exercise",
+      "difficulty": "Foundation",
+      "prompt": "Where does aerobic cellular respiration occur?",
+      "options": [
+        "In living cells throughout the body",
+        "Only in the air inside the trachea",
+        "Only on the outside of the skin",
+        "Only in the blood plasma"
+      ],
+      "answer": 0,
+      "explanation": "Many body cells carry out aerobic respiration. The lungs supply oxygen but are not the only site of respiration."
+    },
+    {
+      "id": "b34",
+      "category": "Respiration and exercise",
+      "difficulty": "Application",
+      "prompt": "Why does breathing rate usually increase during exercise?",
+      "options": [
+        "Working muscles stop releasing energy",
+        "Working muscles need more oxygen and produce more carbon dioxide",
+        "Exercise turns all nitrogen into carbon dioxide",
+        "The lungs begin making glucose from oxygen"
+      ],
+      "answer": 1,
+      "explanation": "Increased ventilation supports the greater gas-exchange demands of active, respiring muscles."
+    },
+    {
+      "id": "b35",
+      "category": "Respiration and exercise",
+      "difficulty": "Application",
+      "prompt": "Which combination usually increases the volume of air ventilated each minute during exercise?",
+      "options": [
+        "A lower breathing rate and a smaller tidal volume",
+        "A smaller tidal volume with no change in breathing rate",
+        "A higher breathing rate and a larger tidal volume",
+        "No airflow and a higher heart rate"
+      ],
+      "answer": 2,
+      "explanation": "Both more breaths per minute and deeper breaths can increase minute ventilation."
+    },
+    {
+      "id": "b36",
+      "category": "Respiration and exercise",
+      "difficulty": "Application",
+      "prompt": "A student takes 12 breaths per minute with a tidal volume of 0.5 L. What is minute ventilation?",
+      "options": [
+        "24 L/min",
+        "12.5 L/min",
+        "0.042 L/min",
+        "6 L/min"
+      ],
+      "answer": 3,
+      "explanation": "Minute ventilation = breathing rate × tidal volume = 12 × 0.5 = 6 litres per minute."
+    },
+    {
+      "id": "b37",
+      "category": "Respiration and exercise",
+      "difficulty": "Application",
+      "prompt": "What does a minute ventilation of 8 litres per minute mean?",
+      "options": [
+        "A total of 8 litres of air is moved into or out of the lungs each minute",
+        "Exactly 8 litres of oxygen is absorbed into the blood each minute",
+        "The person takes exactly 8 breaths each minute",
+        "The heart pumps exactly 8 litres of blood each minute"
+      ],
+      "answer": 0,
+      "explanation": "Minute ventilation is the total volume of air moved into or out of the lungs each minute. Air is a mixture of gases, so this does not mean that 8 litres of oxygen is absorbed."
+    },
+    {
+      "id": "b38",
+      "category": "Respiration and exercise",
+      "difficulty": "Challenge",
+      "prompt": "Two students each ventilate 8 L of air per minute. One takes 10 breaths/min and the other 20 breaths/min. Which statement is correct?",
+      "options": [
+        "Both students must have the same tidal volume",
+        "The first student has a larger tidal volume",
+        "The second student has a larger tidal volume",
+        "Neither student is moving air into the lungs"
+      ],
+      "answer": 1,
+      "explanation": "For the same minute ventilation, fewer breaths require a larger volume per breath: 0.8 L compared with 0.4 L."
+    },
+    {
+      "id": "b39",
+      "category": "Respiration and exercise",
+      "difficulty": "Challenge",
+      "prompt": "Why can breathing stay faster than resting level for a while after vigorous exercise?",
+      "options": [
+        "The muscles have permanently lost the ability to respire",
+        "The lungs are now producing glucose from nitrogen",
+        "Recovery processes still require oxygen and carbon dioxide removal",
+        "The diaphragm has become unable to relax"
+      ],
+      "answer": 2,
+      "explanation": "Oxygen demand and carbon dioxide removal can remain elevated during recovery while the body returns towards resting conditions."
+    },
+    {
+      "id": "b40",
+      "category": "Respiration and exercise",
+      "difficulty": "Challenge",
+      "prompt": "Which observation most directly shows that exhaled air contains carbon dioxide?",
+      "options": [
+        "It causes a glowing splint to relight strongly",
+        "It contains a greater percentage of oxygen than inhaled air",
+        "It has no water vapour",
+        "It turns limewater cloudy"
+      ],
+      "answer": 3,
+      "explanation": "Carbon dioxide reacts with limewater to form a cloudy precipitate. Exhaled air contains more carbon dioxide than inhaled air."
+    },
+    {
+      "id": "b41",
+      "category": "Health and protection",
+      "difficulty": "Foundation",
+      "prompt": "What is the function of mucus in the airways?",
+      "options": [
+        "To trap particles and some pathogens",
+        "To make oxygen in the bronchi",
+        "To replace the diaphragm",
+        "To carry most oxygen to body cells"
+      ],
+      "answer": 0,
+      "explanation": "Sticky mucus traps particles and pathogens, helping prevent them reaching the delicate gas-exchange surfaces."
+    },
+    {
+      "id": "b42",
+      "category": "Health and protection",
+      "difficulty": "Foundation",
+      "prompt": "What do cilia in the airways do?",
+      "options": [
+        "Pump blood around the lungs",
+        "Move mucus towards the throat",
+        "Produce all inhaled oxygen",
+        "Hold the rib bones together"
+      ],
+      "answer": 1,
+      "explanation": "Cilia are tiny hair-like projections that beat to move mucus and trapped material towards the throat."
+    },
+    {
+      "id": "b43",
+      "category": "Health and protection",
+      "difficulty": "Application",
+      "prompt": "Why can damage to airway cilia increase the risk of chest infections?",
+      "options": [
+        "The lungs begin absorbing food instead of air",
+        "Red blood cells immediately stop being made",
+        "Mucus and trapped pathogens are cleared less effectively",
+        "The diaphragm no longer contains any muscle"
+      ],
+      "answer": 2,
+      "explanation": "Damaged cilia reduce mucus clearance, allowing pathogens and particles to remain in the airways longer."
+    },
+    {
+      "id": "b44",
+      "category": "Health and protection",
+      "difficulty": "Application",
+      "prompt": "How can emphysema reduce the efficiency of gas exchange?",
+      "options": [
+        "It creates many extra intact alveoli",
+        "It makes the lungs produce oxygen",
+        "It replaces every bronchiole with a coronary artery",
+        "Damage to alveolar walls reduces the available surface area"
+      ],
+      "answer": 3,
+      "explanation": "Emphysema damages alveolar walls and elastic tissue, reducing gas-exchange surface area and making exhalation harder."
+    },
+    {
+      "id": "b45",
+      "category": "Health and protection",
+      "difficulty": "Application",
+      "prompt": "What commonly happens to airways during an asthma attack?",
+      "options": [
+        "They narrow because of muscle tightening, inflammation and mucus",
+        "They become wider than normal with no inflammation",
+        "They turn into blood-filled capillaries",
+        "Their cartilage changes into red blood cells"
+      ],
+      "answer": 0,
+      "explanation": "Asthma can narrow the airways through smooth-muscle contraction, inflammation and extra mucus, restricting airflow."
+    },
+    {
+      "id": "b46",
+      "category": "Health and protection",
+      "difficulty": "Application",
+      "prompt": "Why can carbon monoxide exposure reduce oxygen transport?",
+      "options": [
+        "It converts all alveoli into bronchi",
+        "Carbon monoxide binds strongly to haemoglobin",
+        "It acts as a normal substitute for oxygen in aerobic respiration",
+        "It makes the diaphragm grow a protective shell"
+      ],
+      "answer": 1,
+      "explanation": "Carbon monoxide binds haemoglobin strongly, reducing the amount available to carry oxygen effectively."
+    },
+    {
+      "id": "b47",
+      "category": "Health and protection",
+      "difficulty": "Application",
+      "prompt": "Which substance in tobacco smoke is strongly associated with dependence?",
+      "options": [
+        "Haemoglobin",
+        "Glucose",
+        "Nicotine",
+        "Oxygen"
+      ],
+      "answer": 2,
+      "explanation": "Nicotine is addictive. Other smoke constituents, including carcinogens and carbon monoxide, contribute to different health harms."
+    },
+    {
+      "id": "b48",
+      "category": "Health and protection",
+      "difficulty": "Challenge",
+      "prompt": "A person has reduced alveolar surface area but normal movement of the ribs. Why might exercise still be difficult?",
+      "options": [
+        "Normal rib movement guarantees unlimited oxygen uptake",
+        "The lungs no longer need any blood supply",
+        "Reduced surface area makes diffusion distance zero",
+        "Less gas-exchange capacity can limit oxygen delivery despite continued ventilation"
+      ],
+      "answer": 3,
+      "explanation": "Ventilation and gas exchange are different processes. Normal chest movement cannot fully compensate for loss of exchange surface."
+    },
+    {
+      "id": "b49",
+      "category": "Health and protection",
+      "difficulty": "Challenge",
+      "prompt": "Why should a breathing simulator not be used to diagnose asthma?",
+      "options": [
+        "A teaching model cannot assess a person's symptoms or replace clinical tests",
+        "All wheezing is always caused by the same condition",
+        "Changing a slider measures real airway inflammation",
+        "A normal animation proves every user has healthy lungs"
+      ],
+      "answer": 0,
+      "explanation": "Educational simulations illustrate mechanisms. Diagnosis requires appropriate medical assessment and, when indicated, clinical measurements."
+    },
+    {
+      "id": "b50",
+      "category": "Health and protection",
+      "difficulty": "Challenge",
+      "prompt": "Why is avoiding smoking useful even though airways have protective mucus and cilia?",
+      "options": [
+        "Cilia remove every carcinogen from smoke before it reaches any cell",
+        "The protective system can be damaged or overwhelmed and does not remove every harmful substance",
+        "Mucus makes carbon monoxide harmless in the blood",
+        "The presence of cilia prevents all lung disease"
+      ],
+      "answer": 1,
+      "explanation": "Mucus and cilia provide partial protection, but smoke can damage them and contains gases and particles they cannot fully remove."
+    },
+    {
+      "id": "b51",
+      "category": "Evidence and investigations",
+      "difficulty": "Foundation",
+      "prompt": "A student counts 8 breaths in 30 seconds. What is the estimated breathing rate?",
+      "options": [
+        "8 breaths per minute",
+        "4 breaths per minute",
+        "16 breaths per minute",
+        "24 breaths per minute"
+      ],
+      "answer": 2,
+      "explanation": "There are two 30-second intervals in a minute, so 8 × 2 = 16 breaths per minute."
+    },
+    {
+      "id": "b52",
+      "category": "Evidence and investigations",
+      "difficulty": "Foundation",
+      "prompt": "Which gas makes up the largest proportion of both inhaled and exhaled air?",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Hydrogen",
+        "Nitrogen"
+      ],
+      "answer": 3,
+      "explanation": "Nitrogen is the largest component of inhaled and exhaled air. Exhaled air still contains nitrogen and a substantial amount of oxygen."
+    },
+    {
+      "id": "b53",
+      "category": "Evidence and investigations",
+      "difficulty": "Application",
+      "prompt": "Which statement about oxygen in exhaled air is correct?",
+      "options": [
+        "Exhaled air still contains oxygen, but usually a smaller proportion than inhaled air",
+        "Exhaled air contains no oxygen at all",
+        "Exhaled air is pure oxygen",
+        "All inhaled oxygen is converted into nitrogen"
+      ],
+      "answer": 0,
+      "explanation": "Only some inhaled oxygen is taken up by the blood. Exhaled air typically contains about 16% oxygen compared with about 21% in air."
+    },
+    {
+      "id": "b54",
+      "category": "Evidence and investigations",
+      "difficulty": "Application",
+      "prompt": "Which observation is consistent with exhaled air containing water vapour?",
+      "options": [
+        "A glowing splint always relights",
+        "Condensation forms on a cool surface breathed onto",
+        "Limewater becomes completely dry",
+        "The nitrogen in the air turns blue"
+      ],
+      "answer": 1,
+      "explanation": "Warm, moist exhaled air can cool on a surface and form liquid water droplets by condensation."
+    },
+    {
+      "id": "b55",
+      "category": "Evidence and investigations",
+      "difficulty": "Application",
+      "prompt": "In an investigation of exercise intensity and breathing rate, what should be the dependent variable?",
+      "options": [
+        "The chosen exercise intensity",
+        "The type of stopwatch used",
+        "The measured breathing rate",
+        "The colour of the students' clothes"
+      ],
+      "answer": 2,
+      "explanation": "The dependent variable is the measured response: breathing rate. Exercise intensity is the independent variable."
+    },
+    {
+      "id": "b56",
+      "category": "Evidence and investigations",
+      "difficulty": "Application",
+      "prompt": "Why should students use the same counting interval when comparing raw breath counts?",
+      "options": [
+        "A longer counting interval always lowers the actual breathing rate",
+        "Breath counts are independent of measurement duration",
+        "A counting interval converts oxygen directly into energy",
+        "Different intervals can produce different counts even at the same breathing rate"
+      ],
+      "answer": 3,
+      "explanation": "Counts depend on both rate and time. Use a standard interval or convert all measurements to breaths per minute."
+    },
+    {
+      "id": "b57",
+      "category": "Evidence and investigations",
+      "difficulty": "Application",
+      "prompt": "A breathing trace shows regular peaks getting farther apart. What does that suggest?",
+      "options": [
+        "Breathing rate is decreasing",
+        "Breathing rate is increasing",
+        "Tidal volume must be exactly doubling",
+        "Oxygen has stopped diffusing into the blood"
+      ],
+      "answer": 0,
+      "explanation": "A longer interval between successive breaths means fewer breaths per unit time. Peak spacing alone does not determine tidal volume."
+    },
+    {
+      "id": "b58",
+      "category": "Evidence and investigations",
+      "difficulty": "Challenge",
+      "prompt": "A breathing-volume trace has a larger peak-to-trough amplitude but the same spacing between breaths. What changed?",
+      "options": [
+        "Breathing rate increased while tidal volume stayed similar",
+        "Tidal volume increased while breathing rate stayed similar",
+        "Both rate and volume must have fallen",
+        "No aspect of ventilation changed"
+      ],
+      "answer": 1,
+      "explanation": "On a volume trace, greater peak-to-trough amplitude indicates larger breaths; unchanged spacing indicates a similar rate."
+    },
+    {
+      "id": "b59",
+      "category": "Evidence and investigations",
+      "difficulty": "Challenge",
+      "prompt": "Why can a model that shows moving air particles not by itself show the rate of gas diffusion into blood?",
+      "options": [
+        "All air movement is the same process as diffusion across alveoli",
+        "There are no gas concentration differences in lungs",
+        "Ventilation moves air in bulk, while diffusion depends on gradients and the exchange barrier",
+        "Diffusion is caused only by the ribs moving"
+      ],
+      "answer": 2,
+      "explanation": "Bulk air movement and molecular diffusion are distinct. Exchange rate also depends on surface area, distance, gradients and blood supply."
+    },
+    {
+      "id": "b60",
+      "category": "Evidence and investigations",
+      "difficulty": "Challenge",
+      "prompt": "A class finds faster breathing after exercise in one trial. What would strengthen the evidence?",
+      "options": [
+        "Changing exercise type and timing for every trial",
+        "Ignoring results that differ from the prediction",
+        "Measuring only students with the expected result",
+        "Repeating controlled trials and using the same measurement method"
+      ],
+      "answer": 3,
+      "explanation": "Repeated, controlled measurements help assess variability and support a more reliable conclusion without selecting only preferred results."
+    }
+  ]
+}

@@ -1,0 +1,854 @@
+{
+  "topicId": "circulatory-system",
+  "title": "Circulatory system",
+  "categories": [
+    "Heart structure",
+    "Blood flow and vessels",
+    "Blood and exchange",
+    "Valves and pressure",
+    "Exercise and calculations",
+    "Health and investigations"
+  ],
+  "questions": [
+    {
+      "id": "c01",
+      "category": "Heart structure",
+      "difficulty": "Foundation",
+      "prompt": "Which chamber first receives blood returning from most of the body?",
+      "options": [
+        "Right atrium",
+        "Left atrium",
+        "Right ventricle",
+        "Left ventricle"
+      ],
+      "answer": 0,
+      "explanation": "The venae cavae return blood from the body to the right atrium. The left atrium receives blood from the lungs."
+    },
+    {
+      "id": "c02",
+      "category": "Heart structure",
+      "difficulty": "Foundation",
+      "prompt": "Which chamber pumps blood into the aorta?",
+      "options": [
+        "Right ventricle",
+        "Left ventricle",
+        "Left atrium",
+        "Right atrium"
+      ],
+      "answer": 1,
+      "explanation": "The left ventricle contracts to send blood through the aorta to the body."
+    },
+    {
+      "id": "c03",
+      "category": "Heart structure",
+      "difficulty": "Foundation",
+      "prompt": "Which structure separates the right and left ventricles?",
+      "options": [
+        "The pericardium",
+        "The tricuspid valve",
+        "The interventricular septum",
+        "The coronary artery"
+      ],
+      "answer": 2,
+      "explanation": "The septum is the muscular partition between the ventricles. It prevents direct mixing of their blood."
+    },
+    {
+      "id": "c04",
+      "category": "Heart structure",
+      "difficulty": "Foundation",
+      "prompt": "What is the main function of the atria?",
+      "options": [
+        "To supply oxygen directly to heart muscle",
+        "To exchange gases with the air",
+        "To pump blood at the highest systemic pressure",
+        "To receive blood entering the heart"
+      ],
+      "answer": 3,
+      "explanation": "The atria receive blood: the right atrium from the body and the left atrium from the lungs."
+    },
+    {
+      "id": "c05",
+      "category": "Heart structure",
+      "difficulty": "Application",
+      "prompt": "Why is the wall of the left ventricle normally thicker than that of the right ventricle?",
+      "options": [
+        "It generates higher pressure to move blood around the body",
+        "It stores more oxygen than the right ventricle",
+        "It receives blood from both lungs and the body",
+        "It contains more valves than the right ventricle"
+      ],
+      "answer": 0,
+      "explanation": "The left ventricle pumps through systemic circulation, which requires greater pressure than the shorter pulmonary circuit."
+    },
+    {
+      "id": "c06",
+      "category": "Heart structure",
+      "difficulty": "Application",
+      "prompt": "A student points to the lower pointed tip of an intact heart. What is this region called?",
+      "options": [
+        "The aortic arch",
+        "The apex",
+        "The septum",
+        "The vena cava"
+      ],
+      "answer": 1,
+      "explanation": "The apex is the pointed inferior tip of the heart and is formed mainly by the left ventricle."
+    },
+    {
+      "id": "c07",
+      "category": "Heart structure",
+      "difficulty": "Application",
+      "prompt": "What do the coronary arteries supply?",
+      "options": [
+        "The lungs with air",
+        "The left atrium with blood from the lungs",
+        "The heart muscle with oxygen and nutrients",
+        "The vena cava with oxygenated blood"
+      ],
+      "answer": 2,
+      "explanation": "Heart muscle needs its own blood supply. Coronary arteries branch from the aorta to supply it."
+    },
+    {
+      "id": "c08",
+      "category": "Heart structure",
+      "difficulty": "Application",
+      "prompt": "In a normal anterior view of a heart, the specimen's right side is where?",
+      "options": [
+        "On the viewer's right",
+        "Always on the upper surface",
+        "Always at the pointed apex",
+        "On the viewer's left"
+      ],
+      "answer": 3,
+      "explanation": "Anatomical left and right belong to the specimen, as if it were facing the viewer."
+    },
+    {
+      "id": "c09",
+      "category": "Heart structure",
+      "difficulty": "Challenge",
+      "prompt": "A small opening between the ventricles could allow what to happen?",
+      "options": [
+        "Blood to pass directly between the two ventricles",
+        "Air to enter the heart directly from the trachea",
+        "All four valves to become coronary arteries",
+        "Blood to bypass every chamber of the heart"
+      ],
+      "answer": 0,
+      "explanation": "A defect in the ventricular septum can allow blood to pass between ventricles. The direction depends on the pressures on each side."
+    },
+    {
+      "id": "c10",
+      "category": "Heart structure",
+      "difficulty": "Challenge",
+      "prompt": "Why does blood inside the heart chambers not replace the need for coronary arteries?",
+      "options": [
+        "Blood in the chambers contains no oxygen at all",
+        "The thick heart muscle requires its own vessel network to supply its cells",
+        "Coronary arteries are needed only to keep valves open",
+        "The chamber walls contain no living cells"
+      ],
+      "answer": 1,
+      "explanation": "Diffusion from chamber blood is insufficient to supply the whole thick myocardium; coronary vessels deliver blood to the muscle itself."
+    },
+    {
+      "id": "c11",
+      "category": "Blood flow and vessels",
+      "difficulty": "Foundation",
+      "prompt": "Which vessel carries blood from the right ventricle towards the lungs?",
+      "options": [
+        "The aorta",
+        "The pulmonary vein",
+        "The pulmonary artery",
+        "The vena cava"
+      ],
+      "answer": 2,
+      "explanation": "The pulmonary trunk leaves the right ventricle and divides into pulmonary arteries leading to the lungs."
+    },
+    {
+      "id": "c12",
+      "category": "Blood flow and vessels",
+      "difficulty": "Foundation",
+      "prompt": "Which vessels return blood from the lungs to the left atrium?",
+      "options": [
+        "Pulmonary arteries",
+        "Coronary arteries",
+        "The venae cavae",
+        "Pulmonary veins"
+      ],
+      "answer": 3,
+      "explanation": "Pulmonary veins carry oxygen-rich blood from the lungs to the left atrium."
+    },
+    {
+      "id": "c13",
+      "category": "Blood flow and vessels",
+      "difficulty": "Foundation",
+      "prompt": "What defines an artery?",
+      "options": [
+        "It carries blood away from the heart",
+        "It always contains oxygen-rich blood",
+        "It always has a thinner wall than a vein",
+        "It carries blood only to the lungs"
+      ],
+      "answer": 0,
+      "explanation": "Arteries are defined by direction of flow. Pulmonary arteries carry oxygen-poor blood away from the heart."
+    },
+    {
+      "id": "c14",
+      "category": "Blood flow and vessels",
+      "difficulty": "Foundation",
+      "prompt": "What defines a vein?",
+      "options": [
+        "It always contains oxygen-poor blood",
+        "It carries blood towards the heart",
+        "It always carries blood at higher pressure than an artery",
+        "It is the only place where gases are exchanged"
+      ],
+      "answer": 1,
+      "explanation": "Veins return blood towards the heart. Pulmonary veins are an important example carrying oxygen-rich blood."
+    },
+    {
+      "id": "c15",
+      "category": "Blood flow and vessels",
+      "difficulty": "Application",
+      "prompt": "Which sequence correctly follows blood returning from the body?",
+      "options": [
+        "Vena cava → left atrium → left ventricle → pulmonary artery",
+        "Aorta → right ventricle → right atrium → pulmonary vein",
+        "Vena cava → right atrium → right ventricle → pulmonary artery",
+        "Pulmonary vein → right atrium → left ventricle → aorta"
+      ],
+      "answer": 2,
+      "explanation": "Blood returning from the body enters the right atrium, passes into the right ventricle and travels towards the lungs."
+    },
+    {
+      "id": "c16",
+      "category": "Blood flow and vessels",
+      "difficulty": "Application",
+      "prompt": "Which sequence correctly follows oxygen-rich blood from the lungs to the body?",
+      "options": [
+        "Pulmonary artery → right atrium → left ventricle → aorta",
+        "Vena cava → left ventricle → left atrium → aorta",
+        "Pulmonary vein → right ventricle → right atrium → aorta",
+        "Pulmonary vein → left atrium → left ventricle → aorta"
+      ],
+      "answer": 3,
+      "explanation": "Oxygen-rich blood returns from the lungs to the left side of the heart, which pumps it into the aorta."
+    },
+    {
+      "id": "c17",
+      "category": "Blood flow and vessels",
+      "difficulty": "Application",
+      "prompt": "What does double circulation mean in humans?",
+      "options": [
+        "Blood passes through the heart twice in one complete body–lungs circuit",
+        "Each blood vessel carries two separate blood streams",
+        "The heart beats twice for every breath",
+        "Blood moves through the lungs twice before reaching the heart"
+      ],
+      "answer": 0,
+      "explanation": "The pulmonary circuit links heart and lungs; the systemic circuit links heart and body. One complete circuit therefore passes through the heart twice."
+    },
+    {
+      "id": "c18",
+      "category": "Blood flow and vessels",
+      "difficulty": "Application",
+      "prompt": "Where does most exchange of substances between blood and body cells take place?",
+      "options": [
+        "Inside the aortic valve",
+        "Across capillary walls",
+        "Across the thick outer wall of an artery",
+        "Inside the vena cava only"
+      ],
+      "answer": 1,
+      "explanation": "Capillaries have very thin walls and form networks close to cells, allowing exchange over short distances."
+    },
+    {
+      "id": "c19",
+      "category": "Blood flow and vessels",
+      "difficulty": "Challenge",
+      "prompt": "A vessel contains oxygen-poor blood and is carrying it away from the heart. Which vessel is it most likely to be?",
+      "options": [
+        "A pulmonary vein",
+        "The aorta",
+        "A pulmonary artery",
+        "A coronary artery"
+      ],
+      "answer": 2,
+      "explanation": "The pulmonary artery carries oxygen-poor blood away from the right ventricle. Oxygen content alone does not define an artery."
+    },
+    {
+      "id": "c20",
+      "category": "Blood flow and vessels",
+      "difficulty": "Challenge",
+      "prompt": "Why is the blood returning from an active leg usually lower in oxygen than the blood supplied to it?",
+      "options": [
+        "The leg has converted all oxygen into nitrogen",
+        "Vein walls destroy oxygen molecules",
+        "The leg produces oxygen that remains in the arteries",
+        "Leg cells have taken oxygen from the blood for aerobic respiration"
+      ],
+      "answer": 3,
+      "explanation": "Oxygen diffuses from capillary blood to respiring cells. Returning blood has less oxygen, although it still contains some."
+    },
+    {
+      "id": "c21",
+      "category": "Blood and exchange",
+      "difficulty": "Foundation",
+      "prompt": "Which blood component transports most oxygen?",
+      "options": [
+        "Red blood cells",
+        "Platelets",
+        "White blood cells",
+        "Dissolved mineral ions alone"
+      ],
+      "answer": 0,
+      "explanation": "Haemoglobin in red blood cells binds oxygen and transports most of the oxygen in blood."
+    },
+    {
+      "id": "c22",
+      "category": "Blood and exchange",
+      "difficulty": "Foundation",
+      "prompt": "Which protein binds oxygen in red blood cells?",
+      "options": [
+        "Insulin",
+        "Haemoglobin",
+        "Amylase",
+        "Keratin"
+      ],
+      "answer": 1,
+      "explanation": "Haemoglobin binds oxygen reversibly, loading it in the lungs and releasing it in tissues."
+    },
+    {
+      "id": "c23",
+      "category": "Blood and exchange",
+      "difficulty": "Foundation",
+      "prompt": "Which blood components help start clot formation at a damaged vessel?",
+      "options": [
+        "Alveoli",
+        "Red blood cells only",
+        "Platelets",
+        "Heart valves"
+      ],
+      "answer": 2,
+      "explanation": "Platelets collect at damaged vessels and help trigger clotting, which reduces blood loss."
+    },
+    {
+      "id": "c24",
+      "category": "Blood and exchange",
+      "difficulty": "Foundation",
+      "prompt": "What is the main role of white blood cells?",
+      "options": [
+        "Pumping blood around the body",
+        "Carrying most oxygen using haemoglobin",
+        "Making the blood flow in only one direction",
+        "Defence against pathogens"
+      ],
+      "answer": 3,
+      "explanation": "White blood cells form part of the immune system. Different types engulf pathogens or help make specific immune responses."
+    },
+    {
+      "id": "c25",
+      "category": "Blood and exchange",
+      "difficulty": "Application",
+      "prompt": "Which substance is normally transported in blood plasma?",
+      "options": [
+        "Dissolved glucose",
+        "Only oxygen bound inside haemoglobin",
+        "Large pieces of undigested food",
+        "Air bubbles from the trachea"
+      ],
+      "answer": 0,
+      "explanation": "Plasma transports dissolved substances including glucose, hormones, urea and much of the carbon dioxide in blood."
+    },
+    {
+      "id": "c26",
+      "category": "Blood and exchange",
+      "difficulty": "Application",
+      "prompt": "How does a red blood cell's biconcave shape help oxygen transport?",
+      "options": [
+        "It makes the cell large enough to block capillaries",
+        "It increases surface area relative to volume and gives a short diffusion path",
+        "It prevents oxygen leaving the cell in tissues",
+        "It allows the cell to act as a one-way valve"
+      ],
+      "answer": 1,
+      "explanation": "The biconcave disc shape provides a high surface-area-to-volume ratio and a short path for diffusion."
+    },
+    {
+      "id": "c27",
+      "category": "Blood and exchange",
+      "difficulty": "Application",
+      "prompt": "How does the absence of a nucleus in a mature human red blood cell help its transport role?",
+      "options": [
+        "It allows the cell to produce antibodies",
+        "It makes the cell divide rapidly in the blood",
+        "It leaves more space for haemoglobin",
+        "It turns the cell into a platelet"
+      ],
+      "answer": 2,
+      "explanation": "Mature human red blood cells lack a nucleus, providing more space for oxygen-carrying haemoglobin."
+    },
+    {
+      "id": "c28",
+      "category": "Blood and exchange",
+      "difficulty": "Application",
+      "prompt": "A person has fewer red blood cells than normal. Which effect is most directly expected?",
+      "options": [
+        "Complete loss of blood clotting",
+        "Complete absence of all blood plasma",
+        "Inability of the trachea to stay open",
+        "Reduced oxygen-carrying capacity of the blood"
+      ],
+      "answer": 3,
+      "explanation": "Fewer red blood cells usually reduce the amount of haemoglobin available to transport oxygen."
+    },
+    {
+      "id": "c29",
+      "category": "Blood and exchange",
+      "difficulty": "Challenge",
+      "prompt": "Which statement about carbon dioxide transport in blood is most accurate?",
+      "options": [
+        "Much is transported in plasma after conversion to hydrogencarbonate ions",
+        "All carbon dioxide is carried only by platelets",
+        "Carbon dioxide is never present in blood returning from the lungs",
+        "All carbon dioxide travels as gas bubbles"
+      ],
+      "answer": 0,
+      "explanation": "Most carbon dioxide is transported as hydrogencarbonate in plasma, with smaller amounts dissolved or bound to proteins."
+    },
+    {
+      "id": "c30",
+      "category": "Blood and exchange",
+      "difficulty": "Challenge",
+      "prompt": "Why do thin capillary walls support exchange without needing blood to leave the vessels?",
+      "options": [
+        "Capillary walls contract to pump every substance into cells",
+        "Substances diffuse across the short barrier between plasma and tissue fluid",
+        "Red blood cells must normally burst to release their contents",
+        "All useful substances are larger than the wall openings"
+      ],
+      "answer": 1,
+      "explanation": "Thin capillary walls allow exchange with tissue fluid while blood normally stays within the vessel network."
+    },
+    {
+      "id": "c31",
+      "category": "Valves and pressure",
+      "difficulty": "Foundation",
+      "prompt": "What is the main function of heart valves?",
+      "options": [
+        "To add oxygen to blood",
+        "To make new red blood cells",
+        "To reduce backflow of blood",
+        "To separate oxygen from carbon dioxide"
+      ],
+      "answer": 2,
+      "explanation": "Valves open and close in response to pressure differences, helping blood flow in the correct direction."
+    },
+    {
+      "id": "c32",
+      "category": "Valves and pressure",
+      "difficulty": "Foundation",
+      "prompt": "Which valve lies between the right atrium and right ventricle?",
+      "options": [
+        "The mitral valve",
+        "The aortic valve",
+        "The pulmonary valve",
+        "The tricuspid valve"
+      ],
+      "answer": 3,
+      "explanation": "The tricuspid valve guards the right atrioventricular opening."
+    },
+    {
+      "id": "c33",
+      "category": "Valves and pressure",
+      "difficulty": "Foundation",
+      "prompt": "Which valve lies between the left atrium and left ventricle?",
+      "options": [
+        "The mitral valve",
+        "The tricuspid valve",
+        "The pulmonary valve",
+        "The aortic valve"
+      ],
+      "answer": 0,
+      "explanation": "The mitral, or bicuspid, valve lies between the left atrium and left ventricle."
+    },
+    {
+      "id": "c34",
+      "category": "Valves and pressure",
+      "difficulty": "Foundation",
+      "prompt": "Where is the aortic valve found?",
+      "options": [
+        "Between the right atrium and right ventricle",
+        "Between the left ventricle and aorta",
+        "Between the lungs and trachea",
+        "Between the left atrium and pulmonary veins"
+      ],
+      "answer": 1,
+      "explanation": "The aortic semilunar valve is at the outlet of the left ventricle."
+    },
+    {
+      "id": "c35",
+      "category": "Valves and pressure",
+      "difficulty": "Application",
+      "prompt": "What does the pulmonary valve prevent when it closes?",
+      "options": [
+        "Flow from the right atrium to the right ventricle",
+        "Flow through the vena cava towards the heart",
+        "Backflow from the pulmonary artery into the right ventricle",
+        "Oxygen diffusing from alveoli into blood"
+      ],
+      "answer": 2,
+      "explanation": "The pulmonary valve guards the right ventricular outlet, resisting backflow from the pulmonary trunk."
+    },
+    {
+      "id": "c36",
+      "category": "Valves and pressure",
+      "difficulty": "Application",
+      "prompt": "What normally causes an atrioventricular valve to close during ventricular contraction?",
+      "options": [
+        "The lungs pull the valve shut with each breath",
+        "The atrial blood becomes oxygen-free",
+        "The valve actively pumps blood backwards",
+        "Ventricular pressure becomes greater than atrial pressure"
+      ],
+      "answer": 3,
+      "explanation": "A pressure difference pushes AV valve cusps closed as ventricular pressure rises."
+    },
+    {
+      "id": "c37",
+      "category": "Valves and pressure",
+      "difficulty": "Application",
+      "prompt": "What is the role of the chordae tendineae?",
+      "options": [
+        "To help prevent AV valve cusps turning back into the atria",
+        "To pull semilunar valves open during every heartbeat",
+        "To carry blood directly between the ventricles",
+        "To replace the septum when it contracts"
+      ],
+      "answer": 0,
+      "explanation": "The chordae attach AV valve cusps to papillary muscles, helping prevent prolapse during ventricular contraction."
+    },
+    {
+      "id": "c38",
+      "category": "Valves and pressure",
+      "difficulty": "Application",
+      "prompt": "Why do many veins in the limbs contain valves?",
+      "options": [
+        "To make blood flow away from the heart",
+        "To help prevent backflow in low-pressure blood returning to the heart",
+        "To exchange oxygen directly with the air",
+        "To make their blood pressure higher than in the aorta"
+      ],
+      "answer": 1,
+      "explanation": "Venous valves help maintain flow towards the heart, especially against gravity; skeletal muscle contractions also help move blood."
+    },
+    {
+      "id": "c39",
+      "category": "Valves and pressure",
+      "difficulty": "Challenge",
+      "prompt": "A faulty mitral valve allows blood to flow backwards during left ventricular contraction. Where does that blood go?",
+      "options": [
+        "Into the right atrium directly",
+        "Into the trachea",
+        "Into the left atrium",
+        "Into the vena cava without passing another chamber"
+      ],
+      "answer": 2,
+      "explanation": "The mitral valve normally closes between left ventricle and left atrium. A leak can send some blood back into the left atrium."
+    },
+    {
+      "id": "c40",
+      "category": "Valves and pressure",
+      "difficulty": "Challenge",
+      "prompt": "Why are the thick, elastic walls of large arteries useful?",
+      "options": [
+        "They absorb all oxygen before blood reaches tissues",
+        "They allow valves to replace the pumping heart",
+        "They prevent any change in vessel diameter",
+        "They withstand high pressure and stretch and recoil as blood is pumped"
+      ],
+      "answer": 3,
+      "explanation": "Arteries carry blood at relatively high pressure. Elastic tissue stretches during pumping and recoils between beats."
+    },
+    {
+      "id": "c41",
+      "category": "Exercise and calculations",
+      "difficulty": "Foundation",
+      "prompt": "What usually happens to heart rate during exercise?",
+      "options": [
+        "It increases",
+        "It immediately falls to zero",
+        "It stays exactly the same in every person",
+        "It becomes the same as breathing rate"
+      ],
+      "answer": 0,
+      "explanation": "A faster heart rate helps deliver more oxygen and nutrients to active muscles and remove carbon dioxide."
+    },
+    {
+      "id": "c42",
+      "category": "Exercise and calculations",
+      "difficulty": "Foundation",
+      "prompt": "What is a pulse?",
+      "options": [
+        "The movement of air through a bronchus",
+        "A pressure wave caused by each heartbeat travelling along arteries",
+        "A valve opening inside a vein",
+        "A red blood cell dividing"
+      ],
+      "answer": 1,
+      "explanation": "Ventricular contraction produces a pressure wave in the arteries that can be felt as a pulse."
+    },
+    {
+      "id": "c43",
+      "category": "Exercise and calculations",
+      "difficulty": "Application",
+      "prompt": "A student counts 18 pulse beats in 15 seconds. What is the estimated heart rate?",
+      "options": [
+        "18 beats per minute",
+        "36 beats per minute",
+        "72 beats per minute",
+        "108 beats per minute"
+      ],
+      "answer": 2,
+      "explanation": "There are four 15-second intervals in one minute: 18 × 4 = 72 beats per minute."
+    },
+    {
+      "id": "c44",
+      "category": "Exercise and calculations",
+      "difficulty": "Application",
+      "prompt": "For a steady resting pulse, why is counting for 60 seconds less sensitive to missing one beat than counting for 15 seconds?",
+      "options": [
+        "A longer count guarantees that every beat will be heard",
+        "Pulse rate must always increase during a longer count",
+        "A 60-second count removes all differences between people",
+        "A one-beat counting error makes a smaller difference to the estimated beats per minute"
+      ],
+      "answer": 3,
+      "explanation": "Missing one beat in a 15-second count changes the estimate by 4 beats/min when multiplied by four. Missing one beat in a full-minute count changes it by only 1 beat/min. This comparison assumes a steady pulse."
+    },
+    {
+      "id": "c45",
+      "category": "Exercise and calculations",
+      "difficulty": "Application",
+      "prompt": "Why do active muscles need an increased blood supply?",
+      "options": [
+        "Their cells need more oxygen and glucose for energy release",
+        "Their cells stop producing carbon dioxide",
+        "Their cells no longer need to respire",
+        "Their veins must become airways"
+      ],
+      "answer": 0,
+      "explanation": "Muscle activity increases energy demand. Blood supplies oxygen and glucose for aerobic respiration and removes products such as carbon dioxide."
+    },
+    {
+      "id": "c46",
+      "category": "Exercise and calculations",
+      "difficulty": "Application",
+      "prompt": "What is stroke volume?",
+      "options": [
+        "The number of breaths taken in one minute",
+        "The volume of blood pumped by one ventricle per heartbeat",
+        "The amount of oxygen in one red blood cell",
+        "The total amount of blood in the body"
+      ],
+      "answer": 1,
+      "explanation": "Stroke volume is the volume ejected by one ventricle with each beat. It is different from heart rate."
+    },
+    {
+      "id": "c47",
+      "category": "Exercise and calculations",
+      "difficulty": "Application",
+      "prompt": "How is cardiac output calculated?",
+      "options": [
+        "Heart rate ÷ stroke volume",
+        "Breathing rate × blood glucose concentration",
+        "Heart rate × stroke volume",
+        "Stroke volume ÷ body temperature"
+      ],
+      "answer": 2,
+      "explanation": "Cardiac output is the volume pumped by one ventricle each minute, calculated from beats per minute multiplied by volume per beat."
+    },
+    {
+      "id": "c48",
+      "category": "Exercise and calculations",
+      "difficulty": "Challenge",
+      "prompt": "A heart rate is 80 beats/min and stroke volume is 70 mL/beat. What is cardiac output?",
+      "options": [
+        "150 mL/min",
+        "1.14 mL/min",
+        "560 mL/min",
+        "5,600 mL/min"
+      ],
+      "answer": 3,
+      "explanation": "80 beats/min × 70 mL/beat = 5,600 mL/min, or 5.6 litres per minute."
+    },
+    {
+      "id": "c49",
+      "category": "Exercise and calculations",
+      "difficulty": "Challenge",
+      "prompt": "During exercise, heart rate rises from 70 to 140 beats/min while stroke volume rises from 60 to 90 mL/beat. What happens to cardiac output?",
+      "options": [
+        "It rises from 4.2 to 12.6 litres/min",
+        "It rises from 4.2 to 8.4 litres/min",
+        "It falls from 12.6 to 4.2 litres/min",
+        "It stays at 6.3 litres/min"
+      ],
+      "answer": 0,
+      "explanation": "At rest: 70 × 60 = 4,200 mL/min. During exercise: 140 × 90 = 12,600 mL/min. Both rate and stroke volume matter."
+    },
+    {
+      "id": "c50",
+      "category": "Exercise and calculations",
+      "difficulty": "Challenge",
+      "prompt": "A trained person and an untrained person both have a resting cardiac output of 5 L/min. The trained person has a lower resting heart rate. What follows?",
+      "options": [
+        "The trained person must have no heart valves",
+        "The trained person must have a larger stroke volume at that time",
+        "The untrained person must have no haemoglobin",
+        "Both must have exactly the same stroke volume"
+      ],
+      "answer": 1,
+      "explanation": "For the same cardiac output, a lower heart rate must be balanced by a larger volume pumped per beat."
+    },
+    {
+      "id": "c51",
+      "category": "Health and investigations",
+      "difficulty": "Foundation",
+      "prompt": "What happens when a coronary artery becomes severely narrowed?",
+      "options": [
+        "More air enters the left atrium",
+        "The pulmonary veins turn into arteries",
+        "Less blood can reach part of the heart muscle",
+        "All red blood cells stop containing haemoglobin"
+      ],
+      "answer": 2,
+      "explanation": "Narrowing reduces blood supply to heart muscle, limiting its oxygen and nutrient supply."
+    },
+    {
+      "id": "c52",
+      "category": "Health and investigations",
+      "difficulty": "Foundation",
+      "prompt": "What is atherosclerosis?",
+      "options": [
+        "The normal opening of a heart valve",
+        "The production of red blood cells in the lungs",
+        "The flow of blood through capillaries",
+        "The build-up of fatty plaques in artery walls"
+      ],
+      "answer": 3,
+      "explanation": "Atherosclerosis involves plaque build-up in arterial walls, which can narrow vessels and increase cardiovascular risk."
+    },
+    {
+      "id": "c53",
+      "category": "Health and investigations",
+      "difficulty": "Application",
+      "prompt": "Why can a blocked coronary artery cause heart muscle damage?",
+      "options": [
+        "The affected muscle may receive too little oxygen for its energy needs",
+        "It makes the heart inhale air instead of blood",
+        "It raises the oxygen content of every heart cell",
+        "It stops the blood from containing any water"
+      ],
+      "answer": 0,
+      "explanation": "A blocked coronary artery can starve part of the myocardium of oxygen. Prolonged loss of supply can cause cell death."
+    },
+    {
+      "id": "c54",
+      "category": "Health and investigations",
+      "difficulty": "Application",
+      "prompt": "Which change is likely to reduce cardiovascular risk over time?",
+      "options": [
+        "Starting smoking to increase heart rate",
+        "Regular appropriate physical activity and avoiding smoking",
+        "Replacing all water with highly sugary drinks",
+        "Remaining inactive to avoid using the heart"
+      ],
+      "answer": 1,
+      "explanation": "Regular activity and avoiding smoking are evidence-based ways to lower cardiovascular risk, alongside other healthy habits."
+    },
+    {
+      "id": "c55",
+      "category": "Health and investigations",
+      "difficulty": "Application",
+      "prompt": "Why is high blood pressure a risk factor for cardiovascular disease?",
+      "options": [
+        "It ensures every artery is completely free of plaque",
+        "It means the lungs contain too much oxygen",
+        "It places extra strain on vessels and the heart over time",
+        "It makes all heart valves work without pressure differences"
+      ],
+      "answer": 2,
+      "explanation": "Persistently high blood pressure can damage vessel walls and increases the workload of the heart."
+    },
+    {
+      "id": "c56",
+      "category": "Health and investigations",
+      "difficulty": "Application",
+      "prompt": "A class investigates the effect of exercise duration on pulse rate. Which variable should they change?",
+      "options": [
+        "The method of counting pulse for every trial",
+        "The measurement interval at random",
+        "The exercise type and duration together",
+        "The duration of the exercise"
+      ],
+      "answer": 3,
+      "explanation": "The independent variable is exercise duration. Keeping other important conditions similar helps isolate its effect."
+    },
+    {
+      "id": "c57",
+      "category": "Health and investigations",
+      "difficulty": "Application",
+      "prompt": "In an investigation comparing pulse rates after the same exercise, why should the delay before counting be kept similar?",
+      "options": [
+        "Heart rate can fall during recovery, so different delays affect the comparison",
+        "Pulse rate never changes after exercise",
+        "The heart produces no pulse during recovery",
+        "A longer delay always means a higher pulse rate"
+      ],
+      "answer": 0,
+      "explanation": "Heart rate often decreases as recovery proceeds. Standardising the measurement delay makes results more comparable."
+    },
+    {
+      "id": "c58",
+      "category": "Health and investigations",
+      "difficulty": "Challenge",
+      "prompt": "Why is it useful to repeat pulse measurements and calculate a mean?",
+      "options": [
+        "It guarantees that there are no systematic errors",
+        "It reduces the influence of random variation in individual measurements",
+        "It makes an unfair method automatically fair",
+        "It proves the same result applies to every person"
+      ],
+      "answer": 1,
+      "explanation": "Repeats and a mean reduce the influence of random variation. They do not remove a consistently biased measurement method."
+    },
+    {
+      "id": "c59",
+      "category": "Health and investigations",
+      "difficulty": "Challenge",
+      "prompt": "A student finds a lower resting pulse after several weeks of training. What is the strongest conclusion from this observation alone?",
+      "options": [
+        "Training has proved that all heart disease has been prevented",
+        "Every other student must have had the same change",
+        "The resting pulse was lower in the later measurement, but other factors should be considered",
+        "The student's blood no longer needs to carry oxygen"
+      ],
+      "answer": 2,
+      "explanation": "One observation shows a change, but fitness, stress, temperature, illness and measurement conditions can all influence pulse."
+    },
+    {
+      "id": "c60",
+      "category": "Health and investigations",
+      "difficulty": "Challenge",
+      "prompt": "Two groups do different exercises and compare raw pulse counts collected over different time intervals, without converting them to beats per minute. Why is the comparison difficult to interpret?",
+      "options": [
+        "All exercise must produce exactly the same pulse rate",
+        "Pulse rate cannot ever be measured in school",
+        "Different counting intervals always give identical raw counts",
+        "Both exercise and counting duration differ, so raw counts cannot isolate the effect of exercise"
+      ],
+      "answer": 3,
+      "explanation": "A raw count depends on pulse rate and counting duration. Convert counts to beats per minute and standardise other important conditions so that the comparison can isolate the intended exercise variable."
+    }
+  ]
+}

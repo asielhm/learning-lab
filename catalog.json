@@ -1,7 +1,17 @@
 {
   "years": [
-    { "id": "y7", "name": "Year 7", "shortName": "Y7", "subjects": [] },
-    { "id": "y8", "name": "Year 8", "shortName": "Y8", "subjects": [] },
+    {
+      "id": "y7",
+      "name": "Year 7",
+      "shortName": "Y7",
+      "subjects": []
+    },
+    {
+      "id": "y8",
+      "name": "Year 8",
+      "shortName": "Y8",
+      "subjects": []
+    },
     {
       "id": "y9",
       "name": "Year 9",
@@ -22,9 +32,43 @@
                   "title": "Inside the human heart",
                   "description": "Locate the heart, explore its 3D anatomy and work through a guided 12-stage virtual dissection.",
                   "format": "Interactive 3D lab",
-                  "duration": "20–30 min",
+                  "duration": "20\u201330 min",
                   "image": "activities/y9/science/circulatory-system/models/heart-anterior.png",
                   "href": "activities/y9/science/circulatory-system/"
+                },
+                {
+                  "id": "circulation-revision",
+                  "title": "Circulatory system: revision simulator",
+                  "description": "Build confidence with varied multiple-choice questions, explanations and focused practice on the questions you missed.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y9/science/circulatory-system/models/heart-anterior.png",
+                  "href": "activities/y9/science/circulatory-system/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "breathing-system",
+              "name": "Breathing system",
+              "description": "Explore the airways, investigate how the lungs ventilate, and see how gases pass between alveoli and blood.",
+              "activities": [
+                {
+                  "id": "breathing-lab",
+                  "title": "Inside the breathing system",
+                  "description": "Explore respiratory anatomy, control a breathing simulation and investigate gas exchange at the alveoli.",
+                  "format": "Interactive science lab",
+                  "duration": "20\u201330 min",
+                  "image": "activities/y9/science/breathing-system/cover.svg",
+                  "href": "activities/y9/science/breathing-system/"
+                },
+                {
+                  "id": "breathing-revision",
+                  "title": "Breathing system: revision simulator",
+                  "description": "Practise ventilation, gas exchange and lung-health questions with immediate explanations or an end-of-test review.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y9/science/breathing-system/cover.svg",
+                  "href": "activities/y9/science/breathing-system/revision.html"
                 }
               ]
             }
@@ -32,9 +76,23 @@
         }
       ]
     },
-    { "id": "y10", "name": "Year 10", "shortName": "Y10", "subjects": [] },
-    { "id": "y11", "name": "Year 11", "shortName": "Y11", "subjects": [] },
-    { "id": "y12", "name": "Year 12", "shortName": "Y12", "subjects": [] },
-    { "id": "y13", "name": "Year 13", "shortName": "Y13", "subjects": [] }
+    {
+      "id": "y10",
+      "name": "Year 10",
+      "shortName": "Y10",
+      "subjects": []
+    },
+    {
+      "id": "y11",
+      "name": "Year 11",
+      "shortName": "Y11",
+      "subjects": []
+    },
+    {
+      "id": "y12",
+      "name": "Year 12",
+      "shortName": "Y12",
+      "subjects": []
+    }
   ]
 }

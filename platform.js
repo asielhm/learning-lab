@@ -14,7 +14,7 @@ document.querySelector('.skip-link').addEventListener('click', event => {
 });
 let catalogue;
 const escape = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
-const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
+const plural = (count, word) => `${count} ${count === 1 ? word : word === 'activity' ? 'activities' : word + 's'}`;
 const topicCount = subject => subject.topics.reduce((count, topic) => count + topic.activities.length, 0);
 const yearCount = year => year.subjects.reduce((count, subject) => count + topicCount(subject), 0);
 const route = (...ids) => '#/years' + (ids.length ? '/' + ids.map(encodeURIComponent).join('/') : '');
@@ -63,7 +63,7 @@ function activities(year, subject, topic) {
   return shell([{name:'All years',href:route()},{name:year.name,href:route(year.id)},{name:subject.name,href:route(year.id,subject.id)},{name:topic.name}], 3, `${heading(`${year.shortName} · ${subject.name.toUpperCase()}`,topic.name,topic.description)}<div class="activities-heading"><h2>Choose an activity</h2><span>${plural(topic.activities.length,'activity')}</span></div><div class="activity-grid">${topic.activities.map(activity=>activityCard(year,subject,topic,activity)).join('')}</div>${topic.activities.length ? '' : emptyState('Activities are on their way.','There are no activities for this topic yet.',route(year.id,subject.id),'Back to topics')}`);
 }
 function about() {
-  return `<section class="catalogue-section">${breadcrumbs([{name:'How it works'}])}${heading('A LITTLE CURIOSITY GOES A LONG WAY', 'Learn by getting involved.', 'Learning Lab brings activities together in one place, organised around your year, subject and topic.')}<div class="about-grid"><article><span>01 / FIND YOUR PATH</span><h2>Year → subject → topic</h2><p>Browse activities that match what you are learning. Years without activities are clearly marked, so you always know what is available.</p></article><article><span>02 / TRY SOMETHING</span><h2>Explore at your own pace</h2><p>Open a lesson and get involved. In Heart Lab, you can rotate an anatomical model, follow a guided dissection and check your understanding along the way.</p></article><article><span>03 / KEEP DISCOVERING</span><h2>A growing collection</h2><p>More activities will be added over time. Each new lesson will appear under its year, subject and topic.</p></article></div><a class="button primary" href="#/years">Find an activity ↗</a></section>`;
+  return `<section class="catalogue-section">${breadcrumbs([{name:'How it works'}])}${heading('A LITTLE CURIOSITY GOES A LONG WAY', 'Learn by getting involved.', 'Learning Lab brings activities together in one place, organised around your year, subject and topic.')}<div class="about-grid"><article><span>01 / FIND YOUR PATH</span><h2>Year → subject → topic</h2><p>Browse activities that match what you are learning. Years without activities are clearly marked, so you always know what is available.</p></article><article><span>02 / TRY SOMETHING</span><h2>Explore at your own pace</h2><p>Open a lesson and get involved. Explore the heart and breathing system with interactive labs, then build your understanding on separate multiple-choice revision pages.</p></article><article><span>03 / KEEP DISCOVERING</span><h2>A growing collection</h2><p>More activities will be added over time. Each new lesson will appear under its year, subject and topic.</p></article></div><a class="button primary" href="#/years">Find an activity ↗</a></section>`;
 }
 function render(focus = false) {
   let parts;
@@ -94,7 +94,7 @@ async function start() {
     if(!Array.isArray(catalogue.years))throw new Error('Invalid catalogue');
     render();window.addEventListener('hashchange',()=>render(true));
   } catch {
-    app.innerHTML=decorate(`<section class="empty-state"><h1>We couldn’t load the activity catalogue.</h1><p>Check your connection and refresh the page, or open Heart Lab directly.</p><button class="button primary" id="retry">Try again ↻</button><a class="text-link" href="activities/y9/science/circulatory-system/">Open Y9 Science: Heart Lab →</a></section>`);
+    app.innerHTML=decorate(`<section class="empty-state"><h1>We couldn’t load the activity catalogue.</h1><p>Check your connection and refresh the page, or open a science lab directly.</p><button class="button primary" id="retry">Try again ↻</button><a class="text-link" href="activities/y9/science/circulatory-system/">Open Y9 Science: Heart Lab →</a><a class="text-link" href="activities/y9/science/breathing-system/">Open Y9 Science: Breathing Lab →</a></section>`);
     document.querySelector('#retry').addEventListener('click',start);
   }
 }
