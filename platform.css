@@ -10,3 +10,7 @@
 .inline-icon,.star-icon{display:inline-block;width:1em;height:1em;vertical-align:-.14em;flex-shrink:0}.brand-symbol>span .star-icon{display:block}.site-header nav a,.text-link,.activity-meta>span,.site-footer>a:last-child{align-items:center}.hero-note>span .star-icon{display:block}.card-arrow .inline-icon,.feature-open .inline-icon{width:17px;height:17px}.selection-icon .inline-icon{width:29px;height:29px}.button .inline-icon{width:17px;height:17px}.hero-empty .star-icon{width:90px;height:90px}.feature-specimen>.fallback-art{position:relative;z-index:1}
 
 .topic-entry{min-width:0}.topic-entry>.activity-card{display:block}.topic-study-links{padding:15px 5px;display:flex;flex-wrap:wrap;gap:12px}.topic-study-links a{font-size:12px;font-weight:650;text-decoration:underline;text-underline-offset:4px}.topic-study-links a:hover{color:#a3504c}
+
+.platform-header nav .teacher-dashboard-button{display:inline-flex;gap:8px;padding:11px 15px;border:1px solid var(--green);border-radius:7px;background:var(--green);color:white;white-space:nowrap}
+.platform-header nav .teacher-dashboard-button:hover{background:#366451;color:white}
+@media(max-width:740px){.platform-header{height:auto;min-height:122px;flex-wrap:wrap;row-gap:14px;padding-top:20px;padding-bottom:16px}.platform-header nav{width:100%;justify-content:space-between;gap:12px}.platform-header nav .teacher-dashboard-button{font-size:11px;padding:10px 12px}}

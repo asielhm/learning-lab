@@ -52,17 +52,22 @@ const waitFor=async check=>{for(let i=0;i<100;i++){if(await check())return;await
   await page.locator('#retry-wrong').click();await page.locator('input[name=answer]').first().check();await page.locator('#check-answer').click();
   await waitFor(()=>posted.some(p=>p.retry));const retry=posted.find(p=>p.retry);assert.equal(retry.totalQuestions,1);assert.equal(retry.mode,'practice');assert.notEqual(retry.sessionId,completed[0].sessionId);
   for(const [path,topic,course] of [['y7/maths/algebra','algebra','Year 7 Maths'],['y9/science/circulatory-system','circulatory-system','Year 9 Science'],['y9/science/breathing-system','breathing-system','Year 9 Science']]){
-   await page.goto(`${base}/activities/${path}/revision.html`);await page.locator('#start-session').waitFor();await page.locator('#start-session').click();await page.locator('input[name=answer]').first().check();await page.locator('#check-answer').click();
+   await page.goto(`${base}/activities/${path}/revision.html`);await page.locator('#start-session').waitFor();
+   assert(await page.locator('[name=studentName]').isVisible());assert(await page.locator('[name=studentName]').evaluate(input=>input.required));assert(await page.locator('[name=classroom]').isVisible());
+   await page.locator('#start-session').click();await page.locator('input[name=answer]').first().check();await page.locator('#check-answer').click();
    await waitFor(()=>posted.some(p=>p.topic===topic));assert.equal(posted.find(p=>p.topic===topic).course,course);
   }
-  await page.goto(base+'/teacher/');await page.locator('#dashboard-link:not([hidden])').waitFor();assert.equal(await page.locator('#dashboard-link').getAttribute('href'),endpoint);
+  await page.goto(base+'/');await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Teacher dashboard',exact:true}).click();
+  assert.equal(new URL(page.url()).pathname,'/teacher/');await page.locator('#dashboard-link:not([hidden])').waitFor();assert.equal(await page.locator('#dashboard-link').getAttribute('href'),endpoint);
   await page.goto(base+'/teacher/setup.html');assert.equal(await page.locator('[data-copy]').count(),3);
   assert.deepEqual(errors,[]);
   const phone=await context.newPage();await phone.setViewportSize({width:390,height:844});await phone.goto(base+'/activities/y7/maths/algebra/revision.html');await phone.locator('#start-session').waitFor();
   assert.equal(await phone.locator('[name=studentName]').inputValue(),'','A new tab does not inherit another student’s profile through localStorage');
+  await phone.locator('#start-session').click();assert.equal(await phone.locator('#revision-question-title').count(),0,'A fresh student must enter a name before starting');
   assert(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await phone.screenshot({path:'/tmp/recording-student-mobile.png',fullPage:true});
   await phone.goto(base+'/teacher/setup.html');assert(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  await phone.goto(base+'/');const access=phone.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Teacher dashboard',exact:true});assert(await access.isVisible());assert(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await phone.screenshot({path:'/tmp/teacher-dashboard-home-mobile.png',fullPage:true});await access.click();await phone.locator('#dashboard-link:not([hidden])').waitFor();
   // Unrecognised configuration cannot send pupil data to a different host.
   const unsafe=await browser.newContext();await unsafe.route('**/assets/records/config.json',route=>route.fulfill({json:{deploymentUrl:'https://attacker.example/collect'}}));
   const unconfigured=await unsafe.newPage();await unconfigured.goto(base+'/activities/y9/science/gas-laws/revision.html');await unconfigured.locator('#start-session').waitFor();assert.equal(await unconfigured.locator('[name=studentName]').count(),0);assert.match(await unconfigured.locator('[data-record-status]').innerText(),/not been connected/);
