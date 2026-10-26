@@ -6,7 +6,7 @@ const base=(process.env.LEARNING_LAB_BASE_URL||'http://127.0.0.1:8000').replace(
 for(const [topic,script,object,loading,recenter] of [['circulatory-system','app.js','model','#loading','#front'],['breathing-system','lab.js','specimen','#modelLoading','#recenter']]){
  const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  // Expose the real scene only inside this test; deployed scripts stay unchanged.
- await page.route(`**/${topic}/${script}`,async route=>{const r=await route.fetch();await route.fulfill({response:r,body:await r.text()+`\nwindow.__viewer=()=>({THREE,camera,controls,object:${object}});`})});
+ await page.route(`**/${topic}/${script}*`,async route=>{const r=await route.fetch();await route.fulfill({response:r,body:await r.text()+`\nwindow.__viewer=()=>({THREE,camera,controls,object:${object}});`})});
  await page.goto(`${base}/activities/y9/science/${topic}/`);
  if(topic==='circulatory-system'){await page.locator('#exploreChips button').first().waitFor({state:'attached'});await page.locator('[data-page="1"]').click();}
  await page.waitForFunction(selector=>document.querySelector(selector).hidden,loading,{timeout:45000});

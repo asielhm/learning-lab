@@ -1,4 +1,4 @@
-import { centerSpecimen } from '../../../../assets/viewer-framing.js';
+import { centerSpecimen, enableSpecimenGestures } from '../../../../assets/viewer-framing.js?v=two-finger-1';
 import { stages, anatomyDiagram } from './dissection.js';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -186,7 +186,7 @@ function loadModel(){if(ready)return;ready=true;
  const holder=$('#canvas');scene=new THREE.Scene();camera=new THREE.PerspectiveCamera(38,1,.1,100);camera.position.set(0,.1,7);
  renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;holder.appendChild(renderer.domElement);
  scene.add(new THREE.HemisphereLight(0xe1f3ff,0x40475b,2.3));const key=new THREE.DirectionalLight(0xffffff,3);key.position.set(4,6,5);scene.add(key);const fill=new THREE.DirectionalLight(0x88bce3,1.1);fill.position.set(-4,-2,-3);scene.add(fill);
- controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=false;controls.minDistance=2;controls.maxDistance=14;
+ controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;enableSpecimenGestures(THREE,controls);controls.minDistance=2;controls.maxDistance=14;
  renderer.domElement.addEventListener('click',event=>{if(!model)return;const rect=renderer.domElement.getBoundingClientRect();mouse.x=(event.clientX-rect.left)/rect.width*2-1;mouse.y=-((event.clientY-rect.top)/rect.height*2-1);raycaster.setFromCamera(mouse,camera);
  const hits=raycaster.intersectObject(model,true);const o=hits.find(visibleIntersection)?.object;if(!o)return;const id=o.userData.structureId||o.name;if(!descriptions[id])return;
  if(page===2){if(stages[stage].targets?.includes(id))recordTask(id);else $('#instruction').textContent=`${descriptions[id][0]}. Follow the current step’s task list.`;}else select(id);

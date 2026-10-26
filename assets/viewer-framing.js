@@ -1,3 +1,13 @@
+/** Consistent mouse and touch gestures for the two anatomy viewers. */
+export function enableSpecimenGestures(THREE, controls) {
+  controls.enablePan = true;
+  controls.enableRotate = true;
+  controls.enableZoom = true;
+  controls.screenSpacePanning = true;
+  controls.touches.ONE = THREE.TOUCH.ROTATE;
+  controls.touches.TWO = THREE.TOUCH.DOLLY_PAN;
+}
+
 /** Fit and visually center a specimen in its canvas, independently of its origin. */
 export function centerSpecimen(THREE, camera, controls, specimen, viewport) {
   if (!camera || !controls || !specimen || !viewport.clientWidth || !viewport.clientHeight) return;

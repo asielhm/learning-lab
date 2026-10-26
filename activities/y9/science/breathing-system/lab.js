@@ -1,4 +1,4 @@
-import { centerSpecimen } from '../../../../assets/viewer-framing.js';
+import { centerSpecimen, enableSpecimenGestures } from '../../../../assets/viewer-framing.js?v=two-finger-1';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const structures = {
@@ -125,7 +125,7 @@ async function initModel() {
     const modules=await Promise.all([import('three'),import('three/addons/controls/OrbitControls.js')]);THREE=modules[0];
     scene=new THREE.Scene();camera=new THREE.PerspectiveCamera(38,1,.1,100);camera.position.set(0,.18,7.6);
     renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;$('#canvas').append(renderer.domElement);
-    controls=new modules[1].OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=false;controls.minDistance=3.5;controls.maxDistance=14;
+    controls=new modules[1].OrbitControls(camera,renderer.domElement);controls.enableDamping=true;enableSpecimenGestures(THREE,controls);controls.minDistance=3.5;controls.maxDistance=14;
     scene.add(new THREE.HemisphereLight(0xdcf5ff,0x313e4a,2.3));const key=new THREE.DirectionalLight(0xffe1d2,3);key.position.set(4,5,5);scene.add(key);const fill=new THREE.DirectionalLight(0x99d7de,1);fill.position.set(-4,1,2);scene.add(fill);
     specimen=new THREE.Group();scene.add(specimen);
     const material=(color,extras={})=>new THREE.MeshStandardMaterial({color,roughness:.67,...extras});
