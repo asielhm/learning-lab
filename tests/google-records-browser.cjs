@@ -1,14 +1,17 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const base=(process.env.LEARNING_LAB_BASE_URL||'http://127.0.0.1:8008').replace(/\/$/,'');
-const endpoint='https://script.google.com/macros/s/test-deployment/exec';
+const configuredEndpoint=JSON.parse(fs.readFileSync('assets/records/config.json','utf8')).deploymentUrl;
+const endpoint=configuredEndpoint||'https://script.google.com/macros/s/test-deployment/exec';
 const bank=JSON.parse(fs.readFileSync('assets/revision/questions/gas-laws.json','utf8'));
 const waitFor=async check=>{for(let i=0;i<100;i++){if(await check())return;await new Promise(resolve=>setTimeout(resolve,50));}throw new Error('Condition did not become true');};
 (async()=>{
  const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
  try {
   const context=await browser.newContext();
-  await context.route('**/assets/records/config.json',route=>route.fulfill({json:{deploymentUrl:endpoint}}));
+  // Use the real configuration when connected, but intercept ALL Google writes.
+  // This verifies the deployed URL without creating test pupils in a live sheet.
+  if(!configuredEndpoint)await context.route('**/assets/records/config.json',route=>route.fulfill({json:{deploymentUrl:endpoint}}));
   const posted=[];let acknowledge=false, rejectNext=false;
   await context.route(endpoint,async route=>{
    const form=new URLSearchParams(route.request().postData());const payload=JSON.parse(form.get('payload'));posted.push(payload);

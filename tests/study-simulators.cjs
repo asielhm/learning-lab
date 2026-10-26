@@ -6,6 +6,12 @@ const assert = require('node:assert/strict');
 const base = (process.env.LEARNING_LAB_BASE_URL || 'http://127.0.0.1:8000').replace(/\/$/, '');
 const project = path.resolve(__dirname, '..');
 const loadBank = name => JSON.parse(fs.readFileSync(path.join(project, `assets/revision/questions/${name}.json`), 'utf8'));
+// Quiz behaviour checks must never submit test results to the teacher's live sheet.
+async function practicePage(browser, options = {}) {
+  const page = await browser.newPage(options);
+  await page.route('**/assets/records/config.json', route => route.fulfill({json:{deploymentUrl:''}}));
+  return page;
+}
 
 async function answer(page, bank, wrong = false, test = false) {
   const prompt = await page.locator('#revision-question-title').innerText();
@@ -75,7 +81,7 @@ async function study(page, name, topic) {
   const executable = process.env.CHROMIUM_EXECUTABLE || (fs.existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : undefined);
   const browser = await chromium.launch({executablePath:executable, headless:true, args:['--no-sandbox'], env:{...process.env,...(process.env.BROWSER_HOME ? {HOME:process.env.BROWSER_HOME} : {})}});
   try {
-    const page = await browser.newPage({viewport:{width:1365,height:1000}});
+    const page = await practicePage(browser,{viewport:{width:1365,height:1000}});
     const errors = [];page.on('pageerror',e=>errors.push(e.message));
     await page.goto(base+'/');await page.locator('.year-tiles').waitFor();
     assert.equal(await page.locator('.year-tile').count(),6);
@@ -89,7 +95,7 @@ async function study(page, name, topic) {
       await study(page,name,topic);
     }
     // Phone-sized revision page: readable setup and answer, no overflow, keyboard answer choice.
-    const phone = await browser.newPage({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
+    const phone = await practicePage(browser,{viewport:{width:390,height:844},hasTouch:true,isMobile:true});
     phone.on('pageerror',e=>errors.push(e.message));
     await phone.goto(`${base}/activities/y9/science/gas-laws/revision.html`);
     await phone.locator('#start-session').waitFor();
@@ -103,7 +109,7 @@ async function study(page, name, topic) {
     assert(await phone.locator('#revision-question-title').evaluate(el=>{const b=el.getBoundingClientRect();return b.top>=0&&b.top<innerHeight;}));
     assert.deepEqual(errors,[]);
     // Read failure is recoverable, and an empty filtered set cannot start a session.
-    const failure = await browser.newPage();
+    const failure = await practicePage(browser);
     await failure.route('**/questions/breathing.json',route=>route.fulfill({status:503,body:'Unavailable'}));
     await failure.goto(`${base}/activities/y9/science/breathing-system/revision.html`);
     await failure.locator('#retry-bank').waitFor();await failure.unroute('**/questions/breathing.json');
