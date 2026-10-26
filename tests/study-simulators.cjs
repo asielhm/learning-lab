@@ -23,15 +23,22 @@ async function answer(page, bank, wrong = false, test = false) {
   assert(await page.locator('#check-answer').isDisabled(), 'Answer is required');
   await page.locator('input[name=answer]').nth(wrong ? (correct + 1) % 4 : correct).check();
   await page.locator('#check-answer').click();
-  assert.equal(await page.locator('input[name=answer]:disabled').count(), 4);
   if (test) {
-    assert.equal(await page.locator('.revision-option.is-correct').count(), 0);
-    assert(!(await page.locator('#revision-feedback').innerText()).includes(question.explanation));
+    assert.equal(await page.locator('#next-question').count(), 0, 'Saving a test answer advances without another button');
+    if (await page.locator('#revision-question-title').count()) {
+      assert.notEqual(await page.locator('#revision-question-title').innerText(), prompt);
+      assert.equal(await page.locator('input[name=answer]:checked').count(),0,'The next question starts without an answer selected');
+      assert(await page.locator('#check-answer').isDisabled());
+      assert.equal(await page.locator('.revision-option.is-correct').count(), 0);
+      assert.equal(await page.locator('#revision-feedback').count(),0,'Test explanations stay hidden until results');
+      assert.equal(await page.evaluate(()=>document.activeElement.id),'revision-question-title');
+    } else assert.equal(await page.locator('.revision-score').count(),1,'The final save opens results');
   } else {
+    assert.equal(await page.locator('input[name=answer]:disabled').count(), 4);
     assert((await page.locator('#revision-feedback').innerText()).includes(question.explanation));
     assert.equal(await page.locator('.revision-option.is-correct').count(), 1);
+    await page.locator('#next-question').click();
   }
-  await page.locator('#next-question').click();
   return question.id;
 }
 async function study(page, name, topic) {

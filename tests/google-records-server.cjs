@@ -99,7 +99,7 @@ assert.equal(context.getTeacherResults(token,{course:'Year 7 Maths'}).total,1);
 assert.equal(context.getTeacherResults(token,{search:'Topic Test'}).total,3);
 assert.equal(context.getTeacherResults(token,{teacher:'ms rivera'}).total,57);
 assert.equal(context.getTeacherResults(token,{teacher:'Other teacher'}).total,0);
-assert.equal(context.getTeacherResults(token,{view:'answers',teacher:'RIVERA'}).total,114);
+assert.equal(context.getTeacherResults(token,{view:'answers',teacher:'MS RIVERA'}).total,114);
 assert.equal(sheets.get('Answers').rows[1][19],'Ms Rivera');assert.equal(sheets.get('Sessions').rows[1][12],'Ms Rivera');
 // A queued pre-upgrade answer must still be accepted without inventing a teacher.
 const legacy={...payload(),version:1,classroom:''};delete legacy.teacherName;
@@ -119,6 +119,14 @@ assert.equal(sheets.get('Answers').rows.length,answerCount);assert.equal(summary
 const historicalPractice=[...sheets.get('Answers').rows[1]];historicalPractice[0]='old-practice';historicalPractice[2]='old-practice-session';historicalPractice[7]='practice';sheets.get('Answers').appendRow(historicalPractice);
 const oldPracticeSummary=[...summary.rows[1]];oldPracticeSummary[0]='old-practice-session';oldPracticeSummary[6]='practice';summary.appendRow(oldPracticeSummary);
 assert.equal(context.getTeacherResults(token,{}).total,58);assert.equal(context.getTeacherResults(token,{view:'answers'}).total,116);
+historicalPractice[19]='Practice-only teacher';oldPracticeSummary[12]='Practice-only teacher';
+sheets.get('Answers').rows.at(-1)[19]='Practice-only teacher';summary.rows.at(-1)[12]='Practice-only teacher';
+context.saveAnswer_({...payload(),teacherName:'Ms Rivera-Smith'});
+context.saveAnswer_({...payload(),teacherName:'ms rivera'});
+assert.deepEqual(Array.from(context.getTeacherResults(token,{}).teachers),['Ms Rivera','Ms Rivera-Smith'],'Teacher options include partial tests and deduplicate case variants');
+assert.deepEqual(Array.from(context.getTeacherResults(token,{search:'No matching pupil',offset:50}).teachers),['Ms Rivera','Ms Rivera-Smith'],'Teacher options are independent of pagination and other filters');
+assert.equal(context.getTeacherResults(token,{view:'answers',teacher:'Ms Rivera-Smith'}).total,1);
+assert.equal(context.getTeacherResults(token,{view:'answers',teacher:'Ms Rivera'}).total,115,'Selecting Rivera does not match Rivera-Smith');
 const nonce=crypto.randomUUID();
 const receipt=context.doPost({parameter:{nonce,payload:JSON.stringify(first)}}).html;
 assert(receipt.includes('"ok":true'));assert(!receipt.includes(first.studentName));assert(receipt.includes('https://asielhm.github.io'));

@@ -248,24 +248,33 @@ function getTeacherResults(token, filters) {
   var view = filters.view === 'answers' ? 'answers' : 'sessions';
   var offset = Number.isInteger(filters.offset) && filters.offset > 0 ? filters.offset : 0;
   var headers = view === 'answers' ? ANSWER_HEADERS_ : SESSION_HEADERS_;
-  var lock = LockService.getScriptLock(), source;
+  var lock = LockService.getScriptLock(), source, teachers;
   lock.waitLock(20000);
   try {
     var book = SpreadsheetApp.openById(SPREADSHEET_ID_);
     var answers = ensureSheet_(book, 'Answers', ANSWER_HEADERS_);
     var sessions = ensureSheet_(book, 'Sessions', SESSION_HEADERS_);
     repairTestSummaries_(answers, sessions);
-    source = rows_(view === 'answers' ? answers : sessions, headers);
+    var answerRows = rows_(answers, ANSWER_HEADERS_);
+    var sessionRows = rows_(sessions, SESSION_HEADERS_);
+    source = view === 'answers' ? answerRows : sessionRows;
+    // Keep the full teacher list across filters, views and pages, including saved
+    // tests still in progress. Teacher names are returned only after authentication.
+    var names = new Map();
+    answerRows.filter(function(row) {return row[7] === 'test' && !row[8];}).map(function(row) {return row[19];})
+      .concat(sessionRows.filter(function(row) {return row[6] === 'test' && !row[7];}).map(function(row) {return row[12];}))
+      .forEach(function(name) {name = String(name || '').trim(); if (name && !names.has(name.toLowerCase())) names.set(name.toLowerCase(), name);});
+    teachers = Array.from(names.values()).sort(function(a, b) {return a.localeCompare(b);});
   } finally {lock.releaseLock();}
   var indices = view === 'answers' ? {name:3,classroom:4,course:5,topic:6,teacher:19,mode:7,retry:8} : {name:2,classroom:3,course:4,topic:5,teacher:12,mode:6,retry:7};
   var rows = source.filter(function(row) {
-    return row[indices.mode] === 'test' && !row[indices.retry] && (!query || (String(row[indices.name]) + ' ' + String(row[indices.classroom])).toLowerCase().includes(query)) && (!topic || row[indices.topic] === topic) && (!course || row[indices.course] === course) && (!teacher || String(row[indices.teacher] || '').toLowerCase().includes(teacher));
+    return row[indices.mode] === 'test' && !row[indices.retry] && (!query || (String(row[indices.name]) + ' ' + String(row[indices.classroom])).toLowerCase().includes(query)) && (!topic || row[indices.topic] === topic) && (!course || row[indices.course] === course) && (!teacher || String(row[indices.teacher] || '').trim().toLowerCase() === teacher);
   }).sort(function(a, b) {return String(b[1]).localeCompare(String(a[1]));});
   var correct = rows.reduce(function(sum, row) {return sum + (view === 'answers' ? (row[18] === true ? 1 : 0) : Number(row[10]));}, 0);
   var count = rows.reduce(function(sum, row) {return sum + (view === 'answers' ? 1 : Number(row[9]));}, 0);
   return {
     headers:headers, rows:rows.slice(offset, offset + 50).map(function(row) {return row.map(function(value) {return value instanceof Date ? value.toISOString() : value;});}),
-    total:rows.length, offset:offset, pageSize:50,
+    total:rows.length, offset:offset, pageSize:50, teachers:teachers,
     students:new Set(rows.map(function(row) {return String(row[indices.name]) + '\u0000' + String(row[indices.classroom]);})).size,
     accuracy:count ? Math.round(correct / count * 100) : null,
     spreadsheetUrl:'https://docs.google.com/spreadsheets/d/' + SPREADSHEET_ID_ + '/edit'

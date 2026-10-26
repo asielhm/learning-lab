@@ -57,10 +57,12 @@ const waitFor=async check=>{for(let i=0;i<100;i++){if(await check())return;await
    const correct=texts.indexOf(q.options[q.answer]);await page.locator('input[name=answer]').nth(i===0?(correct+1)%4:correct).check();await page.locator('#check-answer').click();
    if(i===0){await page.locator('[data-record-retry]:not([hidden])').waitFor();assert.equal(await page.evaluate(()=>JSON.parse(sessionStorage.getItem('learning-lab-pending-answers-v1')).length),1);await page.locator('[data-record-retry]').click();}
    await waitFor(async()=>JSON.parse(await page.evaluate(()=>sessionStorage.getItem('learning-lab-pending-answers-v1'))).length===0);
-   await page.locator('#next-question').click();
+   assert.equal(await page.locator('#next-question').count(),0,'Tests advance immediately after saving');
+   if(i<9){assert.equal(await page.locator('input[name=answer]:checked').count(),0);assert(await page.locator('#check-answer').isDisabled());}
   }
   assert.match(await page.locator('.revision-score').innerText(),/9 \/ 10 correct/);
   const completed=posted.filter(p=>p.sessionId!==posted[0].sessionId);assert.equal(new Set(completed.map(p=>p.eventId)).size,10);assert.equal(new Set(completed.map(p=>p.sessionId)).size,1);
+  assert.deepEqual([...new Set(completed.map(p=>p.questionNumber))].sort((a,b)=>a-b),[1,2,3,4,5,6,7,8,9,10],'Auto-advance records each question under its original number');
   const beforeRetry=posted.length;
   await page.locator('#retry-wrong').click();await page.locator('input[name=answer]').first().check();await page.locator('#check-answer').click();
   assert.equal(posted.length,beforeRetry,'Retry rounds are not recorded');assert.equal(await page.evaluate(()=>JSON.parse(sessionStorage.getItem('learning-lab-pending-answers-v1')).length),0);assert.match(await page.locator('[data-record-status]').innerText(),/Practice and retry rounds are not sent/);
@@ -98,8 +100,8 @@ const waitFor=async check=>{for(let i=0;i<100;i++){if(await check())return;await
     logoutTeacher(){success();},
     getTeacherResults(token,filters){setTimeout(()=>{
      if(token!=='test-token'||window.expireTeacher){failure({message:'Your sign-in has expired. Sign in again.'});return;}
-     const filtered=rows.filter(row=>(!filters.search||row[2].includes(filters.search))&&(!filters.teacher||row[12].toLowerCase().includes(filters.teacher.toLowerCase())));
-     success({headers:['Session ID','Completed at','Student name','Class','Course','Topic','Mode','Retry','Started at','Questions','Correct','Score (%)','Teacher'],rows:filtered.slice(filters.offset,filters.offset+50),total:filtered.length,offset:filters.offset,pageSize:50,students:2,accuracy:80,spreadsheetUrl:'https://docs.google.com/spreadsheets/d/test/edit'});
+     const filtered=rows.filter(row=>(!filters.search||row[2].includes(filters.search))&&(!filters.teacher||row[12].toLowerCase()===filters.teacher.toLowerCase()));
+     success({headers:['Session ID','Completed at','Student name','Class','Course','Topic','Mode','Retry','Started at','Questions','Correct','Score (%)','Teacher'],rows:filtered.slice(filters.offset,filters.offset+50),total:filtered.length,offset:filters.offset,pageSize:50,students:2,accuracy:80,teachers:['Ms Chen','Ms Rivera'],spreadsheetUrl:'https://docs.google.com/spreadsheets/d/test/edit'});
     },0);}
    };}}};
   });
@@ -110,13 +112,15 @@ const waitFor=async check=>{for(let i=0;i<100;i++){if(await check())return;await
   await dashboard.locator('#password').fill('test-password');await dashboard.locator('#sign-in').click();await dashboard.locator('#rows tr').first().waitFor();
   assert.equal(await dashboard.locator('#rows tr').count(),50);assert.equal(await dashboard.locator('#rows img').count(),0,'Student text is never interpreted as HTML');
   assert((await dashboard.locator('#columns').innerText()).includes('Teacher'));assert((await dashboard.locator('#rows tr').first().innerText()).includes('Ms Rivera'));
-  await dashboard.locator('#teacher').fill('Other teacher');await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===0);
-  await dashboard.locator('#teacher').fill('Rivera');await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===50);
+  assert.deepEqual(await dashboard.locator('#teacher option').allTextContents(),['All teachers','Ms Chen','Ms Rivera']);
+  await dashboard.locator('#teacher').selectOption('Ms Chen');await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===0);
+  assert.equal(await dashboard.locator('#teacher').inputValue(),'Ms Chen');assert.equal(await dashboard.locator('#teacher option').count(),3,'Empty filters retain the full saved teacher list');
+  await dashboard.locator('#teacher').selectOption('Ms Rivera');await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===50);
   assert.equal(await dashboard.locator('#password').inputValue(),'');assert.match(await dashboard.locator('#page-label').innerText(),/1–50 of 61/);
   await dashboard.locator('#next').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===11);assert.match(await dashboard.locator('#page-label').innerText(),/51–61/);
   assert(await dashboard.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await dashboard.screenshot({path:'/tmp/teacher-dashboard-mobile.png',fullPage:true});
-  await dashboard.locator('#sign-out').click();assert(await dashboard.locator('#dashboard').isHidden());assert.equal(await dashboard.locator('#rows tr').count(),0);
+  await dashboard.locator('#sign-out').click();assert(await dashboard.locator('#dashboard').isHidden());assert.equal(await dashboard.locator('#rows tr').count(),0);assert.deepEqual(await dashboard.locator('#teacher option').allTextContents(),['All teachers']);
   await dashboard.locator('#password').fill('test-password');await dashboard.locator('#sign-in').click();await dashboard.locator('#rows tr').first().waitFor();
   await dashboard.evaluate(()=>window.expireTeacher=true);await dashboard.locator('#apply').click();await waitFor(()=>dashboard.locator('#dashboard').isHidden());assert.equal(await dashboard.locator('#rows tr').count(),0);
   console.log('Google records browser: required student identity, all four simulators, Google receipts, rejection of forged receipts, queued reload/retry, stable IDs, separate retry sessions, teacher link and mobile/shared-device flows passed.');

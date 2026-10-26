@@ -7,7 +7,7 @@
 <main>
 <section id="login" class="panel login"><p class="eyebrow">Private teacher access</p><h1>Your students’ progress.</h1><p>Sign in with the teacher password created during Google setup.</p><form id="login-form"><label>Teacher password<input id="password" type="password" required autocomplete="current-password" maxlength="200"></label><button id="sign-in">Sign in</button></form><p class="muted">Your password is checked by Google’s server. Results are never published on the Learning Lab website. Sign-in expires after one hour.</p></section>
 <section id="dashboard" hidden><div class="result-heading"><div><p class="eyebrow">Private teacher access</p><h1>Student results</h1></div><div class="toolbar"><a id="spreadsheet" target="_blank" rel="noopener">Open private spreadsheet ↗</a><button class="secondary" id="sign-out">Sign out</button></div></div>
-<form id="filters" class="panel filters"><label>Student name or class<input id="search" maxlength="100" placeholder="Search records"></label><label>Teacher<input id="teacher" maxlength="100" placeholder="All teachers"></label><label>Course<select id="course"><option value="">All courses</option><option>Year 7 Maths</option><option>Year 9 Science</option></select></label><label>Topic<select id="topic"><option value="">All topics</option><option value="algebra">Algebra</option><option value="circulatory-system">Circulatory system</option><option value="breathing-system">Breathing system</option><option value="gas-laws">Gas laws</option></select></label><label>View<select id="view"><option value="sessions">Completed tests</option><option value="answers">Individual test answers</option></select></label><button id="apply">Show results</button></form>
+<form id="filters" class="panel filters"><label>Student name or class<input id="search" maxlength="100" placeholder="Search records"></label><label>Teacher<select id="teacher"><option value="">All teachers</option></select></label><label>Course<select id="course"><option value="">All courses</option><option>Year 7 Maths</option><option>Year 9 Science</option></select></label><label>Topic<select id="topic"><option value="">All topics</option><option value="algebra">Algebra</option><option value="circulatory-system">Circulatory system</option><option value="breathing-system">Breathing system</option><option value="gas-laws">Gas laws</option></select></label><label>View<select id="view"><option value="sessions">Completed tests</option><option value="answers">Individual test answers</option></select></label><button id="apply">Show results</button></form>
 <div class="stats"><div class="stat"><b id="record-count">0</b><span id="record-label">Completed tests</span></div><div class="stat"><b id="student-count">0</b><span>Students in this selection</span></div><div class="stat"><b id="accuracy">—</b><span>Correct answers across this selection</span></div></div>
 <p class="muted">Only Test yourself results are shown. Individual test answers include tests still in progress. Completed tests appear when every answer has been saved. Practice and retry rounds are not recorded. Names are entered by students; these are practice records, not verified exam identities.</p>
 <div class="table-scroll"><table><caption id="table-caption">Completed tests, newest first</caption><thead><tr id="columns"></tr></thead><tbody id="rows"></tbody></table></div>
@@ -18,7 +18,7 @@ const $ = id => document.getElementById(id);
 let token = '', offset = 0, total = 0, busy = false;
 function status(message, error) {$('status').textContent=message;$('status').classList.toggle('error',!!error);}
 function setBusy(value) {busy=value;for(const id of ['sign-in','apply','previous','next','search','teacher','course','topic','view'])$(id).disabled=value;}
-function loggedOut() {token='';$('login').hidden=false;$('dashboard').hidden=true;$('rows').replaceChildren();$('password').value='';}
+function loggedOut() {token='';$('login').hidden=false;$('dashboard').hidden=true;$('rows').replaceChildren();$('password').value='';$('teacher').replaceChildren(new Option('All teachers',''));}
 function failure(error) {setBusy(false);status(error.message||'Results are unavailable. Try again.',true);if(/sign.in|expired/i.test(error.message||''))loggedOut();}
 $('login-form').onsubmit = event => {event.preventDefault();if(busy)return;setBusy(true);status('Signing in…');google.script.run.withSuccessHandler(result=>{token=result.token;$('password').value='';$('login').hidden=true;$('dashboard').hidden=false;offset=0;load();}).withFailureHandler(failure).loginTeacher($('password').value);};
 $('sign-out').onclick=()=>{const old=token;loggedOut();status('Signed out.');google.script.run.withSuccessHandler(()=>{}).withFailureHandler(()=>{}).logoutTeacher(old);};
@@ -26,10 +26,17 @@ $('filters').onsubmit=event=>{event.preventDefault();offset=0;load();};
 $('previous').onclick=()=>{offset=Math.max(0,offset-50);load();};
 $('next').onclick=()=>{offset+=50;load();};
 function cell(text, tag='td') {const node=document.createElement(tag);node.textContent=String(text);return node;}
+function updateTeachers(names) {
+ const previous=$('teacher').value;
+ $('teacher').replaceChildren(new Option('All teachers',''),...names.map(name=>new Option(name,name)));
+ const selected=names.find(name=>name.toLowerCase()===previous.toLowerCase());
+ $('teacher').value=selected||'';
+}
 function load() {
  setBusy(true);status('Loading private results…');
  google.script.run.withSuccessHandler(data=>{
   if(!token)return;total=data.total;setBusy(false);status(total?'Results updated.':'No matching records yet.');
+  updateTeachers(data.teachers||[]);
   $('spreadsheet').href=data.spreadsheetUrl;$('record-count').textContent=total;$('student-count').textContent=data.students;$('accuracy').textContent=data.accuracy===null?'—':data.accuracy+'%';
   const answers=$('view').value==='answers';$('record-label').textContent=answers?'Submitted test answers':'Completed tests';$('table-caption').textContent=answers?'Individual test answers, newest first':'Completed tests, newest first';
   const hidden=answers?[0,2]:[0];const visible=data.headers.map((text,index)=>({text,index})).filter(item=>!hidden.includes(item.index));
