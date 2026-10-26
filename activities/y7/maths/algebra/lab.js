@@ -16,15 +16,29 @@ let storyIndex=0,storyDone=false;
 function number(id,min,max){const input=$(id);const value=Math.max(min,Math.min(max,Math.trunc(Number(input.value)||0)));input.value=value;return value;}
 function translationValues(){return{x:number('#penBoxes',0,4),y:number('#clipBoxes',0,3),c:number('#loosePens',0,6)};}
 function renderTranslation(){
- const v=translationValues();$('#objectModel').innerHTML=Array.from({length:v.x},()=>box('x')).join('')+Array.from({length:v.y},()=>box('y')).join('')+(v.c?`<div class="loose-pens"><span>${v.c} LOOSE PEN${v.c===1?'':'S'}</span><div>${Array.from({length:v.c},pen).join('')}</div></div>`:'')||'<p>No items yet. Add a box or a loose pen.</p>';
+ const v=translationValues();$('#objectModel').innerHTML=Array.from({length:v.x},()=>box('x')).join('')+Array.from({length:v.y},()=>box('y')).join('')+(v.c?`<div class="loose-pens"><span>${v.c} LOOSE PEN${v.c===1?'':'S'}</span><div>${Array.from({length:v.c},pen).join('')}</div></div>`:'')||'<p>Your model is empty. Use the counts above to add boxes or loose pens.</p>';
  const expression=formatExpression({'x^1':v.x,'y^1':v.y,'1':v.c});$('#translationExpression').textContent=expression;
  const revealed=$('#showValues').checked;$('#valueControls').hidden=!revealed;
  if(revealed){const x=number('#xValue',1,30),y=number('#yValue',1,30);$('#substitutionResult').textContent=`If x = ${x} and y = ${y}: ${v.x} × ${x} + ${v.y} × ${y} + ${v.c} = ${v.x*x+v.y*y+v.c} items.`;}
+ if(!storyDone)$('#translationFeedback').hidden=true;
  if(storyDone&&(v.x!==stories[storyIndex].x||v.y!==stories[storyIndex].y||v.c!==stories[storyIndex].c)){storyDone=false;$('#nextTranslation').disabled=true;$('#translationFeedback').hidden=true;}
 }
 function renderStory(){storyDone=false;$('#translationIndex').textContent=`BUILD THE STORY · ${storyIndex+1} OF ${stories.length}`;$('#translationTask').textContent=stories[storyIndex].text;$('#translationFeedback').hidden=true;$('#nextTranslation').disabled=true;$('#nextTranslation').textContent=storyIndex===stories.length-1?'Start the stories again':'Next story';}
 ['#penBoxes','#clipBoxes','#loosePens','#xValue','#yValue'].forEach(id=>$(id).addEventListener('input',renderTranslation));$('#showValues').onchange=renderTranslation;
-$('#checkTranslation').onclick=()=>{const v=translationValues(),goal=stories[storyIndex];storyDone=v.x===goal.x&&v.y===goal.y&&v.c===goal.c;feedback('#translationFeedback',storyDone?`Correct. ${formatExpression({'x^1':v.x,'y^1':v.y,'1':v.c})} matches the story. Each letter represents the unknown count in one box.`:'Count each kind separately: pen boxes contribute x, clip boxes contribute y, and loose pens contribute a known number. Adjust the picture to match the story.',storyDone);$('#nextTranslation').disabled=!storyDone;};
+function modelCorrections(v,goal){
+ const corrections=[];
+ for(const [key,singular,plural] of [['x','pen box','pen boxes'],['y','clip box','clip boxes'],['c','loose pen','loose pens']]){
+  const difference=goal[key]-v[key];if(!difference)continue;
+  const count=Math.abs(difference);corrections.push(`${difference>0?'Add':'Remove'} ${count} ${count===1?singular:plural}.`);
+ }
+ return corrections.join(' ');
+}
+$('#checkTranslation').onclick=()=>{
+ const v=translationValues(),goal=stories[storyIndex];storyDone=v.x===goal.x&&v.y===goal.y&&v.c===goal.c;
+ feedback('#translationFeedback',storyDone?`Correct. Your picture matches the story: ${formatExpression({'x^1':v.x,'y^1':v.y,'1':v.c})}. You can move to the next story.`:`Not yet. ${modelCorrections(v,goal)} The letter x is the unknown count inside one pen box; you do not need to give x a value to build the story.`,storyDone);
+ $('#nextTranslation').disabled=!storyDone;
+};
+$$('[data-counter]').forEach(button=>button.onclick=()=>{const input=document.getElementById(button.dataset.counter),next=Number(input.value)+Number(button.dataset.step);input.value=Math.max(Number(input.min),Math.min(Number(input.max),next));input.dispatchEvent(new Event('input',{bubbles:true}));});
 $('#nextTranslation').onclick=()=>{if(!storyDone)return;storyIndex=(storyIndex+1)%stories.length;$('#penBoxes').value=0;$('#clipBoxes').value=0;$('#loosePens').value=0;renderTranslation();renderStory();};
 // 2. Tap (or drag) individual algebra terms into groups with identical variable parts.
 const token=(key,sign=1)=>({key,sign});
