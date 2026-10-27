@@ -1,0 +1,1136 @@
+{
+  "topicId": "y10-redox",
+  "title": "Redox",
+  "categories": [
+    "Oxidation reduction and agents",
+    "Half-equations and oxidation states",
+    "Electrolytes and electrode rules",
+    "Molten electrolysis",
+    "Aqueous electrolysis",
+    "Water electrolysis and gas tests",
+    "Aluminium electrolysis",
+    "Photography and thermite"
+  ],
+  "questions": [
+    {
+      "id": "y10-redox-001",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Foundation",
+      "prompt": "Oxidation in electron-transfer terms is…",
+      "options": [
+        "loss of electrons.",
+        "gain of electrons.",
+        "gain of neutrons in every reaction.",
+        "a change of state only."
+      ],
+      "answer": 0,
+      "explanation": "Oxidation means electron loss."
+    },
+    {
+      "id": "y10-redox-002",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Foundation",
+      "prompt": "Reduction in electron-transfer terms is…",
+      "options": [
+        "loss of electrons.",
+        "gain of electrons.",
+        "always oxygen gain.",
+        "evaporation."
+      ],
+      "answer": 1,
+      "explanation": "Reduction means electron gain."
+    },
+    {
+      "id": "y10-redox-003",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Foundation",
+      "prompt": "In Zn → Zn²⁺ + 2e⁻, zinc is…",
+      "options": [
+        "reduced.",
+        "unchanged in oxidation state.",
+        "oxidised.",
+        "converted into copper nuclei."
+      ],
+      "answer": 2,
+      "explanation": "Zinc loses two electrons."
+    },
+    {
+      "id": "y10-redox-004",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Foundation",
+      "prompt": "In Cu²⁺ + 2e⁻ → Cu, the copper ion is…",
+      "options": [
+        "oxidised.",
+        "the electron donor.",
+        "unchanged in charge.",
+        "reduced."
+      ],
+      "answer": 3,
+      "explanation": "Cu²⁺ gains two electrons to form neutral copper."
+    },
+    {
+      "id": "y10-redox-005",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Application",
+      "prompt": "What does an oxidising agent do?",
+      "options": [
+        "Accepts electrons and is itself reduced",
+        "Donates electrons and is itself reduced",
+        "Always produces oxygen gas",
+        "Never changes in the reaction"
+      ],
+      "answer": 0,
+      "explanation": "It causes another species to lose electrons by accepting them."
+    },
+    {
+      "id": "y10-redox-006",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Application",
+      "prompt": "What does a reducing agent do?",
+      "options": [
+        "Accepts electrons and is itself oxidised",
+        "Donates electrons and is itself oxidised",
+        "Always contains hydrogen only",
+        "Is always an inert spectator"
+      ],
+      "answer": 1,
+      "explanation": "It supplies the electrons gained by the reduced species."
+    },
+    {
+      "id": "y10-redox-007",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Application",
+      "prompt": "In Mg + Cu²⁺ → Mg²⁺ + Cu, the reducing agent is…",
+      "options": [
+        "Cu²⁺.",
+        "Mg²⁺ after formation.",
+        "Mg.",
+        "Water by definition."
+      ],
+      "answer": 2,
+      "explanation": "Magnesium donates electrons and is oxidised."
+    },
+    {
+      "id": "y10-redox-008",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Application",
+      "prompt": "In the same Mg / Cu²⁺ reaction, the oxidising agent is…",
+      "options": [
+        "Mg.",
+        "Cu after formation only.",
+        "Every spectator anion.",
+        "Cu²⁺."
+      ],
+      "answer": 3,
+      "explanation": "Cu²⁺ accepts electrons and is reduced."
+    },
+    {
+      "id": "y10-redox-009",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Challenge",
+      "prompt": "Which oxidation-state change represents oxidation?",
+      "options": [
+        "+2 to +3",
+        "+3 to +2",
+        "+2 to 0",
+        "0 to −2"
+      ],
+      "answer": 0,
+      "explanation": "An increase in oxidation state is oxidation."
+    },
+    {
+      "id": "y10-redox-010",
+      "category": "Oxidation reduction and agents",
+      "difficulty": "Challenge",
+      "prompt": "Why must oxidation and reduction be paired in a complete redox process?",
+      "options": [
+        "Electrons are created without a source.",
+        "Electrons lost by one species are gained by another.",
+        "Both species must gain all electrons.",
+        "Charge need not be conserved."
+      ],
+      "answer": 1,
+      "explanation": "Overall electron and charge conservation requires matched loss and gain."
+    },
+    {
+      "id": "y10-redox-011",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Foundation",
+      "prompt": "Which is a balanced oxidation half-equation for magnesium?",
+      "options": [
+        "Mg + 2e⁻ → Mg²⁺",
+        "Mg → Mg⁺ + 2e⁻",
+        "Mg → Mg²⁺ + 2e⁻",
+        "Mg²⁺ → Mg + 2e⁻"
+      ],
+      "answer": 2,
+      "explanation": "Atoms and charge balance: 0 = +2 − 2."
+    },
+    {
+      "id": "y10-redox-012",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Foundation",
+      "prompt": "Which is a balanced reduction half-equation for Cu²⁺?",
+      "options": [
+        "Cu²⁺ → Cu + 2e⁻",
+        "Cu + 2e⁻ → Cu²⁺",
+        "Cu²⁺ + e⁻ → Cu",
+        "Cu²⁺ + 2e⁻ → Cu"
+      ],
+      "answer": 3,
+      "explanation": "Two electrons neutralise the +2 charge."
+    },
+    {
+      "id": "y10-redox-013",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Application",
+      "prompt": "Which is a balanced oxidation half-equation for bromide?",
+      "options": [
+        "2Br⁻ → Br₂ + 2e⁻",
+        "Br⁻ → Br₂ + e⁻",
+        "2Br⁻ + 2e⁻ → Br₂",
+        "Br₂ → 2Br⁻ + 2e⁻"
+      ],
+      "answer": 0,
+      "explanation": "Two bromide ions form one Br₂ molecule and release two electrons."
+    },
+    {
+      "id": "y10-redox-014",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Application",
+      "prompt": "Which half-equation produces aluminium metal?",
+      "options": [
+        "Al³⁺ → Al + 3e⁻",
+        "Al³⁺ + 3e⁻ → Al",
+        "Al + 3e⁻ → Al³⁺",
+        "Al³⁺ + e⁻ → Al"
+      ],
+      "answer": 1,
+      "explanation": "Three electrons are needed per Al³⁺ ion."
+    },
+    {
+      "id": "y10-redox-015",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Foundation",
+      "prompt": "What is the oxidation state of a pure element such as Cu(s)?",
+      "options": [
+        "+2 in every pure element",
+        "−1 in every pure element",
+        "0",
+        "Equal to its mass number"
+      ],
+      "answer": 2,
+      "explanation": "An element in its uncombined form has oxidation state zero."
+    },
+    {
+      "id": "y10-redox-016",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Application",
+      "prompt": "What is the oxidation state of iron in Fe₂O₃?",
+      "options": [
+        "+2",
+        "0",
+        "−3",
+        "+3"
+      ],
+      "answer": 3,
+      "explanation": "Three O atoms contribute −6; two Fe atoms must total +6."
+    },
+    {
+      "id": "y10-redox-017",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Application",
+      "prompt": "What is the oxidation state of carbon in CO₂?",
+      "options": [
+        "+4",
+        "+2",
+        "0",
+        "−4"
+      ],
+      "answer": 0,
+      "explanation": "Two oxygens contribute −4, so carbon is +4."
+    },
+    {
+      "id": "y10-redox-018",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Application",
+      "prompt": "What is the oxidation state of carbon in CO?",
+      "options": [
+        "+4",
+        "+2",
+        "−2",
+        "0"
+      ],
+      "answer": 1,
+      "explanation": "Oxygen is −2 here, so carbon is +2."
+    },
+    {
+      "id": "y10-redox-019",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Challenge",
+      "prompt": "How many electrons must 2Al atoms lose when they become 2Al³⁺?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "Each Al loses three electrons; two lose six."
+    },
+    {
+      "id": "y10-redox-020",
+      "category": "Half-equations and oxidation states",
+      "difficulty": "Challenge",
+      "prompt": "What must be balanced in a half-equation?",
+      "options": [
+        "Atoms only, never charge",
+        "Charge only, never atoms",
+        "Only the number of words",
+        "Both atoms and total charge"
+      ],
+      "answer": 3,
+      "explanation": "Electrons are included to balance charge while preserving atoms."
+    },
+    {
+      "id": "y10-redox-021",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Foundation",
+      "prompt": "What carries charge through an electrolyte?",
+      "options": [
+        "Mobile ions",
+        "Electrons travelling freely through the liquid like in a wire",
+        "Stationary neutral molecules only",
+        "Protons moving between atomic nuclei"
+      ],
+      "answer": 0,
+      "explanation": "Positive and negative ions move through the electrolyte."
+    },
+    {
+      "id": "y10-redox-022",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Foundation",
+      "prompt": "What carries charge through the external metal wires?",
+      "options": [
+        "Sodium ions moving through copper",
+        "Electrons",
+        "Water droplets",
+        "Whole salt crystals"
+      ],
+      "answer": 1,
+      "explanation": "Metallic wires conduct through mobile electrons."
+    },
+    {
+      "id": "y10-redox-023",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Foundation",
+      "prompt": "In an electrolytic cell, cations migrate towards the…",
+      "options": [
+        "positive anode.",
+        "salt bridge only in every setup.",
+        "negative cathode.",
+        "flame."
+      ],
+      "answer": 2,
+      "explanation": "Opposite charges attract; cations move towards the negative electrode."
+    },
+    {
+      "id": "y10-redox-024",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Foundation",
+      "prompt": "In an electrolytic cell, anions migrate towards the…",
+      "options": [
+        "negative cathode.",
+        "battery casing instead of the electrolyte.",
+        "neutral gas outlet only.",
+        "positive anode."
+      ],
+      "answer": 3,
+      "explanation": "Negative ions move towards the positive electrode."
+    },
+    {
+      "id": "y10-redox-025",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Foundation",
+      "prompt": "At which electrode does reduction always occur?",
+      "options": [
+        "Cathode",
+        "Anode",
+        "Both electrodes are always oxidation sites only",
+        "Neither electrode"
+      ],
+      "answer": 0,
+      "explanation": "Cathode names the electrode where reduction occurs."
+    },
+    {
+      "id": "y10-redox-026",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Foundation",
+      "prompt": "At which electrode does oxidation always occur?",
+      "options": [
+        "Cathode",
+        "Anode",
+        "The beaker wall only",
+        "Neither electrode"
+      ],
+      "answer": 1,
+      "explanation": "Anode names the electrode where oxidation occurs."
+    },
+    {
+      "id": "y10-redox-027",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Application",
+      "prompt": "Why can a molten ionic compound conduct while its solid may not?",
+      "options": [
+        "Melting removes every charge.",
+        "The melt always becomes a metal.",
+        "Melting frees the ions to move.",
+        "Solid ions are not charged."
+      ],
+      "answer": 2,
+      "explanation": "Ion mobility changes; the solid already contains ions but they are fixed in the lattice."
+    },
+    {
+      "id": "y10-redox-028",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Application",
+      "prompt": "What drives a non-spontaneous electrolytic reaction?",
+      "options": [
+        "Ordinary filtration",
+        "Only a colour change",
+        "A catalyst that supplies unlimited electrons without a circuit",
+        "An external electrical supply"
+      ],
+      "answer": 3,
+      "explanation": "Electrical energy drives the electrode reactions."
+    },
+    {
+      "id": "y10-redox-029",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Challenge",
+      "prompt": "Is “cathode is negative” a universal rule for every electrochemical cell type?",
+      "options": [
+        "No; cathode always means reduction, while polarity depends on cell type.",
+        "Yes; every galvanic cathode is negative too.",
+        "No; cathode always means oxidation.",
+        "Electrode names have no meaning."
+      ],
+      "answer": 0,
+      "explanation": "Electrolytic cathodes are negative; galvanic cathodes are positive."
+    },
+    {
+      "id": "y10-redox-030",
+      "category": "Electrolytes and electrode rules",
+      "difficulty": "Challenge",
+      "prompt": "Which distinction is correct?",
+      "options": [
+        "Ion migration means ions become neutral halfway through the solution automatically.",
+        "Ion migration moves ions through solution; discharge transfers electrons at an electrode.",
+        "Discharge is the same as filtering.",
+        "Electrons carry all electrolyte current without any ions."
+      ],
+      "answer": 1,
+      "explanation": "Transport and electrode reaction are related but different processes."
+    },
+    {
+      "id": "y10-redox-031",
+      "category": "Molten electrolysis",
+      "difficulty": "Foundation",
+      "prompt": "With inert electrodes, what metal forms at the cathode during electrolysis of molten NaCl?",
+      "options": [
+        "H₂",
+        "O₂",
+        "Na",
+        "CO₂"
+      ],
+      "answer": 2,
+      "explanation": "Molten NaCl contains Na⁺ and Cl⁻, with no water competing."
+    },
+    {
+      "id": "y10-redox-032",
+      "category": "Molten electrolysis",
+      "difficulty": "Application",
+      "prompt": "With inert electrodes, what forms at the anode during electrolysis of molten NaCl?",
+      "options": [
+        "H₂",
+        "The metal from the salt",
+        "Water",
+        "Cl₂"
+      ],
+      "answer": 3,
+      "explanation": "Molten NaCl contains Na⁺ and Cl⁻, with no water competing."
+    },
+    {
+      "id": "y10-redox-033",
+      "category": "Molten electrolysis",
+      "difficulty": "Foundation",
+      "prompt": "With inert electrodes, what metal forms at the cathode during electrolysis of molten PbBr₂?",
+      "options": [
+        "Pb",
+        "H₂",
+        "O₂",
+        "CO₂"
+      ],
+      "answer": 0,
+      "explanation": "Pb²⁺ is reduced; bromide is oxidised to Br₂."
+    },
+    {
+      "id": "y10-redox-034",
+      "category": "Molten electrolysis",
+      "difficulty": "Application",
+      "prompt": "With inert electrodes, what forms at the anode during electrolysis of molten PbBr₂?",
+      "options": [
+        "H₂",
+        "Br₂",
+        "The metal from the salt",
+        "Water"
+      ],
+      "answer": 1,
+      "explanation": "Pb²⁺ is reduced; bromide is oxidised to Br₂."
+    },
+    {
+      "id": "y10-redox-035",
+      "category": "Molten electrolysis",
+      "difficulty": "Foundation",
+      "prompt": "With inert electrodes, what metal forms at the cathode during electrolysis of molten MgCl₂?",
+      "options": [
+        "H₂",
+        "O₂",
+        "Mg",
+        "CO₂"
+      ],
+      "answer": 2,
+      "explanation": "Mg²⁺ gains electrons; chloride loses electrons."
+    },
+    {
+      "id": "y10-redox-036",
+      "category": "Molten electrolysis",
+      "difficulty": "Application",
+      "prompt": "With inert electrodes, what forms at the anode during electrolysis of molten MgCl₂?",
+      "options": [
+        "H₂",
+        "The metal from the salt",
+        "Water",
+        "Cl₂"
+      ],
+      "answer": 3,
+      "explanation": "Mg²⁺ gains electrons; chloride loses electrons."
+    },
+    {
+      "id": "y10-redox-037",
+      "category": "Molten electrolysis",
+      "difficulty": "Foundation",
+      "prompt": "With inert electrodes, what metal forms at the cathode during electrolysis of molten CaBr₂?",
+      "options": [
+        "Ca",
+        "H₂",
+        "O₂",
+        "CO₂"
+      ],
+      "answer": 0,
+      "explanation": "Ca²⁺ is reduced and bromide forms Br₂."
+    },
+    {
+      "id": "y10-redox-038",
+      "category": "Molten electrolysis",
+      "difficulty": "Application",
+      "prompt": "With inert electrodes, what forms at the anode during electrolysis of molten CaBr₂?",
+      "options": [
+        "H₂",
+        "Br₂",
+        "The metal from the salt",
+        "Water"
+      ],
+      "answer": 1,
+      "explanation": "Ca²⁺ is reduced and bromide forms Br₂."
+    },
+    {
+      "id": "y10-redox-039",
+      "category": "Molten electrolysis",
+      "difficulty": "Application",
+      "prompt": "Why is sodium obtained at the cathode of molten NaCl rather than hydrogen?",
+      "options": [
+        "Sodium is a gas at all temperatures.",
+        "The cathode is an oxidation site.",
+        "There is no water in the molten salt to compete.",
+        "Chloride gains the electrons to make sodium."
+      ],
+      "answer": 2,
+      "explanation": "Molten-salt and aqueous product rules differ because their available species differ."
+    },
+    {
+      "id": "y10-redox-040",
+      "category": "Molten electrolysis",
+      "difficulty": "Challenge",
+      "prompt": "In molten lead(II) bromide, which pair of half-equations is correct?",
+      "options": [
+        "Pb²⁺ → Pb + 2e⁻; Br₂ + 2e⁻ → 2Br⁻",
+        "Pb → Pb²⁺ + 2e⁻; Br⁻ → Br",
+        "Pb²⁺ + e⁻ → Pb; Br⁻ → Br₂",
+        "Pb²⁺ + 2e⁻ → Pb; 2Br⁻ → Br₂ + 2e⁻"
+      ],
+      "answer": 3,
+      "explanation": "Lead ions are reduced and bromide ions oxidised with two electrons balanced."
+    },
+    {
+      "id": "y10-redox-041",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Foundation",
+      "prompt": "What normally forms at the cathode in aqueous CuSO₄ with inert electrodes?",
+      "options": [
+        "Copper",
+        "Sodium",
+        "Sulfate metal",
+        "Oxygen"
+      ],
+      "answer": 0,
+      "explanation": "Cu²⁺ can be reduced to copper under this usual aqueous comparison."
+    },
+    {
+      "id": "y10-redox-042",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Application",
+      "prompt": "What normally forms at the inert anode in aqueous CuSO₄?",
+      "options": [
+        "Copper",
+        "Oxygen",
+        "Sulfur metal only",
+        "Sodium"
+      ],
+      "answer": 1,
+      "explanation": "Water is oxidised; sulfate is not normally discharged in this school comparison."
+    },
+    {
+      "id": "y10-redox-043",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Application",
+      "prompt": "With copper electrodes in CuSO₄, what happens at the anode?",
+      "options": [
+        "Copper plates out at the anode.",
+        "Sulfate becomes copper.",
+        "Copper dissolves as Cu²⁺.",
+        "The anode must release chlorine."
+      ],
+      "answer": 2,
+      "explanation": "Cu → Cu²⁺ + 2e⁻ is anode oxidation."
+    },
+    {
+      "id": "y10-redox-044",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Application",
+      "prompt": "Why can Cu²⁺ concentration remain approximately constant with copper electrodes?",
+      "options": [
+        "No electrons pass.",
+        "Every sulfate ion becomes a copper ion.",
+        "All ions stay stationary.",
+        "Copper ions are replenished at the dissolving anode as they are removed at the cathode."
+      ],
+      "answer": 3,
+      "explanation": "Ideal transfer balances copper dissolution and deposition."
+    },
+    {
+      "id": "y10-redox-045",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Application",
+      "prompt": "What cathode gas is expected from ordinary concentrated aqueous NaCl with inert electrodes?",
+      "options": [
+        "Hydrogen",
+        "Sodium vapour",
+        "Chlorine",
+        "Carbon dioxide"
+      ],
+      "answer": 0,
+      "explanation": "Water is reduced in preference to Na⁺ under the ordinary aqueous conditions."
+    },
+    {
+      "id": "y10-redox-046",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Application",
+      "prompt": "What anode gas is usually produced from concentrated brine with inert electrodes?",
+      "options": [
+        "Hydrogen",
+        "Chlorine",
+        "Sodium",
+        "Nitrogen"
+      ],
+      "answer": 1,
+      "explanation": "High chloride concentration supports chlorine evolution; conditions matter."
+    },
+    {
+      "id": "y10-redox-047",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Application",
+      "prompt": "What products are expected for concentrated aqueous CuCl₂ with inert electrodes in the stated model?",
+      "options": [
+        "Hydrogen at both electrodes",
+        "Copper at the anode and sodium at the cathode",
+        "Copper at the cathode and chlorine at the anode",
+        "Sulfur and oxygen only"
+      ],
+      "answer": 2,
+      "explanation": "Cu²⁺ is reduced; chloride can be oxidised at a suitable inert anode."
+    },
+    {
+      "id": "y10-redox-048",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Challenge",
+      "prompt": "Which information matters when predicting aqueous electrolysis products?",
+      "options": [
+        "Only the beaker colour",
+        "Only the solution volume, regardless of species",
+        "Only alphabetical order of ion names",
+        "Ion concentrations, electrode materials and conditions"
+      ],
+      "answer": 3,
+      "explanation": "Water competition and electrode kinetics make conditions important."
+    },
+    {
+      "id": "y10-redox-049",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Challenge",
+      "prompt": "Which equation gives hydrogen from water at an alkaline cathode?",
+      "options": [
+        "2H₂O + 2e⁻ → H₂ + 2OH⁻",
+        "2H₂O → O₂ + 4H⁺ + 4e⁻",
+        "2Cl⁻ → Cl₂ + 2e⁻",
+        "Na⁺ → Na + e⁻"
+      ],
+      "answer": 0,
+      "explanation": "Reduction of water produces hydrogen and hydroxide ions."
+    },
+    {
+      "id": "y10-redox-050",
+      "category": "Aqueous electrolysis",
+      "difficulty": "Challenge",
+      "prompt": "Why is “all anions in water discharge equally easily” incorrect?",
+      "options": [
+        "Every anion is a neutral atom.",
+        "Some anions remain spectators while water or another species is oxidised.",
+        "Anions always move to the cathode in electrolysis.",
+        "Water cannot ever react at an electrode."
+      ],
+      "answer": 1,
+      "explanation": "Product selection is not determined by migration alone."
+    },
+    {
+      "id": "y10-redox-051",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Foundation",
+      "prompt": "What is the H₂:O₂ volume ratio from acidified-water electrolysis at equal temperature and pressure?",
+      "options": [
+        "1:2",
+        "1:1",
+        "2:1",
+        "3:1"
+      ],
+      "answer": 2,
+      "explanation": "2H₂O → 2H₂ + O₂ gives twice as many moles of hydrogen."
+    },
+    {
+      "id": "y10-redox-052",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Foundation",
+      "prompt": "Which electrode produces H₂ in acidified-water electrolysis?",
+      "options": [
+        "Anode",
+        "Both produce only oxygen",
+        "The water container wall",
+        "Cathode"
+      ],
+      "answer": 3,
+      "explanation": "H⁺ or water is reduced at the cathode."
+    },
+    {
+      "id": "y10-redox-053",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Foundation",
+      "prompt": "Which gas relights a glowing splint?",
+      "options": [
+        "Oxygen",
+        "Hydrogen",
+        "Carbon dioxide",
+        "Chlorine"
+      ],
+      "answer": 0,
+      "explanation": "A glowing-splint test identifies oxygen."
+    },
+    {
+      "id": "y10-redox-054",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Foundation",
+      "prompt": "Which gas gives the characteristic pop with a burning splint?",
+      "options": [
+        "Oxygen",
+        "Hydrogen",
+        "Carbon dioxide",
+        "Nitrogen"
+      ],
+      "answer": 1,
+      "explanation": "Hydrogen burns rapidly when mixed with oxygen from air."
+    },
+    {
+      "id": "y10-redox-055",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Application",
+      "prompt": "Why use a suitable electrolyte rather than relying on very pure water alone?",
+      "options": [
+        "It changes oxygen atoms into hydrogen atoms.",
+        "It removes the need for electrodes.",
+        "It provides enough mobile ions for useful conduction.",
+        "It guarantees chloride-free water gives chlorine."
+      ],
+      "answer": 2,
+      "explanation": "Very pure water is a poor conductor because its ion concentration is very low."
+    },
+    {
+      "id": "y10-redox-056",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Application",
+      "prompt": "Acidified-water electrolysis gives 5 mL of O₂. At the same temperature and pressure, what H₂ volume is predicted in mL?",
+      "options": [
+        "20",
+        "5",
+        "100",
+        "10"
+      ],
+      "answer": 3,
+      "explanation": "The mole and volume ratio H₂:O₂ is 2:1."
+    },
+    {
+      "id": "y10-redox-057",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Application",
+      "prompt": "Acidified-water electrolysis gives 12 mL of O₂. At the same temperature and pressure, what H₂ volume is predicted in mL?",
+      "options": [
+        "24",
+        "48",
+        "12",
+        "240"
+      ],
+      "answer": 0,
+      "explanation": "The mole and volume ratio H₂:O₂ is 2:1."
+    },
+    {
+      "id": "y10-redox-058",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Application",
+      "prompt": "Acidified-water electrolysis gives 25 mL of O₂. At the same temperature and pressure, what H₂ volume is predicted in mL?",
+      "options": [
+        "100",
+        "50",
+        "25",
+        "500"
+      ],
+      "answer": 1,
+      "explanation": "The mole and volume ratio H₂:O₂ is 2:1."
+    },
+    {
+      "id": "y10-redox-059",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Foundation",
+      "prompt": "An ideal water electrolysis gives 18 mL of H₂ and 9 mL of O₂. What is the total gas volume in mL at the same conditions?",
+      "options": [
+        "54",
+        "13.5",
+        "27",
+        "270"
+      ],
+      "answer": 2,
+      "explanation": "Add the two volumes measured at the same conditions: 18 + 9 = 27 mL."
+    },
+    {
+      "id": "y10-redox-060",
+      "category": "Water electrolysis and gas tests",
+      "difficulty": "Challenge",
+      "prompt": "At 100% efficiency, 2 mol of electrons pass through an acidified-water cathode. How many moles of H₂ form?",
+      "options": [
+        "2",
+        "0.5",
+        "10",
+        "1"
+      ],
+      "answer": 3,
+      "explanation": "2H⁺ + 2e⁻ → H₂ requires 2 mol e⁻ per mole of hydrogen."
+    },
+    {
+      "id": "y10-redox-061",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Foundation",
+      "prompt": "What is dissolved in molten cryolite for aluminium extraction?",
+      "options": [
+        "Aluminium oxide (alumina)",
+        "Sodium chloride only",
+        "Pure aluminium metal only",
+        "Iron carbonate"
+      ],
+      "answer": 0,
+      "explanation": "Alumina supplies the aluminium-containing ions."
+    },
+    {
+      "id": "y10-redox-062",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Application",
+      "prompt": "What is an important function of cryolite?",
+      "options": [
+        "It makes electricity unnecessary.",
+        "It lowers the operating temperature relative to pure alumina.",
+        "It provides all the aluminium atoms instead of alumina.",
+        "It stops all ions moving."
+      ],
+      "answer": 1,
+      "explanation": "Cryolite forms a conducting molten mixture at a lower temperature than pure alumina would require."
+    },
+    {
+      "id": "y10-redox-063",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Foundation",
+      "prompt": "Where is aluminium metal formed?",
+      "options": [
+        "At the carbon anode",
+        "In the external copper wire only",
+        "At the cathode",
+        "By filtering dry alumina"
+      ],
+      "answer": 2,
+      "explanation": "Al³⁺ gains electrons at the cathode."
+    },
+    {
+      "id": "y10-redox-064",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Application",
+      "prompt": "Why are carbon anodes consumed?",
+      "options": [
+        "Every carbon atom becomes aluminium.",
+        "The anodes are reduced to sodium.",
+        "Aluminium deposits consume them mechanically only.",
+        "Carbon reacts to form carbon oxides."
+      ],
+      "answer": 3,
+      "explanation": "Oxidation at the carbon anode leads mainly to CO₂ in the ideal model, with real variations."
+    },
+    {
+      "id": "y10-redox-065",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Application",
+      "prompt": "Which is a correct overall ideal carbon-anode equation?",
+      "options": [
+        "2Al₂O₃ + 3C → 4Al + 3CO₂",
+        "Al₂O₃ + C → Al + CO₂",
+        "Al₂O₃ → 2Al + 3C",
+        "2Al + 3CO₂ → Al₂O₃ + C"
+      ],
+      "answer": 0,
+      "explanation": "The balanced equation conserves Al, O and C for a CO₂-only anode model."
+    },
+    {
+      "id": "y10-redox-066",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Challenge",
+      "prompt": "Which is the net carbon-anode half-equation in the CO₂ model?",
+      "options": [
+        "Al³⁺ + 3e⁻ → Al",
+        "C + 2O²⁻ → CO₂ + 4e⁻",
+        "2Cl⁻ → Cl₂ + 2e⁻",
+        "C + 4e⁻ → C⁴⁻"
+      ],
+      "answer": 1,
+      "explanation": "Oxide ions and carbon produce CO₂ while four electrons are released."
+    },
+    {
+      "id": "y10-redox-067",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Application",
+      "prompt": "Why is the molten state essential in this cell?",
+      "options": [
+        "Every solid ionic compound conducts equally well.",
+        "Aluminium atoms must become water.",
+        "The electrolyte ions must be mobile.",
+        "Molten means there are no ions."
+      ],
+      "answer": 2,
+      "explanation": "Ion movement carries current through the electrolyte."
+    },
+    {
+      "id": "y10-redox-068",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Challenge",
+      "prompt": "What does assuming 100% current efficiency mean in the mass model?",
+      "options": [
+        "The electrical supply needs no energy.",
+        "All industrial cells have no losses.",
+        "Electrons have zero charge.",
+        "All passed charge produces the specified electrode reaction."
+      ],
+      "answer": 3,
+      "explanation": "It is an idealisation; side reactions and inefficiencies can reduce actual yield."
+    },
+    {
+      "id": "y10-redox-069",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Application",
+      "prompt": "How many moles of electrons are required to form 1 mol of Al from Al³⁺?",
+      "options": [
+        "3",
+        "6",
+        "1.5",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Al³⁺ + 3e⁻ → Al."
+    },
+    {
+      "id": "y10-redox-070",
+      "category": "Aluminium electrolysis",
+      "difficulty": "Challenge",
+      "prompt": "At 100% efficiency, 6 mol of electrons reduce Al³⁺. Using 27 g/mol, what mass of Al forms in grams?",
+      "options": [
+        "108",
+        "54",
+        "27",
+        "540"
+      ],
+      "answer": 1,
+      "explanation": "6/3 = 2 mol Al; 2 × 27 = 54 g."
+    },
+    {
+      "id": "y10-redox-071",
+      "category": "Photography and thermite",
+      "difficulty": "Foundation",
+      "prompt": "In silver-halide photography, what forms the dark developed image?",
+      "options": [
+        "Pure sodium chloride",
+        "Oxygen gas",
+        "Metallic silver",
+        "Copper sulfate crystals"
+      ],
+      "answer": 2,
+      "explanation": "Development reduces silver ions to visible silver metal."
+    },
+    {
+      "id": "y10-redox-072",
+      "category": "Photography and thermite",
+      "difficulty": "Application",
+      "prompt": "What is the role of the developing agent?",
+      "options": [
+        "It supplies new silver nuclei from carbon.",
+        "It oxidises all silver metal to erase the image.",
+        "It only dries the film.",
+        "It reduces exposed silver-halide grains and is itself oxidised."
+      ],
+      "answer": 3,
+      "explanation": "The developer supplies reducing action that amplifies the latent image."
+    },
+    {
+      "id": "y10-redox-073",
+      "category": "Photography and thermite",
+      "difficulty": "Application",
+      "prompt": "What does photographic fixer remove?",
+      "options": [
+        "Remaining unexposed silver halide",
+        "All the developed metallic silver in a normal successful process",
+        "Every atom of the support film",
+        "Only water vapour"
+      ],
+      "answer": 0,
+      "explanation": "Fixing removes light-sensitive unexposed material and stabilises the image."
+    },
+    {
+      "id": "y10-redox-074",
+      "category": "Photography and thermite",
+      "difficulty": "Application",
+      "prompt": "Why is the first photographic image called a negative?",
+      "options": [
+        "It has a negative mass.",
+        "More-exposed regions develop darker while masked regions remain lighter.",
+        "Every ion on it has negative charge.",
+        "It contains no silver."
+      ],
+      "answer": 1,
+      "explanation": "The light–dark relationship is reversed relative to the original subject."
+    },
+    {
+      "id": "y10-redox-075",
+      "category": "Photography and thermite",
+      "difficulty": "Challenge",
+      "prompt": "Which half-equation represents silver-image formation during development?",
+      "options": [
+        "Ag → Ag⁺ + e⁻",
+        "Ag⁺ → Ag + 2e⁻",
+        "Ag⁺ + e⁻ → Ag",
+        "Ag⁻ → Ag⁺"
+      ],
+      "answer": 2,
+      "explanation": "Silver ions gain electrons, so the process is reduction."
+    },
+    {
+      "id": "y10-redox-076",
+      "category": "Photography and thermite",
+      "difficulty": "Foundation",
+      "prompt": "What metal removes oxygen from iron(III) oxide in thermite?",
+      "options": [
+        "Copper",
+        "Silver",
+        "Gold",
+        "Aluminium"
+      ],
+      "answer": 3,
+      "explanation": "Aluminium is sufficiently reactive to reduce the iron oxide in this comparison."
+    },
+    {
+      "id": "y10-redox-077",
+      "category": "Photography and thermite",
+      "difficulty": "Application",
+      "prompt": "Which equation is balanced for thermite?",
+      "options": [
+        "2Al + Fe₂O₃ → Al₂O₃ + 2Fe",
+        "Al + Fe₂O₃ → AlO + Fe",
+        "2Fe + Al₂O₃ → Fe₂O₃ + Al",
+        "Al + FeO → Al₂O₃"
+      ],
+      "answer": 0,
+      "explanation": "Two Al and two Fe atoms balance, along with three O atoms."
+    },
+    {
+      "id": "y10-redox-078",
+      "category": "Photography and thermite",
+      "difficulty": "Application",
+      "prompt": "Which species is oxidised in thermite?",
+      "options": [
+        "Iron(III) in the oxide",
+        "Aluminium",
+        "Oxygen from −2 to −2",
+        "Both metals are reduced"
+      ],
+      "answer": 1,
+      "explanation": "Al goes from 0 to +3, while Fe goes from +3 to 0."
+    },
+    {
+      "id": "y10-redox-079",
+      "category": "Photography and thermite",
+      "difficulty": "Challenge",
+      "prompt": "How many electrons are transferred in 2Al + Fe₂O₃ → Al₂O₃ + 2Fe?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "Two Al atoms each lose three electrons, matching reduction of two Fe³⁺ centres."
+    },
+    {
+      "id": "y10-redox-080",
+      "category": "Photography and thermite",
+      "difficulty": "Challenge",
+      "prompt": "Why does copper not replace aluminium in the same iron-oxide thermite comparison?",
+      "options": [
+        "Copper is more reactive than every metal.",
+        "Copper has no electrons.",
+        "Iron oxide contains no oxygen.",
+        "Copper is less reactive than iron in this comparison."
+      ],
+      "answer": 3,
+      "explanation": "A less reactive metal cannot perform the same oxygen-removal role under the stated conditions."
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+[
+  {
+    "id": "acids-and-bases",
+    "key": "acids",
+    "bank": "y10-acids-bases",
+    "name": "Acids and Bases",
+    "intro": "Colour changes, reactions and careful measurements: explain what acids and bases do, then use evidence to find an unknown concentration.",
+    "experiments": 8,
+    "theory": [
+      [
+        "Indicators and the pH scale",
+        "At 25°C, neutral pure water has pH 7. Universal indicator estimates a broad pH range; a single indicator changes over its own transition range. Natural red-cabbage colours vary with the extract and conditions.",
+        "An acidic sample may turn methyl orange red and phenolphthalein colourless. Different colours do not mean different sample pH values."
+      ],
+      [
+        "Strength, concentration and dilution",
+        "A strong acid ionises essentially completely in dilute aqueous solution; a weak acid establishes an equilibrium. Concentration is amount per volume. A concentrated weak acid and a dilute strong acid cannot be ranked by the words strong and weak alone.",
+        "At equal 0.010 mol/L, ideal HCl has pH about 2; ethanoic acid has a higher pH because it is only partially ionised."
+      ],
+      [
+        "Mass concentration, molarity and ppm",
+        "Molar concentration is n/V in mol/L. Mass concentration can be mg/L. For dilute water-based solutions of density near 1 kg/L, mg/L is approximately ppm by mass. Do not interchange ppm and mol/L without mass and molar-mass information.",
+        "60 mg in 2 L gives 30 mg/L. Add 1 L of water: the same 60 mg is now in 3 L, giving 20 mg/L, about 20 ppm."
+      ],
+      [
+        "Neutralisation and ionic equations",
+        "Acid + alkali gives salt and water. For a strong-acid / strong-alkali aqueous reaction, H⁺ + OH⁻ → H₂O removes the reacting ions and leaves spectators. Other bases such as oxides and carbonates need their own balanced equations.",
+        "HCl + NaOH → NaCl + H₂O. Na⁺ and Cl⁻ remain dissolved. Equal volumes reach equivalence here only when the concentrations and stoichiometry match."
+      ],
+      [
+        "Name the salt from the acid and cation",
+        "Hydrochloric acid forms chlorides, nitric acid forms nitrates and sulfuric acid forms sulfates. The metal or ammonium ion supplies the first part of the salt name. Balance charges when writing the formula.",
+        "H₂SO₄ + 2KOH → K₂SO₄ + 2H₂O. Two K⁺ ions balance one SO₄²⁻ ion."
+      ],
+      [
+        "Acid + metal or carbonate",
+        "A metal above hydrogen can release H₂ from a suitable dilute non-oxidising acid. Carbonates give a salt, CO₂ and water. Acid identity and reaction conditions matter: copper does not produce H₂ from dilute HCl.",
+        "Mg + 2HCl → MgCl₂ + H₂. CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O. Try the gas-syringe comparison in Metals."
+      ],
+      [
+        "Solubility and salt preparation",
+        "All common nitrates and Group 1 / ammonium salts are soluble. Most chlorides are soluble, with important exceptions such as AgCl and PbCl₂; BaSO₄ and PbSO₄ are insoluble, while CaSO₄ is sparingly soluble. Most carbonates are insoluble except Group 1 and ammonium carbonates.",
+        "To make a soluble salt from an insoluble base: use excess base, filter, concentrate and cool. To make an insoluble salt: mix soluble sources, filter the precipitate, wash and dry it."
+      ],
+      [
+        "Vinegar, Epsom salts and everyday chemistry",
+        "A vinegar titre gives the concentration in the sample actually titrated; apply any stated dilution factor afterwards. Epsom salt is MgSO₄·7H₂O. Baking powder contains acid salts and bicarbonate; cream of tartar is an acid salt. Soap stabilises oil droplets by amphiphilic ions.",
+        "25.0 mL of diluted vinegar neutralises 20.0 mL of 0.100 mol/L NaOH. With a 1:1 reaction, c = 0.100 × 20.0 / 25.0 = 0.0800 mol/L."
+      ]
+    ],
+    "resources": [
+      [
+        "Class practical: use of indicators",
+        "https://docs.google.com/document/d/1za9R0qxpajU4u2JmLKMpRePnC8bJbWMzg4lrLYuSLoQ/edit"
+      ],
+      [
+        "Class sheet: acid and base solutions",
+        "https://docs.google.com/document/d/1ShgCWj7R4coPT0x2Nk9EYBrpbc_JsOlB/edit"
+      ],
+      [
+        "Class practical: neutralisation",
+        "https://docs.google.com/document/d/1svYsLwRtfAKXCGUCWrb6SBFuV6KvDZkv4ICAB13tSdQ/edit"
+      ],
+      [
+        "Class practical: vinegar titration",
+        "https://docs.google.com/document/d/1VxSt7eowsAKQWGyE-y1bidQY25Yzj1f0/edit"
+      ],
+      [
+        "Class practical: unknown base titration",
+        "https://docs.google.com/document/d/1bXrbRqqZOtGEk3OgaaAalMwn8pdwg6Oh/edit"
+      ],
+      [
+        "Class practical: making Epsom salts",
+        "https://docs.google.com/document/d/1VXIvSwScdG9UfMN0ZD_H_jjDt2X4ve86/edit"
+      ],
+      [
+        "Class practical: acids with metals and carbonates",
+        "https://docs.google.com/document/d/1DkGn3KkoosyNuPgt6VluqP5SMIFJ5_aa/edit"
+      ],
+      [
+        "Class practical: precipitating salts",
+        "https://docs.google.com/document/d/1URiAVk4Adw0ErvCHrANXmvo0VcJljmNW/edit"
+      ],
+      [
+        "PhET: Acid–Base Solutions",
+        "https://phet.colorado.edu/en/simulations/acid-base-solutions"
+      ],
+      [
+        "Continue with acids, metals and gas tests in Metals",
+        "../metals/#experiment-menu"
+      ]
+    ]
+  },
+  {
+    "id": "metals",
+    "key": "metals",
+    "bank": "y10-metals",
+    "name": "Metals",
+    "intro": "Investigate properties, compare reactivity and choose how to turn an ore into a useful material.",
+    "experiments": 6,
+    "theory": [
+      [
+        "Atoms, elements, compounds and molecules",
+        "An element contains one type of atom; a compound contains chemically combined elements. A molecule is a discrete group of covalently bonded atoms. Metals and ionic solids are extended structures, not collections of individual metal or salt molecules.",
+        "O₂ is a molecular element; H₂O is a molecular compound; Cu is a metallic element; NaCl is an ionic compound described by a formula unit."
+      ],
+      [
+        "Properties and metallic bonding",
+        "Positive metal ions attract delocalised electrons. Mobile electrons explain conduction; non-directional metallic bonding allows layers to deform without the structure immediately shattering. Graphite is a conducting non-metal, so conduction alone does not prove that a sample is a metal.",
+        "Copper is useful in wiring because it conducts and can be drawn into wires. Graphite conducts because of delocalised electrons in its covalent layers."
+      ],
+      [
+        "Groups and trends",
+        "Group 1 metals react with water to form hydroxides and hydrogen; reactivity increases down the group. Halogen reactivity decreases down Group 17. Many transition elements show variable oxidation states, coloured compounds or catalytic activity. At room temperature, chlorine is a pale-green gas, bromine a red-brown liquid and iodine a grey-black solid; iodine vapour is purple.",
+        "Chlorine displaces bromine from bromide: Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂. Iodine cannot displace bromine from bromide."
+      ],
+      [
+        "Write a neutral ionic formula",
+        "Balance total positive and negative charge using the smallest whole-number ratio. Keep polyatomic ions together and use brackets when more than one is needed. Roman numerals specify the metal ion charge where required.",
+        "Mg²⁺ + 2Cl⁻ gives MgCl₂; 2Al³⁺ + 3O²⁻ gives Al₂O₃; Ca²⁺ + 2NO₃⁻ gives Ca(NO₃)₂."
+      ],
+      [
+        "Reactivity and acids",
+        "The series ranks tendencies to form positive ions under defined comparisons. A useful school sequence is K, Na, Ca, Mg, Al, carbon, Zn, Fe, hydrogen, Cu, Ag, Au. Carbon and hydrogen are comparison markers, not metals. Surface films can alter observed rates.",
+        "Fe + 2HCl → FeCl₂ + H₂. Iron forms iron(II) chloride in this dilute non-oxidising acid reaction. Compare equal moles, temperature and surface conditions when investigating rates."
+      ],
+      [
+        "Displacement as electron transfer",
+        "A more reactive metal can reduce ions of a less reactive metal. The reacting metal is oxidised; the dissolved metal ion is reduced. Spectator anions remain in solution.",
+        "Zn + Cu²⁺ → Zn²⁺ + Cu. Zinc loses 2e⁻ and Cu²⁺ gains 2e⁻. Copper cannot reverse this reaction spontaneously under the same ordinary comparison."
+      ],
+      [
+        "Extraction and the blast furnace",
+        "Metals below carbon can often be extracted from oxides using carbon or CO. More reactive metals such as aluminium need electrolysis in the usual school-level routes. In a blast furnace, CO reduces iron oxide; limestone forms CaO that removes silica as slag.",
+        "Fe₂O₃ + 3CO → 2Fe + 3CO₂. CaCO₃ → CaO + CO₂; CaO + SiO₂ → CaSiO₃. Copper oxide can be reduced by carbon under suitable conditions."
+      ],
+      [
+        "Alloys and uses",
+        "An alloy is a mixture containing a metal. Different-sized atoms can hinder dislocation/layer motion, often increasing hardness. Composition and treatment affect properties. Stainless steel resists corrosion because of a chromium-rich protective film.",
+        "Brass contains Cu and Zn; bronze Cu and Sn; carbon steel mainly Fe with a small amount of C. Choose a property for the intended use rather than assuming every alloy is better in every way."
+      ]
+    ],
+    "resources": [
+      [
+        "Explore aluminium extraction and thermite in Redox",
+        "../redox/#experiment-menu"
+      ],
+      [
+        "Return to acids, bases and salt preparation",
+        "../acids-and-bases/"
+      ],
+      [
+        "Royal Society of Chemistry: education resources",
+        "https://edu.rsc.org/resources"
+      ]
+    ]
+  },
+  {
+    "id": "redox",
+    "key": "redox",
+    "bank": "y10-redox",
+    "name": "Redox",
+    "intro": "Track electrons from metal reactions to photographic images, electrolysis and industrial aluminium extraction.",
+    "experiments": 6,
+    "theory": [
+      [
+        "Oxidation and reduction",
+        "Oxidation is electron loss and an increase in oxidation state. Reduction is electron gain and a decrease in oxidation state. In simple oxygen-transfer reactions, gaining oxygen is oxidation and losing oxygen is reduction.",
+        "Zn → Zn²⁺ + 2e⁻ is oxidation. Cu²⁺ + 2e⁻ → Cu is reduction. Both changes occur in the same redox process."
+      ],
+      [
+        "Agents and balanced half-equations",
+        "The reducing agent donates electrons and is oxidised; the oxidising agent accepts electrons and is reduced. Balance atoms and charge, then multiply half-equations so the electron numbers cancel.",
+        "2Al → 2Al³⁺ + 6e⁻ and 2Fe³⁺ + 6e⁻ → 2Fe match the six-electron transfer in thermite."
+      ],
+      [
+        "What carries charge?",
+        "An external metal circuit carries charge through electrons. An electrolyte carries charge through moving ions. Solid ionic compounds do not conduct by ion migration, but molten or aqueous electrolytes can.",
+        "Cations migrate to the negative cathode and anions to the positive anode in an electrolytic cell. Migration is not the same as electron transfer at the electrode surface."
+      ],
+      [
+        "Electrode rules",
+        "Reduction always occurs at the cathode and oxidation at the anode. For electrolysis, the power supply makes the cathode negative and anode positive. Electrode names describe the reaction; polarity differs in a galvanic cell.",
+        "Molten PbBr₂: Pb²⁺ + 2e⁻ → Pb at the cathode; 2Br⁻ → Br₂ + 2e⁻ at the anode."
+      ],
+      [
+        "Aqueous solutions: water competes",
+        "Do not apply molten-salt rules to every aqueous solution. Water can be reduced to H₂ or oxidised to O₂. Ion concentration, electrode material and overpotential affect which reactions occur.",
+        "Concentrated aqueous CuCl₂ with inert electrodes gives Cu at the cathode and usually Cl₂ at the anode; CuSO₄ with inert electrodes gives Cu and O₂. Copper anodes can dissolve instead."
+      ],
+      [
+        "Water electrolysis and gas tests",
+        "Acidified water with inert electrodes gives H₂ and O₂ in a 2:1 mole and volume ratio at equal temperature and pressure. Hydrogen gives a pop with a burning splint; oxygen relights a glowing splint. Carbon dioxide turns limewater milky.",
+        "2H₂O → 2H₂ + O₂. With the same charge, n(H₂) = Q/(2F) and n(O₂) = Q/(4F), assuming 100% current efficiency."
+      ],
+      [
+        "Aluminium extraction",
+        "Alumina is dissolved in molten cryolite. Cryolite lowers the required operating temperature compared with pure alumina. Aluminium forms at the cathode; carbon anodes react to form carbon oxides and need replacing.",
+        "Al³⁺ + 3e⁻ → Al. In the ideal CO₂-only anode model, 2Al₂O₃ + 3C → 4Al + 3CO₂."
+      ],
+      [
+        "Photography and thermite",
+        "In silver-halide photography, exposure creates a latent image, development reduces silver ions to visible metallic silver, and fixing removes unexposed silver halide. Thermite is a separate highly exothermic oxygen-transfer redox reaction.",
+        "2Al + Fe₂O₃ → Al₂O₃ + 2Fe. Aluminium is oxidised; iron(III) is reduced. The photographic image forms by Ag⁺ gaining electrons, not by silver ions being oxidised."
+      ]
+    ],
+    "resources": [
+      [
+        "Connect redox to metal displacement and extraction",
+        "../metals/"
+      ],
+      [
+        "Royal Society of Chemistry: education resources",
+        "https://edu.rsc.org/resources"
+      ]
+    ]
+  },
+  {
+    "id": "organic-chemistry",
+    "key": "organic",
+    "bank": "y10-organic",
+    "name": "Organic Chemistry",
+    "intro": "Follow hydrocarbons from a candle and a refinery to functional groups, useful polymers and condensation reactions.",
+    "experiments": 8,
+    "theory": [
+      [
+        "Combustion and its products",
+        "Complete combustion of a hydrocarbon forms CO₂ and H₂O. Limited oxygen can produce CO and/or soot as well as water and some CO₂. A candle’s yellow colour alone is not a reliable measure of complete combustion.",
+        "CH₄ + 2O₂ → CO₂ + 2H₂O. Anhydrous CuSO₄ turns white to blue in the presence of water; CO₂ turns limewater milky."
+      ],
+      [
+        "Crude oil and fractional distillation",
+        "Crude oil is a mixture, mainly of hydrocarbons. Fractional distillation separates by boiling ranges: vapours rise through a hot-bottom, cool-top column. Smaller alkanes tend to be more volatile, less viscous and easier to ignite than larger ones.",
+        "A component condenses where the local column temperature falls to its boiling point. Fractions are mixtures with overlapping boiling ranges; distillation does not crack C–C bonds."
+      ],
+      [
+        "Alkanes and alkenes",
+        "Acyclic alkanes have CₙH₂ₙ₊₂ and only single carbon–carbon bonds. Acyclic alkenes with one C=C have CₙH₂ₙ. Homologous-series members share characteristic chemistry and differ successively by CH₂.",
+        "Butane is C₄H₁₀; butene is C₄H₈. These general formulas are not sufficient to distinguish all possible ring structures or multiple-double-bond compounds."
+      ],
+      [
+        "Cracking and bromine water",
+        "Cracking breaks long hydrocarbons into shorter products, often including alkenes. Catalytic cracking uses a hot catalyst; thermal cracking uses different conditions. Alkenes decolourise bromine by addition under the comparison conditions used here.",
+        "C₁₀H₂₂ → C₈H₁₈ + C₂H₄. Ethene adds Br₂ to form C₂H₄Br₂. An alkane comparison must specify no UV light; partition into another layer is not chemical decolourisation."
+      ],
+      [
+        "Addition polymers",
+        "Alkene double bonds open and monomers join to form a carbon-chain polymer. All monomer atoms are retained and no small molecule is released. Repeat units include substituents; chain ends are normally omitted from the repeat-unit notation.",
+        "Ethene gives [–CH₂–CH₂–]ₙ. Propene gives [–CH₂–CH(CH₃)–]ₙ; the CH₃ group stays as a side group."
+      ],
+      [
+        "Alcohols, carboxylic acids and esters",
+        "An alcohol contains an –OH group outside a carboxyl group. Carboxylic acids contain –COOH and are commonly weak acids. Esters contain –COO– and can form reversibly from an alcohol and carboxylic acid with acid catalysis.",
+        "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O produces ethyl ethanoate. The alcohol supplies the alkyl part of the ester name."
+      ],
+      [
+        "Amines and amides",
+        "Amines contain nitrogen bonded to carbon and/or hydrogen, with a lone pair that can accept H⁺. Amides have nitrogen directly attached to a carbonyl carbon. Lone-pair delocalisation makes amides much less basic than comparable amines.",
+        "CH₃NH₂ is methylamine. CH₃CONH₂ is ethanamide. Do not identify every nitrogen-containing compound as an amine."
+      ],
+      [
+        "Polyesters and polyamides",
+        "A diol plus a dicarboxylic acid can form a polyester; a diamine plus a dicarboxylic acid can form a polyamide. Two reactive groups per monomer allow chain growth. Water forms in these acid + alcohol/amine condensation routes.",
+        "Joining 2n bifunctional monomers into one finite linear chain makes 2n − 1 links and releases 2n − 1 waters. Textbook repeat-unit equations often neglect the two end groups."
+      ]
+    ],
+    "resources": [
+      [
+        "Revisit acids, bases, carboxylates and soap",
+        "../acids-and-bases/"
+      ],
+      [
+        "Royal Society of Chemistry: education resources",
+        "https://edu.rsc.org/resources"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,1136 @@
+{
+  "topicId": "y10-metals",
+  "title": "Metals",
+  "categories": [
+    "Atoms elements and compounds",
+    "Metallic bonding and properties",
+    "Group properties and trends",
+    "Ionic formulas",
+    "Reactivity and acids",
+    "Displacement reactions",
+    "Extraction",
+    "Alloys and uses"
+  ],
+  "questions": [
+    {
+      "id": "y10-metals-001",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Foundation",
+      "prompt": "What defines an element?",
+      "options": [
+        "Only one type of atom",
+        "Only one atom in the entire sample",
+        "Any mixture with one colour",
+        "Any substance containing two types of atom"
+      ],
+      "answer": 0,
+      "explanation": "An element is defined by atomic type, not sample size or colour."
+    },
+    {
+      "id": "y10-metals-002",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Foundation",
+      "prompt": "Which is a compound?",
+      "options": [
+        "Copper, Cu",
+        "Water, H₂O",
+        "Oxygen, O₂",
+        "Sulfur, S₈"
+      ],
+      "answer": 1,
+      "explanation": "Water has different elements chemically bonded in a fixed composition."
+    },
+    {
+      "id": "y10-metals-003",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Foundation",
+      "prompt": "Which is a molecular element?",
+      "options": [
+        "NaCl",
+        "H₂O",
+        "O₂",
+        "CuSO₄"
+      ],
+      "answer": 2,
+      "explanation": "O₂ contains only oxygen atoms in discrete molecules."
+    },
+    {
+      "id": "y10-metals-004",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Application",
+      "prompt": "Why is solid NaCl not described as separate NaCl molecules?",
+      "options": [
+        "It contains no atoms or ions.",
+        "Its composition changes continuously.",
+        "All solids are metals.",
+        "It is an extended ionic lattice."
+      ],
+      "answer": 3,
+      "explanation": "NaCl describes the ratio of Na⁺ and Cl⁻ ions in the lattice."
+    },
+    {
+      "id": "y10-metals-005",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Foundation",
+      "prompt": "What is copper metal made of structurally?",
+      "options": [
+        "An extended metallic structure",
+        "Separate Cu₂ molecules in ordinary bulk copper",
+        "Water molecules with a copper colour",
+        "Only Cu²⁺ ions with no electrons"
+      ],
+      "answer": 0,
+      "explanation": "Metallic bonding involves positive metal centres and delocalised electrons."
+    },
+    {
+      "id": "y10-metals-006",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Application",
+      "prompt": "Which sample is a mixture?",
+      "options": [
+        "Pure water",
+        "Brass",
+        "Pure sodium chloride",
+        "Pure oxygen"
+      ],
+      "answer": 1,
+      "explanation": "Brass is an alloy mixture of copper and zinc, not a fixed-formula compound."
+    },
+    {
+      "id": "y10-metals-007",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Application",
+      "prompt": "What distinguishes a compound from a mixture?",
+      "options": [
+        "It can contain only one element.",
+        "It must always be a gas.",
+        "Its elements are chemically combined in fixed proportions.",
+        "It is separated by ordinary filtration into its elements."
+      ],
+      "answer": 2,
+      "explanation": "Compounds have defined chemical composition; mixtures have variable composition."
+    },
+    {
+      "id": "y10-metals-008",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Application",
+      "prompt": "Graphite is best described as…",
+      "options": [
+        "a molecular compound of carbon and oxygen.",
+        "a metal because it conducts.",
+        "a mixture of carbon and sodium.",
+        "an element with a giant covalent layered structure."
+      ],
+      "answer": 3,
+      "explanation": "Graphite contains carbon only, in extended covalent layers."
+    },
+    {
+      "id": "y10-metals-009",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Challenge",
+      "prompt": "Which statement about molecules is correct?",
+      "options": [
+        "Some elements are molecular and some compounds are molecular.",
+        "Every compound consists of discrete molecules.",
+        "Every element is monatomic in every state.",
+        "Molecule and mixture mean the same thing."
+      ],
+      "answer": 0,
+      "explanation": "O₂ is a molecular element and H₂O a molecular compound, unlike metallic Cu and ionic NaCl."
+    },
+    {
+      "id": "y10-metals-010",
+      "category": "Atoms elements and compounds",
+      "difficulty": "Challenge",
+      "prompt": "What changes when a physical mixture is made?",
+      "options": [
+        "Every component must become a new element.",
+        "Substances are combined without necessarily forming new chemical bonds between components.",
+        "Atomic numbers change.",
+        "The mixture must acquire a fixed molecular formula."
+      ],
+      "answer": 1,
+      "explanation": "Physical mixing does not by itself create a fixed-ratio compound."
+    },
+    {
+      "id": "y10-metals-011",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Foundation",
+      "prompt": "What carries electrical charge through a solid metal?",
+      "options": [
+        "Free-moving positive metal ions through the solid",
+        "Neutral molecules only",
+        "Delocalised electrons",
+        "Stationary protons leaving nuclei"
+      ],
+      "answer": 2,
+      "explanation": "Delocalised electrons are mobile; the metal ions occupy the lattice."
+    },
+    {
+      "id": "y10-metals-012",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Foundation",
+      "prompt": "What holds a metallic structure together?",
+      "options": [
+        "Attraction between neutral gas bubbles",
+        "Covalent bonds only between pairs of isolated metal molecules",
+        "Gravity alone",
+        "Attraction between positive metal centres and delocalised electrons"
+      ],
+      "answer": 3,
+      "explanation": "Electrostatic metallic bonding extends throughout the structure."
+    },
+    {
+      "id": "y10-metals-013",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Application",
+      "prompt": "Why can many metals be bent without shattering?",
+      "options": [
+        "Layers can move while metallic bonding remains.",
+        "Every bond is permanently removed.",
+        "Metal atoms turn into water.",
+        "All ions become neutral molecules."
+      ],
+      "answer": 0,
+      "explanation": "Metallic bonding can persist as layers or dislocations move."
+    },
+    {
+      "id": "y10-metals-014",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Foundation",
+      "prompt": "Which is a conducting non-metal?",
+      "options": [
+        "Sulfur as a solid",
+        "Graphite",
+        "Diamond in the ordinary insulating comparison",
+        "Dry solid sodium chloride"
+      ],
+      "answer": 1,
+      "explanation": "Graphite has delocalised electrons within its layers."
+    },
+    {
+      "id": "y10-metals-015",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Application",
+      "prompt": "Why does solid NaCl not conduct by ion movement?",
+      "options": [
+        "It has no charged particles.",
+        "It has only free electrons.",
+        "Its ions are held in fixed lattice positions.",
+        "It is a molecular gas."
+      ],
+      "answer": 2,
+      "explanation": "It contains ions, but they are not mobile in the solid."
+    },
+    {
+      "id": "y10-metals-016",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Application",
+      "prompt": "Why can molten NaCl conduct?",
+      "options": [
+        "Its nuclei become electrons.",
+        "It stops containing ions.",
+        "It becomes a metal alloy.",
+        "Its ions are mobile."
+      ],
+      "answer": 3,
+      "explanation": "Mobile ions carry charge through the melt."
+    },
+    {
+      "id": "y10-metals-017",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Application",
+      "prompt": "Which property helps make copper suitable for wires?",
+      "options": [
+        "Electrical conductivity and ductility",
+        "Brittleness and electrical insulation",
+        "A tendency to dissolve in cold pure water instantly",
+        "Being a molecular gas at room temperature"
+      ],
+      "answer": 0,
+      "explanation": "Copper conducts and can be drawn into thin wires."
+    },
+    {
+      "id": "y10-metals-018",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Application",
+      "prompt": "Why is conduction alone not enough to classify a sample as a metal?",
+      "options": [
+        "Every non-metal conducts perfectly.",
+        "Some non-metals such as graphite also conduct.",
+        "Metals never conduct.",
+        "Conduction proves the sample is an ionic compound."
+      ],
+      "answer": 1,
+      "explanation": "Use several properties and structural evidence rather than a single observation."
+    },
+    {
+      "id": "y10-metals-019",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Challenge",
+      "prompt": "In a solid metal connected to a battery, which description is best?",
+      "options": [
+        "The entire positive-ion lattice flows down the wire.",
+        "All atoms move at light speed.",
+        "Electrons drift while the lattice ions remain near their positions.",
+        "The wire must melt before any charge moves."
+      ],
+      "answer": 2,
+      "explanation": "Conduction is distinct from bulk movement of the lattice."
+    },
+    {
+      "id": "y10-metals-020",
+      "category": "Metallic bonding and properties",
+      "difficulty": "Challenge",
+      "prompt": "Which statement about metal properties is most accurate?",
+      "options": [
+        "Every metal has exactly the same melting point.",
+        "Every shiny solid must be a metal.",
+        "Every metal is magnetic.",
+        "Common trends have exceptions, so test and specify the material."
+      ],
+      "answer": 3,
+      "explanation": "Properties vary; for example, only some metals show strong ferromagnetism."
+    },
+    {
+      "id": "y10-metals-021",
+      "category": "Group properties and trends",
+      "difficulty": "Foundation",
+      "prompt": "What products form when sodium reacts with water?",
+      "options": [
+        "Sodium hydroxide and hydrogen",
+        "Sodium chloride and oxygen",
+        "Sodium oxide and carbon dioxide only",
+        "Sodium nitrate and nitrogen"
+      ],
+      "answer": 0,
+      "explanation": "2Na + 2H₂O → 2NaOH + H₂."
+    },
+    {
+      "id": "y10-metals-022",
+      "category": "Group properties and trends",
+      "difficulty": "Foundation",
+      "prompt": "How does reactivity generally change down Group 1?",
+      "options": [
+        "It decreases.",
+        "It increases.",
+        "Every element becomes a halogen.",
+        "It is exactly zero for all members."
+      ],
+      "answer": 1,
+      "explanation": "The outer electron is farther from the nucleus and more shielded."
+    },
+    {
+      "id": "y10-metals-023",
+      "category": "Group properties and trends",
+      "difficulty": "Application",
+      "prompt": "Why is potassium generally more reactive with water than lithium?",
+      "options": [
+        "Potassium has no electrons.",
+        "Lithium gains two electrons more readily.",
+        "Its outer electron is lost more readily.",
+        "Potassium is a non-metal gas."
+      ],
+      "answer": 2,
+      "explanation": "Increased shielding and distance make electron loss easier down Group 1."
+    },
+    {
+      "id": "y10-metals-024",
+      "category": "Group properties and trends",
+      "difficulty": "Foundation",
+      "prompt": "How does halogen reactivity generally change down Group 17?",
+      "options": [
+        "It increases like Group 1.",
+        "It is identical for all members.",
+        "Halogens stop forming molecules.",
+        "It decreases."
+      ],
+      "answer": 3,
+      "explanation": "Attraction for an incoming electron weakens down the group."
+    },
+    {
+      "id": "y10-metals-025",
+      "category": "Group properties and trends",
+      "difficulty": "Application",
+      "prompt": "Which reaction is expected?",
+      "options": [
+        "Chlorine displaces bromine from bromide.",
+        "Iodine displaces chlorine from chloride.",
+        "Bromine displaces chlorine from chloride.",
+        "Every halogen displaces itself."
+      ],
+      "answer": 0,
+      "explanation": "Chlorine is more reactive than bromine and iodine."
+    },
+    {
+      "id": "y10-metals-026",
+      "category": "Group properties and trends",
+      "difficulty": "Application",
+      "prompt": "Which is a typical transition-element feature?",
+      "options": [
+        "Only +1 ions in every case",
+        "Variable oxidation states in many compounds",
+        "Violent cold-water reaction in every case",
+        "Never forming coloured compounds"
+      ],
+      "answer": 1,
+      "explanation": "Many transition elements show variable oxidation states."
+    },
+    {
+      "id": "y10-metals-027",
+      "category": "Group properties and trends",
+      "difficulty": "Foundation",
+      "prompt": "Which halogen is a red-brown liquid at ordinary room temperature?",
+      "options": [
+        "Chlorine",
+        "Iodine",
+        "Bromine",
+        "Fluorine"
+      ],
+      "answer": 2,
+      "explanation": "Bromine is liquid; chlorine and fluorine are gases and iodine is a solid at ordinary room temperature."
+    },
+    {
+      "id": "y10-metals-028",
+      "category": "Group properties and trends",
+      "difficulty": "Application",
+      "prompt": "Which statement about transition-metal catalysts is correct?",
+      "options": [
+        "Every metal catalyses every reaction.",
+        "A catalyst must be used up in the overall reaction.",
+        "Catalysts change the identities of elements.",
+        "Many transition elements or their compounds can act as catalysts."
+      ],
+      "answer": 3,
+      "explanation": "Catalysts provide alternative pathways and are regenerated overall; their effects are reaction-specific."
+    },
+    {
+      "id": "y10-metals-029",
+      "category": "Group properties and trends",
+      "difficulty": "Challenge",
+      "prompt": "Why do Group 1 and halogen reactivity trends run in opposite directions?",
+      "options": [
+        "Group 1 reactions involve electron loss, while halogen reactions involve electron gain.",
+        "Both groups have exactly the same electron-transfer role.",
+        "Neither trend involves electrons.",
+        "Every atom gains and loses all its electrons at once."
+      ],
+      "answer": 0,
+      "explanation": "Shielding and distance affect electron loss and gain differently."
+    },
+    {
+      "id": "y10-metals-030",
+      "category": "Group properties and trends",
+      "difficulty": "Challenge",
+      "prompt": "Which conclusion is justified by no iodine displacement from bromide?",
+      "options": [
+        "Iodine is a metal.",
+        "Iodine is less reactive than bromine in this comparison.",
+        "Bromide contains no electrons.",
+        "All halogen displacement reactions are impossible."
+      ],
+      "answer": 1,
+      "explanation": "A less reactive halogen cannot oxidise the halide of a more reactive one under the stated comparison."
+    },
+    {
+      "id": "y10-metals-031",
+      "category": "Ionic formulas",
+      "difficulty": "Application",
+      "prompt": "What is the neutral formula of magnesium chloride?",
+      "options": [
+        "MgCl",
+        "Mg₂Cl",
+        "MgCl₂",
+        "MgCl₃"
+      ],
+      "answer": 2,
+      "explanation": "Mg²⁺ needs two Cl⁻."
+    },
+    {
+      "id": "y10-metals-032",
+      "category": "Ionic formulas",
+      "difficulty": "Application",
+      "prompt": "What is the neutral formula of aluminium oxide?",
+      "options": [
+        "AlO",
+        "Al₃O₂",
+        "AlO₂",
+        "Al₂O₃"
+      ],
+      "answer": 3,
+      "explanation": "Two Al³⁺ balance three O²⁻."
+    },
+    {
+      "id": "y10-metals-033",
+      "category": "Ionic formulas",
+      "difficulty": "Challenge",
+      "prompt": "What is the neutral formula of calcium nitrate?",
+      "options": [
+        "Ca(NO₃)₂",
+        "CaNO₃",
+        "Ca₂NO₃",
+        "Ca(NO₂)₂"
+      ],
+      "answer": 0,
+      "explanation": "Ca²⁺ needs two NO₃⁻ ions, kept together in brackets."
+    },
+    {
+      "id": "y10-metals-034",
+      "category": "Ionic formulas",
+      "difficulty": "Application",
+      "prompt": "What is the neutral formula of sodium sulfate?",
+      "options": [
+        "NaSO₄",
+        "Na₂SO₄",
+        "Na₂SO₃",
+        "Na(SO₄)₂"
+      ],
+      "answer": 1,
+      "explanation": "Two Na⁺ balance SO₄²⁻."
+    },
+    {
+      "id": "y10-metals-035",
+      "category": "Ionic formulas",
+      "difficulty": "Application",
+      "prompt": "What is the neutral formula of iron(II) chloride?",
+      "options": [
+        "FeCl₃",
+        "Fe₂Cl",
+        "FeCl₂",
+        "FeCl"
+      ],
+      "answer": 2,
+      "explanation": "Iron(II) means Fe²⁺, requiring two Cl⁻."
+    },
+    {
+      "id": "y10-metals-036",
+      "category": "Ionic formulas",
+      "difficulty": "Application",
+      "prompt": "What is the neutral formula of iron(III) oxide?",
+      "options": [
+        "FeO",
+        "Fe₃O₂",
+        "FeO₂",
+        "Fe₂O₃"
+      ],
+      "answer": 3,
+      "explanation": "Two Fe³⁺ balance three O²⁻."
+    },
+    {
+      "id": "y10-metals-037",
+      "category": "Ionic formulas",
+      "difficulty": "Application",
+      "prompt": "What is the neutral formula of copper(II) hydroxide?",
+      "options": [
+        "Cu(OH)₂",
+        "CuOH",
+        "Cu₂OH",
+        "CuO₂H"
+      ],
+      "answer": 0,
+      "explanation": "Two OH⁻ groups balance Cu²⁺."
+    },
+    {
+      "id": "y10-metals-038",
+      "category": "Ionic formulas",
+      "difficulty": "Application",
+      "prompt": "What is the neutral formula of potassium carbonate?",
+      "options": [
+        "KCO₃",
+        "K₂CO₃",
+        "K₂CO₂",
+        "K(CO₃)₂"
+      ],
+      "answer": 1,
+      "explanation": "Two K⁺ balance CO₃²⁻."
+    },
+    {
+      "id": "y10-metals-039",
+      "category": "Ionic formulas",
+      "difficulty": "Challenge",
+      "prompt": "What is the neutral formula of ammonium sulfate?",
+      "options": [
+        "NH₄SO₄",
+        "(NH₄)SO₃",
+        "(NH₄)₂SO₄",
+        "NH₄(SO₄)₂"
+      ],
+      "answer": 2,
+      "explanation": "Two NH₄⁺ balance SO₄²⁻."
+    },
+    {
+      "id": "y10-metals-040",
+      "category": "Ionic formulas",
+      "difficulty": "Challenge",
+      "prompt": "What is the neutral formula of magnesium nitride?",
+      "options": [
+        "MgN",
+        "Mg₂N₃",
+        "MgN₂",
+        "Mg₃N₂"
+      ],
+      "answer": 3,
+      "explanation": "Three Mg²⁺ balance two N³⁻."
+    },
+    {
+      "id": "y10-metals-041",
+      "category": "Reactivity and acids",
+      "difficulty": "Foundation",
+      "prompt": "Which metal is most reactive in Mg, Zn, Fe and Cu?",
+      "options": [
+        "Magnesium",
+        "Zinc",
+        "Iron",
+        "Copper"
+      ],
+      "answer": 0,
+      "explanation": "The simplified order is Mg > Zn > Fe > Cu."
+    },
+    {
+      "id": "y10-metals-042",
+      "category": "Reactivity and acids",
+      "difficulty": "Foundation",
+      "prompt": "Which metal lies below hydrogen in this list?",
+      "options": [
+        "Magnesium",
+        "Copper",
+        "Zinc",
+        "Iron"
+      ],
+      "answer": 1,
+      "explanation": "Copper does not release H₂ from dilute non-oxidising HCl."
+    },
+    {
+      "id": "y10-metals-043",
+      "category": "Reactivity and acids",
+      "difficulty": "Application",
+      "prompt": "What gas forms when zinc reacts with excess dilute HCl?",
+      "options": [
+        "O₂",
+        "CO₂",
+        "H₂",
+        "Cl₂"
+      ],
+      "answer": 2,
+      "explanation": "Zn + 2HCl → ZnCl₂ + H₂."
+    },
+    {
+      "id": "y10-metals-044",
+      "category": "Reactivity and acids",
+      "difficulty": "Application",
+      "prompt": "Which equation represents iron with dilute HCl?",
+      "options": [
+        "Fe + 3HCl → FeCl₃ + H₃",
+        "Fe + HCl → FeO + Cl₂",
+        "Fe + HCl → FeSO₄ + H₂",
+        "Fe + 2HCl → FeCl₂ + H₂"
+      ],
+      "answer": 3,
+      "explanation": "Iron(II) chloride is the salt in this comparison."
+    },
+    {
+      "id": "y10-metals-045",
+      "category": "Reactivity and acids",
+      "difficulty": "Application",
+      "prompt": "Why can an aluminium sample react more slowly than its position suggests?",
+      "options": [
+        "A protective surface oxide can impede the reaction.",
+        "Aluminium is always below copper in the series.",
+        "It has no tendency to form ions.",
+        "Reaction rate never depends on the surface."
+      ],
+      "answer": 0,
+      "explanation": "Passivation can mask the reactivity of the underlying metal."
+    },
+    {
+      "id": "y10-metals-046",
+      "category": "Reactivity and acids",
+      "difficulty": "Foundation",
+      "prompt": "Which comparison marker in the school reactivity series is not a metal?",
+      "options": [
+        "Zinc",
+        "Carbon",
+        "Iron",
+        "Copper"
+      ],
+      "answer": 1,
+      "explanation": "Carbon is included as an extraction comparison marker; hydrogen is another non-metal marker."
+    },
+    {
+      "id": "y10-metals-047",
+      "category": "Reactivity and acids",
+      "difficulty": "Application",
+      "prompt": "What should be controlled in a fair metal–acid rate comparison?",
+      "options": [
+        "Only the colour of the test-tube rack",
+        "None of the conditions",
+        "Acid concentration, temperature and surface-area conditions",
+        "The metal symbol alone"
+      ],
+      "answer": 2,
+      "explanation": "These variables influence observed reaction speed."
+    },
+    {
+      "id": "y10-metals-048",
+      "category": "Reactivity and acids",
+      "difficulty": "Challenge",
+      "prompt": "Equal masses of magnesium and zinc produce different final H₂ volumes with excess acid. What must you consider?",
+      "options": [
+        "Only which metal is shinier",
+        "That one gas is necessarily oxygen",
+        "That equal mass always means equal moles",
+        "Their different molar masses"
+      ],
+      "answer": 3,
+      "explanation": "Compare moles and stoichiometry when interpreting total gas amount."
+    },
+    {
+      "id": "y10-metals-049",
+      "category": "Reactivity and acids",
+      "difficulty": "Application",
+      "prompt": "What is the main chemical tendency represented by a metal reactivity comparison?",
+      "options": [
+        "Tendency to lose electrons and form positive ions under the comparison",
+        "Tendency to gain protons into the nucleus",
+        "The exact rate in every possible experiment",
+        "Alphabetical order of element symbols"
+      ],
+      "answer": 0,
+      "explanation": "Reactivity is connected to oxidation tendency; conditions still matter."
+    },
+    {
+      "id": "y10-metals-050",
+      "category": "Reactivity and acids",
+      "difficulty": "Challenge",
+      "prompt": "Why is dilute nitric acid not interchangeable with dilute HCl for every “metal + acid gives H₂” prediction?",
+      "options": [
+        "Every acid has identical chemistry.",
+        "Nitric acid is an oxidising acid and can give different reduction products.",
+        "Nitric acid contains no ions.",
+        "Hydrogen is always the only possible gas from every acid."
+      ],
+      "answer": 1,
+      "explanation": "The simple hydrogen prediction is for appropriate non-oxidising acid conditions."
+    },
+    {
+      "id": "y10-metals-051",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "A clean Mg strip is placed in an aqueous solution containing Cu²⁺ ions. What does the simplified reactivity model predict?",
+      "options": [
+        "No net metal displacement.",
+        "Sulfate or another spectator anion becomes the metal.",
+        "Mg is oxidised and Cu metal deposits.",
+        "All ions disappear without products."
+      ],
+      "answer": 2,
+      "explanation": "The comparison is Mg > Zn > Fe > Cu. Mg is more reactive, so displacement is predicted."
+    },
+    {
+      "id": "y10-metals-052",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "A clean Zn strip is placed in an aqueous solution containing Cu²⁺ ions. What does the simplified reactivity model predict?",
+      "options": [
+        "No net metal displacement.",
+        "Sulfate or another spectator anion becomes the metal.",
+        "All ions disappear without products.",
+        "Zn is oxidised and Cu metal deposits."
+      ],
+      "answer": 3,
+      "explanation": "The comparison is Mg > Zn > Fe > Cu. Zn is more reactive, so displacement is predicted."
+    },
+    {
+      "id": "y10-metals-053",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "A clean Fe strip is placed in an aqueous solution containing Cu²⁺ ions. What does the simplified reactivity model predict?",
+      "options": [
+        "Fe is oxidised and Cu metal deposits.",
+        "No net metal displacement.",
+        "Sulfate or another spectator anion becomes the metal.",
+        "All ions disappear without products."
+      ],
+      "answer": 0,
+      "explanation": "The comparison is Mg > Zn > Fe > Cu. Fe is more reactive, so displacement is predicted."
+    },
+    {
+      "id": "y10-metals-054",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "A clean Cu strip is placed in an aqueous solution containing Zn²⁺ ions. What does the simplified reactivity model predict?",
+      "options": [
+        "Zn metal must deposit spontaneously.",
+        "No net metal displacement.",
+        "Sulfate or another spectator anion becomes the metal.",
+        "All ions disappear without products."
+      ],
+      "answer": 1,
+      "explanation": "The comparison is Mg > Zn > Fe > Cu. Cu is not more reactive than the dissolved metal."
+    },
+    {
+      "id": "y10-metals-055",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "A clean Zn strip is placed in an aqueous solution containing Mg²⁺ ions. What does the simplified reactivity model predict?",
+      "options": [
+        "Mg metal must deposit spontaneously.",
+        "Sulfate or another spectator anion becomes the metal.",
+        "No net metal displacement.",
+        "All ions disappear without products."
+      ],
+      "answer": 2,
+      "explanation": "The comparison is Mg > Zn > Fe > Cu. Zn is not more reactive than the dissolved metal."
+    },
+    {
+      "id": "y10-metals-056",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "A clean Mg strip is placed in an aqueous solution containing Zn²⁺ ions. What does the simplified reactivity model predict?",
+      "options": [
+        "No net metal displacement.",
+        "Sulfate or another spectator anion becomes the metal.",
+        "All ions disappear without products.",
+        "Mg is oxidised and Zn metal deposits."
+      ],
+      "answer": 3,
+      "explanation": "The comparison is Mg > Zn > Fe > Cu. Mg is more reactive, so displacement is predicted."
+    },
+    {
+      "id": "y10-metals-057",
+      "category": "Displacement reactions",
+      "difficulty": "Foundation",
+      "prompt": "In Zn + Cu²⁺ → Zn²⁺ + Cu, which species gains electrons?",
+      "options": [
+        "Cu²⁺",
+        "Zn",
+        "Zn²⁺ after it forms",
+        "Every species loses electrons"
+      ],
+      "answer": 0,
+      "explanation": "Cu²⁺ + 2e⁻ → Cu is reduction."
+    },
+    {
+      "id": "y10-metals-058",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "What role do sulfate ions play when zinc displaces copper from CuSO₄?",
+      "options": [
+        "They are reduced to copper metal.",
+        "Spectator ions",
+        "They are the only electron donors.",
+        "They become hydrogen gas."
+      ],
+      "answer": 1,
+      "explanation": "Sulfate remains aqueous and unchanged in the simplified ionic reaction."
+    },
+    {
+      "id": "y10-metals-059",
+      "category": "Displacement reactions",
+      "difficulty": "Application",
+      "prompt": "Why does a copper coating appear on iron in CuSO₄?",
+      "options": [
+        "Copper atoms are created from sulfate.",
+        "Iron changes its atomic number to copper.",
+        "Cu²⁺ gains electrons from the oxidised iron.",
+        "The beaker supplies new copper nuclei."
+      ],
+      "answer": 2,
+      "explanation": "Iron is oxidised and dissolved copper ions are reduced."
+    },
+    {
+      "id": "y10-metals-060",
+      "category": "Displacement reactions",
+      "difficulty": "Challenge",
+      "prompt": "Can a copper strip displace copper from its own Cu²⁺ solution as a net reaction?",
+      "options": [
+        "Yes; it must double the copper amount.",
+        "Yes; all Cu²⁺ must become zinc.",
+        "Yes; sulfate becomes gold.",
+        "No; there is no net displacement of itself."
+      ],
+      "answer": 3,
+      "explanation": "The same metal/ion pair does not give the proposed net competition reaction."
+    },
+    {
+      "id": "y10-metals-061",
+      "category": "Extraction",
+      "difficulty": "Foundation",
+      "prompt": "Which reducing gas is central to the blast-furnace reduction of iron oxide?",
+      "options": [
+        "Carbon monoxide",
+        "Oxygen only",
+        "Nitrogen only",
+        "Chlorine"
+      ],
+      "answer": 0,
+      "explanation": "CO removes oxygen from iron oxides."
+    },
+    {
+      "id": "y10-metals-062",
+      "category": "Extraction",
+      "difficulty": "Application",
+      "prompt": "Which equation is balanced for iron(III) oxide reduction by CO?",
+      "options": [
+        "Fe₂O₃ + CO → Fe + CO₂",
+        "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+        "FeO + CO₂ → Fe₂O₃",
+        "Fe₂O₃ → Fe + O₂"
+      ],
+      "answer": 1,
+      "explanation": "Three CO molecules accept the three oxygen atoms from Fe₂O₃."
+    },
+    {
+      "id": "y10-metals-063",
+      "category": "Extraction",
+      "difficulty": "Foundation",
+      "prompt": "Why can carbon be used to extract some metals from oxides?",
+      "options": [
+        "It is more reactive than every metal.",
+        "It turns into every extracted metal.",
+        "It can remove oxygen from oxides of less reactive metals under suitable conditions.",
+        "It eliminates the need for energy."
+      ],
+      "answer": 2,
+      "explanation": "The reactivity comparison helps identify suitable reduction routes."
+    },
+    {
+      "id": "y10-metals-064",
+      "category": "Extraction",
+      "difficulty": "Application",
+      "prompt": "Why is aluminium not normally extracted by carbon reduction?",
+      "options": [
+        "Aluminium is below copper.",
+        "Aluminium contains no electrons.",
+        "Carbon reduction works equally for every oxide.",
+        "Aluminium oxide is too stable for that route in the usual school comparison."
+      ],
+      "answer": 3,
+      "explanation": "Aluminium is above carbon in the reactivity series."
+    },
+    {
+      "id": "y10-metals-065",
+      "category": "Extraction",
+      "difficulty": "Foundation",
+      "prompt": "What is the usual industrial route to aluminium?",
+      "options": [
+        "Electrolysis of alumina dissolved in molten cryolite",
+        "Filtering aluminium oxide from water to obtain metal",
+        "Distilling the oxide at room temperature",
+        "Adding dilute HCl to turn the oxide into metal"
+      ],
+      "answer": 0,
+      "explanation": "Electrical energy drives reduction of Al³⁺ in the molten electrolyte."
+    },
+    {
+      "id": "y10-metals-066",
+      "category": "Extraction",
+      "difficulty": "Application",
+      "prompt": "What is limestone used for in a blast furnace?",
+      "options": [
+        "Providing all the iron atoms",
+        "Producing CaO to remove silica as slag",
+        "Acting as the only reducing metal",
+        "Making the furnace cold"
+      ],
+      "answer": 1,
+      "explanation": "CaCO₃ decomposes; CaO reacts with SiO₂ to form calcium silicate slag."
+    },
+    {
+      "id": "y10-metals-067",
+      "category": "Extraction",
+      "difficulty": "Application",
+      "prompt": "Which slag-forming equation is correct?",
+      "options": [
+        "CaO + Fe → CaFe",
+        "CaCO₃ → Cu + O₂",
+        "CaO + SiO₂ → CaSiO₃",
+        "SiO₂ + H₂O → Fe"
+      ],
+      "answer": 2,
+      "explanation": "Basic calcium oxide reacts with acidic silica."
+    },
+    {
+      "id": "y10-metals-068",
+      "category": "Extraction",
+      "difficulty": "Application",
+      "prompt": "In CuO reduction by carbon, what happens to copper?",
+      "options": [
+        "Copper is oxidised from 0 to +2.",
+        "Copper changes into carbon atoms.",
+        "Copper remains oxide while only its colour changes.",
+        "Copper is reduced from +2 to 0."
+      ],
+      "answer": 3,
+      "explanation": "Oxygen removal corresponds to reduction of the metal ion."
+    },
+    {
+      "id": "y10-metals-069",
+      "category": "Extraction",
+      "difficulty": "Challenge",
+      "prompt": "Why might an extraction route that is chemically possible still not be chosen industrially?",
+      "options": [
+        "Energy, cost, ore composition and environmental factors also matter.",
+        "Every possible route costs the same.",
+        "Only the element name matters.",
+        "Industrial extraction never uses electricity."
+      ],
+      "answer": 0,
+      "explanation": "Practical process selection goes beyond chemical feasibility alone."
+    },
+    {
+      "id": "y10-metals-070",
+      "category": "Extraction",
+      "difficulty": "Challenge",
+      "prompt": "What is oxidised in Fe₂O₃ + 3CO → 2Fe + 3CO₂?",
+      "options": [
+        "Iron in Fe₂O₃",
+        "Carbon in CO",
+        "Oxygen from −2 to −2",
+        "Both iron and carbon are reduced"
+      ],
+      "answer": 1,
+      "explanation": "Carbon goes from +2 in CO to +4 in CO₂, while iron is reduced."
+    },
+    {
+      "id": "y10-metals-071",
+      "category": "Alloys and uses",
+      "difficulty": "Foundation",
+      "prompt": "What is an alloy?",
+      "options": [
+        "A pure element with a fixed atomic number only",
+        "Always a fixed-ratio compound",
+        "A mixture containing at least one metal",
+        "Always a gas"
+      ],
+      "answer": 2,
+      "explanation": "Alloys are metallic mixtures whose compositions can vary."
+    },
+    {
+      "id": "y10-metals-072",
+      "category": "Alloys and uses",
+      "difficulty": "Foundation",
+      "prompt": "What are the principal components of brass?",
+      "options": [
+        "Copper and tin",
+        "Iron and carbon only",
+        "Aluminium and oxygen",
+        "Copper and zinc"
+      ],
+      "answer": 3,
+      "explanation": "Brass is a copper–zinc alloy."
+    },
+    {
+      "id": "y10-metals-073",
+      "category": "Alloys and uses",
+      "difficulty": "Foundation",
+      "prompt": "What are the principal components of bronze?",
+      "options": [
+        "Copper and tin",
+        "Copper and zinc",
+        "Sodium and chlorine",
+        "Iron and sulfur only"
+      ],
+      "answer": 0,
+      "explanation": "Bronze is a copper–tin alloy in this standard comparison."
+    },
+    {
+      "id": "y10-metals-074",
+      "category": "Alloys and uses",
+      "difficulty": "Foundation",
+      "prompt": "What is the base metal in carbon steel?",
+      "options": [
+        "Copper",
+        "Iron",
+        "Sodium",
+        "Tin"
+      ],
+      "answer": 1,
+      "explanation": "Carbon steel is mainly iron with a small amount of carbon."
+    },
+    {
+      "id": "y10-metals-075",
+      "category": "Alloys and uses",
+      "difficulty": "Application",
+      "prompt": "Why can adding a different-sized atom make a metal harder?",
+      "options": [
+        "It removes every metallic bond.",
+        "It creates a molecular gas.",
+        "It can hinder layer or dislocation motion.",
+        "It makes all atoms identical in size."
+      ],
+      "answer": 2,
+      "explanation": "Distortion can impede deformation."
+    },
+    {
+      "id": "y10-metals-076",
+      "category": "Alloys and uses",
+      "difficulty": "Application",
+      "prompt": "Why is stainless steel resistant to corrosion?",
+      "options": [
+        "It has no metal atoms.",
+        "It cannot react under any conditions.",
+        "It is made entirely of copper.",
+        "Chromium supports a protective oxide film."
+      ],
+      "answer": 3,
+      "explanation": "A chromium-rich passive film protects the surface; conditions still matter."
+    },
+    {
+      "id": "y10-metals-077",
+      "category": "Alloys and uses",
+      "difficulty": "Application",
+      "prompt": "Why might an alloy be chosen instead of a pure metal?",
+      "options": [
+        "Its combination of properties may better suit the use.",
+        "Every alloy is always cheaper and better in every way.",
+        "Alloys never conduct at all.",
+        "Alloys have no composition."
+      ],
+      "answer": 0,
+      "explanation": "Hardness, corrosion resistance, conductivity and processability involve trade-offs."
+    },
+    {
+      "id": "y10-metals-078",
+      "category": "Alloys and uses",
+      "difficulty": "Application",
+      "prompt": "Which statement about alloy composition is correct?",
+      "options": [
+        "It must always have a single fixed formula.",
+        "Its composition can vary and affect its properties.",
+        "It can contain no non-metal.",
+        "The proportions never matter."
+      ],
+      "answer": 1,
+      "explanation": "Steel can contain carbon; alloy composition and processing are important."
+    },
+    {
+      "id": "y10-metals-079",
+      "category": "Alloys and uses",
+      "difficulty": "Challenge",
+      "prompt": "Why is pure copper often preferred to brass for electrical wiring?",
+      "options": [
+        "Brass is not a material.",
+        "Copper is an electrical insulator.",
+        "It generally has higher electrical conductivity and good ductility.",
+        "Brass has no electrons."
+      ],
+      "answer": 2,
+      "explanation": "Alloying commonly trades some conductivity for other useful properties."
+    },
+    {
+      "id": "y10-metals-080",
+      "category": "Alloys and uses",
+      "difficulty": "Challenge",
+      "prompt": "Does the simple distorted-lattice picture predict every alloy property quantitatively?",
+      "options": [
+        "Yes; any drawing gives an exact strength.",
+        "Yes; all alloys have identical hardness.",
+        "No alloy contains a crystal structure.",
+        "No; composition, phases and processing also influence properties."
+      ],
+      "answer": 3,
+      "explanation": "The model explains a mechanism but is not a complete material-performance calculation."
+    }
+  ]
+}

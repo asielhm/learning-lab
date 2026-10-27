@@ -1,0 +1,1136 @@
+{
+  "topicId": "y10-acids-bases",
+  "title": "Acids and Bases",
+  "categories": [
+    "Indicators and pH",
+    "Strength and ionisation",
+    "Concentration dilution and ppm",
+    "Neutralisation and salts",
+    "Acids with metals and carbonates",
+    "Titration",
+    "Salt preparation and solubility",
+    "Everyday acid–base chemistry"
+  ],
+  "questions": [
+    {
+      "id": "y10-acids-bases-001",
+      "category": "Indicators and pH",
+      "difficulty": "Foundation",
+      "prompt": "At 25°C, what is the pH of neutral pure water?",
+      "options": [
+        "7",
+        "0",
+        "14",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "At 25°C, neutral water has equal H⁺ and OH⁻ concentrations and pH 7."
+    },
+    {
+      "id": "y10-acids-bases-002",
+      "category": "Indicators and pH",
+      "difficulty": "Foundation",
+      "prompt": "Which solution is acidic at 25°C?",
+      "options": [
+        "A solution of pH 7",
+        "A solution of pH 3",
+        "A solution of pH 10",
+        "A solution of pH 12"
+      ],
+      "answer": 1,
+      "explanation": "Acidic aqueous solutions have pH below the neutral value at the stated temperature."
+    },
+    {
+      "id": "y10-acids-bases-003",
+      "category": "Indicators and pH",
+      "difficulty": "Foundation",
+      "prompt": "Universal indicator is green in an approximately neutral solution. What is the likely pH at 25°C?",
+      "options": [
+        "About 1",
+        "About 13",
+        "About 7",
+        "Always exactly 0"
+      ],
+      "answer": 2,
+      "explanation": "Universal indicator provides an approximate colour-based range, not a highly precise pH."
+    },
+    {
+      "id": "y10-acids-bases-004",
+      "category": "Indicators and pH",
+      "difficulty": "Application",
+      "prompt": "Why can phenolphthalein be colourless in both pH 2 and pH 7 solutions?",
+      "options": [
+        "Both solutions must be equally concentrated.",
+        "Both solutions must be strong acids.",
+        "Phenolphthalein only detects carbon dioxide.",
+        "Both are below its visible alkaline transition range."
+      ],
+      "answer": 3,
+      "explanation": "A single indicator cannot distinguish every pH below its transition range."
+    },
+    {
+      "id": "y10-acids-bases-005",
+      "category": "Indicators and pH",
+      "difficulty": "Foundation",
+      "prompt": "What colour does blue litmus paper turn in an acidic solution?",
+      "options": [
+        "Red",
+        "Blue because acids never affect it",
+        "Green",
+        "Orange in every acid"
+      ],
+      "answer": 0,
+      "explanation": "Acids turn blue litmus red."
+    },
+    {
+      "id": "y10-acids-bases-006",
+      "category": "Indicators and pH",
+      "difficulty": "Foundation",
+      "prompt": "What happens to red litmus paper in an alkaline solution?",
+      "options": [
+        "It turns redder in every case.",
+        "It turns blue.",
+        "It turns into universal indicator.",
+        "It always dissolves instantly."
+      ],
+      "answer": 1,
+      "explanation": "Alkalis turn red litmus blue."
+    },
+    {
+      "id": "y10-acids-bases-007",
+      "category": "Indicators and pH",
+      "difficulty": "Application",
+      "prompt": "Why should a fresh sample be used when comparing indicators?",
+      "options": [
+        "Every indicator needs a different chemical identity of sample.",
+        "Indicators cannot be used on solutions.",
+        "Earlier reagents could contaminate or change the sample.",
+        "Water is always pH 1."
+      ],
+      "answer": 2,
+      "explanation": "Fresh portions keep the comparison fair and avoid mixing indicator reagents."
+    },
+    {
+      "id": "y10-acids-bases-008",
+      "category": "Indicators and pH",
+      "difficulty": "Application",
+      "prompt": "What can red-cabbage extract normally tell you?",
+      "options": [
+        "An exact molar concentration for every acid",
+        "Whether every solute is a metal",
+        "The exact number of molecules in a beaker",
+        "An approximate acid–base range from its colour"
+      ],
+      "answer": 3,
+      "explanation": "Natural indicator colours depend on preparation and conditions and are approximate."
+    },
+    {
+      "id": "y10-acids-bases-009",
+      "category": "Indicators and pH",
+      "difficulty": "Challenge",
+      "prompt": "Two indicators give different colours in the same unchanged sample. Which explanation is best?",
+      "options": [
+        "They have different transition ranges and colours.",
+        "The sample must have two different pH values at once.",
+        "One colour proves the sample has no ions.",
+        "The indicators must have identical chemistry."
+      ],
+      "answer": 0,
+      "explanation": "Each indicator responds differently over its own pH interval."
+    },
+    {
+      "id": "y10-acids-bases-010",
+      "category": "Indicators and pH",
+      "difficulty": "Challenge",
+      "prompt": "If [H⁺] increases tenfold in an ideal dilute solution, what happens to pH?",
+      "options": [
+        "It increases by 1.",
+        "It decreases by 1.",
+        "It doubles.",
+        "It must become 7."
+      ],
+      "answer": 1,
+      "explanation": "pH = −log₁₀[H⁺], so a tenfold increase lowers pH by one unit."
+    },
+    {
+      "id": "y10-acids-bases-011",
+      "category": "Strength and ionisation",
+      "difficulty": "Foundation",
+      "prompt": "What does a strong acid do in a dilute aqueous solution?",
+      "options": [
+        "It must have a high concentration.",
+        "It cannot be diluted.",
+        "It ionises essentially completely.",
+        "It contains no hydrogen."
+      ],
+      "answer": 2,
+      "explanation": "Strength describes the extent of ionisation, not the amount per volume."
+    },
+    {
+      "id": "y10-acids-bases-012",
+      "category": "Strength and ionisation",
+      "difficulty": "Foundation",
+      "prompt": "What does a weak acid establish in water?",
+      "options": [
+        "No ions under any conditions",
+        "Complete ionisation by definition",
+        "A permanent precipitate in every solution",
+        "An equilibrium with only partial ionisation"
+      ],
+      "answer": 3,
+      "explanation": "Weak acids partially ionise and have an equilibrium between acid and ions."
+    },
+    {
+      "id": "y10-acids-bases-013",
+      "category": "Strength and ionisation",
+      "difficulty": "Foundation",
+      "prompt": "Which statement correctly defines concentration?",
+      "options": [
+        "Amount of solute per solution volume",
+        "Fraction of acid molecules ionised only",
+        "Reactivity of every metal",
+        "Colour of any indicator"
+      ],
+      "answer": 0,
+      "explanation": "Concentration is an amount-to-volume ratio."
+    },
+    {
+      "id": "y10-acids-bases-014",
+      "category": "Strength and ionisation",
+      "difficulty": "Application",
+      "prompt": "Equal-concentration HCl and ethanoic acid solutions are compared at 25°C. Which normally has the lower pH?",
+      "options": [
+        "Ethanoic acid",
+        "HCl",
+        "Both must have pH 7",
+        "pH cannot differ at equal concentration"
+      ],
+      "answer": 1,
+      "explanation": "HCl ionises more completely, giving a higher H⁺ concentration under this comparison."
+    },
+    {
+      "id": "y10-acids-bases-015",
+      "category": "Strength and ionisation",
+      "difficulty": "Application",
+      "prompt": "What changes when a solution of HCl is diluted with water?",
+      "options": [
+        "HCl becomes ethanoic acid.",
+        "Its amount of HCl increases.",
+        "Its concentration falls while HCl remains a strong acid.",
+        "Strong means it cannot be diluted."
+      ],
+      "answer": 2,
+      "explanation": "Dilution changes amount per volume, not the intrinsic acid identity or strength."
+    },
+    {
+      "id": "y10-acids-bases-016",
+      "category": "Strength and ionisation",
+      "difficulty": "Application",
+      "prompt": "Why is a comparison of pH alone insufficient to rank acid strength without other information?",
+      "options": [
+        "pH measures only mass.",
+        "All acids have identical pH.",
+        "Weak acids never contain H⁺.",
+        "Concentration also affects pH."
+      ],
+      "answer": 3,
+      "explanation": "Control concentration and conditions when comparing ionisation strength."
+    },
+    {
+      "id": "y10-acids-bases-017",
+      "category": "Strength and ionisation",
+      "difficulty": "Application",
+      "prompt": "Which is a weak base in water?",
+      "options": [
+        "Ammonia",
+        "Sodium hydroxide as a strong-base comparison",
+        "Hydrochloric acid",
+        "Sodium chloride as a neutral-salt comparison"
+      ],
+      "answer": 0,
+      "explanation": "Ammonia reacts partially with water to form NH₄⁺ and OH⁻."
+    },
+    {
+      "id": "y10-acids-bases-018",
+      "category": "Strength and ionisation",
+      "difficulty": "Challenge",
+      "prompt": "Which equation correctly represents ethanoic acid ionisation?",
+      "options": [
+        "CH₃COOH → Na⁺ + Cl⁻",
+        "CH₃COOH ⇌ H⁺ + CH₃COO⁻",
+        "CH₃COOH → CO₂ + H₂",
+        "CH₃COOH ⇌ CH₄ + O₂"
+      ],
+      "answer": 1,
+      "explanation": "The reversible arrow represents partial ionisation equilibrium."
+    },
+    {
+      "id": "y10-acids-bases-019",
+      "category": "Strength and ionisation",
+      "difficulty": "Challenge",
+      "prompt": "Why may a strong electrolyte conduct better than a weak electrolyte at equal analytical concentration?",
+      "options": [
+        "Its ions are always stationary.",
+        "The word strong guarantees a larger beaker.",
+        "It generally provides more mobile ions.",
+        "It has no charged particles."
+      ],
+      "answer": 2,
+      "explanation": "Ion concentration matters, though ion mobility and temperature also affect conductivity."
+    },
+    {
+      "id": "y10-acids-bases-020",
+      "category": "Strength and ionisation",
+      "difficulty": "Challenge",
+      "prompt": "Which statement can be true?",
+      "options": [
+        "Every weak acid is dilute by definition.",
+        "Every strong acid is concentrated by definition.",
+        "Dilution changes all strong acids into weak acids.",
+        "A weak acid can be concentrated and a strong acid dilute."
+      ],
+      "answer": 3,
+      "explanation": "Strength and concentration describe different properties."
+    },
+    {
+      "id": "y10-acids-bases-021",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Foundation",
+      "prompt": "0.02 mol of solute is in 0.2 L of solution. What is its concentration in mol/L?",
+      "options": [
+        "0.1",
+        "0.2",
+        "0.05",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Use c = n/V with volume in litres."
+    },
+    {
+      "id": "y10-acids-bases-022",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Foundation",
+      "prompt": "0.03 mol of solute is in 0.3 L of solution. What is its concentration in mol/L?",
+      "options": [
+        "0.2",
+        "0.1",
+        "0.05",
+        "1"
+      ],
+      "answer": 1,
+      "explanation": "Use c = n/V with volume in litres."
+    },
+    {
+      "id": "y10-acids-bases-023",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Foundation",
+      "prompt": "0.025 mol of solute is in 0.5 L of solution. What is its concentration in mol/L?",
+      "options": [
+        "0.1",
+        "0.025",
+        "0.05",
+        "0.5"
+      ],
+      "answer": 2,
+      "explanation": "Use c = n/V with volume in litres."
+    },
+    {
+      "id": "y10-acids-bases-024",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Foundation",
+      "prompt": "0.1 mol of solute is in 2 L of solution. What is its concentration in mol/L?",
+      "options": [
+        "0.1",
+        "0.025",
+        "0.5",
+        "0.05"
+      ],
+      "answer": 3,
+      "explanation": "Use c = n/V with volume in litres."
+    },
+    {
+      "id": "y10-acids-bases-025",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Application",
+      "prompt": "A dilute water-based solution has 60 mg of solute in 2 L. Assuming density about 1 kg/L, what is its approximate ppm by mass?",
+      "options": [
+        "30",
+        "60",
+        "15",
+        "300"
+      ],
+      "answer": 0,
+      "explanation": "mg/L is approximately ppm by mass for this dilute aqueous density assumption."
+    },
+    {
+      "id": "y10-acids-bases-026",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Application",
+      "prompt": "A dilute water-based solution has 20 mg of solute in 4 L. Assuming density about 1 kg/L, what is its approximate ppm by mass?",
+      "options": [
+        "10",
+        "5",
+        "2.5",
+        "50"
+      ],
+      "answer": 1,
+      "explanation": "mg/L is approximately ppm by mass for this dilute aqueous density assumption."
+    },
+    {
+      "id": "y10-acids-bases-027",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Application",
+      "prompt": "A dilute water-based solution has 150 mg of solute in 3 L. Assuming density about 1 kg/L, what is its approximate ppm by mass?",
+      "options": [
+        "100",
+        "25",
+        "50",
+        "500"
+      ],
+      "answer": 2,
+      "explanation": "mg/L is approximately ppm by mass for this dilute aqueous density assumption."
+    },
+    {
+      "id": "y10-acids-bases-028",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Application",
+      "prompt": "A 0.200 mol/L solution is diluted from 50.0 mL to 200.0 mL without losing solute. What is the final concentration in mol/L?",
+      "options": [
+        "0.1",
+        "0.025",
+        "0.5",
+        "0.05"
+      ],
+      "answer": 3,
+      "explanation": "c₁V₁ = c₂V₂: 0.200 × 50.0 / 200.0 = 0.0500 mol/L."
+    },
+    {
+      "id": "y10-acids-bases-029",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Application",
+      "prompt": "A solution contains 80 mg of solute in 2 L. Add 2 L of water. What is its final mass concentration in mg/L?",
+      "options": [
+        "20",
+        "40",
+        "10",
+        "200"
+      ],
+      "answer": 0,
+      "explanation": "The same 80 mg is now in 4 L, giving 20 mg/L."
+    },
+    {
+      "id": "y10-acids-bases-030",
+      "category": "Concentration dilution and ppm",
+      "difficulty": "Challenge",
+      "prompt": "Which extra information is needed to convert a mass concentration to molar concentration?",
+      "options": [
+        "The indicator colour only",
+        "The solute molar mass",
+        "The beaker shape",
+        "The word strong alone"
+      ],
+      "answer": 1,
+      "explanation": "Divide mass concentration in g/L by molar mass in g/mol."
+    },
+    {
+      "id": "y10-acids-bases-031",
+      "category": "Neutralisation and salts",
+      "difficulty": "Foundation",
+      "prompt": "What are the products of an acid reacting with an alkali?",
+      "options": [
+        "A metal and oxygen",
+        "Only hydrogen",
+        "A salt and water",
+        "Only carbon dioxide"
+      ],
+      "answer": 2,
+      "explanation": "Neutralisation between acid and alkali forms salt and water."
+    },
+    {
+      "id": "y10-acids-bases-032",
+      "category": "Neutralisation and salts",
+      "difficulty": "Foundation",
+      "prompt": "What salt forms from hydrochloric acid and sodium hydroxide?",
+      "options": [
+        "Sodium sulfate",
+        "Sodium nitrate",
+        "Calcium chloride",
+        "Sodium chloride"
+      ],
+      "answer": 3,
+      "explanation": "Hydrochloric acid supplies chloride and sodium hydroxide supplies sodium ions."
+    },
+    {
+      "id": "y10-acids-bases-033",
+      "category": "Neutralisation and salts",
+      "difficulty": "Foundation",
+      "prompt": "What salt forms from nitric acid and potassium hydroxide?",
+      "options": [
+        "Potassium nitrate",
+        "Potassium chloride",
+        "Potassium sulfate",
+        "Sodium nitrate"
+      ],
+      "answer": 0,
+      "explanation": "Nitric acid forms nitrates; potassium is the cation."
+    },
+    {
+      "id": "y10-acids-bases-034",
+      "category": "Neutralisation and salts",
+      "difficulty": "Application",
+      "prompt": "What is the formula of the salt from sulfuric acid and potassium hydroxide?",
+      "options": [
+        "KSO₄",
+        "K₂SO₄",
+        "K₂SO₃",
+        "KNO₃"
+      ],
+      "answer": 1,
+      "explanation": "Two K⁺ balance one SO₄²⁻; the full equation uses 2KOH."
+    },
+    {
+      "id": "y10-acids-bases-035",
+      "category": "Neutralisation and salts",
+      "difficulty": "Foundation",
+      "prompt": "Which net ionic equation describes strong-acid / strong-alkali neutralisation?",
+      "options": [
+        "Na⁺ + Cl⁻ → H₂",
+        "H₂O → H⁺ + 2e⁻",
+        "H⁺ + OH⁻ → H₂O",
+        "CO₂ + O₂ → H₂O"
+      ],
+      "answer": 2,
+      "explanation": "H⁺ and OH⁻ combine to form water; spectator ions are omitted."
+    },
+    {
+      "id": "y10-acids-bases-036",
+      "category": "Neutralisation and salts",
+      "difficulty": "Application",
+      "prompt": "In HCl + NaOH → NaCl + H₂O, which ions are spectators?",
+      "options": [
+        "H⁺ and OH⁻",
+        "Only H⁺",
+        "Only OH⁻",
+        "Na⁺ and Cl⁻"
+      ],
+      "answer": 3,
+      "explanation": "Sodium and chloride remain aqueous and unchanged in the net ionic equation."
+    },
+    {
+      "id": "y10-acids-bases-037",
+      "category": "Neutralisation and salts",
+      "difficulty": "Application",
+      "prompt": "Does mixing equal acid and alkali volumes always give equivalence?",
+      "options": [
+        "No; concentration and stoichiometry also matter.",
+        "Yes, regardless of concentration.",
+        "Yes, because every acid has one proton.",
+        "No acid can react with an alkali."
+      ],
+      "answer": 0,
+      "explanation": "Equal amounts of reacting H⁺ and OH⁻, not equal volumes alone, determine equivalence."
+    },
+    {
+      "id": "y10-acids-bases-038",
+      "category": "Neutralisation and salts",
+      "difficulty": "Challenge",
+      "prompt": "At 25°C, what is the ideal pH at equivalence for HCl and NaOH?",
+      "options": [
+        "Always 1",
+        "7",
+        "Always 14",
+        "Always 10"
+      ],
+      "answer": 1,
+      "explanation": "A strong acid and strong base form a neutral salt solution in this ideal comparison."
+    },
+    {
+      "id": "y10-acids-bases-039",
+      "category": "Neutralisation and salts",
+      "difficulty": "Application",
+      "prompt": "Which describes the thermal effect of acid–alkali neutralisation?",
+      "options": [
+        "It always freezes the mixture.",
+        "It never transfers energy.",
+        "It is generally exothermic.",
+        "It creates electrical charge from nothing."
+      ],
+      "answer": 2,
+      "explanation": "Formation of water from H⁺ and OH⁻ releases heat in the usual dilute strong-acid/base reaction."
+    },
+    {
+      "id": "y10-acids-bases-040",
+      "category": "Neutralisation and salts",
+      "difficulty": "Challenge",
+      "prompt": "How many moles of NaOH are needed to neutralise 1 mol of H₂SO₄ completely?",
+      "options": [
+        "1",
+        "0.5",
+        "4",
+        "2"
+      ],
+      "answer": 3,
+      "explanation": "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O."
+    },
+    {
+      "id": "y10-acids-bases-041",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Foundation",
+      "prompt": "Which gas is produced by magnesium and dilute HCl?",
+      "options": [
+        "Hydrogen",
+        "Oxygen",
+        "Carbon dioxide",
+        "Nitrogen"
+      ],
+      "answer": 0,
+      "explanation": "Mg + 2HCl → MgCl₂ + H₂."
+    },
+    {
+      "id": "y10-acids-bases-042",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Foundation",
+      "prompt": "Which gas is produced by calcium carbonate and dilute HCl?",
+      "options": [
+        "Hydrogen",
+        "Carbon dioxide",
+        "Chlorine",
+        "Oxygen"
+      ],
+      "answer": 1,
+      "explanation": "Carbonates react with acids to form salt, CO₂ and water."
+    },
+    {
+      "id": "y10-acids-bases-043",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Foundation",
+      "prompt": "Which test identifies carbon dioxide?",
+      "options": [
+        "It relights a glowing splint.",
+        "It always turns litmus blue.",
+        "It turns limewater milky.",
+        "It gives the characteristic hydrogen pop."
+      ],
+      "answer": 2,
+      "explanation": "CO₂ reacts with limewater to form a calcium carbonate precipitate."
+    },
+    {
+      "id": "y10-acids-bases-044",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Foundation",
+      "prompt": "Which test identifies hydrogen?",
+      "options": [
+        "A glowing splint relights.",
+        "It turns anhydrous CuSO₄ blue.",
+        "It turns limewater milky.",
+        "A burning splint gives a pop."
+      ],
+      "answer": 3,
+      "explanation": "The pop is a small hydrogen combustion test."
+    },
+    {
+      "id": "y10-acids-bases-045",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Application",
+      "prompt": "Which metal does not release H₂ from dilute non-oxidising HCl in this list?",
+      "options": [
+        "Copper",
+        "Magnesium",
+        "Zinc",
+        "Iron"
+      ],
+      "answer": 0,
+      "explanation": "Copper lies below hydrogen in the relevant school reactivity comparison."
+    },
+    {
+      "id": "y10-acids-bases-046",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Application",
+      "prompt": "What salt normally forms from iron and dilute HCl?",
+      "options": [
+        "Iron(III) chloride only",
+        "Iron(II) chloride",
+        "Iron sulfate",
+        "Iron nitrate"
+      ],
+      "answer": 1,
+      "explanation": "Fe + 2HCl → FeCl₂ + H₂ under these conditions."
+    },
+    {
+      "id": "y10-acids-bases-047",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Application",
+      "prompt": "Which balanced equation is correct for Mg and HCl?",
+      "options": [
+        "Mg + HCl → MgCl₂ + H",
+        "Mg₂ + HCl → MgCl + H₂",
+        "Mg + 2HCl → MgCl₂ + H₂",
+        "Mg + 2HCl → MgCl + H₂O"
+      ],
+      "answer": 2,
+      "explanation": "Balance two Cl and two H atoms with 2HCl."
+    },
+    {
+      "id": "y10-acids-bases-048",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Application",
+      "prompt": "What products are expected from an acid and a carbonate?",
+      "options": [
+        "Salt and hydrogen only",
+        "Metal and oxygen only",
+        "Alkene and water",
+        "Salt, water and carbon dioxide"
+      ],
+      "answer": 3,
+      "explanation": "The carbonate ion is converted into CO₂ and water by acid."
+    },
+    {
+      "id": "y10-acids-bases-049",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Challenge",
+      "prompt": "Equal masses of Mg and Zn react fully with excess acid. Why can their H₂ amounts differ?",
+      "options": [
+        "Equal masses are not equal amounts in moles.",
+        "The gas must always have different identities.",
+        "Mg and Zn have the same molar mass.",
+        "Every metal produces oxygen."
+      ],
+      "answer": 0,
+      "explanation": "Different molar masses mean different moles of metal for the same mass."
+    },
+    {
+      "id": "y10-acids-bases-050",
+      "category": "Acids with metals and carbonates",
+      "difficulty": "Challenge",
+      "prompt": "Which condition is important when comparing metal reaction rates?",
+      "options": [
+        "Use any different acid and any temperature.",
+        "Keep temperature, concentration and surface-area conditions comparable.",
+        "Measure only the metal colour.",
+        "Assume surface coatings never matter."
+      ],
+      "answer": 1,
+      "explanation": "A fair rate comparison controls the factors that affect reaction speed."
+    },
+    {
+      "id": "y10-acids-bases-051",
+      "category": "Titration",
+      "difficulty": "Application",
+      "prompt": "A monoprotic acid sample of 25.0 mL neutralises 20.0 mL of 0.1 mol/L NaOH. What is the acid concentration in mol/L?",
+      "options": [
+        "0.16",
+        "0.04",
+        "0.08",
+        "0.8"
+      ],
+      "answer": 2,
+      "explanation": "Use the 1:1 mole ratio: c(acid) = c(base) × V(base) / V(acid)."
+    },
+    {
+      "id": "y10-acids-bases-052",
+      "category": "Titration",
+      "difficulty": "Application",
+      "prompt": "A monoprotic acid sample of 20.0 mL neutralises 15.0 mL of 0.1 mol/L NaOH. What is the acid concentration in mol/L?",
+      "options": [
+        "0.15",
+        "0.0375",
+        "0.75",
+        "0.075"
+      ],
+      "answer": 3,
+      "explanation": "Use the 1:1 mole ratio: c(acid) = c(base) × V(base) / V(acid)."
+    },
+    {
+      "id": "y10-acids-bases-053",
+      "category": "Titration",
+      "difficulty": "Application",
+      "prompt": "A monoprotic acid sample of 25.0 mL neutralises 30.0 mL of 0.1 mol/L NaOH. What is the acid concentration in mol/L?",
+      "options": [
+        "0.12",
+        "0.24",
+        "0.06",
+        "1.2"
+      ],
+      "answer": 0,
+      "explanation": "Use the 1:1 mole ratio: c(acid) = c(base) × V(base) / V(acid)."
+    },
+    {
+      "id": "y10-acids-bases-054",
+      "category": "Titration",
+      "difficulty": "Application",
+      "prompt": "A monoprotic acid sample of 10.0 mL neutralises 12.0 mL of 0.2 mol/L NaOH. What is the acid concentration in mol/L?",
+      "options": [
+        "0.48",
+        "0.24",
+        "0.12",
+        "2.4"
+      ],
+      "answer": 1,
+      "explanation": "Use the 1:1 mole ratio: c(acid) = c(base) × V(base) / V(acid)."
+    },
+    {
+      "id": "y10-acids-bases-055",
+      "category": "Titration",
+      "difficulty": "Foundation",
+      "prompt": "What does a burette measure in a titration?",
+      "options": [
+        "The exact acid identity automatically",
+        "The solute mass directly",
+        "The volume of solution delivered",
+        "Only the room temperature"
+      ],
+      "answer": 2,
+      "explanation": "Delivered volume is the final reading minus the initial reading."
+    },
+    {
+      "id": "y10-acids-bases-056",
+      "category": "Titration",
+      "difficulty": "Application",
+      "prompt": "Why use smaller additions near a titration endpoint?",
+      "options": [
+        "The acid stops having any ions.",
+        "The burette stops measuring volume.",
+        "The indicator becomes a catalyst for gas production.",
+        "A small volume change can cause a large pH change there."
+      ],
+      "answer": 3,
+      "explanation": "Add dropwise near the endpoint to avoid excess titrant."
+    },
+    {
+      "id": "y10-acids-bases-057",
+      "category": "Titration",
+      "difficulty": "Application",
+      "prompt": "What indicates the chosen phenolphthalein endpoint for diluted vinegar and NaOH?",
+      "options": [
+        "A faint persistent pink",
+        "An intense permanent dark pink as the target",
+        "A blue precipitate",
+        "A glowing splint relighting"
+      ],
+      "answer": 0,
+      "explanation": "Faint pink marks entry into the indicator transition; deep pink often means overshooting."
+    },
+    {
+      "id": "y10-acids-bases-058",
+      "category": "Titration",
+      "difficulty": "Challenge",
+      "prompt": "Why can a weak-acid / strong-base equivalence point be above pH 7?",
+      "options": [
+        "Every equivalence point is above 14.",
+        "The conjugate base reacts with water to produce some OH⁻.",
+        "Na⁺ alone creates all the OH⁻.",
+        "All acids are neutral before titration."
+      ],
+      "answer": 1,
+      "explanation": "Ethanoate hydrolysis makes the equivalence mixture alkaline."
+    },
+    {
+      "id": "y10-acids-bases-059",
+      "category": "Titration",
+      "difficulty": "Challenge",
+      "prompt": "Why are repeat concordant titres useful?",
+      "options": [
+        "They prove the exact true value without any systematic error.",
+        "They remove the need for correct apparatus.",
+        "They support precision and help identify inconsistent trials.",
+        "They change the acid strength."
+      ],
+      "answer": 2,
+      "explanation": "Agreement improves confidence in repeatability, though systematic errors can remain."
+    },
+    {
+      "id": "y10-acids-bases-060",
+      "category": "Titration",
+      "difficulty": "Challenge",
+      "prompt": "A titration finds 0.0800 mol/L in a vinegar sample that was diluted by a factor of 10. What was the original concentration in mol/L?",
+      "options": [
+        "1.6",
+        "0.4",
+        "8",
+        "0.8"
+      ],
+      "answer": 3,
+      "explanation": "Multiply the diluted concentration by 10: 0.800 mol/L."
+    },
+    {
+      "id": "y10-acids-bases-061",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Foundation",
+      "prompt": "After adding excess CuO to dilute sulfuric acid, why filter?",
+      "options": [
+        "To remove unreacted insoluble CuO",
+        "To remove dissolved copper sulfate ions",
+        "To remove every water molecule",
+        "To turn the salt into a gas"
+      ],
+      "answer": 0,
+      "explanation": "The desired salt is dissolved; excess solid is the residue."
+    },
+    {
+      "id": "y10-acids-bases-062",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Application",
+      "prompt": "How do you recover crystals from the copper sulfate filtrate?",
+      "options": [
+        "Add all the insoluble residue back.",
+        "Concentrate gently, then allow it to cool.",
+        "Filter the dissolved ions out with ordinary filter paper.",
+        "Assume crystals must form without a concentration change."
+      ],
+      "answer": 1,
+      "explanation": "Cooling a sufficiently concentrated solution can form crystals."
+    },
+    {
+      "id": "y10-acids-bases-063",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Application",
+      "prompt": "Why is adding excess insoluble base useful?",
+      "options": [
+        "It guarantees the final product contains excess dissolved acid.",
+        "It removes all spectator ions by itself.",
+        "It uses up the acid and the excess can be filtered away.",
+        "It converts every salt into an insoluble solid."
+      ],
+      "answer": 2,
+      "explanation": "Choose a reactant whose unreacted excess is separable."
+    },
+    {
+      "id": "y10-acids-bases-064",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Foundation",
+      "prompt": "What is the formula of Epsom salt?",
+      "options": [
+        "MgSO₄",
+        "MgCl₂·7H₂O",
+        "Na₂SO₄·5H₂O",
+        "MgSO₄·7H₂O"
+      ],
+      "answer": 3,
+      "explanation": "Epsom salt is magnesium sulfate heptahydrate."
+    },
+    {
+      "id": "y10-acids-bases-065",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Foundation",
+      "prompt": "Which family of salts is generally soluble in water?",
+      "options": [
+        "Nitrates",
+        "Every carbonate without exception",
+        "Every silver halide without exception",
+        "Every barium salt without exception"
+      ],
+      "answer": 0,
+      "explanation": "Common nitrates are soluble; other families have important exceptions."
+    },
+    {
+      "id": "y10-acids-bases-066",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Application",
+      "prompt": "Which pair of aqueous ions forms an insoluble silver chloride precipitate?",
+      "options": [
+        "Na⁺ and NO₃⁻",
+        "Ag⁺ and Cl⁻",
+        "K⁺ and NO₃⁻",
+        "NH₄⁺ and NO₃⁻"
+      ],
+      "answer": 1,
+      "explanation": "Ag⁺ + Cl⁻ → AgCl(s)."
+    },
+    {
+      "id": "y10-acids-bases-067",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Application",
+      "prompt": "Which equation represents a barium sulfate precipitate?",
+      "options": [
+        "Ba²⁺ + Cl⁻ → BaCl(s)",
+        "Na⁺ + NO₃⁻ → NaNO₃(s)",
+        "Ba²⁺ + SO₄²⁻ → BaSO₄(s)",
+        "Ba → Ba²⁺ + H₂"
+      ],
+      "answer": 2,
+      "explanation": "Barium sulfate is an important insoluble sulfate exception."
+    },
+    {
+      "id": "y10-acids-bases-068",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Application",
+      "prompt": "After filtering a precipitate, why wash it with distilled water?",
+      "options": [
+        "To dissolve every precipitate completely by definition",
+        "To add tap-water ions intentionally",
+        "To make new metal atoms",
+        "To remove soluble impurities from the solid"
+      ],
+      "answer": 3,
+      "explanation": "Washing removes solution containing soluble spectator ions."
+    },
+    {
+      "id": "y10-acids-bases-069",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Challenge",
+      "prompt": "Which method suits an insoluble salt?",
+      "options": [
+        "Mix soluble ion sources, then filter, wash and dry the precipitate.",
+        "Always use titration followed by complete evaporation.",
+        "Filter the ions before mixing.",
+        "Distil the solid into the filter paper."
+      ],
+      "answer": 0,
+      "explanation": "Precipitation makes the insoluble product directly as a filterable solid."
+    },
+    {
+      "id": "y10-acids-bases-070",
+      "category": "Salt preparation and solubility",
+      "difficulty": "Challenge",
+      "prompt": "Where do the waters in a hydrated crystal come from?",
+      "options": [
+        "Oxygen atoms created from nothing",
+        "Water incorporated from the crystallising solution",
+        "The filter paper turning into hydrogen",
+        "Only the metal oxide lattice"
+      ],
+      "answer": 1,
+      "explanation": "Water of crystallisation becomes part of the crystal structure during crystallisation."
+    },
+    {
+      "id": "y10-acids-bases-071",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Foundation",
+      "prompt": "What makes an acid–bicarbonate bath-bomb mixture fizz when wet?",
+      "options": [
+        "Oxygen is split from water by a battery.",
+        "Hydrogen forms from every salt.",
+        "Carbon dioxide is released.",
+        "Nitrogen is made from soap."
+      ],
+      "answer": 2,
+      "explanation": "Acid reacts with hydrogencarbonate to form CO₂ and water."
+    },
+    {
+      "id": "y10-acids-bases-072",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Foundation",
+      "prompt": "Why can baking powder release CO₂ when water is added?",
+      "options": [
+        "It is pure sodium chloride.",
+        "All powders are acids.",
+        "It contains metallic sodium.",
+        "It contains bicarbonate and suitable acid salts."
+      ],
+      "answer": 3,
+      "explanation": "Water lets the acid and bicarbonate partners react."
+    },
+    {
+      "id": "y10-acids-bases-073",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Application",
+      "prompt": "What is cream of tartar?",
+      "options": [
+        "An acid salt, potassium hydrogen tartrate",
+        "Sodium hydroxide",
+        "Pure sodium bicarbonate",
+        "A neutral metal alloy"
+      ],
+      "answer": 0,
+      "explanation": "It can supply the acid partner in a raising mixture."
+    },
+    {
+      "id": "y10-acids-bases-074",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Application",
+      "prompt": "Why does bicarbonate plus water alone not show the same room-temperature acid fizz?",
+      "options": [
+        "Water always supplies unlimited strong acid.",
+        "The required acid partner is missing.",
+        "Bicarbonate contains no atoms.",
+        "Bicarbonate must always release hydrogen."
+      ],
+      "answer": 1,
+      "explanation": "Strong heating can cause a different decomposition, but that is not this unheated comparison."
+    },
+    {
+      "id": "y10-acids-bases-075",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Application",
+      "prompt": "What is a common soap chemically?",
+      "options": [
+        "A pure alkane only",
+        "An insoluble metal oxide only",
+        "A sodium or potassium salt of a long-chain fatty acid",
+        "Pure hydrochloric acid"
+      ],
+      "answer": 2,
+      "explanation": "Soap ions contain a hydrophilic head and hydrophobic tail."
+    },
+    {
+      "id": "y10-acids-bases-076",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Application",
+      "prompt": "How does soap help disperse oil in water?",
+      "options": [
+        "It changes oil molecules into water molecules.",
+        "It makes every oil molecularly soluble without interfaces.",
+        "It removes all electrical charge from water.",
+        "It stabilises oil droplets with water-attracting heads facing outward."
+      ],
+      "answer": 3,
+      "explanation": "Soap supports emulsification rather than converting oil into water."
+    },
+    {
+      "id": "y10-acids-bases-077",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Challenge",
+      "prompt": "What is saponification of a fat in this context?",
+      "options": [
+        "Alkaline hydrolysis forming glycerol and fatty-acid salts",
+        "Fractional distillation of crude oil",
+        "Addition polymerisation of ethene",
+        "Oxidation of sodium chloride"
+      ],
+      "answer": 0,
+      "explanation": "A fat is an ester; alkaline hydrolysis gives soap salts and glycerol."
+    },
+    {
+      "id": "y10-acids-bases-078",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Application",
+      "prompt": "Which net ionic equation describes acid reacting with hydrogencarbonate?",
+      "options": [
+        "H⁺ + Cl⁻ → H₂",
+        "H⁺ + HCO₃⁻ → CO₂ + H₂O",
+        "CO₂ + H₂O → Na",
+        "Na⁺ + OH⁻ → O₂"
+      ],
+      "answer": 1,
+      "explanation": "Atoms and charge balance in acid-driven carbon dioxide release."
+    },
+    {
+      "id": "y10-acids-bases-079",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Challenge",
+      "prompt": "Why can two bath-bomb formulations fizz at different rates?",
+      "options": [
+        "Every mixture must have the same rate.",
+        "Rate is determined by the colour of the bowl alone.",
+        "Particle size, ingredient proportions and conditions affect the rate.",
+        "More foam always proves more moles of acid."
+      ],
+      "answer": 2,
+      "explanation": "Qualitative appearance is not by itself a quantitative amount or rate measurement."
+    },
+    {
+      "id": "y10-acids-bases-080",
+      "category": "Everyday acid–base chemistry",
+      "difficulty": "Challenge",
+      "prompt": "Which statement about a soap emulsion is correct?",
+      "options": [
+        "Oil atoms have disappeared.",
+        "All water molecules become soap ions.",
+        "A permanent emulsion must be an element.",
+        "Oil is dispersed in droplets; it has not become a true molecular solution."
+      ],
+      "answer": 3,
+      "explanation": "Emulsification stabilises a dispersed phase at oil–water interfaces."
+    }
+  ]
+}

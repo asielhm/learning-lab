@@ -1,0 +1,1136 @@
+{
+  "topicId": "y10-organic",
+  "title": "Organic Chemistry",
+  "categories": [
+    "Combustion",
+    "Crude oil and fractional distillation",
+    "Alkanes and alkenes",
+    "Cracking and bromine water",
+    "Addition polymers",
+    "Alcohols carboxylic acids and esters",
+    "Amines and amides",
+    "Condensation polymers"
+  ],
+  "questions": [
+    {
+      "id": "y10-organic-001",
+      "category": "Combustion",
+      "difficulty": "Foundation",
+      "prompt": "What products form in complete combustion of a hydrocarbon?",
+      "options": [
+        "Carbon dioxide and water",
+        "Carbon monoxide only",
+        "Hydrogen and oxygen only",
+        "Carbon and nitrogen"
+      ],
+      "answer": 0,
+      "explanation": "Complete oxidation of C and H gives CO₂ and H₂O."
+    },
+    {
+      "id": "y10-organic-002",
+      "category": "Combustion",
+      "difficulty": "Foundation",
+      "prompt": "Which test supports the presence of CO₂?",
+      "options": [
+        "A glowing splint relights.",
+        "Limewater turns milky.",
+        "Anhydrous copper sulfate stays white.",
+        "The gas must smell fruity."
+      ],
+      "answer": 1,
+      "explanation": "CO₂ forms a calcium carbonate precipitate in limewater."
+    },
+    {
+      "id": "y10-organic-003",
+      "category": "Combustion",
+      "difficulty": "Foundation",
+      "prompt": "What colour change indicates water with anhydrous copper(II) sulfate?",
+      "options": [
+        "Blue to white",
+        "Red to green",
+        "White to blue",
+        "Orange to colourless"
+      ],
+      "answer": 2,
+      "explanation": "Water hydrates the anhydrous salt and produces the blue form."
+    },
+    {
+      "id": "y10-organic-004",
+      "category": "Combustion",
+      "difficulty": "Application",
+      "prompt": "Which can form in incomplete hydrocarbon combustion?",
+      "options": [
+        "Only oxygen gas",
+        "Sodium metal",
+        "Only nitrogen dioxide in every case",
+        "Carbon monoxide and/or soot"
+      ],
+      "answer": 3,
+      "explanation": "Limited oxygen can leave carbon partially oxidised or as soot."
+    },
+    {
+      "id": "y10-organic-005",
+      "category": "Combustion",
+      "difficulty": "Application",
+      "prompt": "Why is carbon monoxide dangerous?",
+      "options": [
+        "It interferes with oxygen transport by binding strongly to haemoglobin.",
+        "It is the same as oxygen.",
+        "It is safe because it is colourless.",
+        "It turns every acid into a base."
+      ],
+      "answer": 0,
+      "explanation": "CO can prevent effective oxygen transport; colourlessness does not imply safety."
+    },
+    {
+      "id": "y10-organic-006",
+      "category": "Combustion",
+      "difficulty": "Application",
+      "prompt": "Which equation is balanced for complete methane combustion?",
+      "options": [
+        "CH₄ + O₂ → CO₂ + H₂O",
+        "CH₄ + 2O₂ → CO₂ + 2H₂O",
+        "CH₄ → CO₂ + 2H₂",
+        "CH₄ + 2O₂ → C + 4H₂O"
+      ],
+      "answer": 1,
+      "explanation": "One C, four H and four O atoms are conserved."
+    },
+    {
+      "id": "y10-organic-007",
+      "category": "Combustion",
+      "difficulty": "Challenge",
+      "prompt": "What is the O₂ coefficient in complete combustion 2C₂H₆ + xO₂ → 4CO₂ + 6H₂O?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "Products contain 14 O atoms, requiring 7O₂."
+    },
+    {
+      "id": "y10-organic-008",
+      "category": "Combustion",
+      "difficulty": "Application",
+      "prompt": "Why is a yellow candle flame not by itself proof that all emitted carbon is unburnt soot?",
+      "options": [
+        "Yellow light proves pure oxygen is emitted.",
+        "Every yellow flame has zero carbon.",
+        "Flame colour is an exact quantitative gas analysis.",
+        "Glowing soot within the flame may later burn."
+      ],
+      "answer": 3,
+      "explanation": "Use product tests and conditions, not colour alone."
+    },
+    {
+      "id": "y10-organic-009",
+      "category": "Combustion",
+      "difficulty": "Challenge",
+      "prompt": "Why is candle wax often represented by one formula only as a model?",
+      "options": [
+        "Real candle wax is generally a mixture of hydrocarbons.",
+        "Wax contains no carbon.",
+        "Every candle is pure methane gas.",
+        "All hydrocarbons have the same formula."
+      ],
+      "answer": 0,
+      "explanation": "A representative alkane simplifies equations without making wax a pure compound."
+    },
+    {
+      "id": "y10-organic-010",
+      "category": "Combustion",
+      "difficulty": "Challenge",
+      "prompt": "Which statement about incomplete combustion is most accurate?",
+      "options": [
+        "Only one fixed product is possible under all oxygen shortages.",
+        "A mixture of CO, soot, CO₂ and water may form depending on conditions.",
+        "It creates carbon atoms from oxygen.",
+        "It never releases energy."
+      ],
+      "answer": 1,
+      "explanation": "Product proportions depend on oxygen supply, mixing and temperature."
+    },
+    {
+      "id": "y10-organic-011",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Foundation",
+      "prompt": "What is crude oil?",
+      "options": [
+        "One pure alkane only",
+        "A single element",
+        "A mixture mainly of hydrocarbons",
+        "A giant ionic salt"
+      ],
+      "answer": 2,
+      "explanation": "Crude oil contains many compounds, primarily hydrocarbons."
+    },
+    {
+      "id": "y10-organic-012",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Foundation",
+      "prompt": "What property is used in fractional distillation?",
+      "options": [
+        "Different atomic numbers alone",
+        "Identical boiling points",
+        "Only indicator colours",
+        "Different boiling behaviours"
+      ],
+      "answer": 3,
+      "explanation": "Components vaporise and condense over different temperature ranges."
+    },
+    {
+      "id": "y10-organic-013",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Foundation",
+      "prompt": "How is temperature arranged in a refinery fractionating column?",
+      "options": [
+        "Hotter at the bottom, cooler at the top",
+        "Colder at the bottom, hotter at the top",
+        "Always exactly the same everywhere",
+        "Always below 0°C"
+      ],
+      "answer": 0,
+      "explanation": "Vapours rise through cooler regions and condense at different heights."
+    },
+    {
+      "id": "y10-organic-014",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Application",
+      "prompt": "Where do lower-boiling components generally leave the column?",
+      "options": [
+        "Only as bottom residue",
+        "Higher up",
+        "Through the furnace wall",
+        "They cannot be separated"
+      ],
+      "answer": 1,
+      "explanation": "They remain gaseous until reaching cooler upper regions."
+    },
+    {
+      "id": "y10-organic-015",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Application",
+      "prompt": "A fraction is best described as…",
+      "options": [
+        "a pure element.",
+        "always a single exact alkane.",
+        "a mixture of hydrocarbons with a range of boiling points.",
+        "a new compound made by breaking every C–C bond."
+      ],
+      "answer": 2,
+      "explanation": "Fraction ranges overlap and are process-dependent."
+    },
+    {
+      "id": "y10-organic-016",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Application",
+      "prompt": "What happens to C–C bonds during ordinary fractional distillation?",
+      "options": [
+        "Every bond is cracked.",
+        "Every bond becomes ionic.",
+        "They all become C=C.",
+        "They are not intentionally broken."
+      ],
+      "answer": 3,
+      "explanation": "Distillation is a physical separation rather than a cracking reaction."
+    },
+    {
+      "id": "y10-organic-017",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Application",
+      "prompt": "Compared with long-chain alkanes, shorter-chain alkanes generally have…",
+      "options": [
+        "lower boiling points and greater volatility.",
+        "higher boiling points in every matched comparison.",
+        "no carbon atoms.",
+        "identical viscosity by definition."
+      ],
+      "answer": 0,
+      "explanation": "Intermolecular attractions generally strengthen with increasing chain size."
+    },
+    {
+      "id": "y10-organic-018",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Application",
+      "prompt": "Why does a vapour condense at a particular region of the model column?",
+      "options": [
+        "Its atoms turn into metal.",
+        "The local temperature falls to its boiling/condensation range.",
+        "Oxygen is removed from its nucleus.",
+        "The column adds hydrogen to every molecule."
+      ],
+      "answer": 1,
+      "explanation": "Cooling causes a physical gas-to-liquid change."
+    },
+    {
+      "id": "y10-organic-019",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Challenge",
+      "prompt": "Why should a classroom fraction chart not be treated as a universal exact boundary list?",
+      "options": [
+        "Boiling points have no role in separation.",
+        "Every refinery collects identical pure molecules.",
+        "Real fraction ranges overlap and vary with the process.",
+        "Distillation changes atomic numbers."
+      ],
+      "answer": 2,
+      "explanation": "Fraction names describe useful cuts of a mixture, not universally sharp chemical categories."
+    },
+    {
+      "id": "y10-organic-020",
+      "category": "Crude oil and fractional distillation",
+      "difficulty": "Challenge",
+      "prompt": "Which observation is consistent with increasing alkane chain length?",
+      "options": [
+        "All members becoming more volatile",
+        "Every member becoming an alkene",
+        "All intermolecular attractions disappearing",
+        "Increasing viscosity and decreasing ease of ignition in the usual series trend"
+      ],
+      "answer": 3,
+      "explanation": "Larger molecules generally have stronger intermolecular attractions and different handling properties."
+    },
+    {
+      "id": "y10-organic-021",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Foundation",
+      "prompt": "How many H atoms are in an acyclic alkane with 2 C atoms?",
+      "options": [
+        "6",
+        "12",
+        "3",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "For an acyclic alkane, H = 2n + 2."
+    },
+    {
+      "id": "y10-organic-022",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Foundation",
+      "prompt": "How many H atoms are in an acyclic alkane with 3 C atoms?",
+      "options": [
+        "16",
+        "8",
+        "4",
+        "80"
+      ],
+      "answer": 1,
+      "explanation": "For an acyclic alkane, H = 2n + 2."
+    },
+    {
+      "id": "y10-organic-023",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Foundation",
+      "prompt": "How many H atoms are in an acyclic alkane with 4 C atoms?",
+      "options": [
+        "20",
+        "5",
+        "10",
+        "100"
+      ],
+      "answer": 2,
+      "explanation": "For an acyclic alkane, H = 2n + 2."
+    },
+    {
+      "id": "y10-organic-024",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Foundation",
+      "prompt": "How many H atoms are in an acyclic alkane with 6 C atoms?",
+      "options": [
+        "28",
+        "7",
+        "140",
+        "14"
+      ],
+      "answer": 3,
+      "explanation": "For an acyclic alkane, H = 2n + 2."
+    },
+    {
+      "id": "y10-organic-025",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Application",
+      "prompt": "How many H atoms are in an acyclic alkene with 3 C atoms and one C=C bond?",
+      "options": [
+        "6",
+        "12",
+        "3",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "For an acyclic alkene with one double bond, H = 2n."
+    },
+    {
+      "id": "y10-organic-026",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Application",
+      "prompt": "How many H atoms are in an acyclic alkene with 5 C atoms and one C=C bond?",
+      "options": [
+        "20",
+        "10",
+        "5",
+        "100"
+      ],
+      "answer": 1,
+      "explanation": "For an acyclic alkene with one double bond, H = 2n."
+    },
+    {
+      "id": "y10-organic-027",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Application",
+      "prompt": "How many H atoms are in an acyclic alkene with 8 C atoms and one C=C bond?",
+      "options": [
+        "32",
+        "8",
+        "16",
+        "160"
+      ],
+      "answer": 2,
+      "explanation": "For an acyclic alkene with one double bond, H = 2n."
+    },
+    {
+      "id": "y10-organic-028",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Foundation",
+      "prompt": "What does saturated mean for an alkane?",
+      "options": [
+        "At least one C=C in every molecule",
+        "Completely dissolved in water",
+        "No hydrogen atoms",
+        "Only single carbon–carbon bonds"
+      ],
+      "answer": 3,
+      "explanation": "Alkanes have only single C–C bonds in this comparison."
+    },
+    {
+      "id": "y10-organic-029",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Application",
+      "prompt": "What differs between successive members of an alkane homologous series?",
+      "options": [
+        "One CH₂ unit",
+        "One O₂ molecule",
+        "One NaCl unit",
+        "No atoms at all"
+      ],
+      "answer": 0,
+      "explanation": "Neighbouring members differ by CH₂ while sharing the series pattern."
+    },
+    {
+      "id": "y10-organic-030",
+      "category": "Alkanes and alkenes",
+      "difficulty": "Challenge",
+      "prompt": "Does the formula CₙH₂ₙ alone prove a compound is an alkene?",
+      "options": [
+        "Yes; rings never occur in organic chemistry.",
+        "No; a cycloalkane can have the same general formula.",
+        "Yes; all compounds with that formula have one identical structure.",
+        "No; alkenes contain no hydrogen."
+      ],
+      "answer": 1,
+      "explanation": "Structural information and conditions matter; the general formula here assumes an acyclic monoalkene."
+    },
+    {
+      "id": "y10-organic-031",
+      "category": "Cracking and bromine water",
+      "difficulty": "Foundation",
+      "prompt": "What is cracking?",
+      "options": [
+        "Separating unchanged molecules by boiling point only",
+        "Dissolving sodium chloride in water",
+        "Breaking larger hydrocarbons into smaller molecules",
+        "Forming a metal alloy"
+      ],
+      "answer": 2,
+      "explanation": "Cracking is a chemical change involving bond breaking and new products."
+    },
+    {
+      "id": "y10-organic-032",
+      "category": "Cracking and bromine water",
+      "difficulty": "Application",
+      "prompt": "Which pair can balance C₁₀H₂₂ cracking in a simple alkane + alkene model?",
+      "options": [
+        "C₈H₂₀ + C₂H₄",
+        "C₈H₁₆ + C₂H₂",
+        "C₁₀H₂₂ + C₂H₄",
+        "C₈H₁₈ + C₂H₄"
+      ],
+      "answer": 3,
+      "explanation": "C totals 10 and H totals 22 in the correct pair."
+    },
+    {
+      "id": "y10-organic-033",
+      "category": "Cracking and bromine water",
+      "difficulty": "Application",
+      "prompt": "What is required in the catalytic-cracking model?",
+      "options": [
+        "Suitable heat and a catalyst",
+        "Only cold water",
+        "Only room-temperature filtration",
+        "No energy input under any conditions"
+      ],
+      "answer": 0,
+      "explanation": "Catalytic cracking uses a suitable catalyst and temperature; thermal cracking uses different conditions."
+    },
+    {
+      "id": "y10-organic-034",
+      "category": "Cracking and bromine water",
+      "difficulty": "Foundation",
+      "prompt": "Which sample rapidly decolourises bromine water in a no-UV alkane/alkene comparison?",
+      "options": [
+        "Hexane",
+        "Hex-1-ene",
+        "Sodium chloride solution",
+        "Pure water"
+      ],
+      "answer": 1,
+      "explanation": "Bromine adds across the C=C bond of the alkene."
+    },
+    {
+      "id": "y10-organic-035",
+      "category": "Cracking and bromine water",
+      "difficulty": "Application",
+      "prompt": "What type of reaction is alkene decolourisation of bromine?",
+      "options": [
+        "Neutralisation",
+        "Metal displacement",
+        "Addition",
+        "Simple evaporation"
+      ],
+      "answer": 2,
+      "explanation": "Bromine atoms add across the double bond."
+    },
+    {
+      "id": "y10-organic-036",
+      "category": "Cracking and bromine water",
+      "difficulty": "Application",
+      "prompt": "What is the product formula for ethene plus Br₂?",
+      "options": [
+        "C₂H₆Br",
+        "C₂H₂Br₂",
+        "CH₄Br₂",
+        "C₂H₄Br₂"
+      ],
+      "answer": 3,
+      "explanation": "C₂H₄ + Br₂ → C₂H₄Br₂ conserves all atoms."
+    },
+    {
+      "id": "y10-organic-037",
+      "category": "Cracking and bromine water",
+      "difficulty": "Challenge",
+      "prompt": "Why specify no UV light in the hexane comparison?",
+      "options": [
+        "Alkanes can undergo halogen substitution under suitable light.",
+        "UV light removes all carbon atoms.",
+        "Bromine never reacts with any organic compound.",
+        "Hexane is an alkene in bright light only."
+      ],
+      "answer": 0,
+      "explanation": "Different reaction conditions can allow a different reaction class."
+    },
+    {
+      "id": "y10-organic-038",
+      "category": "Cracking and bromine water",
+      "difficulty": "Challenge",
+      "prompt": "Bromine colour moves from water into a hydrocarbon layer. What does that alone prove?",
+      "options": [
+        "The hydrocarbon must be unsaturated",
+        "Partition between layers, not necessarily chemical decolourisation",
+        "Every bromine molecule was destroyed",
+        "A precipitate of sodium forms"
+      ],
+      "answer": 1,
+      "explanation": "Examine the overall colour and reaction conditions, not just one layer."
+    },
+    {
+      "id": "y10-organic-039",
+      "category": "Cracking and bromine water",
+      "difficulty": "Application",
+      "prompt": "Why are alkenes valuable cracking products?",
+      "options": [
+        "They can never react further.",
+        "They are metals.",
+        "They are useful reactive feedstocks, including for addition polymers.",
+        "They contain no covalent bonds."
+      ],
+      "answer": 2,
+      "explanation": "The C=C bond supports addition reactions and polymer manufacture."
+    },
+    {
+      "id": "y10-organic-040",
+      "category": "Cracking and bromine water",
+      "difficulty": "Challenge",
+      "prompt": "Why does one balanced cracking equation not describe every molecule in a real product mixture?",
+      "options": [
+        "Atoms need not be conserved in a refinery.",
+        "Only one product can exist.",
+        "Cracking is not a chemical reaction.",
+        "Real cracking follows multiple pathways and produces a distribution."
+      ],
+      "answer": 3,
+      "explanation": "A balanced example illustrates atom conservation but does not specify the entire product spectrum."
+    },
+    {
+      "id": "y10-organic-041",
+      "category": "Addition polymers",
+      "difficulty": "Foundation",
+      "prompt": "Which type of monomer can form an addition polymer in this course?",
+      "options": [
+        "An alkene",
+        "Sodium chloride",
+        "A noble-gas atom only",
+        "A metal oxide only"
+      ],
+      "answer": 0,
+      "explanation": "The C=C bond can open as monomers join."
+    },
+    {
+      "id": "y10-organic-042",
+      "category": "Addition polymers",
+      "difficulty": "Foundation",
+      "prompt": "What is the repeating unit of poly(ethene)?",
+      "options": [
+        "[–CH=CH–]",
+        "[–CH₂–CH₂–]",
+        "[–COO–] only",
+        "[–NH–CO–] only"
+      ],
+      "answer": 1,
+      "explanation": "The double bond becomes single in the carbon backbone."
+    },
+    {
+      "id": "y10-organic-043",
+      "category": "Addition polymers",
+      "difficulty": "Application",
+      "prompt": "What happens to the CH₃ side group when propene polymerises by addition?",
+      "options": [
+        "It must be lost as methane.",
+        "It becomes an oxygen atom.",
+        "It remains attached as a side group.",
+        "It always forms water."
+      ],
+      "answer": 2,
+      "explanation": "Addition retains the monomer atoms, including substituents."
+    },
+    {
+      "id": "y10-organic-044",
+      "category": "Addition polymers",
+      "difficulty": "Foundation",
+      "prompt": "What small-molecule by-product is required in ordinary alkene addition polymerisation?",
+      "options": [
+        "Water from every monomer",
+        "Hydrogen chloride from every monomer",
+        "Carbon dioxide from every monomer",
+        "None"
+      ],
+      "answer": 3,
+      "explanation": "Addition conserves all monomer atoms in the growing polymer."
+    },
+    {
+      "id": "y10-organic-045",
+      "category": "Addition polymers",
+      "difficulty": "Application",
+      "prompt": "What monomer gives poly(chloroethene), PVC?",
+      "options": [
+        "Chloroethene",
+        "Ethanoic acid",
+        "Ethanol",
+        "Sodium chloride"
+      ],
+      "answer": 0,
+      "explanation": "The C=C monomer CH₂=CHCl forms the substituted carbon chain."
+    },
+    {
+      "id": "y10-organic-046",
+      "category": "Addition polymers",
+      "difficulty": "Application",
+      "prompt": "Why are bonds drawn through the brackets in a repeat-unit diagram?",
+      "options": [
+        "They indicate ionic charge only.",
+        "They show continuation into a long chain.",
+        "They mean the structure is a small isolated gas molecule.",
+        "They remove carbon valence requirements."
+      ],
+      "answer": 1,
+      "explanation": "The repeat unit represents a segment connected to units on either side."
+    },
+    {
+      "id": "y10-organic-047",
+      "category": "Addition polymers",
+      "difficulty": "Application",
+      "prompt": "Which change is correct when ethene becomes poly(ethene)?",
+      "options": [
+        "Every C–C bond becomes a triple bond.",
+        "Every hydrogen is removed.",
+        "C=C becomes C–C as new links join neighbouring units.",
+        "All carbon atoms become ions."
+      ],
+      "answer": 2,
+      "explanation": "Polymer backbone carbons retain four bonds overall."
+    },
+    {
+      "id": "y10-organic-048",
+      "category": "Addition polymers",
+      "difficulty": "Challenge",
+      "prompt": "Why must a repeat-unit drawing retain substituents?",
+      "options": [
+        "Every addition reaction removes side groups.",
+        "Substituents are not atoms.",
+        "A repeat unit can violate atom conservation.",
+        "They are atoms from the monomer and affect the polymer identity."
+      ],
+      "answer": 3,
+      "explanation": "Atom conservation and connectivity determine the correct repeat unit."
+    },
+    {
+      "id": "y10-organic-049",
+      "category": "Addition polymers",
+      "difficulty": "Application",
+      "prompt": "A chain segment contains 5 complete ethene-derived repeat units. How many carbon atoms are in those units?",
+      "options": [
+        "10",
+        "5",
+        "15",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "Each repeat unit contains two carbon atoms."
+    },
+    {
+      "id": "y10-organic-050",
+      "category": "Addition polymers",
+      "difficulty": "Challenge",
+      "prompt": "Does a short repeat-unit diagram specify every end group of a real polymer molecule?",
+      "options": [
+        "Yes; no polymer can have chain ends.",
+        "No; chain ends are usually omitted from repeat-unit notation.",
+        "Yes; every polymer has exactly two carbon atoms total.",
+        "No; polymers have no covalent bonds."
+      ],
+      "answer": 1,
+      "explanation": "Repeat notation focuses on the repeated interior structure."
+    },
+    {
+      "id": "y10-organic-051",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Foundation",
+      "prompt": "Which functional group identifies an alcohol such as ethanol?",
+      "options": [
+        "–COOH",
+        "–CONH₂",
+        "–OH outside a carboxyl group",
+        "–COO– between carbon groups"
+      ],
+      "answer": 2,
+      "explanation": "The alcohol hydroxyl group must be distinguished from the OH within –COOH."
+    },
+    {
+      "id": "y10-organic-052",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Foundation",
+      "prompt": "Which functional group identifies a carboxylic acid?",
+      "options": [
+        "A C=C bond only",
+        "–NH₂ only",
+        "A metal ion only",
+        "–COOH"
+      ],
+      "answer": 3,
+      "explanation": "The carboxyl group combines C=O and OH on the same carbon."
+    },
+    {
+      "id": "y10-organic-053",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Application",
+      "prompt": "What is the formula of ethanol?",
+      "options": [
+        "CH₃CH₂OH",
+        "CH₃COOH",
+        "CH₃CONH₂",
+        "CH₂=CH₂"
+      ],
+      "answer": 0,
+      "explanation": "Ethanol has two carbons and an alcohol OH group."
+    },
+    {
+      "id": "y10-organic-054",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Application",
+      "prompt": "How is ethanoic acid classified in water?",
+      "options": [
+        "A strong alkali",
+        "A weak acid",
+        "A metal",
+        "A neutral noble gas"
+      ],
+      "answer": 1,
+      "explanation": "Ethanoic acid partially ionises in water."
+    },
+    {
+      "id": "y10-organic-055",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Application",
+      "prompt": "Which reactants form ethyl ethanoate in reversible esterification?",
+      "options": [
+        "Methane and oxygen only",
+        "Ethene and sodium chloride",
+        "Ethanol and ethanoic acid",
+        "Methylamine and sodium hydroxide"
+      ],
+      "answer": 2,
+      "explanation": "The alcohol supplies ethyl and the acid supplies ethanoate."
+    },
+    {
+      "id": "y10-organic-056",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Foundation",
+      "prompt": "What small molecule forms alongside an ester in acid + alcohol esterification?",
+      "options": [
+        "Oxygen",
+        "Hydrogen in every case",
+        "Sodium",
+        "Water"
+      ],
+      "answer": 3,
+      "explanation": "Acid and alcohol functional groups join with water eliminated."
+    },
+    {
+      "id": "y10-organic-057",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Application",
+      "prompt": "Which link identifies an ester?",
+      "options": [
+        "–COO–",
+        "–C=C– only",
+        "–NH– only",
+        "–C≡C– only"
+      ],
+      "answer": 0,
+      "explanation": "The ester group contains a carbonyl carbon bonded to oxygen attached to another carbon group."
+    },
+    {
+      "id": "y10-organic-058",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Challenge",
+      "prompt": "Why is a reversible arrow appropriate for standard esterification?",
+      "options": [
+        "Every reaction must go irreversibly to 100% ester.",
+        "Products and reactants can interconvert and establish equilibrium.",
+        "Atoms are not conserved.",
+        "A catalyst changes the elements present."
+      ],
+      "answer": 1,
+      "explanation": "Esterification and hydrolysis are opposing processes under suitable conditions."
+    },
+    {
+      "id": "y10-organic-059",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Application",
+      "prompt": "What is the usual role of an acid catalyst in esterification?",
+      "options": [
+        "It supplies every carbon atom in the ester.",
+        "It makes atom balance unnecessary.",
+        "It speeds the reaction pathway without being consumed overall.",
+        "It guarantees the equilibrium yield is 100%."
+      ],
+      "answer": 2,
+      "explanation": "A catalyst affects rate, not the elemental balance or the equilibrium constant at fixed temperature."
+    },
+    {
+      "id": "y10-organic-060",
+      "category": "Alcohols carboxylic acids and esters",
+      "difficulty": "Challenge",
+      "prompt": "Which statement about ester odours is most accurate?",
+      "options": [
+        "Every ester smells identical.",
+        "Every fruity smell proves a pure ester.",
+        "Esters cannot have odours.",
+        "Many small esters have characteristic fruity odours, but this is not universal or a safe identification method alone."
+      ],
+      "answer": 3,
+      "explanation": "Functional-group chemistry and analytical evidence matter beyond a general odour association."
+    },
+    {
+      "id": "y10-organic-061",
+      "category": "Amines and amides",
+      "difficulty": "Foundation",
+      "prompt": "Which compound is an amine?",
+      "options": [
+        "CH₃NH₂",
+        "CH₃CONH₂",
+        "CH₃COOH",
+        "CH₃CH₂OH"
+      ],
+      "answer": 0,
+      "explanation": "Methylamine has nitrogen not directly attached to a carbonyl carbon."
+    },
+    {
+      "id": "y10-organic-062",
+      "category": "Amines and amides",
+      "difficulty": "Foundation",
+      "prompt": "Which compound is an amide?",
+      "options": [
+        "CH₃NH₂",
+        "CH₃CONH₂",
+        "CH₄",
+        "C₂H₄"
+      ],
+      "answer": 1,
+      "explanation": "Ethanamide has nitrogen directly bonded to a carbonyl carbon."
+    },
+    {
+      "id": "y10-organic-063",
+      "category": "Amines and amides",
+      "difficulty": "Application",
+      "prompt": "Why can a simple amine act as a base?",
+      "options": [
+        "It must donate a metal ion.",
+        "It contains no electrons.",
+        "Its nitrogen lone pair can accept H⁺.",
+        "It is always a strong acid."
+      ],
+      "answer": 2,
+      "explanation": "Proton acceptance forms an alkylammonium ion."
+    },
+    {
+      "id": "y10-organic-064",
+      "category": "Amines and amides",
+      "difficulty": "Application",
+      "prompt": "What structural feature distinguishes an amide from the simple amine comparison?",
+      "options": [
+        "Any N atom anywhere without other information",
+        "Only a carbon–carbon double bond",
+        "An OH group without nitrogen",
+        "Nitrogen attached directly to a C=O carbon"
+      ],
+      "answer": 3,
+      "explanation": "The carbonyl connection changes the nitrogen lone-pair behaviour."
+    },
+    {
+      "id": "y10-organic-065",
+      "category": "Amines and amides",
+      "difficulty": "Challenge",
+      "prompt": "Why are amides much less basic than comparable amines?",
+      "options": [
+        "The nitrogen lone pair is delocalised with the carbonyl group.",
+        "Amides contain no nitrogen.",
+        "Every amide is a metal salt.",
+        "The nitrogen has no electrons at all."
+      ],
+      "answer": 0,
+      "explanation": "Delocalisation makes the lone pair less available for proton binding."
+    },
+    {
+      "id": "y10-organic-066",
+      "category": "Amines and amides",
+      "difficulty": "Foundation",
+      "prompt": "What is the name of CH₃CONH₂?",
+      "options": [
+        "Ethanol",
+        "Ethanamide",
+        "Ethene",
+        "Ethanoic acid"
+      ],
+      "answer": 1,
+      "explanation": "The two-carbon amide is ethanamide."
+    },
+    {
+      "id": "y10-organic-067",
+      "category": "Amines and amides",
+      "difficulty": "Application",
+      "prompt": "What does CH₃NH₂ form when protonated?",
+      "options": [
+        "CH₃NH⁻",
+        "CH₄ + N₂ automatically",
+        "CH₃NH₃⁺",
+        "CH₃COO⁻"
+      ],
+      "answer": 2,
+      "explanation": "The nitrogen lone pair bonds to H⁺, giving the cation."
+    },
+    {
+      "id": "y10-organic-068",
+      "category": "Amines and amides",
+      "difficulty": "Application",
+      "prompt": "Which linkage is characteristic of a polyamide?",
+      "options": [
+        "–COO– only",
+        "–CH=CH– only",
+        "–O–O– only",
+        "–CONH–"
+      ],
+      "answer": 3,
+      "explanation": "An amide link connects carbonyl carbon to nitrogen."
+    },
+    {
+      "id": "y10-organic-069",
+      "category": "Amines and amides",
+      "difficulty": "Challenge",
+      "prompt": "Why is “every nitrogen-containing organic compound is an amine” false?",
+      "options": [
+        "Amides and other nitrogen functional groups have different structures.",
+        "Nitrogen cannot bond to carbon.",
+        "Organic compounds never contain nitrogen.",
+        "Every amide is an alcohol."
+      ],
+      "answer": 0,
+      "explanation": "Identify the whole functional group and its connectivity."
+    },
+    {
+      "id": "y10-organic-070",
+      "category": "Amines and amides",
+      "difficulty": "Challenge",
+      "prompt": "Which description correctly compares methylamine and ethanamide?",
+      "options": [
+        "Both must be identical strong bases.",
+        "Methylamine is appreciably basic in water; ethanamide is much less basic.",
+        "Ethanamide contains no C=O.",
+        "Methylamine is a carboxylic acid."
+      ],
+      "answer": 1,
+      "explanation": "The carbonyl attachment in the amide changes electron availability."
+    },
+    {
+      "id": "y10-organic-071",
+      "category": "Condensation polymers",
+      "difficulty": "Foundation",
+      "prompt": "Which pair can make a polyester by condensation?",
+      "options": [
+        "Ethene alone by addition",
+        "Sodium and chlorine",
+        "A diol and a dicarboxylic acid",
+        "Methane and oxygen by combustion"
+      ],
+      "answer": 2,
+      "explanation": "Two OH groups and two COOH groups allow repeated ester link formation."
+    },
+    {
+      "id": "y10-organic-072",
+      "category": "Condensation polymers",
+      "difficulty": "Foundation",
+      "prompt": "Which pair can make a polyamide by condensation?",
+      "options": [
+        "A diol and an alkane",
+        "Ethene and water only",
+        "Pure sodium chloride",
+        "A diamine and a dicarboxylic acid"
+      ],
+      "answer": 3,
+      "explanation": "Amine and carboxyl groups form amide links."
+    },
+    {
+      "id": "y10-organic-073",
+      "category": "Condensation polymers",
+      "difficulty": "Application",
+      "prompt": "Why are two reactive functional groups per monomer important for chain growth?",
+      "options": [
+        "A monomer can connect at both ends.",
+        "The molecule must always lose every carbon.",
+        "Only one bond in the entire chain is possible.",
+        "Two groups prevent any reaction."
+      ],
+      "answer": 0,
+      "explanation": "Bifunctionality supports repeated linking rather than stopping at a small product."
+    },
+    {
+      "id": "y10-organic-074",
+      "category": "Condensation polymers",
+      "difficulty": "Foundation",
+      "prompt": "Which small molecule is released in the acid + alcohol or acid + amine condensation routes shown?",
+      "options": [
+        "Oxygen",
+        "Water",
+        "Sodium",
+        "Nitrogen"
+      ],
+      "answer": 1,
+      "explanation": "H and OH are removed as H₂O as a new ester or amide link forms."
+    },
+    {
+      "id": "y10-organic-075",
+      "category": "Condensation polymers",
+      "difficulty": "Application",
+      "prompt": "How does condensation polymerisation differ from the alkene addition model?",
+      "options": [
+        "Condensation never forms covalent bonds.",
+        "Addition always releases water.",
+        "These condensation routes release a small molecule as links form.",
+        "Only addition conserves atoms."
+      ],
+      "answer": 2,
+      "explanation": "Both conserve atoms, but a by-product such as water appears in the chosen condensation chemistry."
+    },
+    {
+      "id": "y10-organic-076",
+      "category": "Condensation polymers",
+      "difficulty": "Application",
+      "prompt": "Which link is present in a polyester?",
+      "options": [
+        "–CONH– only",
+        "–C=C– in every backbone position",
+        "–NaCl–",
+        "–COO–"
+      ],
+      "answer": 3,
+      "explanation": "Polyester links are ester functional groups."
+    },
+    {
+      "id": "y10-organic-077",
+      "category": "Condensation polymers",
+      "difficulty": "Application",
+      "prompt": "Which link is present in a polyamide?",
+      "options": [
+        "–CONH–",
+        "–COO– only",
+        "–O=O–",
+        "–KCl–"
+      ],
+      "answer": 0,
+      "explanation": "Polyamide links are amide functional groups."
+    },
+    {
+      "id": "y10-organic-078",
+      "category": "Condensation polymers",
+      "difficulty": "Challenge",
+      "prompt": "A finite linear chain is made by joining 2 diacid and 2 complementary bifunctional monomers. If each new link releases one H₂O, how many waters form?",
+      "options": [
+        "6",
+        "3",
+        "1.5",
+        "30"
+      ],
+      "answer": 1,
+      "explanation": "4 monomers in one non-cyclic chain need 3 links. This count includes the end-group correction."
+    },
+    {
+      "id": "y10-organic-079",
+      "category": "Condensation polymers",
+      "difficulty": "Challenge",
+      "prompt": "A finite linear chain is made by joining 3 diacid and 3 complementary bifunctional monomers. If each new link releases one H₂O, how many waters form?",
+      "options": [
+        "10",
+        "2.5",
+        "5",
+        "50"
+      ],
+      "answer": 2,
+      "explanation": "6 monomers in one non-cyclic chain need 5 links. This count includes the end-group correction."
+    },
+    {
+      "id": "y10-organic-080",
+      "category": "Condensation polymers",
+      "difficulty": "Challenge",
+      "prompt": "A finite linear chain is made by joining 5 diacid and 5 complementary bifunctional monomers. If each new link releases one H₂O, how many waters form?",
+      "options": [
+        "18",
+        "4.5",
+        "90",
+        "9"
+      ],
+      "answer": 3,
+      "explanation": "10 monomers in one non-cyclic chain need 9 links. This count includes the end-group correction."
+    }
+  ]
+}

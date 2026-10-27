@@ -272,7 +272,123 @@
       "id": "y10",
       "name": "Year 10",
       "shortName": "Y10",
-      "subjects": []
+      "subjects": [
+        {
+          "id": "chemistry",
+          "name": "Chemistry",
+          "description": "Investigate reactions, explain matter and connect chemical models to practical evidence.",
+          "topics": [
+            {
+              "id": "acids-and-bases",
+              "name": "Acids and Bases",
+              "description": "Colour changes, reactions and careful measurements: explain what acids and bases do, then use evidence to find an unknown concentration.",
+              "primaryActivity": "acids-lab",
+              "appTitle": "Acids and Bases",
+              "activities": [
+                {
+                  "id": "acids-lab",
+                  "title": "Acids and Bases: interactive lab",
+                  "description": "Colour changes, reactions and careful measurements: explain what acids and bases do, then use evidence to find an unknown concentration.",
+                  "format": "Interactive chemistry lab",
+                  "duration": "Explore at your pace",
+                  "image": "activities/y10/chemistry/acids-and-bases/cover.svg",
+                  "href": "activities/y10/chemistry/acids-and-bases/"
+                },
+                {
+                  "id": "acids-revision",
+                  "title": "Acids and Bases: revision simulator",
+                  "description": "80 syllabus-aligned questions with explanations, selectable areas and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y10/chemistry/acids-and-bases/cover.svg",
+                  "href": "activities/y10/chemistry/acids-and-bases/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "metals",
+              "name": "Metals",
+              "description": "Investigate properties, compare reactivity and choose how to turn an ore into a useful material.",
+              "primaryActivity": "metals-lab",
+              "appTitle": "Metals",
+              "activities": [
+                {
+                  "id": "metals-lab",
+                  "title": "Metals: interactive lab",
+                  "description": "Investigate properties, compare reactivity and choose how to turn an ore into a useful material.",
+                  "format": "Interactive chemistry lab",
+                  "duration": "Explore at your pace",
+                  "image": "activities/y10/chemistry/metals/cover.svg",
+                  "href": "activities/y10/chemistry/metals/"
+                },
+                {
+                  "id": "metals-revision",
+                  "title": "Metals: revision simulator",
+                  "description": "80 syllabus-aligned questions with explanations, selectable areas and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y10/chemistry/metals/cover.svg",
+                  "href": "activities/y10/chemistry/metals/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "redox",
+              "name": "Redox",
+              "description": "Track electrons from metal reactions to photographic images, electrolysis and industrial aluminium extraction.",
+              "primaryActivity": "redox-lab",
+              "appTitle": "Redox",
+              "activities": [
+                {
+                  "id": "redox-lab",
+                  "title": "Redox: interactive lab",
+                  "description": "Track electrons from metal reactions to photographic images, electrolysis and industrial aluminium extraction.",
+                  "format": "Interactive chemistry lab",
+                  "duration": "Explore at your pace",
+                  "image": "activities/y10/chemistry/redox/cover.svg",
+                  "href": "activities/y10/chemistry/redox/"
+                },
+                {
+                  "id": "redox-revision",
+                  "title": "Redox: revision simulator",
+                  "description": "80 syllabus-aligned questions with explanations, selectable areas and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y10/chemistry/redox/cover.svg",
+                  "href": "activities/y10/chemistry/redox/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "organic-chemistry",
+              "name": "Organic Chemistry",
+              "description": "Follow hydrocarbons from a candle and a refinery to functional groups, useful polymers and condensation reactions.",
+              "primaryActivity": "organic-lab",
+              "appTitle": "Organic Chemistry",
+              "activities": [
+                {
+                  "id": "organic-lab",
+                  "title": "Organic Chemistry: interactive lab",
+                  "description": "Follow hydrocarbons from a candle and a refinery to functional groups, useful polymers and condensation reactions.",
+                  "format": "Interactive chemistry lab",
+                  "duration": "Explore at your pace",
+                  "image": "activities/y10/chemistry/organic-chemistry/cover.svg",
+                  "href": "activities/y10/chemistry/organic-chemistry/"
+                },
+                {
+                  "id": "organic-revision",
+                  "title": "Organic Chemistry: revision simulator",
+                  "description": "80 syllabus-aligned questions with explanations, selectable areas and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y10/chemistry/organic-chemistry/cover.svg",
+                  "href": "activities/y10/chemistry/organic-chemistry/revision.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "y11",
