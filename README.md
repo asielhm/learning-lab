@@ -133,3 +133,39 @@ Shared files live in `assets/y10-chemistry/`. Edit the syllabus material and cla
 As requested, Google recording remains deferred until the Chemistry/Physics recording update. The four new revision wrappers use `data-recording="paused"` and course `Year 10 Chemistry`; students receive local scores and reviews without identity collection or Google submissions. Include these banks and the five Y7 banks in the later canonical Google question-bank/dashboard deployment before removing the paused flags. Existing recorded quizzes are unchanged.
 
 Run `node tests/y10-chemistry.mjs` for physical calculations and all model/control/stage boundaries. With a static server, run `LEARNING_LAB_BASE_URL=http://127.0.0.1:PORT node tests/y10-chemistry-browser.cjs` for all investigations, practical gates, notebooks, endpoint/overshoot logic, apparatus interactions, revision scores/retries and desktop/mobile layouts. These checks do not write to the live spreadsheet.
+
+## Y12 IB Maths and the GDC trainer
+
+Year 12 Maths has calculator essentials and the five IB topic groups. Each page
+filters its guided examples and reference links for AA SL, AA HL, AI SL or AI HL.
+There are 20 guided simulator examples. The source manual has 42 entries, with
+reviewed procedures and unverified outlines labelled separately. Guided practice
+requires the highlighted key in sequence; free mode uses the same calculator
+engine. These practice actions are not sent to Google Sheets.
+
+The reusable source is in `asielhm/GDC-trainer`, branch
+`learning-lab-integration`. `activities/y12/maths/gdc-trainer/` is generated static
+output; edit the source repository rather than the compiled files. To update it:
+
+```sh
+cd /workspace/GDC-trainer
+npm ci --cache /tmp/gdc-npm-cache --no-audit --no-fund
+npm test
+node tools/export-learning-lab.mjs /workspace/Science_Y9_circulatory/activities/y12/maths/gdc-trainer
+cd /workspace/Science_Y9_circulatory
+python3 tools/build_y12_gdc_pages.py
+python3 tools/validate_catalog.py
+```
+
+The export uses the deployed `/learning-lab/` prefix. Local development can serve
+both the platform root and this prefix with `python3 tools/serve.py --port 8000`.
+The root `.nojekyll` file ensures GitHub Pages publishes the trainer's `_next`
+assets. The trainer is a static React/Next.js export: students do not need a Node
+server, calculator account, or external trainer deployment.
+
+The simulator supports selected arithmetic, graph, statistics, probability and
+FV calculations; it is not complete calculator firmware. The calculus rate and
+area examples explicitly use finite differences and trapezoids. They do not claim
+to implement the native derivative/integral commands whose reference procedures
+remain pending. Extend `data/training.ts` in the source repository to add tested
+sequences and attach them to one or more topic groups.

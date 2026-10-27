@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[67287,["/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/16ty2921ivfs3.js","/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/0d3shmwh5_nmn.js","/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/03-o8ffkbjb_v.js","/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/0gerb5ih9hwq~.js"],"GdcTrainer"]
+3:I[97367,["/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/16ty2921ivfs3.js","/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/03-o8ffkbjb_v.js","async":true}],["$","script","script-1",{"src":"/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/0gerb5ih9hwq~.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"fHX6tbfJqug8_DEeVkz4d"}
+5:null

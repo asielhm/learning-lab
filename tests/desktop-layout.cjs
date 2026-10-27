@@ -31,7 +31,7 @@ const pages=['/','/activities/y9/science/circulatory-system/','/activities/y9/sc
   for(const[route,selector,name]of[['/activities/y10/chemistry/acids-and-bases/','#workbench','chemistry'],['/activities/y9/science/gas-laws/','#experiment','gas'],['/activities/y7/maths/numbers-i/','.math-widget','math']]){await p.goto(base+route);await p.locator(selector).first().waitFor();await p.locator(selector).first().screenshot({path:`/tmp/desktop-final-${name}.png`});}
   // Every public HTML shell, including the generated wrappers, uses the common template.
   const walk=folder=>fs.readdirSync(folder,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(folder,e.name)):e.name.endsWith('.html')?[path.join(folder,e.name)]:[]);
-  for(const file of['index.html',...walk('activities'),...walk('teacher')]){const html=fs.readFileSync(file,'utf8'),matches=html.match(/<link[^>]+href="([^"]*desktop-layout\.css[^\"]*)"/g)||[];assert.equal(matches.length,1,file);const href=matches[0].match(/href="([^"]+)"/)[1].split('?')[0];assert(fs.existsSync(path.resolve(path.dirname(file),href)),file);}
+  for(const file of['index.html',...walk('activities'),...walk('teacher')].filter(file=>!file.includes('gdc-trainer/'))){const html=fs.readFileSync(file,'utf8'),matches=html.match(/<link[^>]+href="([^"]*desktop-layout\.css[^\"]*)"/g)||[];assert.equal(matches.length,1,file);const href=matches[0].match(/href="([^"]+)"/)[1].split('?')[0];assert(fs.existsSync(path.resolve(path.dirname(file),href)),file);}
   assert.deepEqual(errors,[]);console.log('Shared desktop template, wide revision interaction, in-view large-bench controls and all public stylesheet links passed.');
  }finally{await b.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

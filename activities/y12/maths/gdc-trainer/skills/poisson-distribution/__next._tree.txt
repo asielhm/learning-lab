@@ -1,0 +1,2 @@
+:HL["/learning-lab/activities/y12/maths/gdc-trainer/_next/static/chunks/0xo~-~cvgrmv7.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"skills","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"poisson-distribution","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"fHX6tbfJqug8_DEeVkz4d"}

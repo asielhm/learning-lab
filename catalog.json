@@ -400,7 +400,123 @@
       "id": "y12",
       "name": "Year 12",
       "shortName": "Y12",
-      "subjects": []
+      "subjects": [
+        {
+          "id": "maths",
+          "name": "Maths",
+          "description": "IB Mathematics: topic-linked GDC practice for AA/AI at SL and HL.",
+          "topics": [
+            {
+              "id": "essentials",
+              "name": "Calculator essentials",
+              "description": "Learn the keys, navigation and settings before applying them to a topic.",
+              "primaryActivity": "gdc-essentials",
+              "appTitle": "Calculator essentials",
+              "activities": [
+                {
+                  "id": "gdc-essentials",
+                  "title": "Calculator essentials: GDC practice",
+                  "description": "Learn the keys, navigation and settings before applying them to a topic.",
+                  "format": "Guided calculator practice",
+                  "duration": "Choose a calculator skill",
+                  "href": "activities/y12/maths/essentials/",
+                  "image": "activities/y12/maths/essentials/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "number-and-algebra",
+              "name": "Number and algebra",
+              "description": "Use powers, logarithms, sequences, equations and financial calculations.",
+              "primaryActivity": "gdc-number-and-algebra",
+              "appTitle": "Number and algebra",
+              "activities": [
+                {
+                  "id": "gdc-number-and-algebra",
+                  "title": "Number and algebra: GDC practice",
+                  "description": "Use powers, logarithms, sequences, equations and financial calculations.",
+                  "format": "Guided calculator practice",
+                  "duration": "Choose a calculator skill",
+                  "href": "activities/y12/maths/number-and-algebra/",
+                  "image": "activities/y12/maths/number-and-algebra/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "functions",
+              "name": "Functions",
+              "description": "Graph functions, find roots, intersections and turning points, and interpret models.",
+              "primaryActivity": "gdc-functions",
+              "appTitle": "Functions",
+              "activities": [
+                {
+                  "id": "gdc-functions",
+                  "title": "Functions: GDC practice",
+                  "description": "Graph functions, find roots, intersections and turning points, and interpret models.",
+                  "format": "Guided calculator practice",
+                  "duration": "Choose a calculator skill",
+                  "href": "activities/y12/maths/functions/",
+                  "image": "activities/y12/maths/functions/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "geometry-and-trigonometry",
+              "name": "Geometry and trigonometry",
+              "description": "Choose angle units and use roots, trigonometric ratios and inverse functions.",
+              "primaryActivity": "gdc-geometry-and-trigonometry",
+              "appTitle": "Geometry and trigonometry",
+              "activities": [
+                {
+                  "id": "gdc-geometry-and-trigonometry",
+                  "title": "Geometry and trigonometry: GDC practice",
+                  "description": "Choose angle units and use roots, trigonometric ratios and inverse functions.",
+                  "format": "Guided calculator practice",
+                  "duration": "Choose a calculator skill",
+                  "href": "activities/y12/maths/geometry-and-trigonometry/",
+                  "image": "activities/y12/maths/geometry-and-trigonometry/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "statistics-and-probability",
+              "name": "Statistics and probability",
+              "description": "Work with lists, regression, distributions and statistical procedures.",
+              "primaryActivity": "gdc-statistics-and-probability",
+              "appTitle": "Statistics and probability",
+              "activities": [
+                {
+                  "id": "gdc-statistics-and-probability",
+                  "title": "Statistics and probability: GDC practice",
+                  "description": "Work with lists, regression, distributions and statistical procedures.",
+                  "format": "Guided calculator practice",
+                  "duration": "Choose a calculator skill",
+                  "href": "activities/y12/maths/statistics-and-probability/",
+                  "image": "activities/y12/maths/statistics-and-probability/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "calculus",
+              "name": "Calculus",
+              "description": "Investigate turning points and numerical rates and areas, with further calculator procedures in the manual.",
+              "primaryActivity": "gdc-calculus",
+              "appTitle": "Calculus",
+              "activities": [
+                {
+                  "id": "gdc-calculus",
+                  "title": "Calculus: GDC practice",
+                  "description": "Investigate turning points and numerical rates and areas, with further calculator procedures in the manual.",
+                  "format": "Guided calculator practice",
+                  "duration": "Choose a calculator skill",
+                  "href": "activities/y12/maths/calculus/",
+                  "image": "activities/y12/maths/calculus/cover.svg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
