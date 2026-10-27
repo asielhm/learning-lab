@@ -1,0 +1,854 @@
+{
+  "topicId": "numbers-iii",
+  "title": "Numbers III",
+  "categories": [
+    "Ratio sharing",
+    "Map scales",
+    "Fractions decimals and percentages",
+    "Percentage changes",
+    "Fraction operations",
+    "Rational BIDMAS and powers"
+  ],
+  "questions": [
+    {
+      "id": "numbers-iii-001",
+      "category": "Ratio sharing",
+      "difficulty": "Foundation",
+      "prompt": "£30 is shared between A and B in the ratio 2:3. How many pounds does A receive?",
+      "options": [
+        "12",
+        "13",
+        "11",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "5 parts; one part = 30/5; A receives 2 parts."
+    },
+    {
+      "id": "numbers-iii-002",
+      "category": "Ratio sharing",
+      "difficulty": "Foundation",
+      "prompt": "£42 is shared between A and B in the ratio 3:4. How many pounds does A receive?",
+      "options": [
+        "19",
+        "18",
+        "17",
+        "36"
+      ],
+      "answer": 1,
+      "explanation": "7 parts; one part = 42/7; A receives 3 parts."
+    },
+    {
+      "id": "numbers-iii-003",
+      "category": "Ratio sharing",
+      "difficulty": "Foundation",
+      "prompt": "£64 is shared between A and B in the ratio 3:5. How many pounds does A receive?",
+      "options": [
+        "25",
+        "23",
+        "24",
+        "48"
+      ],
+      "answer": 2,
+      "explanation": "8 parts; one part = 64/8; A receives 3 parts."
+    },
+    {
+      "id": "numbers-iii-004",
+      "category": "Ratio sharing",
+      "difficulty": "Foundation",
+      "prompt": "£72 is shared between A and B in the ratio 5:4. How many pounds does A receive?",
+      "options": [
+        "41",
+        "39",
+        "80",
+        "40"
+      ],
+      "answer": 3,
+      "explanation": "9 parts; one part = 72/9; A receives 5 parts."
+    },
+    {
+      "id": "numbers-iii-005",
+      "category": "Ratio sharing",
+      "difficulty": "Challenge",
+      "prompt": "£54 is shared in the ratio A:B:C = 2:3:4. How many pounds does B receive?",
+      "options": [
+        "18",
+        "19",
+        "17",
+        "36"
+      ],
+      "answer": 0,
+      "explanation": "Total parts = 9. B receives 3/9 of £54."
+    },
+    {
+      "id": "numbers-iii-006",
+      "category": "Ratio sharing",
+      "difficulty": "Challenge",
+      "prompt": "£60 is shared in the ratio A:B:C = 1:2:3. How many pounds does B receive?",
+      "options": [
+        "21",
+        "20",
+        "19",
+        "40"
+      ],
+      "answer": 1,
+      "explanation": "Total parts = 6. B receives 2/6 of £60."
+    },
+    {
+      "id": "numbers-iii-007",
+      "category": "Ratio sharing",
+      "difficulty": "Challenge",
+      "prompt": "£84 is shared in the ratio A:B:C = 2:3:7. How many pounds does B receive?",
+      "options": [
+        "22",
+        "20",
+        "21",
+        "42"
+      ],
+      "answer": 2,
+      "explanation": "Total parts = 12. B receives 3/12 of £84."
+    },
+    {
+      "id": "numbers-iii-008",
+      "category": "Ratio sharing",
+      "difficulty": "Foundation",
+      "prompt": "Which ratio is equivalent to 2:3?",
+      "options": [
+        "4:9",
+        "3:2",
+        "2:6",
+        "6:9"
+      ],
+      "answer": 3,
+      "explanation": "Multiply both parts by the same factor, here 3."
+    },
+    {
+      "id": "numbers-iii-009",
+      "category": "Ratio sharing",
+      "difficulty": "Application",
+      "prompt": "Red:blue counters = 3:5. What fraction of all counters is red?",
+      "options": [
+        "3/8",
+        "3/5",
+        "5/8",
+        "5/3"
+      ],
+      "answer": 0,
+      "explanation": "There are 3 + 5 = 8 equal parts in total."
+    },
+    {
+      "id": "numbers-iii-010",
+      "category": "Ratio sharing",
+      "difficulty": "Challenge",
+      "prompt": "A:B = 2:7 and B receives £35. How many pounds are shared in total?",
+      "options": [
+        "46",
+        "45",
+        "44",
+        "90"
+      ],
+      "answer": 1,
+      "explanation": "One part is £5; there are 9 parts, giving £45."
+    },
+    {
+      "id": "numbers-iii-011",
+      "category": "Map scales",
+      "difficulty": "Application",
+      "prompt": "A map has scale 1:10,000. Two points are 3 cm apart on the map. What is the real distance in kilometres?",
+      "options": [
+        "13/10",
+        "-7/10",
+        "3/10",
+        "3/5"
+      ],
+      "answer": 2,
+      "explanation": "3 × 10000 cm = 3/10 km."
+    },
+    {
+      "id": "numbers-iii-012",
+      "category": "Map scales",
+      "difficulty": "Application",
+      "prompt": "A map has scale 1:25,000. Two points are 4 cm apart on the map. What is the real distance in kilometres?",
+      "options": [
+        "2",
+        "0",
+        "1/2",
+        "1"
+      ],
+      "answer": 3,
+      "explanation": "4 × 25000 cm = 1 km."
+    },
+    {
+      "id": "numbers-iii-013",
+      "category": "Map scales",
+      "difficulty": "Foundation",
+      "prompt": "A map has scale 1:50,000. Two points are 6 cm apart on the map. What is the real distance in kilometres?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "6 × 50000 cm = 3 km."
+    },
+    {
+      "id": "numbers-iii-014",
+      "category": "Map scales",
+      "difficulty": "Foundation",
+      "prompt": "A map has scale 1:100,000. Two points are 2 cm apart on the map. What is the real distance in kilometres?",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "2 × 100000 cm = 2 km."
+    },
+    {
+      "id": "numbers-iii-015",
+      "category": "Map scales",
+      "difficulty": "Application",
+      "prompt": "At scale 1:25,000, a real distance of 2 km is how many centimetres on the map?",
+      "options": [
+        "9",
+        "7",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "Convert 2 km to 200000 cm, then divide by 25000."
+    },
+    {
+      "id": "numbers-iii-016",
+      "category": "Map scales",
+      "difficulty": "Application",
+      "prompt": "At scale 1:50,000, a real distance of 3 km is how many centimetres on the map?",
+      "options": [
+        "7",
+        "5",
+        "12",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "Convert 3 km to 300000 cm, then divide by 50000."
+    },
+    {
+      "id": "numbers-iii-017",
+      "category": "Map scales",
+      "difficulty": "Application",
+      "prompt": "At scale 1:100,000, a real distance of 5 km is how many centimetres on the map?",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "Convert 5 km to 500000 cm, then divide by 100000."
+    },
+    {
+      "id": "numbers-iii-018",
+      "category": "Map scales",
+      "difficulty": "Foundation",
+      "prompt": "What does a map scale 1:50,000 mean?",
+      "options": [
+        "1 cm represents 50,000 m.",
+        "1 cm on the map represents 50,000 cm in real life.",
+        "50,000 cm on the map represents 1 cm in real life.",
+        "1 cm represents 50,000 km."
+      ],
+      "answer": 1,
+      "explanation": "The ratio compares the same units."
+    },
+    {
+      "id": "numbers-iii-019",
+      "category": "Map scales",
+      "difficulty": "Challenge",
+      "prompt": "A scale drawing shows 4 cm for a real length of 1 m. What is the scale factor n in 1:n?",
+      "options": [
+        "26",
+        "24",
+        "25",
+        "50"
+      ],
+      "answer": 2,
+      "explanation": "1 m = 100 cm; 100 ÷ 4 = 25."
+    },
+    {
+      "id": "numbers-iii-020",
+      "category": "Map scales",
+      "difficulty": "Challenge",
+      "prompt": "On a 1:10,000 map, a square park has real side 1 km. What is the map area in cm²?",
+      "options": [
+        "101",
+        "99",
+        "200",
+        "100"
+      ],
+      "answer": 3,
+      "explanation": "1 km = 100,000 cm. Map side = 10 cm, so area = 100 cm². Scale areas using the square of the length scale."
+    },
+    {
+      "id": "numbers-iii-021",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Foundation",
+      "prompt": "Write 3/4 as a decimal.",
+      "options": [
+        "0.75",
+        "1.75",
+        "-0.25",
+        "1.5"
+      ],
+      "answer": 0,
+      "explanation": "3 ÷ 4 = 0.75."
+    },
+    {
+      "id": "numbers-iii-022",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Foundation",
+      "prompt": "Write 0.4 as a fraction in simplest form.",
+      "options": [
+        "7/5",
+        "2/5",
+        "-3/5",
+        "4/5"
+      ],
+      "answer": 1,
+      "explanation": "0.4 = 4/10 = 2/5."
+    },
+    {
+      "id": "numbers-iii-023",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Application",
+      "prompt": "Write 35% as a fraction in simplest form.",
+      "options": [
+        "27/20",
+        "-13/20",
+        "7/20",
+        "7/10"
+      ],
+      "answer": 2,
+      "explanation": "35/100 simplifies by 5 to 7/20."
+    },
+    {
+      "id": "numbers-iii-024",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Application",
+      "prompt": "Write 1/8 as a percentage. Enter its numerical value.",
+      "options": [
+        "13.5",
+        "11.5",
+        "25",
+        "12.5"
+      ],
+      "answer": 3,
+      "explanation": "1/8 = 0.125, so 12.5%."
+    },
+    {
+      "id": "numbers-iii-025",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Foundation",
+      "prompt": "Write 0.06 as a percentage. Enter its numerical value.",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "0.06 × 100 = 6%."
+    },
+    {
+      "id": "numbers-iii-026",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Foundation",
+      "prompt": "What numerator completes 3/5 = n/20?",
+      "options": [
+        "13",
+        "12",
+        "11",
+        "24"
+      ],
+      "answer": 1,
+      "explanation": "Multiply numerator and denominator by 4."
+    },
+    {
+      "id": "numbers-iii-027",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Application",
+      "prompt": "What denominator completes 7/8 = 21/n?",
+      "options": [
+        "25",
+        "23",
+        "24",
+        "48"
+      ],
+      "answer": 2,
+      "explanation": "The numerator triples, so the denominator must triple."
+    },
+    {
+      "id": "numbers-iii-028",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Application",
+      "prompt": "Write 125% as a decimal.",
+      "options": [
+        "2.25",
+        "0.25",
+        "2.5",
+        "1.25"
+      ],
+      "answer": 3,
+      "explanation": "125 ÷ 100 = 1.25."
+    },
+    {
+      "id": "numbers-iii-029",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Challenge",
+      "prompt": "Write 0.375 as a fraction in simplest form.",
+      "options": [
+        "3/8",
+        "11/8",
+        "-5/8",
+        "3/4"
+      ],
+      "answer": 0,
+      "explanation": "375/1000 simplifies by 125 to 3/8."
+    },
+    {
+      "id": "numbers-iii-030",
+      "category": "Fractions decimals and percentages",
+      "difficulty": "Challenge",
+      "prompt": "Which value is greatest?",
+      "options": [
+        "2/5",
+        "0.45",
+        "42%",
+        "0.405"
+      ],
+      "answer": 1,
+      "explanation": "Compare decimals: 0.45, 0.4, 0.42 and 0.405."
+    },
+    {
+      "id": "numbers-iii-031",
+      "category": "Percentage changes",
+      "difficulty": "Foundation",
+      "prompt": "An item costs £80. After a 25% discount, what is its new price in pounds?",
+      "options": [
+        "61",
+        "59",
+        "60",
+        "120"
+      ],
+      "answer": 2,
+      "explanation": "The multiplier is 3/4. Multiply the original £80 by it."
+    },
+    {
+      "id": "numbers-iii-032",
+      "category": "Percentage changes",
+      "difficulty": "Foundation",
+      "prompt": "An item costs £120. After a 10% increase, what is its new price in pounds?",
+      "options": [
+        "133",
+        "131",
+        "264",
+        "132"
+      ],
+      "answer": 3,
+      "explanation": "The multiplier is 11/10. Multiply the original £120 by it."
+    },
+    {
+      "id": "numbers-iii-033",
+      "category": "Percentage changes",
+      "difficulty": "Application",
+      "prompt": "An item costs £60. After a 15% discount, what is its new price in pounds?",
+      "options": [
+        "51",
+        "52",
+        "50",
+        "102"
+      ],
+      "answer": 0,
+      "explanation": "The multiplier is 17/20. Multiply the original £60 by it."
+    },
+    {
+      "id": "numbers-iii-034",
+      "category": "Percentage changes",
+      "difficulty": "Application",
+      "prompt": "An item costs £200. After a 12% increase, what is its new price in pounds?",
+      "options": [
+        "225",
+        "224",
+        "223",
+        "448"
+      ],
+      "answer": 1,
+      "explanation": "The multiplier is 28/25. Multiply the original £200 by it."
+    },
+    {
+      "id": "numbers-iii-035",
+      "category": "Percentage changes",
+      "difficulty": "Foundation",
+      "prompt": "An item costs £48. After a 25% discount, what is its new price in pounds?",
+      "options": [
+        "37",
+        "35",
+        "36",
+        "72"
+      ],
+      "answer": 2,
+      "explanation": "The multiplier is 3/4. Multiply the original £48 by it."
+    },
+    {
+      "id": "numbers-iii-036",
+      "category": "Percentage changes",
+      "difficulty": "Foundation",
+      "prompt": "An item costs £250. After a 20% increase, what is its new price in pounds?",
+      "options": [
+        "301",
+        "299",
+        "600",
+        "300"
+      ],
+      "answer": 3,
+      "explanation": "The multiplier is 6/5. Multiply the original £250 by it."
+    },
+    {
+      "id": "numbers-iii-037",
+      "category": "Percentage changes",
+      "difficulty": "Challenge",
+      "prompt": "A £100 price rises by 20%, then the new price falls by 20%. What is the final price in pounds?",
+      "options": [
+        "96",
+        "97",
+        "95",
+        "192"
+      ],
+      "answer": 0,
+      "explanation": "100 × 1.2 × 0.8 = 96. The second change uses £120 as the base."
+    },
+    {
+      "id": "numbers-iii-038",
+      "category": "Percentage changes",
+      "difficulty": "Challenge",
+      "prompt": "After a 25% discount, a price is £60. What was the original price in pounds?",
+      "options": [
+        "81",
+        "80",
+        "79",
+        "160"
+      ],
+      "answer": 1,
+      "explanation": "£60 is 75% of the original: 60 ÷ 0.75 = 80."
+    },
+    {
+      "id": "numbers-iii-039",
+      "category": "Percentage changes",
+      "difficulty": "Application",
+      "prompt": "A price rises from £50 to £65. What is the percentage increase?",
+      "options": [
+        "31",
+        "29",
+        "30",
+        "60"
+      ],
+      "answer": 2,
+      "explanation": "Change = 15; 15/50 × 100 = 30%."
+    },
+    {
+      "id": "numbers-iii-040",
+      "category": "Percentage changes",
+      "difficulty": "Challenge",
+      "prompt": "A £240 price is reduced by 15%, then by a further 10%. What is the final price in pounds?",
+      "options": [
+        "923/5",
+        "913/5",
+        "1836/5",
+        "918/5"
+      ],
+      "answer": 3,
+      "explanation": "240 × 0.85 = 204; 204 × 0.9 = 183.60."
+    },
+    {
+      "id": "numbers-iii-041",
+      "category": "Fraction operations",
+      "difficulty": "Foundation",
+      "prompt": "Calculate 1/3 + 1/6. Give the simplest form.",
+      "options": [
+        "1/2",
+        "3/2",
+        "-1/2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Use a common denominator, operate on the numerators, then simplify."
+    },
+    {
+      "id": "numbers-iii-042",
+      "category": "Fraction operations",
+      "difficulty": "Foundation",
+      "prompt": "Calculate 3/4 − 1/8. Give the simplest form.",
+      "options": [
+        "13/8",
+        "5/8",
+        "-3/8",
+        "5/4"
+      ],
+      "answer": 1,
+      "explanation": "Use a common denominator, operate on the numerators, then simplify."
+    },
+    {
+      "id": "numbers-iii-043",
+      "category": "Fraction operations",
+      "difficulty": "Foundation",
+      "prompt": "Calculate 2/3 × 3/5. Give the simplest form.",
+      "options": [
+        "7/5",
+        "-3/5",
+        "2/5",
+        "4/5"
+      ],
+      "answer": 2,
+      "explanation": "Multiply numerators and denominators, then simplify."
+    },
+    {
+      "id": "numbers-iii-044",
+      "category": "Fraction operations",
+      "difficulty": "Foundation",
+      "prompt": "Calculate 3/4 ÷ 1/2. Give the simplest form.",
+      "options": [
+        "5/2",
+        "1/2",
+        "3",
+        "3/2"
+      ],
+      "answer": 3,
+      "explanation": "Multiply the first fraction by the reciprocal of the second, then simplify."
+    },
+    {
+      "id": "numbers-iii-045",
+      "category": "Fraction operations",
+      "difficulty": "Application",
+      "prompt": "Calculate 5/6 + 1/4. Give the simplest form.",
+      "options": [
+        "13/12",
+        "25/12",
+        "1/12",
+        "13/6"
+      ],
+      "answer": 0,
+      "explanation": "Use a common denominator, operate on the numerators, then simplify."
+    },
+    {
+      "id": "numbers-iii-046",
+      "category": "Fraction operations",
+      "difficulty": "Application",
+      "prompt": "Calculate 7/8 − 1/3. Give the simplest form.",
+      "options": [
+        "37/24",
+        "13/24",
+        "-11/24",
+        "13/12"
+      ],
+      "answer": 1,
+      "explanation": "Use a common denominator, operate on the numerators, then simplify."
+    },
+    {
+      "id": "numbers-iii-047",
+      "category": "Fraction operations",
+      "difficulty": "Application",
+      "prompt": "Calculate 4/5 × 5/6. Give the simplest form.",
+      "options": [
+        "5/3",
+        "-1/3",
+        "2/3",
+        "4/3"
+      ],
+      "answer": 2,
+      "explanation": "Multiply numerators and denominators, then simplify."
+    },
+    {
+      "id": "numbers-iii-048",
+      "category": "Fraction operations",
+      "difficulty": "Application",
+      "prompt": "Calculate 2/3 ÷ 4/9. Give the simplest form.",
+      "options": [
+        "5/2",
+        "1/2",
+        "3",
+        "3/2"
+      ],
+      "answer": 3,
+      "explanation": "Multiply the first fraction by the reciprocal of the second, then simplify."
+    },
+    {
+      "id": "numbers-iii-049",
+      "category": "Fraction operations",
+      "difficulty": "Foundation",
+      "prompt": "Calculate 3/2 − 5/4. Give the simplest form.",
+      "options": [
+        "1/4",
+        "5/4",
+        "-3/4",
+        "1/2"
+      ],
+      "answer": 0,
+      "explanation": "Use a common denominator, operate on the numerators, then simplify."
+    },
+    {
+      "id": "numbers-iii-050",
+      "category": "Fraction operations",
+      "difficulty": "Application",
+      "prompt": "Calculate 5/12 + 7/18. Give the simplest form.",
+      "options": [
+        "65/36",
+        "29/36",
+        "-7/36",
+        "29/18"
+      ],
+      "answer": 1,
+      "explanation": "Use a common denominator, operate on the numerators, then simplify."
+    },
+    {
+      "id": "numbers-iii-051",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate 1/2 + 3/4 × 2.",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "Multiply first: 3/2; add 1/2 to give 2."
+    },
+    {
+      "id": "numbers-iii-052",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Application",
+      "prompt": "Evaluate (1/2 + 3/4) × 2.",
+      "options": [
+        "7/2",
+        "3/2",
+        "5",
+        "5/2"
+      ],
+      "answer": 3,
+      "explanation": "Brackets give 5/4, then multiply by 2."
+    },
+    {
+      "id": "numbers-iii-053",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (2/3)².",
+      "options": [
+        "4/9",
+        "13/9",
+        "-5/9",
+        "8/9"
+      ],
+      "answer": 0,
+      "explanation": "Square numerator and denominator: 4/9."
+    },
+    {
+      "id": "numbers-iii-054",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate √(9/16).",
+      "options": [
+        "7/4",
+        "3/4",
+        "-1/4",
+        "3/2"
+      ],
+      "answer": 1,
+      "explanation": "Principal square roots of numerator and denominator are 3 and 4."
+    },
+    {
+      "id": "numbers-iii-055",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Application",
+      "prompt": "Evaluate 3/4 ÷ 1/2 + 1/4.",
+      "options": [
+        "11/4",
+        "3/4",
+        "7/4",
+        "7/2"
+      ],
+      "answer": 2,
+      "explanation": "Divide first: 3/2, then add 1/4."
+    },
+    {
+      "id": "numbers-iii-056",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Application",
+      "prompt": "Evaluate 2 − (1/2 + 3/4).",
+      "options": [
+        "7/4",
+        "-1/4",
+        "3/2",
+        "3/4"
+      ],
+      "answer": 3,
+      "explanation": "Brackets give 5/4; 8/4 − 5/4 = 3/4."
+    },
+    {
+      "id": "numbers-iii-057",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Application",
+      "prompt": "Evaluate (1/2)³ + 3/8.",
+      "options": [
+        "1/2",
+        "3/2",
+        "-1/2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "1/8 + 3/8 = 4/8 = 1/2."
+    },
+    {
+      "id": "numbers-iii-058",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate (5/6 − 1/3) ÷ 3/4.",
+      "options": [
+        "5/3",
+        "2/3",
+        "-1/3",
+        "4/3"
+      ],
+      "answer": 1,
+      "explanation": "Brackets give 1/2; multiply by 4/3 to get 2/3."
+    },
+    {
+      "id": "numbers-iii-059",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate √(25/36) − (1/2)².",
+      "options": [
+        "19/12",
+        "-5/12",
+        "7/12",
+        "7/6"
+      ],
+      "answer": 2,
+      "explanation": "5/6 − 1/4 = 10/12 − 3/12 = 7/12."
+    },
+    {
+      "id": "numbers-iii-060",
+      "category": "Rational BIDMAS and powers",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate (3/4 + 1/2) × (2/5)².",
+      "options": [
+        "6/5",
+        "-4/5",
+        "2/5",
+        "1/5"
+      ],
+      "answer": 3,
+      "explanation": "5/4 × 4/25 = 1/5."
+    }
+  ]
+}

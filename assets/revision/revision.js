@@ -1,5 +1,11 @@
-import {recorder} from '../records/records.js?v=identity-2';
+import {recorder as sharedRecorder} from '../records/records.js?v=identity-2';
 const root = document.querySelector('#revision-app');
+// New course units can run self-checks before their server question bank is deployed.
+const recorder = root?.dataset.recording === 'paused' ? {
+  ready:Promise.resolve(), fields:()=>'', identity:()=>null, identify:()=>true,
+  syncMode:()=>{}, record:()=>{}, refresh:()=>{},
+  markup:()=>'<p class="revision-bottom-note">Your score and answer review are shown on this page only. Teacher recording for this unit will be connected later.</p>'
+} : sharedRecorder;
 const escape = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const difficulties = ['Foundation', 'Application', 'Challenge'];
 let bank;

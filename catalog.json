@@ -11,17 +11,116 @@
           "description": "Build mathematical understanding through visual models, reasoning and practice.",
           "topics": [
             {
-              "id": "algebra",
-              "name": "Algebra",
-              "description": "Translate stories into expressions, collect like terms and expand brackets using boxes, shapes and bags.",
-              "primaryActivity": "algebra-lab",
-              "appTitle": "Algebra web app",
+              "id": "numbers-i",
+              "name": "Numbers I",
+              "description": "Investigate primes, factors, multiples, decimals, HCF, LCM, powers, roots and order of operations.",
+              "primaryActivity": "numbers-i-lab",
+              "appTitle": "Numbers I",
               "activities": [
+                {
+                  "id": "numbers-i-lab",
+                  "title": "Numbers I: interactive unit",
+                  "description": "Investigate primes, factors, multiples, decimals, HCF, LCM, powers, roots and order of operations.",
+                  "format": "Interactive maths unit",
+                  "duration": "Work at your pace",
+                  "image": "activities/y7/maths/numbers-i/cover.svg",
+                  "href": "activities/y7/maths/numbers-i/"
+                },
+                {
+                  "id": "numbers-i-revision",
+                  "title": "Numbers I: revision simulator",
+                  "description": "Practise 60 varied questions with explanations, selectable topics and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y7/maths/numbers-i/cover.svg",
+                  "href": "activities/y7/maths/numbers-i/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "geometry-i",
+              "name": "Geometry I",
+              "description": "Explore shape properties, polygon and parallel-line angles, compass constructions, compound area and perimeter.",
+              "primaryActivity": "geometry-i-lab",
+              "appTitle": "Geometry I",
+              "activities": [
+                {
+                  "id": "geometry-i-lab",
+                  "title": "Geometry I: interactive unit",
+                  "description": "Explore shape properties, polygon and parallel-line angles, compass constructions, compound area and perimeter.",
+                  "format": "Interactive maths unit",
+                  "duration": "Work at your pace",
+                  "image": "activities/y7/maths/geometry-i/cover.svg",
+                  "href": "activities/y7/maths/geometry-i/"
+                },
+                {
+                  "id": "geometry-i-revision",
+                  "title": "Geometry I: revision simulator",
+                  "description": "Practise 60 varied questions with explanations, selectable topics and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y7/maths/geometry-i/cover.svg",
+                  "href": "activities/y7/maths/geometry-i/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "numbers-ii",
+              "name": "Numbers II",
+              "description": "Investigate number sets, signed arithmetic, negative bases, powers, roots and BIDMAS with integers.",
+              "primaryActivity": "numbers-ii-lab",
+              "appTitle": "Numbers II",
+              "activities": [
+                {
+                  "id": "numbers-ii-lab",
+                  "title": "Numbers II: interactive unit",
+                  "description": "Investigate number sets, signed arithmetic, negative bases, powers, roots and BIDMAS with integers.",
+                  "format": "Interactive maths unit",
+                  "duration": "Work at your pace",
+                  "image": "activities/y7/maths/numbers-ii/cover.svg",
+                  "href": "activities/y7/maths/numbers-ii/"
+                },
+                {
+                  "id": "numbers-ii-revision",
+                  "title": "Numbers II: revision simulator",
+                  "description": "Practise 60 varied questions with explanations, selectable topics and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y7/maths/numbers-ii/cover.svg",
+                  "href": "activities/y7/maths/numbers-ii/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "algebra",
+              "name": "Algebra I",
+              "description": "Use variables and coordinates, then connect direct and inverse proportion to stories, tables, formulas and graphs.",
+              "primaryActivity": "algebra-i-lab",
+              "appTitle": "Algebra I",
+              "activities": [
+                {
+                  "id": "algebra-i-lab",
+                  "title": "Algebra I: interactive unit",
+                  "description": "Use variables and coordinates, then connect direct and inverse proportion to stories, tables, formulas and graphs.",
+                  "format": "Interactive maths unit",
+                  "duration": "Work at your pace",
+                  "image": "activities/y7/maths/algebra-i/cover.svg",
+                  "href": "activities/y7/maths/algebra-i/"
+                },
+                {
+                  "id": "algebra-i-revision",
+                  "title": "Algebra I: revision simulator",
+                  "description": "Practise 60 varied questions with explanations, selectable topics and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y7/maths/algebra-i/cover.svg",
+                  "href": "activities/y7/maths/algebra-i/revision.html"
+                },
                 {
                   "id": "algebra-lab",
                   "title": "Algebra: from boxes to brackets",
                   "description": "Build expressions with pen and clip boxes, sort linear, square and cube terms, and open identical bags to discover the distributive law.",
-                  "format": "Interactive maths lab",
+                  "format": "Boxes & brackets activity",
                   "duration": "Work at your pace",
                   "image": "activities/y7/maths/algebra/cover.svg",
                   "href": "activities/y7/maths/algebra/"
@@ -30,10 +129,37 @@
                   "id": "algebra-revision",
                   "title": "Algebra: revision simulator",
                   "description": "Practise translating, vocabulary, like terms, powers, substitution and expanding brackets with explanations and targeted retries.",
-                  "format": "Revision simulator",
+                  "format": "Boxes & brackets revision",
                   "duration": "Choose your session",
                   "image": "activities/y7/maths/algebra/cover.svg",
                   "href": "activities/y7/maths/algebra/revision.html"
+                }
+              ]
+            },
+            {
+              "id": "numbers-iii",
+              "name": "Numbers III",
+              "description": "Explore ratio sharing, map scales, equivalent fractions, decimals, percentages, discounts and rational-number operations.",
+              "primaryActivity": "numbers-iii-lab",
+              "appTitle": "Numbers III",
+              "activities": [
+                {
+                  "id": "numbers-iii-lab",
+                  "title": "Numbers III: interactive unit",
+                  "description": "Explore ratio sharing, map scales, equivalent fractions, decimals, percentages, discounts and rational-number operations.",
+                  "format": "Interactive maths unit",
+                  "duration": "Work at your pace",
+                  "image": "activities/y7/maths/numbers-iii/cover.svg",
+                  "href": "activities/y7/maths/numbers-iii/"
+                },
+                {
+                  "id": "numbers-iii-revision",
+                  "title": "Numbers III: revision simulator",
+                  "description": "Practise 60 varied questions with explanations, selectable topics and levels, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "image": "activities/y7/maths/numbers-iii/cover.svg",
+                  "href": "activities/y7/maths/numbers-iii/revision.html"
                 }
               ]
             }
@@ -67,7 +193,7 @@
                   "title": "Inside the human heart",
                   "description": "Locate the heart, explore its rotatable 3D anatomy and open the dedicated Heart Lab page for virtual dissection.",
                   "format": "Interactive 3D lab",
-                  "duration": "20\u201330 min",
+                  "duration": "20–30 min",
                   "image": "activities/y9/science/circulatory-system/models/heart-anterior.png",
                   "href": "activities/y9/science/circulatory-system/"
                 },
@@ -94,7 +220,7 @@
                   "title": "Inside the breathing system",
                   "description": "Explore respiratory anatomy, control a breathing simulation and investigate gas exchange at the alveoli.",
                   "format": "Interactive science lab",
-                  "duration": "20\u201330 min",
+                  "duration": "20–30 min",
                   "image": "activities/y9/science/breathing-system/cover.svg",
                   "href": "activities/y9/science/breathing-system/"
                 },
@@ -119,9 +245,9 @@
                 {
                   "id": "gas-laws-lab",
                   "title": "Gas laws: the particle lab",
-                  "description": "Explore Boyle\u2013Mariotte, Charles and Gay-Lussac laws with a movable piston, live graphs, recorded measurements and guided challenges.",
+                  "description": "Explore Boyle–Mariotte, Charles and Gay-Lussac laws with a movable piston, live graphs, recorded measurements and guided challenges.",
                   "format": "Interactive simulation",
-                  "duration": "20\u201330 min",
+                  "duration": "20–30 min",
                   "image": "activities/y9/science/gas-laws/cover.svg",
                   "href": "activities/y9/science/gas-laws/"
                 },

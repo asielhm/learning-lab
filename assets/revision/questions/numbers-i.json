@@ -1,0 +1,854 @@
+{
+  "topicId": "numbers-i",
+  "title": "Numbers I",
+  "categories": [
+    "Primes and prime factors",
+    "Factors multiples HCF and LCM",
+    "Decimals and place value",
+    "Powers and roots in N",
+    "BIDMAS in N",
+    "Number reasoning"
+  ],
+  "questions": [
+    {
+      "id": "numbers-i-001",
+      "category": "Primes and prime factors",
+      "difficulty": "Foundation",
+      "prompt": "Which number is prime?",
+      "options": [
+        "29",
+        "21",
+        "27",
+        "35"
+      ],
+      "answer": 0,
+      "explanation": "29 has exactly two positive factors: 1 and 29."
+    },
+    {
+      "id": "numbers-i-002",
+      "category": "Primes and prime factors",
+      "difficulty": "Foundation",
+      "prompt": "Which statement about 1 is correct?",
+      "options": [
+        "It is prime.",
+        "It is neither prime nor composite.",
+        "It is composite.",
+        "It has no factors."
+      ],
+      "answer": 1,
+      "explanation": "1 has one positive factor; primes have exactly two."
+    },
+    {
+      "id": "numbers-i-003",
+      "category": "Primes and prime factors",
+      "difficulty": "Application",
+      "prompt": "Which is the prime factorisation of 60?",
+      "options": [
+        "2 × 3 × 10",
+        "4 × 3 × 5",
+        "2 × 2 × 3 × 5",
+        "2 × 2 × 15"
+      ],
+      "answer": 2,
+      "explanation": "All factors in the prime factorisation must themselves be prime."
+    },
+    {
+      "id": "numbers-i-004",
+      "category": "Primes and prime factors",
+      "difficulty": "Application",
+      "prompt": "Which is the prime factorisation of 72?",
+      "options": [
+        "2² × 3³",
+        "2 × 3 × 12",
+        "8 × 9",
+        "2³ × 3²"
+      ],
+      "answer": 3,
+      "explanation": "72 = 8 × 9 = 2³ × 3²."
+    },
+    {
+      "id": "numbers-i-005",
+      "category": "Primes and prime factors",
+      "difficulty": "Application",
+      "prompt": "Why is 51 not prime?",
+      "options": [
+        "It is divisible by 3.",
+        "It is odd.",
+        "It is greater than 50.",
+        "It ends in 1."
+      ],
+      "answer": 0,
+      "explanation": "5 + 1 = 6 is divisible by 3; 51 = 3 × 17."
+    },
+    {
+      "id": "numbers-i-006",
+      "category": "Primes and prime factors",
+      "difficulty": "Foundation",
+      "prompt": "Which list contains only prime numbers?",
+      "options": [
+        "1, 2, 3, 5",
+        "2, 3, 5, 7",
+        "3, 5, 9, 11",
+        "2, 4, 7, 13"
+      ],
+      "answer": 1,
+      "explanation": "2 is the only even prime; 1, 4 and 9 are not prime."
+    },
+    {
+      "id": "numbers-i-007",
+      "category": "Primes and prime factors",
+      "difficulty": "Application",
+      "prompt": "A number has prime factorisation 2² × 3 × 7. What is the number?",
+      "options": [
+        "42",
+        "56",
+        "84",
+        "168"
+      ],
+      "answer": 2,
+      "explanation": "4 × 3 × 7 = 84."
+    },
+    {
+      "id": "numbers-i-008",
+      "category": "Primes and prime factors",
+      "difficulty": "Application",
+      "prompt": "Which is the prime factorisation of 100?",
+      "options": [
+        "2 × 5²",
+        "10²",
+        "2² × 5",
+        "2² × 5²"
+      ],
+      "answer": 3,
+      "explanation": "100 = 4 × 25 = 2² × 5². Although 10² equals 100, 10 is not prime."
+    },
+    {
+      "id": "numbers-i-009",
+      "category": "Primes and prime factors",
+      "difficulty": "Foundation",
+      "prompt": "Which prime must divide every even integer greater than 2?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "An even integer is divisible by 2."
+    },
+    {
+      "id": "numbers-i-010",
+      "category": "Primes and prime factors",
+      "difficulty": "Challenge",
+      "prompt": "What is the smallest prime factor of 91?",
+      "options": [
+        "3",
+        "7",
+        "11",
+        "13"
+      ],
+      "answer": 1,
+      "explanation": "91 = 7 × 13; neither 2, 3 nor 5 divides it."
+    },
+    {
+      "id": "numbers-i-011",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Foundation",
+      "prompt": "What is the HCF of 18 and 24?",
+      "options": [
+        "42",
+        "432",
+        "6",
+        "1"
+      ],
+      "answer": 2,
+      "explanation": "HCF = 6. It is the greatest positive divisor of both."
+    },
+    {
+      "id": "numbers-i-012",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Foundation",
+      "prompt": "What is the HCF of 24 and 36?",
+      "options": [
+        "60",
+        "864",
+        "1",
+        "12"
+      ],
+      "answer": 3,
+      "explanation": "HCF = 12. It is the greatest positive divisor of both."
+    },
+    {
+      "id": "numbers-i-013",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Application",
+      "prompt": "What is the HCF of 28 and 42?",
+      "options": [
+        "14",
+        "70",
+        "1176",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "HCF = 14. It is the greatest positive divisor of both."
+    },
+    {
+      "id": "numbers-i-014",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Application",
+      "prompt": "What is the HCF of 35 and 49?",
+      "options": [
+        "84",
+        "7",
+        "1715",
+        "1"
+      ],
+      "answer": 1,
+      "explanation": "HCF = 7. It is the greatest positive divisor of both."
+    },
+    {
+      "id": "numbers-i-015",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Foundation",
+      "prompt": "What is the LCM of 6 and 8?",
+      "options": [
+        "14",
+        "48",
+        "24",
+        "1"
+      ],
+      "answer": 2,
+      "explanation": "LCM = 24. It is the least positive multiple of both."
+    },
+    {
+      "id": "numbers-i-016",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Foundation",
+      "prompt": "What is the LCM of 9 and 12?",
+      "options": [
+        "21",
+        "108",
+        "1",
+        "36"
+      ],
+      "answer": 3,
+      "explanation": "LCM = 36. It is the least positive multiple of both."
+    },
+    {
+      "id": "numbers-i-017",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Foundation",
+      "prompt": "What is the LCM of 10 and 15?",
+      "options": [
+        "30",
+        "25",
+        "150",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "LCM = 30. It is the least positive multiple of both."
+    },
+    {
+      "id": "numbers-i-018",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Foundation",
+      "prompt": "What is the LCM of 12 and 18?",
+      "options": [
+        "30",
+        "36",
+        "216",
+        "1"
+      ],
+      "answer": 1,
+      "explanation": "LCM = 36. It is the least positive multiple of both."
+    },
+    {
+      "id": "numbers-i-019",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Application",
+      "prompt": "Bells ring every 8 minutes and 12 minutes. They ring together now. In how many minutes will they next ring together?",
+      "options": [
+        "4",
+        "20",
+        "24",
+        "96"
+      ],
+      "answer": 2,
+      "explanation": "Use LCM(8,12) = 24."
+    },
+    {
+      "id": "numbers-i-020",
+      "category": "Factors multiples HCF and LCM",
+      "difficulty": "Challenge",
+      "prompt": "There are 30 red beads and 42 blue beads. All are used in identical packs with the same number of each colour. What is the greatest possible number of packs?",
+      "options": [
+        "12",
+        "30",
+        "72",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "Use HCF(30,42) = 6 packs. Each contains 5 red and 7 blue beads."
+    },
+    {
+      "id": "numbers-i-021",
+      "category": "Decimals and place value",
+      "difficulty": "Foundation",
+      "prompt": "What is the value of the digit 7 in 3.72?",
+      "options": [
+        "0.7",
+        "1.7",
+        "-0.3",
+        "1.4"
+      ],
+      "answer": 0,
+      "explanation": "The 7 is in the tenths place: 7/10."
+    },
+    {
+      "id": "numbers-i-022",
+      "category": "Decimals and place value",
+      "difficulty": "Foundation",
+      "prompt": "What is the value of the digit 7 in 0.47?",
+      "options": [
+        "1.07",
+        "0.07",
+        "-0.93",
+        "0.14"
+      ],
+      "answer": 1,
+      "explanation": "The 7 is in the hundredths place: 7/100."
+    },
+    {
+      "id": "numbers-i-023",
+      "category": "Decimals and place value",
+      "difficulty": "Foundation",
+      "prompt": "Write 6 tenths and 3 hundredths as a decimal.",
+      "options": [
+        "1.63",
+        "-0.37",
+        "0.63",
+        "1.26"
+      ],
+      "answer": 2,
+      "explanation": "6/10 + 3/100 = 63/100 = 0.63."
+    },
+    {
+      "id": "numbers-i-024",
+      "category": "Decimals and place value",
+      "difficulty": "Foundation",
+      "prompt": "How many hundredths are in 2.35?",
+      "options": [
+        "236",
+        "234",
+        "470",
+        "235"
+      ],
+      "answer": 3,
+      "explanation": "Each whole has 100 hundredths, so 2.35 = 235/100."
+    },
+    {
+      "id": "numbers-i-025",
+      "category": "Decimals and place value",
+      "difficulty": "Foundation",
+      "prompt": "What is 0.8 + 0.06?",
+      "options": [
+        "0.86",
+        "1.86",
+        "-0.14",
+        "1.72"
+      ],
+      "answer": 0,
+      "explanation": "Align the place values: 0.80 + 0.06 = 0.86."
+    },
+    {
+      "id": "numbers-i-026",
+      "category": "Decimals and place value",
+      "difficulty": "Foundation",
+      "prompt": "What is 1.5 − 0.27?",
+      "options": [
+        "2.23",
+        "1.23",
+        "0.23",
+        "2.46"
+      ],
+      "answer": 1,
+      "explanation": "Write 1.50 − 0.27 = 1.23."
+    },
+    {
+      "id": "numbers-i-027",
+      "category": "Decimals and place value",
+      "difficulty": "Foundation",
+      "prompt": "Which decimal is greatest?",
+      "options": [
+        "0.65",
+        "0.607",
+        "0.7",
+        "0.067"
+      ],
+      "answer": 2,
+      "explanation": "0.700 is larger than 0.650, 0.607 and 0.067."
+    },
+    {
+      "id": "numbers-i-028",
+      "category": "Decimals and place value",
+      "difficulty": "Application",
+      "prompt": "Which list is in ascending order?",
+      "options": [
+        "0.9, 0.19, 0.09",
+        "0.19, 0.09, 0.9",
+        "0.09, 0.9, 0.19",
+        "0.09, 0.19, 0.9"
+      ],
+      "answer": 3,
+      "explanation": "Compare hundredths: 9, 19 and 90."
+    },
+    {
+      "id": "numbers-i-029",
+      "category": "Decimals and place value",
+      "difficulty": "Application",
+      "prompt": "What is 0.4 × 0.3?",
+      "options": [
+        "0.12",
+        "1.2",
+        "12",
+        "0.7"
+      ],
+      "answer": 0,
+      "explanation": "4 tenths × 3 tenths = 12 hundredths."
+    },
+    {
+      "id": "numbers-i-030",
+      "category": "Decimals and place value",
+      "difficulty": "Challenge",
+      "prompt": "What is 3.6 ÷ 0.4?",
+      "options": [
+        "0.9",
+        "9",
+        "90",
+        "1.44"
+      ],
+      "answer": 1,
+      "explanation": "Scale both numbers by 10: 36 ÷ 4 = 9."
+    },
+    {
+      "id": "numbers-i-031",
+      "category": "Powers and roots in N",
+      "difficulty": "Foundation",
+      "prompt": "What is 7²?",
+      "options": [
+        "50",
+        "48",
+        "49",
+        "98"
+      ],
+      "answer": 2,
+      "explanation": "7 × 7 = 49."
+    },
+    {
+      "id": "numbers-i-032",
+      "category": "Powers and roots in N",
+      "difficulty": "Foundation",
+      "prompt": "What is 4³?",
+      "options": [
+        "65",
+        "63",
+        "128",
+        "64"
+      ],
+      "answer": 3,
+      "explanation": "4 × 4 × 4 = 64."
+    },
+    {
+      "id": "numbers-i-033",
+      "category": "Powers and roots in N",
+      "difficulty": "Application",
+      "prompt": "What is 2⁵?",
+      "options": [
+        "32",
+        "33",
+        "31",
+        "64"
+      ],
+      "answer": 0,
+      "explanation": "Multiply five copies of 2."
+    },
+    {
+      "id": "numbers-i-034",
+      "category": "Powers and roots in N",
+      "difficulty": "Foundation",
+      "prompt": "What is √81?",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "18"
+      ],
+      "answer": 1,
+      "explanation": "9² = 81; the square root symbol gives the non-negative root."
+    },
+    {
+      "id": "numbers-i-035",
+      "category": "Powers and roots in N",
+      "difficulty": "Foundation",
+      "prompt": "What is ∛125?",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "5³ = 125."
+    },
+    {
+      "id": "numbers-i-036",
+      "category": "Powers and roots in N",
+      "difficulty": "Foundation",
+      "prompt": "What is 10³?",
+      "options": [
+        "1001",
+        "999",
+        "2000",
+        "1000"
+      ],
+      "answer": 3,
+      "explanation": "10 × 10 × 10 = 1000."
+    },
+    {
+      "id": "numbers-i-037",
+      "category": "Powers and roots in N",
+      "difficulty": "Application",
+      "prompt": "What is 3⁴?",
+      "options": [
+        "81",
+        "82",
+        "80",
+        "162"
+      ],
+      "answer": 0,
+      "explanation": "3 × 3 × 3 × 3 = 81."
+    },
+    {
+      "id": "numbers-i-038",
+      "category": "Powers and roots in N",
+      "difficulty": "Application",
+      "prompt": "What is √144?",
+      "options": [
+        "13",
+        "12",
+        "11",
+        "24"
+      ],
+      "answer": 1,
+      "explanation": "12 × 12 = 144."
+    },
+    {
+      "id": "numbers-i-039",
+      "category": "Powers and roots in N",
+      "difficulty": "Challenge",
+      "prompt": "What is ∛216?",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "12"
+      ],
+      "answer": 2,
+      "explanation": "6 × 6 × 6 = 216."
+    },
+    {
+      "id": "numbers-i-040",
+      "category": "Powers and roots in N",
+      "difficulty": "Application",
+      "prompt": "What is 5² + 2³?",
+      "options": [
+        "34",
+        "32",
+        "66",
+        "33"
+      ],
+      "answer": 3,
+      "explanation": "25 + 8 = 33."
+    },
+    {
+      "id": "numbers-i-041",
+      "category": "BIDMAS in N",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate 6 + 3 × 4.",
+      "options": [
+        "18",
+        "19",
+        "17",
+        "36"
+      ],
+      "answer": 0,
+      "explanation": "Multiply first: 3 × 4 = 12; then add 6."
+    },
+    {
+      "id": "numbers-i-042",
+      "category": "BIDMAS in N",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (6 + 3) × 4.",
+      "options": [
+        "37",
+        "36",
+        "35",
+        "72"
+      ],
+      "answer": 1,
+      "explanation": "Brackets first: 9 × 4 = 36."
+    },
+    {
+      "id": "numbers-i-043",
+      "category": "BIDMAS in N",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate 20 − 2 × 6.",
+      "options": [
+        "9",
+        "7",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "20 − 12 = 8."
+    },
+    {
+      "id": "numbers-i-044",
+      "category": "BIDMAS in N",
+      "difficulty": "Application",
+      "prompt": "Evaluate 4 + 2³ × 3.",
+      "options": [
+        "29",
+        "27",
+        "56",
+        "28"
+      ],
+      "answer": 3,
+      "explanation": "Index first: 8; then 8 × 3 = 24; add 4."
+    },
+    {
+      "id": "numbers-i-045",
+      "category": "BIDMAS in N",
+      "difficulty": "Application",
+      "prompt": "Evaluate 24 ÷ 6 × 2.",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "Division and multiplication share priority: work left to right, 4 × 2."
+    },
+    {
+      "id": "numbers-i-046",
+      "category": "BIDMAS in N",
+      "difficulty": "Application",
+      "prompt": "Evaluate 18 − 6 + 2.",
+      "options": [
+        "15",
+        "14",
+        "13",
+        "28"
+      ],
+      "answer": 1,
+      "explanation": "Addition and subtraction share priority: work left to right, 12 + 2."
+    },
+    {
+      "id": "numbers-i-047",
+      "category": "BIDMAS in N",
+      "difficulty": "Application",
+      "prompt": "Evaluate 3 × (5 + 7) − 8.",
+      "options": [
+        "29",
+        "27",
+        "28",
+        "56"
+      ],
+      "answer": 2,
+      "explanation": "3 × 12 − 8 = 36 − 8."
+    },
+    {
+      "id": "numbers-i-048",
+      "category": "BIDMAS in N",
+      "difficulty": "Application",
+      "prompt": "Evaluate 36 ÷ (3 × 2).",
+      "options": [
+        "7",
+        "5",
+        "12",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "Brackets: 6. Then 36 ÷ 6 = 6."
+    },
+    {
+      "id": "numbers-i-049",
+      "category": "BIDMAS in N",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate 5² − 3² + 2.",
+      "options": [
+        "18",
+        "19",
+        "17",
+        "36"
+      ],
+      "answer": 0,
+      "explanation": "25 − 9 + 2 = 16 + 2 = 18."
+    },
+    {
+      "id": "numbers-i-050",
+      "category": "BIDMAS in N",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate (8 + 4) × 3 − 2³.",
+      "options": [
+        "29",
+        "28",
+        "27",
+        "56"
+      ],
+      "answer": 1,
+      "explanation": "12 × 3 − 8 = 36 − 8 = 28."
+    },
+    {
+      "id": "numbers-i-051",
+      "category": "Number reasoning",
+      "difficulty": "Foundation",
+      "prompt": "A square has area 121 cm². What is its side length in cm?",
+      "options": [
+        "12",
+        "10",
+        "11",
+        "22"
+      ],
+      "answer": 2,
+      "explanation": "Side = √121 = 11 cm."
+    },
+    {
+      "id": "numbers-i-052",
+      "category": "Number reasoning",
+      "difficulty": "Application",
+      "prompt": "Which positive whole number has a cube of 343?",
+      "options": [
+        "8",
+        "6",
+        "14",
+        "7"
+      ],
+      "answer": 3,
+      "explanation": "7³ = 343."
+    },
+    {
+      "id": "numbers-i-053",
+      "category": "Number reasoning",
+      "difficulty": "Application",
+      "prompt": "Two buses leave every 15 and 20 minutes. They leave together at 09:00. How many minutes until the next shared departure?",
+      "options": [
+        "60",
+        "61",
+        "59",
+        "120"
+      ],
+      "answer": 0,
+      "explanation": "LCM(15,20) = 60 minutes."
+    },
+    {
+      "id": "numbers-i-054",
+      "category": "Number reasoning",
+      "difficulty": "Challenge",
+      "prompt": "A teacher has 48 pens and 60 clips. What is the greatest number of identical packs using everything?",
+      "options": [
+        "13",
+        "12",
+        "11",
+        "24"
+      ],
+      "answer": 1,
+      "explanation": "HCF(48,60) = 12. Each pack has 4 pens and 5 clips."
+    },
+    {
+      "id": "numbers-i-055",
+      "category": "Number reasoning",
+      "difficulty": "Application",
+      "prompt": "How many positive factors does 16 have?",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "The factors are 1, 2, 4, 8 and 16."
+    },
+    {
+      "id": "numbers-i-056",
+      "category": "Number reasoning",
+      "difficulty": "Challenge",
+      "prompt": "What is the smallest whole number greater than 1 that is both a square and a cube?",
+      "options": [
+        "65",
+        "63",
+        "128",
+        "64"
+      ],
+      "answer": 3,
+      "explanation": "64 = 8² = 4³ = 2⁶."
+    },
+    {
+      "id": "numbers-i-057",
+      "category": "Number reasoning",
+      "difficulty": "Challenge",
+      "prompt": "What is the missing index in 2 to the power n = 128?",
+      "options": [
+        "7",
+        "8",
+        "6",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "2⁷ = 128."
+    },
+    {
+      "id": "numbers-i-058",
+      "category": "Number reasoning",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate 48 ÷ (2 × 3) + 5² − 4.",
+      "options": [
+        "30",
+        "29",
+        "28",
+        "58"
+      ],
+      "answer": 1,
+      "explanation": "48 ÷ 6 + 25 − 4 = 8 + 25 − 4 = 29."
+    },
+    {
+      "id": "numbers-i-059",
+      "category": "Number reasoning",
+      "difficulty": "Application",
+      "prompt": "What number added to 0.375 makes 1?",
+      "options": [
+        "13/8",
+        "-3/8",
+        "5/8",
+        "5/4"
+      ],
+      "answer": 2,
+      "explanation": "1.000 − 0.375 = 0.625."
+    },
+    {
+      "id": "numbers-i-060",
+      "category": "Number reasoning",
+      "difficulty": "Challenge",
+      "prompt": "The HCF of two numbers is 6 and their LCM is 60. One number is 12. What is the other?",
+      "options": [
+        "31",
+        "29",
+        "60",
+        "30"
+      ],
+      "answer": 3,
+      "explanation": "The product is HCF × LCM = 360. The other number is 360 ÷ 12 = 30."
+    }
+  ]
+}

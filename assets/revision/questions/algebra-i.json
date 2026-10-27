@@ -1,0 +1,854 @@
+{
+  "topicId": "algebra-i",
+  "title": "Algebra I",
+  "categories": [
+    "Variables and formulas",
+    "Coordinates",
+    "Direct proportion tables",
+    "Direct proportion formulas and graphs",
+    "Inverse proportion tables",
+    "Inverse proportion reasoning"
+  ],
+  "questions": [
+    {
+      "id": "algebra-i-001",
+      "category": "Variables and formulas",
+      "difficulty": "Foundation",
+      "prompt": "A box holds x pens. Which expression describes the pens in three identical boxes?",
+      "options": [
+        "3x",
+        "x + 3",
+        "x³",
+        "3 + x³"
+      ],
+      "answer": 0,
+      "explanation": "Three equal groups of x make 3x."
+    },
+    {
+      "id": "algebra-i-002",
+      "category": "Variables and formulas",
+      "difficulty": "Foundation",
+      "prompt": "There are x pens in a box and 4 loose pens. What is the total?",
+      "options": [
+        "4x",
+        "x + 4",
+        "x − 4",
+        "x/4"
+      ],
+      "answer": 1,
+      "explanation": "Add the four known pens to the unknown box count."
+    },
+    {
+      "id": "algebra-i-003",
+      "category": "Variables and formulas",
+      "difficulty": "Foundation",
+      "prompt": "A box holds x pens and a clip box holds y clips. What represents all the items in one of each?",
+      "options": [
+        "xy",
+        "2x",
+        "x + y",
+        "x − y"
+      ],
+      "answer": 2,
+      "explanation": "The two unknown counts are added."
+    },
+    {
+      "id": "algebra-i-004",
+      "category": "Variables and formulas",
+      "difficulty": "Foundation",
+      "prompt": "A notebook costs £3. What formula connects total cost y and number of notebooks x, with no other charges?",
+      "options": [
+        "y = x + 3",
+        "y = 3/x",
+        "y = x/3",
+        "y = 3x"
+      ],
+      "answer": 3,
+      "explanation": "Every notebook contributes £3."
+    },
+    {
+      "id": "algebra-i-005",
+      "category": "Variables and formulas",
+      "difficulty": "Application",
+      "prompt": "A taxi charges £4 plus £2 per kilometre x. What is the total cost y?",
+      "options": [
+        "y = 2x + 4",
+        "y = 6x",
+        "y = 4x + 2",
+        "y = 2/x + 4"
+      ],
+      "answer": 0,
+      "explanation": "The fixed charge is added once, and 2x represents the distance charge."
+    },
+    {
+      "id": "algebra-i-006",
+      "category": "Variables and formulas",
+      "difficulty": "Foundation",
+      "prompt": "If y = 4x + 2 and x = 0, what is y?",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "Substitute x: 4 × 0 + 2 = 2."
+    },
+    {
+      "id": "algebra-i-007",
+      "category": "Variables and formulas",
+      "difficulty": "Foundation",
+      "prompt": "If y = 4x + 2 and x = 3, what is y?",
+      "options": [
+        "15",
+        "13",
+        "14",
+        "28"
+      ],
+      "answer": 2,
+      "explanation": "Substitute x: 4 × 3 + 2 = 14."
+    },
+    {
+      "id": "algebra-i-008",
+      "category": "Variables and formulas",
+      "difficulty": "Application",
+      "prompt": "If y = 4x + 2 and x = 5, what is y?",
+      "options": [
+        "23",
+        "21",
+        "44",
+        "22"
+      ],
+      "answer": 3,
+      "explanation": "Substitute x: 4 × 5 + 2 = 22."
+    },
+    {
+      "id": "algebra-i-009",
+      "category": "Variables and formulas",
+      "difficulty": "Application",
+      "prompt": "In y = 5x, which quantity is the independent input in this formula?",
+      "options": [
+        "x",
+        "5",
+        "y",
+        "The equals sign"
+      ],
+      "answer": 0,
+      "explanation": "x is chosen as the input; y is calculated from it."
+    },
+    {
+      "id": "algebra-i-010",
+      "category": "Variables and formulas",
+      "difficulty": "Challenge",
+      "prompt": "Which relationship is directly proportional?",
+      "options": [
+        "y = 5x + 2",
+        "y = 5x",
+        "y = 5/x",
+        "y = x²"
+      ],
+      "answer": 1,
+      "explanation": "The ratio y/x is constant and the graph passes through the origin."
+    },
+    {
+      "id": "algebra-i-011",
+      "category": "Coordinates",
+      "difficulty": "Foundation",
+      "prompt": "Which coordinate describes 3 right and 2 up from the origin?",
+      "options": [
+        "(2, 3)",
+        "(−3, 2)",
+        "(3, 2)",
+        "(3, −2)"
+      ],
+      "answer": 2,
+      "explanation": "x is horizontal first, y is vertical second."
+    },
+    {
+      "id": "algebra-i-012",
+      "category": "Coordinates",
+      "difficulty": "Foundation",
+      "prompt": "Which coordinate describes 4 left and 1 up?",
+      "options": [
+        "(4, −1)",
+        "(1, −4)",
+        "(−4, −1)",
+        "(−4, 1)"
+      ],
+      "answer": 3,
+      "explanation": "Left gives negative x; up gives positive y."
+    },
+    {
+      "id": "algebra-i-013",
+      "category": "Coordinates",
+      "difficulty": "Foundation",
+      "prompt": "Which point lies on the y-axis?",
+      "options": [
+        "(0, −3)",
+        "(−3, 0)",
+        "(3, 3)",
+        "(1, −3)"
+      ],
+      "answer": 0,
+      "explanation": "All points on the y-axis have x = 0."
+    },
+    {
+      "id": "algebra-i-014",
+      "category": "Coordinates",
+      "difficulty": "Foundation",
+      "prompt": "Which point lies on the x-axis?",
+      "options": [
+        "(0, 5)",
+        "(5, 0)",
+        "(5, 5)",
+        "(−1, 5)"
+      ],
+      "answer": 1,
+      "explanation": "All points on the x-axis have y = 0."
+    },
+    {
+      "id": "algebra-i-015",
+      "category": "Coordinates",
+      "difficulty": "Application",
+      "prompt": "Which point lies in the quadrant with x negative and y negative?",
+      "options": [
+        "(2, −5)",
+        "(−2, 5)",
+        "(−2, −5)",
+        "(2, 5)"
+      ],
+      "answer": 2,
+      "explanation": "Both coordinates must be negative."
+    },
+    {
+      "id": "algebra-i-016",
+      "category": "Coordinates",
+      "difficulty": "Application",
+      "prompt": "Reflect (3, −2) in the y-axis. What is the image?",
+      "options": [
+        "(3, 2)",
+        "(−3, 2)",
+        "(−2, 3)",
+        "(−3, −2)"
+      ],
+      "answer": 3,
+      "explanation": "Negate x and keep y."
+    },
+    {
+      "id": "algebra-i-017",
+      "category": "Coordinates",
+      "difficulty": "Application",
+      "prompt": "Reflect (−4, 1) in the x-axis. What is the image?",
+      "options": [
+        "(−4, −1)",
+        "(4, 1)",
+        "(4, −1)",
+        "(1, −4)"
+      ],
+      "answer": 0,
+      "explanation": "Keep x and negate y."
+    },
+    {
+      "id": "algebra-i-018",
+      "category": "Coordinates",
+      "difficulty": "Application",
+      "prompt": "Move (−2, 3) four units right and five units down. What is the new point?",
+      "options": [
+        "(−6, 8)",
+        "(2, −2)",
+        "(2, 8)",
+        "(−2, 2)"
+      ],
+      "answer": 1,
+      "explanation": "Add 4 to x and subtract 5 from y."
+    },
+    {
+      "id": "algebra-i-019",
+      "category": "Coordinates",
+      "difficulty": "Challenge",
+      "prompt": "Three rectangle vertices are (1, 1), (5, 1) and (5, 4). What is the fourth?",
+      "options": [
+        "(4, 1)",
+        "(1, 5)",
+        "(1, 4)",
+        "(4, 5)"
+      ],
+      "answer": 2,
+      "explanation": "The fourth corner shares x with the first and y with the third."
+    },
+    {
+      "id": "algebra-i-020",
+      "category": "Coordinates",
+      "difficulty": "Challenge",
+      "prompt": "A point makes a half-turn about the origin from (2, −3). What is the image?",
+      "options": [
+        "(−2, −3)",
+        "(2, 3)",
+        "(3, −2)",
+        "(−2, 3)"
+      ],
+      "answer": 3,
+      "explanation": "A half-turn negates both coordinates."
+    },
+    {
+      "id": "algebra-i-021",
+      "category": "Direct proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "2 identical notebooks cost £6. The cost is directly proportional to the quantity. What do 5 notebooks cost in pounds?",
+      "options": [
+        "15",
+        "16",
+        "14",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Unit price = 6/2. Multiply by 5."
+    },
+    {
+      "id": "algebra-i-022",
+      "category": "Direct proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "3 identical notebooks cost £12. The cost is directly proportional to the quantity. What do 7 notebooks cost in pounds?",
+      "options": [
+        "29",
+        "28",
+        "27",
+        "56"
+      ],
+      "answer": 1,
+      "explanation": "Unit price = 12/3. Multiply by 7."
+    },
+    {
+      "id": "algebra-i-023",
+      "category": "Direct proportion tables",
+      "difficulty": "Application",
+      "prompt": "4 identical notebooks cost £10. The cost is directly proportional to the quantity. What do 8 notebooks cost in pounds?",
+      "options": [
+        "21",
+        "19",
+        "20",
+        "40"
+      ],
+      "answer": 2,
+      "explanation": "Unit price = 10/4. Multiply by 8."
+    },
+    {
+      "id": "algebra-i-024",
+      "category": "Direct proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "5 identical notebooks cost £15. The cost is directly proportional to the quantity. What do 2 notebooks cost in pounds?",
+      "options": [
+        "7",
+        "5",
+        "12",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "Unit price = 15/5. Multiply by 2."
+    },
+    {
+      "id": "algebra-i-025",
+      "category": "Direct proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "6 identical notebooks cost £24. The cost is directly proportional to the quantity. What do 9 notebooks cost in pounds?",
+      "options": [
+        "36",
+        "37",
+        "35",
+        "72"
+      ],
+      "answer": 0,
+      "explanation": "Unit price = 24/6. Multiply by 9."
+    },
+    {
+      "id": "algebra-i-026",
+      "category": "Direct proportion tables",
+      "difficulty": "Application",
+      "prompt": "8 identical notebooks cost £20. The cost is directly proportional to the quantity. What do 4 notebooks cost in pounds?",
+      "options": [
+        "11",
+        "10",
+        "9",
+        "20"
+      ],
+      "answer": 1,
+      "explanation": "Unit price = 20/8. Multiply by 4."
+    },
+    {
+      "id": "algebra-i-027",
+      "category": "Direct proportion tables",
+      "difficulty": "Application",
+      "prompt": "3 identical notebooks cost £9. The cost is directly proportional to the quantity. What do 0 notebooks cost in pounds?",
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "2"
+      ],
+      "answer": 2,
+      "explanation": "Unit price = 9/3. Multiply by 0."
+    },
+    {
+      "id": "algebra-i-028",
+      "category": "Direct proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "4 identical notebooks cost £28. The cost is directly proportional to the quantity. What do 6 notebooks cost in pounds?",
+      "options": [
+        "43",
+        "41",
+        "84",
+        "42"
+      ],
+      "answer": 3,
+      "explanation": "Unit price = 28/4. Multiply by 6."
+    },
+    {
+      "id": "algebra-i-029",
+      "category": "Direct proportion tables",
+      "difficulty": "Application",
+      "prompt": "Which table can represent direct proportion?",
+      "options": [
+        "x: 1, 2, 3; y: 4, 8, 12",
+        "x: 1, 2, 3; y: 5, 9, 13",
+        "x: 1, 2, 3; y: 12, 6, 4",
+        "x: 1, 2, 3; y: 1, 4, 9"
+      ],
+      "answer": 0,
+      "explanation": "Each ratio y/x equals 4."
+    },
+    {
+      "id": "algebra-i-030",
+      "category": "Direct proportion tables",
+      "difficulty": "Challenge",
+      "prompt": "A direct-proportion table has x = 3, y = 15 and x = 8, y = a. What is a?",
+      "options": [
+        "41",
+        "40",
+        "39",
+        "80"
+      ],
+      "answer": 1,
+      "explanation": "k = 15 ÷ 3 = 5, so a = 5 × 8 = 40."
+    },
+    {
+      "id": "algebra-i-031",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Foundation",
+      "prompt": "Which graph represents y directly proportional to x?",
+      "options": [
+        "Any straight line",
+        "Any increasing curve",
+        "A straight line through the origin",
+        "A descending curve with constant xy"
+      ],
+      "answer": 2,
+      "explanation": "Direct proportion means y = kx."
+    },
+    {
+      "id": "algebra-i-032",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Application",
+      "prompt": "y is directly proportional to x. When x = 4, y = 12. Which formula is correct?",
+      "options": [
+        "y = x + 8",
+        "y = 12/x",
+        "y = x/3",
+        "y = 3x"
+      ],
+      "answer": 3,
+      "explanation": "k = y/x = 12/4 = 3."
+    },
+    {
+      "id": "algebra-i-033",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Foundation",
+      "prompt": "Which quantity stays constant when y is directly proportional to x?",
+      "options": [
+        "y/x for non-zero x",
+        "x + y",
+        "xy",
+        "y − x for every rate"
+      ],
+      "answer": 0,
+      "explanation": "The unit rate y/x = k is constant."
+    },
+    {
+      "id": "algebra-i-034",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Application",
+      "prompt": "A straight graph has equation y = 2x + 3. Is y directly proportional to x?",
+      "options": [
+        "Yes, because all straight graphs show direct proportion.",
+        "No, because it does not pass through the origin.",
+        "Yes, because 2 is constant.",
+        "No, because the slope is positive."
+      ],
+      "answer": 1,
+      "explanation": "The fixed intercept 3 prevents a constant ratio y/x."
+    },
+    {
+      "id": "algebra-i-035",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Foundation",
+      "prompt": "If x triples in a direct-proportion relationship, what happens to y?",
+      "options": [
+        "It increases by 3.",
+        "It is divided by 3.",
+        "It triples.",
+        "It stays unchanged."
+      ],
+      "answer": 2,
+      "explanation": "Multiplying x by 3 multiplies kx by 3."
+    },
+    {
+      "id": "algebra-i-036",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Application",
+      "prompt": "A graph of total cost against quantity passes through (0,0) and (4,10). What is its unit rate?",
+      "options": [
+        "4",
+        "10",
+        "2/5",
+        "5/2"
+      ],
+      "answer": 3,
+      "explanation": "Rate = rise/run = 10/4 = 2.5 per item."
+    },
+    {
+      "id": "algebra-i-037",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Foundation",
+      "prompt": "y = 6x. What is y when x = 0?",
+      "options": [
+        "0",
+        "6",
+        "1",
+        "Undefined"
+      ],
+      "answer": 0,
+      "explanation": "Multiplying zero by the constant gives zero."
+    },
+    {
+      "id": "algebra-i-038",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Challenge",
+      "prompt": "A service charges £5 per item plus a £2 fee. Which statement is correct?",
+      "options": [
+        "Cost is directly proportional.",
+        "Cost is linear but not directly proportional to item count.",
+        "Cost is inversely proportional.",
+        "Cost has a constant product with item count."
+      ],
+      "answer": 1,
+      "explanation": "The fee means zero items do not correspond to zero total cost in the formula."
+    },
+    {
+      "id": "algebra-i-039",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Challenge",
+      "prompt": "y is directly proportional to x. If y = 18 when x = 6, what is x when y = 27?",
+      "options": [
+        "10",
+        "8",
+        "9",
+        "18"
+      ],
+      "answer": 2,
+      "explanation": "k = 3, so x = 27 ÷ 3 = 9."
+    },
+    {
+      "id": "algebra-i-040",
+      "category": "Direct proportion formulas and graphs",
+      "difficulty": "Application",
+      "prompt": "A recipe uses 250 g of flour for 5 portions. How many grams are needed for 8 portions at the same rate?",
+      "options": [
+        "401",
+        "399",
+        "800",
+        "400"
+      ],
+      "answer": 3,
+      "explanation": "50 g per portion × 8 = 400 g."
+    },
+    {
+      "id": "algebra-i-041",
+      "category": "Inverse proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "2 equal-rate workers finish a fixed job in 12 hours. Assuming perfect sharing, how many hours would 4 workers take?",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "Keep worker-hours constant: 2 × 12 = 24; time = 24 ÷ 4."
+    },
+    {
+      "id": "algebra-i-042",
+      "category": "Inverse proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "3 equal-rate workers finish a fixed job in 8 hours. Assuming perfect sharing, how many hours would 6 workers take?",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "Keep worker-hours constant: 3 × 8 = 24; time = 24 ÷ 6."
+    },
+    {
+      "id": "algebra-i-043",
+      "category": "Inverse proportion tables",
+      "difficulty": "Application",
+      "prompt": "4 equal-rate workers finish a fixed job in 9 hours. Assuming perfect sharing, how many hours would 6 workers take?",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "12"
+      ],
+      "answer": 2,
+      "explanation": "Keep worker-hours constant: 4 × 9 = 36; time = 36 ÷ 6."
+    },
+    {
+      "id": "algebra-i-044",
+      "category": "Inverse proportion tables",
+      "difficulty": "Foundation",
+      "prompt": "5 equal-rate workers finish a fixed job in 12 hours. Assuming perfect sharing, how many hours would 10 workers take?",
+      "options": [
+        "7",
+        "5",
+        "12",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "Keep worker-hours constant: 5 × 12 = 60; time = 60 ÷ 10."
+    },
+    {
+      "id": "algebra-i-045",
+      "category": "Inverse proportion tables",
+      "difficulty": "Application",
+      "prompt": "6 equal-rate workers finish a fixed job in 4 hours. Assuming perfect sharing, how many hours would 3 workers take?",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "Keep worker-hours constant: 6 × 4 = 24; time = 24 ÷ 3."
+    },
+    {
+      "id": "algebra-i-046",
+      "category": "Inverse proportion tables",
+      "difficulty": "Application",
+      "prompt": "8 equal-rate workers finish a fixed job in 3 hours. Assuming perfect sharing, how many hours would 2 workers take?",
+      "options": [
+        "13",
+        "12",
+        "11",
+        "24"
+      ],
+      "answer": 1,
+      "explanation": "Keep worker-hours constant: 8 × 3 = 24; time = 24 ÷ 2."
+    },
+    {
+      "id": "algebra-i-047",
+      "category": "Inverse proportion tables",
+      "difficulty": "Application",
+      "prompt": "2 equal-rate workers finish a fixed job in 18 hours. Assuming perfect sharing, how many hours would 6 workers take?",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "12"
+      ],
+      "answer": 2,
+      "explanation": "Keep worker-hours constant: 2 × 18 = 36; time = 36 ÷ 6."
+    },
+    {
+      "id": "algebra-i-048",
+      "category": "Inverse proportion tables",
+      "difficulty": "Application",
+      "prompt": "3 equal-rate workers finish a fixed job in 20 hours. Assuming perfect sharing, how many hours would 5 workers take?",
+      "options": [
+        "13",
+        "11",
+        "24",
+        "12"
+      ],
+      "answer": 3,
+      "explanation": "Keep worker-hours constant: 3 × 20 = 60; time = 60 ÷ 5."
+    },
+    {
+      "id": "algebra-i-049",
+      "category": "Inverse proportion tables",
+      "difficulty": "Application",
+      "prompt": "Which table shows inverse proportion?",
+      "options": [
+        "x: 1, 2, 4; y: 12, 6, 3",
+        "x: 1, 2, 4; y: 3, 6, 12",
+        "x: 1, 2, 4; y: 11, 10, 8",
+        "x: 1, 2, 4; y: 1, 4, 16"
+      ],
+      "answer": 0,
+      "explanation": "Every product xy equals 12."
+    },
+    {
+      "id": "algebra-i-050",
+      "category": "Inverse proportion tables",
+      "difficulty": "Challenge",
+      "prompt": "x and y are inversely proportional. A table gives x = 4 and y = 15. What is y when x = 12?",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "10"
+      ],
+      "answer": 1,
+      "explanation": "xy = 60, so y = 60/12 = 5."
+    },
+    {
+      "id": "algebra-i-051",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Foundation",
+      "prompt": "Which formula shows inverse proportion?",
+      "options": [
+        "y = 24x",
+        "y = 24 − x",
+        "y = 24/x",
+        "y = x + 24"
+      ],
+      "answer": 2,
+      "explanation": "Inverse proportion means xy = constant."
+    },
+    {
+      "id": "algebra-i-052",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Foundation",
+      "prompt": "Which quantity stays constant in inverse proportion?",
+      "options": [
+        "x + y",
+        "y/x",
+        "x − y",
+        "xy"
+      ],
+      "answer": 3,
+      "explanation": "If y = k/x, then xy = k."
+    },
+    {
+      "id": "algebra-i-053",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Foundation",
+      "prompt": "If x doubles in an inverse-proportion relationship, y…",
+      "options": [
+        "halves.",
+        "doubles.",
+        "increases by 2.",
+        "becomes zero."
+      ],
+      "answer": 0,
+      "explanation": "The constant product must be preserved."
+    },
+    {
+      "id": "algebra-i-054",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Application",
+      "prompt": "If x is multiplied by 3 in inverse proportion, y is…",
+      "options": [
+        "multiplied by 3.",
+        "divided by 3.",
+        "reduced by 3.",
+        "unchanged."
+      ],
+      "answer": 1,
+      "explanation": "Use the reciprocal scale factor."
+    },
+    {
+      "id": "algebra-i-055",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Application",
+      "prompt": "A graph of y = 12/x for positive x is…",
+      "options": [
+        "a straight line through the origin.",
+        "a horizontal line.",
+        "a descending curve, not a straight line.",
+        "a vertical line."
+      ],
+      "answer": 2,
+      "explanation": "Equal increases in x do not produce equal decreases in y."
+    },
+    {
+      "id": "algebra-i-056",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Challenge",
+      "prompt": "Why is y = 12 − x not inverse proportion?",
+      "options": [
+        "It decreases as x increases.",
+        "Every decreasing relationship is inverse proportion.",
+        "It has a negative slope, which proves inverse proportion.",
+        "Its product xy is not constant."
+      ],
+      "answer": 3,
+      "explanation": "A decreasing relationship alone does not prove inverse proportion; xy must be constant."
+    },
+    {
+      "id": "algebra-i-057",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Application",
+      "prompt": "Which assumption is needed for the simple worker-time inverse model?",
+      "options": [
+        "Workers have equal rates and can share the fixed job without delays.",
+        "Every worker adds an extra hour of work.",
+        "The amount of work increases with worker count.",
+        "Every real job always follows inverse proportion."
+      ],
+      "answer": 0,
+      "explanation": "Fixed work and equal effective productivity are essential."
+    },
+    {
+      "id": "algebra-i-058",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Challenge",
+      "prompt": "Which formula fits y inversely proportional to x with x = 3 and y = 8?",
+      "options": [
+        "y = 8x/3",
+        "y = 24/x",
+        "y = x + 5",
+        "y = 3/(8x)"
+      ],
+      "answer": 1,
+      "explanation": "k = xy = 24."
+    },
+    {
+      "id": "algebra-i-059",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Application",
+      "prompt": "For y = 36/x, what is x when y = 9?",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "xy = 36, so x = 36 ÷ 9 = 4."
+    },
+    {
+      "id": "algebra-i-060",
+      "category": "Inverse proportion reasoning",
+      "difficulty": "Challenge",
+      "prompt": "Two positive inverse-proportion pairs are (2, 18) and (6, y). What is y?",
+      "options": [
+        "7",
+        "5",
+        "12",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "2 × 18 = 36; 36 ÷ 6 = 6."
+    }
+  ]
+}

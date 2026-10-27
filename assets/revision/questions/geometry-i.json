@@ -1,0 +1,854 @@
+{
+  "topicId": "geometry-i",
+  "title": "Geometry I",
+  "categories": [
+    "Triangles and quadrilaterals",
+    "Polygon angles",
+    "Angles and parallel lines",
+    "Bisector constructions",
+    "Area and perimeter",
+    "Compound shapes"
+  ],
+  "questions": [
+    {
+      "id": "geometry-i-001",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Foundation",
+      "prompt": "Which triangle has three equal sides?",
+      "options": [
+        "Equilateral",
+        "Scalene",
+        "Right-angled",
+        "Isosceles with exactly two equal sides"
+      ],
+      "answer": 0,
+      "explanation": "Equilateral means all three sides are equal."
+    },
+    {
+      "id": "geometry-i-002",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Foundation",
+      "prompt": "Which property must every rectangle have?",
+      "options": [
+        "Four equal sides",
+        "Four right angles",
+        "Exactly one pair of parallel sides",
+        "Four lines of symmetry"
+      ],
+      "answer": 1,
+      "explanation": "Every rectangle has four right angles; equal adjacent sides are not required."
+    },
+    {
+      "id": "geometry-i-003",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Application",
+      "prompt": "Which statement about a square is correct?",
+      "options": [
+        "It is neither a rectangle nor a rhombus.",
+        "It is a rectangle but never a rhombus.",
+        "It is both a rectangle and a rhombus.",
+        "It is a rhombus but never a rectangle."
+      ],
+      "answer": 2,
+      "explanation": "A square has four right angles and four equal sides."
+    },
+    {
+      "id": "geometry-i-004",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Foundation",
+      "prompt": "How many lines of symmetry does a non-square rectangle have?",
+      "options": [
+        "1",
+        "4",
+        "0",
+        "2"
+      ],
+      "answer": 3,
+      "explanation": "Its two symmetry lines pass through the midpoints of opposite sides."
+    },
+    {
+      "id": "geometry-i-005",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Foundation",
+      "prompt": "How many lines of symmetry does an equilateral triangle have?",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Each vertex-to-opposite-midpoint line is a symmetry line."
+    },
+    {
+      "id": "geometry-i-006",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Foundation",
+      "prompt": "Which property describes a parallelogram?",
+      "options": [
+        "Exactly one pair of sides is parallel.",
+        "Both pairs of opposite sides are parallel.",
+        "All angles must be 90°.",
+        "All sides must be equal."
+      ],
+      "answer": 1,
+      "explanation": "A parallelogram has two pairs of parallel opposite sides."
+    },
+    {
+      "id": "geometry-i-007",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Application",
+      "prompt": "In this course, a trapezium has exactly one pair of parallel sides. Which shape meets that definition?",
+      "options": [
+        "Any rectangle",
+        "Any rhombus",
+        "A quadrilateral with one parallel pair and one non-parallel pair",
+        "Any square"
+      ],
+      "answer": 2,
+      "explanation": "This uses the stated exclusive definition; conventions can differ between textbooks."
+    },
+    {
+      "id": "geometry-i-008",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Application",
+      "prompt": "A triangle has two equal sides. What can you conclude about the opposite angles?",
+      "options": [
+        "They add to 90°.",
+        "Both are right angles.",
+        "They must be 60°.",
+        "They are equal."
+      ],
+      "answer": 3,
+      "explanation": "Equal sides in a triangle have equal opposite angles."
+    },
+    {
+      "id": "geometry-i-009",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Application",
+      "prompt": "Which statement must be true for a rhombus?",
+      "options": [
+        "All four sides are equal.",
+        "All four angles are right angles.",
+        "It has exactly one parallel pair.",
+        "Its diagonals are always equal."
+      ],
+      "answer": 0,
+      "explanation": "A rhombus has equal sides, but need not have right angles."
+    },
+    {
+      "id": "geometry-i-010",
+      "category": "Triangles and quadrilaterals",
+      "difficulty": "Challenge",
+      "prompt": "Which property describes a kite?",
+      "options": [
+        "Exactly three equal sides",
+        "Two pairs of adjacent equal sides",
+        "Four right angles",
+        "Exactly one pair of equal opposite sides"
+      ],
+      "answer": 1,
+      "explanation": "The equal sides in a kite meet at adjacent vertices."
+    },
+    {
+      "id": "geometry-i-011",
+      "category": "Polygon angles",
+      "difficulty": "Foundation",
+      "prompt": "What is the interior-angle sum of a 3-sided convex polygon, in degrees?",
+      "options": [
+        "181",
+        "179",
+        "180",
+        "360"
+      ],
+      "answer": 2,
+      "explanation": "(3 − 2) × 180 = 180°."
+    },
+    {
+      "id": "geometry-i-012",
+      "category": "Polygon angles",
+      "difficulty": "Foundation",
+      "prompt": "What is the interior-angle sum of a 4-sided convex polygon, in degrees?",
+      "options": [
+        "361",
+        "359",
+        "720",
+        "360"
+      ],
+      "answer": 3,
+      "explanation": "(4 − 2) × 180 = 360°."
+    },
+    {
+      "id": "geometry-i-013",
+      "category": "Polygon angles",
+      "difficulty": "Foundation",
+      "prompt": "What is the interior-angle sum of a 5-sided convex polygon, in degrees?",
+      "options": [
+        "540",
+        "541",
+        "539",
+        "1080"
+      ],
+      "answer": 0,
+      "explanation": "(5 − 2) × 180 = 540°."
+    },
+    {
+      "id": "geometry-i-014",
+      "category": "Polygon angles",
+      "difficulty": "Foundation",
+      "prompt": "What is the interior-angle sum of a 6-sided convex polygon, in degrees?",
+      "options": [
+        "721",
+        "720",
+        "719",
+        "1440"
+      ],
+      "answer": 1,
+      "explanation": "(6 − 2) × 180 = 720°."
+    },
+    {
+      "id": "geometry-i-015",
+      "category": "Polygon angles",
+      "difficulty": "Application",
+      "prompt": "What is each interior angle of a regular 5-sided polygon, in degrees?",
+      "options": [
+        "109",
+        "107",
+        "108",
+        "216"
+      ],
+      "answer": 2,
+      "explanation": "Divide the sum 540° by 5."
+    },
+    {
+      "id": "geometry-i-016",
+      "category": "Polygon angles",
+      "difficulty": "Application",
+      "prompt": "What is each interior angle of a regular 6-sided polygon, in degrees?",
+      "options": [
+        "121",
+        "119",
+        "240",
+        "120"
+      ],
+      "answer": 3,
+      "explanation": "Divide the sum 720° by 6."
+    },
+    {
+      "id": "geometry-i-017",
+      "category": "Polygon angles",
+      "difficulty": "Application",
+      "prompt": "What is each interior angle of a regular 8-sided polygon, in degrees?",
+      "options": [
+        "135",
+        "136",
+        "134",
+        "270"
+      ],
+      "answer": 0,
+      "explanation": "Divide the sum 1080° by 8."
+    },
+    {
+      "id": "geometry-i-018",
+      "category": "Polygon angles",
+      "difficulty": "Challenge",
+      "prompt": "A regular polygon has exterior angles of 30°. How many sides does it have?",
+      "options": [
+        "13",
+        "12",
+        "11",
+        "24"
+      ],
+      "answer": 1,
+      "explanation": "360 ÷ 30 = 12 sides."
+    },
+    {
+      "id": "geometry-i-019",
+      "category": "Polygon angles",
+      "difficulty": "Challenge",
+      "prompt": "A convex polygon has interior-angle sum 1260°. How many sides does it have?",
+      "options": [
+        "10",
+        "8",
+        "9",
+        "18"
+      ],
+      "answer": 2,
+      "explanation": "n − 2 = 1260 ÷ 180 = 7, so n = 9."
+    },
+    {
+      "id": "geometry-i-020",
+      "category": "Polygon angles",
+      "difficulty": "Challenge",
+      "prompt": "Can a regular polygon have exterior angles of 50°?",
+      "options": [
+        "Yes, it has 7 sides.",
+        "Yes, it has 8 sides.",
+        "No, because 50° is less than 90°.",
+        "No, because 360 ÷ 50 is not a whole number."
+      ],
+      "answer": 3,
+      "explanation": "The number of equal exterior angles must be a positive whole number; 7.2 sides is impossible."
+    },
+    {
+      "id": "geometry-i-021",
+      "category": "Angles and parallel lines",
+      "difficulty": "Foundation",
+      "prompt": "Two angles on a straight line are 67° and x. What is x in degrees?",
+      "options": [
+        "113",
+        "114",
+        "112",
+        "226"
+      ],
+      "answer": 0,
+      "explanation": "180 − 67 = 113."
+    },
+    {
+      "id": "geometry-i-022",
+      "category": "Angles and parallel lines",
+      "difficulty": "Application",
+      "prompt": "Angles at a point are 80°, 110°, 95° and x. What is x in degrees?",
+      "options": [
+        "76",
+        "75",
+        "74",
+        "150"
+      ],
+      "answer": 1,
+      "explanation": "360 − 80 − 110 − 95 = 75."
+    },
+    {
+      "id": "geometry-i-023",
+      "category": "Angles and parallel lines",
+      "difficulty": "Foundation",
+      "prompt": "Two lines intersect. An angle is 48°. What is its vertically opposite angle in degrees?",
+      "options": [
+        "49",
+        "47",
+        "48",
+        "96"
+      ],
+      "answer": 2,
+      "explanation": "Vertically opposite angles are equal."
+    },
+    {
+      "id": "geometry-i-024",
+      "category": "Angles and parallel lines",
+      "difficulty": "Foundation",
+      "prompt": "Parallel lines are crossed by a transversal. An angle is 72°. What is its corresponding angle in degrees?",
+      "options": [
+        "73",
+        "71",
+        "144",
+        "72"
+      ],
+      "answer": 3,
+      "explanation": "Corresponding angles between parallel lines are equal."
+    },
+    {
+      "id": "geometry-i-025",
+      "category": "Angles and parallel lines",
+      "difficulty": "Application",
+      "prompt": "Parallel lines are crossed by a transversal. An angle is 115°. What is its alternate interior angle in degrees?",
+      "options": [
+        "115",
+        "116",
+        "114",
+        "230"
+      ],
+      "answer": 0,
+      "explanation": "Alternate interior angles between parallel lines are equal."
+    },
+    {
+      "id": "geometry-i-026",
+      "category": "Angles and parallel lines",
+      "difficulty": "Application",
+      "prompt": "Two co-interior angles between parallel lines are 124° and x. What is x in degrees?",
+      "options": [
+        "57",
+        "56",
+        "55",
+        "112"
+      ],
+      "answer": 1,
+      "explanation": "Co-interior angles add to 180°, so x = 56."
+    },
+    {
+      "id": "geometry-i-027",
+      "category": "Angles and parallel lines",
+      "difficulty": "Foundation",
+      "prompt": "A triangle has angles 35° and 65°. What is its third angle in degrees?",
+      "options": [
+        "81",
+        "79",
+        "80",
+        "160"
+      ],
+      "answer": 2,
+      "explanation": "180 − 35 − 65 = 80."
+    },
+    {
+      "id": "geometry-i-028",
+      "category": "Angles and parallel lines",
+      "difficulty": "Application",
+      "prompt": "An isosceles triangle has vertex angle 40°. What is either base angle in degrees?",
+      "options": [
+        "71",
+        "69",
+        "140",
+        "70"
+      ],
+      "answer": 3,
+      "explanation": "The two equal base angles share 140°: 140 ÷ 2 = 70."
+    },
+    {
+      "id": "geometry-i-029",
+      "category": "Angles and parallel lines",
+      "difficulty": "Application",
+      "prompt": "A quadrilateral has angles 90°, 75°, 110° and x. What is x in degrees?",
+      "options": [
+        "85",
+        "86",
+        "84",
+        "170"
+      ],
+      "answer": 0,
+      "explanation": "360 − 90 − 75 − 110 = 85."
+    },
+    {
+      "id": "geometry-i-030",
+      "category": "Angles and parallel lines",
+      "difficulty": "Challenge",
+      "prompt": "When do corresponding angles have to be equal?",
+      "options": [
+        "Whenever any two lines are crossed.",
+        "When the two lines crossed by the transversal are parallel.",
+        "Only when the transversal is vertical.",
+        "Only when the angles are acute."
+      ],
+      "answer": 1,
+      "explanation": "Parallelism is the condition that guarantees corresponding-angle equality."
+    },
+    {
+      "id": "geometry-i-031",
+      "category": "Bisector constructions",
+      "difficulty": "Foundation",
+      "prompt": "What does a perpendicular bisector do to a segment?",
+      "options": [
+        "It halves an angle only.",
+        "It is parallel to the segment.",
+        "It passes through the midpoint at 90°.",
+        "It passes through an endpoint at 45°."
+      ],
+      "answer": 2,
+      "explanation": "Perpendicular specifies 90°; bisector specifies the midpoint."
+    },
+    {
+      "id": "geometry-i-032",
+      "category": "Bisector constructions",
+      "difficulty": "Foundation",
+      "prompt": "To construct the perpendicular bisector of AB, how should the two compass radii compare?",
+      "options": [
+        "One must be twice the other.",
+        "They must equal AB exactly.",
+        "They must be different.",
+        "They must be equal."
+      ],
+      "answer": 3,
+      "explanation": "Equal radii make the arc intersections equidistant from A and B."
+    },
+    {
+      "id": "geometry-i-033",
+      "category": "Bisector constructions",
+      "difficulty": "Application",
+      "prompt": "For a perpendicular-bisector construction, the compass radius must be…",
+      "options": [
+        "greater than half of AB.",
+        "less than half of AB.",
+        "zero.",
+        "exactly one quarter of AB."
+      ],
+      "answer": 0,
+      "explanation": "The arcs need two intersections, one on each side of the segment."
+    },
+    {
+      "id": "geometry-i-034",
+      "category": "Bisector constructions",
+      "difficulty": "Foundation",
+      "prompt": "What should be joined after the two equal-radius arc pairs intersect?",
+      "options": [
+        "The two endpoints of the original segment again",
+        "The two arc-intersection points",
+        "An endpoint to the other endpoint’s arc centre",
+        "Any two points on one arc"
+      ],
+      "answer": 1,
+      "explanation": "Joining the intersections produces the perpendicular bisector."
+    },
+    {
+      "id": "geometry-i-035",
+      "category": "Bisector constructions",
+      "difficulty": "Application",
+      "prompt": "Every point on the perpendicular bisector of AB is…",
+      "options": [
+        "twice as far from A as B.",
+        "on the segment AB.",
+        "equally distant from A and B.",
+        "closer to A than B."
+      ],
+      "answer": 2,
+      "explanation": "Equal distance from the endpoints characterises the perpendicular bisector."
+    },
+    {
+      "id": "geometry-i-036",
+      "category": "Bisector constructions",
+      "difficulty": "Foundation",
+      "prompt": "What does an angle bisector create?",
+      "options": [
+        "Two right angles in every case",
+        "Two equal line segments only",
+        "Two angles adding to 90° in every case",
+        "Two equal angles"
+      ],
+      "answer": 3,
+      "explanation": "An angle bisector halves the original angle."
+    },
+    {
+      "id": "geometry-i-037",
+      "category": "Bisector constructions",
+      "difficulty": "Foundation",
+      "prompt": "Which tools perform a standard compass-and-straightedge bisector construction?",
+      "options": [
+        "Compass and an unmarked straightedge",
+        "Calculator and protractor",
+        "A marked ruler only",
+        "A set square only"
+      ],
+      "answer": 0,
+      "explanation": "The arcs establish equal distances and the straightedge joins the required points."
+    },
+    {
+      "id": "geometry-i-038",
+      "category": "Bisector constructions",
+      "difficulty": "Challenge",
+      "prompt": "In an angle-bisector construction, why draw matching arcs from the two points on the arms?",
+      "options": [
+        "To measure the original angle in degrees",
+        "To find a point equally distant from those two points",
+        "To make the two arms parallel",
+        "To choose any convenient point"
+      ],
+      "answer": 1,
+      "explanation": "Together with the first equal-radius arc, this gives congruent triangles."
+    },
+    {
+      "id": "geometry-i-039",
+      "category": "Bisector constructions",
+      "difficulty": "Application",
+      "prompt": "Is measuring half an angle with a protractor the same method as a compass-and-straightedge construction?",
+      "options": [
+        "Yes; both use a calculator.",
+        "Yes; arcs are unnecessary in a compass construction.",
+        "No; the compass construction uses equal-distance arcs.",
+        "No; angle bisection is impossible without a protractor."
+      ],
+      "answer": 2,
+      "explanation": "The construction should be justified by equal distances, not a measured approximation."
+    },
+    {
+      "id": "geometry-i-040",
+      "category": "Bisector constructions",
+      "difficulty": "Challenge",
+      "prompt": "Why must you keep the same compass opening for paired arcs?",
+      "options": [
+        "To make the picture more colourful",
+        "To ensure every angle is 60°",
+        "To avoid ever drawing circles",
+        "To preserve the equal distances needed by the construction"
+      ],
+      "answer": 3,
+      "explanation": "Changing the radius breaks the equal-distance argument."
+    },
+    {
+      "id": "geometry-i-041",
+      "category": "Area and perimeter",
+      "difficulty": "Foundation",
+      "prompt": "A rectangle is 8 cm by 5 cm. What is its area in cm²?",
+      "options": [
+        "40",
+        "41",
+        "39",
+        "80"
+      ],
+      "answer": 0,
+      "explanation": "8 × 5 = 40 cm²."
+    },
+    {
+      "id": "geometry-i-042",
+      "category": "Area and perimeter",
+      "difficulty": "Foundation",
+      "prompt": "A rectangle is 8 cm by 5 cm. What is its perimeter in cm?",
+      "options": [
+        "27",
+        "26",
+        "25",
+        "52"
+      ],
+      "answer": 1,
+      "explanation": "2 × (8 + 5) = 26 cm."
+    },
+    {
+      "id": "geometry-i-043",
+      "category": "Area and perimeter",
+      "difficulty": "Foundation",
+      "prompt": "A triangle has base 10 cm and perpendicular height 6 cm. What is its area in cm²?",
+      "options": [
+        "31",
+        "29",
+        "30",
+        "60"
+      ],
+      "answer": 2,
+      "explanation": "½ × 10 × 6 = 30 cm²."
+    },
+    {
+      "id": "geometry-i-044",
+      "category": "Area and perimeter",
+      "difficulty": "Application",
+      "prompt": "A parallelogram has base 7 cm and perpendicular height 4 cm. What is its area in cm²?",
+      "options": [
+        "29",
+        "27",
+        "56",
+        "28"
+      ],
+      "answer": 3,
+      "explanation": "Base × perpendicular height = 7 × 4 = 28."
+    },
+    {
+      "id": "geometry-i-045",
+      "category": "Area and perimeter",
+      "difficulty": "Application",
+      "prompt": "A square has side length 3.5 cm. What is its perimeter in cm?",
+      "options": [
+        "14",
+        "15",
+        "13",
+        "28"
+      ],
+      "answer": 0,
+      "explanation": "4 × 3.5 = 14 cm."
+    },
+    {
+      "id": "geometry-i-046",
+      "category": "Area and perimeter",
+      "difficulty": "Application",
+      "prompt": "A rectangle has area 36 cm² and width 4 cm. What is its length in cm?",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "18"
+      ],
+      "answer": 1,
+      "explanation": "Length = area ÷ width = 36 ÷ 4."
+    },
+    {
+      "id": "geometry-i-047",
+      "category": "Area and perimeter",
+      "difficulty": "Challenge",
+      "prompt": "A triangle has area 24 cm² and base 8 cm. What is its perpendicular height in cm?",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "12"
+      ],
+      "answer": 2,
+      "explanation": "Height = 2 × area ÷ base = 48 ÷ 8."
+    },
+    {
+      "id": "geometry-i-048",
+      "category": "Area and perimeter",
+      "difficulty": "Application",
+      "prompt": "A rectangle is 4.5 cm by 2 cm. What is its area in cm²?",
+      "options": [
+        "10",
+        "8",
+        "18",
+        "9"
+      ],
+      "answer": 3,
+      "explanation": "4.5 × 2 = 9 cm²."
+    },
+    {
+      "id": "geometry-i-049",
+      "category": "Area and perimeter",
+      "difficulty": "Challenge",
+      "prompt": "A square has area 49 cm². What is its perimeter in cm?",
+      "options": [
+        "28",
+        "29",
+        "27",
+        "56"
+      ],
+      "answer": 0,
+      "explanation": "Side = 7 cm; perimeter = 4 × 7 = 28 cm."
+    },
+    {
+      "id": "geometry-i-050",
+      "category": "Area and perimeter",
+      "difficulty": "Foundation",
+      "prompt": "Which unit is appropriate for area?",
+      "options": [
+        "cm",
+        "cm²",
+        "cm³",
+        "degrees"
+      ],
+      "answer": 1,
+      "explanation": "Area measures two-dimensional coverage, so square units are needed."
+    },
+    {
+      "id": "geometry-i-051",
+      "category": "Compound shapes",
+      "difficulty": "Application",
+      "prompt": "A 10 cm by 8 cm rectangle has a 4 cm by 3 cm corner removed. What is the remaining area in cm²?",
+      "options": [
+        "69",
+        "67",
+        "68",
+        "136"
+      ],
+      "answer": 2,
+      "explanation": "10 × 8 − 4 × 3 = 68 cm²."
+    },
+    {
+      "id": "geometry-i-052",
+      "category": "Compound shapes",
+      "difficulty": "Application",
+      "prompt": "A 9 cm by 7 cm rectangle has a 3 cm by 2 cm corner removed. What is the remaining area in cm²?",
+      "options": [
+        "58",
+        "56",
+        "114",
+        "57"
+      ],
+      "answer": 3,
+      "explanation": "9 × 7 − 3 × 2 = 57 cm²."
+    },
+    {
+      "id": "geometry-i-053",
+      "category": "Compound shapes",
+      "difficulty": "Application",
+      "prompt": "A 12 cm by 8 cm rectangle has a 5 cm by 4 cm corner removed. What is the remaining area in cm²?",
+      "options": [
+        "76",
+        "77",
+        "75",
+        "152"
+      ],
+      "answer": 0,
+      "explanation": "12 × 8 − 5 × 4 = 76 cm²."
+    },
+    {
+      "id": "geometry-i-054",
+      "category": "Compound shapes",
+      "difficulty": "Challenge",
+      "prompt": "A 10 cm by 8 cm rectangle has a 4 cm by 3 cm corner notch removed. What is the L-shape perimeter in cm?",
+      "options": [
+        "37",
+        "36",
+        "35",
+        "72"
+      ],
+      "answer": 1,
+      "explanation": "Removing a rectangular corner replaces two boundary lengths with equal inward lengths; total = 2(width + height)."
+    },
+    {
+      "id": "geometry-i-055",
+      "category": "Compound shapes",
+      "difficulty": "Challenge",
+      "prompt": "A 12 cm by 9 cm rectangle has a 5 cm by 2 cm corner notch removed. What is the L-shape perimeter in cm?",
+      "options": [
+        "43",
+        "41",
+        "42",
+        "84"
+      ],
+      "answer": 2,
+      "explanation": "Removing a rectangular corner replaces two boundary lengths with equal inward lengths; total = 2(width + height)."
+    },
+    {
+      "id": "geometry-i-056",
+      "category": "Compound shapes",
+      "difficulty": "Foundation",
+      "prompt": "Three rectangles have non-overlapping interiors and areas 12 cm², 15 cm² and 8 cm². What is their combined area in cm²?",
+      "options": [
+        "36",
+        "34",
+        "70",
+        "35"
+      ],
+      "answer": 3,
+      "explanation": "Add the three non-overlapping areas: 12 + 15 + 8 = 35."
+    },
+    {
+      "id": "geometry-i-057",
+      "category": "Compound shapes",
+      "difficulty": "Challenge",
+      "prompt": "A compound region consists of three non-overlapping rectangles: 4 cm by 3 cm, 2 cm by 5 cm and 3 cm by 2 cm. What is the total area in cm²?",
+      "options": [
+        "28",
+        "29",
+        "27",
+        "56"
+      ],
+      "answer": 0,
+      "explanation": "12 + 10 + 6 = 28 cm²."
+    },
+    {
+      "id": "geometry-i-058",
+      "category": "Compound shapes",
+      "difficulty": "Challenge",
+      "prompt": "A 6.5 cm by 4 cm rectangle has a 1.5 cm by 2 cm corner removed. What is the remaining area in cm²?",
+      "options": [
+        "24",
+        "23",
+        "22",
+        "46"
+      ],
+      "answer": 1,
+      "explanation": "26 − 3 = 23 cm²."
+    },
+    {
+      "id": "geometry-i-059",
+      "category": "Compound shapes",
+      "difficulty": "Challenge",
+      "prompt": "Two 3 cm by 2 cm rectangles are joined along a complete 2 cm side without overlap. What is the perimeter of the combined shape in cm?",
+      "options": [
+        "17",
+        "15",
+        "16",
+        "32"
+      ],
+      "answer": 2,
+      "explanation": "Each perimeter is 10 cm, but the shared 2 cm edge is internal and counted twice: 20 − 4 = 16 cm."
+    },
+    {
+      "id": "geometry-i-060",
+      "category": "Compound shapes",
+      "difficulty": "Application",
+      "prompt": "Why can adding the separate rectangle perimeters give a wrong compound-shape perimeter?",
+      "options": [
+        "Areas must always be subtracted.",
+        "Perimeter uses square units.",
+        "A compound shape has no perimeter.",
+        "Shared internal edges are not on the outer boundary."
+      ],
+      "answer": 3,
+      "explanation": "Trace only the boundary, or subtract twice every shared edge."
+    }
+  ]
+}

@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 BANKS = {
     "algebra.json": "algebra",
+    **{f"{unit}.json": unit for unit in ("numbers-i", "geometry-i", "numbers-ii", "algebra-i", "numbers-iii")},
     "circulatory.json": "circulatory-system",
     "breathing.json": "breathing-system",
     "gas-laws.json": "gas-laws",

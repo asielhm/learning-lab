@@ -1,0 +1,854 @@
+{
+  "topicId": "numbers-ii",
+  "title": "Numbers II",
+  "categories": [
+    "Number sets",
+    "Adding and subtracting integers",
+    "Multiplying and dividing integers",
+    "Indices with integers",
+    "Roots and equations",
+    "BIDMAS with integers"
+  ],
+  "questions": [
+    {
+      "id": "numbers-ii-001",
+      "category": "Number sets",
+      "difficulty": "Foundation",
+      "prompt": "Use N = {1, 2, 3, …}. What is the smallest of N, Z and Q containing 5?",
+      "options": [
+        "N",
+        "Z",
+        "Q",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "5 is natural, so it is also integer and rational."
+    },
+    {
+      "id": "numbers-ii-002",
+      "category": "Number sets",
+      "difficulty": "Foundation",
+      "prompt": "Use N = {1, 2, 3, …}. What is the smallest of N, Z and Q containing −4?",
+      "options": [
+        "N",
+        "Z",
+        "Q",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "−4 is an integer, but is not natural."
+    },
+    {
+      "id": "numbers-ii-003",
+      "category": "Number sets",
+      "difficulty": "Foundation",
+      "prompt": "Use N = {1, 2, 3, …}. What is the smallest of N, Z and Q containing 0?",
+      "options": [
+        "N",
+        "Q",
+        "Z",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Here N starts at 1. Zero belongs to Z and Q."
+    },
+    {
+      "id": "numbers-ii-004",
+      "category": "Number sets",
+      "difficulty": "Foundation",
+      "prompt": "Use N = {1, 2, 3, …}. What is the smallest of N, Z and Q containing 3/4?",
+      "options": [
+        "N",
+        "Z",
+        "None of these",
+        "Q"
+      ],
+      "answer": 3,
+      "explanation": "3/4 is rational but is not an integer."
+    },
+    {
+      "id": "numbers-ii-005",
+      "category": "Number sets",
+      "difficulty": "Foundation",
+      "prompt": "Use N = {1, 2, 3, …}. What is the smallest of N, Z and Q containing 12/3?",
+      "options": [
+        "N",
+        "Z",
+        "Q",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "12/3 = 4, so its value is natural."
+    },
+    {
+      "id": "numbers-ii-006",
+      "category": "Number sets",
+      "difficulty": "Foundation",
+      "prompt": "Use N = {1, 2, 3, …}. What is the smallest of N, Z and Q containing −6/2?",
+      "options": [
+        "N",
+        "Z",
+        "Q",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "−6/2 = −3, which is an integer."
+    },
+    {
+      "id": "numbers-ii-007",
+      "category": "Number sets",
+      "difficulty": "Foundation",
+      "prompt": "Use N = {1, 2, 3, …}. What is the smallest of N, Z and Q containing 0.25?",
+      "options": [
+        "N",
+        "Z",
+        "Q",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "0.25 = 1/4 is rational but not integer."
+    },
+    {
+      "id": "numbers-ii-008",
+      "category": "Number sets",
+      "difficulty": "Application",
+      "prompt": "Which statement is true?",
+      "options": [
+        "Every rational number is an integer.",
+        "Every negative number is irrational.",
+        "Zero has no number set.",
+        "Every integer is rational."
+      ],
+      "answer": 3,
+      "explanation": "Any integer n can be written as n/1."
+    },
+    {
+      "id": "numbers-ii-009",
+      "category": "Number sets",
+      "difficulty": "Application",
+      "prompt": "Which calculation shows that division can take integers outside Z?",
+      "options": [
+        "1 ÷ 2 = 1/2",
+        "2 × 3 = 6",
+        "−2 + 5 = 3",
+        "−4 − 1 = −5"
+      ],
+      "answer": 0,
+      "explanation": "1/2 is rational but not an integer."
+    },
+    {
+      "id": "numbers-ii-010",
+      "category": "Number sets",
+      "difficulty": "Challenge",
+      "prompt": "Which number is rational but not an integer?",
+      "options": [
+        "−7",
+        "−7/2",
+        "0",
+        "14/2"
+      ],
+      "answer": 1,
+      "explanation": "−7/2 = −3.5 is not a whole number."
+    },
+    {
+      "id": "numbers-ii-011",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-3) + (5).",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "Add a signed change."
+    },
+    {
+      "id": "numbers-ii-012",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (4) + (-7).",
+      "options": [
+        "-2",
+        "-4",
+        "-6",
+        "-3"
+      ],
+      "answer": 3,
+      "explanation": "Add a signed change."
+    },
+    {
+      "id": "numbers-ii-013",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-6) + (-2).",
+      "options": [
+        "-8",
+        "-7",
+        "-9",
+        "-16"
+      ],
+      "answer": 0,
+      "explanation": "Add a signed change."
+    },
+    {
+      "id": "numbers-ii-014",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-5) + (8).",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explanation": "Add a signed change."
+    },
+    {
+      "id": "numbers-ii-015",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Application",
+      "prompt": "Evaluate (7) − (-3).",
+      "options": [
+        "11",
+        "9",
+        "10",
+        "20"
+      ],
+      "answer": 2,
+      "explanation": "Subtracting (-3) means adding (3)."
+    },
+    {
+      "id": "numbers-ii-016",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-2) − (5).",
+      "options": [
+        "-6",
+        "-8",
+        "-14",
+        "-7"
+      ],
+      "answer": 3,
+      "explanation": "Subtracting (5) means adding (-5)."
+    },
+    {
+      "id": "numbers-ii-017",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-4) − (-9).",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "Subtracting (-9) means adding (9)."
+    },
+    {
+      "id": "numbers-ii-018",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (0) − (-6).",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "12"
+      ],
+      "answer": 1,
+      "explanation": "Subtracting (-6) means adding (6)."
+    },
+    {
+      "id": "numbers-ii-019",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Application",
+      "prompt": "Evaluate (-8) + (12).",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "Add a signed change."
+    },
+    {
+      "id": "numbers-ii-020",
+      "category": "Adding and subtracting integers",
+      "difficulty": "Application",
+      "prompt": "Evaluate (9) − (14).",
+      "options": [
+        "-4",
+        "-6",
+        "-10",
+        "-5"
+      ],
+      "answer": 3,
+      "explanation": "Subtracting (14) means adding (-14)."
+    },
+    {
+      "id": "numbers-ii-021",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-3) × (4).",
+      "options": [
+        "-12",
+        "-11",
+        "-13",
+        "-24"
+      ],
+      "answer": 0,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-022",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-5) × (-6).",
+      "options": [
+        "31",
+        "30",
+        "29",
+        "60"
+      ],
+      "answer": 1,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-023",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (8) × (-2).",
+      "options": [
+        "-15",
+        "-17",
+        "-16",
+        "-32"
+      ],
+      "answer": 2,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-024",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-9) × (0).",
+      "options": [
+        "1",
+        "-1",
+        "2",
+        "0"
+      ],
+      "answer": 3,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-025",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-24) ÷ (6).",
+      "options": [
+        "-4",
+        "-3",
+        "-5",
+        "-8"
+      ],
+      "answer": 0,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-026",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (35) ÷ (-7).",
+      "options": [
+        "-4",
+        "-5",
+        "-6",
+        "-10"
+      ],
+      "answer": 1,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-027",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-42) ÷ (-6).",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "14"
+      ],
+      "answer": 2,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-028",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (0) ÷ (-4).",
+      "options": [
+        "1",
+        "-1",
+        "2",
+        "0"
+      ],
+      "answer": 3,
+      "explanation": "For multiplication/division, equal signs give a positive result and different signs give a negative result; zero products and zero numerators are zero."
+    },
+    {
+      "id": "numbers-ii-029",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Application",
+      "prompt": "What is (−5) ÷ 0?",
+      "options": [
+        "Undefined",
+        "0",
+        "−5",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Division by zero is undefined."
+    },
+    {
+      "id": "numbers-ii-030",
+      "category": "Multiplying and dividing integers",
+      "difficulty": "Challenge",
+      "prompt": "What is (−7) ÷ 2? Give an exact value.",
+      "options": [
+        "-5/2",
+        "-7/2",
+        "-9/2",
+        "-7"
+      ],
+      "answer": 1,
+      "explanation": "Different signs give a negative quotient: −7/2."
+    },
+    {
+      "id": "numbers-ii-031",
+      "category": "Indices with integers",
+      "difficulty": "Foundation",
+      "prompt": "What is (−3)²?",
+      "options": [
+        "10",
+        "8",
+        "9",
+        "18"
+      ],
+      "answer": 2,
+      "explanation": "Two negative factors multiply to a positive."
+    },
+    {
+      "id": "numbers-ii-032",
+      "category": "Indices with integers",
+      "difficulty": "Application",
+      "prompt": "What is −3²?",
+      "options": [
+        "-8",
+        "-10",
+        "-18",
+        "-9"
+      ],
+      "answer": 3,
+      "explanation": "Square 3 first, then apply the leading minus."
+    },
+    {
+      "id": "numbers-ii-033",
+      "category": "Indices with integers",
+      "difficulty": "Foundation",
+      "prompt": "What is (-2)³?",
+      "options": [
+        "-8",
+        "-7",
+        "-9",
+        "-16"
+      ],
+      "answer": 0,
+      "explanation": "Three negative factors give a negative product."
+    },
+    {
+      "id": "numbers-ii-034",
+      "category": "Indices with integers",
+      "difficulty": "Application",
+      "prompt": "What is (-2)⁴?",
+      "options": [
+        "17",
+        "16",
+        "15",
+        "32"
+      ],
+      "answer": 1,
+      "explanation": "Four negative factors give a positive product."
+    },
+    {
+      "id": "numbers-ii-035",
+      "category": "Indices with integers",
+      "difficulty": "Application",
+      "prompt": "What is −2⁴?",
+      "options": [
+        "-15",
+        "-17",
+        "-16",
+        "-32"
+      ],
+      "answer": 2,
+      "explanation": "The index applies before the unbracketed minus."
+    },
+    {
+      "id": "numbers-ii-036",
+      "category": "Indices with integers",
+      "difficulty": "Foundation",
+      "prompt": "What is (-1)⁵?",
+      "options": [
+        "0",
+        "-2",
+        "-1/2",
+        "-1"
+      ],
+      "answer": 3,
+      "explanation": "An odd number of factors of −1 gives −1."
+    },
+    {
+      "id": "numbers-ii-037",
+      "category": "Indices with integers",
+      "difficulty": "Foundation",
+      "prompt": "What is (-4)²?",
+      "options": [
+        "16",
+        "17",
+        "15",
+        "32"
+      ],
+      "answer": 0,
+      "explanation": "(−4) × (−4) = 16."
+    },
+    {
+      "id": "numbers-ii-038",
+      "category": "Indices with integers",
+      "difficulty": "Challenge",
+      "prompt": "What is (-5)³?",
+      "options": [
+        "-124",
+        "-125",
+        "-126",
+        "-250"
+      ],
+      "answer": 1,
+      "explanation": "An odd power preserves the negative sign."
+    },
+    {
+      "id": "numbers-ii-039",
+      "category": "Indices with integers",
+      "difficulty": "Challenge",
+      "prompt": "Why are (−4)² and −4² different?",
+      "options": [
+        "A square is always negative.",
+        "Brackets never affect indices.",
+        "Only the first expression squares the negative sign with the base.",
+        "Both expressions equal −16."
+      ],
+      "answer": 2,
+      "explanation": "(−4)² = 16, while −4² = −16."
+    },
+    {
+      "id": "numbers-ii-040",
+      "category": "Indices with integers",
+      "difficulty": "Application",
+      "prompt": "Which is positive?",
+      "options": [
+        "−3⁴",
+        "(−3)³",
+        "−(3²)",
+        "(−3)⁴"
+      ],
+      "answer": 3,
+      "explanation": "An even power of a bracketed negative base is positive."
+    },
+    {
+      "id": "numbers-ii-041",
+      "category": "Roots and equations",
+      "difficulty": "Foundation",
+      "prompt": "What is √64?",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "The principal square root is non-negative."
+    },
+    {
+      "id": "numbers-ii-042",
+      "category": "Roots and equations",
+      "difficulty": "Foundation",
+      "prompt": "What is ∛(−27)?",
+      "options": [
+        "-2",
+        "-3",
+        "-4",
+        "-6"
+      ],
+      "answer": 1,
+      "explanation": "(−3)³ = −27."
+    },
+    {
+      "id": "numbers-ii-043",
+      "category": "Roots and equations",
+      "difficulty": "Foundation",
+      "prompt": "What is ∛(−64)?",
+      "options": [
+        "-3",
+        "-5",
+        "-4",
+        "-8"
+      ],
+      "answer": 2,
+      "explanation": "(−4)³ = −64."
+    },
+    {
+      "id": "numbers-ii-044",
+      "category": "Roots and equations",
+      "difficulty": "Application",
+      "prompt": "What is √((-5)²)?",
+      "options": [
+        "6",
+        "4",
+        "10",
+        "5"
+      ],
+      "answer": 3,
+      "explanation": "√25 = 5, not −5."
+    },
+    {
+      "id": "numbers-ii-045",
+      "category": "Roots and equations",
+      "difficulty": "Application",
+      "prompt": "How many integer solutions does x² = 36 have?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "The solutions are x = 6 and x = −6."
+    },
+    {
+      "id": "numbers-ii-046",
+      "category": "Roots and equations",
+      "difficulty": "Challenge",
+      "prompt": "How many real solutions does x² = −9 have?",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "answer": 1,
+      "explanation": "The square of a real number cannot be negative."
+    },
+    {
+      "id": "numbers-ii-047",
+      "category": "Roots and equations",
+      "difficulty": "Application",
+      "prompt": "What is the integer solution of x³ = −125?",
+      "options": [
+        "-4",
+        "-6",
+        "-5",
+        "-10"
+      ],
+      "answer": 2,
+      "explanation": "(−5)³ = −125."
+    },
+    {
+      "id": "numbers-ii-048",
+      "category": "Roots and equations",
+      "difficulty": "Challenge",
+      "prompt": "What is √(−16) in the real numbers?",
+      "options": [
+        "−4",
+        "4",
+        "−8",
+        "It has no real value."
+      ],
+      "answer": 3,
+      "explanation": "No real number has a negative square."
+    },
+    {
+      "id": "numbers-ii-049",
+      "category": "Roots and equations",
+      "difficulty": "Application",
+      "prompt": "Which are all the integer solutions of x² = 49?",
+      "options": [
+        "−7 and 7",
+        "7 only",
+        "−7 only",
+        "−49 and 49"
+      ],
+      "answer": 0,
+      "explanation": "Both (−7)² and 7² equal 49."
+    },
+    {
+      "id": "numbers-ii-050",
+      "category": "Roots and equations",
+      "difficulty": "Challenge",
+      "prompt": "Which statement correctly distinguishes a root from an equation?",
+      "options": [
+        "√25 = ±5, while x² = 25 has only solution 5.",
+        "√25 = 5, while x² = 25 has solutions −5 and 5.",
+        "Both have only value −5.",
+        "Neither has a real value."
+      ],
+      "answer": 1,
+      "explanation": "The square root symbol names the principal non-negative root."
+    },
+    {
+      "id": "numbers-ii-051",
+      "category": "BIDMAS with integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate −3 + 2 × 5.",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "14"
+      ],
+      "answer": 2,
+      "explanation": "Multiply first: −3 + 10."
+    },
+    {
+      "id": "numbers-ii-052",
+      "category": "BIDMAS with integers",
+      "difficulty": "Application",
+      "prompt": "Evaluate 4 − 3 × (−2).",
+      "options": [
+        "11",
+        "9",
+        "20",
+        "10"
+      ],
+      "answer": 3,
+      "explanation": "4 − (−6) = 10."
+    },
+    {
+      "id": "numbers-ii-053",
+      "category": "BIDMAS with integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (−2 + 5)².",
+      "options": [
+        "9",
+        "10",
+        "8",
+        "18"
+      ],
+      "answer": 0,
+      "explanation": "Brackets give 3, then square."
+    },
+    {
+      "id": "numbers-ii-054",
+      "category": "BIDMAS with integers",
+      "difficulty": "Application",
+      "prompt": "Evaluate −2² + 3.",
+      "options": [
+        "0",
+        "-1",
+        "-2",
+        "-1/2"
+      ],
+      "answer": 1,
+      "explanation": "−4 + 3 = −1; the square comes before the leading minus."
+    },
+    {
+      "id": "numbers-ii-055",
+      "category": "BIDMAS with integers",
+      "difficulty": "Foundation",
+      "prompt": "Evaluate (-2)² + 3.",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "14"
+      ],
+      "answer": 2,
+      "explanation": "4 + 3 = 7."
+    },
+    {
+      "id": "numbers-ii-056",
+      "category": "BIDMAS with integers",
+      "difficulty": "Application",
+      "prompt": "Evaluate 12 ÷ (−3) × 2.",
+      "options": [
+        "-7",
+        "-9",
+        "-16",
+        "-8"
+      ],
+      "answer": 3,
+      "explanation": "Division/multiplication left to right: −4 × 2."
+    },
+    {
+      "id": "numbers-ii-057",
+      "category": "BIDMAS with integers",
+      "difficulty": "Application",
+      "prompt": "Evaluate −5 − (−3) + 2.",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "−5 + 3 + 2 = 0."
+    },
+    {
+      "id": "numbers-ii-058",
+      "category": "BIDMAS with integers",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate 2 × (−3 − 1)² − 5.",
+      "options": [
+        "28",
+        "27",
+        "26",
+        "54"
+      ],
+      "answer": 1,
+      "explanation": "2 × 16 − 5 = 27."
+    },
+    {
+      "id": "numbers-ii-059",
+      "category": "BIDMAS with integers",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate 18 ÷ (−3) + (−2)³.",
+      "options": [
+        "-13",
+        "-15",
+        "-14",
+        "-28"
+      ],
+      "answer": 2,
+      "explanation": "−6 + (−8) = −14."
+    },
+    {
+      "id": "numbers-ii-060",
+      "category": "BIDMAS with integers",
+      "difficulty": "Challenge",
+      "prompt": "Evaluate (-4 + 1)² − 2 × (−5).",
+      "options": [
+        "20",
+        "18",
+        "38",
+        "19"
+      ],
+      "answer": 3,
+      "explanation": "9 − (−10) = 19."
+    }
+  ]
+}
