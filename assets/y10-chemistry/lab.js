@@ -6,7 +6,7 @@ import {planFor} from './bench-plans.js';
 import {sceneFor,effectArt,escape} from './bench-scenes.js';
 const $=selector=>document.querySelector(selector);
 const definitions={acids,metals,redox,organic}[document.body.dataset.unit];
-const states=new Map();let active=definitions[0],state,status='',busy=false,selected=false,drag=null,touchPress=null,operation=0,suppressClick=false;
+const states=new Map();let active=definitions[0],state,status='',busy=false,selected=false,drag=null,touchPress=null,lastTouchAt=-Infinity,operation=0,suppressClick=false;
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 function fresh(d){return {values:Object.fromEntries(d.controls.map(c=>[c.id,c.value])),phase:0,benchStep:0,extra:{delivered:0},elapsed:0,records:[],trial:1,recorded:false,answer:null,rotation:Math.floor(Math.random()*4),helped:new Set()};}
 const plan=()=>planFor(active.id,state.values);
@@ -122,6 +122,7 @@ scene.addEventListener('pointermove',event=>{
 });
 scene.addEventListener('pointerup',event=>{
  const touch=event.pointerType==='touch',press=touchPress;touchPress=null;
+ if(touch)lastTouchAt=performance.now();
  if(!drag||event.pointerId!==drag.pointer){
   if(touch&&press?.element&&press.element===event.target.closest('[role="button"]')&&Math.hypot(event.clientX-press.x,event.clientY-press.y)<10)activate(press.element);
   return;
@@ -138,7 +139,7 @@ scene.addEventListener('pointerup',event=>{
 scene.addEventListener('pointercancel',()=>{$('#chem-scene [data-vessel]')?.removeAttribute('transform');if(drag)drag.source.removeAttribute('transform');drag=null;touchPress=null;selected=false;scene.classList.remove('object-selected');});
 // Touch actions run on pointer release. Compatibility clicks can arrive late or
 // be swallowed after a drag, so they must not control (or repeat) an experiment.
-scene.addEventListener('click',event=>{if(event.pointerType==='touch'||event.sourceCapabilities?.firesTouchEvents)return;if(!suppressClick)activate(event.target);});
+scene.addEventListener('click',event=>{if(event.pointerType==='touch'||event.sourceCapabilities?.firesTouchEvents||(!event.pointerType&&performance.now()-lastTouchAt<900))return;if(!suppressClick)activate(event.target);});
 scene.addEventListener('keydown',event=>{if(event.key==='Escape'){selected=false;scene.classList.remove('object-selected');announce('Selection cleared.');}else if(event.key==='Enter'||event.key===' '){if(event.target.closest('[role="button"]')){event.preventDefault();activate(event.target,true);}}});
 $('#bench-help').onclick=()=>{
  if(busy||benchFinished())return;
