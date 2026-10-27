@@ -1,0 +1,36 @@
+/* Shared lesson wayfinding and the final link to independent revision. */
+.lesson-section-label{display:flex;align-items:center;gap:14px;line-height:1.5}
+.lesson-section-number,.steps .lesson-section-number,.algebra-steps .lesson-section-number,.law-menu .lesson-section-number{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-width:52px;height:52px;padding:8px;border:1px solid #dcad95;border-radius:11px;background:#ffe6d6;color:#803c29;font:800 30px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:0;font-variant-numeric:tabular-nums}
+.algebra-steps button{display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:14px;align-content:center;padding:20px}
+.algebra-steps .lesson-section-number{position:static;grid-row:1 / span 2;align-self:center}
+.algebra-steps button>b,.algebra-steps button>small{grid-column:2;min-width:0}
+.law-menu .law-menu-kicker{display:flex;align-items:center;gap:12px;min-height:52px}
+.law-menu-kicker>span:last-child{font-size:10px;line-height:1.5;letter-spacing:.8px}
+.lesson-review{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:30px;margin:35px 0 30px;border:1px solid #b9cdbf;border-radius:14px;background:#edf4ee;color:#203b38;text-align:left}
+.lesson-review .eyebrow{color:#486454;font-size:10px}
+.lesson-review h2{font:650 28px/1.25 ui-sans-serif,system-ui,sans-serif;letter-spacing:-.7px;color:#203b38;margin:18px 0 14px}
+.lesson-review p{max-width:70ch;font-size:13px;line-height:1.8;color:#52695e;margin:0 0 10px}
+.lesson-review .lesson-review-link{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;gap:12px;min-height:48px;padding:14px 20px;border:1px solid #294b42;border-radius:7px;background:#294b42;color:white;font:650 13px/1.5 ui-sans-serif,system-ui,sans-serif;text-align:center;text-decoration:none}
+.lesson-review .lesson-review-link:hover{background:#366451;color:white}
+.practical-instruction{padding:19px 21px;margin:20px 0;border:1px solid #e6bc91;border-left:5px solid #b56532;border-radius:9px;background:#fff1df;color:#663413}
+.challenge .practical-instruction-label{font-size:11px;font-weight:800;line-height:1.5;letter-spacing:1.2px;text-transform:uppercase;color:#8b4725;margin:0 0 10px}
+.practical-instruction #challengeTask{font-size:20px;font-weight:650;line-height:1.65;color:#663413;margin:0}
+.challenge #challengeIndex{font-size:13px;font-weight:750;line-height:1.6;color:#244b5b;letter-spacing:.8px}
+.challenge #checkExperiment{min-height:48px;font-size:14px}
+.challenge #challengeHint{font-size:12px;line-height:1.8}
+@media(max-width:760px){
+ .lesson-review{flex-direction:column;align-items:stretch;padding:24px;gap:18px}
+ .lesson-review .lesson-review-link{width:100%}
+}
+@media(max-width:650px){
+ .lesson-section-number,.steps .lesson-section-number,.algebra-steps .lesson-section-number,.law-menu .lesson-section-number{min-width:42px;height:42px;font-size:25px;border-radius:9px}
+ .lesson-section-label{gap:11px}
+ .steps .step{flex-direction:column;align-items:flex-start;gap:10px}
+ .algebra-steps button{display:flex;flex-direction:column;align-items:flex-start;padding:15px 10px;gap:7px}
+ .algebra-steps .lesson-section-number{align-self:flex-start;margin:0 0 3px}
+ .law-menu .law-menu-kicker{flex-direction:column;align-items:flex-start;gap:8px}
+ .law-menu-kicker>span:last-child{font-size:8px;line-height:1.6;letter-spacing:.3px}
+ .practical-instruction{padding:17px;margin:18px 0}
+ .practical-instruction #challengeTask{font-size:18px}
+ .lesson-review h2{font-size:25px}
+}
