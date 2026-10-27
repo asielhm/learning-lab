@@ -26,9 +26,24 @@ function validate(data) {
 function pool() {
   return bank.questions.filter(question => settings.category.includes(question.category) && settings.difficulty.includes(question.difficulty));
 }
+function filterSummary(name, choices, selected) {
+  const noun = name === 'category' ? 'areas' : 'levels';
+  if (!selected.length) return `Choose ${noun}`;
+  if (selected.length === choices.length) return `All ${noun} (${choices.length})`;
+  if (selected.length === 1 || name === 'difficulty') return selected.join(', ');
+  return `${selected.length} ${noun} selected`;
+}
 function filterGroup(name, title, choices, selected) {
   const noun = name === 'category' ? 'areas' : 'levels';
-  return `<fieldset id="revision-${name}" class="revision-filter-group" aria-describedby="revision-${name}-help"><legend>${title}</legend><div class="revision-filter-tools"><p id="revision-${name}-help">Tick one or more ${noun}. <span id="revision-${name}-count"></span></p><div><button type="button" data-filter="${name}" data-select="all" aria-label="Select all question ${noun}">Select all</button><button type="button" data-filter="${name}" data-select="none" aria-label="Clear question ${noun}">Clear</button></div></div><div class="revision-filter-options">${choices.map((choice,index)=>`<label class="revision-filter-choice" for="revision-${name}-${index}"><input id="revision-${name}-${index}" type="checkbox" name="${name}" value="${escape(choice)}" ${selected.includes(choice)?'checked':''}><span>${escape(choice)}</span></label>`).join('')}</div></fieldset>`;
+  return `<fieldset id="revision-${name}" class="revision-filter-group"><legend id="revision-${name}-label">${title}</legend><details class="revision-filter-dropdown"><summary aria-labelledby="revision-${name}-label revision-${name}-summary"><span id="revision-${name}-summary">${escape(filterSummary(name,choices,selected))}</span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="revision-filter-panel"><div class="revision-filter-tools"><p>Tick one or more ${noun}. <span id="revision-${name}-count"></span></p><div><button type="button" data-filter="${name}" data-select="all" aria-label="Select all question ${noun}">Select all</button><button type="button" data-filter="${name}" data-select="none" aria-label="Clear question ${noun}">Clear</button></div></div><div class="revision-filter-options">${choices.map((choice,index)=>`<label class="revision-filter-choice" for="revision-${name}-${index}"><input id="revision-${name}-${index}" type="checkbox" name="${name}" value="${escape(choice)}" ${selected.includes(choice)?'checked':''}><span>${escape(choice)}</span></label>`).join('')}</div><div class="revision-filter-done"><button type="button" data-close-filter aria-label="Done choosing question ${noun}">Done</button></div></div></details></fieldset>`;
+}
+function positionFilterMenu(menu) {
+  if (!menu.open) return;
+  const box = menu.querySelector('summary').getBoundingClientRect();
+  const below = innerHeight - box.bottom - 14, above = box.top - 14;
+  const upwards = below < 230 && above > below;
+  menu.classList.toggle('opens-up', upwards);
+  menu.style.setProperty('--filter-menu-height', `${Math.min(390, Math.max(150, upwards ? above : below))}px`);
 }
 function readSettings() {
   const form = new FormData(root.querySelector('#revision-settings'));
@@ -60,6 +75,18 @@ function renderSetup(moveFocus = false) {
       readSettings();
     });
   }
+  for (const menu of root.querySelectorAll('.revision-filter-dropdown')) {
+    menu.addEventListener('toggle', () => {
+      if (!menu.open) return;
+      for (const other of root.querySelectorAll('.revision-filter-dropdown')) if (other !== menu) other.open = false;
+      positionFilterMenu(menu);
+    });
+  }
+  for (const button of root.querySelectorAll('[data-close-filter]')) {
+    button.addEventListener('click', () => {
+      const menu = button.closest('details'); menu.open = false; menu.querySelector('summary').focus();
+    });
+  }
   updateAvailability();
   recorder.syncMode(root, settings.mode);
   if (moveFocus) focus('#setup-title');
@@ -67,6 +94,11 @@ function renderSetup(moveFocus = false) {
 function updateAvailability() {
   root.querySelector('#revision-category-count').textContent = `${settings.category.length} of ${bank.categories.length} selected.`;
   root.querySelector('#revision-difficulty-count').textContent = `${settings.difficulty.length} of ${difficulties.length} selected.`;
+  for (const [name, choices] of [['category',bank.categories],['difficulty',difficulties]]) {
+    const summary = root.querySelector(`#revision-${name}-summary`);
+    summary.textContent = filterSummary(name,choices,settings[name]);
+    summary.title = settings[name].join(', ');
+  }
   const available = pool().length;
   const count = settings.length === 'all' ? available : Math.min(Number(settings.length), available);
   root.querySelector('#revision-availability').textContent = available ? `${available} matching questions · ${count} in this session. ${Number(settings.length) > available ? 'Using every matching question.' : ''}` : !settings.category.length && !settings.difficulty.length ? 'Select at least one question area and one question level.' : !settings.category.length ? 'Select at least one question area.' : !settings.difficulty.length ? 'Select at least one question level.' : 'No questions match these areas and levels. Choose another combination.';
@@ -153,4 +185,18 @@ async function load() {
   }
 }
 document.addEventListener('learning-lab-recording-change',()=>{if(root)recorder.refresh(root);});
+document.addEventListener('pointerdown', event => {
+  for (const menu of root?.querySelectorAll('.revision-filter-dropdown[open]') || []) if (!menu.contains(event.target)) menu.open = false;
+});
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return;
+  for (const menu of root?.querySelectorAll('.revision-filter-dropdown[open]') || []) {
+    const restoreFocus = menu.contains(document.activeElement);
+    menu.open = false;
+    if (restoreFocus) {menu.querySelector('summary').focus(); event.preventDefault();}
+  }
+});
+window.addEventListener('resize', () => {
+  for (const menu of root?.querySelectorAll('.revision-filter-dropdown[open]') || []) positionFilterMenu(menu);
+});
 load();

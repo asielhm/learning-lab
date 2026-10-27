@@ -42,6 +42,7 @@ async function answer(page, bank, wrong = false, test = false) {
   return question.id;
 }
 async function checkMultipleFilters(page, bank) {
+  await page.locator('#revision-category summary').click();
   await page.getByRole('button',{name:'Clear question areas',exact:true}).click();
   assert(await page.locator('#start-session').isDisabled());
   assert.match(await page.locator('#revision-availability').innerText(),/Select at least one question area/);
@@ -49,6 +50,7 @@ async function checkMultipleFilters(page, bank) {
   for(const area of areas) await page.getByRole('checkbox',{name:area,exact:true}).check();
   assert.equal(await page.locator('input[name=category]:checked').count(),3);
   await page.getByRole('checkbox',{name:areas[2],exact:true}).uncheck();
+  await page.locator('#revision-difficulty summary').click();
   await page.getByRole('button',{name:'Clear question levels',exact:true}).click();
   assert(await page.locator('#start-session').isDisabled());
   for(const level of ['Foundation','Challenge']) await page.getByRole('checkbox',{name:level,exact:true}).check();
@@ -56,6 +58,7 @@ async function checkMultipleFilters(page, bank) {
   assert.equal(await page.locator('input[name=difficulty]:checked').count(),2);
   const expected=bank.questions.filter(q=>areas.slice(0,2).includes(q.category)&&['Foundation','Challenge'].includes(q.difficulty));
   assert((await page.locator('#revision-availability').innerText()).includes(`${expected.length} matching`));
+  await page.getByRole('button',{name:'Done choosing question levels',exact:true}).click();
   await page.locator('#start-session').click();
   for(let i=0;i<Math.min(10,expected.length);i++){
     const prompt=await page.locator('#revision-question-title').innerText();
@@ -66,8 +69,11 @@ async function checkMultipleFilters(page, bank) {
   await page.locator('#new-session').click();
   assert.equal(await page.locator('input[name=category]:checked').count(),2,'Area choices persist across sessions');
   assert.equal(await page.locator('input[name=difficulty]:checked').count(),2,'Level choices persist across sessions');
+  await page.locator('#revision-category summary').click();
   await page.getByRole('button',{name:'Select all question areas',exact:true}).click();
+  await page.locator('#revision-difficulty summary').click();
   await page.getByRole('button',{name:'Select all question levels',exact:true}).click();
+  await page.getByRole('button',{name:'Done choosing question levels',exact:true}).click();
   assert((await page.locator('#revision-availability').innerText()).includes(`${bank.questions.length} matching`));
 }
 async function study(page, name, topic) {
@@ -106,10 +112,13 @@ async function study(page, name, topic) {
   assert.equal(await page.locator('.revision-review-item').count(), 10);
   await page.locator('#new-session').click();
   const sample = bank.questions.find(q=>q.difficulty === 'Challenge');
+  await page.locator('#revision-category summary').click();
   await page.getByRole('button',{name:'Clear question areas',exact:true}).click();
   await page.getByRole('checkbox',{name:sample.category,exact:true}).check();
+  await page.locator('#revision-difficulty summary').click();
   await page.getByRole('button',{name:'Clear question levels',exact:true}).click();
   await page.getByRole('checkbox',{name:'Challenge',exact:true}).check();
+  await page.getByRole('button',{name:'Done choosing question levels',exact:true}).click();
   await page.locator('#revision-length').selectOption('all');
   const pool = bank.questions.filter(q=>q.category===sample.category && q.difficulty==='Challenge');
   assert((await page.locator('#revision-availability').innerText()).includes(`${pool.length} matching`));
@@ -140,6 +149,17 @@ async function study(page, name, topic) {
     await phone.goto(`${base}/activities/y9/science/gas-laws/revision.html`);
     await phone.locator('#start-session').waitFor();
     assert(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+    await phone.locator('#revision-category summary').focus();await phone.keyboard.press('Enter');
+    await phone.locator('input[name=category]').first().waitFor({state:'visible'});
+    await phone.locator('input[name=category]').first().focus();await phone.keyboard.press('Space');
+    assert.equal(await phone.locator('input[name=category]:checked').count(),7);
+    await phone.keyboard.press('Escape');
+    assert.equal(await phone.locator('#revision-category details').getAttribute('open'),null);
+    assert.equal(await phone.evaluate(()=>document.activeElement.tagName),'SUMMARY');
+    await phone.locator('#revision-category summary').click();
+    await phone.getByRole('button',{name:'Select all question areas',exact:true}).click();
+    await phone.getByRole('button',{name:'Done choosing question areas',exact:true}).click();
+    assert.equal(await phone.locator('#revision-category details').getAttribute('open'),null);
     await phone.locator('#start-session').tap();
     await phone.locator('input[name=answer]').first().focus();await phone.keyboard.press('Space');
     await phone.locator('#check-answer').tap();

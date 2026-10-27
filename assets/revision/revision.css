@@ -28,3 +28,29 @@
  #revision-app .revision-filter-tools{gap:10px}
  #revision-app .revision-filter-choice{font-size:13px;min-height:48px}
 }
+
+/* Compact dropdowns retain native, keyboard-accessible checkbox controls. */
+#revision-app .revision-filters{grid-template-columns:1.3fr 1.2fr 1fr;gap:18px}
+#revision-app #revision-category{grid-column:auto}
+#revision-app .revision-filter-dropdown{position:relative;min-width:0}
+#revision-app .revision-filter-dropdown[open]{z-index:20}
+#revision-app .revision-filter-dropdown>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;min-height:45px;padding:11px 12px;border:1px solid #c8d1c0;border-radius:7px;background:white;color:#203b38;font-size:12px;line-height:1.7;cursor:pointer}
+#revision-app .revision-filter-dropdown>summary::-webkit-details-marker{display:none}
+#revision-app .revision-filter-dropdown>summary>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#revision-app .revision-filter-dropdown>summary>svg{flex-shrink:0;transition:transform .15s}
+#revision-app .revision-filter-dropdown[open]>summary{border-color:#809a75;background:#f5f8f0}
+#revision-app .revision-filter-dropdown[open]>summary>svg{transform:rotate(180deg)}
+#revision-app .revision-filter-dropdown>summary:focus-visible{outline:3px solid #b45651;outline-offset:3px}
+#revision-app .revision-filter-panel{position:absolute;top:calc(100% + 7px);left:0;right:0;display:flex;flex-direction:column;max-height:var(--filter-menu-height,390px);border:1px solid #bdcdb5;border-radius:9px;background:#fff;box-shadow:0 12px 30px #203b3826;overflow:hidden}
+#revision-app .revision-filter-dropdown:not([open])>.revision-filter-panel{display:none}
+#revision-app .revision-filter-dropdown.opens-up>.revision-filter-panel{top:auto;bottom:calc(100% + 7px)}
+#revision-app .revision-filter-panel .revision-filter-tools{flex-wrap:wrap;flex-shrink:0;gap:8px;padding:12px;margin:0;border-bottom:1px solid #e1e7db}
+#revision-app #revision-category .revision-filter-options,#revision-app #revision-difficulty .revision-filter-options{display:flex;flex-direction:column;gap:6px;padding:10px 12px;overflow-y:auto;min-height:0;overscroll-behavior:contain}
+#revision-app .revision-filter-done{flex-shrink:0;padding:9px 12px;border-top:1px solid #e1e7db;background:#f5f8f0}
+#revision-app .revision-filter-done>button{width:100%;min-height:38px;border:1px solid #294b42;border-radius:6px;background:#294b42;color:white;font:600 12px/1.5 ui-sans-serif,system-ui,sans-serif}
+#revision-app .revision-filter-group>legend{font-size:12px;margin-bottom:9px}
+#revision-app .revision-filters>label{font-size:12px}
+#revision-app .revision-filters>label>select{margin-top:9px}
+@media(max-width:740px){#revision-app .revision-filters{grid-template-columns:1fr;gap:20px}}
+
+#revision-app .revision-filter-panel .revision-filter-choice{flex-shrink:0}
