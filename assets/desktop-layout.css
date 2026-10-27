@@ -1,0 +1,58 @@
+/* Shared computer layout. New activities should load this after their own CSS.
+   Laptop (1366×768 / 1440×900) and desktop (1920×1080) are the design targets.
+   Small screens retain their existing basic fallback; the desktop layout leads. */
+@media (min-width:1024px){
+ :root{--desktop-page:1760px;--desktop-gutter:clamp(28px,2.5vw,48px);--desktop-gap:clamp(20px,2vw,36px);--desktop-scene:clamp(390px,calc(100dvh - 260px),680px)}
+ main,.site-header,.site-footer{width:100%;max-width:var(--desktop-page);padding-left:var(--desktop-gutter);padding-right:var(--desktop-gutter)}
+ main{padding-top:28px}.site-header{min-height:90px;height:90px}.site-header nav{gap:24px;font-size:14px}.site-footer{min-height:100px}
+ .hero{grid-template-columns:1.08fr 1fr;gap:clamp(40px,5vw,100px);padding-top:48px;padding-bottom:48px;min-height:clamp(520px,68vh,740px)}
+ .hero-copy>p{font-size:17px;max-width:50ch}.hero h1{font-size:clamp(62px,5.2vw,88px)}.hero-feature{width:100%;max-width:700px;justify-self:end}.feature-specimen{height:clamp(290px,34vh,400px)}.feature-specimen>img{height:90%}.journey-steps{gap:45px}.journey-steps p{max-width:40ch;font-size:14px}.year-tiles{grid-template-columns:repeat(6,minmax(0,1fr))}.year-tile{min-height:130px}
+ .page-heading{max-width:1000px}.page-heading>p{max-width:80ch;font-size:16px}.selection-card p,.activity-copy>p{font-size:14px}.activity-copy h2{font-size:26px}.activity-grid{gap:24px}.activity-art{height:250px}.selection-card{min-height:245px}
+ .top{padding-left:max(var(--desktop-gutter),calc((100vw - var(--desktop-page))/2 + var(--desktop-gutter)));padding-right:max(var(--desktop-gutter),calc((100vw - var(--desktop-page))/2 + var(--desktop-gutter)))}
+ .platform-breadcrumbs>div,body>.breadcrumbs{max-width:var(--desktop-page);padding-left:var(--desktop-gutter);padding-right:var(--desktop-gutter)}
+ /* Anatomy: keep the specimen and the lesson together in a landscape workspace. */
+ .workspace{grid-template-columns:minmax(0,1.7fr) minmax(340px,1fr);gap:var(--desktop-gap);align-items:start}
+ .workspace>.visual,.workspace>.viewer{position:sticky;top:18px;align-self:start}
+ .workspace .bodyScene,.workspace .threeScene,.workspace .scene{height:var(--desktop-scene)}
+ .bodyScene svg{height:calc(var(--desktop-scene) - 54px);min-height:0}.position-note{margin:0 auto;padding:0 26px}
+ .workspace>.lesson{padding:clamp(24px,2vw,34px)}.workspace .lesson p,.workspace .panel>p{font-size:15px;line-height:1.75}.workspace .lesson h2{font-size:30px}.exchange-scene>svg{max-height:var(--desktop-scene);margin:auto}
+ /* Gas particles, live graph and controls remain visible side by side. */
+ .gas-layout{grid-template-columns:minmax(0,1.55fr) minmax(360px,1fr);gap:var(--desktop-gap);align-items:stretch}
+ .particle-field canvas{height:clamp(280px,37vh,440px)}.gas-layout>.explain-panel{padding:26px}.explain-panel>p{font-size:14px;line-height:1.75}.gas-layout #graph{max-height:clamp(230px,34vh,360px)}.experiment-controls{padding:21px 25px}.experiment-controls .control-title{font-size:15px}.measurements{padding:18px 25px}.measurements b{font-size:32px}
+ .object-layout{grid-template-columns:minmax(0,1.85fr) minmax(340px,1fr);gap:var(--desktop-gap);align-items:start}.object-layout>.apparatus{position:sticky;top:18px}.object-layout .scene svg{height:clamp(340px,53vh,620px);width:100%}.controls-panel{padding:26px}.controls-panel .instruction{font-size:19px}.controls-panel .observation,.controls-panel .calculation{font-size:14px}.reading b{font-size:26px}
+ /* Maths: a broad visual/model area with a stable control and question column. */
+ .unit-hero,.chem-hero{grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);gap:var(--desktop-gap)}.unit-hero p,.chem-hero p{max-width:80ch;font-size:16px}.unit-cover,.chem-cover{max-height:250px}
+ .widget-layout{grid-template-columns:minmax(0,1.85fr) minmax(320px,1fr)}.widget-main,.widget-controls{padding:28px}.widget-main>.visual{min-height:280px}.widget-main>.visual svg{height:clamp(280px,43vh,490px);max-height:490px}.widget-main .explanation{font-size:15px;max-width:85ch}.widget-heading p{font-size:14px}.widget-controls .control label{font-size:14px}.widget-controls .practice-prompt{font-size:16px}.widget-controls .worked-steps{font-size:14px}
+ .lesson-grid{grid-template-columns:minmax(0,1.8fr) minmax(330px,1fr);gap:var(--desktop-gap)}.guide-card p{font-size:15px;line-height:1.8}.algebra-intro p{font-size:16px}.model-card,.guide-card{min-width:0}.object-model,.bag-model{min-height:280px}
+ /* Chemistry: the readings are on the same bench, next to the apparatus.
+    All switches, taps and draggable tools remain in the instrument drawing. */
+ .workbench .bench-header{padding:20px 25px}.workbench .bench-header h2{font-size:29px}.workbench .bench-header p{font-size:15px;max-width:90ch}.bench-layout{display:block}
+ .workbench .apparatus-stage{display:grid;grid-template-columns:minmax(0,1fr) clamp(190px,17vw,265px);height:var(--desktop-scene);min-height:390px;align-items:stretch}
+ .workbench .chem-scene{width:100%;height:100%;max-width:none;margin:0;min-width:0}.workbench .chem-scene svg{width:100%;height:100%;min-height:0;max-height:none}
+ .workbench .apparatus-stage>.readouts{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(3,minmax(0,1fr));width:100%;height:100%;max-width:none;margin:0;border:0;border-left:1px solid #c8dbcf;background:#e8f1e9;align-items:stretch}
+ .workbench .readout{display:flex;flex-direction:column;justify-content:center;padding:20px;border-right:0;border-bottom:1px solid #c8dbcf;gap:9px}.workbench .readout:last-child{border-bottom:0}.workbench .readout span{font-size:13px}.workbench .readout b{font-size:clamp(17px,1.4vw,24px);line-height:1.45;margin:0}
+ .workbench .bench-toolbar{padding:11px 20px}.workbench .bench-toolbar button{font-size:12px;min-height:40px}.workbench .bench-instruction{font-size:21px;min-height:66px;padding:14px 23px}.workbench .bench-actions{justify-content:flex-start;padding:11px 23px;gap:12px}.workbench .bench-actions button{min-width:150px;font-size:13px}.workbench .bench-status{font-size:14px}.workbench .step-progress{grid-template-columns:repeat(4,minmax(0,1fr));padding:20px 25px;gap:15px}.workbench .step-progress li{font-size:12px}
+ .workbench.expanded-bench .bench-header{padding:10px 22px}.workbench.expanded-bench .bench-header h2{font-size:23px}.workbench.expanded-bench .apparatus-stage{height:calc(100dvh - 330px);min-height:300px}.workbench.expanded-bench .step-progress,.workbench.expanded-bench .scene-caption,.workbench.expanded-bench .reaction-equation{display:none}.workbench.expanded-bench .bench-instruction{min-height:60px;font-size:20px}.workbench.expanded-bench .bench-settings[open]~.apparatus-stage{height:var(--desktop-scene)}
+ .experiment-menu{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.experiment-menu b{font-size:15px}.theory-grid{gap:20px}.theory-grid p{font-size:15px;max-width:85ch}.chem-review p,.unit-review p,.lesson-review p{font-size:15px}
+ /* Revision uses a landscape question sheet with the prompt and choices together. */
+ #revision-app .revision-heading{max-width:1200px}#revision-app .revision-heading>p:not(.revision-eyebrow){max-width:85ch;font-size:16px}#revision-app .revision-session{max-width:none}
+ #revision-app .revision-setup{padding:30px 34px}#revision-app .revision-mode-card b{font-size:15px}#revision-app .revision-mode-card small{font-size:13px}#revision-app .revision-filters{gap:24px}#revision-app .revision-mode{gap:24px}
+ #revision-app .revision-question-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);column-gap:clamp(28px,4vw,72px);row-gap:20px;padding:32px;min-height:clamp(390px,55vh,590px);align-content:start}
+ #revision-app .revision-question-tags{grid-column:1/-1;margin-bottom:0}#revision-app .revision-question-card>h2{grid-column:1;grid-row:2;margin:0;font-size:clamp(25px,2.1vw,35px);line-height:1.45;max-width:35ch}#revision-app #revision-answer-form{grid-column:2;grid-row:2;min-width:0}#revision-app .revision-option-text{font-size:15px}#revision-app .revision-option{min-height:62px}#revision-app .revision-question-actions{gap:14px}#revision-app .revision-question-actions>span{font-size:12px}#revision-app .revision-feedback p{font-size:14px}#revision-app .revision-btn{font-size:14px}
+ .teacher-main{max-width:1200px;padding-top:45px}
+}
+@media(min-width:1600px){
+ .activity-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.year-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.activity-art{height:270px}.selection-card{padding:28px}.workspace{grid-template-columns:minmax(0,1.9fr) minmax(380px,1fr)}.widget-layout{grid-template-columns:minmax(0,2fr) minmax(370px,1fr)}
+}
+@media(min-width:1200px){
+ /* A computer lab: investigation menu on the left, active bench on the right. */
+ main:has(>#workbench){display:grid;grid-template-columns:220px minmax(0,1fr);column-gap:24px;align-items:start}
+ main:has(>#workbench)>*{grid-column:1/-1;min-width:0}
+ main>section:has(>#experiment-menu){grid-column:1;position:sticky;top:18px;max-height:calc(100dvh - 36px);overflow-y:auto;padding-right:5px;scrollbar-width:thin}
+ main>section:has(>#experiment-menu) .section-heading{gap:9px;margin:0 0 15px}main>section:has(>#experiment-menu) .section-heading h2{font-size:21px;letter-spacing:-.5px}main>section:has(>#experiment-menu) .section-number{min-width:37px;height:37px;font-size:24px}
+ main>section:has(>#experiment-menu) .section-note{display:none}
+ main>#workbench{grid-column:2}
+ #experiment-menu{grid-template-columns:1fr;margin:0;gap:8px}#experiment-menu button{padding:12px;min-height:72px}#experiment-menu button>span{font-size:9px;margin-bottom:4px}#experiment-menu b{font-size:13px;line-height:1.5}
+}
+.computer-gesture-help{display:none}
+@media(min-width:1024px){.computer-gesture-help{display:inline}.touch-gesture-help{display:none}.canvashelp,.canvas-help{font-size:12px}}

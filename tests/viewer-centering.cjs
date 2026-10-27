@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 const base=(process.env.LEARNING_LAB_BASE_URL||'http://127.0.0.1:8000').replace(/\/$/,'');
 (async()=>{const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE||(fs.existsSync('/usr/bin/chromium')?'/usr/bin/chromium':undefined),args:['--no-sandbox'],env:{...process.env,...(process.env.BROWSER_HOME?{HOME:process.env.BROWSER_HOME}:{})}});try{
 for(const [topic,script,object,loading,recenter] of [['circulatory-system','app.js','model','#loading','#front'],['breathing-system','lab.js','specimen','#modelLoading','#recenter']]){
- const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const page=await browser.newPage({viewport:{width:1366,height:768},ignoreHTTPSErrors:process.env.PLAYWRIGHT_IGNORE_HTTPS_ERRORS==='1'});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  // Expose the real scene only inside this test; deployed scripts stay unchanged.
  await page.route(`**/${topic}/${script}*`,async route=>{const r=await route.fetch();await route.fulfill({response:r,body:await r.text()+`\nwindow.__viewer=()=>({THREE,camera,controls,object:${object}});`})});
  await page.goto(`${base}/activities/y9/science/${topic}/`);
@@ -19,7 +19,7 @@ for(const [topic,script,object,loading,recenter] of [['circulatory-system','app.
  }
  await check('desktop initial');
  await page.locator('#zoomIn').click();await page.evaluate(()=>{const {camera,controls}=window.__viewer();camera.position.x+=1;camera.position.y-=1;controls.update()});await page.locator(recenter).click();await check('Re-center after zoom/rotation');
- for(const viewport of [{width:390,height:844},{width:900,height:900}]){await page.setViewportSize(viewport);await check(`resized ${viewport.width}px`);}
+ for(const viewport of [{width:1440,height:900},{width:1920,height:1080},{width:900,height:900}]){await page.setViewportSize(viewport);await check(`resized ${viewport.width}px`);}
  if(topic==='breathing-system'){
   await page.locator('[data-section="1"]').click();await page.locator('#inhale').click();await page.locator('#breathDepth').fill('100');await page.locator(recenter).click();await check('full inhalation');await page.locator('#exhale').click();await page.locator(recenter).click();await check('exhalation');await page.locator('[data-section="0"]').click();await check('return to anatomy');
  }else{
