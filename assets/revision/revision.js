@@ -3,7 +3,7 @@ const root = document.querySelector('#revision-app');
 const escape = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const difficulties = ['Foundation', 'Application', 'Challenge'];
 let bank;
-let settings = {category:'all', difficulty:'all', length:'10', mode:'practice'};
+let settings = {category:null, difficulty:[...difficulties], length:'10', mode:'practice'};
 let session;
 
 function shuffled(items) {
@@ -24,7 +24,17 @@ function validate(data) {
   return data;
 }
 function pool() {
-  return bank.questions.filter(question => (settings.category === 'all' || question.category === settings.category) && (settings.difficulty === 'all' || question.difficulty === settings.difficulty));
+  return bank.questions.filter(question => settings.category.includes(question.category) && settings.difficulty.includes(question.difficulty));
+}
+function filterGroup(name, title, choices, selected) {
+  const noun = name === 'category' ? 'areas' : 'levels';
+  return `<fieldset id="revision-${name}" class="revision-filter-group" aria-describedby="revision-${name}-help"><legend>${title}</legend><div class="revision-filter-tools"><p id="revision-${name}-help">Tick one or more ${noun}. <span id="revision-${name}-count"></span></p><div><button type="button" data-filter="${name}" data-select="all" aria-label="Select all question ${noun}">Select all</button><button type="button" data-filter="${name}" data-select="none" aria-label="Clear question ${noun}">Clear</button></div></div><div class="revision-filter-options">${choices.map((choice,index)=>`<label class="revision-filter-choice" for="revision-${name}-${index}"><input id="revision-${name}-${index}" type="checkbox" name="${name}" value="${escape(choice)}" ${selected.includes(choice)?'checked':''}><span>${escape(choice)}</span></label>`).join('')}</div></fieldset>`;
+}
+function readSettings() {
+  const form = new FormData(root.querySelector('#revision-settings'));
+  settings = {category:form.getAll('category'), difficulty:form.getAll('difficulty'), length:form.get('length'), mode:form.get('mode')};
+  recorder.syncMode(root, settings.mode);
+  updateAvailability();
 }
 function isCorrect(item) {
   return item.submitted && item.options[item.selection]?.originalIndex === item.question.answer;
@@ -41,22 +51,25 @@ function focus(selector) {
 }
 function renderSetup(moveFocus = false) {
   session = null;
-  root.innerHTML = `${header()}<section class="revision-setup" aria-labelledby="setup-title"><div class="revision-section-heading"><div><p class="revision-eyebrow">MAKE IT YOUR SESSION</p><h2 id="setup-title" tabindex="-1">How would you like to practise?</h2></div><span class="revision-session-icon" aria-hidden="true">?</span></div><form id="revision-settings"><div class="revision-filters"><label>Question area<select id="revision-category" name="category"><option value="all">Mixed: all areas</option>${bank.categories.map(category=>`<option value="${escape(category)}" ${settings.category===category?'selected':''}>${escape(category)}</option>`).join('')}</select></label><label>Question level<select id="revision-difficulty" name="difficulty"><option value="all">Mixed: all levels</option>${difficulties.map(difficulty=>`<option ${settings.difficulty===difficulty?'selected':''}>${escape(difficulty)}</option>`).join('')}</select></label><label>Session length<select id="revision-length" name="length">${[['10','10 questions'],['20','20 questions'],['all','All matching questions']].map(([value,label])=>`<option value="${value}" ${settings.length===value?'selected':''}>${label}</option>`).join('')}</select></label></div><fieldset class="revision-mode"><legend>Choose a mode</legend><label class="revision-mode-card"><input type="radio" name="mode" value="practice" ${settings.mode==='practice'?'checked':''}><span><b>Practice</b><small>Get an explanation after each answer.</small></span></label><label class="revision-mode-card"><input type="radio" name="mode" value="test" ${settings.mode==='test'?'checked':''}><span><b>Test yourself</b><small>Review answers and explanations at the end.</small></span></label></fieldset>${recorder.fields()}<div class="revision-setup-bottom"><p id="revision-availability" role="status" aria-live="polite"></p><button class="revision-btn revision-primary" id="start-session" type="submit">Start session <span aria-hidden="true">→</span></button></div></form>${recorder.markup()}</section><aside class="revision-study-note"><b>A fresh mix, every session.</b><p>Questions and answer positions are shuffled. Each question appears once per session. Afterwards, review the explanations or retry only the questions you missed.</p></aside>`;
+  root.innerHTML = `${header()}<section class="revision-setup" aria-labelledby="setup-title"><div class="revision-section-heading"><div><p class="revision-eyebrow">MAKE IT YOUR SESSION</p><h2 id="setup-title" tabindex="-1">How would you like to practise?</h2></div><span class="revision-session-icon" aria-hidden="true">?</span></div><form id="revision-settings"><div class="revision-filters">${filterGroup('category','Question area',bank.categories,settings.category)}${filterGroup('difficulty','Question level',difficulties,settings.difficulty)}<label>Session length<select id="revision-length" name="length">${[['10','10 questions'],['20','20 questions'],['all','All matching questions']].map(([value,label])=>`<option value="${value}" ${settings.length===value?'selected':''}>${label}</option>`).join('')}</select></label></div><fieldset class="revision-mode"><legend>Choose a mode</legend><label class="revision-mode-card"><input type="radio" name="mode" value="practice" ${settings.mode==='practice'?'checked':''}><span><b>Practice</b><small>Get an explanation after each answer.</small></span></label><label class="revision-mode-card"><input type="radio" name="mode" value="test" ${settings.mode==='test'?'checked':''}><span><b>Test yourself</b><small>Review answers and explanations at the end.</small></span></label></fieldset>${recorder.fields()}<div class="revision-setup-bottom"><p id="revision-availability" role="status" aria-live="polite"></p><button class="revision-btn revision-primary" id="start-session" type="submit">Start session <span aria-hidden="true">→</span></button></div></form>${recorder.markup()}</section><aside class="revision-study-note"><b>A fresh mix, every session.</b><p>Questions and answer positions are shuffled. Each question appears once per session. Afterwards, review the explanations or retry only the questions you missed.</p></aside>`;
   root.querySelector('#revision-settings').addEventListener('submit', event => {event.preventDefault(); if (settings.mode !== 'test' || recorder.identify(event.currentTarget)) startSession();});
-  root.querySelector('#revision-settings').addEventListener('change', () => {
-    const form = new FormData(root.querySelector('#revision-settings'));
-    settings = Object.fromEntries(['category','difficulty','length','mode'].map(key=>[key,form.get(key)]));
-    recorder.syncMode(root, settings.mode);
-    updateAvailability();
-  });
+  root.querySelector('#revision-settings').addEventListener('change', readSettings);
+  for (const button of root.querySelectorAll('[data-filter][data-select]')) {
+    button.addEventListener('click', () => {
+      for (const input of root.querySelectorAll(`input[name="${button.dataset.filter}"]`)) input.checked = button.dataset.select === 'all';
+      readSettings();
+    });
+  }
   updateAvailability();
   recorder.syncMode(root, settings.mode);
   if (moveFocus) focus('#setup-title');
 }
 function updateAvailability() {
+  root.querySelector('#revision-category-count').textContent = `${settings.category.length} of ${bank.categories.length} selected.`;
+  root.querySelector('#revision-difficulty-count').textContent = `${settings.difficulty.length} of ${difficulties.length} selected.`;
   const available = pool().length;
   const count = settings.length === 'all' ? available : Math.min(Number(settings.length), available);
-  root.querySelector('#revision-availability').textContent = available ? `${available} matching questions · ${count} in this session. ${Number(settings.length) > available ? 'Using every matching question.' : ''}` : 'No questions match these filters. Choose another area or level.';
+  root.querySelector('#revision-availability').textContent = available ? `${available} matching questions · ${count} in this session. ${Number(settings.length) > available ? 'Using every matching question.' : ''}` : !settings.category.length && !settings.difficulty.length ? 'Select at least one question area and one question level.' : !settings.category.length ? 'Select at least one question area.' : !settings.difficulty.length ? 'Select at least one question level.' : 'No questions match these areas and levels. Choose another combination.';
   root.querySelector('#start-session').disabled = !available;
 }
 function startSession(retryQuestions = null) {
@@ -131,6 +144,7 @@ async function load() {
     const response = await fetch(new URL(root.dataset.bank,document.baseURI));
     if (!response.ok) throw new Error('Question bank unavailable');
     bank = validate(await response.json());
+    if (settings.category === null) settings.category = [...bank.categories];
     await recorder.ready;
     renderSetup();
   } catch {

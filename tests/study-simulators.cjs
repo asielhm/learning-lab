@@ -41,6 +41,35 @@ async function answer(page, bank, wrong = false, test = false) {
   }
   return question.id;
 }
+async function checkMultipleFilters(page, bank) {
+  await page.getByRole('button',{name:'Clear question areas',exact:true}).click();
+  assert(await page.locator('#start-session').isDisabled());
+  assert.match(await page.locator('#revision-availability').innerText(),/Select at least one question area/);
+  const areas=bank.categories.slice(0,3);
+  for(const area of areas) await page.getByRole('checkbox',{name:area,exact:true}).check();
+  assert.equal(await page.locator('input[name=category]:checked').count(),3);
+  await page.getByRole('checkbox',{name:areas[2],exact:true}).uncheck();
+  await page.getByRole('button',{name:'Clear question levels',exact:true}).click();
+  assert(await page.locator('#start-session').isDisabled());
+  for(const level of ['Foundation','Challenge']) await page.getByRole('checkbox',{name:level,exact:true}).check();
+  assert.equal(await page.locator('input[name=category]:checked').count(),2);
+  assert.equal(await page.locator('input[name=difficulty]:checked').count(),2);
+  const expected=bank.questions.filter(q=>areas.slice(0,2).includes(q.category)&&['Foundation','Challenge'].includes(q.difficulty));
+  assert((await page.locator('#revision-availability').innerText()).includes(`${expected.length} matching`));
+  await page.locator('#start-session').click();
+  for(let i=0;i<Math.min(10,expected.length);i++){
+    const prompt=await page.locator('#revision-question-title').innerText();
+    const q=bank.questions.find(q=>q.prompt===prompt);
+    assert(expected.some(item=>item.id===q.id),'Only checked areas and levels supply session questions');
+    await answer(page,bank);
+  }
+  await page.locator('#new-session').click();
+  assert.equal(await page.locator('input[name=category]:checked').count(),2,'Area choices persist across sessions');
+  assert.equal(await page.locator('input[name=difficulty]:checked').count(),2,'Level choices persist across sessions');
+  await page.getByRole('button',{name:'Select all question areas',exact:true}).click();
+  await page.getByRole('button',{name:'Select all question levels',exact:true}).click();
+  assert((await page.locator('#revision-availability').innerText()).includes(`${bank.questions.length} matching`));
+}
 async function study(page, name, topic) {
   const bank = loadBank(name);
   assert(bank.questions.length >= 50);
@@ -48,7 +77,9 @@ async function study(page, name, topic) {
   await page.goto(`${base}/activities/y9/science/${topic}/revision.html`);
   await page.locator('#start-session').waitFor();
   assert((await page.locator('.revision-bank-meta').innerText()).includes(String(bank.questions.length)));
-  assert.equal(await page.locator('#revision-category option').count(),bank.categories.length+1);
+  assert.equal(await page.locator('input[name=category]:checked').count(),bank.categories.length);
+  assert.equal(await page.locator('input[name=difficulty]:checked').count(),3);
+  await checkMultipleFilters(page,bank);
   await page.locator('#revision-length').selectOption('all');
   assert((await page.locator('#revision-availability').innerText()).includes(`${bank.questions.length} matching`));
   await page.locator('#revision-length').selectOption('10');
@@ -75,8 +106,10 @@ async function study(page, name, topic) {
   assert.equal(await page.locator('.revision-review-item').count(), 10);
   await page.locator('#new-session').click();
   const sample = bank.questions.find(q=>q.difficulty === 'Challenge');
-  await page.locator('#revision-category').selectOption(sample.category);
-  await page.locator('#revision-difficulty').selectOption('Challenge');
+  await page.getByRole('button',{name:'Clear question areas',exact:true}).click();
+  await page.getByRole('checkbox',{name:sample.category,exact:true}).check();
+  await page.getByRole('button',{name:'Clear question levels',exact:true}).click();
+  await page.getByRole('checkbox',{name:'Challenge',exact:true}).check();
   await page.locator('#revision-length').selectOption('all');
   const pool = bank.questions.filter(q=>q.category===sample.category && q.difficulty==='Challenge');
   assert((await page.locator('#revision-availability').innerText()).includes(`${pool.length} matching`));

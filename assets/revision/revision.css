@@ -3,3 +3,28 @@
 @media(prefers-reduced-motion:reduce){#revision-app .revision-progress>span{transition:none}}
 
 #revision-app [tabindex="-1"]{scroll-margin-top:24px}
+
+/* Checkboxes combine any chosen areas with any chosen question levels. */
+#revision-app .revision-filters{grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+#revision-app .revision-filter-group{border:0;margin:0;padding:0;min-width:0}
+#revision-app #revision-category{grid-column:1 / -1}
+#revision-app .revision-filter-group>legend{padding:0;margin-bottom:10px;font-size:13px;font-weight:700;line-height:1.5}
+#revision-app .revision-filter-tools{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:13px}
+#revision-app .revision-filter-tools p{font-size:11px;line-height:1.7;color:#65736e;margin:0}
+#revision-app .revision-filter-tools p span{display:block}
+#revision-app .revision-filter-tools>div{display:flex;gap:7px;flex-shrink:0}
+#revision-app .revision-filter-tools button{min-height:36px;padding:6px 9px;border:1px solid #cbd5c3;border-radius:6px;background:#f5f7f0;color:#31564a;font-family:inherit;font-size:11px;font-weight:600;line-height:1.5;white-space:nowrap}
+#revision-app .revision-filter-tools button:hover{background:#e6eedd}
+#revision-app .revision-filter-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#revision-app #revision-difficulty .revision-filter-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+#revision-app .revision-filter-choice{display:flex;align-items:flex-start;gap:10px;padding:12px;min-height:47px;border:1px solid #d2dccb;border-radius:8px;background:#fff;font-size:12px;line-height:1.6;cursor:pointer;min-width:0}
+#revision-app .revision-filter-choice:has(input:checked){border-color:#829b78;background:#edf2e6}
+#revision-app .revision-filter-choice:has(input:focus-visible){outline:3px solid #b45651;outline-offset:3px}
+#revision-app .revision-filter-choice input{width:18px;height:18px;margin:1px 0 0;flex-shrink:0;accent-color:#294b42;cursor:pointer}
+#revision-app .revision-filter-choice span{min-width:0;overflow-wrap:anywhere}
+@media(max-width:740px){
+ #revision-app .revision-filters{grid-template-columns:1fr;gap:24px}
+ #revision-app .revision-filter-options,#revision-app #revision-difficulty .revision-filter-options{grid-template-columns:1fr}
+ #revision-app .revision-filter-tools{gap:10px}
+ #revision-app .revision-filter-choice{font-size:13px;min-height:48px}
+}
