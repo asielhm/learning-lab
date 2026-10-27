@@ -29,3 +29,13 @@ export function gasFromAcid(material,mass){const masses={Mg:24.3,Zn:65.4,Fe:55.8
 export function aluminium(charge){return {mass:charge/(3*FARADAY)*27,carbon:charge/(4*FARADAY)*12};}
 export const alkane=n=>`C${n===1?'':n}H${2*n+2}`;
 export const alkene=n=>`C${n}H${2*n}`;
+// One idealised acyclic cracking + dehydrogenation channel, not a yield model.
+export function dieneCracking(n,m){
+ if(!Number.isInteger(n)||!Number.isInteger(m)||m<4||n-m<2)throw new RangeError('Use a diene with at least four carbons and leave at least two carbons in the alkane.');
+ const dieneH=2*m-2,alkaneC=n-m,alkaneH=2*alkaneC+2;
+ return {feed:alkane(n),alkane:alkane(alkaneC),diene:`C${m}H${dieneH}`,dieneC:m,dieneH,hydrogenCoefficient:1,doubleBonds:[1,3],carbonLeft:n,carbonRight:alkaneC+m,hydrogenLeft:2*n+2,hydrogenInHydrocarbons:alkaneH+dieneH};
+}
+export function validDieneBalance(n,m,dieneH,hydrogenCoefficient){
+ const p=dieneCracking(n,m);
+ return Number.isInteger(dieneH)&&Number.isInteger(hydrogenCoefficient)&&dieneH===p.dieneH&&hydrogenCoefficient===p.hydrogenCoefficient;
+}

@@ -1,0 +1,36 @@
+const {chromium}=require('playwright'),assert=require('node:assert/strict');
+const base=(process.env.LEARNING_LAB_BASE_URL||'http://127.0.0.1:8000').replace(/\/$/,'');
+const url=base+'/activities/y10/chemistry/organic-chemistry/';
+(async()=>{
+ const b=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE||'/usr/bin/chromium',args:['--no-sandbox']});
+ try{
+  const p=await b.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'}),errors=[],posts=[];
+  p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(r.method()==='POST'&&/script\.google/.test(r.url()))posts.push(r.url());});
+  async function step({keyboard=false,help=false}={}){
+   const before=await p.locator('#bench-step-label').innerText();
+   if(help){await p.locator('#bench-help').click();await p.locator('#demonstrate-step').click();}
+   else if(await p.locator('[data-bench-source]').count()){
+    if(keyboard){await p.locator('[data-bench-source]').focus();await p.keyboard.press('Enter');await p.keyboard.press('Enter');}
+    else{await p.locator('[data-bench-source]').click();await p.locator('[data-bench-target]').click();}
+   }else if(keyboard){await p.locator('[data-bench-tap]').focus();await p.keyboard.press('Enter');}else await p.locator('[data-bench-tap]').click();
+   await p.waitForFunction(s=>document.querySelector('#bench-step-label').textContent!==s,before);
+  }
+  async function prepare(keyboard=false){for(let i=0;i<12;i++){if(await p.locator('#bench-step-label').innerText()==='APPARATUS READY')return;await step({keyboard});}throw new Error('Incomplete practical');}
+  async function balance(h,coefficient){await p.locator('#diene-hydrogens').fill(String(h));await p.locator('#hydrogen-coefficient').fill(String(coefficient));await p.locator('#cracking-balance button[type=submit]').click();}
+  async function conditions(change){await p.locator('#bench-settings summary').click();await change();await p.locator('#bench-settings summary').click();}
+  await p.goto(url);await p.locator('[data-experiment=cracking]').click();assert.match(await p.locator('#cracking-pathway').innerText(),/Start diene/);await p.locator('#cracking-pathway').click();assert.equal(await p.locator('#lab-pathway').inputValue(),'diene');assert(await p.locator('#lab-k').evaluate(e=>e.closest('.control').hidden));assert(!await p.locator('#lab-dieneC').evaluate(e=>e.closest('.control').hidden));assert(await p.locator('#record-reading').isDisabled());assert.equal(await p.locator('#cracking-balance').count(),0);
+  await step();await step({help:true});await step();await step();await step();
+  // The plunger moves while collection happens; the virtual pop occurs after the heater is off.
+  await p.emulateMedia({reducedMotion:'no-preference'});let before=await p.locator('#bench-step-label').innerText();await p.locator('[data-bench-tap]').click();await p.locator('.collecting-hydrogen').waitFor();const initial=await p.locator('[data-hydrogen-plunger]').evaluate(e=>getComputedStyle(e).transform);await p.waitForTimeout(400);assert.notEqual(await p.locator('[data-hydrogen-plunger]').evaluate(e=>getComputedStyle(e).transform),initial);await p.waitForFunction(s=>document.querySelector('#bench-step-label').textContent!==s,before);
+  await step();before=await p.locator('#bench-step-label').innerText();await p.locator('[data-bench-source]').click();await p.locator('[data-bench-target]').click();await p.locator('.hydrogen-pop').waitFor();await p.waitForFunction(s=>document.querySelector('#bench-step-label').textContent!==s,before);await step();
+  assert.equal(await p.locator('[data-diene-double-bond]').count(),2);assert.match(await p.locator('#readouts').innerText(),/H₂/);assert(await p.locator('#record-reading').isDisabled());assert(await p.locator('#lesson-options button').first().isDisabled());
+  await balance(8,1);assert.match(await p.locator('#cracking-balance-feedback').innerText(),/diene first/);assert(await p.locator('#record-reading').isDisabled());await balance(6,0);assert.match(await p.locator('#cracking-balance-feedback').innerText(),/each H₂/);assert(await p.locator('#record-reading').isDisabled());await balance(6,1);assert.equal(await p.locator('#cracking-balance-feedback').getAttribute('data-state'),'correct');assert.match(await p.locator('#lab-equation').innerText(),/C10H22 → C6H14 \+ C4H6 \+ H2/);assert(!await p.locator('#record-reading').isDisabled());await p.locator('#record-reading').click();assert.match(await p.locator('#notebook-rows').innerText(),/C4H6 \+ H2/);assert(!await p.locator('#lesson-options button').first().isDisabled());
+  const correct='The alkane and diene products contain two fewer hydrogen atoms than the feed.';await p.locator('#lesson-options').getByRole('button',{name:correct,exact:true}).click();assert.equal(await p.locator('#question-feedback').getAttribute('data-state'),'correct');await p.locator('#workbench').screenshot({path:'/tmp/cracking-diene-completed.png'});
+  await p.emulateMedia({reducedMotion:'reduce'});await p.locator('#cracking-pathway').click();assert.equal(await p.locator('#lab-pathway').inputValue(),'standard');await prepare();await p.locator('#record-reading').click();assert.equal(await p.locator('#notebook-rows tr').count(),2);assert.match(await p.locator('#notebook-rows').innerText(),/C2H4/);
+  await p.locator('#cracking-pathway').click();await conditions(async()=>{await p.locator('#lab-n').fill('12');await p.locator('#lab-dieneC').fill('6');});await prepare(true);assert.equal(await p.evaluate(()=>document.activeElement.id),'diene-hydrogens');await balance(10,1);assert.match(await p.locator('#lab-equation').innerText(),/C12H26 → C6H14 \+ C6H10 \+ H2/);await p.locator('#new-trial').click();assert(await p.locator('#record-reading').isDisabled());assert.equal(await p.locator('#cracking-balance').count(),0);
+  await conditions(()=>p.locator('#lab-conditions').selectOption('cold'));await prepare();assert.match(await p.locator('#readouts').innerText(),/No gas/);assert(await p.locator('#record-reading').isDisabled());assert.equal(await p.locator('#cracking-balance').count(),0);assert.equal(await p.locator('[data-diene-double-bond]').count(),0);assert.match(await p.locator('#bench-instruction').innerText(),/Choose hot/);
+  // Direct sharing opens the nested challenge, with computer-sized workspaces.
+  for(const viewport of[{width:1366,height:768},{width:1920,height:1080}]){await p.setViewportSize(viewport);await p.goto(url+'#cracking-diene');await p.locator('#cracking-pathway').waitFor();await p.waitForFunction(()=>document.querySelector('#bench-step-label').textContent.startsWith('STEP 1 OF 9'));assert.equal(await p.locator('#lab-pathway').inputValue(),'diene');assert.match(await p.locator('#bench-step-label').innerText(),/^STEP 1 OF 9/);assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
+  assert.deepEqual(errors,[]);assert.deepEqual(posts,[]);console.log('Diene practical: discovery/deep link, nine ordered bench actions, help, animated H₂ collection/pop, two highlighted C=C bonds, incorrect/correct balances and recording gate, comparison with standard cracking, keyboard, alternate chains, cold control, trial reset and desktop layouts passed.');
+ }finally{await b.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

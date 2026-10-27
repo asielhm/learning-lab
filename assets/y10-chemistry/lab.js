@@ -1,9 +1,11 @@
 import {acids} from './acids.js';
 import {metals} from './metals.js';
 import {redox} from './redox.js';
-import {organic} from './organic.js';
-import {planFor} from './bench-plans.js';
-import {sceneFor,effectArt,escape} from './bench-scenes.js';
+import {organic} from './organic.js?v=diene-1';
+import {planFor} from './bench-plans.js?v=diene-1';
+import {sceneFor,effectArt,escape} from './bench-scenes.js?v=diene-1';
+import {createCrackingExtension} from './cracking-extension.js?v=diene-1';
+const renderCrackingExtension=createCrackingExtension();
 const $=selector=>document.querySelector(selector);
 const definitions={acids,metals,redox,organic}[document.body.dataset.unit];
 const states=new Map();let active=definitions[0],state,status='',busy=false,selected=false,drag=null,touchPress=null,lastTouchAt=-Infinity,operation=0,suppressClick=false;
@@ -21,14 +23,15 @@ function render(){
  $('#chem-scene').setAttribute('aria-busy',String(busy));
  $('.scene-caption').textContent='Drag the highlighted object, or select it and then select its destination. Use Enter or Space with a keyboard. Amber outlines show the equipment to use next.';
  $('#bench-step-label').textContent=finished?'APPARATUS READY':`STEP ${state.benchStep+1} OF ${steps.length}`;
- $('#bench-instruction').textContent=current?.label||(active.doses&&!complete?'Turn the burette tap. Add 0.1 mL near the faint-pink endpoint.':'Your practical is complete. Record the evidence, then explain your observation.');
- const summary=active.controls.map(c=>c.options?c.options.find(o=>o[0]===state.values[c.id])?.[1]:`${c.label}: ${c.format?c.format(state.values[c.id]):state.values[c.id]}`).join(' · ');
+ $('#bench-instruction').textContent=current?.label||(!complete&&result.nextInstruction?result.nextInstruction:active.doses&&!complete?'Turn the burette tap. Add 0.1 mL near the faint-pink endpoint.':'Your practical is complete. Record the evidence, then explain your observation.');
+ const summary=active.controls.filter(c=>!c.showIf||c.showIf(state.values)).map(c=>c.options?c.options.find(o=>o[0]===state.values[c.id])?.[1]:`${c.label}: ${c.format?c.format(state.values[c.id]):state.values[c.id]}`).join(' · ');
  $('#bench-settings summary span').textContent=summary;$('#bench-settings summary span').title=summary;
  $('#lab-equation').textContent=result.equation;
  $('#readouts').replaceChildren(...result.readings.map(([label,value])=>{const div=document.createElement('div');div.className='readout';const span=document.createElement('span'),b=document.createElement('b');span.textContent=label;b.textContent=finished?String(value):'—';div.append(span,b);return div;}));
  $('#bench-help').disabled=finished||busy;$('#bench-help').textContent='Help with this step';$('#bench-hint').hidden=true;$('#demonstrate-step').disabled=busy;
  $('#record-reading').disabled=!complete||state.recorded||state.records.length>=10||busy;
- $('#setup-controls').querySelectorAll('input,select').forEach(el=>el.disabled=busy);
+ active.controls.forEach(c=>{const input=$(`#lab-${c.id}`),wrap=input.closest('.control');wrap.hidden=!!c.showIf&&!c.showIf(state.values);input.disabled=busy||wrap.hidden;});
+ renderCrackingExtension({active,state,result,finished,busy,onMode:setPathway,onVerified:()=>{if(busy)return;state.extra.balanceVerified=true;status='Atom balance correct. Record this trial, then explain why hydrogen formed.';render();$('#record-reading').focus({preventScroll:true});}});
  $('#bench-status').textContent=status;
  $('#step-progress').innerHTML=steps.map((step,index)=>`<li data-done="${state.benchStep>index}" ${state.benchStep===index?'aria-current="step"':''}><span>${state.benchStep>index?'✓':index+1}</span>${escape(step.label)}</li>`).join('');
  $('#notebook-columns').replaceChildren(...active.columns.map(value=>{const th=document.createElement('th');th.scope='col';th.textContent=value;return th;}));
@@ -56,7 +59,14 @@ function choose(d,moveFocus=false){
  }));
  render();if(moveFocus){$('#lab-title').focus({preventScroll:true});$('#workbench').scrollIntoView({block:'start'});}
 }
-function nextFocus(){($('#chem-scene [data-bench-source],#chem-scene [data-bench-tap],#chem-scene [data-bench-dose]')||$('#record-reading')).focus({preventScroll:true});}
+function setPathway(pathway){
+ if(busy||active.id!=='cracking')return;
+ state.values.pathway=pathway;$('#lab-pathway').value=pathway;startTrial();status=pathway==='diene'?'Diene challenge started. Follow the highlighted practical steps on the bench.':'Standard cracking selected. Prepare a fresh trial.';render();
+}
+function nextFocus(){
+ const next=$('#chem-scene [data-bench-source],#chem-scene [data-bench-tap],#chem-scene [data-bench-dose]')||$('#cracking-balance input')||(!$('#record-reading').disabled?$('#record-reading'):$('#bench-settings summary'));
+ next.focus({preventScroll:true});
+}
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function perform({help=false,keyboard=false,from=null}={}){
  if(busy||benchFinished())return;
@@ -65,6 +75,7 @@ async function perform({help=false,keyboard=false,from=null}={}){
  busy=true;selected=false;$('#chem-scene').setAttribute('aria-busy','true');$('#bench-help').disabled=true;$('#demonstrate-step').disabled=true;$('#record-reading').disabled=true;
  $('#setup-controls').querySelectorAll('input,select').forEach(el=>el.disabled=true);
  $('#bench-hint').hidden=true;
+ $('#cracking-extension').querySelectorAll('button').forEach(button=>button.disabled=true);
  if(help)state.helped.add(a.id);
  announce(help?'Watch the demonstration on the bench.':'Using the apparatus…');
  const source=$('#chem-scene [data-bench-source]');
@@ -80,6 +91,7 @@ async function perform({help=false,keyboard=false,from=null}={}){
  if(a.effect==='swirl')$('#chem-scene [data-vessel]')?.classList.add('swirling-vessel');
  if(a.effect==='force')$('#chem-scene svg')?.classList.add('pushing-layers');
  if(a.effect==='electrons')source?.classList.add('electron-transfer');
+ if(active.id==='cracking'&&state.values.pathway==='diene'&&a.id==='collect'&&state.values.conditions==='both')$('#chem-scene [data-hydrogen-plunger]')?.classList.add('collecting-hydrogen');
  if(a.effect==='time'){
   const clock=$('#chem-scene .clock-hand');clock?.classList.add('running-clock');
   if(active.id==='water-cell'){
@@ -89,7 +101,11 @@ async function perform({help=false,keyboard=false,from=null}={}){
  }else await wait(reducedMotion.matches?100:['drops','pour','solid','cool','develop','fix','rinse'].includes(a.effect)?1000:650);
  if(token!==operation)return;
  state.phase=Math.max(state.phase,a.phase||0);state.benchStep++;if(benchFinished())state.phase=active.steps.length;
- busy=false;status=benchFinished()?active.doses?'Apparatus ready. Use the controls beside the burette to approach the endpoint.':'Practical completed. Record your evidence in the notebook.':`Step ${state.benchStep} complete${help?' with help':''}. Follow the next instruction on the bench.`;
+ busy=false;
+ if(benchFinished()){
+  const result=model();
+  status=!isComplete(result)&&result.nextInstruction?result.nextInstruction:active.doses?'Apparatus ready. Use the controls beside the burette to approach the endpoint.':'Practical completed. Record your evidence in the notebook.';
+ }else status=`Step ${state.benchStep} complete${help?' with help':''}. Follow the next instruction on the bench.`;
  render();if(keyboard)nextFocus();
 }
 function selectSource(keyboard=false){
@@ -173,3 +189,9 @@ $('#record-reading').onclick=()=>{const result=model();if(busy||!isComplete(resu
 $('#new-trial').onclick=()=>{startTrial();status='New trial started. Earlier readings stay in your notebook.';render();};
 $('#reset-lab').onclick=()=>{states.set(active.id,fresh(active));choose(active);status='Experiment reset to its starting conditions; its notebook is cleared.';render();};
 choose(active);
+function openDieneLink(){
+ if(location.hash!=='#cracking-diene'||!definitions.some(d=>d.id==='cracking'))return;
+ choose(definitions.find(d=>d.id==='cracking'));setPathway('diene');$('#workbench').scrollIntoView({block:'start'});
+}
+window.addEventListener('hashchange',openDieneLink);
+openDieneLink();

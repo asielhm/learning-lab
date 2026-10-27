@@ -1,5 +1,5 @@
-import {svg,text,line,beaker,flask,tube,bottle,lattice,chain,burner,meter} from './drawing.js';
-import {indicator,displaces,gasFromAcid,waterElectrolysis} from './science.mjs';
+import {svg,text,line,beaker,flask,tube,bottle,lattice,chain,burner,meter} from './drawing.js?v=diene-1';
+import {indicator,displaces,gasFromAcid,waterElectrolysis,dieneCracking} from './science.mjs?v=diene-1';
 export const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const label=(x,y,s,cls='small')=>text(x,y,escape(s),cls);
 const ring=(x,y)=>`<circle cx="${x}" cy="${y}" r="29" fill="#fff7e7" stroke="#c3864a" stroke-width="2"/>`;
@@ -20,9 +20,11 @@ export function toolArt(type,x,y,{v={},name=''}={}){
   case 'funnel':art='<path d="M-63-40H63L10 23V67H-10V23Z" fill="url(#glass)" stroke="#54787c" stroke-width="3"/><path d="M-50-33H50L0 20Z" fill="#f4ead3" stroke="#cbbd9d"/>';break;
   case 'beaker':art=beaker(-55,-65,110,130,v.solid==='CuO'||v.pair==='copper'?'#89bfcf':'#c6dfe2',.65);break;
   case 'flask':art=flask(0,-60,'#badbe0');break;
+  case 'cold-trap':art=flask(0,-60,'#edf3ef')+'<rect x="-68" y="-15" width="136" height="80" rx="15" fill="#a9d1e52b" stroke="#81adc0" stroke-width="2" stroke-dasharray="4 4"/>';break;
   case 'dish':art='<path d="M-65-15Q-57 35 0 35T65-15Z" fill="#e9e9d7" stroke="#5c7e78" stroke-width="3"/><ellipse cy="-15" rx="65" ry="16" fill="#c2e0dd" stroke="#5c7e78" stroke-width="3"/>';break;
   case 'stopper':art='<path d="M-24-15H24L19 12H-19Z" fill="#917762" stroke="#5e6a68" stroke-width="2"/><path d="M0-15V-46H90V-25" fill="none" stroke="#547981" stroke-width="8"/>';break;
   case 'tubes':art=[-60,60].map(dx=>`<path d="M${dx-23} 65V-60a23 23 0 0 1 46 0V65" fill="url(#glass)" stroke="#597d85" stroke-width="3"/><rect x="${dx-18}" y="-57" width="36" height="117" fill="#bbdae3" opacity=".6"/>`).join('');break;
+  case 'gas-syringe':art='<rect x="-70" y="-20" width="120" height="40" rx="6" fill="url(#glass)" stroke="#517780" stroke-width="3"/><path d="M-55-16v32m0-16H65m0-20v40" stroke="#638991" stroke-width="5"/>'+label(0,43,'Gas syringe');break;
   case 'test-tubes':art=tube(-40,-55,'#d4e4e5')+tube(24,-55,'#e9e9da');break;
   case 'splint':art='<path d="M-56 17L28-12" stroke="#b78e62" stroke-width="8"/>'+ (v.test==='limewater'?'<ellipse cx="31" cy="-8" rx="25" ry="28" fill="#ecede1" stroke="#5f817f"/>':'<path class="live-flame" d="M30-45Q5-13 30-8Q54-15 30-45Z" fill="#edb55b"/>');break;
   case 'film':art='<rect x="-49" y="-41" width="98" height="82" rx="5" fill="#e5dcb9" stroke="#344f58" stroke-width="9"/><path d="M-26 14Q-45-27 12-25Q49 3-2 24Z" fill="#536d62"/>';break;
@@ -62,6 +64,7 @@ export function sceneFor(d,s,plan,result){
  if(id==='water-cell')sampleLabel='Acidified water';
  if(id==='neutralisation')sampleLabel=a?.id==='alkali'?v.base:v.acid;
  if(id==='titration')sampleLabel='0.100 M NaOH';
+ if(id==='cracking'&&v.pathway==='diene')sampleLabel=dieneCracking(v.n,v.dieneC).feed;
  if(id==='precipitation')sampleLabel=a?.id==='second'?'Solution B':a?.id==='filter-pour'?'Mixture':'Solution A';
  if(id==='crystals')sampleLabel=a?.id==='filter-pour'?'Mixture':'H₂SO₄';
  if(id==='groups')sampleLabel=a?.id==='second'?v.element==='Br2'?'Iodide':'Bromide':v.element==='Cl2'?'Chlorine water':v.element==='Br2'?'Bromine water':sampleLabel;
@@ -210,10 +213,38 @@ export function sceneFor(d,s,plan,result){
   if(has('collect'))body+=flask(450,outletY+20,vapour?'#d3b27b':'#edf3ef');
   footer=has('flow')&&!vapour?'The base is not hot enough to vaporise this selected component.':'A physical separation: hydrocarbon bonds are retained.';
  }
- if(id==='cracking'){
+ if(id==='cracking'&&v.pathway!=='diene'){
   body+='<rect x="192" y="140" width="275" height="90" rx="25" fill="url(#glass)" stroke="#567e86" stroke-width="3"/>'+grains(280,209,v.conditions==='no-catalyst'?'#cfdbd4':'#c7ae87')+burner(340,270,has('heat')&&v.conditions!=='cold');
   if(has('flow'))body+='<path class="vapour-flow" d="M199 180H455" stroke="#d8b98c" stroke-width="6" stroke-dasharray="10 9" fill="none"/>';
   if(has('collect'))body+=tube(470,205,'#d3e4de','Products');footer=`Conditions: ${v.conditions==='both'?'hot catalyst':v.conditions==='cold'?'cold catalyst':'same temperature, no catalyst'}.`;
+ }
+ if(id==='cracking'&&v.pathway==='diene'){
+  const products=dieneCracking(v.n,v.dieneC),reacting=has('flow')&&v.conditions==='both',collected=has('collect')&&reacting;
+  body+='<rect x="140" y="130" width="230" height="76" rx="22" fill="url(#glass)" stroke="#547b82" stroke-width="3"/>'+(v.conditions==='no-catalyst'?'':grains(230,190,'#bfa782'))+burner(260,252,has('heat')&&!has('off')&&v.conditions!=='cold');
+  body+=label(257,112,v.conditions==='no-catalyst'?'Reactor · no catalyst':v.conditions==='cold'?'Cold reactor · catalyst':'Heated reactor · suitable catalyst')+label(260,350,'Virtual heater');
+  if(has('feed'))body+='<path d="M101 180H140" fill="none" stroke="#759796" stroke-width="6"/>'+label(87,157,products.feed);
+  if(reacting&&!has('off'))body+='<path class="vapour-flow" d="M144 166H366" stroke="#d9b98b" stroke-width="5" stroke-dasharray="8 9" fill="none"/>';
+  if(has('trap')){
+   body+='<path d="M370 166H415V206" fill="none" stroke="#6c9197" stroke-width="6"/>'+flask(430,206,collected?'#d1bb8c':'#d9e8ee',collected?'Products':'Cold trap');
+   body+='<rect x="363" y="255" width="134" height="77" rx="16" fill="#b5d7e82b" stroke="#83b3c7" stroke-width="2" stroke-dasharray="5 4"/>'+label(430,354,'Virtual cold trap','small');
+   if(reacting&&!has('off'))body+='<path class="falling-drop" d="M430 241q-5 9 0 13q5-4 0-13Z" fill="#c3a87a"/>';
+  }
+  if(has('syringe')){
+   body+='<path d="M445 206V145H420V100H425" fill="none" stroke="#6c9197" stroke-width="6"/>'+'<rect x="425" y="80" width="120" height="40" rx="6" fill="url(#glass)" stroke="#517780" stroke-width="3"/>'+label(495,142,'Gas syringe');
+   // The collection animation moves the plunger; this is not a calibrated volume.
+   body+='<rect x="428" y="83" width="113" height="34" fill="#cde5e6" opacity=".6"/>';
+   body+=`<g data-hydrogen-plunger transform="translate(${collected?65:0} 0)"><path d="M437 84v32m0-16h55m0-20v40" stroke="#426c78" stroke-width="5"/></g>`;
+   body+=label(495,49,collected?'Residual gas: H₂':'Gas collection','small');
+   if(collected)body+='<circle cx="454" cy="100" r="8" fill="#f2f2df" stroke="#89a89e"/><circle cx="474" cy="100" r="8" fill="#f2f2df" stroke="#89a89e"/>'+line(462,100,466,100,'#7c9d90',2);
+  }
+  if(collected){
+   body+='<rect x="15" y="282" width="172" height="94" rx="12" fill="#f6f2df" stroke="#b9cbb8"/>'+label(102,300,'Diene: same carbon chain','tiny')+chain(35,331,v.dieneC,[1,3],'#699a88',24);
+   if(has('bonds'))body+=[47,95].map(x=>`<ellipse data-diene-double-bond cx="${x}" cy="331" rx="18" ry="10" transform="rotate(47 ${x} 331)" fill="#e9b96533" stroke="#b77d47" stroke-width="2"/>`).join('');
+   body+=label(102,367,s.extra.balanceVerified?products.diene:`C${v.dieneC}H?`,'tiny');
+  }
+  if(has('test'))body+=label(523,235,collected?'Squeaky pop':'No gas / no pop','small');
+  footer=has('bonds')?'Both C=C bonds belong to one molecule. Now balance the products.':has('test')?'Hydrogen gives a pop with a burning splint in this virtual test.':collected?'The cold trap retains hydrocarbons; the remaining gas is hydrogen.':'An idealised cracking + dehydrogenation channel · gas syringe is schematic.';
+  if(!reacting&&has('collect'))footer='No products under these model conditions. Change the conditions and repeat.';
  }
  if(['hydrocarbons','addition-polymers','functional-groups','condensation'].includes(id)){
   body+='<rect x="170" y="98" width="375" height="220" rx="20" fill="#f8f7ec" stroke="#b5cbbd" stroke-width="2" stroke-dasharray="5 5"/>';
@@ -265,6 +296,7 @@ export function sceneFor(d,s,plan,result){
 }
 export function effectArt(action){
  const [x,y]=action.to;
+ if(action.effect==='hydrogen-pop')return `<g class="hydrogen-pop"><path d="M${x} ${y-20}l6 14 15-5-8 14 11 10-16 1-3 15-8-13-15 5 7-14-11-10 15-1Z" fill="#efca82" stroke="#bc855b"/>${label(x,y-35,'pop!','large')}</g>`;
  if(action.effect==='condense')return `<path class="falling-drop" d="M${x} ${y-18}q-7 12 0 16q7-4 0-16Z" fill="#c9a572"/>`;
  if(action.effect==='drops')return Array.from({length:4},(_,i)=>`<path class="falling-drop" style="--drop-delay:${i*.16}s" d="M${x} ${y+55}q-9 15 0 19q9-4 0-19Z" fill="#ac7e99"/>`).join('');
  if(action.effect==='pour')return `<path class="pour-stream" d="M${x} ${y+22}q-15 25 4 67" fill="none" stroke="#9bc3ca" stroke-width="8" stroke-linecap="round"/>`;

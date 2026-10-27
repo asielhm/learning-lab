@@ -234,14 +234,14 @@
         "A component condenses where the local column temperature falls to its boiling point. Fractions are mixtures with overlapping boiling ranges; distillation does not crack C–C bonds."
       ],
       [
-        "Alkanes and alkenes",
-        "Acyclic alkanes have CₙH₂ₙ₊₂ and only single carbon–carbon bonds. Acyclic alkenes with one C=C have CₙH₂ₙ. Homologous-series members share characteristic chemistry and differ successively by CH₂.",
-        "Butane is C₄H₁₀; butene is C₄H₈. These general formulas are not sufficient to distinguish all possible ring structures or multiple-double-bond compounds."
+        "Alkanes, alkenes and dienes",
+        "Acyclic alkanes have CₙH₂ₙ₊₂ and only single carbon–carbon bonds. Acyclic alkenes with one C=C have CₙH₂ₙ. An acyclic diene has two C=C bonds in the same chain and formula CₙH₂ₙ₋₂. These formulas assume no rings.",
+        "Butane is C₄H₁₀, butene is C₄H₈ and buta-1,3-diene is C₄H₆: CH₂=CH–CH=CH₂. Carbon still forms four bonds in every case."
       ],
       [
-        "Cracking and bromine water",
-        "Cracking breaks long hydrocarbons into shorter products, often including alkenes. Catalytic cracking uses a hot catalyst; thermal cracking uses different conditions. Alkenes decolourise bromine by addition under the comparison conditions used here.",
-        "C₁₀H₂₂ → C₈H₁₈ + C₂H₄. Ethene adds Br₂ to form C₂H₄Br₂. An alkane comparison must specify no UV light; partition into another layer is not chemical decolourisation."
+        "Cracking, dehydrogenation and bromine water",
+        "Cracking breaks long hydrocarbons into shorter products, often including alkenes. The optional diene challenge models a cracking and dehydrogenation pathway that also releases H₂. This is one possible balanced channel; actual products depend on conditions and form a mixture. Alkenes decolourise bromine by addition under the comparison conditions.",
+        "Standard: C₁₀H₂₂ → C₈H₁₈ + C₂H₄. Challenge: C₁₀H₂₂ → C₆H₁₄ + C₄H₆ + H₂. Both conserve 10 carbon atoms and 22 hydrogen atoms. Hydrogen production is not required in every cracking equation."
       ],
       [
         "Addition polymers",
@@ -265,6 +265,10 @@
       ]
     ],
     "resources": [
+      [
+        "Extra challenge: produce a diene and hydrogen",
+        "#cracking-diene"
+      ],
       [
         "Revisit acids, bases, carboxylates and soap",
         "../acids-and-bases/"
