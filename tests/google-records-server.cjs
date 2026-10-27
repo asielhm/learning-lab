@@ -127,6 +127,18 @@ assert.deepEqual(Array.from(context.getTeacherResults(token,{}).teachers),['Ms R
 assert.deepEqual(Array.from(context.getTeacherResults(token,{search:'No matching pupil',offset:50}).teachers),['Ms Rivera','Ms Rivera-Smith'],'Teacher options are independent of pagination and other filters');
 assert.equal(context.getTeacherResults(token,{view:'answers',teacher:'Ms Rivera-Smith'}).total,1);
 assert.equal(context.getTeacherResults(token,{view:'answers',teacher:'Ms Rivera'}).total,115,'Selecting Rivera does not match Rivera-Smith');
+assert.equal(context.getTeacherResults(token,{view:'answers',teacher:['Ms Rivera','Ms Rivera-Smith']}).total,116,'Teacher checkboxes combine with OR');
+assert.equal(context.getTeacherResults(token,{teacher:[]}).total,0,'Cleared teacher selection is not All');
+assert.equal(context.getTeacherResults(token,{course:[]}).total,0);
+assert.equal(context.getTeacherResults(token,{topic:[]}).total,0);
+assert.equal(context.getTeacherResults(token,{course:['Year 7 Maths','Year 9 Science']}).total,58);
+const algebraCount=context.getTeacherResults(token,{topic:'algebra'}).total,gasCount=context.getTeacherResults(token,{topic:'gas-laws'}).total;
+assert.equal(context.getTeacherResults(token,{topic:['algebra','gas-laws']}).total,algebraCount+gasCount,'Topics combine with OR');
+assert.equal(context.getTeacherResults(token,{course:['Year 7 Maths'],topic:['gas-laws']}).total,0,'Different filter groups combine with AND');
+assert.equal(context.getTeacherResults(token,{teacher:['MS RIVERA-SMITH'],course:['Year 9 Science'],topic:['gas-laws'],view:'answers'}).total,1);
+assert.equal(context.getTeacherResults(token,{teacher:null,course:null,topic:null}).total,58,'All preserves historical records without a teacher name');
+assert.throws(()=>context.getTeacherResults(token,{teacher:[42]}),/Invalid field/);
+assert.throws(()=>context.getTeacherResults(token,{course:{value:'Year 9 Science'}}),/Invalid field/);
 const nonce=crypto.randomUUID();
 const receipt=context.doPost({parameter:{nonce,payload:JSON.stringify(first)}}).html;
 assert(receipt.includes('"ok":true'));assert(!receipt.includes(first.studentName));assert(receipt.includes('https://asielhm.github.io'));

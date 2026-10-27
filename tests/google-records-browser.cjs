@@ -94,13 +94,17 @@ const waitFor=async check=>{for(let i=0;i<100;i++){if(await check())return;await
   await dashboardContext.addInitScript(()=>{
    window.expireTeacher=false;
    const rows=Array.from({length:61},(_,i)=>['id-'+i,'2026-10-26T00:00:00.000Z',i===0?'<img src=x onerror=alert(1)>':'Test Student','9T','Year 9 Science','gas-laws','test',false,'2026-10-26T00:00:00.000Z',10,8,80,'Ms Rivera']);
+   for(let i=0;i<7;i++)rows.push(['extra-'+i,'2026-10-26T00:00:00.000Z','Other Student',i<3?'7M':'9B',i<3?'Year 7 Maths':'Year 9 Science',i<3?'algebra':'breathing-system','test',false,'2026-10-26T00:00:00.000Z',10,7,70,'Ms Chen']);
+   window.dashboardRequests=[];
    window.google={script:{get run(){let success=()=>{},failure=()=>{};return {
     withSuccessHandler(fn){success=fn;return this;},withFailureHandler(fn){failure=fn;return this;},
     loginTeacher(password){setTimeout(()=>password==='test-password'?success({token:'test-token'}):failure({message:'Sign-in failed. Check your teacher password.'}),0);},
     logoutTeacher(){success();},
     getTeacherResults(token,filters){setTimeout(()=>{
      if(token!=='test-token'||window.expireTeacher){failure({message:'Your sign-in has expired. Sign in again.'});return;}
-     const filtered=rows.filter(row=>(!filters.search||row[2].includes(filters.search))&&(!filters.teacher||row[12].toLowerCase()===filters.teacher.toLowerCase()));
+     window.dashboardRequests.push(filters);
+     const match=(choices,value)=>choices===null||choices===undefined||choices.some(choice=>choice.toLowerCase()===value.toLowerCase());
+     const filtered=rows.filter(row=>(!filters.search||row[2].includes(filters.search))&&match(filters.teacher,row[12])&&match(filters.course,row[4])&&match(filters.topic,row[5]));
      success({headers:['Session ID','Completed at','Student name','Class','Course','Topic','Mode','Retry','Started at','Questions','Correct','Score (%)','Teacher'],rows:filtered.slice(filters.offset,filters.offset+50),total:filtered.length,offset:filters.offset,pageSize:50,students:2,accuracy:80,teachers:['Ms Chen','Ms Rivera'],spreadsheetUrl:'https://docs.google.com/spreadsheets/d/test/edit'});
     },0);}
    };}}};
@@ -112,15 +116,31 @@ const waitFor=async check=>{for(let i=0;i<100;i++){if(await check())return;await
   await dashboard.locator('#password').fill('test-password');await dashboard.locator('#sign-in').click();await dashboard.locator('#rows tr').first().waitFor();
   assert.equal(await dashboard.locator('#rows tr').count(),50);assert.equal(await dashboard.locator('#rows img').count(),0,'Student text is never interpreted as HTML');
   assert((await dashboard.locator('#columns').innerText()).includes('Teacher'));assert((await dashboard.locator('#rows tr').first().innerText()).includes('Ms Rivera'));
-  assert.deepEqual(await dashboard.locator('#teacher option').allTextContents(),['All teachers','Ms Chen','Ms Rivera']);
-  await dashboard.locator('#teacher').selectOption('Ms Chen');await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===0);
-  assert.equal(await dashboard.locator('#teacher').inputValue(),'Ms Chen');assert.equal(await dashboard.locator('#teacher option').count(),3,'Empty filters retain the full saved teacher list');
-  await dashboard.locator('#teacher').selectOption('Ms Rivera');await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===50);
+  async function choose(key,noun,labels){
+   await dashboard.locator(`#${key} summary`).click();
+   await dashboard.getByRole('button',{name:`Clear ${noun}`,exact:true}).click();
+   for(const label of labels)await dashboard.locator('#'+key).getByRole('checkbox',{name:label,exact:true}).check();
+   await dashboard.getByRole('button',{name:`Done choosing ${noun}`,exact:true}).click();
+  }
+  assert.deepEqual(await dashboard.locator('#teacher input[type=checkbox]').evaluateAll(inputs=>inputs.map(input=>input.value)),['Ms Chen','Ms Rivera']);
+  await choose('teacher','teachers',['Ms Chen']);await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===7);
+  assert.equal(await dashboard.locator('#teacher-summary').innerText(),'Ms Chen');
+  await choose('topic','topics',['Gas laws']);await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===0);
+  assert.equal(await dashboard.locator('#teacher input').count(),2,'Empty matches retain every saved teacher choice');
+  await choose('teacher','teachers',['Ms Chen','Ms Rivera']);
+  await choose('course','courses',['Year 9 Science']);
+  await choose('topic','topics',['Gas laws','Breathing system']);await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#record-count').innerText()==='65');
+  assert.equal(await dashboard.locator('#topic-summary').innerText(),'2 selected');
+  assert.deepEqual(await dashboard.evaluate(()=>window.dashboardRequests.at(-1).topic),['breathing-system','gas-laws']);
+  await choose('teacher','teachers',[]);await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===0);
+  assert.deepEqual(await dashboard.evaluate(()=>window.dashboardRequests.at(-1).teacher),[],'Clear sends an empty selection, not All');
+  await choose('teacher','teachers',['Ms Rivera']);await dashboard.locator('#apply').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===50);
+  assert.equal(await dashboard.locator('#course-summary').innerText(),'Year 9 Science');
   assert.equal(await dashboard.locator('#password').inputValue(),'');assert.match(await dashboard.locator('#page-label').innerText(),/1–50 of 61/);
   await dashboard.locator('#next').click();await waitFor(async()=>await dashboard.locator('#rows tr').count()===11);assert.match(await dashboard.locator('#page-label').innerText(),/51–61/);
   assert(await dashboard.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await dashboard.screenshot({path:'/tmp/teacher-dashboard-mobile.png',fullPage:true});
-  await dashboard.locator('#sign-out').click();assert(await dashboard.locator('#dashboard').isHidden());assert.equal(await dashboard.locator('#rows tr').count(),0);assert.deepEqual(await dashboard.locator('#teacher option').allTextContents(),['All teachers']);
+  await dashboard.locator('#sign-out').click();assert(await dashboard.locator('#dashboard').isHidden());assert.equal(await dashboard.locator('#rows tr').count(),0);assert.equal(await dashboard.locator('#teacher input').count(),0);assert.equal(await dashboard.locator('#teacher-summary').innerText(),'All teachers');
   await dashboard.locator('#password').fill('test-password');await dashboard.locator('#sign-in').click();await dashboard.locator('#rows tr').first().waitFor();
   await dashboard.evaluate(()=>window.expireTeacher=true);await dashboard.locator('#apply').click();await waitFor(()=>dashboard.locator('#dashboard').isHidden());assert.equal(await dashboard.locator('#rows tr').count(),0);
   console.log('Google records browser: required student identity, all four simulators, Google receipts, rejection of forged receipts, queued reload/retry, stable IDs, separate retry sessions, teacher link and mobile/shared-device flows passed.');

@@ -238,13 +238,24 @@ function logoutTeacher(token) {
   requireTeacher_(token);
   CacheService.getScriptCache().remove('teacher-session:' + digest_(token));
 }
+function resultFilter_(value, maxLength) {
+  // Null/omitted is All; an explicitly empty checkbox selection matches nothing.
+  // Keep scalar values working for previously deployed dashboard versions.
+  if (value === undefined || value === null || value === '') return null;
+  var values = Array.isArray(value) ? value : [value];
+  if (values.length > 500) throw new Error('Too many filter choices.');
+  return Array.from(new Set(values.map(function(item) {return text_(item, maxLength, true).toLowerCase();})));
+}
+function matchesResultFilter_(choices, value) {
+  return choices === null || choices.includes(String(value || '').trim().toLowerCase());
+}
 function getTeacherResults(token, filters) {
   requireTeacher_(token); // Every data read checks server-side authentication.
   filters = filters || {};
   var query = text_(filters.search || '', 100, false).toLowerCase();
-  var topic = text_(filters.topic || '', 80, false);
-  var course = text_(filters.course || '', 80, false);
-  var teacher = text_(filters.teacher || '', 100, false).toLowerCase();
+  var topic = resultFilter_(filters.topic, 80);
+  var course = resultFilter_(filters.course, 80);
+  var teacher = resultFilter_(filters.teacher, 100);
   var view = filters.view === 'answers' ? 'answers' : 'sessions';
   var offset = Number.isInteger(filters.offset) && filters.offset > 0 ? filters.offset : 0;
   var headers = view === 'answers' ? ANSWER_HEADERS_ : SESSION_HEADERS_;
@@ -268,7 +279,7 @@ function getTeacherResults(token, filters) {
   } finally {lock.releaseLock();}
   var indices = view === 'answers' ? {name:3,classroom:4,course:5,topic:6,teacher:19,mode:7,retry:8} : {name:2,classroom:3,course:4,topic:5,teacher:12,mode:6,retry:7};
   var rows = source.filter(function(row) {
-    return row[indices.mode] === 'test' && !row[indices.retry] && (!query || (String(row[indices.name]) + ' ' + String(row[indices.classroom])).toLowerCase().includes(query)) && (!topic || row[indices.topic] === topic) && (!course || row[indices.course] === course) && (!teacher || String(row[indices.teacher] || '').trim().toLowerCase() === teacher);
+    return row[indices.mode] === 'test' && !row[indices.retry] && (!query || (String(row[indices.name]) + ' ' + String(row[indices.classroom])).toLowerCase().includes(query)) && matchesResultFilter_(topic,row[indices.topic]) && matchesResultFilter_(course,row[indices.course]) && matchesResultFilter_(teacher,row[indices.teacher]);
   }).sort(function(a, b) {return String(b[1]).localeCompare(String(a[1]));});
   var correct = rows.reduce(function(sum, row) {return sum + (view === 'answers' ? (row[18] === true ? 1 : 0) : Number(row[10]));}, 0);
   var count = rows.reduce(function(sum, row) {return sum + (view === 'answers' ? 1 : Number(row[9]));}, 0);

@@ -29,3 +29,9 @@ Google may return text-formatted numbers and booleans as strings. normalizeRow_ 
 ## Saved-teacher dropdown
 
 getTeacherResults also returns teachers: the sorted, case-insensitively deduplicated nonempty teacher names from all test-mode Answers and Sessions rows. This includes partial tests and remains independent of the current query, selected course/topic, view and pagination. The list is available only after requireTeacher_ has authenticated the caller. The dashboard builds native select options as text, preserves the selected teacher across refreshes and empty results, and clears names on logout. Selection uses exact case-insensitive matching, so Rivera does not accidentally include Rivera-Smith. Deploy the updated Code.gs and Dashboard.html together to enable it. No sheet schema or password change is needed for this update.
+
+## Multiple dashboard filters
+
+Teacher, Course and Topic now use native disclosure dropdowns with checkboxes, Select all/Clear/Done, selection summaries, outside-click and Escape closing, and viewport-aware positioning. Null represents All, including historical records without a teacher; an empty array represents none and returns zero rows. Nonempty arrays match any selected value within that group, with exact case-insensitive comparison; the three groups and student/class search combine with AND. The results endpoint still accepts legacy scalar filter values, so existing deployed dashboards keep working while the owner updates. Selection arrays and complete teacher choices survive pagination and zero-result searches; teacher identities and all selections clear on sign-out. Every read still checks the teacher token before processing filters.
+
+Copy both Code.gs and Dashboard.html and deploy a new version to activate these controls in Google. There are no new spreadsheet columns or password changes for this update.
