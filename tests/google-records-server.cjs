@@ -27,10 +27,17 @@ const context=vm.createContext({console:{log:s=>logs.push(s),warn:()=>{}},
  HtmlService:{XFrameOptionsMode:{ALLOWALL:'ALLOWALL'},createHtmlOutput:html=>({html,setXFrameOptionsMode(){return this;}}),createHtmlOutputFromFile:name=>({name,setTitle(){return this;},setFaviconUrl(value){this.favicon=value;return this;}})}
 });
 for(const file of ['QuestionBank.gs','Code.gs'])vm.runInContext(fs.readFileSync(path.join(root,'google-apps-script',file),'utf8'),context,{filename:file});
-for(const name of ['algebra','circulatory','breathing','gas-laws']){
- const bank=JSON.parse(fs.readFileSync(path.join(root,'assets/revision/questions',name+'.json'),'utf8'));
- assert.equal(Object.keys(context.QUESTION_BANKS_[bank.topicId].questions).length,bank.questions.length);
- for(const q of bank.questions)assert.equal(JSON.stringify(context.QUESTION_BANKS_[bank.topicId].questions[q.id]),JSON.stringify(Object.fromEntries(['prompt','category','difficulty','options','answer'].map(key=>[key,q[key]]))),'Regenerate QuestionBank.gs when a source question changes');
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/records/banks.json'),'utf8'));
+assert.equal(manifest.banks.length,19);assert.equal(manifest.questionCount,1240);
+assert.equal(JSON.stringify(context.RECORDING_MANIFEST_),JSON.stringify(manifest));
+for(const metadata of manifest.banks){
+ const filename=metadata.topic==='circulatory-system'?'circulatory':metadata.topic==='breathing-system'?'breathing':metadata.topic;
+ const bank=JSON.parse(fs.readFileSync(path.join(root,'assets/revision/questions',filename+'.json'),'utf8'));
+ const generated=context.QUESTION_BANKS_[bank.topicId];assert.equal(Object.keys(generated.questions).length,bank.questions.length);
+ const canonical={course:metadata.course,questions:Object.fromEntries(bank.questions.map(q=>[q.id,Object.fromEntries(['prompt','category','difficulty','options','answer'].map(key=>[key,q[key]]))]))};
+ function stable(value){return Array.isArray(value)?value.map(stable):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,stable(value[key])])):value;}
+ assert.equal(metadata.signature,crypto.createHash('sha256').update(JSON.stringify(stable(canonical))).digest('hex'));
+ for(const q of bank.questions)assert.equal(JSON.stringify(generated.questions[q.id]),JSON.stringify(canonical.questions[q.id]),'Regenerate QuestionBank.gs when a source question changes');
 }
 book.insertSheet('Existing class notes').appendRow(['Keep this']);
 activeEmail='';assert.throws(()=>context.setupLearningLab(),/owns this deployment/);
@@ -144,6 +151,23 @@ const receipt=context.doPost({parameter:{nonce,payload:JSON.stringify(first)}}).
 assert(receipt.includes('"ok":true'));assert(!receipt.includes(first.studentName));assert(receipt.includes('https://asielhm.github.io'));
 assert(context.doPost({parameter:{nonce,payload:'invalid'}}).html.includes('"ok":false'));
 assert(context.doPost({parameter:{nonce,payload:JSON.stringify({...payload(),mode:'practice'})}}).html.includes('"ignored":true'));
+// Every new bank saves and scores under its own course, topic and class.
+const originalTopics=['algebra','circulatory-system','breathing-system','gas-laws'];
+for(const metadata of manifest.banks.filter(b=>!originalTopics.includes(b.topic))){
+ const classroom=metadata.course==='Year 7 Maths'?'7N':metadata.course==='Year 10 Chemistry'?'10C':'10P';
+ const one={...payload(undefined,1,true,'New Course Student',metadata.topic),classroom,bankSignature:metadata.signature};
+ const before=sheets.get('Answers').rows.length;assert.throws(()=>context.saveAnswer_({...one,bankSignature:'0'.repeat(64)}),/version changed/);assert.equal(sheets.get('Answers').rows.length,before);
+ context.saveAnswer_(one);context.saveAnswer_({...payload(one.sessionId,2,true,one.studentName,metadata.topic),classroom,bankSignature:metadata.signature});
+ const found=context.getTeacherResults(token,{course:metadata.course,topic:metadata.topic,classroom});assert.equal(found.total,1);assert.equal(found.accuracy,100);assert.equal(found.topicSummary[0].answers,2);assert.equal(found.topicSummary[0].tests,1);
+ assert.equal(context.getTeacherResults(token,{topic:metadata.topic,classroom:[]}).total,0);
+}
+const oneWrong={...payload(undefined,1,false,'Single Question Test','y10-physics-kinematics'),classroom:'10P',totalQuestions:1};context.saveAnswer_(oneWrong);
+const physicsSummary=context.getTeacherResults(token,{topic:'y10-physics-kinematics',classroom:['10P']});assert.equal(physicsSummary.total,2);assert.equal(physicsSummary.accuracy,67);assert.equal(physicsSummary.topicSummary[0].accuracy,67,'Aggregate accuracy is weighted by answer count');
+result=context.getTeacherResults(token,{});assert.equal(result.bankCount,19);assert.equal(result.questionCount,1240);assert.equal(result.courses.length,4);assert.equal(result.topics.length,19);assert(result.classes.includes('7N')&&result.classes.includes('10C')&&result.classes.includes('10P'));
+assert.equal(result.topicSummary.reduce((sum,group)=>sum+group.tests,0),result.total,'Overview includes the whole filtered selection, not just 50 rows');
+assert(result.topics.some(topic=>topic.value==='y10-physics-kinematics'&&topic.label==='Motion and projectiles'));
+const publicNonce=crypto.randomUUID(),publicCapabilities=context.doGet({parameter:{action:'capabilities',nonce:publicNonce}}).html;
+assert(publicCapabilities.includes('learning-lab-recording-capabilities'));assert(publicCapabilities.includes(publicNonce));assert(publicCapabilities.includes('all-courses-1'));assert(!publicCapabilities.includes('New Course Student'));assert(!publicCapabilities.includes(token));assert(!publicCapabilities.includes(password));assert.throws(()=>context.doGet({parameter:{action:'capabilities',nonce:'bad'}}),/Invalid capability/);
 context.logoutTeacher(token);assert.throws(()=>context.getTeacherResults(token,{}),/expired/);
 const nextToken=context.loginTeacher(password).token;context.resetTeacherPassword();assert.throws(()=>context.getTeacherResults(nextToken,{}),/expired/);
 for(let i=0;i<20;i++)assert.throws(()=>context.loginTeacher('wrong'),/failed/);
@@ -154,4 +178,4 @@ const publicFunctions=[...source.matchAll(/^function (\w+)\(/gm)].map(match=>mat
 assert.deepEqual(publicFunctions,['doGet','doPost','getTeacherResults','loginTeacher','logoutTeacher','resetTeacherPassword','setupLearningLab']);
 assert.equal(context.doGet().name,'Dashboard');
 assert.equal(context.doGet().favicon,'https://asielhm.github.io/learning-lab/assets/brand/learning-lab-logo.png');
-console.log('Google records server: all four banks, protected reads, password rotation/logout/rate limit, authoritative scoring, partial quizzes, idempotent writes, summary repair, formula escaping and filtered pagination passed.');
+console.log('Google records server: all 19 banks / 1,240 questions, class filters, dynamic course/topic choices, full-selection weighted summaries, public readiness metadata, bank signatures, protected reads, password rotation/logout/rate limit, authoritative scoring, partial quizzes, idempotent writes, summary repair, formula escaping and filtered pagination passed.');

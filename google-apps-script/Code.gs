@@ -27,6 +27,7 @@ function requireOwner_() {
 
 // Run once from the Apps Script editor. Creates NEW tabs, leaving existing tabs intact.
 function setupLearningLab_() {
+  requireManifest_();
   var lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {
@@ -53,7 +54,16 @@ function resetTeacherPassword_() {
   console.log('Teacher password (keep private; do not send to Learning Lab): ' + password);
 }
 
-function doGet() {
+function doGet(event) {
+  // Public metadata only: no student records, teacher names, passwords or tokens.
+  if (event && event.parameter && event.parameter.action === 'capabilities') {
+    var nonce = String(event.parameter.nonce || '');
+    if (!/^[a-f0-9-]{36}$/.test(nonce)) throw new Error('Invalid capability nonce');
+    requireManifest_();
+    var capabilities = JSON.stringify({type:'learning-lab-recording-capabilities',nonce:nonce,manifest:RECORDING_MANIFEST_}).replace(/</g, '\\u003c');
+    return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><script>window.top.postMessage(' + capabilities + ', ' + JSON.stringify(PLATFORM_ORIGIN_) + ');</script>')
+      .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+  }
   return HtmlService.createHtmlOutputFromFile('Dashboard').setTitle('Teacher dashboard | Learning Lab').setFaviconUrl(BRAND_LOGO_URL_);
 }
 
@@ -139,6 +149,7 @@ function saveAnswer_(p) {
   var topic = text_(p.topic, 80, true), course = text_(p.course, 80, true);
   var bank = QUESTION_BANKS_[topic];
   if (!bank || bank.course !== course || p.totalQuestions > Object.keys(bank.questions).length) throw new Error('Invalid course');
+  if (p.bankSignature !== undefined && p.bankSignature !== bank.signature) throw new Error('Question bank version changed');
   var question = bank.questions[text_(p.questionId, 80, true)];
   if (!question || !question.options.includes(p.selectedAnswer)) throw new Error('Unknown question or answer');
   var name = text_(p.studentName, 100, true), classroom = text_(p.classroom, 60, p.version === 2);
@@ -251,23 +262,25 @@ function matchesResultFilter_(choices, value) {
 }
 function getTeacherResults(token, filters) {
   requireTeacher_(token); // Every data read checks server-side authentication.
+  requireManifest_();
   filters = filters || {};
   var query = text_(filters.search || '', 100, false).toLowerCase();
   var topic = resultFilter_(filters.topic, 80);
   var course = resultFilter_(filters.course, 80);
   var teacher = resultFilter_(filters.teacher, 100);
+  var classroom = resultFilter_(filters.classroom, 60);
   var view = filters.view === 'answers' ? 'answers' : 'sessions';
   var offset = Number.isInteger(filters.offset) && filters.offset > 0 ? filters.offset : 0;
   var headers = view === 'answers' ? ANSWER_HEADERS_ : SESSION_HEADERS_;
-  var lock = LockService.getScriptLock(), source, teachers;
+  var lock = LockService.getScriptLock(), source, teachers, answerRows, sessionRows;
   lock.waitLock(20000);
   try {
     var book = SpreadsheetApp.openById(SPREADSHEET_ID_);
     var answers = ensureSheet_(book, 'Answers', ANSWER_HEADERS_);
     var sessions = ensureSheet_(book, 'Sessions', SESSION_HEADERS_);
     repairTestSummaries_(answers, sessions);
-    var answerRows = rows_(answers, ANSWER_HEADERS_);
-    var sessionRows = rows_(sessions, SESSION_HEADERS_);
+    answerRows = rows_(answers, ANSWER_HEADERS_);
+    sessionRows = rows_(sessions, SESSION_HEADERS_);
     source = view === 'answers' ? answerRows : sessionRows;
     // Keep the full teacher list across filters, views and pages, including saved
     // tests still in progress. Teacher names are returned only after authentication.
@@ -279,15 +292,46 @@ function getTeacherResults(token, filters) {
   } finally {lock.releaseLock();}
   var indices = view === 'answers' ? {name:3,classroom:4,course:5,topic:6,teacher:19,mode:7,retry:8} : {name:2,classroom:3,course:4,topic:5,teacher:12,mode:6,retry:7};
   var rows = source.filter(function(row) {
-    return row[indices.mode] === 'test' && !row[indices.retry] && (!query || (String(row[indices.name]) + ' ' + String(row[indices.classroom])).toLowerCase().includes(query)) && matchesResultFilter_(topic,row[indices.topic]) && matchesResultFilter_(course,row[indices.course]) && matchesResultFilter_(teacher,row[indices.teacher]);
+    return row[indices.mode] === 'test' && !row[indices.retry] && (!query || (String(row[indices.name]) + ' ' + String(row[indices.classroom])).toLowerCase().includes(query)) && matchesResultFilter_(topic,row[indices.topic]) && matchesResultFilter_(course,row[indices.course]) && matchesResultFilter_(teacher,row[indices.teacher]) && matchesResultFilter_(classroom,row[indices.classroom]);
   }).sort(function(a, b) {return String(b[1]).localeCompare(String(a[1]));});
   var correct = rows.reduce(function(sum, row) {return sum + (view === 'answers' ? (row[18] === true ? 1 : 0) : Number(row[10]));}, 0);
   var count = rows.reduce(function(sum, row) {return sum + (view === 'answers' ? 1 : Number(row[9]));}, 0);
+  var choiceRows = answerRows.filter(function(row) {return row[7] === 'test' && !row[8];});
+  var savedSessions = sessionRows.filter(function(row) {return row[6] === 'test' && !row[7];});
+  var courses = uniqueChoices_(RECORDING_MANIFEST_.banks.map(function(bank) {return bank.course;}).concat(choiceRows.map(function(row) {return row[5];}), savedSessions.map(function(row) {return row[4];})));
+  var classes = uniqueChoices_(choiceRows.map(function(row) {return row[4];}).concat(savedSessions.map(function(row) {return row[3];})));
+  var topicMap = new Map();
+  RECORDING_MANIFEST_.banks.forEach(function(bank) {topicMap.set(bank.topic, {value:bank.topic,label:bank.title,course:bank.course,questionCount:bank.questionCount});});
+  choiceRows.map(function(row) {return {topic:row[6],course:row[5]};}).concat(savedSessions.map(function(row) {return {topic:row[5],course:row[4]};})).forEach(function(item) {
+    if (!topicMap.has(item.topic)) topicMap.set(item.topic, {value:item.topic,label:item.topic,course:item.course,questionCount:null});
+  });
+  var summaries = new Map();
+  rows.forEach(function(row) {
+    var id = row[indices.course] + '\u0000' + row[indices.topic];
+    if (!summaries.has(id)) summaries.set(id, {course:row[indices.course],topic:row[indices.topic],tests:new Set(),students:new Set(),answers:0,correct:0});
+    var group = summaries.get(id);group.tests.add(row[view === 'answers' ? 2 : 0]);group.students.add(row[indices.name] + '\u0000' + row[indices.classroom]);
+    group.answers += view === 'answers' ? 1 : Number(row[9]);group.correct += view === 'answers' ? (row[18] === true ? 1 : 0) : Number(row[10]);
+  });
+  var topicSummary = Array.from(summaries.values()).map(function(group) {return {course:group.course,topic:group.topic,tests:group.tests.size,students:group.students.size,answers:group.answers,correct:group.correct,accuracy:group.answers ? Math.round(group.correct/group.answers*100) : null};});
+  topicSummary.sort(function(a,b) {return a.course.localeCompare(b.course) || a.topic.localeCompare(b.topic);});
   return {
+    courses:courses,classes:classes,topics:Array.from(topicMap.values()),topicSummary:topicSummary,bankCount:RECORDING_MANIFEST_.banks.length,questionCount:RECORDING_MANIFEST_.questionCount,release:RECORDING_MANIFEST_.release,
     headers:headers, rows:rows.slice(offset, offset + 50).map(function(row) {return row.map(function(value) {return value instanceof Date ? value.toISOString() : value;});}),
     total:rows.length, offset:offset, pageSize:50, teachers:teachers,
     students:new Set(rows.map(function(row) {return String(row[indices.name]) + '\u0000' + String(row[indices.classroom]);})).size,
     accuracy:count ? Math.round(correct / count * 100) : null,
     spreadsheetUrl:'https://docs.google.com/spreadsheets/d/' + SPREADSHEET_ID_ + '/edit'
   };
+}
+
+function uniqueChoices_(values) {
+  var choices = new Map();
+  values.forEach(function(value) {value = String(value || '').trim();if (value && !choices.has(value.toLowerCase())) choices.set(value.toLowerCase(), value);});
+  return Array.from(choices.values()).sort(function(a,b) {return a.localeCompare(b);});
+}
+
+function requireManifest_() {
+  if (typeof RECORDING_MANIFEST_ === 'undefined' || RECORDING_MANIFEST_.protocol !== 3 || !Array.isArray(RECORDING_MANIFEST_.banks)) {
+    throw new Error('Replace QuestionBank.gs with the latest Learning Lab file, save all three Google files and deploy a new version.');
+  }
 }

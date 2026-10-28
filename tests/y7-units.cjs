@@ -12,7 +12,8 @@ const expected={
 (async()=>{const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE||'/usr/bin/chromium',args:['--no-sandbox']});try{
  const p=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[],posts=[];
  p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(r.method()==='POST'&&/script\.google/.test(r.url()))posts.push(r.url());});
- // Leave the configured recorder enabled: the new units must explicitly opt out until the deferred Google update.
+ await p.context().route('https://script.google.com/macros/s/**/exec?*',route=>{const url=new URL(route.request().url());return route.fulfill({contentType:'text/html',body:`<script>window.top.postMessage(${JSON.stringify({type:'learning-lab-recording-capabilities',nonce:url.searchParams.get('nonce'),manifest:{protocol:3,banks:[]}})},${JSON.stringify(new URL(base).origin)})</script>`});});
+ // Force a local-recording fallback: these lesson tests must never depend on or write to the live Google deployment.
  await p.goto(base+'/#/years/y7/maths');await p.locator('.topic-apps .activity-card').first().waitFor();assert.equal(await p.locator('.topic-apps .activity-card').count(),5);
  assert.deepEqual(await p.locator('.topic-apps .activity-card h2').allTextContents(),['Numbers I','Geometry I','Numbers II','Algebra I','Numbers III']);
  assert.equal(await p.locator('.topic-study-links a[href="activities/y7/maths/algebra/"]').count(),1);
@@ -74,6 +75,6 @@ const expected={
  const phone=await browser.newPage({viewport:{width:390,height:844},hasTouch:true,isMobile:true});phone.on('pageerror',e=>errors.push(e.message));
  for(const unit of units){await phone.goto(`${base}/activities/y7/maths/${unit}/`);await phone.locator('.math-widget').first().waitFor();await phone.locator('#learning-level').selectOption('support');assert(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await phone.locator('.math-widget').first().screenshot({path:`/tmp/y7-${unit}-mobile.png`});await Promise.all([phone.waitForNavigation({waitUntil:'load'}),phone.locator('.unit-path a').first().tap()]);assert(phone.url().endsWith('/numbers-i/'));}
  await phone.goto(`${base}/activities/y7/maths/algebra-i/`);await phone.locator('#coordinates svg').scrollIntoViewIfNeeded();const point=await phone.locator('#coordinates svg').evaluate(svg=>{const p=new DOMPoint(208,218).matrixTransform(svg.getScreenCTM());return{x:p.x,y:p.y};});await phone.touchscreen.tap(point.x,point.y);assert.equal(await phone.locator('#coordinates .result-line').innerText(),'P = (-3, -2)');
- assert.deepEqual(errors,[]);assert.deepEqual(posts,[],'Deferred unit recording must never send unrecognised questions to Google.');
+ assert.deepEqual(errors,[]);assert.deepEqual(posts,[],'Local fallback must never send unrecognised questions to Google.');
  console.log('Y7 units: five catalogue pages, 24 interactive activities, support/challenge routes, exact answers and resets, construction stages, coordinate mouse/touch, 100 revision answers with scoring/retry/auto-advance, no Google submissions and 320–1440px layouts passed.');
 }finally{await browser.close();}})().catch(error=>{console.error(error);process.exitCode=1;});

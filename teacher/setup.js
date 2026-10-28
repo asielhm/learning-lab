@@ -1,6 +1,8 @@
 const status = document.querySelector('#copy-status');
+const validFiles=new Set(['Code.gs','QuestionBank.gs','Dashboard.html']);
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.addEventListener('click', async () => {
+    if(!validFiles.has(button.dataset.copy))return;
     button.disabled = true;
     try {
       const response = await fetch(new URL(`../google-apps-script/${button.dataset.copy}`, import.meta.url), {cache:'no-store'});

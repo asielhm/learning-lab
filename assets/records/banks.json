@@ -1,0 +1,140 @@
+{
+  "protocol": 3,
+  "release": "all-courses-1",
+  "questionCount": 1240,
+  "banks": [
+    {
+      "topic": "algebra",
+      "course": "Year 7 Maths",
+      "title": "Algebra",
+      "questionCount": 60,
+      "signature": "00b7b8d8e9fff57855f978120688d980104c24c71be7b7427f64eb77ad3d7594"
+    },
+    {
+      "topic": "numbers-i",
+      "course": "Year 7 Maths",
+      "title": "Numbers I",
+      "questionCount": 60,
+      "signature": "d62a394da49a8587e6a87e46ce8d2262dbd9b8301059c8b542fad6cb6106f037"
+    },
+    {
+      "topic": "geometry-i",
+      "course": "Year 7 Maths",
+      "title": "Geometry I",
+      "questionCount": 60,
+      "signature": "b26e23c83d47e4ebc9f8ff4ef5074f41f7722747dbaf21f7a2d872ab34c2b3e3"
+    },
+    {
+      "topic": "numbers-ii",
+      "course": "Year 7 Maths",
+      "title": "Numbers II",
+      "questionCount": 60,
+      "signature": "4a83457fcb7dd139e4e5713d48feb3eec388afed50ce530482acd30b161bb864"
+    },
+    {
+      "topic": "algebra-i",
+      "course": "Year 7 Maths",
+      "title": "Algebra I",
+      "questionCount": 60,
+      "signature": "7683c789d5e252dd9c287ee7420cc876c6f34d4a974731f3773aca0df4d93b59"
+    },
+    {
+      "topic": "numbers-iii",
+      "course": "Year 7 Maths",
+      "title": "Numbers III",
+      "questionCount": 60,
+      "signature": "c33a4b4ff483691862ae964cf4f35e2814048fb6306803e0a17676a9a364b335"
+    },
+    {
+      "topic": "circulatory-system",
+      "course": "Year 9 Science",
+      "title": "Circulatory system",
+      "questionCount": 60,
+      "signature": "3f3f13a9417ced49684156986aaeab9b3493077485c4f7dbe11de8497827d655"
+    },
+    {
+      "topic": "breathing-system",
+      "course": "Year 9 Science",
+      "title": "Breathing system",
+      "questionCount": 60,
+      "signature": "846446d54d5a23daf728dd9e4b243023c2fabc4174a261a0069fadb0a8ba8623"
+    },
+    {
+      "topic": "gas-laws",
+      "course": "Year 9 Science",
+      "title": "Gas laws",
+      "questionCount": 80,
+      "signature": "209a23d04cfefc87682104795efd5c73b23602e8fc9625a700bf2a7d3087a3bb"
+    },
+    {
+      "topic": "y10-acids-bases",
+      "course": "Year 10 Chemistry",
+      "title": "Acids and Bases",
+      "questionCount": 80,
+      "signature": "e9c567bb40d204712dc94a0c672711053834e38315959eea757663f78904013d"
+    },
+    {
+      "topic": "y10-metals",
+      "course": "Year 10 Chemistry",
+      "title": "Metals",
+      "questionCount": 80,
+      "signature": "a3a2892c29fc6d78daad6fc0e7a9da7477264037129e2dfc605b9324b9c4c9a7"
+    },
+    {
+      "topic": "y10-redox",
+      "course": "Year 10 Chemistry",
+      "title": "Redox",
+      "questionCount": 80,
+      "signature": "00be5bd1258045d333d4008ac7b2b2d9cebb5bb0bdc4eff1a2853a59b321996d"
+    },
+    {
+      "topic": "y10-organic",
+      "course": "Year 10 Chemistry",
+      "title": "Organic Chemistry",
+      "questionCount": 80,
+      "signature": "23eb38f6ebce849038d0ccd2073ee5d2ff19f62b44184ba6c0c0d11ed1fef435"
+    },
+    {
+      "topic": "y10-physics-electricity",
+      "course": "Year 10 Physics",
+      "title": "Electricity and electrostatics",
+      "questionCount": 60,
+      "signature": "99f934c32b9b62c98988e6b67112618d88e95b3b675a80d0d2d8f82d958f2ffe"
+    },
+    {
+      "topic": "y10-physics-waves",
+      "course": "Year 10 Physics",
+      "title": "Waves and sound",
+      "questionCount": 60,
+      "signature": "29f9e3da4c2b43c8f309e014ed81b5d5a121b3224a55d97a2f6d9bc2a8dc5c88"
+    },
+    {
+      "topic": "y10-physics-optics",
+      "course": "Year 10 Physics",
+      "title": "Optics and cameras",
+      "questionCount": 60,
+      "signature": "8d2061e3e4b37981ae961809fcc43d67c21ca262402a27d4cbd3f16ea34f5297"
+    },
+    {
+      "topic": "y10-physics-thermal",
+      "course": "Year 10 Physics",
+      "title": "Thermal physics",
+      "questionCount": 60,
+      "signature": "8b5d2ab7d92f228dc279b9e5056de97f74ee20581b3f9219928c7e6497492db0"
+    },
+    {
+      "topic": "y10-physics-kinematics",
+      "course": "Year 10 Physics",
+      "title": "Motion and projectiles",
+      "questionCount": 60,
+      "signature": "684d070698b4d2346833f9edaebc2c6a5a0ed79082bf892f4c7fd1b8a9987622"
+    },
+    {
+      "topic": "y10-physics-dynamics",
+      "course": "Year 10 Physics",
+      "title": "Forces and dynamics",
+      "questionCount": 60,
+      "signature": "06578d9a9807e0ce0e103cff94f934919c6baa011df6037c8f4462892e7ea4ea"
+    }
+  ]
+}

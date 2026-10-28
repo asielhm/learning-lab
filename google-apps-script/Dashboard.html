@@ -4,15 +4,18 @@
 *{box-sizing:border-box}body{margin:0;background:#f6f5f0;color:#243f36;font:15px system-ui,sans-serif;line-height:1.6}header,main{max-width:1250px;margin:auto;padding:25px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d6ddcf}a{color:#246675}header a{text-decoration:none}h1{font-size:clamp(30px,5vw,46px);line-height:1.15;letter-spacing:-1px}h2{font-size:22px}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5e7864}.panel{border:1px solid #ccd7c4;border-radius:14px;padding:28px;background:#fff}.login{max-width:500px;margin:45px auto}label{font-size:13px;font-weight:600;display:block}input,select,button{font:inherit;border:1px solid #b5c8b4;border-radius:7px;padding:11px;min-height:44px}input,select{background:white;color:#243f36;width:100%;margin-top:6px}button{background:#294b42;color:white;cursor:pointer}button:disabled{opacity:.5;cursor:wait}button.secondary{color:#294b42;background:white}.login button{margin-top:18px;width:100%}.muted{color:#617467;font-size:13px}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.filters{display:grid;grid-template-columns:2fr 1.4fr 1fr 1fr 1fr auto;gap:14px;align-items:end}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px 0}.stat{border:1px solid #d1ddcb;border-radius:10px;padding:20px;background:#edf3e9}.stat b{font-size:30px;display:block}.stat span{font-size:12px}.table-scroll{overflow:auto;border:1px solid #d5dfce;border-radius:10px;background:white}table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:13px;text-align:left;border-bottom:1px solid #e1e7dd;vertical-align:top;min-width:100px}th{background:#edf3e9}td.long{min-width:250px;max-width:400px}caption{text-align:left;padding:14px;font-weight:600}.pagination{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:20px 0}.error{color:#9a4135}.result-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}[hidden]{display:none!important}@media(max-width:800px){header,main{padding:18px}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1/-1}.filters button{grid-column:1/-1}.panel{padding:20px}.stat{padding:15px}.stats{gap:8px}.stat b{font-size:25px}}
 .brand-lockup{display:inline-flex;align-items:center;gap:10px;font-size:20px;font-weight:500;letter-spacing:-.6px}.brand-lockup img{display:block;object-fit:contain;flex-shrink:0}
 .result-filter{border:0;padding:0;margin:0;min-width:0}.result-filter>legend{padding:0;margin:0 0 6px;font-size:13px;font-weight:600}.result-filter-menu{position:relative;min-width:0}.result-filter-menu[open]{z-index:30}.result-filter-menu>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;min-height:47px;padding:11px;border:1px solid #b5c8b4;border-radius:7px;background:white;cursor:pointer;font-size:13px}.result-filter-menu>summary::-webkit-details-marker{display:none}.result-filter-menu>summary>span:first-child{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.result-filter-arrow{flex-shrink:0;line-height:1}.result-filter-menu[open] .result-filter-arrow{transform:rotate(180deg)}.result-filter-menu[open]>summary{background:#f1f6ed;border-color:#7f9b76}.result-filter-menu>summary:focus-visible{outline:3px solid #b45651;outline-offset:3px}.result-filter:disabled summary{pointer-events:none;opacity:.6}.result-filter-panel{position:absolute;top:calc(100% + 7px);left:0;max-height:390px;display:flex;flex-direction:column;background:white;border:1px solid #bdcdb5;border-radius:9px;box-shadow:0 12px 30px #203b3826;overflow:hidden}.result-filter-menu:not([open])>.result-filter-panel{display:none}.result-filter-menu.opens-up>.result-filter-panel{top:auto;bottom:calc(100% + 7px)}.result-filter-tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;padding:12px;border-bottom:1px solid #e1e7db}.result-filter-tools p{flex:1 1 90px;min-width:90px;margin:0;color:#617467;font-size:11px}.result-filter-tools small{display:block;font-size:11px}.result-filter-tools>div{display:flex;gap:6px;flex-shrink:0}.result-filter-tools button{padding:6px 9px;min-height:36px;font-size:11px;background:#f5f8f0;color:#31564a;border-color:#cbd5c3;white-space:nowrap}.result-filter-options{display:flex;flex-direction:column;gap:6px;padding:10px 12px;overflow-y:auto;min-height:0;overscroll-behavior:contain}.result-filter-options>p{margin:0}.result-filter-choice{display:flex;align-items:flex-start;gap:10px;flex-shrink:0;padding:11px;border:1px solid #d2dccb;border-radius:8px;background:white;font-size:13px;font-weight:400;line-height:1.6;cursor:pointer}.result-filter-choice:has(input:checked){background:#edf2e6;border-color:#829b78}.result-filter-choice:has(input:focus-visible){outline:3px solid #b45651;outline-offset:2px}.result-filter-choice input{width:18px;min-height:18px;height:18px;padding:0;margin:1px 0 0;flex-shrink:0;accent-color:#294b42}.result-filter-choice span{min-width:0;overflow-wrap:anywhere}.result-filter-done{flex-shrink:0;padding:9px 12px;border-top:1px solid #e1e7db;background:#f5f8f0}.result-filter-done button{width:100%;min-height:38px;padding:8px 12px;font-size:12px}
+
+@media(min-width:1024px){header,main{max-width:1760px;padding-left:32px;padding-right:32px}.filters{grid-template-columns:minmax(180px,1.4fr) repeat(4,minmax(125px,1fr)) minmax(150px,1fr) auto}}
+.coverage-note{font-size:13px;background:#e9efe3;border:1px solid #cbd9bf;border-radius:8px;padding:12px 16px;color:#4c6a51;margin:22px 0 0}.topic-overview{margin:25px 0 35px}.topic-overview h2{margin:0 0 15px}.topic-overview .table-scroll{max-height:430px}.topic-overview th{position:sticky;top:0;z-index:1}.accuracy-bar{display:block;width:100px;height:5px;border-radius:4px;background:linear-gradient(to right,#65856b var(--accuracy),#e1e8dc var(--accuracy));margin-top:7px}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 </style></head><body>
 <header><a class="brand-lockup" href="https://asielhm.github.io/learning-lab/" aria-label="Learning Lab home"><img src="https://asielhm.github.io/learning-lab/assets/brand/learning-lab-logo.png" width="44" height="44" alt=""><span>learning<b>lab</b></span></a><span class="eyebrow">Teacher results</span></header>
 <main>
 <section id="login" class="panel login"><p class="eyebrow">Private teacher access</p><h1>Your students’ progress.</h1><p>Sign in with the teacher password created during Google setup.</p><form id="login-form"><label>Teacher password<input id="password" type="password" required autocomplete="current-password" maxlength="200"></label><button id="sign-in">Sign in</button></form><p class="muted">Your password is checked by Google’s server. Results are never published on the Learning Lab website. Sign-in expires after one hour.</p></section>
 <section id="dashboard" hidden><div class="result-heading"><div><p class="eyebrow">Private teacher access</p><h1>Student results</h1></div><div class="toolbar"><a id="spreadsheet" target="_blank" rel="noopener">Open private spreadsheet ↗</a><button class="secondary" id="sign-out">Sign out</button></div></div>
-<form id="filters" class="panel filters"><label>Student name or class<input id="search" maxlength="100" placeholder="Search records"></label><fieldset id="teacher" class="result-filter"></fieldset><fieldset id="course" class="result-filter"></fieldset><fieldset id="topic" class="result-filter"></fieldset><label>View<select id="view"><option value="sessions">Completed tests</option><option value="answers">Individual test answers</option></select></label><button id="apply">Show results</button></form>
-<div class="stats"><div class="stat"><b id="record-count">0</b><span id="record-label">Completed tests</span></div><div class="stat"><b id="student-count">0</b><span>Students in this selection</span></div><div class="stat"><b id="accuracy">—</b><span>Correct answers across this selection</span></div></div>
+<form id="filters" class="panel filters"><label>Student name or class<input id="search" maxlength="100" placeholder="Search records"></label><fieldset id="teacher" class="result-filter"></fieldset><fieldset id="classroom" class="result-filter"></fieldset><fieldset id="course" class="result-filter"></fieldset><fieldset id="topic" class="result-filter"></fieldset><label>View<select id="view"><option value="sessions">Completed tests</option><option value="answers">Individual test answers</option></select></label><button id="apply">Show results</button></form>
+<p id="bank-coverage" class="coverage-note"></p><div class="stats"><div class="stat"><b id="record-count">0</b><span id="record-label">Completed tests</span></div><div class="stat"><b id="student-count">0</b><span>Students in this selection</span></div><div class="stat"><b id="accuracy">—</b><span>Correct answers across this selection</span></div></div>
 <p class="muted">Only Test yourself results are shown. Individual test answers include tests still in progress. Completed tests appear when every answer has been saved. Practice and retry rounds are not recorded. Names are entered by students; these are practice records, not verified exam identities.</p>
-<div class="table-scroll"><table><caption id="table-caption">Completed tests, newest first</caption><thead><tr id="columns"></tr></thead><tbody id="rows"></tbody></table></div>
+<section class="topic-overview" aria-labelledby="topic-overview-title"><div class="result-heading"><div><p class="eyebrow">ACROSS YOUR SELECTION</p><h2 id="topic-overview-title">Results by topic</h2></div><p class="muted">Use course, topic, teacher or class filters to compare groups.</p></div><div class="table-scroll"><table><caption class="visually-hidden">Test performance by course and topic</caption><thead><tr><th>Course</th><th>Topic</th><th>Tests</th><th>Students</th><th>Answers</th><th>Correct</th><th>Accuracy</th></tr></thead><tbody id="topic-overview-rows"></tbody></table></div></section><div class="table-scroll"><table><caption id="table-caption">Completed tests, newest first</caption><thead><tr id="columns"></tr></thead><tbody id="rows"></tbody></table></div>
 <div class="pagination"><button class="secondary" id="previous">Previous</button><span id="page-label"></span><button class="secondary" id="next">Next</button></div></section>
 <p id="status" role="status" aria-live="polite"></p>
 </main><script>
@@ -20,10 +23,12 @@ const $ = id => document.getElementById(id);
 let token = '', offset = 0, total = 0, busy = false;
 const groups = {
  teacher:{label:'Teacher',noun:'teachers',options:[]},
- course:{label:'Course',noun:'courses',options:['Year 7 Maths','Year 9 Science'].map(name=>({value:name,label:name}))},
- topic:{label:'Topic',noun:'topics',options:[['algebra','Algebra'],['circulatory-system','Circulatory system'],['breathing-system','Breathing system'],['gas-laws','Gas laws']].map(([value,label])=>({value,label}))}
+ classroom:{label:'Class',noun:'classes',options:[]},
+ course:{label:'Course',noun:'courses',options:[]},
+ topic:{label:'Topic',noun:'topics',options:[]}
 };
-const selections = {teacher:null,course:null,topic:null};
+const selections = {teacher:null,classroom:null,course:null,topic:null};
+let topicCatalog=[];
 function status(message, error) {$('status').textContent=message;$('status').classList.toggle('error',!!error);}
 function setBusy(value) {
  busy=value;
@@ -31,7 +36,8 @@ function setBusy(value) {
  for(const key of Object.keys(groups)){$(key).disabled=value;const summary=$(key).querySelector('summary');if(summary){summary.tabIndex=value?-1:0;summary.setAttribute('aria-disabled',String(value));}}
 }
 function loggedOut() {
- token='';$('login').hidden=false;$('dashboard').hidden=true;$('rows').replaceChildren();$('password').value='';$('search').value='';groups.teacher.options=[];
+ token='';$('login').hidden=false;$('dashboard').hidden=true;$('rows').replaceChildren();$('password').value='';$('search').value='';topicCatalog=[];$('topic-overview-rows').replaceChildren();$('bank-coverage').textContent='';$('spreadsheet').removeAttribute('href');
+ for(const key of Object.keys(groups))groups[key].options=[];
  for(const key of Object.keys(groups)){selections[key]=null;renderFilter(key);}
  setBusy(false);
 }
@@ -82,16 +88,26 @@ function renderFilter(key) {
   const label=node('label',undefined,'result-filter-choice'),input=node('input');input.type='checkbox';input.name=key;input.value=option.value;input.checked=selections[key]===null||selections[key].includes(option.value);
   input.onchange=()=>{const checked=[...host.querySelectorAll('input:checked')].map(item=>item.value);selections[key]=checked.length===group.options.length&&group.options.length?null:checked;updateSummary(key);};label.append(input,node('span',option.label));choices.append(label);
  }
- if(!group.options.length)choices.append(node('p','No saved teacher names yet.','muted'));
+ if(!group.options.length)choices.append(node('p',key==='teacher'?'No saved teacher names yet.':key==='classroom'?'No saved classes yet.':'Sign in to load available '+group.noun+'.','muted'));
  const footer=node('div',undefined,'result-filter-done'),done=node('button','Done');done.type='button';done.setAttribute('aria-label','Done choosing '+group.noun);done.onclick=()=>{menu.open=false;summary.focus();};footer.append(done);
  panel.append(tools,choices,footer);menu.append(summary,panel);host.replaceChildren(legend,menu);
  menu.addEventListener('toggle',()=>{if(menu.open){for(const other of document.querySelectorAll('.result-filter-menu'))if(other!==menu)other.open=false;positionMenu(menu);}});
  host.disabled=busy;summary.tabIndex=busy?-1:0;summary.setAttribute('aria-disabled',String(busy));updateSummary(key);
 }
-function updateTeachers(names) {
- groups.teacher.options=names.map(name=>({value:name,label:name}));
- if(selections.teacher!==null)selections.teacher=selections.teacher.map(value=>names.find(name=>name.toLowerCase()===value.toLowerCase())).filter(Boolean);
- renderFilter('teacher');
+function updateChoices(key,options) {
+ groups[key].options=options;
+ if(selections[key]!==null)selections[key]=selections[key].map(value=>options.find(option=>option.value.toLowerCase()===value.toLowerCase())?.value).filter(Boolean);
+ renderFilter(key);
+}
+function topicTitle(value){return topicCatalog.find(topic=>topic.value===value)?.label||value;}
+function showTopicOverview(rows){
+ $('topic-overview-rows').replaceChildren(...rows.map(group=>{
+  const tr=document.createElement('tr');tr.append(...[group.course,topicTitle(group.topic),group.tests,group.students,group.answers,group.correct].map(value=>cell(value)));
+  const td=cell(group.accuracy===null?'—':group.accuracy+'%');
+  if(group.accuracy!==null){const bar=node('span',undefined,'accuracy-bar');bar.style.setProperty('--accuracy',Math.max(0,Math.min(100,group.accuracy))+'%');bar.setAttribute('aria-hidden','true');td.append(bar);}
+  tr.append(td);return tr;
+ }));
+ if(!rows.length){const tr=document.createElement('tr'),td=cell('No test results match these filters yet.');td.colSpan=7;tr.append(td);$('topic-overview-rows').append(tr);}
 }
 for(const key of Object.keys(groups))renderFilter(key);
 document.addEventListener('pointerdown',event=>{for(const menu of document.querySelectorAll('.result-filter-menu[open]'))if(!menu.contains(event.target))menu.open=false;});
@@ -102,12 +118,18 @@ function load() {
  const requestToken=token;
  google.script.run.withSuccessHandler(data=>{
   if(token!==requestToken)return;total=data.total;setBusy(false);status(total?'Results updated.':'No matching records yet.');
-  updateTeachers(data.teachers||[]);
+  updateChoices('teacher',(data.teachers||[]).map(name=>({value:name,label:name})));
+  updateChoices('classroom',(data.classes||[]).map(name=>({value:name,label:name})));
+  updateChoices('course',(data.courses||[]).map(name=>({value:name,label:name})));
+  topicCatalog=data.topics||[];
+  updateChoices('topic',topicCatalog.map(topic=>({value:topic.value,label:topic.label+' · '+topic.course})));
+  $('bank-coverage').textContent=`${data.bankCount||topicCatalog.length} revision question banks · ${data.questionCount||0} questions · ${data.courses?.length||0} courses. Only Test yourself is recorded.`;
+  showTopicOverview(data.topicSummary||[]);
   $('spreadsheet').href=data.spreadsheetUrl;$('record-count').textContent=total;$('student-count').textContent=data.students;$('accuracy').textContent=data.accuracy===null?'—':data.accuracy+'%';
   const answers=$('view').value==='answers';$('record-label').textContent=answers?'Submitted test answers':'Completed tests';$('table-caption').textContent=answers?'Individual test answers, newest first':'Completed tests, newest first';
   const hidden=answers?[0,2]:[0];const visible=data.headers.map((text,index)=>({text,index})).filter(item=>!hidden.includes(item.index));
-  $('columns').replaceChildren(...visible.map(item=>cell(item.text,'th')));$('rows').replaceChildren(...data.rows.map(row=>{const tr=document.createElement('tr');for(const item of visible){let value=row[item.index];if(typeof value==='boolean')value=value?'Yes':'No';if(['Completed at','Received at','Started at'].includes(item.text)&&Number.isFinite(Date.parse(value)))value=new Date(value).toLocaleString();const td=cell(value);if(item.text.includes('answer')||item.text==='Question')td.className='long';tr.append(td);}return tr;}));
+  $('columns').replaceChildren(...visible.map(item=>cell(item.text,'th')));$('rows').replaceChildren(...data.rows.map(row=>{const tr=document.createElement('tr');for(const item of visible){let value=row[item.index];if(item.text==='Topic')value=topicTitle(value);if(typeof value==='boolean')value=value?'Yes':'No';if(['Completed at','Received at','Started at'].includes(item.text)&&Number.isFinite(Date.parse(value)))value=new Date(value).toLocaleString();const td=cell(value);if(item.text.includes('answer')||item.text==='Question')td.className='long';tr.append(td);}return tr;}));
   $('previous').disabled=offset===0;$('next').disabled=offset+50>=total;$('page-label').textContent=total?`${offset+1}–${Math.min(offset+50,total)} of ${total}`:'0 records';
- }).withFailureHandler(error=>{if(token===requestToken)failure(error);}).getTeacherResults(token,{search:$('search').value.trim(),teacher:selections.teacher,course:selections.course,topic:selections.topic,view:$('view').value,offset});
+ }).withFailureHandler(error=>{if(token===requestToken)failure(error);}).getTeacherResults(token,{search:$('search').value.trim(),teacher:selections.teacher,classroom:selections.classroom,course:selections.course,topic:selections.topic,view:$('view').value,offset});
 }
 </script></body></html>

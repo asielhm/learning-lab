@@ -115,14 +115,15 @@ export const recorder = {
     const button = scope.querySelector('[data-record-retry]');
     if (button) {button.hidden = !config?.url || !queue.length || sending; button.onclick = flush;}
   },
-  record(session, item, topic, course) {
+  record(session, item, topic, course, bankSignature) {
     if (!this.enabled || session.mode !== 'test' || session.retry || !session.student.name || !session.student.classroom || !session.student.teacherName) return;
     queue.push({
       version:2, eventId:`${session.id}-${session.index + 1}`, sessionId:session.id,
       studentName:session.student.name, classroom:session.student.classroom, teacherName:session.student.teacherName,
       course, topic, mode:session.mode, retry:session.retry,
       startedAt:session.startedAt, questionNumber:session.index + 1, totalQuestions:session.items.length,
-      questionId:item.question.id, selectedAnswer:item.options[item.selection].text
+      questionId:item.question.id, selectedAnswer:item.options[item.selection].text,
+      ...(bankSignature?{bankSignature}: {})
     });
     durable = store(QUEUE_KEY, queue);
     notify(); flush();
