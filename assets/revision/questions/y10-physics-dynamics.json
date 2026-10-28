@@ -1,0 +1,854 @@
+{
+  "topicId": "y10-physics-dynamics",
+  "title": "Forces and dynamics",
+  "categories": [
+    "Newton’s laws",
+    "Resultant force and acceleration",
+    "Weight and normal force",
+    "Friction",
+    "Inclined planes",
+    "Connected bodies"
+  ],
+  "questions": [
+    {
+      "id": "y10-physics-dynamics-001",
+      "category": "Newton’s laws",
+      "difficulty": "Foundation",
+      "prompt": "With zero resultant force, an object’s velocity is…",
+      "options": [
+        "Constant, possibly zero",
+        "Always increasing",
+        "Always zero",
+        "Necessarily vertical"
+      ],
+      "answer": 0,
+      "explanation": "Newton’s first law includes rest and uniform straight-line motion."
+    },
+    {
+      "id": "y10-physics-dynamics-002",
+      "category": "Newton’s laws",
+      "difficulty": "Foundation",
+      "prompt": "Newton’s second law for constant mass is…",
+      "options": [
+        "F = m/a",
+        "F_resultant = ma",
+        "a = mF",
+        "m = Fa"
+      ],
+      "answer": 1,
+      "explanation": "Use the resultant force on the chosen body."
+    },
+    {
+      "id": "y10-physics-dynamics-003",
+      "category": "Newton’s laws",
+      "difficulty": "Foundation",
+      "prompt": "Newton’s third-law pair acts on…",
+      "options": [
+        "The same body only",
+        "No bodies",
+        "Two different bodies",
+        "One body at two different times only"
+      ],
+      "answer": 2,
+      "explanation": "Equal and opposite interaction forces act on the two interacting bodies."
+    },
+    {
+      "id": "y10-physics-dynamics-004",
+      "category": "Newton’s laws",
+      "difficulty": "Application",
+      "prompt": "Why do third-law forces not cancel in one object’s free-body diagram?",
+      "options": [
+        "Their magnitudes always differ",
+        "Only one force exists",
+        "Opposite forces can never cancel",
+        "The partner force acts on a different body"
+      ],
+      "answer": 3,
+      "explanation": "Include only forces acting on the selected object."
+    },
+    {
+      "id": "y10-physics-dynamics-005",
+      "category": "Newton’s laws",
+      "difficulty": "Challenge",
+      "prompt": "A trolley moving right can have zero resultant force when…",
+      "options": [
+        "It moves right at constant velocity",
+        "It must be speeding up",
+        "It must have no mass",
+        "It must be slowing down"
+      ],
+      "answer": 0,
+      "explanation": "A nonzero velocity needs no resultant force to maintain it in the ideal model."
+    },
+    {
+      "id": "y10-physics-dynamics-006",
+      "category": "Newton’s laws",
+      "difficulty": "Application",
+      "prompt": "A constant resultant force of 6 N acts on a 2 kg trolley. Find acceleration. Give the closest value.",
+      "options": [
+        "6 m/s²",
+        "3 m/s²",
+        "1.5 m/s²",
+        "30 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "a = F_resultant/m = 6/2. Result: 3 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-007",
+      "category": "Newton’s laws",
+      "difficulty": "Application",
+      "prompt": "A constant resultant force of 10 N acts on a 5 kg trolley. Find acceleration. Give the closest value.",
+      "options": [
+        "4 m/s²",
+        "1 m/s²",
+        "2 m/s²",
+        "20 m/s²"
+      ],
+      "answer": 2,
+      "explanation": "a = F_resultant/m = 10/5. Result: 2 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-008",
+      "category": "Newton’s laws",
+      "difficulty": "Application",
+      "prompt": "A constant resultant force of 3 N acts on a 1.5 kg trolley. Find acceleration. Give the closest value.",
+      "options": [
+        "4 m/s²",
+        "1 m/s²",
+        "20 m/s²",
+        "2 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "a = F_resultant/m = 3/1.5. Result: 2 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-009",
+      "category": "Newton’s laws",
+      "difficulty": "Application",
+      "prompt": "A constant resultant force of 12 N acts on a 4 kg trolley. Find acceleration. Give the closest value.",
+      "options": [
+        "3 m/s²",
+        "6 m/s²",
+        "1.5 m/s²",
+        "30 m/s²"
+      ],
+      "answer": 0,
+      "explanation": "a = F_resultant/m = 12/4. Result: 3 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-010",
+      "category": "Newton’s laws",
+      "difficulty": "Application",
+      "prompt": "A constant resultant force of 8 N acts on a 2.5 kg trolley. Find acceleration. Give the closest value.",
+      "options": [
+        "6.4 m/s²",
+        "3.2 m/s²",
+        "1.6 m/s²",
+        "32 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "a = F_resultant/m = 8/2.5. Result: 3.2 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-011",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Foundation",
+      "prompt": "Resultant force is the…",
+      "options": [
+        "Sum of all force magnitudes without direction",
+        "Object’s weight in every case",
+        "Vector sum of forces on one body",
+        "Largest force only"
+      ],
+      "answer": 2,
+      "explanation": "Add forces with their directions."
+    },
+    {
+      "id": "y10-physics-dynamics-012",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Foundation",
+      "prompt": "Two opposite horizontal forces of equal magnitude give…",
+      "options": [
+        "Twice either force in one direction",
+        "Infinite acceleration",
+        "Negative mass",
+        "Zero resultant horizontal force"
+      ],
+      "answer": 3,
+      "explanation": "Equal opposite forces on the same body balance."
+    },
+    {
+      "id": "y10-physics-dynamics-013",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Application",
+      "prompt": "With mass fixed, doubling nonzero resultant force doubles…",
+      "options": [
+        "Acceleration",
+        "Mass",
+        "Initial position",
+        "Weight automatically"
+      ],
+      "answer": 0,
+      "explanation": "a = F/m, so acceleration is proportional to resultant force."
+    },
+    {
+      "id": "y10-physics-dynamics-014",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Application",
+      "prompt": "A body’s acceleration points in the direction of…",
+      "options": [
+        "Its velocity in every case",
+        "Its resultant force",
+        "Its displacement in every case",
+        "Its largest distance"
+      ],
+      "answer": 1,
+      "explanation": "Newton’s second law is a vector relation."
+    },
+    {
+      "id": "y10-physics-dynamics-015",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Challenge",
+      "prompt": "Can a body slow down while accelerating right?",
+      "options": [
+        "No, rightward acceleration always raises speed",
+        "Only if mass is zero",
+        "Yes, if it is moving left",
+        "Only if weight is zero"
+      ],
+      "answer": 2,
+      "explanation": "Speed decreases when acceleration opposes velocity."
+    },
+    {
+      "id": "y10-physics-dynamics-016",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Application",
+      "prompt": "Right is positive. A 2 kg body has a 10 N rightward force and a 4 N leftward force. Find acceleration. Give the closest value.",
+      "options": [
+        "6 m/s²",
+        "1.5 m/s²",
+        "30 m/s²",
+        "3 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "F_net = 10 − 4; a = F_net/2. Result: 3 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-017",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Application",
+      "prompt": "Right is positive. A 3 kg body has a 12 N rightward force and a 3 N leftward force. Find acceleration. Give the closest value.",
+      "options": [
+        "3 m/s²",
+        "6 m/s²",
+        "1.5 m/s²",
+        "30 m/s²"
+      ],
+      "answer": 0,
+      "explanation": "F_net = 12 − 3; a = F_net/3. Result: 3 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-018",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Application",
+      "prompt": "Right is positive. A 1 kg body has a 8 N rightward force and a 6 N leftward force. Find acceleration. Give the closest value.",
+      "options": [
+        "4 m/s²",
+        "2 m/s²",
+        "1 m/s²",
+        "20 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "F_net = 8 − 6; a = F_net/1. Result: 2 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-019",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Application",
+      "prompt": "Right is positive. A 5 kg body has a 20 N rightward force and a 5 N leftward force. Find acceleration. Give the closest value.",
+      "options": [
+        "6 m/s²",
+        "1.5 m/s²",
+        "3 m/s²",
+        "30 m/s²"
+      ],
+      "answer": 2,
+      "explanation": "F_net = 20 − 5; a = F_net/5. Result: 3 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-020",
+      "category": "Resultant force and acceleration",
+      "difficulty": "Application",
+      "prompt": "Right is positive. A 2 kg body has a 5 N rightward force and a 9 N leftward force. Find acceleration. Give the closest value.",
+      "options": [
+        "-4 m/s²",
+        "-1 m/s²",
+        "-20 m/s²",
+        "-2 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "F_net = 5 − 9; a = F_net/2. Result: -2 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-021",
+      "category": "Weight and normal force",
+      "difficulty": "Foundation",
+      "prompt": "Weight is measured in…",
+      "options": [
+        "Newtons",
+        "Kilograms",
+        "Joules",
+        "Metres"
+      ],
+      "answer": 0,
+      "explanation": "Weight is gravitational force W = mg; mass is in kilograms."
+    },
+    {
+      "id": "y10-physics-dynamics-022",
+      "category": "Weight and normal force",
+      "difficulty": "Foundation",
+      "prompt": "The normal contact force is directed…",
+      "options": [
+        "Always vertically upwards on any slope",
+        "Perpendicular to the surface",
+        "Along the surface",
+        "Always downwards"
+      ],
+      "answer": 1,
+      "explanation": "Normal means perpendicular to the contact surface."
+    },
+    {
+      "id": "y10-physics-dynamics-023",
+      "category": "Weight and normal force",
+      "difficulty": "Application",
+      "prompt": "On a horizontal surface with no vertical acceleration or other vertical forces, N equals…",
+      "options": [
+        "Zero in every case",
+        "ma horizontally",
+        "mg",
+        "μmg in every case"
+      ],
+      "answer": 2,
+      "explanation": "Vertical force balance gives N − mg = 0."
+    },
+    {
+      "id": "y10-physics-dynamics-024",
+      "category": "Weight and normal force",
+      "difficulty": "Application",
+      "prompt": "On an incline with no other perpendicular forces, N is…",
+      "options": [
+        "Always mg",
+        "mg sinθ",
+        "Zero in every case",
+        "mg cosθ"
+      ],
+      "answer": 3,
+      "explanation": "Resolve weight perpendicular to the plane."
+    },
+    {
+      "id": "y10-physics-dynamics-025",
+      "category": "Weight and normal force",
+      "difficulty": "Challenge",
+      "prompt": "The Moon has a smaller g than Earth. The same object has…",
+      "options": [
+        "The same mass but less weight",
+        "Less mass and equal weight",
+        "Equal weight and equal g",
+        "No mass"
+      ],
+      "answer": 0,
+      "explanation": "Mass is intrinsic in this model; weight depends on local g."
+    },
+    {
+      "id": "y10-physics-dynamics-026",
+      "category": "Weight and normal force",
+      "difficulty": "Foundation",
+      "prompt": "What is the weight of a 1 kg mass near Earth? Use g = 9.81 m/s². Give the closest value.",
+      "options": [
+        "19.6 N",
+        "9.81 N",
+        "4.91 N",
+        "98.1 N"
+      ],
+      "answer": 1,
+      "explanation": "W = mg = 1 × 9.81. Result: 9.81 N."
+    },
+    {
+      "id": "y10-physics-dynamics-027",
+      "category": "Weight and normal force",
+      "difficulty": "Foundation",
+      "prompt": "What is the weight of a 2 kg mass near Earth? Use g = 9.81 m/s². Give the closest value.",
+      "options": [
+        "39.2 N",
+        "9.81 N",
+        "19.6 N",
+        "196 N"
+      ],
+      "answer": 2,
+      "explanation": "W = mg = 2 × 9.81. Result: 19.6 N."
+    },
+    {
+      "id": "y10-physics-dynamics-028",
+      "category": "Weight and normal force",
+      "difficulty": "Foundation",
+      "prompt": "What is the weight of a 3.5 kg mass near Earth? Use g = 9.81 m/s². Give the closest value.",
+      "options": [
+        "68.7 N",
+        "17.2 N",
+        "343 N",
+        "34.3 N"
+      ],
+      "answer": 3,
+      "explanation": "W = mg = 3.5 × 9.81. Result: 34.3 N."
+    },
+    {
+      "id": "y10-physics-dynamics-029",
+      "category": "Weight and normal force",
+      "difficulty": "Foundation",
+      "prompt": "What is the weight of a 5 kg mass near Earth? Use g = 9.81 m/s². Give the closest value.",
+      "options": [
+        "49.1 N",
+        "98.1 N",
+        "24.5 N",
+        "491 N"
+      ],
+      "answer": 0,
+      "explanation": "W = mg = 5 × 9.81. Result: 49.1 N."
+    },
+    {
+      "id": "y10-physics-dynamics-030",
+      "category": "Weight and normal force",
+      "difficulty": "Foundation",
+      "prompt": "What is the weight of a 8 kg mass near Earth? Use g = 9.81 m/s². Give the closest value.",
+      "options": [
+        "157 N",
+        "78.5 N",
+        "39.2 N",
+        "785 N"
+      ],
+      "answer": 1,
+      "explanation": "W = mg = 8 × 9.81. Result: 78.5 N."
+    },
+    {
+      "id": "y10-physics-dynamics-031",
+      "category": "Friction",
+      "difficulty": "Foundation",
+      "prompt": "Static friction can act on a block that…",
+      "options": [
+        "Must already be sliding",
+        "Has zero mass only",
+        "Is at rest relative to the surface",
+        "Has no contact surface"
+      ],
+      "answer": 2,
+      "explanation": "Static friction prevents relative sliding when within its limit."
+    },
+    {
+      "id": "y10-physics-dynamics-032",
+      "category": "Friction",
+      "difficulty": "Foundation",
+      "prompt": "The maximum static-friction magnitude is modelled by…",
+      "options": [
+        "Always zero",
+        "mg/N",
+        "N/μs in every case",
+        "μsN"
+      ],
+      "answer": 3,
+      "explanation": "Actual static friction can be smaller than its limiting value."
+    },
+    {
+      "id": "y10-physics-dynamics-033",
+      "category": "Friction",
+      "difficulty": "Application",
+      "prompt": "A 4 N pull is below the static-friction limit. The block remains still. Friction magnitude is…",
+      "options": [
+        "4 N",
+        "Always the maximum limit",
+        "0 N",
+        "8 N"
+      ],
+      "answer": 0,
+      "explanation": "Static friction balances the applied force up to its limit."
+    },
+    {
+      "id": "y10-physics-dynamics-034",
+      "category": "Friction",
+      "difficulty": "Application",
+      "prompt": "Sliding friction generally acts…",
+      "options": [
+        "Always to the right",
+        "Opposite relative sliding",
+        "Always with the pull",
+        "Vertically upwards only"
+      ],
+      "answer": 1,
+      "explanation": "Its direction resists relative sliding at the contact."
+    },
+    {
+      "id": "y10-physics-dynamics-035",
+      "category": "Friction",
+      "difficulty": "Challenge",
+      "prompt": "Why does the simulator state that one μ is used for static and kinetic friction?",
+      "options": [
+        "Static friction never exists",
+        "Friction is always independent of normal force",
+        "Real surfaces may have different μs and μk",
+        "All materials have μ = 1"
+      ],
+      "answer": 2,
+      "explanation": "Using one coefficient is a simplifying assumption, not a universal material property."
+    },
+    {
+      "id": "y10-physics-dynamics-036",
+      "category": "Friction",
+      "difficulty": "Challenge",
+      "prompt": "A 2 kg block starts at rest on a horizontal track. Pull = 4 N, μs = μk = 0.3, g = 9.81. Find acceleration after applying the pull. Give the closest value.",
+      "options": [
+        "1 m/s²",
+        "-1 m/s²",
+        "2 m/s²",
+        "0 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "First compare the pull with μN. Static friction balances it below the limit; otherwise use F_net = pull − μmg, then a = F_net/m. Result: 0 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-037",
+      "category": "Friction",
+      "difficulty": "Challenge",
+      "prompt": "A 2 kg block starts at rest on a horizontal track. Pull = 10 N, μs = μk = 0.2, g = 9.81. Find acceleration after applying the pull. Give the closest value.",
+      "options": [
+        "3.04 m/s²",
+        "6.08 m/s²",
+        "1.52 m/s²",
+        "30.4 m/s²"
+      ],
+      "answer": 0,
+      "explanation": "First compare the pull with μN. Static friction balances it below the limit; otherwise use F_net = pull − μmg, then a = F_net/m. Result: 3.04 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-038",
+      "category": "Friction",
+      "difficulty": "Challenge",
+      "prompt": "A 3 kg block starts at rest on a horizontal track. Pull = 12 N, μs = μk = 0.1, g = 9.81. Find acceleration after applying the pull. Give the closest value.",
+      "options": [
+        "6.04 m/s²",
+        "3.02 m/s²",
+        "1.51 m/s²",
+        "30.2 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "First compare the pull with μN. Static friction balances it below the limit; otherwise use F_net = pull − μmg, then a = F_net/m. Result: 3.02 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-039",
+      "category": "Friction",
+      "difficulty": "Challenge",
+      "prompt": "A 1 kg block starts at rest on a horizontal track. Pull = 2 N, μs = μk = 0.4, g = 9.81. Find acceleration after applying the pull. Give the closest value.",
+      "options": [
+        "1 m/s²",
+        "-1 m/s²",
+        "0 m/s²",
+        "2 m/s²"
+      ],
+      "answer": 2,
+      "explanation": "First compare the pull with μN. Static friction balances it below the limit; otherwise use F_net = pull − μmg, then a = F_net/m. Result: 0 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-040",
+      "category": "Friction",
+      "difficulty": "Challenge",
+      "prompt": "A 4 kg block starts at rest on a horizontal track. Pull = 15 N, μs = μk = 0.25, g = 9.81. Find acceleration after applying the pull. Give the closest value.",
+      "options": [
+        "2.59 m/s²",
+        "0.649 m/s²",
+        "13 m/s²",
+        "1.3 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "First compare the pull with μN. Static friction balances it below the limit; otherwise use F_net = pull − μmg, then a = F_net/m. Result: 1.3 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-041",
+      "category": "Inclined planes",
+      "difficulty": "Foundation",
+      "prompt": "The component of weight down an incline at angle θ is…",
+      "options": [
+        "mg sinθ",
+        "mg cosθ",
+        "Always mg",
+        "Always zero"
+      ],
+      "answer": 0,
+      "explanation": "Resolve the gravitational force parallel to the slope."
+    },
+    {
+      "id": "y10-physics-dynamics-042",
+      "category": "Inclined planes",
+      "difficulty": "Foundation",
+      "prompt": "A block can stay at rest on a rough incline when…",
+      "options": [
+        "Gravity disappears",
+        "Static friction can balance mg sinθ",
+        "Normal force acts downhill",
+        "Mass is zero"
+      ],
+      "answer": 1,
+      "explanation": "Compare mg sinθ with μs mg cosθ."
+    },
+    {
+      "id": "y10-physics-dynamics-043",
+      "category": "Inclined planes",
+      "difficulty": "Application",
+      "prompt": "Increasing the angle of a frictionless incline makes down-slope acceleration…",
+      "options": [
+        "Smaller in every case",
+        "Independent of angle",
+        "Larger for angles between 0° and 90°",
+        "Zero in every case"
+      ],
+      "answer": 2,
+      "explanation": "a = g sinθ rises over that angle interval."
+    },
+    {
+      "id": "y10-physics-dynamics-044",
+      "category": "Inclined planes",
+      "difficulty": "Application",
+      "prompt": "In the ideal sliding model with fixed angle and μ, changing mass changes acceleration by…",
+      "options": [
+        "Doubling it for doubled mass",
+        "Halving it for doubled mass",
+        "Making it always zero",
+        "No change"
+      ],
+      "answer": 3,
+      "explanation": "Mass cancels from g(sinθ − μ cosθ)."
+    },
+    {
+      "id": "y10-physics-dynamics-045",
+      "category": "Inclined planes",
+      "difficulty": "Challenge",
+      "prompt": "Why must the static limit be checked before applying a sliding-friction equation?",
+      "options": [
+        "The block may remain at rest with adjusting friction",
+        "Static friction always equals μN exactly",
+        "The normal force is always zero",
+        "Gravity changes sign when still"
+      ],
+      "answer": 0,
+      "explanation": "A negative predicted downhill acceleration from the naive sliding formula need not imply uphill motion from rest."
+    },
+    {
+      "id": "y10-physics-dynamics-046",
+      "category": "Inclined planes",
+      "difficulty": "Application",
+      "prompt": "A block slides down a frictionless incline at 10°. Use g = 9.81 m/s². Find down-slope acceleration. Give the closest value.",
+      "options": [
+        "3.41 m/s²",
+        "1.7 m/s²",
+        "0.852 m/s²",
+        "17 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "With no friction, a = g sinθ; use degree mode. Result: 1.7 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-047",
+      "category": "Inclined planes",
+      "difficulty": "Application",
+      "prompt": "A block slides down a frictionless incline at 20°. Use g = 9.81 m/s². Find down-slope acceleration. Give the closest value.",
+      "options": [
+        "6.71 m/s²",
+        "1.68 m/s²",
+        "3.36 m/s²",
+        "33.6 m/s²"
+      ],
+      "answer": 2,
+      "explanation": "With no friction, a = g sinθ; use degree mode. Result: 3.36 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-048",
+      "category": "Inclined planes",
+      "difficulty": "Application",
+      "prompt": "A block slides down a frictionless incline at 30°. Use g = 9.81 m/s². Find down-slope acceleration. Give the closest value.",
+      "options": [
+        "9.81 m/s²",
+        "2.45 m/s²",
+        "49 m/s²",
+        "4.9 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "With no friction, a = g sinθ; use degree mode. Result: 4.9 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-049",
+      "category": "Inclined planes",
+      "difficulty": "Application",
+      "prompt": "A block slides down a frictionless incline at 40°. Use g = 9.81 m/s². Find down-slope acceleration. Give the closest value.",
+      "options": [
+        "6.31 m/s²",
+        "12.6 m/s²",
+        "3.15 m/s²",
+        "63.1 m/s²"
+      ],
+      "answer": 0,
+      "explanation": "With no friction, a = g sinθ; use degree mode. Result: 6.31 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-050",
+      "category": "Inclined planes",
+      "difficulty": "Application",
+      "prompt": "A block slides down a frictionless incline at 50°. Use g = 9.81 m/s². Find down-slope acceleration. Give the closest value.",
+      "options": [
+        "15 m/s²",
+        "7.51 m/s²",
+        "3.76 m/s²",
+        "75.1 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "With no friction, a = g sinθ; use degree mode. Result: 7.51 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-051",
+      "category": "Connected bodies",
+      "difficulty": "Foundation",
+      "prompt": "For a light inextensible string over an ideal pulley, connected bodies have…",
+      "options": [
+        "Equal masses in every case",
+        "Equal weights in every case",
+        "Equal acceleration magnitudes along the string",
+        "Zero acceleration always"
+      ],
+      "answer": 2,
+      "explanation": "The string constraint ties their motions together while taut."
+    },
+    {
+      "id": "y10-physics-dynamics-052",
+      "category": "Connected bodies",
+      "difficulty": "Foundation",
+      "prompt": "An ideal massless, frictionless pulley gives string tension that is…",
+      "options": [
+        "Always zero",
+        "Always equal to both weights",
+        "Different by definition",
+        "Equal on both sides of a light string"
+      ],
+      "answer": 3,
+      "explanation": "The ideal string and pulley transmit a common tension."
+    },
+    {
+      "id": "y10-physics-dynamics-053",
+      "category": "Connected bodies",
+      "difficulty": "Application",
+      "prompt": "A hanging mass accelerating down has tension…",
+      "options": [
+        "Less than its weight",
+        "Greater than its weight",
+        "Equal to its weight in every case",
+        "Negative in every case"
+      ],
+      "answer": 0,
+      "explanation": "mg − T = ma; for a > 0, T < mg."
+    },
+    {
+      "id": "y10-physics-dynamics-054",
+      "category": "Connected bodies",
+      "difficulty": "Application",
+      "prompt": "When analysing the whole trolley-plus-hanging-mass system, tensions…",
+      "options": [
+        "Must both be added as external driving forces",
+        "Cancel as internal forces",
+        "Become zero on each separate body",
+        "Replace all gravity"
+      ],
+      "answer": 1,
+      "explanation": "Internal interactions cancel from the combined-system force balance, but remain in individual diagrams."
+    },
+    {
+      "id": "y10-physics-dynamics-055",
+      "category": "Connected bodies",
+      "difficulty": "Challenge",
+      "prompt": "If trolley static friction can balance the hanging weight, an initially resting system…",
+      "options": [
+        "Must accelerate upwards forever",
+        "Must have negative tension",
+        "Can remain at rest",
+        "Must break the string"
+      ],
+      "answer": 2,
+      "explanation": "Compare the hanging driving force with the available static-friction limit."
+    },
+    {
+      "id": "y10-physics-dynamics-056",
+      "category": "Connected bodies",
+      "difficulty": "Challenge",
+      "prompt": "A 3 kg trolley on a frictionless table is connected to a 1 kg hanging mass by a light string and ideal pulley. Use g = 9.81. Find their acceleration magnitude. Give the closest value.",
+      "options": [
+        "4.91 m/s²",
+        "1.23 m/s²",
+        "24.5 m/s²",
+        "2.45 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "For the combined system, external driving force is m₂g and total mass is m₁ + m₂. Thus a = m₂g/(m₁ + m₂). Result: 2.45 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-057",
+      "category": "Connected bodies",
+      "difficulty": "Challenge",
+      "prompt": "A 2 kg trolley on a frictionless table is connected to a 1 kg hanging mass by a light string and ideal pulley. Use g = 9.81. Find their acceleration magnitude. Give the closest value.",
+      "options": [
+        "3.27 m/s²",
+        "6.54 m/s²",
+        "1.64 m/s²",
+        "32.7 m/s²"
+      ],
+      "answer": 0,
+      "explanation": "For the combined system, external driving force is m₂g and total mass is m₁ + m₂. Thus a = m₂g/(m₁ + m₂). Result: 3.27 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-058",
+      "category": "Connected bodies",
+      "difficulty": "Challenge",
+      "prompt": "A 4 kg trolley on a frictionless table is connected to a 2 kg hanging mass by a light string and ideal pulley. Use g = 9.81. Find their acceleration magnitude. Give the closest value.",
+      "options": [
+        "6.54 m/s²",
+        "3.27 m/s²",
+        "1.64 m/s²",
+        "32.7 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "For the combined system, external driving force is m₂g and total mass is m₁ + m₂. Thus a = m₂g/(m₁ + m₂). Result: 3.27 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-059",
+      "category": "Connected bodies",
+      "difficulty": "Challenge",
+      "prompt": "A 5 kg trolley on a frictionless table is connected to a 0.5 kg hanging mass by a light string and ideal pulley. Use g = 9.81. Find their acceleration magnitude. Give the closest value.",
+      "options": [
+        "1.78 m/s²",
+        "0.446 m/s²",
+        "0.892 m/s²",
+        "8.92 m/s²"
+      ],
+      "answer": 2,
+      "explanation": "For the combined system, external driving force is m₂g and total mass is m₁ + m₂. Thus a = m₂g/(m₁ + m₂). Result: 0.892 m/s²."
+    },
+    {
+      "id": "y10-physics-dynamics-060",
+      "category": "Connected bodies",
+      "difficulty": "Challenge",
+      "prompt": "A 1 kg trolley on a frictionless table is connected to a 2 kg hanging mass by a light string and ideal pulley. Use g = 9.81. Find their acceleration magnitude. Give the closest value.",
+      "options": [
+        "13.1 m/s²",
+        "3.27 m/s²",
+        "65.4 m/s²",
+        "6.54 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "For the combined system, external driving force is m₂g and total mass is m₁ + m₂. Thus a = m₂g/(m₁ + m₂). Result: 6.54 m/s²."
+    }
+  ]
+}

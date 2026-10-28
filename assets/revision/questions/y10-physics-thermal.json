@@ -1,0 +1,854 @@
+{
+  "topicId": "y10-physics-thermal",
+  "title": "Thermal physics",
+  "categories": [
+    "Temperature and energy",
+    "Conduction convection radiation",
+    "Specific heat capacity",
+    "Latent heat and phases",
+    "Thermal equilibrium",
+    "Energy problems"
+  ],
+  "questions": [
+    {
+      "id": "y10-physics-thermal-001",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "Temperature and internal energy are…",
+      "options": [
+        "Different quantities",
+        "Identical in every case",
+        "Both measured only in watts",
+        "Both forces"
+      ],
+      "answer": 0,
+      "explanation": "Temperature describes thermal state; internal energy includes microscopic kinetic and potential energy."
+    },
+    {
+      "id": "y10-physics-thermal-002",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "Heat is energy transferred because of…",
+      "options": [
+        "A mass difference alone",
+        "A temperature difference",
+        "A colour difference alone",
+        "A change of name"
+      ],
+      "answer": 1,
+      "explanation": "Heating transfers energy from a hotter region to a cooler one."
+    },
+    {
+      "id": "y10-physics-thermal-003",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "The SI unit of energy is the…",
+      "options": [
+        "Kelvin",
+        "Watt",
+        "Joule",
+        "Newton"
+      ],
+      "answer": 2,
+      "explanation": "Energy is in joules; watt is power, joules per second."
+    },
+    {
+      "id": "y10-physics-thermal-004",
+      "category": "Temperature and energy",
+      "difficulty": "Application",
+      "prompt": "A warm bath may have more internal energy than a hotter small cup because…",
+      "options": [
+        "Higher temperature always means less internal energy",
+        "Water has no internal energy",
+        "Temperature measures total energy directly",
+        "Mass and material also matter"
+      ],
+      "answer": 3,
+      "explanation": "Temperature alone does not determine total internal energy."
+    },
+    {
+      "id": "y10-physics-thermal-005",
+      "category": "Temperature and energy",
+      "difficulty": "Challenge",
+      "prompt": "During melting at fixed pressure, energy supplied can increase internal energy without increasing…",
+      "options": [
+        "Temperature",
+        "The liquid fraction",
+        "The potential part of internal energy",
+        "The transferred energy"
+      ],
+      "answer": 0,
+      "explanation": "Energy changes particle arrangement during the phase change."
+    },
+    {
+      "id": "y10-physics-thermal-006",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "Using T/K = temperature/°C + 273, convert 0°C to kelvin. Give the closest value.",
+      "options": [
+        "546 K",
+        "273 K",
+        "136 K",
+        "2.73e+03 K"
+      ],
+      "answer": 1,
+      "explanation": "T = 0 + 273. This question uses the school approximation 273. Result: 273 K."
+    },
+    {
+      "id": "y10-physics-thermal-007",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "Using T/K = temperature/°C + 273, convert 20°C to kelvin. Give the closest value.",
+      "options": [
+        "586 K",
+        "146 K",
+        "293 K",
+        "2.93e+03 K"
+      ],
+      "answer": 2,
+      "explanation": "T = 20 + 273. This question uses the school approximation 273. Result: 293 K."
+    },
+    {
+      "id": "y10-physics-thermal-008",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "Using T/K = temperature/°C + 273, convert 37°C to kelvin. Give the closest value.",
+      "options": [
+        "620 K",
+        "155 K",
+        "3.1e+03 K",
+        "310 K"
+      ],
+      "answer": 3,
+      "explanation": "T = 37 + 273. This question uses the school approximation 273. Result: 310 K."
+    },
+    {
+      "id": "y10-physics-thermal-009",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "Using T/K = temperature/°C + 273, convert 80°C to kelvin. Give the closest value.",
+      "options": [
+        "353 K",
+        "706 K",
+        "176 K",
+        "3.53e+03 K"
+      ],
+      "answer": 0,
+      "explanation": "T = 80 + 273. This question uses the school approximation 273. Result: 353 K."
+    },
+    {
+      "id": "y10-physics-thermal-010",
+      "category": "Temperature and energy",
+      "difficulty": "Foundation",
+      "prompt": "Using T/K = temperature/°C + 273, convert 100°C to kelvin. Give the closest value.",
+      "options": [
+        "746 K",
+        "373 K",
+        "186 K",
+        "3.73e+03 K"
+      ],
+      "answer": 1,
+      "explanation": "T = 100 + 273. This question uses the school approximation 273. Result: 373 K."
+    },
+    {
+      "id": "y10-physics-thermal-011",
+      "category": "Conduction convection radiation",
+      "difficulty": "Foundation",
+      "prompt": "Energy transfer through a stationary metal bar is mainly…",
+      "options": [
+        "Convection of the whole bar",
+        "Sound Doppler shift",
+        "Conduction",
+        "Refraction"
+      ],
+      "answer": 2,
+      "explanation": "Conduction involves microscopic interactions, including mobile electrons in metals."
+    },
+    {
+      "id": "y10-physics-thermal-012",
+      "category": "Conduction convection radiation",
+      "difficulty": "Foundation",
+      "prompt": "Warm water rising and cool water sinking is…",
+      "options": [
+        "Radiation only",
+        "Refraction",
+        "Electrolysis",
+        "Convection"
+      ],
+      "answer": 3,
+      "explanation": "Convection is energy transfer by bulk fluid motion."
+    },
+    {
+      "id": "y10-physics-thermal-013",
+      "category": "Conduction convection radiation",
+      "difficulty": "Foundation",
+      "prompt": "Which transfer mechanism needs no medium?",
+      "options": [
+        "Radiation",
+        "Convection",
+        "Conduction",
+        "Diffusion of liquid particles"
+      ],
+      "answer": 0,
+      "explanation": "Electromagnetic radiation can cross a vacuum."
+    },
+    {
+      "id": "y10-physics-thermal-014",
+      "category": "Conduction convection radiation",
+      "difficulty": "Application",
+      "prompt": "Under the same radiation conditions, a matt black surface is generally a better absorber than…",
+      "options": [
+        "Every surface regardless of wavelength",
+        "A shiny silver surface",
+        "Empty space with zero area",
+        "A surface defined to be identical"
+      ],
+      "answer": 1,
+      "explanation": "Surface properties affect absorption and emission; comparisons assume the same incident radiation."
+    },
+    {
+      "id": "y10-physics-thermal-015",
+      "category": "Conduction convection radiation",
+      "difficulty": "Challenge",
+      "prompt": "Why is convection not a heat-transfer mechanism within a solid block?",
+      "options": [
+        "Solids have no particles",
+        "Solids cannot transfer energy",
+        "Its particles cannot undergo bulk fluid circulation",
+        "Gravity is always zero in solids"
+      ],
+      "answer": 2,
+      "explanation": "Convection needs fluid movement; solids transfer through conduction and radiation at surfaces."
+    },
+    {
+      "id": "y10-physics-thermal-016",
+      "category": "Conduction convection radiation",
+      "difficulty": "Application",
+      "prompt": "A thermal radiation detector absorbs 600 J in 30 s. What is the average absorbed power? Give the closest value.",
+      "options": [
+        "40 W",
+        "10 W",
+        "200 W",
+        "20 W"
+      ],
+      "answer": 3,
+      "explanation": "Average power = energy/time = 600/30. Result: 20 W."
+    },
+    {
+      "id": "y10-physics-thermal-017",
+      "category": "Conduction convection radiation",
+      "difficulty": "Application",
+      "prompt": "A thermal radiation detector absorbs 1200 J in 60 s. What is the average absorbed power? Give the closest value.",
+      "options": [
+        "20 W",
+        "40 W",
+        "10 W",
+        "200 W"
+      ],
+      "answer": 0,
+      "explanation": "Average power = energy/time = 1200/60. Result: 20 W."
+    },
+    {
+      "id": "y10-physics-thermal-018",
+      "category": "Conduction convection radiation",
+      "difficulty": "Application",
+      "prompt": "A thermal radiation detector absorbs 900 J in 45 s. What is the average absorbed power? Give the closest value.",
+      "options": [
+        "40 W",
+        "20 W",
+        "10 W",
+        "200 W"
+      ],
+      "answer": 1,
+      "explanation": "Average power = energy/time = 900/45. Result: 20 W."
+    },
+    {
+      "id": "y10-physics-thermal-019",
+      "category": "Conduction convection radiation",
+      "difficulty": "Application",
+      "prompt": "A thermal radiation detector absorbs 2400 J in 80 s. What is the average absorbed power? Give the closest value.",
+      "options": [
+        "60 W",
+        "15 W",
+        "30 W",
+        "300 W"
+      ],
+      "answer": 2,
+      "explanation": "Average power = energy/time = 2400/80. Result: 30 W."
+    },
+    {
+      "id": "y10-physics-thermal-020",
+      "category": "Conduction convection radiation",
+      "difficulty": "Application",
+      "prompt": "A thermal radiation detector absorbs 500 J in 25 s. What is the average absorbed power? Give the closest value.",
+      "options": [
+        "40 W",
+        "10 W",
+        "200 W",
+        "20 W"
+      ],
+      "answer": 3,
+      "explanation": "Average power = energy/time = 500/25. Result: 20 W."
+    },
+    {
+      "id": "y10-physics-thermal-021",
+      "category": "Specific heat capacity",
+      "difficulty": "Foundation",
+      "prompt": "Specific heat capacity describes energy needed to raise…",
+      "options": [
+        "1 kg of material by 1°C",
+        "Any object by 100°C regardless of mass",
+        "1 kg through a phase change",
+        "Any material by 1 m"
+      ],
+      "answer": 0,
+      "explanation": "Specific heat capacity is energy per unit mass per temperature rise."
+    },
+    {
+      "id": "y10-physics-thermal-022",
+      "category": "Specific heat capacity",
+      "difficulty": "Foundation",
+      "prompt": "The equation for warming without a phase change is…",
+      "options": [
+        "E = mL only",
+        "E = mcΔT",
+        "E = c/m",
+        "E = m/ΔT"
+      ],
+      "answer": 1,
+      "explanation": "Use the temperature change, not the final temperature alone."
+    },
+    {
+      "id": "y10-physics-thermal-023",
+      "category": "Specific heat capacity",
+      "difficulty": "Foundation",
+      "prompt": "Which unit can express specific heat capacity?",
+      "options": [
+        "J/kg only",
+        "W only",
+        "J/(kg·°C)",
+        "°C/kg only"
+      ],
+      "answer": 2,
+      "explanation": "J/(kg·K) is also valid because a temperature interval has the same numerical size."
+    },
+    {
+      "id": "y10-physics-thermal-024",
+      "category": "Specific heat capacity",
+      "difficulty": "Application",
+      "prompt": "For equal mass and energy input, a larger c gives…",
+      "options": [
+        "A larger temperature rise",
+        "A necessarily higher final temperature in all cases",
+        "No energy transfer",
+        "A smaller temperature rise"
+      ],
+      "answer": 3,
+      "explanation": "ΔT = E/(mc)."
+    },
+    {
+      "id": "y10-physics-thermal-025",
+      "category": "Specific heat capacity",
+      "difficulty": "Challenge",
+      "prompt": "Ignoring heat losses when calculating c from supplied electrical energy usually…",
+      "options": [
+        "Overestimates c if measured temperature rise is reduced by losses",
+        "Makes c exactly zero",
+        "Always halves the true mass",
+        "Removes all experimental uncertainty"
+      ],
+      "answer": 0,
+      "explanation": "E_supplied exceeds energy gained by the sample; E_supplied/(mΔT) is too large if losses are ignored."
+    },
+    {
+      "id": "y10-physics-thermal-026",
+      "category": "Specific heat capacity",
+      "difficulty": "Application",
+      "prompt": "Water has c = 4200 J/(kg·°C). Find the energy to warm 0.2 kg by 5°C, with no losses. Give the closest value.",
+      "options": [
+        "8.4e+03 J",
+        "4.2e+03 J",
+        "2.1e+03 J",
+        "4.2e+04 J"
+      ],
+      "answer": 1,
+      "explanation": "E = mcΔT = 0.2 × 4200 × 5. Result: 4.2e+03 J."
+    },
+    {
+      "id": "y10-physics-thermal-027",
+      "category": "Specific heat capacity",
+      "difficulty": "Application",
+      "prompt": "Water has c = 4200 J/(kg·°C). Find the energy to warm 0.5 kg by 10°C, with no losses. Give the closest value.",
+      "options": [
+        "4.2e+04 J",
+        "1.05e+04 J",
+        "2.1e+04 J",
+        "2.1e+05 J"
+      ],
+      "answer": 2,
+      "explanation": "E = mcΔT = 0.5 × 4200 × 10. Result: 2.1e+04 J."
+    },
+    {
+      "id": "y10-physics-thermal-028",
+      "category": "Specific heat capacity",
+      "difficulty": "Application",
+      "prompt": "Water has c = 4200 J/(kg·°C). Find the energy to warm 0.3 kg by 20°C, with no losses. Give the closest value.",
+      "options": [
+        "5.04e+04 J",
+        "1.26e+04 J",
+        "2.52e+05 J",
+        "2.52e+04 J"
+      ],
+      "answer": 3,
+      "explanation": "E = mcΔT = 0.3 × 4200 × 20. Result: 2.52e+04 J."
+    },
+    {
+      "id": "y10-physics-thermal-029",
+      "category": "Specific heat capacity",
+      "difficulty": "Application",
+      "prompt": "Water has c = 4200 J/(kg·°C). Find the energy to warm 1 kg by 15°C, with no losses. Give the closest value.",
+      "options": [
+        "6.3e+04 J",
+        "1.26e+05 J",
+        "3.15e+04 J",
+        "6.3e+05 J"
+      ],
+      "answer": 0,
+      "explanation": "E = mcΔT = 1 × 4200 × 15. Result: 6.3e+04 J."
+    },
+    {
+      "id": "y10-physics-thermal-030",
+      "category": "Specific heat capacity",
+      "difficulty": "Application",
+      "prompt": "Water has c = 4200 J/(kg·°C). Find the energy to warm 0.4 kg by 8°C, with no losses. Give the closest value.",
+      "options": [
+        "2.69e+04 J",
+        "1.34e+04 J",
+        "6.72e+03 J",
+        "1.34e+05 J"
+      ],
+      "answer": 1,
+      "explanation": "E = mcΔT = 0.4 × 4200 × 8. Result: 1.34e+04 J."
+    },
+    {
+      "id": "y10-physics-thermal-031",
+      "category": "Latent heat and phases",
+      "difficulty": "Foundation",
+      "prompt": "Specific latent heat is energy per unit mass for…",
+      "options": [
+        "Raising temperature by exactly 1°C",
+        "Increasing speed by 1 m/s",
+        "A change of state at constant temperature under the stated conditions",
+        "Changing voltage"
+      ],
+      "answer": 2,
+      "explanation": "E = mL during a phase change."
+    },
+    {
+      "id": "y10-physics-thermal-032",
+      "category": "Latent heat and phases",
+      "difficulty": "Foundation",
+      "prompt": "While pure ice melts at 0°C at atmospheric pressure, its temperature ideally…",
+      "options": [
+        "Rises steadily through the entire phase change",
+        "Falls below absolute zero",
+        "Must be 100°C",
+        "Remains at 0°C until melting is complete"
+      ],
+      "answer": 3,
+      "explanation": "Supplied latent energy changes the solid to liquid."
+    },
+    {
+      "id": "y10-physics-thermal-033",
+      "category": "Latent heat and phases",
+      "difficulty": "Application",
+      "prompt": "To melt ice initially at −20°C, the total energy includes…",
+      "options": [
+        "Warming the ice to 0°C, then melting it",
+        "Only warming liquid water",
+        "Only the final water temperature",
+        "No energy because ice is cold"
+      ],
+      "answer": 0,
+      "explanation": "Add the sensible warming energy and latent melting energy."
+    },
+    {
+      "id": "y10-physics-thermal-034",
+      "category": "Latent heat and phases",
+      "difficulty": "Application",
+      "prompt": "A temperature plateau on a heating curve can indicate…",
+      "options": [
+        "Zero energy input in every case",
+        "A phase change",
+        "Zero mass",
+        "Negative specific heat capacity"
+      ],
+      "answer": 1,
+      "explanation": "During a phase change, internal energy can rise while temperature stays fixed."
+    },
+    {
+      "id": "y10-physics-thermal-035",
+      "category": "Latent heat and phases",
+      "difficulty": "Challenge",
+      "prompt": "Doubling the mass of ice already at 0°C doubles the ideal energy needed to melt it because…",
+      "options": [
+        "Lf doubles automatically",
+        "Melting point doubles",
+        "E = mLf",
+        "Ice loses its mass as it melts"
+      ],
+      "answer": 2,
+      "explanation": "Latent heat per unit mass remains fixed under the stated conditions."
+    },
+    {
+      "id": "y10-physics-thermal-036",
+      "category": "Latent heat and phases",
+      "difficulty": "Application",
+      "prompt": "Ice is already at 0°C. With Lf = 334,000 J/kg, how much energy melts 0.1 kg completely? Give the closest value.",
+      "options": [
+        "6.68e+04 J",
+        "1.67e+04 J",
+        "3.34e+05 J",
+        "3.34e+04 J"
+      ],
+      "answer": 3,
+      "explanation": "E = mLf = 0.1 × 334000. Result: 3.34e+04 J."
+    },
+    {
+      "id": "y10-physics-thermal-037",
+      "category": "Latent heat and phases",
+      "difficulty": "Application",
+      "prompt": "Ice is already at 0°C. With Lf = 334,000 J/kg, how much energy melts 0.2 kg completely? Give the closest value.",
+      "options": [
+        "6.68e+04 J",
+        "1.34e+05 J",
+        "3.34e+04 J",
+        "6.68e+05 J"
+      ],
+      "answer": 0,
+      "explanation": "E = mLf = 0.2 × 334000. Result: 6.68e+04 J."
+    },
+    {
+      "id": "y10-physics-thermal-038",
+      "category": "Latent heat and phases",
+      "difficulty": "Application",
+      "prompt": "Ice is already at 0°C. With Lf = 334,000 J/kg, how much energy melts 0.3 kg completely? Give the closest value.",
+      "options": [
+        "2e+05 J",
+        "1e+05 J",
+        "5.01e+04 J",
+        "1e+06 J"
+      ],
+      "answer": 1,
+      "explanation": "E = mLf = 0.3 × 334000. Result: 1e+05 J."
+    },
+    {
+      "id": "y10-physics-thermal-039",
+      "category": "Latent heat and phases",
+      "difficulty": "Application",
+      "prompt": "Ice is already at 0°C. With Lf = 334,000 J/kg, how much energy melts 0.4 kg completely? Give the closest value.",
+      "options": [
+        "2.67e+05 J",
+        "6.68e+04 J",
+        "1.34e+05 J",
+        "1.34e+06 J"
+      ],
+      "answer": 2,
+      "explanation": "E = mLf = 0.4 × 334000. Result: 1.34e+05 J."
+    },
+    {
+      "id": "y10-physics-thermal-040",
+      "category": "Latent heat and phases",
+      "difficulty": "Application",
+      "prompt": "Ice is already at 0°C. With Lf = 334,000 J/kg, how much energy melts 0.5 kg completely? Give the closest value.",
+      "options": [
+        "3.34e+05 J",
+        "8.35e+04 J",
+        "1.67e+06 J",
+        "1.67e+05 J"
+      ],
+      "answer": 3,
+      "explanation": "E = mLf = 0.5 × 334000. Result: 1.67e+05 J."
+    },
+    {
+      "id": "y10-physics-thermal-041",
+      "category": "Thermal equilibrium",
+      "difficulty": "Foundation",
+      "prompt": "Two portions in thermal equilibrium have the same…",
+      "options": [
+        "Temperature",
+        "Mass",
+        "Total internal energy in every case",
+        "Volume in every case"
+      ],
+      "answer": 0,
+      "explanation": "Thermal equilibrium means no net thermal transfer between them."
+    },
+    {
+      "id": "y10-physics-thermal-042",
+      "category": "Thermal equilibrium",
+      "difficulty": "Foundation",
+      "prompt": "In an isolated mixing experiment, energy lost by the warm water equals…",
+      "options": [
+        "Zero in every case",
+        "Energy gained by the cool water",
+        "The mass of the container",
+        "Twice the total initial energy"
+      ],
+      "answer": 1,
+      "explanation": "Energy conservation relates the two changes, neglecting the container and losses."
+    },
+    {
+      "id": "y10-physics-thermal-043",
+      "category": "Thermal equilibrium",
+      "difficulty": "Application",
+      "prompt": "Equal masses of the same liquid at 80°C and 20°C mix without losses. The final temperature is…",
+      "options": [
+        "100°C",
+        "80°C",
+        "50°C",
+        "20°C"
+      ],
+      "answer": 2,
+      "explanation": "Equal heat capacities and masses give the arithmetic mean."
+    },
+    {
+      "id": "y10-physics-thermal-044",
+      "category": "Thermal equilibrium",
+      "difficulty": "Application",
+      "prompt": "If more cool water is used at the same initial temperatures, final temperature is generally…",
+      "options": [
+        "Always closer to the hot starting temperature",
+        "Below both starting temperatures",
+        "Above both starting temperatures",
+        "Closer to the cool starting temperature"
+      ],
+      "answer": 3,
+      "explanation": "The larger heat capacity weighs the final temperature towards its initial temperature."
+    },
+    {
+      "id": "y10-physics-thermal-045",
+      "category": "Thermal equilibrium",
+      "difficulty": "Challenge",
+      "prompt": "When may the simple weighted-temperature average fail?",
+      "options": [
+        "When phase changes, heat loss or container heat capacity matter",
+        "Whenever the masses differ",
+        "Whenever the temperatures differ",
+        "Whenever the samples have equal c"
+      ],
+      "answer": 0,
+      "explanation": "The simple formula assumes the same c, no phase change and an isolated system with negligible container capacity."
+    },
+    {
+      "id": "y10-physics-thermal-046",
+      "category": "Thermal equilibrium",
+      "difficulty": "Challenge",
+      "prompt": "Mix 0.2 kg of water at 80°C and 0.3 kg at 20°C. No losses, phase change or container heat capacity. Find Tf. Give the closest value.",
+      "options": [
+        "88 °C",
+        "44 °C",
+        "22 °C",
+        "440 °C"
+      ],
+      "answer": 1,
+      "explanation": "For the same material, Tf = (m₁T₁ + m₂T₂)/(m₁ + m₂). Result: 44 °C."
+    },
+    {
+      "id": "y10-physics-thermal-047",
+      "category": "Thermal equilibrium",
+      "difficulty": "Challenge",
+      "prompt": "Mix 0.3 kg of water at 70°C and 0.2 kg at 20°C. No losses, phase change or container heat capacity. Find Tf. Give the closest value.",
+      "options": [
+        "100 °C",
+        "25 °C",
+        "50 °C",
+        "500 °C"
+      ],
+      "answer": 2,
+      "explanation": "For the same material, Tf = (m₁T₁ + m₂T₂)/(m₁ + m₂). Result: 50 °C."
+    },
+    {
+      "id": "y10-physics-thermal-048",
+      "category": "Thermal equilibrium",
+      "difficulty": "Challenge",
+      "prompt": "Mix 0.1 kg of water at 90°C and 0.4 kg at 15°C. No losses, phase change or container heat capacity. Find Tf. Give the closest value.",
+      "options": [
+        "60 °C",
+        "15 °C",
+        "300 °C",
+        "30 °C"
+      ],
+      "answer": 3,
+      "explanation": "For the same material, Tf = (m₁T₁ + m₂T₂)/(m₁ + m₂). Result: 30 °C."
+    },
+    {
+      "id": "y10-physics-thermal-049",
+      "category": "Thermal equilibrium",
+      "difficulty": "Challenge",
+      "prompt": "Mix 0.4 kg of water at 60°C and 0.1 kg at 10°C. No losses, phase change or container heat capacity. Find Tf. Give the closest value.",
+      "options": [
+        "50 °C",
+        "100 °C",
+        "25 °C",
+        "500 °C"
+      ],
+      "answer": 0,
+      "explanation": "For the same material, Tf = (m₁T₁ + m₂T₂)/(m₁ + m₂). Result: 50 °C."
+    },
+    {
+      "id": "y10-physics-thermal-050",
+      "category": "Thermal equilibrium",
+      "difficulty": "Challenge",
+      "prompt": "Mix 0.2 kg of water at 75°C and 0.2 kg at 25°C. No losses, phase change or container heat capacity. Find Tf. Give the closest value.",
+      "options": [
+        "100 °C",
+        "50 °C",
+        "25 °C",
+        "500 °C"
+      ],
+      "answer": 1,
+      "explanation": "For the same material, Tf = (m₁T₁ + m₂T₂)/(m₁ + m₂). Result: 50 °C."
+    },
+    {
+      "id": "y10-physics-thermal-051",
+      "category": "Energy problems",
+      "difficulty": "Foundation",
+      "prompt": "Power tells us the rate of…",
+      "options": [
+        "Temperature itself",
+        "Mass creation",
+        "Energy transfer",
+        "Charge force"
+      ],
+      "answer": 2,
+      "explanation": "P = E/t; one watt is one joule per second."
+    },
+    {
+      "id": "y10-physics-thermal-052",
+      "category": "Energy problems",
+      "difficulty": "Application",
+      "prompt": "A 500 W heater operated for 20 s supplies…",
+      "options": [
+        "25 J",
+        "500 J",
+        "520 J",
+        "10,000 J"
+      ],
+      "answer": 3,
+      "explanation": "E = Pt = 500 × 20 = 10000 J."
+    },
+    {
+      "id": "y10-physics-thermal-053",
+      "category": "Energy problems",
+      "difficulty": "Application",
+      "prompt": "If only 80% of heater energy enters the sample, useful sample energy is…",
+      "options": [
+        "0.80 times the supplied energy",
+        "Supplied energy divided by 0.80",
+        "Exactly all supplied energy",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "Efficiency = useful output/input, so useful energy = efficiency × input."
+    },
+    {
+      "id": "y10-physics-thermal-054",
+      "category": "Energy problems",
+      "difficulty": "Challenge",
+      "prompt": "In E = mcΔT, a rise of 10°C is equivalent to a rise of…",
+      "options": [
+        "283 K",
+        "10 K",
+        "273 K",
+        "−10 K"
+      ],
+      "answer": 1,
+      "explanation": "Intervals have equal numerical size on the Celsius and kelvin scales."
+    },
+    {
+      "id": "y10-physics-thermal-055",
+      "category": "Energy problems",
+      "difficulty": "Challenge",
+      "prompt": "To estimate the ideal heating time to warm and then melt a sample at fixed power, use…",
+      "options": [
+        "Power divided by mass only",
+        "Final temperature divided by mass",
+        "Total required energy divided by power",
+        "Latent energy minus warming energy"
+      ],
+      "answer": 2,
+      "explanation": "Add all required energy contributions, then use t = E/P."
+    },
+    {
+      "id": "y10-physics-thermal-056",
+      "category": "Energy problems",
+      "difficulty": "Challenge",
+      "prompt": "An ideal 200 W heater warms 0.1 kg of ice from −20°C to 0°C and then melts it. Use c_ice = 2100 J/(kg·°C) and Lf = 334000 J/kg. Find the time. Give the closest value.",
+      "options": [
+        "376 s",
+        "94 s",
+        "1.88e+03 s",
+        "188 s"
+      ],
+      "answer": 3,
+      "explanation": "Total E = mc_ice × 20 + mLf, then t = E/P. No losses. Result: 188 s."
+    },
+    {
+      "id": "y10-physics-thermal-057",
+      "category": "Energy problems",
+      "difficulty": "Challenge",
+      "prompt": "An ideal 500 W heater warms 0.2 kg of ice from −20°C to 0°C and then melts it. Use c_ice = 2100 J/(kg·°C) and Lf = 334000 J/kg. Find the time. Give the closest value.",
+      "options": [
+        "150 s",
+        "301 s",
+        "75.2 s",
+        "1.5e+03 s"
+      ],
+      "answer": 0,
+      "explanation": "Total E = mc_ice × 20 + mLf, then t = E/P. No losses. Result: 150 s."
+    },
+    {
+      "id": "y10-physics-thermal-058",
+      "category": "Energy problems",
+      "difficulty": "Challenge",
+      "prompt": "An ideal 600 W heater warms 0.3 kg of ice from −20°C to 0°C and then melts it. Use c_ice = 2100 J/(kg·°C) and Lf = 334000 J/kg. Find the time. Give the closest value.",
+      "options": [
+        "376 s",
+        "188 s",
+        "94 s",
+        "1.88e+03 s"
+      ],
+      "answer": 1,
+      "explanation": "Total E = mc_ice × 20 + mLf, then t = E/P. No losses. Result: 188 s."
+    },
+    {
+      "id": "y10-physics-thermal-059",
+      "category": "Energy problems",
+      "difficulty": "Challenge",
+      "prompt": "An ideal 800 W heater warms 0.4 kg of ice from −20°C to 0°C and then melts it. Use c_ice = 2100 J/(kg·°C) and Lf = 334000 J/kg. Find the time. Give the closest value.",
+      "options": [
+        "376 s",
+        "94 s",
+        "188 s",
+        "1.88e+03 s"
+      ],
+      "answer": 2,
+      "explanation": "Total E = mc_ice × 20 + mLf, then t = E/P. No losses. Result: 188 s."
+    },
+    {
+      "id": "y10-physics-thermal-060",
+      "category": "Energy problems",
+      "difficulty": "Challenge",
+      "prompt": "An ideal 1000 W heater warms 0.5 kg of ice from −20°C to 0°C and then melts it. Use c_ice = 2100 J/(kg·°C) and Lf = 334000 J/kg. Find the time. Give the closest value.",
+      "options": [
+        "376 s",
+        "94 s",
+        "1.88e+03 s",
+        "188 s"
+      ],
+      "answer": 3,
+      "explanation": "Total E = mc_ice × 20 + mLf, then t = E/P. No losses. Result: 188 s."
+    }
+  ]
+}

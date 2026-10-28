@@ -1,0 +1,854 @@
+{
+  "topicId": "y10-physics-electricity",
+  "title": "Electricity and electrostatics",
+  "categories": [
+    "Current and charge",
+    "Voltage and resistance",
+    "Circuits and power",
+    "Coulomb’s law",
+    "Electrical safety",
+    "Energy consumption"
+  ],
+  "questions": [
+    {
+      "id": "y10-physics-electricity-001",
+      "category": "Current and charge",
+      "difficulty": "Foundation",
+      "prompt": "What is electric current?",
+      "options": [
+        "Charge passing a point per unit time",
+        "Energy per coulomb",
+        "Resistance per metre",
+        "Force per unit mass"
+      ],
+      "answer": 0,
+      "explanation": "I = Q/t; one ampere is one coulomb per second."
+    },
+    {
+      "id": "y10-physics-electricity-002",
+      "category": "Current and charge",
+      "difficulty": "Foundation",
+      "prompt": "Which unit measures electric charge?",
+      "options": [
+        "Ampere",
+        "Coulomb",
+        "Volt",
+        "Watt"
+      ],
+      "answer": 1,
+      "explanation": "Charge Q is measured in coulombs, C."
+    },
+    {
+      "id": "y10-physics-electricity-003",
+      "category": "Current and charge",
+      "difficulty": "Foundation",
+      "prompt": "In a metal wire, which particles drift to carry charge?",
+      "options": [
+        "Protons moving between atoms",
+        "Neutrons",
+        "Electrons",
+        "Whole neutral molecules only"
+      ],
+      "answer": 2,
+      "explanation": "Mobile electrons carry charge through a metal."
+    },
+    {
+      "id": "y10-physics-electricity-004",
+      "category": "Current and charge",
+      "difficulty": "Application",
+      "prompt": "Compared with conventional current, electron drift in a metal is…",
+      "options": [
+        "Always in the same direction",
+        "Always perpendicular",
+        "Absent in all closed circuits",
+        "In the opposite direction"
+      ],
+      "answer": 3,
+      "explanation": "Conventional current is defined in the direction of positive charge motion."
+    },
+    {
+      "id": "y10-physics-electricity-005",
+      "category": "Current and charge",
+      "difficulty": "Challenge",
+      "prompt": "A lamp has a steady current entering and leaving it. What is used up?",
+      "options": [
+        "Electrical energy is transferred; charge is conserved.",
+        "All the entering charge",
+        "All the electrons’ mass",
+        "Current disappears inside the lamp."
+      ],
+      "answer": 0,
+      "explanation": "Charge is not consumed; the lamp transfers electrical energy to other stores and pathways."
+    },
+    {
+      "id": "y10-physics-electricity-006",
+      "category": "Current and charge",
+      "difficulty": "Foundation",
+      "prompt": "A steady current of 0.2 A flows for 30 s. How much charge passes? Give the closest value.",
+      "options": [
+        "12 C",
+        "6 C",
+        "3 C",
+        "60 C"
+      ],
+      "answer": 1,
+      "explanation": "Q = It = 0.2 × 30. Result: 6 C."
+    },
+    {
+      "id": "y10-physics-electricity-007",
+      "category": "Current and charge",
+      "difficulty": "Foundation",
+      "prompt": "A steady current of 0.5 A flows for 60 s. How much charge passes? Give the closest value.",
+      "options": [
+        "60 C",
+        "15 C",
+        "30 C",
+        "300 C"
+      ],
+      "answer": 2,
+      "explanation": "Q = It = 0.5 × 60. Result: 30 C."
+    },
+    {
+      "id": "y10-physics-electricity-008",
+      "category": "Current and charge",
+      "difficulty": "Application",
+      "prompt": "A steady current of 1.5 A flows for 20 s. How much charge passes? Give the closest value.",
+      "options": [
+        "60 C",
+        "15 C",
+        "300 C",
+        "30 C"
+      ],
+      "answer": 3,
+      "explanation": "Q = It = 1.5 × 20. Result: 30 C."
+    },
+    {
+      "id": "y10-physics-electricity-009",
+      "category": "Current and charge",
+      "difficulty": "Application",
+      "prompt": "A steady current of 2 A flows for 45 s. How much charge passes? Give the closest value.",
+      "options": [
+        "90 C",
+        "180 C",
+        "45 C",
+        "900 C"
+      ],
+      "answer": 0,
+      "explanation": "Q = It = 2 × 45. Result: 90 C."
+    },
+    {
+      "id": "y10-physics-electricity-010",
+      "category": "Current and charge",
+      "difficulty": "Application",
+      "prompt": "A steady current of 3 A flows for 120 s. How much charge passes? Give the closest value.",
+      "options": [
+        "720 C",
+        "360 C",
+        "180 C",
+        "3.6e+03 C"
+      ],
+      "answer": 1,
+      "explanation": "Q = It = 3 × 120. Result: 360 C."
+    },
+    {
+      "id": "y10-physics-electricity-011",
+      "category": "Voltage and resistance",
+      "difficulty": "Foundation",
+      "prompt": "Potential difference is energy transferred per…",
+      "options": [
+        "Second of time only",
+        "Metre of wire",
+        "Coulomb of charge",
+        "Kilogram of mass"
+      ],
+      "answer": 2,
+      "explanation": "V = E/Q, with J/C equivalent to volts."
+    },
+    {
+      "id": "y10-physics-electricity-012",
+      "category": "Voltage and resistance",
+      "difficulty": "Foundation",
+      "prompt": "Which relationship applies to an ohmic resistor at constant temperature?",
+      "options": [
+        "V = I/R",
+        "R = VI",
+        "I = VR",
+        "V = IR"
+      ],
+      "answer": 3,
+      "explanation": "Potential difference is proportional to current for an ohmic resistor at fixed temperature."
+    },
+    {
+      "id": "y10-physics-electricity-013",
+      "category": "Voltage and resistance",
+      "difficulty": "Foundation",
+      "prompt": "Which unit measures resistance?",
+      "options": [
+        "Ohm",
+        "Watt",
+        "Coulomb",
+        "Joule"
+      ],
+      "answer": 0,
+      "explanation": "Resistance is measured in ohms, Ω."
+    },
+    {
+      "id": "y10-physics-electricity-014",
+      "category": "Voltage and resistance",
+      "difficulty": "Application",
+      "prompt": "The voltage across a fixed ohmic resistor doubles. Its current…",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Quadruples",
+        "Stays unchanged"
+      ],
+      "answer": 1,
+      "explanation": "I = V/R and R is unchanged."
+    },
+    {
+      "id": "y10-physics-electricity-015",
+      "category": "Voltage and resistance",
+      "difficulty": "Challenge",
+      "prompt": "Why specify constant temperature when investigating an ohmic metal resistor?",
+      "options": [
+        "Temperature measures charge.",
+        "Voltage is always zero when hot.",
+        "Temperature changes can change its resistance.",
+        "Ohm’s law requires a vacuum."
+      ],
+      "answer": 2,
+      "explanation": "Heating a metal usually increases its resistance, changing the current–voltage relationship."
+    },
+    {
+      "id": "y10-physics-electricity-016",
+      "category": "Voltage and resistance",
+      "difficulty": "Application",
+      "prompt": "An ohmic 12 Ω resistor is connected across 6 V. Find the current. Give the closest value.",
+      "options": [
+        "1 A",
+        "0.25 A",
+        "5 A",
+        "0.5 A"
+      ],
+      "answer": 3,
+      "explanation": "I = V/R = 6/12. Result: 0.5 A."
+    },
+    {
+      "id": "y10-physics-electricity-017",
+      "category": "Voltage and resistance",
+      "difficulty": "Application",
+      "prompt": "An ohmic 8 Ω resistor is connected across 12 V. Find the current. Give the closest value.",
+      "options": [
+        "1.5 A",
+        "3 A",
+        "0.75 A",
+        "15 A"
+      ],
+      "answer": 0,
+      "explanation": "I = V/R = 12/8. Result: 1.5 A."
+    },
+    {
+      "id": "y10-physics-electricity-018",
+      "category": "Voltage and resistance",
+      "difficulty": "Application",
+      "prompt": "An ohmic 3 Ω resistor is connected across 9 V. Find the current. Give the closest value.",
+      "options": [
+        "6 A",
+        "3 A",
+        "1.5 A",
+        "30 A"
+      ],
+      "answer": 1,
+      "explanation": "I = V/R = 9/3. Result: 3 A."
+    },
+    {
+      "id": "y10-physics-electricity-019",
+      "category": "Voltage and resistance",
+      "difficulty": "Application",
+      "prompt": "An ohmic 20 Ω resistor is connected across 4 V. Find the current. Give the closest value.",
+      "options": [
+        "0.4 A",
+        "0.1 A",
+        "0.2 A",
+        "2 A"
+      ],
+      "answer": 2,
+      "explanation": "I = V/R = 4/20. Result: 0.2 A."
+    },
+    {
+      "id": "y10-physics-electricity-020",
+      "category": "Voltage and resistance",
+      "difficulty": "Application",
+      "prompt": "An ohmic 25 Ω resistor is connected across 10 V. Find the current. Give the closest value.",
+      "options": [
+        "0.8 A",
+        "0.2 A",
+        "4 A",
+        "0.4 A"
+      ],
+      "answer": 3,
+      "explanation": "I = V/R = 10/25. Result: 0.4 A."
+    },
+    {
+      "id": "y10-physics-electricity-021",
+      "category": "Circuits and power",
+      "difficulty": "Foundation",
+      "prompt": "Components connected in series have the same…",
+      "options": [
+        "Current",
+        "Voltage in every case",
+        "Resistance in every case",
+        "Power in every case"
+      ],
+      "answer": 0,
+      "explanation": "There is one conducting path, so the same current passes through each series component."
+    },
+    {
+      "id": "y10-physics-electricity-022",
+      "category": "Circuits and power",
+      "difficulty": "Foundation",
+      "prompt": "Parallel branches share the same…",
+      "options": [
+        "Branch current in every case",
+        "Potential difference",
+        "Resistance in every case",
+        "Charge used up"
+      ],
+      "answer": 1,
+      "explanation": "Each branch is connected between the same two circuit nodes."
+    },
+    {
+      "id": "y10-physics-electricity-023",
+      "category": "Circuits and power",
+      "difficulty": "Application",
+      "prompt": "Adding an identical resistor in parallel makes the total resistance…",
+      "options": [
+        "Larger",
+        "Infinite",
+        "Smaller",
+        "Negative"
+      ],
+      "answer": 2,
+      "explanation": "Another branch adds a conducting path; two equal parallel resistors have half the resistance of one."
+    },
+    {
+      "id": "y10-physics-electricity-024",
+      "category": "Circuits and power",
+      "difficulty": "Application",
+      "prompt": "Which expression gives electrical power?",
+      "options": [
+        "P = V/I",
+        "P = I/V",
+        "P = V + I",
+        "P = VI"
+      ],
+      "answer": 3,
+      "explanation": "Voltage is energy per charge and current is charge per time, so VI is energy per time."
+    },
+    {
+      "id": "y10-physics-electricity-025",
+      "category": "Circuits and power",
+      "difficulty": "Challenge",
+      "prompt": "Two unequal resistors are in parallel across an ideal battery. The smaller resistor carries…",
+      "options": [
+        "More current",
+        "Less current",
+        "Equal current in every case",
+        "No current"
+      ],
+      "answer": 0,
+      "explanation": "Both see the same V, so I = V/R is larger for the smaller resistance."
+    },
+    {
+      "id": "y10-physics-electricity-026",
+      "category": "Circuits and power",
+      "difficulty": "Application",
+      "prompt": "A device operates at 6 V and 0.4 A. What is its power? Give the closest value.",
+      "options": [
+        "4.8 W",
+        "2.4 W",
+        "1.2 W",
+        "24 W"
+      ],
+      "answer": 1,
+      "explanation": "P = VI = 6 × 0.4. Result: 2.4 W."
+    },
+    {
+      "id": "y10-physics-electricity-027",
+      "category": "Circuits and power",
+      "difficulty": "Application",
+      "prompt": "A device operates at 12 V and 2 A. What is its power? Give the closest value.",
+      "options": [
+        "48 W",
+        "12 W",
+        "24 W",
+        "240 W"
+      ],
+      "answer": 2,
+      "explanation": "P = VI = 12 × 2. Result: 24 W."
+    },
+    {
+      "id": "y10-physics-electricity-028",
+      "category": "Circuits and power",
+      "difficulty": "Application",
+      "prompt": "A device operates at 9 V and 0.5 A. What is its power? Give the closest value.",
+      "options": [
+        "9 W",
+        "2.25 W",
+        "45 W",
+        "4.5 W"
+      ],
+      "answer": 3,
+      "explanation": "P = VI = 9 × 0.5. Result: 4.5 W."
+    },
+    {
+      "id": "y10-physics-electricity-029",
+      "category": "Circuits and power",
+      "difficulty": "Application",
+      "prompt": "A device operates at 230 V and 8 A. What is its power? Give the closest value.",
+      "options": [
+        "1.84e+03 W",
+        "3.68e+03 W",
+        "920 W",
+        "1.84e+04 W"
+      ],
+      "answer": 0,
+      "explanation": "P = VI = 230 × 8. Result: 1.84e+03 W."
+    },
+    {
+      "id": "y10-physics-electricity-030",
+      "category": "Circuits and power",
+      "difficulty": "Application",
+      "prompt": "A device operates at 5 V and 0.2 A. What is its power? Give the closest value.",
+      "options": [
+        "2 W",
+        "1 W",
+        "0.5 W",
+        "10 W"
+      ],
+      "answer": 1,
+      "explanation": "P = VI = 5 × 0.2. Result: 1 W."
+    },
+    {
+      "id": "y10-physics-electricity-031",
+      "category": "Coulomb’s law",
+      "difficulty": "Foundation",
+      "prompt": "Two positive point charges exert forces that are…",
+      "options": [
+        "Attractive",
+        "Always zero",
+        "Repulsive",
+        "Gravitational only"
+      ],
+      "answer": 2,
+      "explanation": "Like-sign charges repel; unlike-sign charges attract."
+    },
+    {
+      "id": "y10-physics-electricity-032",
+      "category": "Coulomb’s law",
+      "difficulty": "Foundation",
+      "prompt": "Coulomb’s law uses which separation?",
+      "options": [
+        "Surface gap in centimetres only",
+        "Distance in seconds",
+        "Object diameter regardless of position",
+        "Centre-to-centre distance in metres"
+      ],
+      "answer": 3,
+      "explanation": "The point-charge formula uses the separation of the charge locations in SI units."
+    },
+    {
+      "id": "y10-physics-electricity-033",
+      "category": "Coulomb’s law",
+      "difficulty": "Application",
+      "prompt": "Doubling the separation of unchanged point charges makes the force…",
+      "options": [
+        "One quarter as large",
+        "Twice as large",
+        "Four times as large",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "F is proportional to 1/r²."
+    },
+    {
+      "id": "y10-physics-electricity-034",
+      "category": "Coulomb’s law",
+      "difficulty": "Application",
+      "prompt": "Reversing the sign of one charge, keeping magnitudes and separation fixed, changes…",
+      "options": [
+        "Magnitude only",
+        "Force direction but not magnitude",
+        "Both magnitudes to zero",
+        "Neither direction nor magnitude"
+      ],
+      "answer": 1,
+      "explanation": "The product of signs determines attraction or repulsion; absolute magnitudes determine force size."
+    },
+    {
+      "id": "y10-physics-electricity-035",
+      "category": "Coulomb’s law",
+      "difficulty": "Challenge",
+      "prompt": "Electric field arrows around a positive point charge point…",
+      "options": [
+        "Towards the charge",
+        "In circles about it",
+        "Away from the charge",
+        "Nowhere because positive charges have no field"
+      ],
+      "answer": 2,
+      "explanation": "Field direction is the force direction on a small positive test charge; this is an extension idea."
+    },
+    {
+      "id": "y10-physics-electricity-036",
+      "category": "Coulomb’s law",
+      "difficulty": "Challenge",
+      "prompt": "Two point charges have magnitudes 1 μC and 2 μC, separated by 0.5 m in vacuum. Use k = 8.99 × 10⁹. Find the force magnitude. Give the closest value.",
+      "options": [
+        "0.144 N",
+        "0.036 N",
+        "0.719 N",
+        "0.0719 N"
+      ],
+      "answer": 3,
+      "explanation": "Convert μC to C, then F = k|q₁q₂|/r². Result: 0.0719 N."
+    },
+    {
+      "id": "y10-physics-electricity-037",
+      "category": "Coulomb’s law",
+      "difficulty": "Challenge",
+      "prompt": "Two point charges have magnitudes 2 μC and 3 μC, separated by 0.3 m in vacuum. Use k = 8.99 × 10⁹. Find the force magnitude. Give the closest value.",
+      "options": [
+        "0.599 N",
+        "1.2 N",
+        "0.3 N",
+        "5.99 N"
+      ],
+      "answer": 0,
+      "explanation": "Convert μC to C, then F = k|q₁q₂|/r². Result: 0.599 N."
+    },
+    {
+      "id": "y10-physics-electricity-038",
+      "category": "Coulomb’s law",
+      "difficulty": "Challenge",
+      "prompt": "Two point charges have magnitudes 4 μC and 1 μC, separated by 0.2 m in vacuum. Use k = 8.99 × 10⁹. Find the force magnitude. Give the closest value.",
+      "options": [
+        "1.8 N",
+        "0.899 N",
+        "0.449 N",
+        "8.99 N"
+      ],
+      "answer": 1,
+      "explanation": "Convert μC to C, then F = k|q₁q₂|/r². Result: 0.899 N."
+    },
+    {
+      "id": "y10-physics-electricity-039",
+      "category": "Coulomb’s law",
+      "difficulty": "Challenge",
+      "prompt": "Two point charges have magnitudes 3 μC and 5 μC, separated by 0.6 m in vacuum. Use k = 8.99 × 10⁹. Find the force magnitude. Give the closest value.",
+      "options": [
+        "0.749 N",
+        "0.187 N",
+        "0.375 N",
+        "3.75 N"
+      ],
+      "answer": 2,
+      "explanation": "Convert μC to C, then F = k|q₁q₂|/r². Result: 0.375 N."
+    },
+    {
+      "id": "y10-physics-electricity-040",
+      "category": "Coulomb’s law",
+      "difficulty": "Challenge",
+      "prompt": "Two point charges have magnitudes 2 μC and 2 μC, separated by 1 m in vacuum. Use k = 8.99 × 10⁹. Find the force magnitude. Give the closest value.",
+      "options": [
+        "0.0719 N",
+        "0.018 N",
+        "0.36 N",
+        "0.036 N"
+      ],
+      "answer": 3,
+      "explanation": "Convert μC to C, then F = k|q₁q₂|/r². Result: 0.036 N."
+    },
+    {
+      "id": "y10-physics-electricity-041",
+      "category": "Electrical safety",
+      "difficulty": "Foundation",
+      "prompt": "A fuse or overcurrent breaker primarily protects wiring against…",
+      "options": [
+        "Excessive current",
+        "Any low voltage",
+        "Every possible electric shock",
+        "Any use of energy"
+      ],
+      "answer": 0,
+      "explanation": "Excessive current can overheat wiring; overcurrent protection disconnects it."
+    },
+    {
+      "id": "y10-physics-electricity-042",
+      "category": "Electrical safety",
+      "difficulty": "Foundation",
+      "prompt": "An RCD compares…",
+      "options": [
+        "Appliance mass and voltage",
+        "Outgoing live and returning neutral currents",
+        "Wire length and temperature only",
+        "Current and elapsed time in every case"
+      ],
+      "answer": 1,
+      "explanation": "A sufficient imbalance indicates current returning by another path."
+    },
+    {
+      "id": "y10-physics-electricity-043",
+      "category": "Electrical safety",
+      "difficulty": "Application",
+      "prompt": "What is the role of protective earthing on a suitable metal-cased appliance?",
+      "options": [
+        "Increase the appliance power",
+        "Replace all insulation",
+        "Provide a protective path if the case becomes live",
+        "Carry the normal operating current in every circuit"
+      ],
+      "answer": 2,
+      "explanation": "Earthing works with suitable protection to reduce danger after a fault."
+    },
+    {
+      "id": "y10-physics-electricity-044",
+      "category": "Electrical safety",
+      "difficulty": "Application",
+      "prompt": "A balanced overload can fail to trip a plain RCD because…",
+      "options": [
+        "Overloads have zero current",
+        "RCDs detect only heat in every wire",
+        "RCDs always replace breakers",
+        "Live and neutral currents can still be equal"
+      ],
+      "answer": 3,
+      "explanation": "A plain RCD detects imbalance; separate overcurrent protection is needed."
+    },
+    {
+      "id": "y10-physics-electricity-045",
+      "category": "Electrical safety",
+      "difficulty": "Challenge",
+      "prompt": "Before a real mains socket is changed, the appropriate approach is…",
+      "options": [
+        "Qualified work with supply isolated and verified safe",
+        "Hold only the neutral wire",
+        "Rely on a wall switch alone",
+        "Use the virtual model as authorisation to work live"
+      ],
+      "answer": 0,
+      "explanation": "The simulation teaches principles, not live-mains working procedures."
+    },
+    {
+      "id": "y10-physics-electricity-046",
+      "category": "Electrical safety",
+      "difficulty": "Application",
+      "prompt": "A simplified 30 mA RCD test has live current 8.08 A and neutral current 8 A. What is predicted?",
+      "options": [
+        "No trip from this imbalance alone.",
+        "Trip: imbalance exceeds 30 mA.",
+        "The currents must add before comparison.",
+        "The RCD must also detect every balanced overload."
+      ],
+      "answer": 1,
+      "explanation": "Compare |I_live − I_neutral| = 80 mA with 30 mA. Real devices also have trip-time specifications."
+    },
+    {
+      "id": "y10-physics-electricity-047",
+      "category": "Electrical safety",
+      "difficulty": "Application",
+      "prompt": "A simplified 30 mA RCD test has live current 5.02 A and neutral current 5 A. What is predicted?",
+      "options": [
+        "Trip: imbalance exceeds 30 mA.",
+        "The currents must add before comparison.",
+        "No trip from this imbalance alone.",
+        "The RCD must also detect every balanced overload."
+      ],
+      "answer": 2,
+      "explanation": "Compare |I_live − I_neutral| = 20 mA with 30 mA. Real devices also have trip-time specifications."
+    },
+    {
+      "id": "y10-physics-electricity-048",
+      "category": "Electrical safety",
+      "difficulty": "Application",
+      "prompt": "A simplified 30 mA RCD test has live current 3.05 A and neutral current 3 A. What is predicted?",
+      "options": [
+        "No trip from this imbalance alone.",
+        "The currents must add before comparison.",
+        "The RCD must also detect every balanced overload.",
+        "Trip: imbalance exceeds 30 mA."
+      ],
+      "answer": 3,
+      "explanation": "Compare |I_live − I_neutral| = 50 mA with 30 mA. Real devices also have trip-time specifications."
+    },
+    {
+      "id": "y10-physics-electricity-049",
+      "category": "Electrical safety",
+      "difficulty": "Application",
+      "prompt": "A simplified 30 mA RCD test has live current 2.01 A and neutral current 2 A. What is predicted?",
+      "options": [
+        "No trip from this imbalance alone.",
+        "Trip: imbalance exceeds 30 mA.",
+        "The currents must add before comparison.",
+        "The RCD must also detect every balanced overload."
+      ],
+      "answer": 0,
+      "explanation": "Compare |I_live − I_neutral| = 10 mA with 30 mA. Real devices also have trip-time specifications."
+    },
+    {
+      "id": "y10-physics-electricity-050",
+      "category": "Electrical safety",
+      "difficulty": "Application",
+      "prompt": "A simplified 30 mA RCD test has live current 10.04 A and neutral current 10 A. What is predicted?",
+      "options": [
+        "No trip from this imbalance alone.",
+        "Trip: imbalance exceeds 30 mA.",
+        "The currents must add before comparison.",
+        "The RCD must also detect every balanced overload."
+      ],
+      "answer": 1,
+      "explanation": "Compare |I_live − I_neutral| = 40 mA with 30 mA. Real devices also have trip-time specifications."
+    },
+    {
+      "id": "y10-physics-electricity-051",
+      "category": "Energy consumption",
+      "difficulty": "Foundation",
+      "prompt": "Which is a unit of electrical energy used on bills?",
+      "options": [
+        "kW",
+        "Ampere",
+        "kWh",
+        "Volt per second"
+      ],
+      "answer": 2,
+      "explanation": "kWh is power multiplied by time; it measures energy."
+    },
+    {
+      "id": "y10-physics-electricity-052",
+      "category": "Energy consumption",
+      "difficulty": "Foundation",
+      "prompt": "A tariff of 0.30 currency units/kWh gives the cost by multiplying the tariff by…",
+      "options": [
+        "Power in W only",
+        "Resistance in Ω",
+        "Current in A only",
+        "Energy in kWh"
+      ],
+      "answer": 3,
+      "explanation": "Cost = energy × tariff, before any extra charges."
+    },
+    {
+      "id": "y10-physics-electricity-053",
+      "category": "Energy consumption",
+      "difficulty": "Application",
+      "prompt": "Halving use time at fixed power makes energy consumption…",
+      "options": [
+        "Half as large",
+        "Twice as large",
+        "Unchanged",
+        "Four times as large"
+      ],
+      "answer": 0,
+      "explanation": "E = Pt, so energy is directly proportional to time at fixed power."
+    },
+    {
+      "id": "y10-physics-electricity-054",
+      "category": "Energy consumption",
+      "difficulty": "Application",
+      "prompt": "Raising the electricity tariff while using the same appliance for the same time changes…",
+      "options": [
+        "Energy but not cost",
+        "Cost but not electrical energy use",
+        "Both power and voltage automatically",
+        "Neither energy nor cost"
+      ],
+      "answer": 1,
+      "explanation": "Tariff is a price per energy unit, not a physical operating condition."
+    },
+    {
+      "id": "y10-physics-electricity-055",
+      "category": "Energy consumption",
+      "difficulty": "Challenge",
+      "prompt": "Why is a 2 kW appliance not necessarily more costly per day than a 1 kW appliance?",
+      "options": [
+        "kW measures resistance",
+        "All devices use equal energy daily",
+        "Total use time also matters",
+        "Tariffs depend only on device colour"
+      ],
+      "answer": 2,
+      "explanation": "Compare Pt for the full daily use, not power alone."
+    },
+    {
+      "id": "y10-physics-electricity-056",
+      "category": "Energy consumption",
+      "difficulty": "Application",
+      "prompt": "A 2000 W appliance runs at constant power for 3 h. Find its energy consumption. Give the closest value.",
+      "options": [
+        "12 kWh",
+        "3 kWh",
+        "60 kWh",
+        "6 kWh"
+      ],
+      "answer": 3,
+      "explanation": "Convert watts to kilowatts, then E = 2.0 × 3. Result: 6 kWh."
+    },
+    {
+      "id": "y10-physics-electricity-057",
+      "category": "Energy consumption",
+      "difficulty": "Application",
+      "prompt": "A 100 W appliance runs at constant power for 5 h. Find its energy consumption. Give the closest value.",
+      "options": [
+        "0.5 kWh",
+        "1 kWh",
+        "0.25 kWh",
+        "5 kWh"
+      ],
+      "answer": 0,
+      "explanation": "Convert watts to kilowatts, then E = 0.1 × 5. Result: 0.5 kWh."
+    },
+    {
+      "id": "y10-physics-electricity-058",
+      "category": "Energy consumption",
+      "difficulty": "Application",
+      "prompt": "A 1500 W appliance runs at constant power for 2 h. Find its energy consumption. Give the closest value.",
+      "options": [
+        "6 kWh",
+        "3 kWh",
+        "1.5 kWh",
+        "30 kWh"
+      ],
+      "answer": 1,
+      "explanation": "Convert watts to kilowatts, then E = 1.5 × 2. Result: 3 kWh."
+    },
+    {
+      "id": "y10-physics-electricity-059",
+      "category": "Energy consumption",
+      "difficulty": "Application",
+      "prompt": "A 750 W appliance runs at constant power for 4 h. Find its energy consumption. Give the closest value.",
+      "options": [
+        "6 kWh",
+        "1.5 kWh",
+        "3 kWh",
+        "30 kWh"
+      ],
+      "answer": 2,
+      "explanation": "Convert watts to kilowatts, then E = 0.75 × 4. Result: 3 kWh."
+    },
+    {
+      "id": "y10-physics-electricity-060",
+      "category": "Energy consumption",
+      "difficulty": "Application",
+      "prompt": "A 3000 W appliance runs at constant power for 0.5 h. Find its energy consumption. Give the closest value.",
+      "options": [
+        "3 kWh",
+        "0.75 kWh",
+        "15 kWh",
+        "1.5 kWh"
+      ],
+      "answer": 3,
+      "explanation": "Convert watts to kilowatts, then E = 3.0 × 0.5. Result: 1.5 kWh."
+    }
+  ]
+}

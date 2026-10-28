@@ -1,0 +1,854 @@
+{
+  "topicId": "y10-physics-kinematics",
+  "title": "Motion and projectiles",
+  "categories": [
+    "Motion quantities",
+    "Motion graphs",
+    "Free fall",
+    "Projectiles",
+    "Stopping distance",
+    "Catch-up and delayed starts"
+  ],
+  "questions": [
+    {
+      "id": "y10-physics-kinematics-001",
+      "category": "Motion quantities",
+      "difficulty": "Foundation",
+      "prompt": "Displacement differs from distance because it includes…",
+      "options": [
+        "Direction and only the change in position",
+        "Every section of path length without direction",
+        "Mass",
+        "Elapsed time only"
+      ],
+      "answer": 0,
+      "explanation": "Displacement is a vector from initial to final position; distance is total path length."
+    },
+    {
+      "id": "y10-physics-kinematics-002",
+      "category": "Motion quantities",
+      "difficulty": "Foundation",
+      "prompt": "Acceleration is the rate of change of…",
+      "options": [
+        "Position only",
+        "Velocity",
+        "Mass",
+        "Force in every case"
+      ],
+      "answer": 1,
+      "explanation": "a = Δv/Δt."
+    },
+    {
+      "id": "y10-physics-kinematics-003",
+      "category": "Motion quantities",
+      "difficulty": "Application",
+      "prompt": "A runner travels 10 m east then 4 m west. Displacement is…",
+      "options": [
+        "14 m east",
+        "6 m west",
+        "6 m east",
+        "14 m west"
+      ],
+      "answer": 2,
+      "explanation": "Use signed position changes: +10 − 4 = +6 m."
+    },
+    {
+      "id": "y10-physics-kinematics-004",
+      "category": "Motion quantities",
+      "difficulty": "Application",
+      "prompt": "Can an object have negative velocity and positive acceleration?",
+      "options": [
+        "No, both signs must match",
+        "Only if it has negative mass",
+        "Only if position is zero",
+        "Yes; it can be moving left while slowing down"
+      ],
+      "answer": 3,
+      "explanation": "Velocity gives direction of motion; acceleration gives direction of velocity change."
+    },
+    {
+      "id": "y10-physics-kinematics-005",
+      "category": "Motion quantities",
+      "difficulty": "Challenge",
+      "prompt": "A trolley returns to its starting position after moving. Which can be zero?",
+      "options": [
+        "Displacement, while distance is positive",
+        "Distance, while displacement is positive",
+        "All elapsed time",
+        "Every instantaneous speed"
+      ],
+      "answer": 0,
+      "explanation": "Net position change may be zero even when a nonzero path was travelled."
+    },
+    {
+      "id": "y10-physics-kinematics-006",
+      "category": "Motion quantities",
+      "difficulty": "Application",
+      "prompt": "Velocity changes from 2 m/s to 10 m/s in 4 s. Find the constant acceleration. Give the closest value.",
+      "options": [
+        "4 m/s²",
+        "2 m/s²",
+        "1 m/s²",
+        "20 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "a = (v − u)/t = (10 − 2)/4. Result: 2 m/s²."
+    },
+    {
+      "id": "y10-physics-kinematics-007",
+      "category": "Motion quantities",
+      "difficulty": "Application",
+      "prompt": "Velocity changes from 10 m/s to 4 m/s in 3 s. Find the constant acceleration. Give the closest value.",
+      "options": [
+        "-4 m/s²",
+        "-1 m/s²",
+        "-2 m/s²",
+        "-20 m/s²"
+      ],
+      "answer": 2,
+      "explanation": "a = (v − u)/t = (4 − 10)/3. Result: -2 m/s²."
+    },
+    {
+      "id": "y10-physics-kinematics-008",
+      "category": "Motion quantities",
+      "difficulty": "Application",
+      "prompt": "Velocity changes from 0 m/s to 15 m/s in 5 s. Find the constant acceleration. Give the closest value.",
+      "options": [
+        "6 m/s²",
+        "1.5 m/s²",
+        "30 m/s²",
+        "3 m/s²"
+      ],
+      "answer": 3,
+      "explanation": "a = (v − u)/t = (15 − 0)/5. Result: 3 m/s²."
+    },
+    {
+      "id": "y10-physics-kinematics-009",
+      "category": "Motion quantities",
+      "difficulty": "Application",
+      "prompt": "Velocity changes from 8 m/s to 0 m/s in 4 s. Find the constant acceleration. Give the closest value.",
+      "options": [
+        "-2 m/s²",
+        "-4 m/s²",
+        "-1 m/s²",
+        "-20 m/s²"
+      ],
+      "answer": 0,
+      "explanation": "a = (v − u)/t = (0 − 8)/4. Result: -2 m/s²."
+    },
+    {
+      "id": "y10-physics-kinematics-010",
+      "category": "Motion quantities",
+      "difficulty": "Application",
+      "prompt": "Velocity changes from -2 m/s to 4 m/s in 3 s. Find the constant acceleration. Give the closest value.",
+      "options": [
+        "4 m/s²",
+        "2 m/s²",
+        "1 m/s²",
+        "20 m/s²"
+      ],
+      "answer": 1,
+      "explanation": "a = (v − u)/t = (4 − -2)/3. Result: 2 m/s²."
+    },
+    {
+      "id": "y10-physics-kinematics-011",
+      "category": "Motion graphs",
+      "difficulty": "Foundation",
+      "prompt": "The gradient of a position–time graph is…",
+      "options": [
+        "Acceleration",
+        "Force",
+        "Velocity",
+        "Mass"
+      ],
+      "answer": 2,
+      "explanation": "Gradient gives change in position per unit time."
+    },
+    {
+      "id": "y10-physics-kinematics-012",
+      "category": "Motion graphs",
+      "difficulty": "Foundation",
+      "prompt": "The gradient of a velocity–time graph is…",
+      "options": [
+        "Position",
+        "Distance only",
+        "Kinetic energy",
+        "Acceleration"
+      ],
+      "answer": 3,
+      "explanation": "Gradient gives velocity change per unit time."
+    },
+    {
+      "id": "y10-physics-kinematics-013",
+      "category": "Motion graphs",
+      "difficulty": "Foundation",
+      "prompt": "Signed area under a velocity–time graph gives…",
+      "options": [
+        "Displacement",
+        "Acceleration",
+        "Resultant force",
+        "Mass"
+      ],
+      "answer": 0,
+      "explanation": "The time integral of velocity is displacement."
+    },
+    {
+      "id": "y10-physics-kinematics-014",
+      "category": "Motion graphs",
+      "difficulty": "Application",
+      "prompt": "A horizontal position–time line indicates…",
+      "options": [
+        "Constant nonzero acceleration",
+        "Constant position",
+        "Increasing speed",
+        "Zero elapsed time"
+      ],
+      "answer": 1,
+      "explanation": "Position is not changing, so velocity is zero."
+    },
+    {
+      "id": "y10-physics-kinematics-015",
+      "category": "Motion graphs",
+      "difficulty": "Challenge",
+      "prompt": "A velocity–time graph crossing from positive to negative velocity indicates…",
+      "options": [
+        "Negative time",
+        "Zero acceleration in every case",
+        "Reversal of direction",
+        "An impossible motion"
+      ],
+      "answer": 2,
+      "explanation": "Velocity zero at the crossing separates motion in opposite directions."
+    },
+    {
+      "id": "y10-physics-kinematics-016",
+      "category": "Motion graphs",
+      "difficulty": "Challenge",
+      "prompt": "At constant acceleration 1 m/s², a trolley starts at u = 2 m/s. Find displacement after 4 s. Give the closest value.",
+      "options": [
+        "32 m",
+        "8 m",
+        "160 m",
+        "16 m"
+      ],
+      "answer": 3,
+      "explanation": "s = ut + ½at² = 2×4 + 0.5×1×4². This is signed displacement. Result: 16 m."
+    },
+    {
+      "id": "y10-physics-kinematics-017",
+      "category": "Motion graphs",
+      "difficulty": "Challenge",
+      "prompt": "At constant acceleration -2 m/s², a trolley starts at u = 4 m/s. Find displacement after 4 s. Give the closest value.",
+      "options": [
+        "0 m",
+        "1 m",
+        "-1 m",
+        "2 m"
+      ],
+      "answer": 0,
+      "explanation": "s = ut + ½at² = 4×4 + 0.5×-2×4². This is signed displacement. Result: 0 m."
+    },
+    {
+      "id": "y10-physics-kinematics-018",
+      "category": "Motion graphs",
+      "difficulty": "Challenge",
+      "prompt": "At constant acceleration 3 m/s², a trolley starts at u = 0 m/s. Find displacement after 5 s. Give the closest value.",
+      "options": [
+        "75 m",
+        "37.5 m",
+        "18.8 m",
+        "375 m"
+      ],
+      "answer": 1,
+      "explanation": "s = ut + ½at² = 0×5 + 0.5×3×5². This is signed displacement. Result: 37.5 m."
+    },
+    {
+      "id": "y10-physics-kinematics-019",
+      "category": "Motion graphs",
+      "difficulty": "Challenge",
+      "prompt": "At constant acceleration -1 m/s², a trolley starts at u = 6 m/s. Find displacement after 3 s. Give the closest value.",
+      "options": [
+        "27 m",
+        "6.75 m",
+        "13.5 m",
+        "135 m"
+      ],
+      "answer": 2,
+      "explanation": "s = ut + ½at² = 6×3 + 0.5×-1×3². This is signed displacement. Result: 13.5 m."
+    },
+    {
+      "id": "y10-physics-kinematics-020",
+      "category": "Motion graphs",
+      "difficulty": "Challenge",
+      "prompt": "At constant acceleration 2 m/s², a trolley starts at u = -2 m/s. Find displacement after 4 s. Give the closest value.",
+      "options": [
+        "16 m",
+        "4 m",
+        "80 m",
+        "8 m"
+      ],
+      "answer": 3,
+      "explanation": "s = ut + ½at² = -2×4 + 0.5×2×4². This is signed displacement. Result: 8 m."
+    },
+    {
+      "id": "y10-physics-kinematics-021",
+      "category": "Free fall",
+      "difficulty": "Foundation",
+      "prompt": "In a vacuum, a feather and ball released together at the same height have…",
+      "options": [
+        "The same gravitational acceleration",
+        "Equal mass",
+        "Zero weight",
+        "No gravitational force"
+      ],
+      "answer": 0,
+      "explanation": "Without air resistance, acceleration is independent of mass at a fixed location."
+    },
+    {
+      "id": "y10-physics-kinematics-022",
+      "category": "Free fall",
+      "difficulty": "Foundation",
+      "prompt": "For a drop from rest, initial vertical velocity is…",
+      "options": [
+        "Always 9.81 m/s",
+        "Zero",
+        "Equal to height",
+        "Infinite"
+      ],
+      "answer": 1,
+      "explanation": "Released from rest means u = 0."
+    },
+    {
+      "id": "y10-physics-kinematics-023",
+      "category": "Free fall",
+      "difficulty": "Application",
+      "prompt": "In free fall near Earth without air resistance, downward speed…",
+      "options": [
+        "Remains zero",
+        "Depends on mass alone",
+        "Increases by about 9.81 m/s each second",
+        "Decreases by 9.81 m/s each second during a drop"
+      ],
+      "answer": 2,
+      "explanation": "Gravity gives approximately constant downward acceleration."
+    },
+    {
+      "id": "y10-physics-kinematics-024",
+      "category": "Free fall",
+      "difficulty": "Application",
+      "prompt": "The Moon’s smaller g makes a drop from the same height take…",
+      "options": [
+        "Less time",
+        "Exactly the same time",
+        "Zero time",
+        "Longer"
+      ],
+      "answer": 3,
+      "explanation": "t = √(2h/g), which increases when g is smaller."
+    },
+    {
+      "id": "y10-physics-kinematics-025",
+      "category": "Free fall",
+      "difficulty": "Challenge",
+      "prompt": "The feather falls slowly in air mainly because…",
+      "options": [
+        "Air resistance is important relative to its weight",
+        "Gravity does not act on feathers",
+        "Its mass is negative",
+        "The atmosphere reverses gravity"
+      ],
+      "answer": 0,
+      "explanation": "Drag depends on shape, area, speed and fluid properties; the vacuum model removes it."
+    },
+    {
+      "id": "y10-physics-kinematics-026",
+      "category": "Free fall",
+      "difficulty": "Challenge",
+      "prompt": "An object drops from rest through 5 m in vacuum near Earth. Use g = 9.81 m/s². Find the fall time. Give the closest value.",
+      "options": [
+        "2.02 s",
+        "1.01 s",
+        "0.505 s",
+        "10.1 s"
+      ],
+      "answer": 1,
+      "explanation": "h = ½gt², so t = √(2h/g). Result: 1.01 s."
+    },
+    {
+      "id": "y10-physics-kinematics-027",
+      "category": "Free fall",
+      "difficulty": "Challenge",
+      "prompt": "An object drops from rest through 10 m in vacuum near Earth. Use g = 9.81 m/s². Find the fall time. Give the closest value.",
+      "options": [
+        "2.86 s",
+        "0.714 s",
+        "1.43 s",
+        "14.3 s"
+      ],
+      "answer": 2,
+      "explanation": "h = ½gt², so t = √(2h/g). Result: 1.43 s."
+    },
+    {
+      "id": "y10-physics-kinematics-028",
+      "category": "Free fall",
+      "difficulty": "Challenge",
+      "prompt": "An object drops from rest through 20 m in vacuum near Earth. Use g = 9.81 m/s². Find the fall time. Give the closest value.",
+      "options": [
+        "4.04 s",
+        "1.01 s",
+        "20.2 s",
+        "2.02 s"
+      ],
+      "answer": 3,
+      "explanation": "h = ½gt², so t = √(2h/g). Result: 2.02 s."
+    },
+    {
+      "id": "y10-physics-kinematics-029",
+      "category": "Free fall",
+      "difficulty": "Challenge",
+      "prompt": "An object drops from rest through 30 m in vacuum near Earth. Use g = 9.81 m/s². Find the fall time. Give the closest value.",
+      "options": [
+        "2.47 s",
+        "4.95 s",
+        "1.24 s",
+        "24.7 s"
+      ],
+      "answer": 0,
+      "explanation": "h = ½gt², so t = √(2h/g). Result: 2.47 s."
+    },
+    {
+      "id": "y10-physics-kinematics-030",
+      "category": "Free fall",
+      "difficulty": "Challenge",
+      "prompt": "An object drops from rest through 50 m in vacuum near Earth. Use g = 9.81 m/s². Find the fall time. Give the closest value.",
+      "options": [
+        "6.39 s",
+        "3.19 s",
+        "1.6 s",
+        "31.9 s"
+      ],
+      "answer": 1,
+      "explanation": "h = ½gt², so t = √(2h/g). Result: 3.19 s."
+    },
+    {
+      "id": "y10-physics-kinematics-031",
+      "category": "Projectiles",
+      "difficulty": "Foundation",
+      "prompt": "Without air resistance, a projectile’s horizontal acceleration is…",
+      "options": [
+        "9.81 m/s²",
+        "Equal to vertical velocity",
+        "Zero",
+        "Set by its mass"
+      ],
+      "answer": 2,
+      "explanation": "Gravity acts vertically in this ideal flat-Earth model."
+    },
+    {
+      "id": "y10-physics-kinematics-032",
+      "category": "Projectiles",
+      "difficulty": "Foundation",
+      "prompt": "At a projectile’s highest point, the vertical velocity is…",
+      "options": [
+        "Equal to the initial upward velocity",
+        "Always equal to horizontal velocity",
+        "Infinite",
+        "Zero"
+      ],
+      "answer": 3,
+      "explanation": "It changes from upwards to downwards through zero; acceleration remains downward."
+    },
+    {
+      "id": "y10-physics-kinematics-033",
+      "category": "Projectiles",
+      "difficulty": "Application",
+      "prompt": "At the highest point, a nonvertical projectile’s total speed is…",
+      "options": [
+        "Its horizontal speed, not generally zero",
+        "Always zero",
+        "Always the launch speed",
+        "Infinite"
+      ],
+      "answer": 0,
+      "explanation": "The horizontal component remains while the vertical component is zero."
+    },
+    {
+      "id": "y10-physics-kinematics-034",
+      "category": "Projectiles",
+      "difficulty": "Application",
+      "prompt": "The vertical acceleration at the top of the flight is…",
+      "options": [
+        "Zero",
+        "Still −g",
+        "Upwards +g",
+        "Equal to horizontal speed"
+      ],
+      "answer": 1,
+      "explanation": "Gravity does not stop acting at the turning point."
+    },
+    {
+      "id": "y10-physics-kinematics-035",
+      "category": "Projectiles",
+      "difficulty": "Challenge",
+      "prompt": "Complementary launch angles have equal ideal ranges only when…",
+      "options": [
+        "The speeds differ arbitrarily",
+        "The initial heights differ arbitrarily",
+        "Speed is equal, launch and landing heights match, and drag is absent",
+        "Air resistance dominates"
+      ],
+      "answer": 2,
+      "explanation": "R = u² sin(2θ)/g applies to equal-height, no-drag flights."
+    },
+    {
+      "id": "y10-physics-kinematics-036",
+      "category": "Projectiles",
+      "difficulty": "Application",
+      "prompt": "A projectile launches at 10 m/s at 30° above horizontal. Find its initial horizontal velocity. Give the closest value.",
+      "options": [
+        "17.3 m/s",
+        "4.33 m/s",
+        "86.6 m/s",
+        "8.66 m/s"
+      ],
+      "answer": 3,
+      "explanation": "Resolve the launch velocity: uₓ = u cosθ. Use degree mode. Result: 8.66 m/s."
+    },
+    {
+      "id": "y10-physics-kinematics-037",
+      "category": "Projectiles",
+      "difficulty": "Application",
+      "prompt": "A projectile launches at 20 m/s at 45° above horizontal. Find its initial horizontal velocity. Give the closest value.",
+      "options": [
+        "14.1 m/s",
+        "28.3 m/s",
+        "7.07 m/s",
+        "141 m/s"
+      ],
+      "answer": 0,
+      "explanation": "Resolve the launch velocity: uₓ = u cosθ. Use degree mode. Result: 14.1 m/s."
+    },
+    {
+      "id": "y10-physics-kinematics-038",
+      "category": "Projectiles",
+      "difficulty": "Application",
+      "prompt": "A projectile launches at 25 m/s at 60° above horizontal. Find its initial horizontal velocity. Give the closest value.",
+      "options": [
+        "25 m/s",
+        "12.5 m/s",
+        "6.25 m/s",
+        "125 m/s"
+      ],
+      "answer": 1,
+      "explanation": "Resolve the launch velocity: uₓ = u cosθ. Use degree mode. Result: 12.5 m/s."
+    },
+    {
+      "id": "y10-physics-kinematics-039",
+      "category": "Projectiles",
+      "difficulty": "Application",
+      "prompt": "A projectile launches at 15 m/s at 35° above horizontal. Find its initial horizontal velocity. Give the closest value.",
+      "options": [
+        "24.6 m/s",
+        "6.14 m/s",
+        "12.3 m/s",
+        "123 m/s"
+      ],
+      "answer": 2,
+      "explanation": "Resolve the launch velocity: uₓ = u cosθ. Use degree mode. Result: 12.3 m/s."
+    },
+    {
+      "id": "y10-physics-kinematics-040",
+      "category": "Projectiles",
+      "difficulty": "Application",
+      "prompt": "A projectile launches at 30 m/s at 50° above horizontal. Find its initial horizontal velocity. Give the closest value.",
+      "options": [
+        "38.6 m/s",
+        "9.64 m/s",
+        "193 m/s",
+        "19.3 m/s"
+      ],
+      "answer": 3,
+      "explanation": "Resolve the launch velocity: uₓ = u cosθ. Use degree mode. Result: 19.3 m/s."
+    },
+    {
+      "id": "y10-physics-kinematics-041",
+      "category": "Stopping distance",
+      "difficulty": "Foundation",
+      "prompt": "Total stopping distance is the sum of…",
+      "options": [
+        "Thinking and braking distances",
+        "Speed and mass",
+        "Reaction time and force",
+        "Velocity and acceleration"
+      ],
+      "answer": 0,
+      "explanation": "The car travels during the driver’s reaction and then during braking."
+    },
+    {
+      "id": "y10-physics-kinematics-042",
+      "category": "Stopping distance",
+      "difficulty": "Foundation",
+      "prompt": "Thinking distance equals…",
+      "options": [
+        "Speed squared × reaction time",
+        "Initial speed × reaction time",
+        "Deceleration divided by time",
+        "Mass × speed"
+      ],
+      "answer": 1,
+      "explanation": "During the ideal reaction interval, speed is unchanged."
+    },
+    {
+      "id": "y10-physics-kinematics-043",
+      "category": "Stopping distance",
+      "difficulty": "Application",
+      "prompt": "Doubling speed at fixed braking deceleration multiplies braking distance by…",
+      "options": [
+        "Two",
+        "One half",
+        "Four",
+        "One"
+      ],
+      "answer": 2,
+      "explanation": "Braking distance v²/(2a) is quadratic in speed."
+    },
+    {
+      "id": "y10-physics-kinematics-044",
+      "category": "Stopping distance",
+      "difficulty": "Application",
+      "prompt": "A longer reaction time at unchanged speed gives…",
+      "options": [
+        "A shorter thinking distance",
+        "Zero thinking distance",
+        "Unchanged thinking distance",
+        "A longer thinking distance"
+      ],
+      "answer": 3,
+      "explanation": "d_thinking = vt_reaction."
+    },
+    {
+      "id": "y10-physics-kinematics-045",
+      "category": "Stopping distance",
+      "difficulty": "Challenge",
+      "prompt": "The simple stopping model omits which real effect?",
+      "options": [
+        "Changing tyre–road grip",
+        "The car’s initial speed",
+        "Reaction time",
+        "Braking deceleration as a chosen input"
+      ],
+      "answer": 0,
+      "explanation": "The model assumes a constant chosen deceleration rather than detailed tyre and road mechanics."
+    },
+    {
+      "id": "y10-physics-kinematics-046",
+      "category": "Stopping distance",
+      "difficulty": "Challenge",
+      "prompt": "A car travels at 10 m/s, the reaction time is 0.7 s and braking deceleration is 5 m/s². Find total stopping distance. Give the closest value.",
+      "options": [
+        "34 m",
+        "17 m",
+        "8.5 m",
+        "170 m"
+      ],
+      "answer": 1,
+      "explanation": "d_total = vt_reaction + v²/(2a), with constant speed during reaction and constant deceleration during braking. Result: 17 m."
+    },
+    {
+      "id": "y10-physics-kinematics-047",
+      "category": "Stopping distance",
+      "difficulty": "Challenge",
+      "prompt": "A car travels at 20 m/s, the reaction time is 0.7 s and braking deceleration is 5 m/s². Find total stopping distance. Give the closest value.",
+      "options": [
+        "108 m",
+        "27 m",
+        "54 m",
+        "540 m"
+      ],
+      "answer": 2,
+      "explanation": "d_total = vt_reaction + v²/(2a), with constant speed during reaction and constant deceleration during braking. Result: 54 m."
+    },
+    {
+      "id": "y10-physics-kinematics-048",
+      "category": "Stopping distance",
+      "difficulty": "Challenge",
+      "prompt": "A car travels at 15 m/s, the reaction time is 1 s and braking deceleration is 4 m/s². Find total stopping distance. Give the closest value.",
+      "options": [
+        "86.2 m",
+        "21.6 m",
+        "431 m",
+        "43.1 m"
+      ],
+      "answer": 3,
+      "explanation": "d_total = vt_reaction + v²/(2a), with constant speed during reaction and constant deceleration during braking. Result: 43.1 m."
+    },
+    {
+      "id": "y10-physics-kinematics-049",
+      "category": "Stopping distance",
+      "difficulty": "Challenge",
+      "prompt": "A car travels at 25 m/s, the reaction time is 0.8 s and braking deceleration is 6 m/s². Find total stopping distance. Give the closest value.",
+      "options": [
+        "72.1 m",
+        "144 m",
+        "36 m",
+        "721 m"
+      ],
+      "answer": 0,
+      "explanation": "d_total = vt_reaction + v²/(2a), with constant speed during reaction and constant deceleration during braking. Result: 72.1 m."
+    },
+    {
+      "id": "y10-physics-kinematics-050",
+      "category": "Stopping distance",
+      "difficulty": "Challenge",
+      "prompt": "A car travels at 30 m/s, the reaction time is 1 s and braking deceleration is 5 m/s². Find total stopping distance. Give the closest value.",
+      "options": [
+        "240 m",
+        "120 m",
+        "60 m",
+        "1.2e+03 m"
+      ],
+      "answer": 1,
+      "explanation": "d_total = vt_reaction + v²/(2a), with constant speed during reaction and constant deceleration during braking. Result: 120 m."
+    },
+    {
+      "id": "y10-physics-kinematics-051",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Foundation",
+      "prompt": "Two moving objects meet when they have…",
+      "options": [
+        "Equal distances travelled in every case",
+        "Equal speeds only",
+        "Equal positions at the same clock time",
+        "Equal starting positions only"
+      ],
+      "answer": 2,
+      "explanation": "Use a shared origin and clock to compare positions."
+    },
+    {
+      "id": "y10-physics-kinematics-052",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Foundation",
+      "prompt": "B starts 3 s after A. At shared time t ≥ 3 s, B has moved for…",
+      "options": [
+        "t + 3 seconds",
+        "Always t seconds",
+        "Always 3t seconds",
+        "t − 3 seconds"
+      ],
+      "answer": 3,
+      "explanation": "Subtract B’s delay from the common elapsed time."
+    },
+    {
+      "id": "y10-physics-kinematics-053",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Application",
+      "prompt": "On a position–time graph, B waiting at its start before release is shown by…",
+      "options": [
+        "A horizontal segment",
+        "A vertical segment",
+        "A line with infinite speed",
+        "No possible position"
+      ],
+      "answer": 0,
+      "explanation": "B’s position is constant while it waits."
+    },
+    {
+      "id": "y10-physics-kinematics-054",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Application",
+      "prompt": "A is ahead and moving faster than B after B starts. With constant speeds, B…",
+      "options": [
+        "Always catches A eventually",
+        "Never catches A",
+        "Catches A when their speeds are added",
+        "Catches A at t = 0 in every case"
+      ],
+      "answer": 1,
+      "explanation": "The positive gap grows when the object ahead is also faster."
+    },
+    {
+      "id": "y10-physics-kinematics-055",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Challenge",
+      "prompt": "When B begins behind A and is faster, the time from B’s release to catching A is…",
+      "options": [
+        "Initial gap divided by the speed sum in every case",
+        "Delay divided by either mass",
+        "Gap at B’s release divided by the speed difference",
+        "Always equal to the delay"
+      ],
+      "answer": 2,
+      "explanation": "First include A’s travel during the delay; the gap then closes at relative speed vB − vA."
+    },
+    {
+      "id": "y10-physics-kinematics-056",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Challenge",
+      "prompt": "A starts at 20 m at 3 m/s at t = 0. B waits at 0 m until t = 2 s, then moves at 5 m/s in the same direction. At what time from A’s start does B catch A? Give the closest value.",
+      "options": [
+        "30 s",
+        "7.5 s",
+        "150 s",
+        "15 s"
+      ],
+      "answer": 3,
+      "explanation": "Equal positions: 20 + 3t = 0 + 5(t − 2). Solve for the shared time t, not just B’s moving time. Result: 15 s."
+    },
+    {
+      "id": "y10-physics-kinematics-057",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Challenge",
+      "prompt": "A starts at 30 m at 3 m/s at t = 0. B waits at 0 m until t = 0 s, then moves at 6 m/s in the same direction. At what time from A’s start does B catch A? Give the closest value.",
+      "options": [
+        "10 s",
+        "20 s",
+        "5 s",
+        "100 s"
+      ],
+      "answer": 0,
+      "explanation": "Equal positions: 30 + 3t = 0 + 6(t − 0). Solve for the shared time t, not just B’s moving time. Result: 10 s."
+    },
+    {
+      "id": "y10-physics-kinematics-058",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Challenge",
+      "prompt": "A starts at 0 m at 3 m/s at t = 0. B waits at 0 m until t = 4 s, then moves at 5 m/s in the same direction. At what time from A’s start does B catch A? Give the closest value.",
+      "options": [
+        "20 s",
+        "10 s",
+        "5 s",
+        "100 s"
+      ],
+      "answer": 1,
+      "explanation": "Equal positions: 0 + 3t = 0 + 5(t − 4). Solve for the shared time t, not just B’s moving time. Result: 10 s."
+    },
+    {
+      "id": "y10-physics-kinematics-059",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Challenge",
+      "prompt": "A starts at 40 m at 2 m/s at t = 0. B waits at 10 m until t = 3 s, then moves at 5 m/s in the same direction. At what time from A’s start does B catch A? Give the closest value.",
+      "options": [
+        "30 s",
+        "7.5 s",
+        "15 s",
+        "150 s"
+      ],
+      "answer": 2,
+      "explanation": "Equal positions: 40 + 2t = 10 + 5(t − 3). Solve for the shared time t, not just B’s moving time. Result: 15 s."
+    },
+    {
+      "id": "y10-physics-kinematics-060",
+      "category": "Catch-up and delayed starts",
+      "difficulty": "Challenge",
+      "prompt": "A starts at 10 m at 4 m/s at t = 0. B waits at 0 m until t = 5 s, then moves at 8 m/s in the same direction. At what time from A’s start does B catch A? Give the closest value.",
+      "options": [
+        "25 s",
+        "6.25 s",
+        "125 s",
+        "12.5 s"
+      ],
+      "answer": 3,
+      "explanation": "Equal positions: 10 + 4t = 0 + 8(t − 5). Solve for the shared time t, not just B’s moving time. Result: 12.5 s."
+    }
+  ]
+}

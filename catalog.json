@@ -387,6 +387,175 @@
               ]
             }
           ]
+        },
+        {
+          "id": "physics",
+          "name": "Physics",
+          "description": "Operate apparatus, investigate evidence and connect mathematical models to the physical world.",
+          "topics": [
+            {
+              "id": "electricity",
+              "name": "Electricity and electrostatics",
+              "description": "Build a circuit, measure electric force, diagnose protection devices and investigate the energy behind an electricity bill.",
+              "primaryActivity": "electricity-lab",
+              "appTitle": "Electricity and electrostatics",
+              "activities": [
+                {
+                  "id": "electricity-lab",
+                  "title": "Electricity and electrostatics: interactive lab",
+                  "description": "Build a circuit, measure electric force, diagnose protection devices and investigate the energy behind an electricity bill.",
+                  "format": "Interactive physics lab",
+                  "duration": "Explore at your pace",
+                  "href": "activities/y10/physics/electricity/",
+                  "image": "activities/y10/physics/electricity/cover.svg"
+                },
+                {
+                  "id": "electricity-revision",
+                  "title": "Electricity and electrostatics: revision simulator",
+                  "description": "60 questions with selectable areas and levels, explanations, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y10/physics/electricity/revision.html",
+                  "image": "activities/y10/physics/electricity/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "waves",
+              "name": "Waves and sound",
+              "description": "Make waves, compare sound signals, explore electromagnetic radiation and observe reflection, refraction and diffraction.",
+              "primaryActivity": "waves-lab",
+              "appTitle": "Waves and sound",
+              "activities": [
+                {
+                  "id": "waves-lab",
+                  "title": "Waves and sound: interactive lab",
+                  "description": "Make waves, compare sound signals, explore electromagnetic radiation and observe reflection, refraction and diffraction.",
+                  "format": "Interactive physics lab",
+                  "duration": "Explore at your pace",
+                  "href": "activities/y10/physics/waves/",
+                  "image": "activities/y10/physics/waves/cover.svg"
+                },
+                {
+                  "id": "waves-revision",
+                  "title": "Waves and sound: revision simulator",
+                  "description": "60 questions with selectable areas and levels, explanations, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y10/physics/waves/revision.html",
+                  "image": "activities/y10/physics/waves/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "optics",
+              "name": "Optics and cameras",
+              "description": "Rotate a mirror, trace refracted rays, move lenses and focus a camera on its sensor.",
+              "primaryActivity": "optics-lab",
+              "appTitle": "Optics and cameras",
+              "activities": [
+                {
+                  "id": "optics-lab",
+                  "title": "Optics and cameras: interactive lab",
+                  "description": "Rotate a mirror, trace refracted rays, move lenses and focus a camera on its sensor.",
+                  "format": "Interactive physics lab",
+                  "duration": "Explore at your pace",
+                  "href": "activities/y10/physics/optics/",
+                  "image": "activities/y10/physics/optics/cover.svg"
+                },
+                {
+                  "id": "optics-revision",
+                  "title": "Optics and cameras: revision simulator",
+                  "description": "60 questions with selectable areas and levels, explanations, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y10/physics/optics/revision.html",
+                  "image": "activities/y10/physics/optics/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "thermal",
+              "name": "Thermal physics",
+              "description": "Follow energy through materials, melt ice, determine specific heat capacity and mix warm and cool water.",
+              "primaryActivity": "thermal-lab",
+              "appTitle": "Thermal physics",
+              "activities": [
+                {
+                  "id": "thermal-lab",
+                  "title": "Thermal physics: interactive lab",
+                  "description": "Follow energy through materials, melt ice, determine specific heat capacity and mix warm and cool water.",
+                  "format": "Interactive physics lab",
+                  "duration": "Explore at your pace",
+                  "href": "activities/y10/physics/thermal/",
+                  "image": "activities/y10/physics/thermal/cover.svg"
+                },
+                {
+                  "id": "thermal-revision",
+                  "title": "Thermal physics: revision simulator",
+                  "description": "60 questions with selectable areas and levels, explanations, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y10/physics/thermal/revision.html",
+                  "image": "activities/y10/physics/thermal/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "kinematics",
+              "name": "Motion and projectiles",
+              "description": "Drive a trolley, read motion graphs, drop objects in a vacuum and resolve a projectile’s motion.",
+              "primaryActivity": "kinematics-lab",
+              "appTitle": "Motion and projectiles",
+              "activities": [
+                {
+                  "id": "kinematics-lab",
+                  "title": "Motion and projectiles: interactive lab",
+                  "description": "Drive a trolley, read motion graphs, drop objects in a vacuum and resolve a projectile’s motion.",
+                  "format": "Interactive physics lab",
+                  "duration": "Explore at your pace",
+                  "href": "activities/y10/physics/kinematics/",
+                  "image": "activities/y10/physics/kinematics/cover.svg"
+                },
+                {
+                  "id": "kinematics-revision",
+                  "title": "Motion and projectiles: revision simulator",
+                  "description": "60 questions with selectable areas and levels, explanations, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y10/physics/kinematics/revision.html",
+                  "image": "activities/y10/physics/kinematics/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "dynamics",
+              "name": "Forces and dynamics",
+              "description": "Pull a trolley, test friction, release a block on a slope and connect two masses with a light string.",
+              "primaryActivity": "dynamics-lab",
+              "appTitle": "Forces and dynamics",
+              "activities": [
+                {
+                  "id": "dynamics-lab",
+                  "title": "Forces and dynamics: interactive lab",
+                  "description": "Pull a trolley, test friction, release a block on a slope and connect two masses with a light string.",
+                  "format": "Interactive physics lab",
+                  "duration": "Explore at your pace",
+                  "href": "activities/y10/physics/dynamics/",
+                  "image": "activities/y10/physics/dynamics/cover.svg"
+                },
+                {
+                  "id": "dynamics-revision",
+                  "title": "Forces and dynamics: revision simulator",
+                  "description": "60 questions with selectable areas and levels, explanations, test mode and targeted retries.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y10/physics/dynamics/revision.html",
+                  "image": "activities/y10/physics/dynamics/cover.svg"
+                }
+              ]
+            }
+          ]
         }
       ]
     },

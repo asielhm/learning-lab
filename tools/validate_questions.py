@@ -11,6 +11,7 @@ BANKS = {
     "gas-laws.json": "gas-laws",
     **{f"{unit}.json": unit for unit in ("y10-acids-bases", "y10-metals", "y10-redox", "y10-organic")},
 }
+BANKS.update({f"y10-physics-{unit}.json": f"y10-physics-{unit}" for unit in ("electricity", "waves", "optics", "thermal", "kinematics", "dynamics")})
 DIFFICULTIES = {"Foundation", "Application", "Challenge"}
 
 

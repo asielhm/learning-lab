@@ -169,3 +169,27 @@ area examples explicitly use finite differences and trapezoids. They do not clai
 to implement the native derivative/integral commands whose reference procedures
 remain pending. Extend `data/training.ts` in the source repository to add tested
 sequences and attach them to one or more topic groups.
+
+
+## Year 10 Physics
+
+Y10 → Physics contains six syllabus units: Electricity and Electrostatics, Waves and Sound, Optics and Cameras, Thermal Physics, Motion and Projectiles, and Forces and Dynamics. The 25 investigations have equipment placement, instrument controls on the apparatus, continuous motion, live readings, prediction graphs, pause/replay and a ten-trial notebook. Keyboard selection is an alternative to dragging, and Help with this step can demonstrate each practical action. The computer layout includes a focus view tested at 1366×768, 1440×900 and 1920×1080.
+
+Motion includes a dedicated catch-up investigation at `activities/y10/physics/kinematics/#catch-up`. Students choose starting positions, speeds and B’s release delay, compare both position–time lines, inspect a completed run and check predictions of meeting time and position. Presets include position and time head starts, no future meeting, and B starting ahead. Equal-speed coincidence is distinguished from a single meeting.
+
+Each unit has explanations, worked examples, lesson checks and a separate 60-question revision simulator: 360 new questions, 1,240 across the platform. The existing checkbox area/level filters, practice explanations, Test yourself auto-advance, score/review and targeted retries are reused. Physics teacher recording is paused until the later Google question-bank/dashboard update; no Physics practical or revision answers are uploaded.
+
+Source files are in `assets/y10-physics/`. `science.mjs` contains SI calculations, `experiments.mjs` defines the syllabus and investigations, `scenes.mjs` draws the apparatus, and `lab.js` controls the interaction. Assumptions and model limits appear beside each investigation: ideal circuits and point charges, qualitative wave/thermal transfer visuals, thin lenses and signed image distances, no-drag trajectories, simplified friction and ideal pulleys. The protection board is a virtual diagnostic, not a real-mains wiring procedure. Optical diagrams clip distant images while keeping numerical results valid.
+
+Rebuild and validate from the repository root:
+
+```sh
+python3 tools/build_y10_physics_questions.py
+python3 tools/build_y10_physics_pages.py
+python3 tools/validate_catalog.py
+python3 tools/validate_questions.py
+node tests/y10-physics.mjs
+python3 tools/serve.py --port 8058
+```
+
+With the local server running, use `LEARNING_LAB_BASE_URL=http://127.0.0.1:8058 node tests/y10-physics-browser.cjs`. This exercises all 25 apparatus sequences, motion pause/resume, recording and lesson gates, six scored revision sessions, delayed starts and no-meeting predictions, mouse/keyboard access, the camera focus gate and computer layouts. Browser checks make no live Google writes. The PhET Coulomb’s Law link supplied by the teacher is retained as a further-exploration resource; the platform’s models run locally without PhET embeds.

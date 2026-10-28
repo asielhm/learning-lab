@@ -1,0 +1,854 @@
+{
+  "topicId": "y10-physics-optics",
+  "title": "Optics and cameras",
+  "categories": [
+    "Reflection and mirrors",
+    "Refraction and Snell’s law",
+    "Total internal reflection",
+    "Converging lenses",
+    "Diverging lenses",
+    "Cameras and applications"
+  ],
+  "questions": [
+    {
+      "id": "y10-physics-optics-001",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "Reflection angles are measured from the…",
+      "options": [
+        "Normal",
+        "Mirror surface",
+        "Horizontal in every diagram",
+        "Object’s height"
+      ],
+      "answer": 0,
+      "explanation": "The normal is perpendicular to the surface at incidence."
+    },
+    {
+      "id": "y10-physics-optics-002",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "A plane mirror image is…",
+      "options": [
+        "Always real and inverted",
+        "Virtual and upright",
+        "Always magnified",
+        "Formed on the mirror surface itself"
+      ],
+      "answer": 1,
+      "explanation": "Reflected rays appear to come from behind the mirror."
+    },
+    {
+      "id": "y10-physics-optics-003",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "The angle of reflection equals the angle of…",
+      "options": [
+        "Refraction in every case",
+        "The mirror surface",
+        "Incidence",
+        "Any angle chosen by the observer"
+      ],
+      "answer": 2,
+      "explanation": "The law of reflection is i = r."
+    },
+    {
+      "id": "y10-physics-optics-004",
+      "category": "Reflection and mirrors",
+      "difficulty": "Application",
+      "prompt": "An object is partly hidden by a card near a mirror. It can remain visible when…",
+      "options": [
+        "The mirror remembers it",
+        "Light crosses any opaque card",
+        "The card creates its own image source",
+        "An object–mirror–eye path passes around the card"
+      ],
+      "answer": 3,
+      "explanation": "Trace the full path; a card blocks only the rays it intersects."
+    },
+    {
+      "id": "y10-physics-optics-005",
+      "category": "Reflection and mirrors",
+      "difficulty": "Challenge",
+      "prompt": "A plane mirror is often said to reverse left and right. A more precise description is…",
+      "options": [
+        "It reverses the direction perpendicular to its surface",
+        "It rotates every object through 180° vertically",
+        "It swaps up and down in all cases",
+        "It changes the object’s actual handedness physically"
+      ],
+      "answer": 0,
+      "explanation": "Reflection reverses the front–back coordinate; apparent left–right swapping depends on how we compare views."
+    },
+    {
+      "id": "y10-physics-optics-006",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "A ray strikes a plane mirror at 15° to the normal. What is its reflection angle to the normal? Give the closest value.",
+      "options": [
+        "30 °",
+        "15 °",
+        "7.5 °",
+        "150 °"
+      ],
+      "answer": 1,
+      "explanation": "Use i = r; both angles are measured from the normal. Result: 15 °."
+    },
+    {
+      "id": "y10-physics-optics-007",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "A ray strikes a plane mirror at 25° to the normal. What is its reflection angle to the normal? Give the closest value.",
+      "options": [
+        "50 °",
+        "12.5 °",
+        "25 °",
+        "250 °"
+      ],
+      "answer": 2,
+      "explanation": "Use i = r; both angles are measured from the normal. Result: 25 °."
+    },
+    {
+      "id": "y10-physics-optics-008",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "A ray strikes a plane mirror at 35° to the normal. What is its reflection angle to the normal? Give the closest value.",
+      "options": [
+        "70 °",
+        "17.5 °",
+        "350 °",
+        "35 °"
+      ],
+      "answer": 3,
+      "explanation": "Use i = r; both angles are measured from the normal. Result: 35 °."
+    },
+    {
+      "id": "y10-physics-optics-009",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "A ray strikes a plane mirror at 50° to the normal. What is its reflection angle to the normal? Give the closest value.",
+      "options": [
+        "50 °",
+        "100 °",
+        "25 °",
+        "500 °"
+      ],
+      "answer": 0,
+      "explanation": "Use i = r; both angles are measured from the normal. Result: 50 °."
+    },
+    {
+      "id": "y10-physics-optics-010",
+      "category": "Reflection and mirrors",
+      "difficulty": "Foundation",
+      "prompt": "A ray strikes a plane mirror at 70° to the normal. What is its reflection angle to the normal? Give the closest value.",
+      "options": [
+        "140 °",
+        "70 °",
+        "35 °",
+        "700 °"
+      ],
+      "answer": 1,
+      "explanation": "Use i = r; both angles are measured from the normal. Result: 70 °."
+    },
+    {
+      "id": "y10-physics-optics-011",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Foundation",
+      "prompt": "A ray entering a higher refractive index at an oblique angle usually bends…",
+      "options": [
+        "Away from the normal always",
+        "Along the surface in every case",
+        "Towards the normal",
+        "Through 180°"
+      ],
+      "answer": 2,
+      "explanation": "Its speed decreases and the ray bends towards the normal."
+    },
+    {
+      "id": "y10-physics-optics-012",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Foundation",
+      "prompt": "During refraction at a stationary boundary, which remains unchanged?",
+      "options": [
+        "Speed",
+        "Wavelength",
+        "Direction in every case",
+        "Frequency"
+      ],
+      "answer": 3,
+      "explanation": "The source determines frequency; speed and wavelength change together."
+    },
+    {
+      "id": "y10-physics-optics-013",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Foundation",
+      "prompt": "Which equation is Snell’s law?",
+      "options": [
+        "n₁ sin i = n₂ sin r",
+        "n₁ cos i = n₂ sin r in all cases",
+        "i + r = 90° always",
+        "n₁i = n₂r exactly for all angles"
+      ],
+      "answer": 0,
+      "explanation": "Snell’s law relates sines of angles measured from the normal."
+    },
+    {
+      "id": "y10-physics-optics-014",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Application",
+      "prompt": "At normal incidence into glass, a light ray…",
+      "options": [
+        "Cannot enter",
+        "Changes speed without changing direction",
+        "Has zero frequency",
+        "Must undergo TIR"
+      ],
+      "answer": 1,
+      "explanation": "Incidence zero gives refraction zero, but the speed changes."
+    },
+    {
+      "id": "y10-physics-optics-015",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Challenge",
+      "prompt": "A ray moves from glass into air below the critical angle. Its transmitted wavelength…",
+      "options": [
+        "Decreases",
+        "Stays identical while frequency doubles",
+        "Increases",
+        "Becomes zero"
+      ],
+      "answer": 2,
+      "explanation": "Speed increases while frequency stays constant, so λ increases."
+    },
+    {
+      "id": "y10-physics-optics-016",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Challenge",
+      "prompt": "Light enters glass of index 1.50 from air of index 1.00 at 10° to the normal. Find the refracted angle. Give the closest value.",
+      "options": [
+        "13.3 °",
+        "3.32 °",
+        "66.5 °",
+        "6.65 °"
+      ],
+      "answer": 3,
+      "explanation": "r = asin(n₁ sin i/n₂). Use degree mode. Result: 6.65 °."
+    },
+    {
+      "id": "y10-physics-optics-017",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Challenge",
+      "prompt": "Light enters glass of index 1.50 from air of index 1.00 at 20° to the normal. Find the refracted angle. Give the closest value.",
+      "options": [
+        "13.2 °",
+        "26.4 °",
+        "6.59 °",
+        "132 °"
+      ],
+      "answer": 0,
+      "explanation": "r = asin(n₁ sin i/n₂). Use degree mode. Result: 13.2 °."
+    },
+    {
+      "id": "y10-physics-optics-018",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Challenge",
+      "prompt": "Light enters glass of index 1.50 from air of index 1.00 at 30° to the normal. Find the refracted angle. Give the closest value.",
+      "options": [
+        "38.9 °",
+        "19.5 °",
+        "9.74 °",
+        "195 °"
+      ],
+      "answer": 1,
+      "explanation": "r = asin(n₁ sin i/n₂). Use degree mode. Result: 19.5 °."
+    },
+    {
+      "id": "y10-physics-optics-019",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Challenge",
+      "prompt": "Light enters glass of index 1.50 from air of index 1.00 at 45° to the normal. Find the refracted angle. Give the closest value.",
+      "options": [
+        "56.3 °",
+        "14.1 °",
+        "28.1 °",
+        "281 °"
+      ],
+      "answer": 2,
+      "explanation": "r = asin(n₁ sin i/n₂). Use degree mode. Result: 28.1 °."
+    },
+    {
+      "id": "y10-physics-optics-020",
+      "category": "Refraction and Snell’s law",
+      "difficulty": "Challenge",
+      "prompt": "Light enters glass of index 1.50 from air of index 1.00 at 60° to the normal. Find the refracted angle. Give the closest value.",
+      "options": [
+        "70.5 °",
+        "17.6 °",
+        "353 °",
+        "35.3 °"
+      ],
+      "answer": 3,
+      "explanation": "r = asin(n₁ sin i/n₂). Use degree mode. Result: 35.3 °."
+    },
+    {
+      "id": "y10-physics-optics-021",
+      "category": "Total internal reflection",
+      "difficulty": "Foundation",
+      "prompt": "TIR requires light to go from…",
+      "options": [
+        "Higher to lower refractive index",
+        "Lower to higher refractive index",
+        "Air to glass only",
+        "Any medium into any other at 0°"
+      ],
+      "answer": 0,
+      "explanation": "The refracted angle can reach 90° only for the higher-to-lower direction."
+    },
+    {
+      "id": "y10-physics-optics-022",
+      "category": "Total internal reflection",
+      "difficulty": "Foundation",
+      "prompt": "Above the critical angle in an ideal TIR case, there is…",
+      "options": [
+        "No reflected ray",
+        "No propagating transmitted ray",
+        "A transmitted ray at every angle",
+        "Zero incident light"
+      ],
+      "answer": 1,
+      "explanation": "The ideal geometric-optics model gives total reflection."
+    },
+    {
+      "id": "y10-physics-optics-023",
+      "category": "Total internal reflection",
+      "difficulty": "Application",
+      "prompt": "At the critical angle the transmitted ray is…",
+      "options": [
+        "Along the normal",
+        "Back along the incident ray",
+        "Along the boundary",
+        "At 45° in every material"
+      ],
+      "answer": 2,
+      "explanation": "Refraction angle r = 90° at the critical angle."
+    },
+    {
+      "id": "y10-physics-optics-024",
+      "category": "Total internal reflection",
+      "difficulty": "Application",
+      "prompt": "Which is an application of TIR?",
+      "options": [
+        "Making every lens diverge",
+        "Increasing sound frequency",
+        "Stopping all light reflection",
+        "Guiding light in an optical fibre"
+      ],
+      "answer": 3,
+      "explanation": "A suitable higher-index core and lower-index surroundings can guide light."
+    },
+    {
+      "id": "y10-physics-optics-025",
+      "category": "Total internal reflection",
+      "difficulty": "Challenge",
+      "prompt": "Why cannot light entering glass from air undergo TIR at that first boundary?",
+      "options": [
+        "It is travelling from lower to higher index",
+        "Glass never reflects",
+        "Air has infinite index",
+        "The angle can never change"
+      ],
+      "answer": 0,
+      "explanation": "TIR requires the opposite index direction as well as sufficiently large incidence."
+    },
+    {
+      "id": "y10-physics-optics-026",
+      "category": "Total internal reflection",
+      "difficulty": "Challenge",
+      "prompt": "A material of refractive index 1.3 meets air of index 1.00. Find the critical angle for light inside the material. Give the closest value.",
+      "options": [
+        "101 °",
+        "50.3 °",
+        "25.1 °",
+        "503 °"
+      ],
+      "answer": 1,
+      "explanation": "sin c = n₂/n₁ = 1/n; c = asin(1/n). Result: 50.3 °."
+    },
+    {
+      "id": "y10-physics-optics-027",
+      "category": "Total internal reflection",
+      "difficulty": "Challenge",
+      "prompt": "A material of refractive index 1.4 meets air of index 1.00. Find the critical angle for light inside the material. Give the closest value.",
+      "options": [
+        "91.2 °",
+        "22.8 °",
+        "45.6 °",
+        "456 °"
+      ],
+      "answer": 2,
+      "explanation": "sin c = n₂/n₁ = 1/n; c = asin(1/n). Result: 45.6 °."
+    },
+    {
+      "id": "y10-physics-optics-028",
+      "category": "Total internal reflection",
+      "difficulty": "Challenge",
+      "prompt": "A material of refractive index 1.5 meets air of index 1.00. Find the critical angle for light inside the material. Give the closest value.",
+      "options": [
+        "83.6 °",
+        "20.9 °",
+        "418 °",
+        "41.8 °"
+      ],
+      "answer": 3,
+      "explanation": "sin c = n₂/n₁ = 1/n; c = asin(1/n). Result: 41.8 °."
+    },
+    {
+      "id": "y10-physics-optics-029",
+      "category": "Total internal reflection",
+      "difficulty": "Challenge",
+      "prompt": "A material of refractive index 1.6 meets air of index 1.00. Find the critical angle for light inside the material. Give the closest value.",
+      "options": [
+        "38.7 °",
+        "77.4 °",
+        "19.3 °",
+        "387 °"
+      ],
+      "answer": 0,
+      "explanation": "sin c = n₂/n₁ = 1/n; c = asin(1/n). Result: 38.7 °."
+    },
+    {
+      "id": "y10-physics-optics-030",
+      "category": "Total internal reflection",
+      "difficulty": "Challenge",
+      "prompt": "A material of refractive index 1.8 meets air of index 1.00. Find the critical angle for light inside the material. Give the closest value.",
+      "options": [
+        "67.5 °",
+        "33.7 °",
+        "16.9 °",
+        "337 °"
+      ],
+      "answer": 1,
+      "explanation": "sin c = n₂/n₁ = 1/n; c = asin(1/n). Result: 33.7 °."
+    },
+    {
+      "id": "y10-physics-optics-031",
+      "category": "Converging lenses",
+      "difficulty": "Foundation",
+      "prompt": "A converging thin lens has focal length that is…",
+      "options": [
+        "Negative for every object",
+        "Always zero",
+        "Positive in the stated sign convention",
+        "Equal to object distance in every case"
+      ],
+      "answer": 2,
+      "explanation": "Here real-object distance is positive and converging focal length is positive."
+    },
+    {
+      "id": "y10-physics-optics-032",
+      "category": "Converging lenses",
+      "difficulty": "Foundation",
+      "prompt": "A real image can be…",
+      "options": [
+        "Located only by dashed back extensions",
+        "Formed by all diverging lenses with real objects",
+        "Always upright",
+        "Formed on a screen"
+      ],
+      "answer": 3,
+      "explanation": "Real rays converge at a real image, allowing a screen to intercept it."
+    },
+    {
+      "id": "y10-physics-optics-033",
+      "category": "Converging lenses",
+      "difficulty": "Application",
+      "prompt": "A real object inside a converging lens’s focal length forms a…",
+      "options": [
+        "Virtual upright image",
+        "Real inverted image in every case",
+        "Real image at the focal plane",
+        "Zero-size image"
+      ],
+      "answer": 0,
+      "explanation": "Rays diverge after the lens; their backward extensions meet on the object side."
+    },
+    {
+      "id": "y10-physics-optics-034",
+      "category": "Converging lenses",
+      "difficulty": "Application",
+      "prompt": "A real object at twice the focal length of a converging thin lens forms an image…",
+      "options": [
+        "At f, upright",
+        "At 2f, inverted and the same size",
+        "At infinity",
+        "Virtual and smaller"
+      ],
+      "answer": 1,
+      "explanation": "The thin-lens equation gives v = 2f and m = −1."
+    },
+    {
+      "id": "y10-physics-optics-035",
+      "category": "Converging lenses",
+      "difficulty": "Challenge",
+      "prompt": "For an object exactly at the focal point of an ideal converging thin lens, emerging rays are…",
+      "options": [
+        "Focused at the lens centre",
+        "Always virtual at −f",
+        "Parallel; no finite image distance",
+        "Absorbed completely"
+      ],
+      "answer": 2,
+      "explanation": "1/v = 1/f − 1/u = 0, so the image is at infinity in this ideal model."
+    },
+    {
+      "id": "y10-physics-optics-036",
+      "category": "Converging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A converging thin lens has f = +10 cm and real-object distance u = 30 cm. Find v using 1/f = 1/u + 1/v. Give the closest value.",
+      "options": [
+        "30 cm",
+        "7.5 cm",
+        "150 cm",
+        "15 cm"
+      ],
+      "answer": 3,
+      "explanation": "1/v = 1/f − 1/u. Positive v means a real image. Result: 15 cm."
+    },
+    {
+      "id": "y10-physics-optics-037",
+      "category": "Converging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A converging thin lens has f = +12 cm and real-object distance u = 36 cm. Find v using 1/f = 1/u + 1/v. Give the closest value.",
+      "options": [
+        "18 cm",
+        "36 cm",
+        "9 cm",
+        "180 cm"
+      ],
+      "answer": 0,
+      "explanation": "1/v = 1/f − 1/u. Positive v means a real image. Result: 18 cm."
+    },
+    {
+      "id": "y10-physics-optics-038",
+      "category": "Converging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A converging thin lens has f = +8 cm and real-object distance u = 24 cm. Find v using 1/f = 1/u + 1/v. Give the closest value.",
+      "options": [
+        "24 cm",
+        "12 cm",
+        "6 cm",
+        "120 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/v = 1/f − 1/u. Positive v means a real image. Result: 12 cm."
+    },
+    {
+      "id": "y10-physics-optics-039",
+      "category": "Converging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A converging thin lens has f = +15 cm and real-object distance u = 45 cm. Find v using 1/f = 1/u + 1/v. Give the closest value.",
+      "options": [
+        "45 cm",
+        "11.3 cm",
+        "22.5 cm",
+        "225 cm"
+      ],
+      "answer": 2,
+      "explanation": "1/v = 1/f − 1/u. Positive v means a real image. Result: 22.5 cm."
+    },
+    {
+      "id": "y10-physics-optics-040",
+      "category": "Converging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A converging thin lens has f = +5 cm and real-object distance u = 20 cm. Find v using 1/f = 1/u + 1/v. Give the closest value.",
+      "options": [
+        "13.3 cm",
+        "3.33 cm",
+        "66.7 cm",
+        "6.67 cm"
+      ],
+      "answer": 3,
+      "explanation": "1/v = 1/f − 1/u. Positive v means a real image. Result: 6.67 cm."
+    },
+    {
+      "id": "y10-physics-optics-041",
+      "category": "Diverging lenses",
+      "difficulty": "Foundation",
+      "prompt": "A diverging thin lens has focal length that is…",
+      "options": [
+        "Negative in this convention",
+        "Positive for every real object",
+        "Equal to object distance",
+        "Undefined for every object"
+      ],
+      "answer": 0,
+      "explanation": "A diverging focal point is virtual, giving f < 0 in this convention."
+    },
+    {
+      "id": "y10-physics-optics-042",
+      "category": "Diverging lenses",
+      "difficulty": "Foundation",
+      "prompt": "With a real object, a diverging lens forms an image that is…",
+      "options": [
+        "Always real and inverted",
+        "Virtual, upright and smaller",
+        "Always enlarged and real",
+        "Always at infinity"
+      ],
+      "answer": 1,
+      "explanation": "For f < 0 and u > 0, v < 0 and 0 < magnification < 1."
+    },
+    {
+      "id": "y10-physics-optics-043",
+      "category": "Diverging lenses",
+      "difficulty": "Application",
+      "prompt": "A negative image distance here means the image is…",
+      "options": [
+        "Necessarily below the axis",
+        "A negative-sized object",
+        "Virtual, on the object side",
+        "Impossible in optics"
+      ],
+      "answer": 2,
+      "explanation": "The sign indicates which side of the lens contains the image."
+    },
+    {
+      "id": "y10-physics-optics-044",
+      "category": "Diverging lenses",
+      "difficulty": "Application",
+      "prompt": "Dashed extensions on a lens diagram represent…",
+      "options": [
+        "Additional emitted light beams",
+        "A path through an opaque block",
+        "Light travelling backwards in time",
+        "Backward extensions used to locate a virtual image"
+      ],
+      "answer": 3,
+      "explanation": "Real light follows solid outgoing rays; the extensions show apparent origin."
+    },
+    {
+      "id": "y10-physics-optics-045",
+      "category": "Diverging lenses",
+      "difficulty": "Challenge",
+      "prompt": "For a diverging lens with a real object, magnification m = −v/u is…",
+      "options": [
+        "Positive and less than 1",
+        "Negative and less than −1 always",
+        "Always 1",
+        "Always undefined"
+      ],
+      "answer": 0,
+      "explanation": "Negative v and positive u give positive m, with a reduced upright image."
+    },
+    {
+      "id": "y10-physics-optics-046",
+      "category": "Diverging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A diverging thin lens has f = -10 cm and u = 30 cm. Find its signed image distance. Give the closest value.",
+      "options": [
+        "7.5 cm",
+        "-7.5 cm",
+        "30 cm",
+        "10 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/v = 1/f − 1/u. Keep f negative; negative v locates a virtual image. Result: -7.5 cm."
+    },
+    {
+      "id": "y10-physics-optics-047",
+      "category": "Diverging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A diverging thin lens has f = -12 cm and u = 24 cm. Find its signed image distance. Give the closest value.",
+      "options": [
+        "8 cm",
+        "24 cm",
+        "-8 cm",
+        "12 cm"
+      ],
+      "answer": 2,
+      "explanation": "1/v = 1/f − 1/u. Keep f negative; negative v locates a virtual image. Result: -8 cm."
+    },
+    {
+      "id": "y10-physics-optics-048",
+      "category": "Diverging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A diverging thin lens has f = -8 cm and u = 16 cm. Find its signed image distance. Give the closest value.",
+      "options": [
+        "5.33 cm",
+        "16 cm",
+        "8 cm",
+        "-5.33 cm"
+      ],
+      "answer": 3,
+      "explanation": "1/v = 1/f − 1/u. Keep f negative; negative v locates a virtual image. Result: -5.33 cm."
+    },
+    {
+      "id": "y10-physics-optics-049",
+      "category": "Diverging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A diverging thin lens has f = -15 cm and u = 45 cm. Find its signed image distance. Give the closest value.",
+      "options": [
+        "-11.2 cm",
+        "11.2 cm",
+        "45 cm",
+        "15 cm"
+      ],
+      "answer": 0,
+      "explanation": "1/v = 1/f − 1/u. Keep f negative; negative v locates a virtual image. Result: -11.2 cm."
+    },
+    {
+      "id": "y10-physics-optics-050",
+      "category": "Diverging lenses",
+      "difficulty": "Challenge",
+      "prompt": "A diverging thin lens has f = -5 cm and u = 20 cm. Find its signed image distance. Give the closest value.",
+      "options": [
+        "4 cm",
+        "-4 cm",
+        "20 cm",
+        "5 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/v = 1/f − 1/u. Keep f negative; negative v locates a virtual image. Result: -4 cm."
+    },
+    {
+      "id": "y10-physics-optics-051",
+      "category": "Cameras and applications",
+      "difficulty": "Foundation",
+      "prompt": "A camera sensor normally receives an image that is…",
+      "options": [
+        "Virtual and upright",
+        "Always the same size as the object",
+        "Real and inverted",
+        "Formed behind a diverging lens alone"
+      ],
+      "answer": 2,
+      "explanation": "A converging camera lens forms a real image on its sensor."
+    },
+    {
+      "id": "y10-physics-optics-052",
+      "category": "Cameras and applications",
+      "difficulty": "Foundation",
+      "prompt": "Focusing a simple camera involves…",
+      "options": [
+        "Changing the speed of light in vacuum",
+        "Making the image virtual",
+        "Removing the lens",
+        "Matching sensor position to the image plane"
+      ],
+      "answer": 3,
+      "explanation": "The sensor must intercept the converging rays at the required image distance."
+    },
+    {
+      "id": "y10-physics-optics-053",
+      "category": "Cameras and applications",
+      "difficulty": "Application",
+      "prompt": "An object moves farther away from a converging camera lens. Required image distance approaches…",
+      "options": [
+        "The focal length",
+        "Zero",
+        "Minus the focal length for every photograph",
+        "Infinity in all cases"
+      ],
+      "answer": 0,
+      "explanation": "As 1/u approaches zero, v approaches f."
+    },
+    {
+      "id": "y10-physics-optics-054",
+      "category": "Cameras and applications",
+      "difficulty": "Application",
+      "prompt": "Opening the aperture at fixed shutter time generally admits…",
+      "options": [
+        "Less light",
+        "More light",
+        "No light",
+        "Only sound"
+      ],
+      "answer": 1,
+      "explanation": "A larger opening passes more of the available light; other photographic effects also matter."
+    },
+    {
+      "id": "y10-physics-optics-055",
+      "category": "Cameras and applications",
+      "difficulty": "Challenge",
+      "prompt": "In the thin-lens camera model, changing aperture alone changes…",
+      "options": [
+        "Focal length but not admitted light",
+        "The sign of all real-image distances",
+        "Admitted light, but not the focal length",
+        "The object’s actual distance"
+      ],
+      "answer": 2,
+      "explanation": "Aperture limits the ray bundle; the ideal lens focal length remains fixed."
+    },
+    {
+      "id": "y10-physics-optics-056",
+      "category": "Cameras and applications",
+      "difficulty": "Challenge",
+      "prompt": "A camera lens has focal length 50 mm and object distance 1000 mm. Where should its sensor be, measured from the thin lens? Give the closest value.",
+      "options": [
+        "105 mm",
+        "26.3 mm",
+        "526 mm",
+        "52.6 mm"
+      ],
+      "answer": 3,
+      "explanation": "Use the same units for f, u and v, and solve 1/v = 1/f − 1/u. Result: 52.6 mm."
+    },
+    {
+      "id": "y10-physics-optics-057",
+      "category": "Cameras and applications",
+      "difficulty": "Challenge",
+      "prompt": "A camera lens has focal length 50 mm and object distance 2000 mm. Where should its sensor be, measured from the thin lens? Give the closest value.",
+      "options": [
+        "51.3 mm",
+        "103 mm",
+        "25.6 mm",
+        "513 mm"
+      ],
+      "answer": 0,
+      "explanation": "Use the same units for f, u and v, and solve 1/v = 1/f − 1/u. Result: 51.3 mm."
+    },
+    {
+      "id": "y10-physics-optics-058",
+      "category": "Cameras and applications",
+      "difficulty": "Challenge",
+      "prompt": "A camera lens has focal length 35 mm and object distance 700 mm. Where should its sensor be, measured from the thin lens? Give the closest value.",
+      "options": [
+        "73.7 mm",
+        "36.8 mm",
+        "18.4 mm",
+        "368 mm"
+      ],
+      "answer": 1,
+      "explanation": "Use the same units for f, u and v, and solve 1/v = 1/f − 1/u. Result: 36.8 mm."
+    },
+    {
+      "id": "y10-physics-optics-059",
+      "category": "Cameras and applications",
+      "difficulty": "Challenge",
+      "prompt": "A camera lens has focal length 70 mm and object distance 1400 mm. Where should its sensor be, measured from the thin lens? Give the closest value.",
+      "options": [
+        "147 mm",
+        "36.8 mm",
+        "73.7 mm",
+        "737 mm"
+      ],
+      "answer": 2,
+      "explanation": "Use the same units for f, u and v, and solve 1/v = 1/f − 1/u. Result: 73.7 mm."
+    },
+    {
+      "id": "y10-physics-optics-060",
+      "category": "Cameras and applications",
+      "difficulty": "Challenge",
+      "prompt": "A camera lens has focal length 60 mm and object distance 1200 mm. Where should its sensor be, measured from the thin lens? Give the closest value.",
+      "options": [
+        "126 mm",
+        "31.6 mm",
+        "632 mm",
+        "63.2 mm"
+      ],
+      "answer": 3,
+      "explanation": "Use the same units for f, u and v, and solve 1/v = 1/f − 1/u. Result: 63.2 mm."
+    }
+  ]
+}

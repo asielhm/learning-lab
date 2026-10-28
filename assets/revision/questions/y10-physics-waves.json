@@ -1,0 +1,854 @@
+{
+  "topicId": "y10-physics-waves",
+  "title": "Waves and sound",
+  "categories": [
+    "Wave properties",
+    "Longitudinal and transverse",
+    "Sound and echoes",
+    "Doppler effect",
+    "Electromagnetic spectrum",
+    "Wave behaviour"
+  ],
+  "questions": [
+    {
+      "id": "y10-physics-waves-001",
+      "category": "Wave properties",
+      "difficulty": "Foundation",
+      "prompt": "Frequency is the number of oscillations per…",
+      "options": [
+        "Second",
+        "Metre",
+        "Kilogram",
+        "Coulomb"
+      ],
+      "answer": 0,
+      "explanation": "Frequency is measured in hertz: oscillations per second."
+    },
+    {
+      "id": "y10-physics-waves-002",
+      "category": "Wave properties",
+      "difficulty": "Foundation",
+      "prompt": "Wavelength is the distance between…",
+      "options": [
+        "A crest and the next trough only",
+        "Adjacent points in phase, such as consecutive crests",
+        "Any two particles",
+        "The source and the end of the medium"
+      ],
+      "answer": 1,
+      "explanation": "Wavelength is one complete spatial cycle."
+    },
+    {
+      "id": "y10-physics-waves-003",
+      "category": "Wave properties",
+      "difficulty": "Foundation",
+      "prompt": "Which equation links wave speed, frequency and wavelength?",
+      "options": [
+        "v = f/λ",
+        "f = vλ",
+        "v = fλ",
+        "λ = vf"
+      ],
+      "answer": 2,
+      "explanation": "A wave travels one wavelength per oscillation period."
+    },
+    {
+      "id": "y10-physics-waves-004",
+      "category": "Wave properties",
+      "difficulty": "Application",
+      "prompt": "At fixed wave speed, increasing frequency makes wavelength…",
+      "options": [
+        "Larger",
+        "Unchanged in all cases",
+        "Negative",
+        "Smaller"
+      ],
+      "answer": 3,
+      "explanation": "λ = v/f, so f and λ are inversely related at fixed speed."
+    },
+    {
+      "id": "y10-physics-waves-005",
+      "category": "Wave properties",
+      "difficulty": "Challenge",
+      "prompt": "Doubling the amplitude of an ideal linear wave necessarily doubles its…",
+      "options": [
+        "Maximum particle displacement",
+        "Frequency",
+        "Wavelength",
+        "Speed"
+      ],
+      "answer": 0,
+      "explanation": "Amplitude is the maximum displacement from equilibrium; linear-wave speed is not set by amplitude."
+    },
+    {
+      "id": "y10-physics-waves-006",
+      "category": "Wave properties",
+      "difficulty": "Application",
+      "prompt": "A wave has frequency 2 Hz and wavelength 3 m. Find its speed. Give the closest value.",
+      "options": [
+        "12 m/s",
+        "6 m/s",
+        "3 m/s",
+        "60 m/s"
+      ],
+      "answer": 1,
+      "explanation": "v = fλ = 2 × 3. Result: 6 m/s."
+    },
+    {
+      "id": "y10-physics-waves-007",
+      "category": "Wave properties",
+      "difficulty": "Application",
+      "prompt": "A wave has frequency 5 Hz and wavelength 2 m. Find its speed. Give the closest value.",
+      "options": [
+        "20 m/s",
+        "5 m/s",
+        "10 m/s",
+        "100 m/s"
+      ],
+      "answer": 2,
+      "explanation": "v = fλ = 5 × 2. Result: 10 m/s."
+    },
+    {
+      "id": "y10-physics-waves-008",
+      "category": "Wave properties",
+      "difficulty": "Application",
+      "prompt": "A wave has frequency 4 Hz and wavelength 0.5 m. Find its speed. Give the closest value.",
+      "options": [
+        "4 m/s",
+        "1 m/s",
+        "20 m/s",
+        "2 m/s"
+      ],
+      "answer": 3,
+      "explanation": "v = fλ = 4 × 0.5. Result: 2 m/s."
+    },
+    {
+      "id": "y10-physics-waves-009",
+      "category": "Wave properties",
+      "difficulty": "Application",
+      "prompt": "A wave has frequency 10 Hz and wavelength 0.4 m. Find its speed. Give the closest value.",
+      "options": [
+        "4 m/s",
+        "8 m/s",
+        "2 m/s",
+        "40 m/s"
+      ],
+      "answer": 0,
+      "explanation": "v = fλ = 10 × 0.4. Result: 4 m/s."
+    },
+    {
+      "id": "y10-physics-waves-010",
+      "category": "Wave properties",
+      "difficulty": "Application",
+      "prompt": "A wave has frequency 1.5 Hz and wavelength 4 m. Find its speed. Give the closest value.",
+      "options": [
+        "12 m/s",
+        "6 m/s",
+        "3 m/s",
+        "60 m/s"
+      ],
+      "answer": 1,
+      "explanation": "v = fλ = 1.5 × 4. Result: 6 m/s."
+    },
+    {
+      "id": "y10-physics-waves-011",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Foundation",
+      "prompt": "In a transverse wave, particles oscillate…",
+      "options": [
+        "Parallel to wave travel",
+        "Only forwards with the crest",
+        "Perpendicular to wave travel",
+        "Without any displacement"
+      ],
+      "answer": 2,
+      "explanation": "Transverse means at right angles to the propagation direction."
+    },
+    {
+      "id": "y10-physics-waves-012",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Foundation",
+      "prompt": "In a longitudinal wave, particles oscillate…",
+      "options": [
+        "Always vertically",
+        "Only perpendicular to travel",
+        "Without any interaction",
+        "Parallel to wave travel"
+      ],
+      "answer": 3,
+      "explanation": "Compressions and rarefactions travel through the medium."
+    },
+    {
+      "id": "y10-physics-waves-013",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Foundation",
+      "prompt": "Sound in air is normally…",
+      "options": [
+        "Longitudinal",
+        "Transverse only",
+        "An electromagnetic wave",
+        "A wave that needs no medium"
+      ],
+      "answer": 0,
+      "explanation": "Air pressure and particle motion vary along the propagation direction."
+    },
+    {
+      "id": "y10-physics-waves-014",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Application",
+      "prompt": "A marked particle in a travelling wave typically…",
+      "options": [
+        "Travels permanently to the far end",
+        "Oscillates around its equilibrium position",
+        "Is used up",
+        "Carries the whole medium forwards"
+      ],
+      "answer": 1,
+      "explanation": "Energy propagates while particles execute local oscillations in this model."
+    },
+    {
+      "id": "y10-physics-waves-015",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Challenge",
+      "prompt": "Which distance is one wavelength in a longitudinal wave?",
+      "options": [
+        "Compression centre to nearest rarefaction centre",
+        "Any adjacent molecules’ spacing",
+        "From one compression centre to the next compression centre",
+        "The total spring length in every case"
+      ],
+      "answer": 2,
+      "explanation": "Consecutive matching compressions are in phase and one wavelength apart."
+    },
+    {
+      "id": "y10-physics-waves-016",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Application",
+      "prompt": "A marked spring particle oscillates at 2 Hz. What is its period? Give the closest value.",
+      "options": [
+        "1 s",
+        "0.25 s",
+        "5 s",
+        "0.5 s"
+      ],
+      "answer": 3,
+      "explanation": "T = 1/f = 1/2. Result: 0.5 s."
+    },
+    {
+      "id": "y10-physics-waves-017",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Application",
+      "prompt": "A marked spring particle oscillates at 4 Hz. What is its period? Give the closest value.",
+      "options": [
+        "0.25 s",
+        "0.5 s",
+        "0.125 s",
+        "2.5 s"
+      ],
+      "answer": 0,
+      "explanation": "T = 1/f = 1/4. Result: 0.25 s."
+    },
+    {
+      "id": "y10-physics-waves-018",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Application",
+      "prompt": "A marked spring particle oscillates at 5 Hz. What is its period? Give the closest value.",
+      "options": [
+        "0.4 s",
+        "0.2 s",
+        "0.1 s",
+        "2 s"
+      ],
+      "answer": 1,
+      "explanation": "T = 1/f = 1/5. Result: 0.2 s."
+    },
+    {
+      "id": "y10-physics-waves-019",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Application",
+      "prompt": "A marked spring particle oscillates at 8 Hz. What is its period? Give the closest value.",
+      "options": [
+        "0.25 s",
+        "0.0625 s",
+        "0.125 s",
+        "1.25 s"
+      ],
+      "answer": 2,
+      "explanation": "T = 1/f = 1/8. Result: 0.125 s."
+    },
+    {
+      "id": "y10-physics-waves-020",
+      "category": "Longitudinal and transverse",
+      "difficulty": "Application",
+      "prompt": "A marked spring particle oscillates at 10 Hz. What is its period? Give the closest value.",
+      "options": [
+        "0.2 s",
+        "0.05 s",
+        "1 s",
+        "0.1 s"
+      ],
+      "answer": 3,
+      "explanation": "T = 1/f = 1/10. Result: 0.1 s."
+    },
+    {
+      "id": "y10-physics-waves-021",
+      "category": "Sound and echoes",
+      "difficulty": "Foundation",
+      "prompt": "Higher sound frequency generally means higher…",
+      "options": [
+        "Pitch",
+        "Loudness in every case",
+        "Sound speed in the same air automatically",
+        "Air density in every case"
+      ],
+      "answer": 0,
+      "explanation": "Pitch relates primarily to frequency."
+    },
+    {
+      "id": "y10-physics-waves-022",
+      "category": "Sound and echoes",
+      "difficulty": "Foundation",
+      "prompt": "Larger pressure amplitude at fixed frequency generally produces…",
+      "options": [
+        "Higher pitch only",
+        "Louder sound",
+        "Lower sound speed",
+        "A vacuum"
+      ],
+      "answer": 1,
+      "explanation": "Loudness also depends on perception and frequency, but increasing amplitude at fixed conditions increases sound intensity."
+    },
+    {
+      "id": "y10-physics-waves-023",
+      "category": "Sound and echoes",
+      "difficulty": "Foundation",
+      "prompt": "Why can sound not travel through an ideal vacuum?",
+      "options": [
+        "It travels too slowly",
+        "It becomes radio",
+        "There is no material medium to transmit pressure disturbances",
+        "Gravity is absent"
+      ],
+      "answer": 2,
+      "explanation": "Mechanical sound waves need particles to transmit the disturbance."
+    },
+    {
+      "id": "y10-physics-waves-024",
+      "category": "Sound and echoes",
+      "difficulty": "Application",
+      "prompt": "In echo ranging, why divide the sound travel distance by two?",
+      "options": [
+        "The sound halves its frequency",
+        "The wall halves the wave speed",
+        "Two sources always emit",
+        "The pulse travels out and back"
+      ],
+      "answer": 3,
+      "explanation": "The measured delay is the round-trip time."
+    },
+    {
+      "id": "y10-physics-waves-025",
+      "category": "Sound and echoes",
+      "difficulty": "Challenge",
+      "prompt": "Increasing the source amplitude but keeping frequency and air conditions fixed changes which microphone-trace feature?",
+      "options": [
+        "Vertical size of oscillations",
+        "Time between successive peaks",
+        "Propagation speed",
+        "Echo distance in every case"
+      ],
+      "answer": 0,
+      "explanation": "Amplitude changes vertical signal size, while period stays fixed."
+    },
+    {
+      "id": "y10-physics-waves-026",
+      "category": "Sound and echoes",
+      "difficulty": "Application",
+      "prompt": "An echo returns after 0.2 s. Sound speed is 340 m/s. How far away is the reflector? Give the closest value.",
+      "options": [
+        "68 m",
+        "34 m",
+        "17 m",
+        "340 m"
+      ],
+      "answer": 1,
+      "explanation": "d = vt/2 = 340 × 0.2/2. Result: 34 m."
+    },
+    {
+      "id": "y10-physics-waves-027",
+      "category": "Sound and echoes",
+      "difficulty": "Application",
+      "prompt": "An echo returns after 0.4 s. Sound speed is 340 m/s. How far away is the reflector? Give the closest value.",
+      "options": [
+        "136 m",
+        "34 m",
+        "68 m",
+        "680 m"
+      ],
+      "answer": 2,
+      "explanation": "d = vt/2 = 340 × 0.4/2. Result: 68 m."
+    },
+    {
+      "id": "y10-physics-waves-028",
+      "category": "Sound and echoes",
+      "difficulty": "Application",
+      "prompt": "An echo returns after 0.5 s. Sound speed is 340 m/s. How far away is the reflector? Give the closest value.",
+      "options": [
+        "170 m",
+        "42.5 m",
+        "850 m",
+        "85 m"
+      ],
+      "answer": 3,
+      "explanation": "d = vt/2 = 340 × 0.5/2. Result: 85 m."
+    },
+    {
+      "id": "y10-physics-waves-029",
+      "category": "Sound and echoes",
+      "difficulty": "Application",
+      "prompt": "An echo returns after 0.8 s. Sound speed is 340 m/s. How far away is the reflector? Give the closest value.",
+      "options": [
+        "136 m",
+        "272 m",
+        "68 m",
+        "1.36e+03 m"
+      ],
+      "answer": 0,
+      "explanation": "d = vt/2 = 340 × 0.8/2. Result: 136 m."
+    },
+    {
+      "id": "y10-physics-waves-030",
+      "category": "Sound and echoes",
+      "difficulty": "Application",
+      "prompt": "An echo returns after 1 s. Sound speed is 340 m/s. How far away is the reflector? Give the closest value.",
+      "options": [
+        "340 m",
+        "170 m",
+        "85 m",
+        "1.7e+03 m"
+      ],
+      "answer": 1,
+      "explanation": "d = vt/2 = 340 × 1/2. Result: 170 m."
+    },
+    {
+      "id": "y10-physics-waves-031",
+      "category": "Doppler effect",
+      "difficulty": "Foundation",
+      "prompt": "A siren approaching a stationary listener is heard at a frequency that is…",
+      "options": [
+        "Lower in all cases",
+        "Exactly zero",
+        "Higher than the emitted frequency",
+        "Unchanged for every source speed"
+      ],
+      "answer": 2,
+      "explanation": "Wavefronts are crowded ahead of a moving source."
+    },
+    {
+      "id": "y10-physics-waves-032",
+      "category": "Doppler effect",
+      "difficulty": "Foundation",
+      "prompt": "Behind a receding sound source, wavelength is…",
+      "options": [
+        "Always shorter",
+        "Zero",
+        "Unrelated to spacing of wavefronts",
+        "Longer than for a stationary source"
+      ],
+      "answer": 3,
+      "explanation": "Successive emitted fronts are farther apart behind the source."
+    },
+    {
+      "id": "y10-physics-waves-033",
+      "category": "Doppler effect",
+      "difficulty": "Application",
+      "prompt": "For the same air conditions, a moving source changes the sound speed relative to stationary air by…",
+      "options": [
+        "No change in this ideal model",
+        "Adding its speed in every direction",
+        "Subtracting its speed everywhere",
+        "Making speed infinite"
+      ],
+      "answer": 0,
+      "explanation": "Source motion changes wavefront spacing; sound speed is set by the medium in this model."
+    },
+    {
+      "id": "y10-physics-waves-034",
+      "category": "Doppler effect",
+      "difficulty": "Application",
+      "prompt": "In the approaching-source formula f′ = fv/(v − vₛ), vₛ must be…",
+      "options": [
+        "Equal to v for all examples",
+        "Below sound speed for this subsonic model",
+        "Negative by definition",
+        "An acceleration"
+      ],
+      "answer": 1,
+      "explanation": "This simple periodic arrival formula is used for a subsonic source and stationary listener."
+    },
+    {
+      "id": "y10-physics-waves-035",
+      "category": "Doppler effect",
+      "difficulty": "Challenge",
+      "prompt": "When the source speed becomes zero, Doppler formulas predict…",
+      "options": [
+        "Twice the emitted frequency",
+        "No sound",
+        "Observed frequency equals emitted frequency",
+        "Infinite wavelength"
+      ],
+      "answer": 2,
+      "explanation": "Substituting vₛ = 0 gives f′ = f."
+    },
+    {
+      "id": "y10-physics-waves-036",
+      "category": "Doppler effect",
+      "difficulty": "Challenge",
+      "prompt": "A source emits 600 Hz while approaching a stationary listener at 20 m/s. Sound speed is 340 m/s. Find the heard frequency. Give the closest value.",
+      "options": [
+        "1.28e+03 Hz",
+        "319 Hz",
+        "6.38e+03 Hz",
+        "638 Hz"
+      ],
+      "answer": 3,
+      "explanation": "For a moving source and stationary observer, f′ = fv/(v − vₛ). Result: 638 Hz."
+    },
+    {
+      "id": "y10-physics-waves-037",
+      "category": "Doppler effect",
+      "difficulty": "Challenge",
+      "prompt": "A source emits 500 Hz while approaching a stationary listener at 30 m/s. Sound speed is 340 m/s. Find the heard frequency. Give the closest value.",
+      "options": [
+        "548 Hz",
+        "1.1e+03 Hz",
+        "274 Hz",
+        "5.48e+03 Hz"
+      ],
+      "answer": 0,
+      "explanation": "For a moving source and stationary observer, f′ = fv/(v − vₛ). Result: 548 Hz."
+    },
+    {
+      "id": "y10-physics-waves-038",
+      "category": "Doppler effect",
+      "difficulty": "Challenge",
+      "prompt": "A source emits 800 Hz while approaching a stationary listener at 40 m/s. Sound speed is 340 m/s. Find the heard frequency. Give the closest value.",
+      "options": [
+        "1.81e+03 Hz",
+        "907 Hz",
+        "453 Hz",
+        "9.07e+03 Hz"
+      ],
+      "answer": 1,
+      "explanation": "For a moving source and stationary observer, f′ = fv/(v − vₛ). Result: 907 Hz."
+    },
+    {
+      "id": "y10-physics-waves-039",
+      "category": "Doppler effect",
+      "difficulty": "Challenge",
+      "prompt": "A source emits 400 Hz while approaching a stationary listener at 10 m/s. Sound speed is 340 m/s. Find the heard frequency. Give the closest value.",
+      "options": [
+        "824 Hz",
+        "206 Hz",
+        "412 Hz",
+        "4.12e+03 Hz"
+      ],
+      "answer": 2,
+      "explanation": "For a moving source and stationary observer, f′ = fv/(v − vₛ). Result: 412 Hz."
+    },
+    {
+      "id": "y10-physics-waves-040",
+      "category": "Doppler effect",
+      "difficulty": "Challenge",
+      "prompt": "A source emits 1000 Hz while approaching a stationary listener at 50 m/s. Sound speed is 340 m/s. Find the heard frequency. Give the closest value.",
+      "options": [
+        "2.34e+03 Hz",
+        "586 Hz",
+        "1.17e+04 Hz",
+        "1.17e+03 Hz"
+      ],
+      "answer": 3,
+      "explanation": "For a moving source and stationary observer, f′ = fv/(v − vₛ). Result: 1.17e+03 Hz."
+    },
+    {
+      "id": "y10-physics-waves-041",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Foundation",
+      "prompt": "All electromagnetic waves in vacuum share the same…",
+      "options": [
+        "Speed",
+        "Frequency",
+        "Wavelength",
+        "Effect on tissue"
+      ],
+      "answer": 0,
+      "explanation": "In vacuum they travel at c ≈ 3.00 × 10⁸ m/s."
+    },
+    {
+      "id": "y10-physics-waves-042",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Foundation",
+      "prompt": "Which band has a longer wavelength than visible light?",
+      "options": [
+        "X-ray",
+        "Radio",
+        "Gamma",
+        "Ultraviolet"
+      ],
+      "answer": 1,
+      "explanation": "Radio frequencies are lower and wavelengths longer than visible light."
+    },
+    {
+      "id": "y10-physics-waves-043",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Foundation",
+      "prompt": "Electromagnetic waves are…",
+      "options": [
+        "Longitudinal sound waves only",
+        "Unable to reflect",
+        "Transverse and able to travel through vacuum",
+        "Always visible"
+      ],
+      "answer": 2,
+      "explanation": "Electromagnetic fields oscillate transversely and need no material medium."
+    },
+    {
+      "id": "y10-physics-waves-044",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Application",
+      "prompt": "Which is a common infrared application?",
+      "options": [
+        "Hearing an echo",
+        "Measuring mass directly",
+        "Removing all radiation risk",
+        "Thermal imaging"
+      ],
+      "answer": 3,
+      "explanation": "Warm objects emit infrared, useful in thermal imaging."
+    },
+    {
+      "id": "y10-physics-waves-045",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Challenge",
+      "prompt": "Moving from radio to gamma along the spectrum generally means…",
+      "options": [
+        "Higher frequency and shorter wavelength",
+        "Lower frequency and shorter wavelength",
+        "Higher frequency and longer wavelength",
+        "Identical photon energy"
+      ],
+      "answer": 0,
+      "explanation": "c = fλ fixes the inverse relationship in vacuum; photon energy increases with frequency."
+    },
+    {
+      "id": "y10-physics-waves-046",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Challenge",
+      "prompt": "An EM wave has vacuum frequency 1e+06 Hz. Use c = 3.00 × 10⁸ m/s. Find its wavelength. Give the closest value.",
+      "options": [
+        "600 m",
+        "300 m",
+        "150 m",
+        "3e+03 m"
+      ],
+      "answer": 1,
+      "explanation": "λ = c/f. Convert powers of ten carefully. Result: 300 m."
+    },
+    {
+      "id": "y10-physics-waves-047",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Challenge",
+      "prompt": "An EM wave has vacuum frequency 1e+09 Hz. Use c = 3.00 × 10⁸ m/s. Find its wavelength. Give the closest value.",
+      "options": [
+        "0.6 m",
+        "0.15 m",
+        "0.3 m",
+        "3 m"
+      ],
+      "answer": 2,
+      "explanation": "λ = c/f. Convert powers of ten carefully. Result: 0.3 m."
+    },
+    {
+      "id": "y10-physics-waves-048",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Challenge",
+      "prompt": "An EM wave has vacuum frequency 1e+10 Hz. Use c = 3.00 × 10⁸ m/s. Find its wavelength. Give the closest value.",
+      "options": [
+        "0.06 m",
+        "0.015 m",
+        "0.3 m",
+        "0.03 m"
+      ],
+      "answer": 3,
+      "explanation": "λ = c/f. Convert powers of ten carefully. Result: 0.03 m."
+    },
+    {
+      "id": "y10-physics-waves-049",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Challenge",
+      "prompt": "An EM wave has vacuum frequency 5e+14 Hz. Use c = 3.00 × 10⁸ m/s. Find its wavelength. Give the closest value.",
+      "options": [
+        "6e-07 m",
+        "1.2e-06 m",
+        "3e-07 m",
+        "6e-06 m"
+      ],
+      "answer": 0,
+      "explanation": "λ = c/f. Convert powers of ten carefully. Result: 6e-07 m."
+    },
+    {
+      "id": "y10-physics-waves-050",
+      "category": "Electromagnetic spectrum",
+      "difficulty": "Challenge",
+      "prompt": "An EM wave has vacuum frequency 1e+18 Hz. Use c = 3.00 × 10⁸ m/s. Find its wavelength. Give the closest value.",
+      "options": [
+        "6e-10 m",
+        "3e-10 m",
+        "1.5e-10 m",
+        "3e-09 m"
+      ],
+      "answer": 1,
+      "explanation": "λ = c/f. Convert powers of ten carefully. Result: 3e-10 m."
+    },
+    {
+      "id": "y10-physics-waves-051",
+      "category": "Wave behaviour",
+      "difficulty": "Foundation",
+      "prompt": "Reflection means a wave…",
+      "options": [
+        "Must change frequency",
+        "Stops transferring energy forever",
+        "Returns into its original medium at a boundary",
+        "Always changes into sound"
+      ],
+      "answer": 2,
+      "explanation": "A reflected wave travels back into the initial medium."
+    },
+    {
+      "id": "y10-physics-waves-052",
+      "category": "Wave behaviour",
+      "difficulty": "Foundation",
+      "prompt": "Diffraction is…",
+      "options": [
+        "Only a change of colour",
+        "The same as charge attraction",
+        "Heating a conductor",
+        "Spreading at a gap or around an obstacle"
+      ],
+      "answer": 3,
+      "explanation": "Wave spreading is most obvious when gap size is comparable to wavelength."
+    },
+    {
+      "id": "y10-physics-waves-053",
+      "category": "Wave behaviour",
+      "difficulty": "Application",
+      "prompt": "Water waves entering a slower region keep the same…",
+      "options": [
+        "Frequency",
+        "Speed",
+        "Wavelength",
+        "Direction at every angle"
+      ],
+      "answer": 0,
+      "explanation": "The source frequency remains unchanged at a stationary boundary."
+    },
+    {
+      "id": "y10-physics-waves-054",
+      "category": "Wave behaviour",
+      "difficulty": "Application",
+      "prompt": "Stronger spreading is expected when a gap is…",
+      "options": [
+        "A million wavelengths wide",
+        "Comparable in width to wavelength",
+        "Closed with no transmission",
+        "Unrelated to wave size"
+      ],
+      "answer": 1,
+      "explanation": "Compare gap width with the wavelength."
+    },
+    {
+      "id": "y10-physics-waves-055",
+      "category": "Wave behaviour",
+      "difficulty": "Challenge",
+      "prompt": "A ray entering a slower medium bends towards the normal for oblique incidence because…",
+      "options": [
+        "Its frequency becomes zero",
+        "The normal is a material barrier",
+        "Its speed changes while frequency stays fixed",
+        "Reflection is impossible"
+      ],
+      "answer": 2,
+      "explanation": "Refraction changes speed and direction; wavelength adjusts to preserve frequency."
+    },
+    {
+      "id": "y10-physics-waves-056",
+      "category": "Wave behaviour",
+      "difficulty": "Application",
+      "prompt": "A water wave has wavelength 2 cm. At unchanged frequency its speed becomes 0.5 times the original. Find the new wavelength. Give the closest value.",
+      "options": [
+        "2 cm",
+        "0.5 cm",
+        "10 cm",
+        "1 cm"
+      ],
+      "answer": 3,
+      "explanation": "At unchanged f, wavelength changes by the same factor as wave speed. Result: 1 cm."
+    },
+    {
+      "id": "y10-physics-waves-057",
+      "category": "Wave behaviour",
+      "difficulty": "Application",
+      "prompt": "A water wave has wavelength 4 cm. At unchanged frequency its speed becomes 0.75 times the original. Find the new wavelength. Give the closest value.",
+      "options": [
+        "3 cm",
+        "6 cm",
+        "1.5 cm",
+        "30 cm"
+      ],
+      "answer": 0,
+      "explanation": "At unchanged f, wavelength changes by the same factor as wave speed. Result: 3 cm."
+    },
+    {
+      "id": "y10-physics-waves-058",
+      "category": "Wave behaviour",
+      "difficulty": "Application",
+      "prompt": "A water wave has wavelength 3 cm. At unchanged frequency its speed becomes 0.6 times the original. Find the new wavelength. Give the closest value.",
+      "options": [
+        "3.6 cm",
+        "1.8 cm",
+        "0.9 cm",
+        "18 cm"
+      ],
+      "answer": 1,
+      "explanation": "At unchanged f, wavelength changes by the same factor as wave speed. Result: 1.8 cm."
+    },
+    {
+      "id": "y10-physics-waves-059",
+      "category": "Wave behaviour",
+      "difficulty": "Application",
+      "prompt": "A water wave has wavelength 5 cm. At unchanged frequency its speed becomes 0.4 times the original. Find the new wavelength. Give the closest value.",
+      "options": [
+        "4 cm",
+        "1 cm",
+        "2 cm",
+        "20 cm"
+      ],
+      "answer": 2,
+      "explanation": "At unchanged f, wavelength changes by the same factor as wave speed. Result: 2 cm."
+    },
+    {
+      "id": "y10-physics-waves-060",
+      "category": "Wave behaviour",
+      "difficulty": "Application",
+      "prompt": "A water wave has wavelength 1.5 cm. At unchanged frequency its speed becomes 0.8 times the original. Find the new wavelength. Give the closest value.",
+      "options": [
+        "2.4 cm",
+        "0.6 cm",
+        "12 cm",
+        "1.2 cm"
+      ],
+      "answer": 3,
+      "explanation": "At unchanged f, wavelength changes by the same factor as wave speed. Result: 1.2 cm."
+    }
+  ]
+}
