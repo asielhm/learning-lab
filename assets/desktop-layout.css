@@ -44,15 +44,5 @@
 @media(min-width:1600px){
  .activity-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.year-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.activity-art{height:270px}.selection-card{padding:28px}.workspace{grid-template-columns:minmax(0,1.9fr) minmax(380px,1fr)}.widget-layout{grid-template-columns:minmax(0,2fr) minmax(370px,1fr)}
 }
-@media(min-width:1200px){
- /* A computer lab: investigation menu on the left, active bench on the right. */
- main:has(>#workbench){display:grid;grid-template-columns:220px minmax(0,1fr);column-gap:24px;align-items:start}
- main:has(>#workbench)>*{grid-column:1/-1;min-width:0}
- main>section:has(>#experiment-menu){grid-column:1;position:sticky;top:18px;max-height:calc(100dvh - 36px);overflow-y:auto;padding-right:5px;scrollbar-width:thin}
- main>section:has(>#experiment-menu) .section-heading{gap:9px;margin:0 0 15px}main>section:has(>#experiment-menu) .section-heading h2{font-size:21px;letter-spacing:-.5px}main>section:has(>#experiment-menu) .section-number{min-width:37px;height:37px;font-size:24px}
- main>section:has(>#experiment-menu) .section-note{display:none}
- main>#workbench{grid-column:2}
- #experiment-menu{grid-template-columns:1fr;margin:0;gap:8px}#experiment-menu button{padding:12px;min-height:72px}#experiment-menu button>span{font-size:9px;margin-bottom:4px}#experiment-menu b{font-size:13px;line-height:1.5}
-}
 .computer-gesture-help{display:none}
 @media(min-width:1024px){.computer-gesture-help{display:inline}.touch-gesture-help{display:none}.canvashelp,.canvas-help{font-size:12px}}

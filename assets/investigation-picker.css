@@ -1,0 +1,13 @@
+/* Investigation choices stay in document flow, clear of the apparatus and evidence. */
+.investigation-chooser{position:static;margin:0 0 22px;padding:20px 24px;background:#edf3ee;border:1px solid #cadbd1;border-radius:12px;min-width:0}
+.investigation-chooser .section-heading{margin:0 0 15px}
+.investigation-chooser>h2{font-size:22px;margin:0 0 14px}
+.investigation-chooser .section-note{font-size:14px;line-height:1.7;margin:0 0 16px}
+.investigation-picker{display:grid;grid-template-columns:minmax(0,2fr) minmax(220px,1fr);gap:24px;align-items:center;min-width:0;margin:0}
+.investigation-picker select{display:block;width:100%;max-width:100%;min-width:0;min-height:50px;padding:11px 40px 11px 15px;border:1px solid #8daea5;border-radius:7px;background:#fff;color:#2e5654;font:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.investigation-picker select:focus-visible{outline:3px solid #d6ab60;outline-offset:3px}
+.investigation-picker p{font-size:12px;line-height:1.7;margin:0;color:#567572}
+.physics-layout{display:block}
+.physics-sidebar.investigation-chooser{position:static;top:auto;max-height:none;overflow:visible;padding:20px 24px}
+.physics-layout>.physics-bench{width:100%}
+@media(max-width:800px){.investigation-picker{grid-template-columns:1fr;gap:10px}.investigation-chooser{padding:16px}.investigation-picker select{font-size:14px}.physics-sidebar.investigation-chooser{padding:16px}}

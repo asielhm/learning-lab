@@ -36,7 +36,7 @@ const acid='/activities/y10/chemistry/acids-and-bases/',redox='/activities/y10/c
   // A cancelled operation must not advance a different experiment or reset trial.
   await p.emulateMedia({reducedMotion:'no-preference'});await p.locator('[data-bench-tap]').click();await p.locator('#reset-lab').click();await p.waitForTimeout(1200);assert.match(await step(p),/^STEP 1 OF 4/);
   // Electrical power cannot be applied until the sample and both electrodes are placed.
-  await p.goto(base+redox);await p.locator('[data-experiment=water-cell]').click();
+  await p.goto(base+redox);await p.locator('#experiment-select').selectOption('water-cell');
   await p.locator('[data-bench-locked]').click();assert.match(await p.locator('#bench-status').innerText(),/both electrodes/);assert.equal(await p.locator('.reaction-bubbles').count(),0);
   await place(p);await place(p);assert.equal(await p.locator('.reaction-bubbles').count(),0);await place(p);await place(p);assert.equal(await p.locator('.reaction-bubbles').count(),0);
   await tap(p);assert.equal(await p.locator('.reaction-bubbles').count(),2);

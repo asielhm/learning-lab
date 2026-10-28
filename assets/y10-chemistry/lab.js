@@ -50,7 +50,7 @@ function render(){
 function choose(d,moveFocus=false){
  operation++;busy=false;drag=null;active=d;if(!states.has(d.id))states.set(d.id,fresh(d));state=states.get(d.id);status='';
  $('#lab-title').textContent=d.title;$('#lab-description').textContent=d.subtitle;$('#experiment-index').textContent=`EXPERIMENT ${String(definitions.indexOf(d)+1).padStart(2,'0')} · ${definitions.length} TO EXPLORE`;
- document.querySelectorAll('[data-experiment]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.experiment===d.id)));
+ $('#experiment-select').value=d.id;
  $('#setup-controls').replaceChildren(...d.controls.map(c=>{
   const wrap=document.createElement('div');wrap.className='control';const id=`lab-${c.id}`;
   if(c.type==='range')wrap.innerHTML=`<label for="${id}">${escape(c.label)}<output for="${id}">${escape(c.format?c.format(state.values[c.id]):state.values[c.id])}</output></label><input id="${id}" type="range" min="${c.min}" max="${c.max}" step="${c.step}" value="${state.values[c.id]}"><div class="control-limits"><span>${escape(c.format?c.format(c.min):c.min)}</span><span>${escape(c.format?c.format(c.max):c.max)}</span></div>`;
@@ -184,7 +184,8 @@ async function addDose(amount,keyboard=false){
  state.extra.delivered=Math.min(50,Math.round((state.extra.delivered+amount)*10)/10);state.recorded=false;state.answer=null;const result=model();busy=false;
  status=isComplete(result)?'Faint-pink endpoint reached. Record the titre.':state.extra.delivered>0&&result.readings[1][1]==='Deep pink'?'Overshot: deep pink. Start another trial and use smaller additions near the endpoint.':'NaOH added. Observe the flask and approach the endpoint carefully.';render();if(keyboard)scene.querySelector(`[data-bench-dose="${amount}"]`)?.focus({preventScroll:true});
 }
-$('#experiment-menu').replaceChildren(...definitions.map((d,i)=>{const button=document.createElement('button');button.type='button';button.dataset.experiment=d.id;button.innerHTML=`<span>EXPERIMENT ${String(i+1).padStart(2,'0')}</span><b>${escape(d.title)}</b>`;button.onclick=()=>choose(d,true);return button;}));
+$('#experiment-select').replaceChildren(...definitions.map((d,i)=>new Option(`${String(i+1).padStart(2,'0')} · ${d.title}`,d.id)));
+$('#experiment-select').addEventListener('change',event=>{const next=definitions.find(d=>d.id===event.target.value);if(next)choose(next);});
 $('#record-reading').onclick=()=>{const result=model();if(busy||!isComplete(result)||state.recorded||state.records.length>=10)return;state.records.push(result.row.map(value=>value===null?state.records.length+1:value));state.recorded=true;state.answer=null;status='Observation recorded. Use it to answer the question below.';render();};
 $('#new-trial').onclick=()=>{startTrial();status='New trial started. Earlier readings stay in your notebook.';render();};
 $('#reset-lab').onclick=()=>{states.set(active.id,fresh(active));choose(active);status='Experiment reset to its starting conditions; its notebook is cleared.';render();};

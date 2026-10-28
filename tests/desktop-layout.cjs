@@ -17,7 +17,7 @@ const pages=['/','/activities/y9/science/circulatory-system/','/activities/y9/sc
      const columns=await p.locator(selector).first().evaluate(el=>getComputedStyle(el).gridTemplateColumns);assert(columns.split(' ').length>=2,url+' '+selector+' should use columns: '+columns);
     }
     if(url.includes('/chemistry/')){
-     const bounds=await p.locator('#workbench').boundingBox(),menu=await p.locator('#experiment-menu').boundingBox();assert(menu.x+menu.width<=bounds.x,'Investigation menu beside the bench');
+     const bounds=await p.locator('#workbench').boundingBox(),menu=await p.locator('#experiment-menu').boundingBox();assert(menu.y+menu.height<bounds.y,'Investigation dropdown above the bench');assert.equal(await p.locator('#experiment-select').count(),1);await p.locator('.notebook').scrollIntoViewIfNeeded();const menuAfter=await p.locator('#experiment-menu').boundingBox(),notebook=await p.locator('.notebook').boundingBox();assert(menuAfter.y+menuAfter.height<notebook.y,'Investigation selector stays above observations when scrolling');
      await p.locator('#expand-bench').click();const stage=await p.locator('.apparatus-stage').boundingBox();assert(stage.height>=300&&stage.height<viewport.height,'Bench scaled to computer height');
      for(const button of['#expand-bench','#record-reading','#new-trial','#reset-lab']){const box=await p.locator(button).boundingBox();assert(box.y>=0&&box.y+box.height<=viewport.height,button+' outside expanded computer bench '+JSON.stringify(box));}
      await p.keyboard.press('Escape');

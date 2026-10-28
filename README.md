@@ -193,3 +193,6 @@ python3 tools/serve.py --port 8058
 ```
 
 With the local server running, use `LEARNING_LAB_BASE_URL=http://127.0.0.1:8058 node tests/y10-physics-browser.cjs`. This exercises all 25 apparatus sequences, motion pause/resume, recording and lesson gates, six scored revision sessions, delayed starts and no-meeting predictions, mouse/keyboard access, the camera focus gate and computer layouts. Browser checks make no live Google writes. The PhET Coulomb’s Law link supplied by the teacher is retained as a further-exploration resource; the platform’s models run locally without PhET embeds.
+
+
+All Y10 Chemistry and Physics investigation selectors use native dropdowns above the bench. The selector stays in document flow, with spacing before the apparatus and evidence, so it cannot float over the notebook while scrolling. Switching investigations preserves each investigation’s progress, settings and notebook for the open page. Shared styling is in `assets/investigation-picker.css`; both page generators include it.

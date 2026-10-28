@@ -26,9 +26,9 @@ const coursePath='/activities/y10/chemistry/';
   async function dose(amount,page=p){const before=await page.locator('#readouts').innerText();await page.locator(`[data-bench-dose="${amount}"]`).click();await page.waitForFunction(previous=>document.querySelector('#readouts').innerText!==previous,before);}
   for(const[url,bankName,defs]of units){
    await p.goto(base+coursePath+url+'/');await p.locator('[data-bench-source],[data-bench-tap]').first().waitFor();
-   assert.equal(await p.locator('[data-experiment]').count(),defs.length);assert.equal(await p.locator('.theory-grid details').count(),8);assert.equal(await p.locator('.unit-nav a').count(),4);
+   assert.equal(await p.locator('#experiment-select option').count(),defs.length);assert.equal(await p.locator('.theory-grid details').count(),8);assert.equal(await p.locator('.unit-nav a').count(),4);
    for(const d of defs){
-    await p.locator(`[data-experiment="${d.id}"]`).click();assert.equal(await p.locator('#lab-title').innerText(),d.title);assert(await p.locator('#record-reading').isDisabled());assert(await p.locator('#lesson-options button').first().isDisabled());
+    await p.locator('#experiment-select').selectOption(d.id);assert.equal(await p.locator('#lab-title').innerText(),d.title);assert(await p.locator('#record-reading').isDisabled());assert(await p.locator('#lesson-options button').first().isDisabled());
     assert.equal(await p.locator('#advance-step').count(),0);assert.equal(await p.locator('[data-dose]:visible').count(),0);
     await prepare();if(d.doses)for(let i=0;i<4;i++)await dose(5);
     assert(!await p.locator('#record-reading').isDisabled(),d.id);assert.equal(await p.locator('#step-progress [data-done=true]').count(),await p.locator('#step-progress li').count());
@@ -40,7 +40,7 @@ const coursePath='/activities/y10/chemistry/';
     await p.locator('#new-trial').click();assert.match(await p.locator('#trial-count').innerText(),/^1 of 10/);assert(await p.locator('#lesson-options button').first().isDisabled());assert.match(await p.locator('#bench-step-label').innerText(),/^STEP 1 OF/);
     await p.locator('#reset-lab').click();assert.match(await p.locator('#trial-count').innerText(),/^0 of 10/);assert.match(await p.locator('#notebook-rows').innerText(),/Carry out a trial/);
    }
-   await p.locator('[data-experiment]').first().click();await p.locator('#lab-title').scrollIntoViewIfNeeded();await p.locator('#workbench').screenshot({path:`/tmp/y10-${url}-desktop.png`});
+   await p.locator('#experiment-select').selectOption({index:0});await p.locator('#lab-title').scrollIntoViewIfNeeded();await p.locator('#workbench').screenshot({path:`/tmp/y10-${url}-desktop.png`});
    for(const width of[320,390,768]){await p.setViewportSize({width,height:844});assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),url+' '+width);}
    await p.setViewportSize({width:1440,height:1000});
    await p.locator('.chem-review a').click();await p.locator('#start-session').waitFor();assert.equal(await p.locator('#revision-app').getAttribute('data-course'),'Year 10 Chemistry');assert.equal(await p.locator('#revision-app').getAttribute('data-topic'),bankName);assert.match(await p.locator('.revision-bank-meta').innerText(),/80 questions/);assert.match(await p.locator('.revision-bottom-note').innerText(),/shown on this page only/);
@@ -51,15 +51,15 @@ const coursePath='/activities/y10/chemistry/';
    await p.goto(base+coursePath+url+'/revision.html');await p.locator('#start-session').waitFor();await p.locator('input[value=test]').check();assert.equal(await p.locator('#record-student-fields').count(),0);await p.locator('#start-session').click();await finish(true);
   }
   // Coarse/fine titration, direct apparatus interaction, endpoint gate and repeated titres.
-  await p.goto(base+coursePath+'acids-and-bases/');await p.locator('[data-experiment=titration]').click();await prepare();for(let i=0;i<4;i++)await dose(5);await p.locator('#record-reading').click();
+  await p.goto(base+coursePath+'acids-and-bases/');await p.locator('#experiment-select').selectOption('titration');await prepare();for(let i=0;i<4;i++)await dose(5);await p.locator('#record-reading').click();
   await dose(.1);assert.match(await p.locator('#readouts').innerText(),/20.1 mL/);assert.match(await p.locator('#bench-status').innerText(),/Overshot/);assert(await p.locator('#record-reading').isDisabled());
   await p.locator('#new-trial').click();await prepare();for(let i=0;i<3;i++)await dose(5);for(let i=0;i<4;i++)await dose(1);for(let i=0;i<10;i++)await dose(.1);assert.match(await p.locator('#readouts').innerText(),/20.0 mL/);await p.locator('#record-reading').click();assert.match(await p.locator('#trial-count').innerText(),/^2 of 10/);assert.equal(await p.locator('#notebook-rows tr').count(),2);
-  await p.locator('[data-experiment=indicators]').click();await p.locator('[data-experiment=titration]').click();assert.match(await p.locator('#trial-count').innerText(),/^2 of 10/);
+  await p.locator('#experiment-select').selectOption('indicators');await p.locator('#experiment-select').selectOption('titration');assert.match(await p.locator('#trial-count').innerText(),/^2 of 10/);
   await p.locator('#bench-settings summary').click();await p.locator('#lab-sample').selectOption('B');await p.locator('#bench-settings summary').click();assert.match(await p.locator('#bench-step-label').innerText(),/^STEP 1 OF/);await prepare();for(let i=0;i<6;i++)await dose(5);assert(!await p.locator('#record-reading').isDisabled());
   await p.locator('[data-bench-dose="0.1"]').focus();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.querySelector('#readouts').innerText.includes('30.1 mL'));assert.match(await p.locator('#readouts').innerText(),/30.1 mL/);
   const phone=await browser.newPage({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'});phone.on('pageerror',e=>errors.push(e.message));
   for(const[url,,defs]of units){await phone.goto(base+coursePath+url+'/');await phone.locator('[data-bench-source],[data-bench-tap]').first().waitFor();assert(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await prepare(phone);await phone.locator('#record-reading').tap();assert.match(await phone.locator('#trial-count').innerText(),/^1 of 10/);assert.equal(await phone.locator('#lesson-options button:disabled').count(),0);await phone.locator('#workbench').screenshot({path:`/tmp/y10-${url}-mobile.png`});}
-  await phone.goto(base+coursePath+'acids-and-bases/');await phone.locator('[data-experiment=titration]').tap();await prepare(phone);await dose(.1,phone);assert.match(await phone.locator('#readouts').innerText(),/0.1 mL/);
+  await phone.goto(base+coursePath+'acids-and-bases/');await phone.locator('#experiment-select').selectOption('titration');await prepare(phone);await dose(.1,phone);assert.match(await phone.locator('#readouts').innerText(),/0.1 mL/);
   assert.deepEqual(errors,[]);assert.deepEqual(posts,[]);
   console.log('Y10 Chemistry: four catalogue entries, 28 apparatus-driven investigations, observations/notebooks/reset, all lesson questions, coarse/fine/touch/keyboard titration with endpoint and overshoot gates, 80 revision answers/scoring/retries, no Google submissions and 320–1440px layouts passed.');
  }finally{await browser.close();}
