@@ -14,3 +14,6 @@
 .platform-header nav .teacher-dashboard-button{display:inline-flex;gap:8px;padding:11px 15px;border:1px solid var(--green);border-radius:7px;background:var(--green);color:white;white-space:nowrap}
 .platform-header nav .teacher-dashboard-button:hover{background:#366451;color:white}
 @media(max-width:740px){.platform-header{height:auto;min-height:122px;flex-wrap:wrap;row-gap:14px;padding-top:20px;padding-bottom:16px}.platform-header nav{width:100%;justify-content:space-between;gap:12px}.platform-header nav .teacher-dashboard-button{font-size:11px;padding:10px 12px}}
+.platform-header nav .oaq-nav-link{background:#e3eee5;border:1px solid #9db6a4;color:#225c4e;font-weight:750;border-radius:7px;padding:10px 15px}
+.year-tile[href="activities/oaq/"]{background:#173f48;border-color:#173f48}.year-tile[href="activities/oaq/"]>span:first-child,.year-tile[href="activities/oaq/"]>span:last-child{color:#e5f2e8}
+@media(min-width:1024px){.year-preview .year-tiles{grid-template-columns:repeat(7,minmax(0,1fr))}}

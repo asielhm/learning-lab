@@ -18,7 +18,7 @@ const plural = (count, word) => `${count} ${count === 1 ? word : word === 'activ
 // Main-app counts exclude the separate revision links shown below each app.
 const topicCount = subject => subject.topics.reduce((count, topic) => count + (topic.primaryActivity ? 1 : topic.activities.length), 0);
 const yearCount = year => year.subjects.reduce((count, subject) => count + topicCount(subject), 0);
-const route = (...ids) => '#/years' + (ids.length ? '/' + ids.map(encodeURIComponent).join('/') : '');
+const route = (...ids) => ids[0]==='oaq' ? 'activities/oaq/'+ids.slice(1).map(encodeURIComponent).map(id=>id+'/').join('') : '#/years' + (ids.length ? '/' + ids.map(encodeURIComponent).join('/') : '');
 const countLabel = count => count ? plural(count, 'activity') : 'Activities coming later';
 const heading = (eyebrow, title, description) => `<div class="page-heading"><div class="eyebrow">${escape(eyebrow)}</div><h1>${escape(title)}</h1><p>${escape(description)}</p></div>`;
 
@@ -52,7 +52,7 @@ function emptyState(title, description, backHref, backLabel) {
   return `<div class="empty-state"><span class="empty-symbol" aria-hidden="true">✳</span><h2>${escape(title)}</h2><p>${escape(description)}</p><a class="button primary" href="${backHref}">${escape(backLabel)} →</a>${featured ? `<a class="text-link" href="${route(featured.year.id, featured.subject.id, featured.topic.id)}">Explore ${escape(featured.year.shortName)} ${escape(featured.subject.name)}: ${escape(featured.topic.name)} ↗</a>` : ''}</div>`;
 }
 function years() {
-  return shell([{name:'Explore activities', href:route()}], 0, `${heading('THE FIRST STEP', 'Choose your year.', 'Start with your year, then choose a subject and a topic to find an activity.')}<div class="selection-grid year-grid">${catalogue.years.map(year => selectionCard({href:route(year.id), icon:year.shortName, title:year.name, description:yearCount(year) ? `Explore ${plural(year.subjects.length, 'subject')} and find your next activity.` : 'A space for future discoveries. Activities will appear here as they are added.', count:countLabel(yearCount(year)), empty:!yearCount(year)})).join('')}</div>`);
+  return shell([{name:'Explore activities', href:route()}], 0, `${heading('THE FIRST STEP', 'Choose your year or programme.', 'Choose a year for school activities, or open OAQ for chemistry preparation in Spanish.')}<div class="selection-grid year-grid">${catalogue.years.map(year => selectionCard({href:route(year.id), icon:year.shortName, title:year.id==='oaq'?'OAQ':year.name, description:year.id==='oaq'?'Olimpíada Argentina de Química. Lecciones y laboratorios en español: Inicial, Nivel 1 y Nivel 2.':yearCount(year) ? `Explore ${plural(year.subjects.length, 'subject')} and find your next activity.` : 'A space for future discoveries. Activities will appear here as they are added.', count:countLabel(yearCount(year)), empty:!yearCount(year)})).join('')}</div>`);
 }
 function subjects(year) {
   return shell([{name:'All years', href:route()},{name:year.name}], 1, `${heading(`${year.shortName} · EXPLORE ACTIVITIES`, 'Choose a subject.', `Browse the subjects available for ${year.name}.`)}${year.subjects.length ? `<div class="selection-grid">${year.subjects.map(subject => selectionCard({href:route(year.id,subject.id),icon:subject.name === 'Science' ? '⚛' : '✳',eyebrow:year.name,title:subject.name,description:subject.description,count:`${plural(subject.topics.length,'topic')} · ${countLabel(topicCount(subject))}`})).join('')}</div>` : emptyState('New discoveries are on their way.',`There are no activities for ${year.name} yet. Choose another year to see what is available.`,route(),'Back to all years')}`);
@@ -82,6 +82,7 @@ function render(focus = false) {
   const year=catalogue.years.find(item=>item.id===yearId);
   const subject=year?.subjects.find(item=>item.id===subjectId);
   const topic=subject?.topics.find(item=>item.id===topicId);
+  if(section==='years'&&yearId==='oaq'&&year&&(!subjectId||subject)&&(!topicId||topic)){location.replace(new URL(route(...parts.slice(1)),location.href.split('#')[0]));return;}
   if(!section){content=home();title='Learning Lab | Explore. Understand. Discover.';}
   else if(section==='about'&&parts.length===1){content=about();title='How it works | Learning Lab';}
   else if(section==='years'&&parts.length===1){content=years();title='Choose your year | Learning Lab';}
