@@ -48,17 +48,29 @@ const path='/activities/y9/science/gas-laws/';
         assert(Math.abs(scale**3-333.15/293.15)<1e-10);
       }else{
         await reading(0,220);await reading(1,321.3);await reading(2,293.15);
-        const wheel=await p.locator('#apparatus circle').first().getAttribute('r'),needle=await p.locator('#needle').getAttribute('transform');
-        await set(-10);await reading(1,321.3*263.15/293.15);await reading(0,321.3*263.15/293.15-101.3);
+        assert.equal(await p.locator('#variable').getAttribute('min'),'-30');assert.equal(await p.locator('#variable').getAttribute('max'),'70');
+        const wheel=await p.locator('#tyreRim > circle').first().getAttribute('r'),needle=await p.locator('#needle').getAttribute('transform'),outline=await p.locator('#tyreOutline').getAttribute('d'),position=await p.locator('#tyreWheel').getAttribute('transform');
+        await set(-30);await reading(1,321.3*243.15/293.15);await reading(0,321.3*243.15/293.15-101.3);await reading(2,243.15);
+        assert.notEqual(await p.locator('#tyreOutline').getAttribute('d'),outline);assert.notEqual(await p.locator('#tyreWheel').getAttribute('transform'),position);assert.equal(await p.locator('#tyreRim > circle').first().getAttribute('r'),wheel);assert.equal(await p.locator('#apparatus').getAttribute('data-tyre-state'),'cold');
+        await set(20);assert.equal(await p.locator('#tyreOutline').getAttribute('d'),outline);await reading(0,220);
+        await set(69);assert.equal(await p.locator('#apparatus').getAttribute('data-tyre-state'),'intact');await reading(1,321.3*342.15/293.15);
         await p.getByRole('button',{name:'Hot tyre',exact:true}).click();await reading(0,263.841);await reading(1,365.141);await reading(2,333.15);
-        assert.notEqual(await p.locator('#needle').getAttribute('transform'),needle);assert.equal(await p.locator('#apparatus circle').first().getAttribute('r'),wheel);
+        assert.notEqual(await p.locator('#needle').getAttribute('transform'),needle);assert.equal(await p.locator('#tyreRim > circle').first().getAttribute('r'),wheel);
       }
       await p.locator('#recordMeasurement').click();assert.equal(await p.locator('#measurementRows tr').count(),2);
       await p.locator('#recordMeasurement').click();assert.equal(await p.locator('#measurementRows tr').count(),2);
       await p.locator('#answerOptions button').nth((correct+1)%3).click();assert.equal(await p.locator('#feedback').getAttribute('data-state'),'incorrect');
       await p.locator('#answerOptions button').nth(correct).click();assert.equal(await p.locator('#feedback').getAttribute('data-state'),'correct');
       await p.screenshot({path:`/tmp/gas-${key}-tested-desktop.png`,fullPage:true});
-      await p.locator('#resetExample').click();assert.equal(await p.locator('#measurementRows tr').count(),1);assert.equal(await p.locator('#variable').inputValue(),'20');assert.equal(await p.locator('#feedback').innerText(),'');
+      if(key==='tyre'){
+        await set(70);assert.equal(await p.locator('#apparatus').getAttribute('data-tyre-state'),'burst');await reading(0,0);await reading(1,101.3);await reading(2,343.15);
+        assert.equal(await p.locator('#tyreCasing').evaluate(el=>getComputedStyle(el).display),'none');assert.notEqual(await p.locator('#burstCasing').evaluate(el=>getComputedStyle(el).display),'none');assert.equal(await p.locator('.tyre-air-jet').evaluate(el=>getComputedStyle(el).animationName),'tyre-vent');assert.equal(await p.locator('.sealed-tag').innerText(),'VENTED AIR');assert.match(await p.locator('#calculation').innerText(),/no longer constant/);
+        await p.locator('#recordMeasurement').click();assert.equal(await p.locator('#measurementRows tr').count(),3);assert.match(await p.locator('#measurementRows tr').last().innerText(),/Burst \/ vented/);await p.locator('#recordMeasurement').click();assert.equal(await p.locator('#measurementRows tr').count(),3);
+        await p.locator('.apparatus').screenshot({path:'/tmp/tyre-burst.png'});
+        await set(20);await reading(0,0);assert.equal(await p.locator('#apparatus').getAttribute('data-tyre-state'),'burst');await p.locator('#recordMeasurement').click();assert.equal(await p.locator('#measurementRows tr').count(),4);
+        await set(-30);await reading(0,0);assert.match(await p.locator('#resetExample').innerText(),/Replace tyre/);
+      }
+      await p.locator('#resetExample').click();if(key==='tyre'){assert.equal(await p.locator('#apparatus').getAttribute('data-tyre-state'),'intact');await reading(0,220);assert.equal(await p.locator('.sealed-tag').innerText(),'SEALED AIR');}assert.equal(await p.locator('#measurementRows tr').count(),1);assert.equal(await p.locator('#variable').inputValue(),'20');assert.equal(await p.locator('#feedback').innerText(),'');
       await p.locator('#answerOptions button').nth(correct).click();assert((await p.locator('#feedback').innerText()).includes('First complete'));
       for(const width of [320,390,768]){
         await p.setViewportSize({width,height:844});assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
@@ -82,7 +94,7 @@ const path='/activities/y9/science/gas-laws/';
     await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});assert.equal(await phone.locator('#variable').inputValue(),'10');
     await phone.getByRole('button',{name:'Expand',exact:true}).tap();assert.equal(await phone.locator('#variable').inputValue(),'40');
     await phone.locator('.example-tabs a[href="balloon.html"]').tap();await phone.getByRole('button',{name:'Warm room',exact:true}).tap();assert.equal(await phone.locator('#variable').inputValue(),'60');
-    await phone.locator('.example-tabs a[href="tyre.html"]').tap();await phone.getByRole('button',{name:'Cold day',exact:true}).tap();assert.equal(await phone.locator('#variable').inputValue(),'-10');
+    await phone.locator('.example-tabs a[href="tyre.html"]').tap();await phone.getByRole('button',{name:'Cold day',exact:true}).tap();assert.equal(await phone.locator('#variable').inputValue(),'-30');
     assert.deepEqual(errors,[]);assert.deepEqual(unexpected,[]);
     console.log('Gas object simulations: dedicated links, correct gas-law readings, object responses, mouse/touch/keyboard plunger, investigation gates, records/reset, 320–1440px layouts and no Google submissions passed.');
   }finally{await browser.close();}

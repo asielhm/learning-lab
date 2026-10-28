@@ -4,3 +4,19 @@
 /* Touch-action must be on the SVG viewport; SVG groups alone do not stop a browser pan. */
 body[data-example=syringe] #apparatus{touch-action:pan-y}
 @media(prefers-reduced-motion:no-preference){.scene .soft-change{transition:fill .2s,stroke .2s}}
+/* The rim stays rigid; only the rubber casing changes shape. The burst is latched until reset. */
+#burstCasing,#tyreBurstEffects{display:none}
+.tyre-burst #tyreCasing{display:none}
+.tyre-burst #burstCasing,.tyre-burst #tyreBurstEffects{display:inline}
+.sealed-tag.is-open{color:#a14e3b}.sealed-tag.is-open:before{background:#c96c50}
+.tyre-air-jet{fill:none;stroke:#86aeba;stroke-width:7;stroke-linecap:round;stroke-dasharray:12 9;animation:tyre-vent 1.2s ease-out forwards}
+.tyre-fragment{fill:#263c47;stroke:#152d39;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:tyre-fragment .9s ease-out forwards;--fragment-x:55px;--fragment-y:-35px;--fragment-rotation:50deg}
+.fragment-two{--fragment-x:5px;--fragment-y:-50px;--fragment-rotation:-60deg}.fragment-three{--fragment-x:70px;--fragment-y:35px;--fragment-rotation:85deg}
+.tyre-pop{animation:tyre-pop .65s ease-out forwards;transform-box:fill-box;transform-origin:center}
+@keyframes tyre-vent{from{stroke-dashoffset:40;opacity:1}to{stroke-dashoffset:-50;opacity:0}}
+@keyframes tyre-fragment{from{translate:0 0;rotate:0deg;opacity:1}to{translate:var(--fragment-x) var(--fragment-y);rotate:var(--fragment-rotation);opacity:0}}
+@keyframes tyre-pop{0%{scale:.5;opacity:0}25%{scale:1.1;opacity:1}75%{opacity:1}100%{scale:1;opacity:0}}
+@media(prefers-reduced-motion:reduce){.tyre-air-jet,.tyre-fragment{animation:none;display:none}.tyre-pop{animation:none}}
+
+@media(prefers-reduced-motion:no-preference){.tyre-burst #needle{transition:transform .65s ease-out}.tyre-burst #tyreWheel{animation:tyre-settle .55s ease-out}}
+@keyframes tyre-settle{0%{translate:0 -35px}70%{translate:0 2px}100%{translate:0 0}}

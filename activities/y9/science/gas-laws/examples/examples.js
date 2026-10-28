@@ -35,23 +35,24 @@ const definitions = {
   tyre: {
     title:'A tyre on a warmer day', law:'GAY-LUSSAC / AMONTONS · APPROXIMATELY CONSTANT VOLUME', scene:'Same tyre. Different pressure.',
     intro:'Change the temperature of the air in a sealed tyre. Follow the needle to see why a pressure gauge reads differently on a warmer day.',
-    instruction:'Change the air temperature with the slider. Watch the gauge needle move while the tyre keeps approximately the same size.',
-    label:'Air temperature at equilibrium', min:-10, max:60, step:1, initial:20, unit:'°C',
-    presets:[[-10,'Cold day'],[20,'Starting point'],[60,'Hot tyre']],
+    instruction:'Cool the tyre towards −30°C to watch it flatten. Warm it to 70°C for a cartoon burst, then replace the tyre with Reset to try again.',
+    label:'Air temperature at equilibrium', min:-30, max:70, step:1, initial:20, unit:'°C',
+    presets:[[-30,'Cold day'],[20,'Starting point'],[60,'Hot tyre'],[70,'Burst demo']],
     constants:'Volume: 25.0 L, treated as fixed. The valve is closed, so the amount of gas is fixed. Outside atmospheric pressure: 101.3 kPa.',
-    equation:'P₁/T₁ = P₂/T₂', caption:'A sealed car tyre and an attached pressure gauge. The dial reads gauge pressure; the gas-law calculation uses absolute pressure.',
-    limit:'Tyre volume is approximately constant. The starting gauge reading is an illustrative 220 kPa at 20°C, not a recommended inflation pressure. Always use the vehicle manufacturer’s cold-tyre specification. The model holds atmosphere at 101.3 kPa and uses P absolute = P gauge + 101.3. It shows equilibrium gas temperature, not an instant response to weather.',
+    equation:'P₁/T₁ = P₂/T₂', caption:'Cold flattening and the burst at 70°C are exaggerated teaching effects, not real tyre failure predictions. Before the burst, the readings use the sealed, fixed-volume gas law.',
+    limit:'Tyre volume is approximately constant. The starting gauge reading is an illustrative 220 kPa at 20°C, not a recommended inflation pressure. Always use the vehicle manufacturer’s cold-tyre specification. The model holds atmosphere at 101.3 kPa and uses P absolute = P gauge + 101.3. It shows equilibrium gas temperature, not an instant response to weather. Cold squash is exaggerated and is not used to calculate volume. The cartoon burst at 70°C is a chosen animation trigger, not a real failure temperature. After bursting, the tyre vents to atmospheric pressure and the fixed-amount gas law no longer applies; Reset replaces and reinflates it.',
     task:'Begin at 20°C. Predict what will happen at 60°C, then warm the tyre and compare both pressure readings.',
     question:'Why must we add atmospheric pressure before using the gas law with a tyre-gauge reading?',
     options:['Because gas laws use absolute pressure, measured from a vacuum.','Because gauge pressure is already measured from a vacuum.','Because the tyre gains more air when warmed.'], answer:0,target:60,
     explanation:'The gauge reads pressure above the atmosphere. Start with 220 + 101.3 = 321.3 kPa absolute. At 60°C: 321.3 × 333.15 ÷ 293.15 ≈ 365.1 kPa absolute, or 263.8 kPa gauge. No extra air enters.',
-    readings:['Gauge pressure','Absolute pressure','Gas temperature'], units:['kPa · above the atmosphere','kPa · used in the equation','K · fixed volume'], headers:['T (°C)','T (K)','P absolute (kPa)','P gauge (kPa)'],
-    values:c=>({V:25,P:321.3*(c+273.15)/293.15,T:c+273.15}), row:s=>[(s.T-273.15).toFixed(0),s.T.toFixed(2),s.P.toFixed(1),(s.P-101.3).toFixed(1)]
+    readings:['Gauge pressure','Absolute pressure','Gas temperature'], units:['kPa · above the atmosphere','kPa · measured from a vacuum','K · gas temperature'], headers:['T (°C)','T (K)','P absolute (kPa)','P gauge (kPa)','Tyre condition'],
+    values:c=>({V:25,P:321.3*(c+273.15)/293.15,T:c+273.15}), row:s=>[(s.T-273.15).toFixed(0),s.T.toFixed(2),s.P.toFixed(1),(s.P-101.3).toFixed(1),s.burst?'Burst / vented':'Intact / sealed']
   }
 };
 const key = document.body.dataset.example;
 const d = definitions[key];
-let value = d.initial, records = [], observedTarget = false;
+let value = d.initial, records = [], observedTarget = false, tyreBurst = false;
+function currentValues(){const state=d.values(value);return key==='tyre'?{...state,V:tyreBurst?null:state.V,P:tyreBurst?101.3:state.P,burst:tyreBurst}:state;}
 const fixed = (n, digits=1) => n.toFixed(digits);
 const commonDefs = `<defs>
   <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#faffff" stop-opacity=".95"/><stop offset=".5" stop-color="#b9e0e7" stop-opacity=".65"/><stop offset="1" stop-color="#eaf9fb"/></linearGradient>
@@ -100,11 +101,11 @@ function tyreScene() {
   const tread=Array.from({length:40},(_,i)=>`<path d="M-9 -147l6 -10M5 -148l7 -9" transform="rotate(${i*9})" stroke="#6c7980" stroke-width="2" opacity=".55"/>`).join('');
   const spokes=Array.from({length:5},(_,i)=>`<path d="M-13 -25L-29 -101Q-8 -115 13 -106L18 -29Z" transform="rotate(${i*72})" fill="url(#metal)" stroke="#788d98" stroke-width="2"/>`).join('');
   return `${commonDefs}<rect id="roomColour" width="680" height="460" fill="#e6eff0" class="soft-change"/><path d="M0 359H680V460H0Z" fill="#d5dcda"/><path d="M0 359H680" stroke="#b3c5c1" stroke-width="2"/><path d="M20 408h640" stroke="#f8f8ed" stroke-width="5" stroke-dasharray="40 35"/><ellipse cx="230" cy="369" rx="145" ry="17" fill="#94aba9" opacity=".5"/>
-    <g transform="translate(240 203)" filter="url(#shadow)"><circle r="161" fill="url(#rubber)" stroke="#18313e" stroke-width="3"/>${tread}<circle r="136" fill="none" stroke="#7b8990" stroke-width="1"/><circle r="128" fill="none" stroke="#142c37" stroke-width="4"/><text x="0" y="-135" text-anchor="middle" fill="#a4afb1" style="fill:#a4afb1" font-size="10" letter-spacing="4">LEARNING LAB · RADIAL</text><circle r="115" fill="#16303d" stroke="#b2bfc2" stroke-width="6"/>${spokes}<circle r="34" fill="url(#metal)" class="outline"/><circle r="15" fill="#49616c"/><circle r="7" fill="#c8d8dc"/>
+    <g id="tyreWheel" transform="translate(240 198)" filter="url(#shadow)"><g id="tyreCasing"><path id="tyreOutline" fill="url(#rubber)" stroke="#18313e" stroke-width="3"/><g id="tyreTread">${tread}<circle r="136" fill="none" stroke="#7b8990" stroke-width="1"/><circle r="128" fill="none" stroke="#142c37" stroke-width="4"/><text x="0" y="-135" text-anchor="middle" fill="#a4afb1" style="fill:#a4afb1" font-size="10" letter-spacing="4">LEARNING LAB · RADIAL</text></g></g><path id="burstCasing" d="M-169 28Q-189 84 -171 115H-94L-80 99L-60 114H62L80 99L98 115H173Q185 79 162 28L148 49L133 31Q150 77 135 106H-135Q-151 75 -139 36L-154 49Z" fill="#263c47" stroke="#182e39" stroke-width="3"/><g id="tyreRim"><circle r="115" fill="#16303d" stroke="#b2bfc2" stroke-width="6"/>${spokes}<circle r="34" fill="url(#metal)" class="outline"/><circle r="15" fill="#49616c"/><circle r="7" fill="#c8d8dc"/>
     ${Array.from({length:5},(_,i)=>`<circle cx="${24*Math.sin(i*2*Math.PI/5)}" cy="${-24*Math.cos(i*2*Math.PI/5)}" r="3.5" fill="#385562"/>`).join('')}
-    <path d="M92 77l15 11" stroke="#b7c5c7" stroke-width="7" stroke-linecap="round"/>
-    </g><path d="M346 292C423 370 526 324 514 245" fill="none" stroke="#284b57" stroke-width="12" stroke-linecap="round"/><path d="M346 292C423 370 526 324 514 245" fill="none" stroke="#789198" stroke-width="3"/>
-    ${gauge(520,165,108,400,'kPa gauge')}<text x="516" y="33" text-anchor="middle" class="svg-label">Pressure above the atmosphere</text><text x="241" y="438" text-anchor="middle" class="svg-label">Closed valve · approximately fixed volume</text>
+    <path d="M92 77l15 11" stroke="#b7c5c7" stroke-width="7" stroke-linecap="round"/></g>
+    </g><g id="tyreBurstEffects" aria-hidden="true"><path class="tyre-air-jet" d="M340 160q55 -55 106 -10M346 175q70 -12 105 28M328 141q20 -74 75 -76"/><path class="tyre-fragment fragment-one" d="M327 131l35 -19 -3 17 -23 18Z"/><path class="tyre-fragment fragment-two" d="M278 88l14 -28 13 7 -12 30Z"/><path class="tyre-fragment fragment-three" d="M359 220l27 4 9 20 -32 -5Z"/><g transform="translate(368 92)" class="tyre-pop"><path d="M-38 -6l15 -8 -2 -23 19 15 19 -22 3 27 26 4 -20 15 15 20 -27 -5 -14 24 -8 -25 -27 9 14 -23Z" fill="#f4c875" stroke="#b77347" stroke-width="2"/><text y="7" text-anchor="middle" class="svg-label">POP!</text></g></g><path id="tyreHose" d="M346 292C423 370 526 324 514 245" fill="none" stroke="#284b57" stroke-width="12" stroke-linecap="round"/><path id="tyreHoseHighlight" d="M346 292C423 370 526 324 514 245" fill="none" stroke="#789198" stroke-width="3"/>
+    ${gauge(520,165,108,400,'kPa gauge')}<text x="516" y="33" text-anchor="middle" class="svg-label">Pressure above the atmosphere</text><text id="tyreSealLabel" x="241" y="438" text-anchor="middle" class="svg-label">Closed valve · approximately fixed volume</text><rect x="37" y="383" width="370" height="30" rx="15" fill="#fffaf1" opacity=".95"/><text id="tyreCondition" x="222" y="403" text-anchor="middle" class="svg-label"></text>
     <rect x="442" y="355" width="160" height="69" rx="11" fill="#fffaf3" stroke="#acbfbc"/><text x="522" y="376" text-anchor="middle" class="svg-small">AIR IN THE TYRE</text><text id="tyreTemperature" x="522" y="404" text-anchor="middle" class="svg-readout"></text>`;
 }
 $('#apparatus').innerHTML = ({syringe:syringeScene,balloon:balloonScene,tyre:tyreScene})[key]();
@@ -125,8 +126,9 @@ function setValue(next) {value=Math.max(d.min,Math.min(d.max,Math.round(next/d.s
 slider.addEventListener('input',()=>setValue(Number(slider.value)));
 d.presets.forEach(([next,label])=>{const button=document.createElement('button');button.textContent=label;button.onclick=()=>setValue(next);$('#presets').append(button);});
 function render() {
-  const s=d.values(value), c=s.T-273.15;
-  if(value===d.target)observedTarget=true;
+  if(key==='tyre'&&value>=70)tyreBurst=true;
+  const s=currentValues(), c=s.T-273.15;
+  if(value===d.target&&!tyreBurst)observedTarget=true;
   $('#variableOutput').textContent=`${value} ${d.unit}`;
   let readings, calculation, insight;
   if(key==='syringe') {
@@ -155,12 +157,27 @@ function render() {
     $('#needle').setAttribute('transform',`rotate(${-130+260*gauge/400})`);$('#dialValue').textContent=fixed(gauge);
     $('#tyreTemperature').textContent=`${value}°C · ${fixed(s.T,2)} K`;
     $('#roomColour').setAttribute('fill',`hsl(${200-(value-d.min)/(d.max-d.min)*170} 35% 92%)`);
-    calculation=`P absolute = 321.3 × ${fixed(s.T,2)} ÷ 293.15 = ${fixed(s.P)} kPa. Gauge = ${fixed(s.P)} − 101.3 = ${fixed(gauge)} kPa.`;
-    insight=value>20?'Warmer gas transfers more momentum to the tyre walls. With almost no change in volume, both absolute and gauge pressure rise.':value<20?'Cooler gas transfers less momentum to the tyre walls. Both pressure readings fall, even though no air has escaped.':'The reference tyre reads 220.0 kPa on the gauge. Its absolute pressure is 321.3 kPa. Change the temperature and compare both readings.';
+    const cold=Math.max(0,Math.min(1,(20-value)/50)),hot=Math.max(0,(value-20)/50);
+    const flatten=tyreBurst?1:cold,top=161-25*flatten,radius=161+4*hot*(1-flatten),bottom=161-41*flatten;
+    const outline=Array.from({length:96},(_,i)=>{const angle=i*2*Math.PI/96,lower=Math.max(0,-Math.cos(angle));return `${i?'L':'M'}${Math.sin(angle)*(radius+18*flatten*lower)} ${Math.min(bottom,-Math.cos(angle)*top)}`;}).join('')+'Z';
+    $('#tyreOutline').setAttribute('d',outline);$('#tyreTread').setAttribute('opacity',1-flatten);
+    const centreY=359-bottom;$('#tyreWheel').setAttribute('transform',`translate(240 ${centreY})`);
+    const hose=`M346 ${centreY+88}C423 390 526 324 514 245`;$('#tyreHose').setAttribute('d',hose);$('#tyreHoseHighlight').setAttribute('d',hose);
+    $('#apparatus').classList.toggle('tyre-burst',tyreBurst);$('#apparatus').dataset.tyreState=tyreBurst?'burst':cold>0?'cold':'intact';
+    const tag=$('.sealed-tag');tag.textContent=tyreBurst?'VENTED AIR':'SEALED AIR';tag.classList.toggle('is-open',tyreBurst);
+    $('#tyreCondition').textContent=tyreBurst?'BURST · replace the tyre to start again':cold>0?'Cold tyre · exaggerated flattening':value>=65?'Very hot · cartoon burst at 70°C':'Intact tyre · warm it or cool it';
+    $('#tyreSealLabel').textContent=tyreBurst?'Air escaped · fixed-amount model no longer applies':'Closed valve · pressure calculation uses fixed volume';
+    $('#resetExample').textContent=tyreBurst?'Replace tyre & reset':'Reset';
+    $('#constants').textContent=tyreBurst?'The casing is open. Air has escaped until the inside reaches the outside atmosphere: 101.3 kPa absolute, 0 kPa gauge. Cooling cannot repair a torn tyre.':d.constants;
+    $('#lawLabel').textContent=tyreBurst?'AFTER THE BURST · OPEN TYRE':d.law;
+    $('#equation').textContent=tyreBurst?'P inside = P atmosphere':d.equation;
+    $('.evidence-heading > p').textContent=tyreBurst?'Compare intact and burst readings. After bursting, the amount of gas is no longer fixed.':'Keep the amount of gas fixed before the cartoon burst. Change one variable and look for a pattern.';
+    calculation=tyreBurst?'The tyre has vented: P absolute = 101.3 kPa; P gauge = 101.3 − 101.3 = 0.0 kPa. P/T is no longer constant because air has escaped.':`P absolute = 321.3 × ${fixed(s.T,2)} ÷ 293.15 = ${fixed(s.P)} kPa. Gauge = ${fixed(s.P)} − 101.3 = ${fixed(gauge)} kPa.`;
+    insight=tyreBurst?'Pop! The cartoon casing has torn and the tyre has flattened as air escapes. It stays damaged when cooled: use Replace tyre & reset. The 70°C trigger is an illustration, not a real failure limit.':value>20?'Warmer gas transfers more momentum to the tyre walls, so the sealed-tyre pressure rises. At 70°C the cartoon will burst; actual tyre failure depends on many factors, not one temperature.':value<20?'Cooler gas transfers less momentum to the tyre walls, so pressure falls without air escaping. The squashed shape is deliberately exaggerated; −30°C alone would not normally flatten a correctly inflated tyre.':'The reference tyre reads 220.0 kPa gauge and 321.3 kPa absolute. Try −30°C, 60°C, then the cartoon burst at 70°C.';
   }
   readings.forEach((reading,i)=>$(`#reading${i}`).textContent=reading);
   $('#calculation').textContent=calculation;$('#observation').textContent=insight;
-  $('#apparatus').setAttribute('aria-description',`${d.label}: ${value} ${d.unit}. ${d.readings.map((r,i)=>`${r}: ${readings[i]}`).join('. ')}`);
+  $('#apparatus').setAttribute('aria-description',`${d.label}: ${value} ${d.unit}. ${d.readings.map((r,i)=>`${r}: ${readings[i]}`).join('. ')}${key==='tyre'?(tyreBurst?'. Burst tyre, air vented. Reset to replace it.':'. Intact sealed tyre.') : ''}`);
 }
 function renderRecords() {
   $('#measurementRows').replaceChildren(...records.map((s,i)=>{
@@ -168,17 +185,18 @@ function renderRecords() {
   }));
 }
 function record() {
-  const s=d.values(value);
-  if(records.some(row=>row.V===s.V&&row.T===s.T)){$('#recordStatus').textContent='This measurement is already in your table.';return;}
+  const s=currentValues();
+  if(records.some(row=>row.V===s.V&&row.T===s.T&&row.burst===s.burst)){$('#recordStatus').textContent='This measurement is already in your table.';return;}
   if(records.length>=12){$('#recordStatus').textContent='Your table has 12 measurements. Reset to start a new investigation.';return;}
   records.push(s);renderRecords();$('#recordStatus').textContent=`Reading ${records.length} added. Compare it with the starting point below.`;
 }
 $('#recordMeasurement').onclick=record;
-$('#resetExample').onclick=()=>{records=[];observedTarget=false;$('#feedback').textContent='';delete $('#feedback').dataset.state;$('#answerOptions').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));setValue(d.initial);record();$('#recordStatus').textContent='Reset to the starting conditions. Your first reading is in the table.';};
+$('#resetExample').onclick=()=>{records=[];observedTarget=false;tyreBurst=false;$('#feedback').textContent='';delete $('#feedback').dataset.state;$('#answerOptions').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));setValue(d.initial);record();$('#recordStatus').textContent='Reset to the starting conditions. Your first reading is in the table.';};
 d.options.forEach((text,index)=>{
   const button=document.createElement('button');button.textContent=text;button.setAttribute('aria-pressed','false');
   button.onclick=()=>{
     $('#answerOptions').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');
+    if(!observedTarget&&key==='tyre'&&tyreBurst){$('#feedback').textContent='Replace the burst tyre with Reset, then set the intact tyre to 60°C before answering.';$('#feedback').dataset.state='incorrect';return;}
     if(!observedTarget){$('#feedback').textContent=`First complete the investigation: set the control to ${d.target} ${d.unit}, then choose your answer again.`;$('#feedback').dataset.state='incorrect';return;}
     const correct=index===d.answer;$('#feedback').dataset.state=correct?'correct':'incorrect';$('#feedback').textContent=correct?`Correct. ${d.explanation}`:`Try again. ${key==='syringe'?'Compare the pressure at 20 mL and 10 mL.':key==='balloon'?'Convert both temperatures to Kelvin before comparing them.':'The gauge reads the pressure above the atmosphere; absolute pressure starts at a vacuum.'}`;
   };$('#answerOptions').append(button);
