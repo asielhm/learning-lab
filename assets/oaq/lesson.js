@@ -1,5 +1,5 @@
 import {completed,save,unitState} from './progress.js?v=1';
-import {mountLab} from './lab.js?v=1';
+import {mountLab} from './lab.js?v=search-prediction-1';
 const unit=JSON.parse(document.querySelector('#unit-data').textContent);
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 let current=0;let done=completed(unit.id);

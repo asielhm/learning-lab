@@ -19,6 +19,8 @@ Las 48 explicaciones, ejemplos, asociaciones para recordar, preguntas y activida
 5. Investigación comparativa: variable a cambiar, condiciones a mantener, dos ensayos distintos y pregunta de conclusión.
 6. Repaso: ocho preguntas por serie, filtros de áreas y nivel con casillas en desplegables; práctica con explicación inmediata o autoevaluación que avanza al guardar. Revisión final, enlaces a la lección y reintento de errores.
 
+El buscador por tema de la página OAQ ofrece coincidencias de unidades, lecciones y laboratorios, ignora mayúsculas y tildes y permite usar flechas/Enter o el ratón. Los enlaces de laboratorio abren la investigación elegida, incluida una variante de la misma serie. La devolución de la predicción aparece al terminar el montaje/proceso, junto a los instrumentos: verde con acierto o ámbar para revisar, con texto e icono además del color. Se oculta al comenzar un nuevo ensayo.
+
 El progreso indica controles respondidos correctamente, no una certificación de dominio. Los resultados de repaso y el cuaderno se guardan solo en `localStorage`, en este navegador. No se solicitan nombres ni se envían registros a Google. El módulo no importa el grabador del panel docente. El cuaderno puede descargarse en CSV.
 
 ## Quince investigaciones y talleres
@@ -39,6 +41,7 @@ Los diseños principales son 1366×768, 1440×900 y 1920×1080. La vista ampliad
 - `node tests/oaq-models.mjs`
 - `python3 tools/serve.py --port 8063`
 - `LEARNING_LAB_BASE_URL=http://127.0.0.1:8063 node tests/oaq-browser.cjs`
+- `LEARNING_LAB_BASE_URL=http://127.0.0.1:8063 node tests/oaq-search.cjs`
 - `python3 tools/validate_catalog.py`
 
 Los controles científicos verifican conservación, balance de materia/carga, razones estequiométricas, Boyle, Raoult, semiequivalencia, Kps y Nernst. Las pruebas de navegador no escriben en Google.
