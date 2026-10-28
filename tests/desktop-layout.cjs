@@ -2,7 +2,7 @@ const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
 const base=(process.env.LEARNING_LAB_BASE_URL||'http://127.0.0.1:8000').replace(/\/$/,'');
-const pages=['/','/activities/y9/science/circulatory-system/','/activities/y9/science/breathing-system/','/activities/y9/science/gas-laws/','/activities/y9/science/gas-laws/examples/syringe.html','/activities/y9/science/gas-laws/examples/balloon.html','/activities/y9/science/gas-laws/examples/tyre.html','/activities/y7/maths/algebra/',...['numbers-i','geometry-i','numbers-ii','algebra-i','numbers-iii'].map(u=>`/activities/y7/maths/${u}/`),...['acids-and-bases','metals','redox','organic-chemistry'].map(u=>`/activities/y10/chemistry/${u}/`)];
+const pages=['/','/activities/y9/science/circulatory-system/','/activities/y9/science/breathing-system/','/activities/y9/science/gas-laws/','/activities/y9/science/gas-laws/examples/syringe.html','/activities/y9/science/gas-laws/examples/syringe-balloon.html','/activities/y9/science/gas-laws/examples/balloon.html','/activities/y9/science/gas-laws/examples/tyre.html','/activities/y7/maths/algebra/',...['numbers-i','geometry-i','numbers-ii','algebra-i','numbers-iii'].map(u=>`/activities/y7/maths/${u}/`),...['acids-and-bases','metals','redox','organic-chemistry'].map(u=>`/activities/y10/chemistry/${u}/`)];
 (async()=>{
  const b=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE||'/usr/bin/chromium',args:['--no-sandbox']});
  try{

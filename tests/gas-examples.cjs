@@ -11,7 +11,7 @@ const path='/activities/y9/science/gas-laws/';
     async function ready(){await p.locator('#reading0').filter({hasText:/\d/}).waitFor();}
     async function reading(i,expected,tolerance=.06){assert(Math.abs(Number(await p.locator('#reading'+i).innerText())-expected)<tolerance);}
     async function set(value){await p.locator('#variable').fill(String(value));}
-    for(const [law,key] of [['boyle','syringe'],['charles','balloon'],['pressure','tyre']]){
+    for(const [law,key] of [['boyle','syringe'],['syringe-balloon','syringe-balloon'],['charles','balloon'],['pressure','tyre']]){
       await p.goto(base+path);await p.locator('#pressureValue').waitFor();
       await p.locator(`[data-example=${law}]`).click();await ready();
       assert(p.url().endsWith(`/examples/${key}.html`));
@@ -20,7 +20,7 @@ const path='/activities/y9/science/gas-laws/';
       assert.equal(await p.locator('#measurementRows tr').count(),1);
       assert(await p.locator('.apparatus').evaluate(el=>el.parentElement.nextElementSibling.classList.contains('evidence')));
       assert.equal(await p.locator('.revision-card').evaluate(el=>el.nextElementSibling.tagName),'NOSCRIPT');
-      const correct=key==='balloon'?1:0;
+      const correct=key==='balloon'||key==='syringe-balloon'?1:0;
       await p.locator('#answerOptions button').nth(correct).click();
       assert((await p.locator('#feedback').innerText()).includes('First complete'));
       if(key==='syringe'){
@@ -38,6 +38,19 @@ const path='/activities/y9/science/gas-laws/';
         await p.mouse.move(x,y);await p.mouse.down();await p.mouse.move(x-37.5*scale,y,{steps:8});await p.mouse.up();
         assert.equal(await p.locator('#variable').inputValue(),'10');
         await reading(0,202.6);
+      }else if(key==='syringe-balloon'){
+        const {syringeBalloon}=await import('../activities/y9/science/gas-laws/examples/gas-models.mjs');
+        await reading(0,101.3);await reading(1,5);await reading(2,20);
+        for(let volume=10;volume<=40;volume++){
+          const model=syringeBalloon(volume);assert(Math.abs(model.P*model.balloon-506.5)<1e-8);assert(Math.abs(model.P*model.outside-1519.5)<1e-8);assert.equal(model.balloon+model.outside,volume);
+          await set(volume);await reading(0,2026/volume);await reading(1,volume/4);await reading(2,volume);
+          const balloon=await p.locator('#innerBalloon').boundingBox(),chamber=await p.locator('#airSpace').boundingBox();assert(balloon.x>chamber.x&&balloon.x+balloon.width<chamber.x+chamber.width);assert(balloon.y>chamber.y&&balloon.y+balloon.height<chamber.y+chamber.height);
+          const scale=Number((await p.locator('#innerBalloon').getAttribute('transform')).match(/scale\((.*?)\)/)[1]);assert(Math.abs(scale**3-volume/20)<1e-10);
+        }
+        for(const value of[0,-1,NaN,Infinity])assert.throws(()=>syringeBalloon(value),RangeError);
+        await set(20);await p.locator('#plunger').scrollIntoViewIfNeeded();const points=await p.locator('#apparatus').evaluate(svg=>[441,516].map(x=>{const point=svg.createSVGPoint();point.x=x;point.y=230;const p=point.matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y};}));
+        await p.mouse.move(points[0].x,points[0].y);await p.mouse.down();await p.mouse.move(points[1].x,points[1].y,{steps:10});await p.mouse.up();assert.equal(await p.locator('#variable').inputValue(),'30');await reading(1,7.5);
+        await p.locator('#plunger').focus();await p.keyboard.press('Home');assert.equal(await p.locator('#variable').inputValue(),'10');await reading(1,2.5);await p.keyboard.press('End');assert.equal(await p.locator('#variable').inputValue(),'40');await reading(0,50.65);await reading(1,10);
       }else if(key==='balloon'){
         await reading(0,3);await reading(1,293.15);await reading(2,101.3);
         await set(0);await reading(0,3*273.15/293.15);await reading(1,273.15);
@@ -93,9 +106,14 @@ const path='/activities/y9/science/gas-laws/';
     }
     await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});assert.equal(await phone.locator('#variable').inputValue(),'10');
     await phone.getByRole('button',{name:'Expand',exact:true}).tap();assert.equal(await phone.locator('#variable').inputValue(),'40');
+    await phone.locator('.example-tabs a[href="syringe-balloon.html"]').tap();await phone.locator('#innerBalloon').waitFor();await phone.locator('#plunger').scrollIntoViewIfNeeded();
+    const touchPoints=await phone.locator('#apparatus').evaluate(svg=>[441,366].map(x=>{const point=svg.createSVGPoint();point.x=x;point.y=230;const p=point.matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y};})),bx=touchPoints[0].x,by=touchPoints[0].y;
+    await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:bx,y:by,id:1}]});
+    for(let i=1;i<=8;i++){await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:bx+(touchPoints[1].x-bx)*i/8,y:by,id:1}]});await phone.evaluate(()=>new Promise(requestAnimationFrame));}
+    await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});assert.equal(await phone.locator('#variable').inputValue(),'10');assert.equal(await phone.locator('#reading1').innerText(),'2.50');await phone.getByRole('button',{name:'Expand',exact:true}).tap();assert.equal(await phone.locator('#reading1').innerText(),'10.00');
     await phone.locator('.example-tabs a[href="balloon.html"]').tap();await phone.getByRole('button',{name:'Warm room',exact:true}).tap();assert.equal(await phone.locator('#variable').inputValue(),'60');
     await phone.locator('.example-tabs a[href="tyre.html"]').tap();await phone.getByRole('button',{name:'Cold day',exact:true}).tap();assert.equal(await phone.locator('#variable').inputValue(),'-30');
     assert.deepEqual(errors,[]);assert.deepEqual(unexpected,[]);
-    console.log('Gas object simulations: dedicated links, correct gas-law readings, object responses, mouse/touch/keyboard plunger, investigation gates, records/reset, 320–1440px layouts and no Google submissions passed.');
+    console.log('Gas object simulations: four linked examples, separate sealed balloon/syringe gas invariants, chamber containment, correct gas-law readings, object responses, mouse/touch/keyboard plunger, investigation gates, records/reset, 320–1440px layouts and no Google submissions passed.');
   }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

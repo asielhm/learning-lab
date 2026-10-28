@@ -20,3 +20,5 @@ body[data-example=syringe] #apparatus{touch-action:pan-y}
 
 @media(prefers-reduced-motion:no-preference){.tyre-burst #needle{transition:transform .65s ease-out}.tyre-burst #tyreWheel{animation:tyre-settle .55s ease-out}}
 @keyframes tyre-settle{0%{translate:0 -35px}70%{translate:0 2px}100%{translate:0 0}}
+body[data-example="syringe-balloon"] #apparatus{touch-action:pan-y}
+body[data-example="syringe-balloon"] .scene-top{flex-wrap:wrap}

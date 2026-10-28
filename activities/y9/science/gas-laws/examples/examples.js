@@ -1,3 +1,4 @@
+import {syringeBalloon} from './gas-models.mjs';
 const $ = selector => document.querySelector(selector);
 const definitions = {
   syringe: {
@@ -15,6 +16,24 @@ const definitions = {
     explanation:'The same air occupies half the volume at the same temperature. P = 101.3 × 20 ÷ 10 = 202.6 kPa. The product PV stays constant.',
     readings:['Absolute pressure','Air volume','Temperature'], units:['kPa · includes atmospheric pressure','mL · trapped air','°C · held constant'], headers:['V (mL)','P absolute (kPa)','T (K)','PV (kPa·mL)'],
     values:v=>({V:v,P:2026/v,T:293.15}), row:s=>[s.V.toFixed(0),s.P.toFixed(1),s.T.toFixed(2),(s.P*s.V).toFixed(0)]
+  },
+  'syringe-balloon': {
+    title:'A small balloon inside a sealed syringe', law:'BOYLE–MARIOTTE · TWO SEALED AIR SAMPLES', scene:'One plunger. Two air samples.',
+    intro:'A small tied balloon is trapped inside a capped syringe. Push or pull the plunger and watch how the surrounding pressure changes its size.',
+    instruction:'Drag the plunger or use the chamber-volume slider. Push in: the balloon shrinks. Pull out: the balloon expands. No air crosses the tied balloon.',
+    label:'Total chamber volume, including the balloon', min:10, max:40, step:1, initial:20, unit:'mL',
+    presets:[[10,'Compress'],[20,'Starting point'],[40,'Expand']],
+    constants:'Temperature: 20°C (293.15 K). The syringe cap and balloon knot stay closed. Each air sample keeps its own fixed amount of gas. Initially: 5.00 mL inside the balloon and 15.00 mL around it.',
+    equation:'P₁V₁ = P₂V₂ · for each sealed air sample',
+    caption:'Coral: air sealed inside the tied balloon. Blue: separate air around it. The slider is the whole chamber volume: balloon + surrounding air. The gauge measures the surrounding absolute pressure.',
+    limit:'Ideal gas at 20°C, with slow plunger motion and thermal equilibrium. The membrane is very flexible with negligible tension, so inside and outside balloon pressures are taken as equal. Real latex needs a pressure difference to balance its tension, so measured volumes will differ. Balloon width and height scale with the cube root of its volume. The illustration is schematic, tubing volume is neglected, and there is no leakage or gas exchange between the two samples.',
+    task:'Record the starting point at 20 mL. Predict what the balloon will do at 10 mL, then compress. Next pull out to 40 mL and compare its size and pressure with the starting point.',
+    question:'Pulling the plunger from 20 mL to 40 mL makes the small sealed balloon…',
+    options:['Shrink because the syringe has more space.','Expand from 5.00 mL to 10.00 mL because the surrounding pressure halves.','Fill with extra air that crosses its tied knot.'], answer:1,target:40,
+    explanation:'At 40 mL, P = 101.3 × 20 ÷ 40 = 50.65 kPa absolute. The balloon keeps its own gas: V = 101.3 × 5.00 ÷ 50.65 = 10.00 mL. It expands because the surrounding pressure falls, not because air enters it.',
+    readings:['Surrounding absolute pressure','Balloon volume','Total chamber volume'], units:['kPa · also inside the ideal balloon','mL · sealed inside the balloon','mL · balloon + surrounding air'],
+    headers:['Chamber (mL)','Balloon (mL)','Surrounding air (mL)','P absolute (kPa)','P × V balloon (kPa·mL)','T (K)'],
+    values:syringeBalloon, row:s=>[s.V.toFixed(0),s.balloon.toFixed(2),s.outside.toFixed(2),s.P.toFixed(2),(s.P*s.balloon).toFixed(1),s.T.toFixed(2)]
   },
   balloon: {
     title:'A balloon in a changing room', law:'CHARLES · APPROXIMATELY CONSTANT PRESSURE', scene:'A little warmer. A little bigger.',
@@ -51,6 +70,8 @@ const definitions = {
 };
 const key = document.body.dataset.example;
 const d = definitions[key];
+const syringeMode=key==='syringe'||key==='syringe-balloon';
+const syringeGeometry=key==='syringe-balloon'?{origin:110,scale:7.5}:{origin:160,scale:3.75};
 let value = d.initial, records = [], observedTarget = false, tyreBurst = false;
 function currentValues(){const state=d.values(value);return key==='tyre'?{...state,V:tyreBurst?null:state.V,P:tyreBurst?101.3:state.P,burst:tyreBurst}:state;}
 const fixed = (n, digits=1) => n.toFixed(digits);
@@ -87,6 +108,21 @@ function syringeScene() {
   <text id="airLabel" x="205" y="152" text-anchor="middle" class="svg-label"></text><text x="268" y="55" text-anchor="middle" class="svg-label">Same air · slow compression · 20°C</text>
   ${gauge(555,105,78,220,'kPa absolute')}<text x="340" y="426" text-anchor="middle" class="svg-label">← push to compress · pull to expand →</text>`;
 }
+function syringeBalloonScene() {
+  const ticks=Array.from({length:21},(_,i)=>`<path d="M${110+i*15} 182v${i%5===0?17:10}" stroke="#3e6673" stroke-width="1.5"/>${i%5===0?`<text x="${110+i*15}" y="213" text-anchor="middle" class="svg-small">${i*2}</text>`:''}`).join('');
+  return `${commonDefs}<rect width="680" height="460" fill="#eef5f4"/><circle cx="230" cy="210" r="165" fill="#e2efed"/><path d="M0 382H680V460H0Z" fill="#e0e8e2"/><path d="M0 382H680" stroke="#b8cdca" stroke-width="2"/><ellipse cx="310" cy="367" rx="240" ry="14" fill="#b6cecb" opacity=".45"/>
+    <path d="M125 274V315Q125 340 150 340H525Q555 340 555 315V183" fill="none" stroke="#375c68" stroke-width="9"/><path d="M125 274V315Q125 340 150 340H525Q555 340 555 315V183" fill="none" stroke="#78949c" stroke-width="3"/>
+    <rect x="95" y="174" width="331" height="112" rx="9" fill="url(#glass)" class="outline"/><rect id="airSpace" x="108" y="181" height="98" width="152" fill="#83c6d7" opacity=".35"/>
+    <rect x="70" y="209" width="26" height="42" rx="5" fill="url(#glass)" class="outline"/><rect x="36" y="203" width="35" height="54" rx="8" fill="#ed9b7c" class="outline"/><path d="M44 212v35M53 212v35M62 212v35" stroke="#b66c50" stroke-width="2"/>
+    ${ticks}<path d="M104 178H416" stroke="white" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+    <g id="innerBalloon"><path id="innerBalloonBody" d="M0 15C-7 11 -23 -1 -23 -11C-23 -26 -11 -31 0 -31C15 -31 24 -21 23 -10C22 1 7 12 0 15Z" fill="url(#balloonPaint)" stroke="#923e4e" stroke-width="1.5"/><ellipse cx="-9" cy="-20" rx="4" ry="7" fill="#ffe3d3" opacity=".65" transform="rotate(24 -9 -20)"/><path d="M0 14l-4 7q4 -2 8 0Z" fill="#c95160" stroke="#923e4e" stroke-width="1"/></g>
+    <rect x="420" y="158" width="15" height="143" rx="6" fill="url(#glass)" class="outline"/>
+    <g id="plunger" class="drag-handle" tabindex="0" role="slider" aria-label="Move syringe plunger to change total chamber volume" aria-valuemin="10" aria-valuemax="40"><rect x="4" y="219" width="175" height="22" rx="4" fill="url(#metal)" class="outline"/><rect x="-4" y="181" width="15" height="98" rx="5" fill="#2e505d"/><path d="M0 188v83M6 188v83" stroke="#728e98" stroke-width="2"/><rect x="172" y="180" width="19" height="100" rx="8" fill="#d3e4e6" class="outline"/><path d="M180 194v72" stroke="white" stroke-width="3"/><rect x="155" y="167" width="52" height="126" fill="transparent"/></g>
+    <text x="55" y="294" text-anchor="middle" class="svg-small">SEALED CAP</text><text x="110" y="161" class="svg-small">Chamber scale / mL</text>
+    <path id="innerBalloonPointer" fill="none" stroke="#a26461" stroke-width="1.5" stroke-dasharray="4 4"/><rect x="150" y="92" width="270" height="42" rx="12" fill="#fff8f1" stroke="#d8b1a3"/><text id="innerBalloonCaption" x="285" y="118" text-anchor="middle" class="svg-label"></text>
+    <rect x="170" y="302" width="310" height="28" rx="12" fill="#e3f4f7"/><text id="outsideAirLabel" x="325" y="321" text-anchor="middle" class="svg-label"></text>
+    ${gauge(555,105,78,220,'kPa absolute')}<text x="283" y="51" text-anchor="middle" class="svg-label">Tied balloon · closed cap · 20°C</text><text x="340" y="419" text-anchor="middle" class="svg-label">← push to shrink the balloon · pull to expand →</text><text x="340" y="444" text-anchor="middle" class="svg-small">Two separate air samples · no air crosses the balloon</text>`;
+}
 function balloonScene() {
   return `${commonDefs}<rect id="roomColour" width="680" height="460" fill="#f6e6d7" class="soft-change"/><path d="M0 365H680V460H0Z" fill="#e5d8c3"/><path d="M0 365H680" stroke="#d0bda2" stroke-width="2"/>
     <rect x="40" y="55" width="126" height="170" rx="10" fill="#fdfbf1" stroke="#bcafa0" stroke-width="4"/><rect x="49" y="64" width="108" height="152" rx="3" fill="#d8eceb"/><circle cx="131" cy="93" r="18" fill="#f5d487"/><path d="M49 161Q103 110 157 160V216H49Z" fill="#a9c6b1"/><path d="M103 64V216M49 140H157" stroke="#fdfbf1" stroke-width="7"/>
@@ -108,10 +144,11 @@ function tyreScene() {
     ${gauge(520,165,108,400,'kPa gauge')}<text x="516" y="33" text-anchor="middle" class="svg-label">Pressure above the atmosphere</text><text id="tyreSealLabel" x="241" y="438" text-anchor="middle" class="svg-label">Closed valve · approximately fixed volume</text><rect x="37" y="383" width="370" height="30" rx="15" fill="#fffaf1" opacity=".95"/><text id="tyreCondition" x="222" y="403" text-anchor="middle" class="svg-label"></text>
     <rect x="442" y="355" width="160" height="69" rx="11" fill="#fffaf3" stroke="#acbfbc"/><text x="522" y="376" text-anchor="middle" class="svg-small">AIR IN THE TYRE</text><text id="tyreTemperature" x="522" y="404" text-anchor="middle" class="svg-readout"></text>`;
 }
-$('#apparatus').innerHTML = ({syringe:syringeScene,balloon:balloonScene,tyre:tyreScene})[key]();
+$('#apparatus').innerHTML = ({syringe:syringeScene,'syringe-balloon':syringeBalloonScene,balloon:balloonScene,tyre:tyreScene})[key]();
 $('#apparatus').setAttribute('aria-label',d.title+' interactive illustration');
 $('#lawLabel').textContent=d.law;
 $('#sceneTitle').textContent=d.scene;
+if(key==='syringe-balloon')$('.sealed-tag').textContent='TWO SEALED AIR SAMPLES';
 $('#instruction').textContent=d.instruction;
 $('#sceneCaption').textContent=d.caption;
 $('#variableLabel').textContent=d.label;
@@ -131,15 +168,26 @@ function render() {
   if(value===d.target&&!tyreBurst)observedTarget=true;
   $('#variableOutput').textContent=`${value} ${d.unit}`;
   let readings, calculation, insight;
-  if(key==='syringe') {
-    readings=[fixed(s.P),fixed(s.V,0),fixed(c,0)];
-    const x=160+s.V*3.75,plunger=$('#plunger');
+  if(syringeMode) {
+    readings=key==='syringe-balloon'?[fixed(s.P,2),fixed(s.balloon,2),fixed(s.V,0)]:[fixed(s.P),fixed(s.V,0),fixed(c,0)];
+    const x=syringeGeometry.origin+s.V*syringeGeometry.scale,plunger=$('#plunger');
     plunger.setAttribute('transform',`translate(${x} 0)`);plunger.setAttribute('aria-valuenow',s.V);plunger.setAttribute('aria-valuetext',`${s.V} millilitres, ${fixed(s.P)} kilopascals absolute`);
-    $('#airSpace').setAttribute('width',x-158);$('#airSpace').setAttribute('opacity',.3+.4*(40-s.V)/30);
-    $('#airLabel').textContent=`Trapped air · ${s.V} mL`;$('#airLabel').setAttribute('x',(158+x)/2);
+    $('#airSpace').setAttribute('width',x-(key==='syringe-balloon'?108:158));$('#airSpace').setAttribute('opacity',.3+.4*(40-s.V)/30);
+    if(key==='syringe-balloon'){
+      const scale=Math.cbrt(s.balloon/5),centre=(110+x)/2;
+      $('#innerBalloon').setAttribute('transform',`translate(${centre} 250) scale(${scale})`);
+      $('#innerBalloonCaption').textContent=`Sealed balloon: ${fixed(s.balloon,2)} mL`;
+      $('#outsideAirLabel').textContent=`Surrounding air: ${fixed(s.outside,2)} mL`;
+      $('#innerBalloonPointer').setAttribute('d',`M285 134L${centre} ${250-31*scale}`);
+      plunger.setAttribute('aria-valuetext',`${s.V} millilitres total chamber, balloon ${fixed(s.balloon,2)} millilitres, pressure ${fixed(s.P,2)} kilopascals absolute`);
+    }else{$('#airLabel').textContent=`Trapped air · ${s.V} mL`;$('#airLabel').setAttribute('x',(158+x)/2);}
     $('#needle').setAttribute('transform',`rotate(${-130+260*s.P/220})`);$('#dialValue').textContent=fixed(s.P);
     calculation=`P = 101.3 × 20 ÷ ${value} = ${fixed(s.P)} kPa`;
     insight=value<20?'Less space for the same air: collisions with the walls become more frequent. Absolute pressure rises while average particle speed stays the same.':value>20?'More space for the same air: collisions with the walls become less frequent. Inside pressure is now below atmospheric pressure.':'The reference position: 20 mL at 101.3 kPa. Push left or pull right to change the volume.';
+    if(key==='syringe-balloon'){
+      calculation=`P = 101.3 × 20 ÷ ${s.V} = ${fixed(s.P,2)} kPa. Balloon V = 101.3 × 5.00 ÷ ${fixed(s.P,2)} = ${fixed(s.balloon,2)} mL. Surrounding air = ${s.V} − ${fixed(s.balloon,2)} = ${fixed(s.outside,2)} mL.`;
+      insight=value<20?'Pushing the plunger raises the pressure of the surrounding air. The balloon is squeezed smaller until its internal pressure balances that higher external pressure. Its own air does not escape.':value>20?'Pulling the plunger lowers the surrounding pressure. The balloon’s own gas expands until the pressures balance. No extra air enters the tied balloon.':'The 20 mL chamber contains a 5.00 mL balloon and 15.00 mL of separate surrounding air. Push or pull the plunger and compare both samples.';
+    }
   } else if(key==='balloon') {
     readings=[fixed(s.V,2),fixed(s.T,2),fixed(s.P)];
     const scale=Math.cbrt(s.V/3);$('#balloonShape').setAttribute('transform',`translate(315 317) scale(${scale})`);
@@ -198,14 +246,14 @@ d.options.forEach((text,index)=>{
     $('#answerOptions').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');
     if(!observedTarget&&key==='tyre'&&tyreBurst){$('#feedback').textContent='Replace the burst tyre with Reset, then set the intact tyre to 60°C before answering.';$('#feedback').dataset.state='incorrect';return;}
     if(!observedTarget){$('#feedback').textContent=`First complete the investigation: set the control to ${d.target} ${d.unit}, then choose your answer again.`;$('#feedback').dataset.state='incorrect';return;}
-    const correct=index===d.answer;$('#feedback').dataset.state=correct?'correct':'incorrect';$('#feedback').textContent=correct?`Correct. ${d.explanation}`:`Try again. ${key==='syringe'?'Compare the pressure at 20 mL and 10 mL.':key==='balloon'?'Convert both temperatures to Kelvin before comparing them.':'The gauge reads the pressure above the atmosphere; absolute pressure starts at a vacuum.'}`;
+    const correct=index===d.answer;$('#feedback').dataset.state=correct?'correct':'incorrect';$('#feedback').textContent=correct?`Correct. ${d.explanation}`:`Try again. ${key==='syringe'?'Compare the pressure at 20 mL and 10 mL.':key==='balloon'?'Convert both temperatures to Kelvin before comparing them.':key==='syringe-balloon'?'Compare the pressure around the balloon at 20 mL and 40 mL. Its own gas stays sealed inside.':'The gauge reads the pressure above the atmosphere; absolute pressure starts at a vacuum.'}`;
   };$('#answerOptions').append(button);
 });
-if(key==='syringe') {
+if(syringeMode) {
   const handle=$('#plunger'), svg=$('#apparatus');let dragging=false,grabOffset=0;
-  function drag(event){const matrix=svg.getScreenCTM();if(!matrix)return;const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());setValue((point.x-grabOffset-160)/3.75);}
+  function drag(event){const matrix=svg.getScreenCTM();if(!matrix)return;const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());setValue((point.x-grabOffset-syringeGeometry.origin)/syringeGeometry.scale);}
   // Keep the initial grab offset so the plunger does not jump when its thumb pad is pressed.
-  handle.addEventListener('pointerdown',event=>{if(event.button!==0)return;event.preventDefault();const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(svg.getScreenCTM().inverse());grabOffset=point.x-(160+value*3.75);dragging=true;handle.setPointerCapture(event.pointerId);});
+  handle.addEventListener('pointerdown',event=>{if(event.button!==0)return;event.preventDefault();const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(svg.getScreenCTM().inverse());grabOffset=point.x-(syringeGeometry.origin+value*syringeGeometry.scale);dragging=true;handle.setPointerCapture(event.pointerId);});
   handle.addEventListener('pointermove',event=>{if(dragging)drag(event);});
   handle.addEventListener('pointerup',()=>dragging=false);handle.addEventListener('pointercancel',()=>dragging=false);handle.addEventListener('lostpointercapture',()=>dragging=false);
   handle.addEventListener('keydown',event=>{const changes={ArrowLeft:-1,ArrowDown:-1,ArrowRight:1,ArrowUp:1,PageDown:-5,PageUp:5};if(event.key in changes){event.preventDefault();setValue(value+changes[event.key]);}else if(event.key==='Home'||event.key==='End'){event.preventDefault();setValue(event.key==='Home'?d.min:d.max);}});

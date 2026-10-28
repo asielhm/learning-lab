@@ -112,7 +112,7 @@ Revision setup uses compact dropdowns containing checkboxes for Question area an
 
 The Student results dashboard also supports checkbox dropdowns for teachers, courses and topics. Any combination can be selected; Show results applies the combined filters to records, scores and pagination. The Google API accepts arrays as well as older scalar filters. Null is All and an explicit empty selection matches no rows. The prepared Google files must be deployed in the owner’s Apps Script project for dashboard changes to become live.
 
-The gas-law everyday examples open separate cartoon object simulations at `activities/y9/science/gas-laws/examples/syringe.html`, `balloon.html` and `tyre.html`. Each has live controls/readings, measurements, reset and a short investigation. They use local SVG illustrations with no external dependencies. The syringe plunger supports mouse, touch and keyboard input; balloon size follows the cube root of its calculated volume; the tyre gauge distinguishes absolute from gauge pressure. These explorations are unrecorded. Run `node tests/gas-examples.cjs` with the static server for object behaviour, gas-law calculations and responsive/touch checks.
+The gas-law everyday examples open separate cartoon object simulations at `activities/y9/science/gas-laws/examples/syringe.html`, `syringe-balloon.html`, `balloon.html` and `tyre.html`. Each has live controls/readings, measurements, reset and a short investigation. They use local SVG illustrations with no external dependencies. The syringe plunger supports mouse, touch and keyboard input; balloon size follows the cube root of its calculated volume; the tyre gauge distinguishes absolute from gauge pressure. These explorations are unrecorded. Run `node tests/gas-examples.cjs` with the static server for object behaviour, gas-law calculations and responsive/touch checks.
 
 ## Year 7 Maths syllabus units
 
@@ -196,3 +196,5 @@ With the local server running, use `LEARNING_LAB_BASE_URL=http://127.0.0.1:8058 
 
 
 All Y10 Chemistry and Physics investigation selectors use native dropdowns above the bench. The selector stays in document flow, with spacing before the apparatus and evidence, so it cannot float over the notebook while scrolling. Switching investigations preserves each investigation’s progress, settings and notebook for the open page. Shared styling is in `assets/investigation-picker.css`; both page generators include it.
+
+The syringe-with-balloon variation keeps the air inside a small tied balloon separate from the surrounding air in the capped syringe. Moving the plunger changes both volumes and their equilibrium pressure at constant temperature. Its readings distinguish total chamber volume, balloon volume and surrounding-air volume; the model assumes negligible membrane tension. Both syringe variants support mouse/touch dragging and keyboard controls.
