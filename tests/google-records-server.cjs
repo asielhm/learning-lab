@@ -28,7 +28,7 @@ const context=vm.createContext({console:{log:s=>logs.push(s),warn:()=>{}},
 });
 for(const file of ['QuestionBank.gs','Code.gs'])vm.runInContext(fs.readFileSync(path.join(root,'google-apps-script',file),'utf8'),context,{filename:file});
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/records/banks.json'),'utf8'));
-assert.equal(manifest.banks.length,21);assert.equal(manifest.questionCount,1390);
+assert.equal(manifest.banks.length,22);assert.equal(manifest.questionCount,1450);
 assert.equal(JSON.stringify(context.RECORDING_MANIFEST_),JSON.stringify(manifest));
 for(const metadata of manifest.banks){
  const filename=metadata.topic==='circulatory-system'?'circulatory':metadata.topic==='breathing-system'?'breathing':metadata.topic;
@@ -163,7 +163,7 @@ for(const metadata of manifest.banks.filter(b=>!originalTopics.includes(b.topic)
 }
 const oneWrong={...payload(undefined,1,false,'Single Question Test','y10-physics-kinematics'),classroom:'10P',totalQuestions:1};context.saveAnswer_(oneWrong);
 const physicsSummary=context.getTeacherResults(token,{topic:'y10-physics-kinematics',classroom:['10P']});assert.equal(physicsSummary.total,2);assert.equal(physicsSummary.accuracy,67);assert.equal(physicsSummary.topicSummary[0].accuracy,67,'Aggregate accuracy is weighted by answer count');
-result=context.getTeacherResults(token,{});assert.equal(result.bankCount,21);assert.equal(result.questionCount,1390);assert.equal(result.courses.length,4);assert.equal(result.topics.length,21);assert(result.classes.includes('7N')&&result.classes.includes('10C')&&result.classes.includes('10P'));
+result=context.getTeacherResults(token,{});assert.equal(result.bankCount,22);assert.equal(result.questionCount,1450);assert.equal(result.courses.length,4);assert.equal(result.topics.length,22);assert(result.classes.includes('7N')&&result.classes.includes('10C')&&result.classes.includes('10P'));
 assert.equal(result.topicSummary.reduce((sum,group)=>sum+group.tests,0),result.total,'Overview includes the whole filtered selection, not just 50 rows');
 assert(result.topics.some(topic=>topic.value==='y10-physics-kinematics'&&topic.label==='Motion and projectiles'));
 const publicNonce=crypto.randomUUID(),publicCapabilities=context.doGet({parameter:{action:'capabilities',nonce:publicNonce}}).html;
@@ -178,4 +178,4 @@ const publicFunctions=[...source.matchAll(/^function (\w+)\(/gm)].map(match=>mat
 assert.deepEqual(publicFunctions,['doGet','doPost','getTeacherResults','loginTeacher','logoutTeacher','resetTeacherPassword','setupLearningLab']);
 assert.equal(context.doGet().name,'Dashboard');
 assert.equal(context.doGet().favicon,'https://asielhm.github.io/learning-lab/assets/brand/learning-lab-logo.png');
-console.log('Google records server: all 21 banks / 1,390 questions, class filters, dynamic course/topic choices, full-selection weighted summaries, public readiness metadata, bank signatures, protected reads, password rotation/logout/rate limit, authoritative scoring, partial quizzes, idempotent writes, summary repair, formula escaping and filtered pagination passed.');
+console.log('Google records server: all 22 banks / 1,450 questions, class filters, dynamic course/topic choices, full-selection weighted summaries, public readiness metadata, bank signatures, protected reads, password rotation/logout/rate limit, authoritative scoring, partial quizzes, idempotent writes, summary repair, formula escaping and filtered pagination passed.');

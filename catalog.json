@@ -328,6 +328,42 @@
               "appTitle": "Circulatory system web app"
             },
             {
+              "id": "blood-vessels",
+              "name": "Blood vessels and blood",
+              "appTitle": "Inside your blood vessels",
+              "description": "Discover how vessel walls and blood components support transport, defence and repair.",
+              "primaryActivity": "blood-vessels-lab",
+              "activities": [
+                {
+                  "id": "blood-vessels-lab",
+                  "title": "Inside your blood vessels",
+                  "description": "Explore moving blood, vessel structure and component functions; operate a centrifuge and interpret blood composition.",
+                  "format": "Interactive biology lab",
+                  "duration": "25–40 min",
+                  "href": "activities/y9/science/blood-vessels/",
+                  "image": "activities/y9/science/blood-vessels/cover.svg"
+                },
+                {
+                  "id": "blood-transport-game",
+                  "title": "Transport Dispatch",
+                  "description": "Choose a blood component, deliver ten different cargos through the circulation and explain each journey.",
+                  "format": "Transport game",
+                  "duration": "10–15 min",
+                  "href": "activities/y9/science/blood-vessels/transport-game.html",
+                  "image": "activities/y9/science/blood-vessels/game-cover.svg"
+                },
+                {
+                  "id": "blood-vessels-revision",
+                  "title": "Blood vessels and blood: revision simulator",
+                  "description": "60 questions on blood composition, oxygen and dissolved transport, defence, clotting, vessels and exchange.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y9/science/blood-vessels/revision.html",
+                  "image": "activities/y9/science/blood-vessels/cover.svg"
+                }
+              ]
+            },
+            {
               "id": "breathing-system",
               "name": "Breathing system",
               "description": "Explore the airways, investigate how the lungs ventilate, and see how gases pass between alveoli and blood.",

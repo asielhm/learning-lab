@@ -1,7 +1,7 @@
 {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1390,
+  "questionCount": 1450,
   "banks": [
     {
       "topic": "algebra",
@@ -65,6 +65,13 @@
       "title": "Circulatory system",
       "questionCount": 60,
       "signature": "3f3f13a9417ced49684156986aaeab9b3493077485c4f7dbe11de8497827d655"
+    },
+    {
+      "topic": "blood-vessels",
+      "course": "Year 9 Science",
+      "title": "Blood vessels and blood",
+      "questionCount": 60,
+      "signature": "27a3ccfce7909a4151d5008a00eb5276b499e03f6bf08318f43d3d40d42de0af"
     },
     {
       "topic": "breathing-system",

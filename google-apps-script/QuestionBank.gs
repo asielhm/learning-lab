@@ -2,7 +2,7 @@
 var RECORDING_MANIFEST_ = {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1390,
+  "questionCount": 1450,
   "banks": [
     {
       "topic": "algebra",
@@ -66,6 +66,13 @@ var RECORDING_MANIFEST_ = {
       "title": "Circulatory system",
       "questionCount": 60,
       "signature": "3f3f13a9417ced49684156986aaeab9b3493077485c4f7dbe11de8497827d655"
+    },
+    {
+      "topic": "blood-vessels",
+      "course": "Year 9 Science",
+      "title": "Blood vessels and blood",
+      "questionCount": 60,
+      "signature": "27a3ccfce7909a4151d5008a00eb5276b499e03f6bf08318f43d3d40d42de0af"
     },
     {
       "topic": "breathing-system",
@@ -7131,6 +7138,741 @@ var QUESTION_BANKS_ = {
       "Health and investigations"
     ],
     "signature": "3f3f13a9417ced49684156986aaeab9b3493077485c4f7dbe11de8497827d655"
+  },
+  "blood-vessels": {
+    "course": "Year 9 Science",
+    "questions": {
+      "blood-vessels-100": {
+        "prompt": "What is plasma?",
+        "category": "Blood composition",
+        "difficulty": "Foundation",
+        "options": [
+          "The liquid part of blood, containing water and dissolved substances.",
+          "The nucleus of a red cell.",
+          "The wall of every artery.",
+          "A gas inside a red cell."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-101": {
+        "prompt": "Which is a cell fragment rather than a complete cell?",
+        "category": "Blood composition",
+        "difficulty": "Foundation",
+        "options": [
+          "A neutrophil.",
+          "A platelet.",
+          "A lymphocyte.",
+          "An endothelial cell."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-102": {
+        "prompt": "Which human blood component normally has a nucleus?",
+        "category": "Blood composition",
+        "difficulty": "Foundation",
+        "options": [
+          "A mature red blood cell.",
+          "Plasma.",
+          "A white blood cell.",
+          "A platelet fragment."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-103": {
+        "prompt": "Which component normally occupies the largest fraction of whole-blood volume in the teaching example?",
+        "category": "Blood composition",
+        "difficulty": "Foundation",
+        "options": [
+          "White cells alone.",
+          "Platelets alone.",
+          "Dissolved oxygen alone.",
+          "Plasma."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-104": {
+        "prompt": "In an anticoagulated sample after centrifugation, which layer is at the bottom?",
+        "category": "Blood composition",
+        "difficulty": "Application",
+        "options": [
+          "The packed red-cell layer.",
+          "A layer of pure oxygen.",
+          "A layer of antibodies only.",
+          "A layer of the least-dense plasma."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-105": {
+        "prompt": "What is in the buffy coat?",
+        "category": "Blood composition",
+        "difficulty": "Application",
+        "options": [
+          "Only haemoglobin molecules.",
+          "White cells and platelets.",
+          "Only pure water.",
+          "Only oxygenated red cells."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-106": {
+        "prompt": "What do the heights of separated blood layers mainly represent?",
+        "category": "Blood composition",
+        "difficulty": "Application",
+        "options": [
+          "The number of oxygen molecules in each layer.",
+          "The percentage of cells with a nucleus.",
+          "Fractions of blood volume.",
+          "The speed of blood in an artery."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-107": {
+        "prompt": "Why does the centrifuge sample contain an anticoagulant?",
+        "category": "Blood composition",
+        "difficulty": "Application",
+        "options": [
+          "To turn plasma into red cells.",
+          "To make all cells the same density.",
+          "To give the red cells oxygen bubbles.",
+          "To prevent clotting while components are separated."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-108": {
+        "prompt": "A tube contains 55% plasma and 0.5% buffy coat by volume. What fraction remains for red cells?",
+        "category": "Blood composition",
+        "difficulty": "Challenge",
+        "options": [
+          "44.5%.",
+          "55.5%.",
+          "0.5%.",
+          "99.5%."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-109": {
+        "prompt": "Which statement correctly distinguishes plasma and serum?",
+        "category": "Blood composition",
+        "difficulty": "Challenge",
+        "options": [
+          "Plasma is a gas but serum is a liquid.",
+          "Serum is the liquid remaining after blood clots and lacks fibrinogen consumed in clotting.",
+          "Serum contains all the red cells and plasma contains none.",
+          "They always contain exactly the same clotting proteins."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-200": {
+        "prompt": "What carries most oxygen in human blood?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Foundation",
+        "options": [
+          "Platelet nuclei.",
+          "Air bubbles in plasma.",
+          "Haemoglobin inside red blood cells.",
+          "Urea dissolved in plasma."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-201": {
+        "prompt": "What does biconcave mean for a red cell?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Foundation",
+        "options": [
+          "It has two nuclei.",
+          "It has two separate chambers.",
+          "It contains two air bubbles.",
+          "It has an inward dip on each face."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-202": {
+        "prompt": "How does flexibility help a red cell?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Foundation",
+        "options": [
+          "It can deform through narrow capillaries.",
+          "It can make a new nucleus in every vessel.",
+          "It can turn into a vein valve.",
+          "It can pump blood without the heart."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-203": {
+        "prompt": "What colour is normal oxygen-poor blood?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Foundation",
+        "options": [
+          "Blue.",
+          "Dark red.",
+          "Colourless.",
+          "Green."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-204": {
+        "prompt": "Where does oxygen normally load onto haemoglobin?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Application",
+        "options": [
+          "Inside the kidney collecting duct.",
+          "Only inside a platelet plug.",
+          "In blood passing the lung exchange surface.",
+          "In a vein valve pocket that makes oxygen."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-205": {
+        "prompt": "What normally happens to a red cell when it supplies oxygen to muscle?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Application",
+        "options": [
+          "It bursts into the muscle to release an air bubble.",
+          "It becomes a muscle cell permanently.",
+          "It changes into an antibody.",
+          "It remains inside the vessel while oxygen transfers towards tissue."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-206": {
+        "prompt": "Why is lacking a nucleus useful for a mature human red cell?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Application",
+        "options": [
+          "It leaves more room for haemoglobin.",
+          "It allows the cell to produce antibodies.",
+          "It makes it a larger white cell.",
+          "It makes blood pressure disappear."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-207": {
+        "prompt": "A muscle uses oxygen rapidly during exercise. What helps oxygen move from blood towards the muscle?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Application",
+        "options": [
+          "The muscle making blood blue.",
+          "A maintained difference in oxygen partial pressure.",
+          "All capillary walls becoming thick muscle.",
+          "Platelets converting glucose into oxygen."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-208": {
+        "prompt": "If haemoglobin is reduced while plasma volume stays similar, what direct transport function may be reduced?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Challenge",
+        "options": [
+          "The direction defining an artery.",
+          "The conversion of every vein into a capillary.",
+          "The capacity to carry oxygen bound to haemoglobin.",
+          "The number of air bubbles held in blood."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-209": {
+        "prompt": "Which comparison best connects structure and function?",
+        "category": "Red cells and oxygen",
+        "difficulty": "Challenge",
+        "options": [
+          "A thick rigid cube is needed to pass in single file.",
+          "A large nucleus is the main oxygen-binding structure.",
+          "A platelet’s fragments carry more oxygen because they are smaller.",
+          "A dipped flexible disc supports gas exchange and passage through narrow vessels."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-300": {
+        "prompt": "How does most glucose travel through the blood?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Foundation",
+        "options": [
+          "Dissolved in plasma.",
+          "As bubbles in the heart.",
+          "As the nucleus of a platelet.",
+          "Only bound to oxygen in red cells."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-301": {
+        "prompt": "Which journey correctly describes urea?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Foundation",
+        "options": [
+          "Lungs to red cells, then release as oxygen.",
+          "Liver to kidneys in plasma, then excretion in urine.",
+          "Platelets to arteries, then conversion into glucose.",
+          "Kidneys to lungs, then excretion as the main breathed gas."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-302": {
+        "prompt": "What is a hormone?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Foundation",
+        "options": [
+          "A new type of blood vessel wall.",
+          "An oxygen bubble trapped in a platelet.",
+          "A chemical signal that can travel to target cells.",
+          "An organ that filters every red cell."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-303": {
+        "prompt": "What is an ion in plasma?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Foundation",
+        "options": [
+          "A whole artery.",
+          "A large group of white cells only.",
+          "A bubble of air.",
+          "An electrically charged particle."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-304": {
+        "prompt": "How is most carbon dioxide transported in blood?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Application",
+        "options": [
+          "As bicarbonate ions in plasma, formed largely through reactions in red cells.",
+          "As large air bubbles in arteries.",
+          "Only as carbon dioxide in platelet nuclei.",
+          "Only as solid carbon particles."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-305": {
+        "prompt": "Why does a circulating hormone not make every cell respond in the same way?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Application",
+        "options": [
+          "Hormones never leave the heart.",
+          "Response depends on appropriate receptors and internal machinery.",
+          "Only red cells receive any blood flow.",
+          "All tissues have identical responses to every signal."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-306": {
+        "prompt": "Which is a function of albumin in plasma?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Application",
+        "options": [
+          "Binding most oxygen in place of haemoglobin.",
+          "Making every white cell lose its nucleus.",
+          "Helping retain water in circulation and carrying some substances.",
+          "Acting as a one-way vein valve."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-307": {
+        "prompt": "What is redistributed when warm blood flows from working muscle towards skin?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Application",
+        "options": [
+          "A special molecule made only of heat.",
+          "New oxygen atoms made by the skin.",
+          "Cold red cells that cancel temperature.",
+          "Thermal energy."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-308": {
+        "prompt": "Why would removing only red cells not remove all transported carbon-dioxide equivalents?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Challenge",
+        "options": [
+          "Much is present as bicarbonate dissolved in plasma.",
+          "All carbon dioxide is attached to platelet membranes.",
+          "Carbon dioxide can travel only in empty vessels.",
+          "Red cells never take part in carbon-dioxide chemistry."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-309": {
+        "prompt": "Why must a blood transport map not show a direct liver-to-kidney shortcut as the whole journey?",
+        "category": "Plasma and dissolved transport",
+        "difficulty": "Challenge",
+        "options": [
+          "The liver and kidneys never receive any blood.",
+          "Blood normally passes through the returning circulation, right heart, lungs and left heart between systemic organs.",
+          "Urea has to travel only through the trachea.",
+          "Kidneys receive blood only from platelet plugs."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-400": {
+        "prompt": "Which component includes cells that can engulf microbes?",
+        "category": "Defence and clotting",
+        "difficulty": "Foundation",
+        "options": [
+          "Red blood cells only.",
+          "Glucose.",
+          "White blood cells.",
+          "Urea."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-401": {
+        "prompt": "What are antibodies?",
+        "category": "Defence and clotting",
+        "difficulty": "Foundation",
+        "options": [
+          "Tiny arteries.",
+          "Red cells filled with air.",
+          "The same thing as platelets.",
+          "Proteins that recognise particular molecular targets."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-402": {
+        "prompt": "What do platelets first help form at a damaged vessel?",
+        "category": "Defence and clotting",
+        "difficulty": "Foundation",
+        "options": [
+          "A local plug.",
+          "A new lung.",
+          "A bubble carrying oxygen.",
+          "A layer of pure glucose."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-403": {
+        "prompt": "What forms the stabilising strands in a clot?",
+        "category": "Defence and clotting",
+        "difficulty": "Foundation",
+        "options": [
+          "Glucose.",
+          "Fibrin.",
+          "Oxygen gas.",
+          "Urea."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-404": {
+        "prompt": "Which statement correctly compares white cells?",
+        "category": "Defence and clotting",
+        "difficulty": "Application",
+        "options": [
+          "Every white cell carries most blood oxygen.",
+          "Every white cell is a nucleus-free fragment.",
+          "Different types have different immune roles.",
+          "All white cells make identical antibodies all the time."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-405": {
+        "prompt": "How can some white cells reach affected tissue?",
+        "category": "Defence and clotting",
+        "difficulty": "Application",
+        "options": [
+          "All white cells burst through any artery wall at random.",
+          "They always change into red cells before leaving.",
+          "They never act outside the heart.",
+          "They can leave suitable small vessels through controlled processes."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-406": {
+        "prompt": "Why are both platelets and plasma important in clotting?",
+        "category": "Defence and clotting",
+        "difficulty": "Application",
+        "options": [
+          "Platelets make a plug and plasma provides proteins for the fibrin mesh.",
+          "Platelets are simply solid plasma with no special role.",
+          "Plasma contains no clotting proteins.",
+          "Only red cells can make any repair."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-407": {
+        "prompt": "A healing wound needs oxygen as well as a plug. Which components best match these two jobs?",
+        "category": "Defence and clotting",
+        "difficulty": "Application",
+        "options": [
+          "Platelets for most oxygen; glucose for the plug.",
+          "Red cells for most oxygen transport; platelets for the plug.",
+          "Urea for oxygen; vein valves for the plug.",
+          "White cells for every job and no other components."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-408": {
+        "prompt": "Why can a clot inside an undamaged vessel be harmful?",
+        "category": "Defence and clotting",
+        "difficulty": "Challenge",
+        "options": [
+          "It always increases oxygen delivery to all tissues.",
+          "It turns blood into pure water.",
+          "It can obstruct blood flow and reduce downstream supply.",
+          "It creates a new correct circulation route."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-409": {
+        "prompt": "Which statement avoids a common immunity mix-up?",
+        "category": "Defence and clotting",
+        "difficulty": "Challenge",
+        "options": [
+          "All white cells are identical antibody containers.",
+          "Antibodies are small red cells.",
+          "Platelets are the only cells that recognise every microbe.",
+          "Some lymphocytes give rise to antibody-producing cells; neutrophils have other important roles."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-500": {
+        "prompt": "What defines an artery?",
+        "category": "Vessel structure",
+        "difficulty": "Foundation",
+        "options": [
+          "Carrying blood away from the heart.",
+          "Always carrying oxygen-rich blood.",
+          "Having the lowest pressure in the body.",
+          "Always containing pocket valves."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-501": {
+        "prompt": "What defines a vein?",
+        "category": "Vessel structure",
+        "difficulty": "Foundation",
+        "options": [
+          "Always carrying blue blood.",
+          "Returning blood towards the heart.",
+          "Always having a one-cell-thick wall only.",
+          "Making oxygen inside its lumen."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-502": {
+        "prompt": "What is the lumen?",
+        "category": "Vessel structure",
+        "difficulty": "Foundation",
+        "options": [
+          "The entire surrounding muscle.",
+          "A white cell’s nucleus.",
+          "The space inside a vessel.",
+          "The iron inside haemoglobin."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-503": {
+        "prompt": "Which wall is best suited to short-distance exchange?",
+        "category": "Vessel structure",
+        "difficulty": "Foundation",
+        "options": [
+          "An extremely thick multilayer artery wall.",
+          "A thick bone wall.",
+          "A closed vein valve.",
+          "A thin capillary wall."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-504": {
+        "prompt": "Why do arteries have substantial elastic and muscular layers?",
+        "category": "Vessel structure",
+        "difficulty": "Application",
+        "options": [
+          "To withstand and respond to higher pulsatile pressure.",
+          "To make blood blue.",
+          "To stop every red cell permanently.",
+          "To filter out all glucose before it reaches tissues."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-505": {
+        "prompt": "What do pocket valves in many limb veins do?",
+        "category": "Vessel structure",
+        "difficulty": "Application",
+        "options": [
+          "Create new oxygen molecules.",
+          "Limit reverse flow when pressure would drive blood backwards.",
+          "Make the vein into an artery.",
+          "Pump blood without any pressure difference."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-506": {
+        "prompt": "Why should a capillary not be shown with thick layers of muscle?",
+        "category": "Vessel structure",
+        "difficulty": "Application",
+        "options": [
+          "All blood vessels are solid muscle rods.",
+          "A capillary contains no living cells at all.",
+          "Its exchange wall is a thin endothelial layer with a thin supporting layer.",
+          "Thick muscle is required for every gas to diffuse."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-507": {
+        "prompt": "Which vessel can carry oxygen-poor blood away from the heart?",
+        "category": "Vessel structure",
+        "difficulty": "Application",
+        "options": [
+          "A pulmonary vein.",
+          "The aorta under normal conditions.",
+          "The left ventricle’s oxygen-rich systemic outflow only.",
+          "The pulmonary artery."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-508": {
+        "prompt": "A diagram colours return branches purple. What should the caption explain?",
+        "category": "Vessel structure",
+        "difficulty": "Challenge",
+        "options": [
+          "The colour identifies a route; real oxygen-poor blood is dark red.",
+          "The drawing proves veins contain purple plasma.",
+          "Red cells become blue when they lose oxygen.",
+          "Blood changes into ink before entering a vein."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-509": {
+        "prompt": "Why is average blood speed lower across the overall capillary network than in the aorta?",
+        "category": "Vessel structure",
+        "difficulty": "Challenge",
+        "options": [
+          "Each capillary has a larger individual lumen than the aorta.",
+          "The network has a much larger total cross-sectional area.",
+          "Capillaries have a second heart pumping backwards.",
+          "Red cells stop moving permanently in every capillary."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-600": {
+        "prompt": "What does diffusion describe?",
+        "category": "Exchange and investigations",
+        "difficulty": "Foundation",
+        "options": [
+          "Every particle moving only one way with no randomness.",
+          "The heart physically pushing whole cells through all walls.",
+          "Net movement down a gradient due to random particle motion.",
+          "A process that always needs a platelet nucleus."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-601": {
+        "prompt": "What is a gradient?",
+        "category": "Exchange and investigations",
+        "difficulty": "Foundation",
+        "options": [
+          "A type of white cell.",
+          "A valve found only in the aorta.",
+          "A bubble of plasma.",
+          "A difference across a distance."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-602": {
+        "prompt": "At body tissues using oxygen, which gas directions are expected?",
+        "category": "Exchange and investigations",
+        "difficulty": "Foundation",
+        "options": [
+          "Oxygen towards tissue and carbon dioxide towards blood.",
+          "Both gases only towards tissue in every situation.",
+          "Whole red cells out and no gases in.",
+          "Oxygen into blood from muscle and no carbon dioxide transfer."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-603": {
+        "prompt": "At the lungs, which direction normally applies to oxygen?",
+        "category": "Exchange and investigations",
+        "difficulty": "Foundation",
+        "options": [
+          "From plasma into a platelet nucleus only.",
+          "From alveolar air into blood.",
+          "From the kidneys into the trachea directly.",
+          "From red cells to a vein valve that makes air."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-604": {
+        "prompt": "Why does a thinner exchange barrier help diffusion?",
+        "category": "Exchange and investigations",
+        "difficulty": "Application",
+        "options": [
+          "It creates new oxygen from nothing.",
+          "It forces all blood cells to leave vessels.",
+          "It shortens the distance particles cross.",
+          "It makes the whole circulation stop."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-605": {
+        "prompt": "What should happen to most large plasma proteins at a typical intact exchange surface?",
+        "category": "Exchange and investigations",
+        "difficulty": "Application",
+        "options": [
+          "They all pass as freely as oxygen in every capillary.",
+          "They all become air bubbles.",
+          "They all turn into red cells at every heartbeat.",
+          "They mainly remain in the circulation."
+        ],
+        "answer": 3
+      },
+      "blood-vessels-606": {
+        "prompt": "Which change is the fairest way to compare gas-exchange direction in the lab?",
+        "category": "Exchange and investigations",
+        "difficulty": "Application",
+        "options": [
+          "Switch between body and lung capillaries while keeping the vessel view comparable.",
+          "Change every setting and assume one change caused everything.",
+          "Compare an artery wall with an unrelated plasma volume percentage only.",
+          "Use the number of purple route lines as an oxygen measurement."
+        ],
+        "answer": 0
+      },
+      "blood-vessels-607": {
+        "prompt": "What does O₂ mean?",
+        "category": "Exchange and investigations",
+        "difficulty": "Application",
+        "options": [
+          "Two entire red cells.",
+          "One molecule containing two oxygen atoms.",
+          "An oxygen pressure of exactly two pascals.",
+          "A second type of platelet."
+        ],
+        "answer": 1
+      },
+      "blood-vessels-608": {
+        "prompt": "Why must visible cells in this simulation not be counted to estimate a real white-cell fraction?",
+        "category": "Exchange and investigations",
+        "difficulty": "Challenge",
+        "options": [
+          "Real blood contains equal counts of all components.",
+          "A white-cell count equals the number of map branches.",
+          "Rare components are deliberately enlarged and overrepresented for inspection.",
+          "All colours are actual percentages."
+        ],
+        "answer": 2
+      },
+      "blood-vessels-609": {
+        "prompt": "Which interpretation separates flow from exchange?",
+        "category": "Exchange and investigations",
+        "difficulty": "Challenge",
+        "options": [
+          "Flow means all cells crossing the wall into tissue.",
+          "Exchange means the heart changing into a lung.",
+          "Flow and diffusion are identical mechanisms.",
+          "Blood flow brings material to a region; exchange transfers substances across appropriate barriers."
+        ],
+        "answer": 3
+      }
+    },
+    "title": "Blood vessels and blood",
+    "categories": [
+      "Blood composition",
+      "Red cells and oxygen",
+      "Plasma and dissolved transport",
+      "Defence and clotting",
+      "Vessel structure",
+      "Exchange and investigations"
+    ],
+    "signature": "27a3ccfce7909a4151d5008a00eb5276b499e03f6bf08318f43d3d40d42de0af"
   },
   "breathing-system": {
     "course": "Year 9 Science",

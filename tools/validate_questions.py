@@ -9,6 +9,7 @@ BANKS = {
     "statistics.json": "statistics",
     **{f"{unit}.json": unit for unit in ("numbers-i", "geometry-i", "numbers-ii", "algebra-i", "numbers-iii")},
     "circulatory.json": "circulatory-system",
+    "blood-vessels.json": "blood-vessels",
     "breathing.json": "breathing-system",
     "gas-laws.json": "gas-laws",
     **{f"{unit}.json": unit for unit in ("y10-acids-bases", "y10-metals", "y10-redox", "y10-organic")},
