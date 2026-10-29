@@ -7,6 +7,7 @@ import json,re
 from urllib.parse import urlsplit,unquote
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'tools'))
 from school_reading import DATA
+from notation import SCHOOL, OLYMPIAD
 from build_learn_first import sources,topics_for
 ROOT=Path(__file__).resolve().parent.parent
 class Inspect(HTMLParser):
@@ -21,6 +22,8 @@ for key in DATA:
  page=ROOT/'activities'/key/'index.html';s=page.read_text();assert s.count('id="learn-first"')==1,key
  assert '<details id="read-topic-1" class="reading-topic" open>' in s,key
  count=len(topics_for(key,source));assert s.count('class="reading-topic" open')==count
+ assert len(SCHOOL[key])==count
+ assert s.count('class="notation-key"')==count
  topics+=count
  p=Inspect();p.feed(s)
  for link in p.links:
@@ -37,6 +40,8 @@ for name in ['oaq','oaf']:
   assert s.count('class="reading-start"')==4
   assert s.count('class="reading-connection"')==4
   assert s.count('class="worked" open')==4
+  assert s.count('class="notation-key"')==4
+  assert len(OLYMPIAD[u['id']])==4
   assert s.index('class="reading-start"')<s.index('id="laboratorio"')
   for l in u['lessons']:
    assert len(l['beginner']['start'])>180
@@ -45,4 +50,4 @@ for name in ['oaq','oaf']:
    olymp+=1
   for link in p.links:assert (path.parent/link).resolve().exists(),(u['id'],link)
 assert olymp==100
-print(f'50 published unit pages: {topics} school topic explanations plus {olymp} enriched Olympiad lessons; examples open, practical links valid, explanations first, all local assets present.')
+print(f'52 published unit pages: {topics} school topic explanations plus {olymp} enriched Olympiad lessons; examples open, practical links valid, explanations first, all local assets present.')

@@ -14,14 +14,14 @@ const expected={
  p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(r.method()==='POST'&&/script\.google/.test(r.url()))posts.push(r.url());});
  await p.context().route('https://script.google.com/macros/s/**/exec?*',route=>{const url=new URL(route.request().url());return route.fulfill({contentType:'text/html',body:`<script>window.top.postMessage(${JSON.stringify({type:'learning-lab-recording-capabilities',nonce:url.searchParams.get('nonce'),manifest:{protocol:3,banks:[]}})},${JSON.stringify(new URL(base).origin)})</script>`});});
  // Force a local-recording fallback: these lesson tests must never depend on or write to the live Google deployment.
- await p.goto(base+'/#/years/y7/maths');await p.locator('.topic-apps .activity-card').first().waitFor();assert.equal(await p.locator('.topic-apps .activity-card').count(),5);
- assert.deepEqual(await p.locator('.topic-apps .activity-card h2').allTextContents(),['Numbers I','Geometry I','Numbers II','Algebra I','Numbers III']);
+ await p.goto(base+'/#/years/y7/maths');await p.locator('.topic-apps .activity-card').first().waitFor();assert.equal(await p.locator('.topic-apps .activity-card').count(),7);
+ assert.deepEqual(await p.locator('.topic-apps .activity-card h2').allTextContents(),['Numbers I','Geometry I','Numbers II','Algebra I','Numbers III','Algebra II','Statistics']);
  assert.equal(await p.locator('.topic-study-links a[href="activities/y7/maths/algebra/"]').count(),1);
  await p.screenshot({path:'/tmp/y7-maths-menu.png',fullPage:true});
  for(const unit of units){
   await p.goto(`${base}/activities/y7/maths/${unit}/`);await p.locator('.math-widget').first().waitFor();
   assert.equal(await p.locator('.math-widget').count(),Object.keys(expected[unit]).length);
-  assert.equal(await p.locator('.unit-path a').count(),5);assert.equal(await p.locator('.unit-path [aria-current]').getAttribute('href'),`../${unit}/`);
+  assert.equal(await p.locator('.unit-path a').count(),7);assert.equal(await p.locator('.unit-path [aria-current]').getAttribute('href'),`../${unit}/`);
   assert.equal(await p.locator('.unit-review').evaluate(el=>el.nextElementSibling),null);
   for(const[id,answer]of Object.entries(expected[unit])){
    const section=p.locator('#'+id);await section.locator('.answer-row input').fill('9999');await section.locator('.answer-row button').click();assert.equal(await section.locator('.practice-feedback').getAttribute('data-state'),'incorrect');

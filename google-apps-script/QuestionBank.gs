@@ -2,7 +2,7 @@
 var RECORDING_MANIFEST_ = {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1240,
+  "questionCount": 1390,
   "banks": [
     {
       "topic": "algebra",
@@ -10,6 +10,20 @@ var RECORDING_MANIFEST_ = {
       "title": "Algebra",
       "questionCount": 60,
       "signature": "00b7b8d8e9fff57855f978120688d980104c24c71be7b7427f64eb77ad3d7594"
+    },
+    {
+      "topic": "algebra-ii",
+      "course": "Year 7 Maths",
+      "title": "Algebra II",
+      "questionCount": 90,
+      "signature": "e938b350de6ac5065cfb9c3e840b4fab0307a1f219fe9602ae6213d48a1f5373"
+    },
+    {
+      "topic": "statistics",
+      "course": "Year 7 Maths",
+      "title": "Statistics",
+      "questionCount": 60,
+      "signature": "279201d686dca9c0524549907e1814ec084f862e46bd80df9b89dae4495ecb98"
     },
     {
       "topic": "numbers-i",
@@ -874,6 +888,1839 @@ var QUESTION_BANKS_ = {
       "Substitution and connections"
     ],
     "signature": "00b7b8d8e9fff57855f978120688d980104c24c71be7b7427f64eb77ad3d7594"
+  },
+  "algebra-ii": {
+    "course": "Year 7 Maths",
+    "questions": {
+      "a01": {
+        "prompt": "x is the number of pens in one unopened pen box. Which expression describes that box?",
+        "category": "Translating stories",
+        "difficulty": "Foundation",
+        "options": [
+          "x",
+          "1",
+          "x²",
+          "x + 1"
+        ],
+        "answer": 0
+      },
+      "a02": {
+        "prompt": "One unopened box contains x pens. Three loose pens are added. What is the total?",
+        "category": "Translating stories",
+        "difficulty": "Foundation",
+        "options": [
+          "3 − x",
+          "x + 3",
+          "3x",
+          "x³"
+        ],
+        "answer": 1
+      },
+      "a03": {
+        "prompt": "Two identical unopened pen boxes each contain x pens. What is the total?",
+        "category": "Translating stories",
+        "difficulty": "Foundation",
+        "options": [
+          "x + 2",
+          "2 + x²",
+          "2x",
+          "x²"
+        ],
+        "answer": 2
+      },
+      "a04": {
+        "prompt": "A pen box contains x pens and a clip box contains y clips. Which expression counts all the items?",
+        "category": "Translating stories",
+        "difficulty": "Foundation",
+        "options": [
+          "2x",
+          "xy",
+          "x² + y²",
+          "x + y"
+        ],
+        "answer": 3
+      },
+      "a05": {
+        "prompt": "There are two pen boxes of x pens each and one clip box of y clips. What is the total number of items?",
+        "category": "Translating stories",
+        "difficulty": "Application",
+        "options": [
+          "2x + y",
+          "2(x + y)",
+          "x + 2y",
+          "2xy"
+        ],
+        "answer": 0
+      },
+      "a06": {
+        "prompt": "You have x pens and lend four of them, with at least four available. Which expression counts the pens left?",
+        "category": "Translating stories",
+        "difficulty": "Foundation",
+        "options": [
+          "x + 4",
+          "x − 4",
+          "4 − x",
+          "4x"
+        ],
+        "answer": 1
+      },
+      "a07": {
+        "prompt": "A ticket costs t pounds. Three tickets and a £2 booking fee cost how much?",
+        "category": "Translating stories",
+        "difficulty": "Application",
+        "options": [
+          "t + 5",
+          "2t + 3",
+          "3t + 2",
+          "3(t + 2)"
+        ],
+        "answer": 2
+      },
+      "a08": {
+        "prompt": "Each of b identical packets contains six cards. How many cards are in all the packets?",
+        "category": "Translating stories",
+        "difficulty": "Foundation",
+        "options": [
+          "b + 6",
+          "b⁶",
+          "6 + b²",
+          "6b"
+        ],
+        "answer": 3
+      },
+      "a09": {
+        "prompt": "Each of two identical bags contains x pens and three loose clips. Which expression counts all items?",
+        "category": "Translating stories",
+        "difficulty": "Application",
+        "options": [
+          "2(x + 3)",
+          "2x + 3",
+          "x + 6",
+          "2x + 1"
+        ],
+        "answer": 0
+      },
+      "a10": {
+        "prompt": "Mia has y stickers. Ali has three more than twice Mia’s number. How many does Ali have?",
+        "category": "Translating stories",
+        "difficulty": "Application",
+        "options": [
+          "3y + 2",
+          "2y + 3",
+          "2(y + 3)",
+          "y + 6"
+        ],
+        "answer": 1
+      },
+      "a11": {
+        "prompt": "Which of these is an expression rather than an equation?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "x = 4",
+          "n = x + 3",
+          "2x + 3",
+          "2x + 3 = 7"
+        ],
+        "answer": 2
+      },
+      "a12": {
+        "prompt": "What does the coefficient 5 mean in 5x?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "x is always five",
+          "x multiplied by itself five times",
+          "Five added to x",
+          "Five copies of x"
+        ],
+        "answer": 3
+      },
+      "a13": {
+        "prompt": "How many terms are in a + 2b − 3c²?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "3",
+          "2",
+          "4",
+          "6"
+        ],
+        "answer": 0
+      },
+      "a14": {
+        "prompt": "Which term is the constant in 4x + 7?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "4x",
+          "7",
+          "4",
+          "x"
+        ],
+        "answer": 1
+      },
+      "a15": {
+        "prompt": "Which statement correctly describes x²?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "x plus two",
+          "Always two",
+          "x multiplied by x",
+          "Two copies of x added"
+        ],
+        "answer": 2
+      },
+      "a16": {
+        "prompt": "If x is the side length of a square, what expression gives its area?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "2x",
+          "4x",
+          "x³",
+          "x²"
+        ],
+        "answer": 3
+      },
+      "a17": {
+        "prompt": "If y is the edge length of a cube, what expression gives its volume?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "y³",
+          "3y",
+          "y²",
+          "6y"
+        ],
+        "answer": 0
+      },
+      "a18": {
+        "prompt": "Which statement is an identity, true for every x?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Application",
+        "options": [
+          "x + 1 = 2",
+          "x + x ≡ 2x",
+          "2x + 3 = 7",
+          "x = 20"
+        ],
+        "answer": 1
+      },
+      "a19": {
+        "prompt": "In the formula n = x + 3, what happens when x changes?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Foundation",
+        "options": [
+          "x must equal n",
+          "n is always three times x",
+          "n is always three greater than x",
+          "n stays fixed at three"
+        ],
+        "answer": 2
+      },
+      "a20": {
+        "prompt": "In −4z³, which statement identifies the coefficient and variable part?",
+        "category": "Algebraic vocabulary",
+        "difficulty": "Challenge",
+        "options": [
+          "Coefficient 3; variable part −4z",
+          "Coefficient −4z; variable part 3",
+          "Coefficient 4; variable part −z²",
+          "Coefficient −4; variable part z³"
+        ],
+        "answer": 3
+      },
+      "a21": {
+        "prompt": "Collect like terms: 3x + 2x.",
+        "category": "Collecting linear terms",
+        "difficulty": "Foundation",
+        "options": [
+          "5x",
+          "5x²",
+          "6x",
+          "x"
+        ],
+        "answer": 0
+      },
+      "a22": {
+        "prompt": "Collect like terms: 7y − 2y + y.",
+        "category": "Collecting linear terms",
+        "difficulty": "Application",
+        "options": [
+          "10y",
+          "6y",
+          "4y",
+          "6y²"
+        ],
+        "answer": 1
+      },
+      "a23": {
+        "prompt": "Simplify 4z + z − 3z.",
+        "category": "Collecting linear terms",
+        "difficulty": "Foundation",
+        "options": [
+          "8z",
+          "z",
+          "2z",
+          "2z²"
+        ],
+        "answer": 2
+      },
+      "a24": {
+        "prompt": "Which pair consists of like terms?",
+        "category": "Collecting linear terms",
+        "difficulty": "Foundation",
+        "options": [
+          "3x and 3y",
+          "x and x²",
+          "x² and y²",
+          "3x and 5x"
+        ],
+        "answer": 3
+      },
+      "a25": {
+        "prompt": "Collect like terms: 2x + 3y + x − y.",
+        "category": "Collecting linear terms",
+        "difficulty": "Application",
+        "options": [
+          "3x + 2y",
+          "5xy",
+          "3x + 4y",
+          "2x + 3y"
+        ],
+        "answer": 0
+      },
+      "a26": {
+        "prompt": "Simplify 5 + 2x + 3.",
+        "category": "Collecting linear terms",
+        "difficulty": "Foundation",
+        "options": [
+          "2x + 15",
+          "2x + 8",
+          "10x",
+          "7x + 3"
+        ],
+        "answer": 1
+      },
+      "a27": {
+        "prompt": "A student writes x + y = 2x. What is the problem?",
+        "category": "Collecting linear terms",
+        "difficulty": "Foundation",
+        "options": [
+          "x and y must both be zero",
+          "Every letter must be replaced by one",
+          "x and y may represent different numbers",
+          "A sum can never contain letters"
+        ],
+        "answer": 2
+      },
+      "a28": {
+        "prompt": "Collect like terms: 6x − 2x − 4x.",
+        "category": "Collecting linear terms",
+        "difficulty": "Application",
+        "options": [
+          "x",
+          "12x",
+          "0x² + 1",
+          "0"
+        ],
+        "answer": 3
+      },
+      "a29": {
+        "prompt": "Collect like terms: 3a + 2 + a + 5.",
+        "category": "Collecting linear terms",
+        "difficulty": "Application",
+        "options": [
+          "4a + 7",
+          "11a",
+          "4a + 10",
+          "3a + 9"
+        ],
+        "answer": 0
+      },
+      "a30": {
+        "prompt": "Which expression is equivalent to 5x + 2y − 3x + y?",
+        "category": "Collecting linear terms",
+        "difficulty": "Application",
+        "options": [
+          "8x + 3y",
+          "2x + 3y",
+          "2x + y",
+          "5xy"
+        ],
+        "answer": 1
+      },
+      "a31": {
+        "prompt": "Collect like terms: 3x² + 2x².",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Foundation",
+        "options": [
+          "6x²",
+          "5x",
+          "5x²",
+          "5x⁴"
+        ],
+        "answer": 2
+      },
+      "a32": {
+        "prompt": "Collect like terms: x³ + 4x³.",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Foundation",
+        "options": [
+          "5x⁶",
+          "x⁷",
+          "5x",
+          "5x³"
+        ],
+        "answer": 3
+      },
+      "a33": {
+        "prompt": "Which pair can be collected as like terms?",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Foundation",
+        "options": [
+          "2y² and 7y²",
+          "2x and 7x²",
+          "2x² and 7y²",
+          "2z³ and 7z"
+        ],
+        "answer": 0
+      },
+      "a34": {
+        "prompt": "Simplify 2x² + 3x + x² + x.",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Application",
+        "options": [
+          "4x² + 3x",
+          "3x² + 4x",
+          "7x³",
+          "3x² + 3x"
+        ],
+        "answer": 1
+      },
+      "a35": {
+        "prompt": "What is x + x + x as a collected expression?",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Foundation",
+        "options": [
+          "3x³",
+          "x + 3",
+          "3x",
+          "x³"
+        ],
+        "answer": 2
+      },
+      "a36": {
+        "prompt": "Collect like terms: 4z³ − z³ + 2z.",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Application",
+        "options": [
+          "5z³",
+          "3z⁴ + 2z",
+          "6z³",
+          "3z³ + 2z"
+        ],
+        "answer": 3
+      },
+      "a37": {
+        "prompt": "Which expression matches four x rods, three x² squares, two x³ cubes, three y rods, two y² squares and one z rod?",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Challenge",
+        "options": [
+          "4x + 3x² + 2x³ + 3y + 2y² + z",
+          "9x + 5y + z",
+          "4x + 5x² + 5y + z",
+          "4x³ + 3x² + 2x + 3y² + 2y + z"
+        ],
+        "answer": 0
+      },
+      "a38": {
+        "prompt": "Simplify x² + y² + 2x² − y².",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Application",
+        "options": [
+          "3x⁴",
+          "3x²",
+          "3x² + 2y²",
+          "3xy²"
+        ],
+        "answer": 1
+      },
+      "a39": {
+        "prompt": "A student collects x² + x³ as 2x⁵. Which explanation is correct?",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Challenge",
+        "options": [
+          "The answer must be 2x",
+          "The terms are like because both contain x",
+          "The powers differ, so the terms cannot be collected",
+          "The correct answer is x⁶"
+        ],
+        "answer": 2
+      },
+      "a40": {
+        "prompt": "Simplify 2x³ + 3y² + x³ − y² + z.",
+        "category": "Squares cubes and like terms",
+        "difficulty": "Application",
+        "options": [
+          "5xy + z",
+          "3x⁶ + 2y⁴ + z",
+          "3x³ + 4y² + z",
+          "3x³ + 2y² + z"
+        ],
+        "answer": 3
+      },
+      "a41": {
+        "prompt": "Expand 2(x + 3).",
+        "category": "Expanding brackets",
+        "difficulty": "Foundation",
+        "options": [
+          "2x + 6",
+          "2x + 3",
+          "x + 6",
+          "2x + 5"
+        ],
+        "answer": 0
+      },
+      "a42": {
+        "prompt": "Expand 2(2x + y).",
+        "category": "Expanding brackets",
+        "difficulty": "Application",
+        "options": [
+          "4xy",
+          "4x + 2y",
+          "4x + y",
+          "2x + 2y"
+        ],
+        "answer": 1
+      },
+      "a43": {
+        "prompt": "Expand 5(a + 3).",
+        "category": "Expanding brackets",
+        "difficulty": "Foundation",
+        "options": [
+          "a + 15",
+          "5a + 8",
+          "5a + 15",
+          "5a + 3"
+        ],
+        "answer": 2
+      },
+      "a44": {
+        "prompt": "Expand 10(2c + 3).",
+        "category": "Expanding brackets",
+        "difficulty": "Application",
+        "options": [
+          "20c + 3",
+          "12c + 13",
+          "20c + 13",
+          "20c + 30"
+        ],
+        "answer": 3
+      },
+      "a45": {
+        "prompt": "Expand 3(x − 2).",
+        "category": "Expanding brackets",
+        "difficulty": "Application",
+        "options": [
+          "3x − 6",
+          "3x − 2",
+          "3x + 6",
+          "x − 6"
+        ],
+        "answer": 0
+      },
+      "a46": {
+        "prompt": "Which expression describes three identical bags, each containing x + 2y?",
+        "category": "Expanding brackets",
+        "difficulty": "Application",
+        "options": [
+          "3x + 5y",
+          "3x + 6y",
+          "3x + 2y",
+          "x + 6y"
+        ],
+        "answer": 1
+      },
+      "a47": {
+        "prompt": "Expand −(16 − b).",
+        "category": "Expanding brackets",
+        "difficulty": "Challenge",
+        "options": [
+          "16 + b",
+          "16 − b",
+          "b − 16",
+          "−16 − b"
+        ],
+        "answer": 2
+      },
+      "a48": {
+        "prompt": "Expand 4d(d − 4).",
+        "category": "Expanding brackets",
+        "difficulty": "Challenge",
+        "options": [
+          "4d² − 4",
+          "4d − 16",
+          "4d² + 16d",
+          "4d² − 16d"
+        ],
+        "answer": 3
+      },
+      "a49": {
+        "prompt": "Stretch: expand and collect (e − 9)(e + 3).",
+        "category": "Expanding brackets",
+        "difficulty": "Challenge",
+        "options": [
+          "e² − 6e − 27",
+          "e² − 27",
+          "e² + 12e − 27",
+          "e² − 12e + 27"
+        ],
+        "answer": 0
+      },
+      "a50": {
+        "prompt": "A bag contains three pens, a key and glasses. Their individual prices are p, k and g. What is the cost of two identical sets?",
+        "category": "Expanding brackets",
+        "difficulty": "Challenge",
+        "options": [
+          "2p + 2k + 2g",
+          "6p + 2k + 2g",
+          "6p + k + g",
+          "3p + 2k + 2g"
+        ],
+        "answer": 1
+      },
+      "a51": {
+        "prompt": "If x = 20, what is x + 3?",
+        "category": "Substitution and connections",
+        "difficulty": "Foundation",
+        "options": [
+          "17",
+          "203",
+          "23",
+          "60"
+        ],
+        "answer": 2
+      },
+      "a52": {
+        "prompt": "If x = 20, what is x − 4?",
+        "category": "Substitution and connections",
+        "difficulty": "Foundation",
+        "options": [
+          "24",
+          "80",
+          "−16",
+          "16"
+        ],
+        "answer": 3
+      },
+      "a53": {
+        "prompt": "If x = 5 and y = 3, what is 2x + y?",
+        "category": "Substitution and connections",
+        "difficulty": "Foundation",
+        "options": [
+          "13",
+          "16",
+          "10",
+          "30"
+        ],
+        "answer": 0
+      },
+      "a54": {
+        "prompt": "If x = 4, compare 2x and x².",
+        "category": "Substitution and connections",
+        "difficulty": "Application",
+        "options": [
+          "2x = 16 and x² = 8",
+          "2x = 8 and x² = 16",
+          "Both equal 8",
+          "Both equal 16"
+        ],
+        "answer": 1
+      },
+      "a55": {
+        "prompt": "If x = 2, what is 3x²?",
+        "category": "Substitution and connections",
+        "difficulty": "Application",
+        "options": [
+          "6",
+          "18",
+          "12",
+          "36"
+        ],
+        "answer": 2
+      },
+      "a56": {
+        "prompt": "If z = 3, what is z³?",
+        "category": "Substitution and connections",
+        "difficulty": "Foundation",
+        "options": [
+          "9",
+          "6",
+          "81",
+          "27"
+        ],
+        "answer": 3
+      },
+      "a57": {
+        "prompt": "If x = 4 and y = 7, what is x + y? Does it equal 2x?",
+        "category": "Substitution and connections",
+        "difficulty": "Application",
+        "options": [
+          "11; no, because 2x = 8",
+          "11; yes, because x and y are letters",
+          "8; yes",
+          "28; no"
+        ],
+        "answer": 0
+      },
+      "a58": {
+        "prompt": "Which expression always has the same value as 2(x + 3)?",
+        "category": "Substitution and connections",
+        "difficulty": "Foundation",
+        "options": [
+          "2x + 9",
+          "2x + 6",
+          "2x + 3",
+          "x + 6"
+        ],
+        "answer": 1
+      },
+      "a59": {
+        "prompt": "If x = 3, what is 2(x + 3)?",
+        "category": "Substitution and connections",
+        "difficulty": "Foundation",
+        "options": [
+          "8",
+          "18",
+          "12",
+          "9"
+        ],
+        "answer": 2
+      },
+      "a60": {
+        "prompt": "Which statement best explains why 2x + 3x = 5x but 2x + 3y stays separate?",
+        "category": "Substitution and connections",
+        "difficulty": "Challenge",
+        "options": [
+          "Different colours can never be added",
+          "Adding any letters makes a power",
+          "Coefficients can only be added when they are equal",
+          "The first sum counts copies of the same unknown; the second may contain different unknowns"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-061": {
+        "prompt": "Solve x + (5) = 8.",
+        "category": "One-step equations",
+        "difficulty": "Foundation",
+        "options": [
+          "3",
+          "4",
+          "2",
+          "6"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-062": {
+        "prompt": "Solve x + (2) = 9.",
+        "category": "One-step equations",
+        "difficulty": "Foundation",
+        "options": [
+          "8",
+          "7",
+          "6",
+          "14"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-063": {
+        "prompt": "Solve x + (6) = 6.",
+        "category": "One-step equations",
+        "difficulty": "Foundation",
+        "options": [
+          "1",
+          "-1",
+          "0",
+          "2"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-064": {
+        "prompt": "Solve x + (-3) = 6.",
+        "category": "One-step equations",
+        "difficulty": "Foundation",
+        "options": [
+          "10",
+          "8",
+          "18",
+          "9"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-065": {
+        "prompt": "Solve x + (7) = 3.",
+        "category": "One-step equations",
+        "difficulty": "Application",
+        "options": [
+          "-4",
+          "-3",
+          "-5",
+          "-8"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-066": {
+        "prompt": "Solve x + (-2) = -7.",
+        "category": "One-step equations",
+        "difficulty": "Application",
+        "options": [
+          "-4",
+          "-5",
+          "-6",
+          "-10"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-067": {
+        "prompt": "Solve x + (4) = 10.",
+        "category": "One-step equations",
+        "difficulty": "Foundation",
+        "options": [
+          "7",
+          "5",
+          "6",
+          "12"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-068": {
+        "prompt": "Solve x + (5) = 2.",
+        "category": "One-step equations",
+        "difficulty": "Application",
+        "options": [
+          "-2",
+          "-4",
+          "-6",
+          "-3"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-069": {
+        "prompt": "Solve x + (-4) = 4.",
+        "category": "One-step equations",
+        "difficulty": "Foundation",
+        "options": [
+          "8",
+          "9",
+          "7",
+          "16"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-070": {
+        "prompt": "Solve x + (-6) = -8.",
+        "category": "One-step equations",
+        "difficulty": "Application",
+        "options": [
+          "-1",
+          "-2",
+          "-3",
+          "-4"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-071": {
+        "prompt": "Solve 2x + (3) = 11.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Application",
+        "options": [
+          "5",
+          "3",
+          "4",
+          "8"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-072": {
+        "prompt": "Solve 3x + (-4) = 17.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Application",
+        "options": [
+          "8",
+          "6",
+          "14",
+          "7"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-073": {
+        "prompt": "Solve 4x + (5) = -3.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Challenge",
+        "options": [
+          "-2",
+          "-1",
+          "-3",
+          "-4"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-074": {
+        "prompt": "Solve 5x + (-3) = -3.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Application",
+        "options": [
+          "1",
+          "0",
+          "-1",
+          "2"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-075": {
+        "prompt": "Solve 2x + (-6) = -14.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Challenge",
+        "options": [
+          "-3",
+          "-5",
+          "-4",
+          "-8"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-076": {
+        "prompt": "Solve 2(x + (3)) = 14.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Challenge",
+        "options": [
+          "5",
+          "3",
+          "8",
+          "4"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-077": {
+        "prompt": "Solve 3(x + (-2)) = 15.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Challenge",
+        "options": [
+          "7",
+          "8",
+          "6",
+          "14"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-078": {
+        "prompt": "Solve 4(x + (1)) = -8.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Challenge",
+        "options": [
+          "-2",
+          "-3",
+          "-4",
+          "-6"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-079": {
+        "prompt": "Solve 2(x + (-3)) = 14.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Challenge",
+        "options": [
+          "11",
+          "9",
+          "10",
+          "20"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-080": {
+        "prompt": "Solve 5(x + (2)) = -10.",
+        "category": "Two- and three-step equations",
+        "difficulty": "Challenge",
+        "options": [
+          "-3",
+          "-5",
+          "-8",
+          "-4"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-081": {
+        "prompt": "Solve 4x + (5) = 2x + (19).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "7",
+          "8",
+          "6",
+          "14"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-082": {
+        "prompt": "Solve 5x + (-3) = 2x + (9).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "5",
+          "4",
+          "3",
+          "8"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-083": {
+        "prompt": "Solve 3x + (7) = 1x + (3).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "-1",
+          "-3",
+          "-2",
+          "-4"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-084": {
+        "prompt": "Solve 6x + (4) = 2x + (16).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "4",
+          "2",
+          "6",
+          "3"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-085": {
+        "prompt": "Solve 2x + (1) = 5x + (13).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "-4",
+          "-3",
+          "-5",
+          "-8"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-086": {
+        "prompt": "Solve 3(x + (-2)) = 1x + (8).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "8",
+          "7",
+          "6",
+          "14"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-087": {
+        "prompt": "Solve 4(x + (1)) = 2x + (14).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "6",
+          "4",
+          "5",
+          "10"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-088": {
+        "prompt": "Solve 2(x + (-3)) = 1x + (-11).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "-4",
+          "-6",
+          "-10",
+          "-5"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-089": {
+        "prompt": "Solve 5(x + (2)) = 3x + (18).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "4",
+          "5",
+          "3",
+          "8"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-090": {
+        "prompt": "Solve 3(x + (-4)) = 2x + (-12).",
+        "category": "Unknown on both sides",
+        "difficulty": "Challenge",
+        "options": [
+          "1",
+          "0",
+          "-1",
+          "2"
+        ],
+        "answer": 1
+      }
+    },
+    "title": "Algebra II",
+    "categories": [
+      "Translating stories",
+      "Algebraic vocabulary",
+      "Collecting linear terms",
+      "Squares cubes and like terms",
+      "Expanding brackets",
+      "Substitution and connections",
+      "One-step equations",
+      "Two- and three-step equations",
+      "Unknown on both sides"
+    ],
+    "signature": "e938b350de6ac5065cfb9c3e840b4fab0307a1f219fe9602ae6213d48a1f5373"
+  },
+  "statistics": {
+    "course": "Year 7 Maths",
+    "questions": {
+      "statistics-001": {
+        "prompt": "A pictogram key says one full symbol represents 2 students. How many students do 3 full-symbol equivalents represent?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "6",
+          "7",
+          "5",
+          "12"
+        ],
+        "answer": 0
+      },
+      "statistics-002": {
+        "prompt": "A pictogram key says one full symbol represents 4 students. How many students do 3 full-symbol equivalents represent?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "13",
+          "12",
+          "11",
+          "24"
+        ],
+        "answer": 1
+      },
+      "statistics-003": {
+        "prompt": "A pictogram key says one full symbol represents 2 students. How many students do 5/2 full-symbol equivalents represent?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "6",
+          "4",
+          "5",
+          "10"
+        ],
+        "answer": 2
+      },
+      "statistics-004": {
+        "prompt": "A pictogram key says one full symbol represents 4 students. How many students do 7/2 full-symbol equivalents represent?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "15",
+          "13",
+          "28",
+          "14"
+        ],
+        "answer": 3
+      },
+      "statistics-005": {
+        "prompt": "A pictogram key says one full symbol represents 5 students. How many students do 4 full-symbol equivalents represent?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "20",
+          "21",
+          "19",
+          "40"
+        ],
+        "answer": 0
+      },
+      "statistics-006": {
+        "prompt": "A pictogram key says one full symbol represents 10 students. How many students do 3 full-symbol equivalents represent?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "31",
+          "30",
+          "29",
+          "60"
+        ],
+        "answer": 1
+      },
+      "statistics-007": {
+        "prompt": "A pictogram shows 18 books, with one full symbol representing 4 books. How many full-symbol equivalents are needed?",
+        "category": "Data and pictograms",
+        "difficulty": "Application",
+        "options": [
+          "11/2",
+          "7/2",
+          "9/2",
+          "9"
+        ],
+        "answer": 2
+      },
+      "statistics-008": {
+        "prompt": "Which is discrete numerical data?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "Favourite colour",
+          "A person’s measured height",
+          "Time measured continuously",
+          "Number of siblings"
+        ],
+        "answer": 3
+      },
+      "statistics-009": {
+        "prompt": "What does frequency mean?",
+        "category": "Data and pictograms",
+        "difficulty": "Foundation",
+        "options": [
+          "The number of times a value or category occurs",
+          "The largest data value",
+          "The sum of all data values",
+          "The angle of a whole circle"
+        ],
+        "answer": 0
+      },
+      "statistics-010": {
+        "prompt": "When the pictogram key changes from 2 people per symbol to 4, while the data stay the same, what happens to the number of symbol equivalents?",
+        "category": "Data and pictograms",
+        "difficulty": "Challenge",
+        "options": [
+          "It doubles.",
+          "It halves.",
+          "It stays the same.",
+          "It becomes four times larger."
+        ],
+        "answer": 1
+      },
+      "statistics-011": {
+        "prompt": "Travel survey frequencies: Bus 6, Walk 8, Car 4, Cycle 2. How many students were surveyed?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Foundation",
+        "options": [
+          "21",
+          "19",
+          "20",
+          "40"
+        ],
+        "answer": 2
+      },
+      "statistics-012": {
+        "prompt": "Travel survey frequencies: Bus 3, Walk 5, Car 7, Cycle 5. How many students were surveyed?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Foundation",
+        "options": [
+          "21",
+          "19",
+          "40",
+          "20"
+        ],
+        "answer": 3
+      },
+      "statistics-013": {
+        "prompt": "Travel frequencies are Bus 4, Walk 9, Car 2, Cycle 5. Which category has the tallest bar?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Foundation",
+        "options": [
+          "Walk",
+          "Bus",
+          "Car",
+          "Cycle"
+        ],
+        "answer": 0
+      },
+      "statistics-014": {
+        "prompt": "Travel frequencies are Bus 7, Walk 6, Car 3, Cycle 4. How many more travel by Bus than by Car?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Application",
+        "options": [
+          "5",
+          "4",
+          "3",
+          "8"
+        ],
+        "answer": 1
+      },
+      "statistics-015": {
+        "prompt": "Travel frequencies are Bus 8, Walk 8, Car 2, Cycle 2. Which categories tie for the greatest frequency?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Application",
+        "options": [
+          "Car and Cycle",
+          "Bus and Car",
+          "Bus and Walk",
+          "Walk and Cycle"
+        ],
+        "answer": 2
+      },
+      "statistics-016": {
+        "prompt": "Travel frequencies are Bus 10, Walk 4, Car 3, Cycle 3. What fraction travel by Bus?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Application",
+        "options": [
+          "3/2",
+          "-1/2",
+          "1",
+          "1/2"
+        ],
+        "answer": 3
+      },
+      "statistics-017": {
+        "prompt": "Why should a standard bar chart’s numerical baseline normally start at zero?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Challenge",
+        "options": [
+          "Bar lengths represent frequencies, so truncation can exaggerate comparisons.",
+          "Every graph must have both axes starting at zero.",
+          "The categories must be numerical.",
+          "A nonzero baseline changes the data values."
+        ],
+        "answer": 0
+      },
+      "statistics-018": {
+        "prompt": "Which display is most suitable for comparing counts of four favourite fruits?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Foundation",
+        "options": [
+          "An unlabelled curve",
+          "A labelled bar chart",
+          "A list of continuous intervals with no counts",
+          "A graph with no scale"
+        ],
+        "answer": 1
+      },
+      "statistics-019": {
+        "prompt": "A bar reaches 8 on an axis labelled 0, 2, 4, 6, 8, 10. What is its frequency?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Foundation",
+        "options": [
+          "9",
+          "7",
+          "8",
+          "16"
+        ],
+        "answer": 2
+      },
+      "statistics-020": {
+        "prompt": "A category’s frequency rises from 4 to 10. What is the increase?",
+        "category": "Bar charts and frequencies",
+        "difficulty": "Application",
+        "options": [
+          "7",
+          "5",
+          "12",
+          "6"
+        ],
+        "answer": 3
+      },
+      "statistics-021": {
+        "prompt": "A pie chart represents 12 observations. A category has frequency 3. What is its sector angle in degrees?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Foundation",
+        "options": [
+          "90",
+          "91",
+          "89",
+          "180"
+        ],
+        "answer": 0
+      },
+      "statistics-022": {
+        "prompt": "A pie chart represents 12 observations. A category has frequency 4. What is its sector angle in degrees?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Foundation",
+        "options": [
+          "121",
+          "120",
+          "119",
+          "240"
+        ],
+        "answer": 1
+      },
+      "statistics-023": {
+        "prompt": "A pie chart represents 12 observations. A category has frequency 2. What is its sector angle in degrees?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Foundation",
+        "options": [
+          "61",
+          "59",
+          "60",
+          "120"
+        ],
+        "answer": 2
+      },
+      "statistics-024": {
+        "prompt": "A pie chart represents 20 observations. A category has frequency 5. What is its sector angle in degrees?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Foundation",
+        "options": [
+          "91",
+          "89",
+          "180",
+          "90"
+        ],
+        "answer": 3
+      },
+      "statistics-025": {
+        "prompt": "A pie chart represents 8 observations. A category has frequency 3. What is its sector angle in degrees?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Application",
+        "options": [
+          "135",
+          "136",
+          "134",
+          "270"
+        ],
+        "answer": 0
+      },
+      "statistics-026": {
+        "prompt": "A pie chart represents 10 observations. A category has frequency 4. What is its sector angle in degrees?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Application",
+        "options": [
+          "145",
+          "144",
+          "143",
+          "288"
+        ],
+        "answer": 1
+      },
+      "statistics-027": {
+        "prompt": "A sector angle is 90°. What percentage of the data does it represent?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Foundation",
+        "options": [
+          "26",
+          "24",
+          "25",
+          "50"
+        ],
+        "answer": 2
+      },
+      "statistics-028": {
+        "prompt": "A 120° sector represents 8 people. How many people are represented by the whole pie chart?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Challenge",
+        "options": [
+          "25",
+          "23",
+          "48",
+          "24"
+        ],
+        "answer": 3
+      },
+      "statistics-029": {
+        "prompt": "Three pie-chart angles are 100°, 80° and 70°. What is the remaining angle?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Application",
+        "options": [
+          "110",
+          "111",
+          "109",
+          "220"
+        ],
+        "answer": 0
+      },
+      "statistics-030": {
+        "prompt": "Two correct pie charts have the same category percentages but different total sample sizes. What must be the same?",
+        "category": "Pie charts and percentages",
+        "difficulty": "Challenge",
+        "options": [
+          "Every category frequency",
+          "Corresponding sector angles",
+          "The total number of observations",
+          "The physical radius used for drawing"
+        ],
+        "answer": 1
+      },
+      "statistics-031": {
+        "prompt": "Find the mean of 2, 4, 6, 8.",
+        "category": "Mean median and mode",
+        "difficulty": "Foundation",
+        "options": [
+          "6",
+          "4",
+          "5",
+          "10"
+        ],
+        "answer": 2
+      },
+      "statistics-032": {
+        "prompt": "Find the mean of 1, 3, 5, 7, 9.",
+        "category": "Mean median and mode",
+        "difficulty": "Foundation",
+        "options": [
+          "6",
+          "4",
+          "10",
+          "5"
+        ],
+        "answer": 3
+      },
+      "statistics-033": {
+        "prompt": "Find the mean of 2, 2, 4, 6, 6.",
+        "category": "Mean median and mode",
+        "difficulty": "Foundation",
+        "options": [
+          "4",
+          "5",
+          "3",
+          "8"
+        ],
+        "answer": 0
+      },
+      "statistics-034": {
+        "prompt": "Find the median of 2, 5, 8, 9, 10.",
+        "category": "Mean median and mode",
+        "difficulty": "Foundation",
+        "options": [
+          "9",
+          "8",
+          "7",
+          "16"
+        ],
+        "answer": 1
+      },
+      "statistics-035": {
+        "prompt": "Find the median of 1, 3, 4, 8, 9, 11.",
+        "category": "Mean median and mode",
+        "difficulty": "Application",
+        "options": [
+          "7",
+          "5",
+          "6",
+          "12"
+        ],
+        "answer": 2
+      },
+      "statistics-036": {
+        "prompt": "Find the median of 4, 2, 8, 3, 6.",
+        "category": "Mean median and mode",
+        "difficulty": "Foundation",
+        "options": [
+          "5",
+          "3",
+          "8",
+          "4"
+        ],
+        "answer": 3
+      },
+      "statistics-037": {
+        "prompt": "Find the mode of 2, 3, 3, 4, 5, 5, 5, 7.",
+        "category": "Mean median and mode",
+        "difficulty": "Foundation",
+        "options": [
+          "5",
+          "6",
+          "4",
+          "10"
+        ],
+        "answer": 0
+      },
+      "statistics-038": {
+        "prompt": "What are the modes of 1, 2, 2, 3, 4, 4, 5?",
+        "category": "Mean median and mode",
+        "difficulty": "Application",
+        "options": [
+          "2 only",
+          "2 and 4",
+          "4 only",
+          "3"
+        ],
+        "answer": 1
+      },
+      "statistics-039": {
+        "prompt": "Which statement fits the data 1, 3, 5, 7, with every value occurring once?",
+        "category": "Mean median and mode",
+        "difficulty": "Application",
+        "options": [
+          "The mode is 4.",
+          "The mode is 7.",
+          "There is no mode under this course convention.",
+          "The mode is 1."
+        ],
+        "answer": 2
+      },
+      "statistics-040": {
+        "prompt": "For 2, 3, 4, 5, 16, which centre is more affected by replacing 16 with 100?",
+        "category": "Mean median and mode",
+        "difficulty": "Challenge",
+        "options": [
+          "The median",
+          "The mode",
+          "Neither mean nor median changes",
+          "The mean"
+        ],
+        "answer": 3
+      },
+      "statistics-041": {
+        "prompt": "Find the range of 3, 7, 2, 9, 5. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Foundation",
+        "options": [
+          "7",
+          "8",
+          "6",
+          "14"
+        ],
+        "answer": 0
+      },
+      "statistics-042": {
+        "prompt": "Find the range of 1, 4, 4, 6, 10. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Foundation",
+        "options": [
+          "10",
+          "9",
+          "8",
+          "18"
+        ],
+        "answer": 1
+      },
+      "statistics-043": {
+        "prompt": "Find the lower quartile Q₁ of 2, 3, 5, 7, 8, 11, 13. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Application",
+        "options": [
+          "4",
+          "2",
+          "3",
+          "6"
+        ],
+        "answer": 2
+      },
+      "statistics-044": {
+        "prompt": "Find the upper quartile Q₃ of 2, 3, 5, 7, 8, 11, 13. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Application",
+        "options": [
+          "12",
+          "10",
+          "22",
+          "11"
+        ],
+        "answer": 3
+      },
+      "statistics-045": {
+        "prompt": "Find the lower quartile Q₁ of 1, 2, 4, 6, 8, 10, 12, 14. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Application",
+        "options": [
+          "3",
+          "4",
+          "2",
+          "6"
+        ],
+        "answer": 0
+      },
+      "statistics-046": {
+        "prompt": "Find the upper quartile Q₃ of 1, 2, 4, 6, 8, 10, 12, 14. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Application",
+        "options": [
+          "12",
+          "11",
+          "10",
+          "22"
+        ],
+        "answer": 1
+      },
+      "statistics-047": {
+        "prompt": "Find the lower quartile Q₁ of 2, 2, 4, 5, 7, 8, 10. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Application",
+        "options": [
+          "3",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": 2
+      },
+      "statistics-048": {
+        "prompt": "Find the upper quartile Q₃ of 2, 2, 4, 5, 7, 8, 10. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+        "category": "Range and quartiles",
+        "difficulty": "Application",
+        "options": [
+          "9",
+          "7",
+          "16",
+          "8"
+        ],
+        "answer": 3
+      },
+      "statistics-049": {
+        "prompt": "A list contains 9 sorted observations. Which position gives its median?",
+        "category": "Range and quartiles",
+        "difficulty": "Foundation",
+        "options": [
+          "5",
+          "6",
+          "4",
+          "10"
+        ],
+        "answer": 0
+      },
+      "statistics-050": {
+        "prompt": "Why can different software sometimes give different quartiles for the same small data set?",
+        "category": "Range and quartiles",
+        "difficulty": "Challenge",
+        "options": [
+          "The sum of the data must have changed.",
+          "Different quartile conventions or interpolation rules may be used.",
+          "The largest value becomes the median.",
+          "Quartiles never depend on a definition."
+        ],
+        "answer": 1
+      },
+      "statistics-051": {
+        "prompt": "Frequency table (value: frequency): 0: 1, 1: 2, 2: 4, 3: 1. What is the total frequency N?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Foundation",
+        "options": [
+          "9",
+          "7",
+          "8",
+          "16"
+        ],
+        "answer": 2
+      },
+      "statistics-052": {
+        "prompt": "Frequency table (value: frequency): 0: 1, 1: 2, 2: 4, 3: 1. What is the mean?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Challenge",
+        "options": [
+          "21/8",
+          "5/8",
+          "13/4",
+          "13/8"
+        ],
+        "answer": 3
+      },
+      "statistics-053": {
+        "prompt": "Frequency table (value: frequency): 1: 2, 2: 3, 3: 4, 4: 1. What is the total frequency N?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Foundation",
+        "options": [
+          "10",
+          "11",
+          "9",
+          "20"
+        ],
+        "answer": 0
+      },
+      "statistics-054": {
+        "prompt": "Frequency table (value: frequency): 1: 2, 2: 3, 3: 4, 4: 1. What is the mean?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Challenge",
+        "options": [
+          "17/5",
+          "12/5",
+          "7/5",
+          "24/5"
+        ],
+        "answer": 1
+      },
+      "statistics-055": {
+        "prompt": "Frequency table (value: frequency): 0: 1, 1: 3, 2: 6, 3: 3, 4: 2. What is the total frequency N?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Foundation",
+        "options": [
+          "16",
+          "14",
+          "15",
+          "30"
+        ],
+        "answer": 2
+      },
+      "statistics-056": {
+        "prompt": "Frequency table (value: frequency): 0: 1, 1: 3, 2: 6, 3: 3, 4: 2. What is the mean?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Challenge",
+        "options": [
+          "47/15",
+          "17/15",
+          "64/15",
+          "32/15"
+        ],
+        "answer": 3
+      },
+      "statistics-057": {
+        "prompt": "Frequency table (value: frequency): 1: 2, 2: 5, 3: 3. What is the total frequency N?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Foundation",
+        "options": [
+          "10",
+          "11",
+          "9",
+          "20"
+        ],
+        "answer": 0
+      },
+      "statistics-058": {
+        "prompt": "Frequency table (value: frequency): 1: 2, 2: 5, 3: 3. What is the mean?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Challenge",
+        "options": [
+          "31/10",
+          "21/10",
+          "11/10",
+          "21/5"
+        ],
+        "answer": 1
+      },
+      "statistics-059": {
+        "prompt": "Values 0, 1, 2, 3 have frequencies 1, 2, 4, 1. What is the median?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Application",
+        "options": [
+          "3",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": 2
+      },
+      "statistics-060": {
+        "prompt": "Values 0, 1, 2, 3, 4 have frequencies 1, 3, 6, 3, 2. What is the mode?",
+        "category": "Discrete frequency tables",
+        "difficulty": "Application",
+        "options": [
+          "3",
+          "1",
+          "4",
+          "2"
+        ],
+        "answer": 3
+      }
+    },
+    "title": "Statistics",
+    "categories": [
+      "Data and pictograms",
+      "Bar charts and frequencies",
+      "Pie charts and percentages",
+      "Mean median and mode",
+      "Range and quartiles",
+      "Discrete frequency tables"
+    ],
+    "signature": "279201d686dca9c0524549907e1814ec084f862e46bd80df9b89dae4495ecb98"
   },
   "numbers-i": {
     "course": "Year 7 Maths",

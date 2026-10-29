@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import {units} from '../assets/unit-games/data.mjs';
 import {initialWorkshop,result,expressionValue} from '../assets/unit-games/models.mjs';
-assert.equal(units.length,16);assert.equal(new Set(units.map(u=>u.id)).size,16);
-assert.deepEqual(Object.fromEntries(['maths','physics','chemistry'].map(s=>[s,units.filter(u=>u.subject===s).length])),{maths:6,physics:6,chemistry:4});
+assert.equal(units.length,17);assert.equal(new Set(units.map(u=>u.id)).size,17);
+assert.deepEqual(Object.fromEntries(['maths','physics','chemistry'].map(s=>[s,units.filter(u=>u.subject===s).length])),{maths:7,physics:6,chemistry:4});
 for(const u of units){assert.equal(u.classic.rounds.length,3);assert.equal(u.workshop.rounds.length,3);for(const r of u.classic.rounds){assert(r.prompt&&r.explanation);assert(r.cards.length>=4);assert.equal(new Set(r.cards.map(c=>c.label)).size,r.cards.length);assert.equal(new Set(r.bins.map(b=>b.label)).size,r.bins.length);for(const c of r.cards)assert(r.bins.some(b=>b.id===c.bin));if(r.kind!=='sort')assert.equal(new Set(r.cards.map(c=>c.bin)).size,r.bins.length);}
  for(const r of u.workshop.rounds){assert(r.hint&&r.why);assert(!result(u.workshop.kind,r.params,initialWorkshop(u.workshop.kind)).ok,`${u.id}: unsolved initial model`);let s=structuredClone(r.solution);if(u.workshop.kind==='expression'){const used=new Set();s={tokens:r.solution.map(value=>{if(!/^\d+$/.test(value))return {type:'op',value};const index=r.params.tiles.findIndex((n,i)=>!used.has(i)&&String(n)===value);assert(index>=0);used.add(index);return {type:'number',value,index};})};}assert(result(u.workshop.kind,r.params,s).ok,`${u.id}: advertised solution does not work`);}
 }
@@ -21,4 +21,4 @@ for(const[volume,ph]of[[0,1],[20,7]])assert(Math.abs(result('titration',{acidVol
 assert(!result('displacement',{target:'Cu'},{metal:'Mg',solution:'Cu'}).ok);assert(result('displacement',{target:'Cu'},{metal:'Fe',solution:'Cu'}).ok);assert(!result('displacement',{target:'Zn'},{metal:'Cu',solution:'Zn'}).reacts);
 assert(!result('electrons',{ion:'Pb',charge:2,anion:'bromine'},{electrons:2,polarity:'positive',gas:'bromine'}).ok);
 assert.equal(result('molecule',{carbon:4,hydrogen:6,doubles:2},{carbons:4,bonds:[2,1,2]}).hydrogen,6);assert(!result('molecule',{carbon:4,hydrogen:6,doubles:2},{carbons:4,bonds:[2,3,1]}).valid);
-console.log('16 units / 32 games / 96 rounds: all proposed solutions, card destinations, unique matches, arithmetic parsing and independent physical/chemical invariants passed.');
+console.log('17 units / 34 core games / 102 core rounds: all proposed solutions, card destinations, unique matches, arithmetic parsing and independent physical/chemical invariants passed.');

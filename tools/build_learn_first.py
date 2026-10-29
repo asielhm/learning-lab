@@ -5,11 +5,12 @@ import html,json,re,subprocess
 from pathlib import Path
 from school_reading import DATA,EXTRA
 from learning_figures import draw
+from notation import school_notation
 ROOT=Path(__file__).resolve().parent.parent
 E=lambda x:html.escape(str(x),quote=True)
 
 def sources():
- script="""import {modules} from './assets/y7-maths/modules.js';import {units} from './assets/y10-physics/experiments.mjs';const maths={};for(const[id,defs]of Object.entries(modules))maths[id]=defs.map(d=>{const v=Object.fromEntries(d.controls.map(c=>[c.id,c.value])),o=d.compute(v,'core');return {id:d.id,title:d.title,text:[d.goal,d.support,o.explanation],steps:o.steps,model:o.visual,result:o.result};});console.log(JSON.stringify({maths,physics:units}));"""
+ script="""import {modules} from './assets/y7-maths/modules.js';import {units} from './assets/y10-physics/experiments.mjs';const maths={};for(const[id,defs]of Object.entries(modules))maths[id]=defs.map(d=>{const v=Object.fromEntries(d.controls.map(c=>[c.id,c.value]));if(id==='statistics'&&d.id==='bar-chart')Object.assign(v,{bus:6,walk:8,car:4,cycle:2});if(id==='statistics'&&d.id==='pie-charts')Object.assign(v,{bus:120,walk:90,car:60,cycle:90});if(id==='algebra-ii'&&d.id==='equation-steps')v.stage=4;const o=d.compute(v,'core');return {id:d.id,title:d.title,text:[d.goal,d.support,o.explanation],steps:o.steps,model:o.visual,result:o.result};});console.log(JSON.stringify({maths,physics:units}));"""
  return json.loads(subprocess.check_output(['node','--input-type=module','-e',script],cwd=ROOT,text=True))
 
 def topics_for(key,source):
@@ -17,8 +18,10 @@ def topics_for(key,source):
  if key.startswith('y7/maths/'):
   slug=key.split('/')[-1];result=source['maths'][slug]
   for i,t in enumerate(result):
+   t['text']=[p.replace('Click or tap the grid to move the point, or use the sliders.','The diagram marks the resulting position.') for p in t['text']]
    # Namespace the drawing markers so the static example cannot alter a live model.
    marker='reading-arrow-'+slug+'-'+str(i)
+   t['model']=re.sub(r'\s(?:tabindex|data-stats-bar)="[^"]*"','',t['model']).replace('role="button"','').replace('Arrow keys change it; drag to set a height.','Static worked-example illustration.')
    t['model']=t['model'].replace('id="arrow"',f'id="{marker}"').replace('url(#arrow)',f'url(#{marker})')
   return result
  if key.startswith('y10/physics/'):
@@ -33,7 +36,7 @@ def render(key,target,source):
   ident=f'read-topic-{i+1}';toc+=f'<a href="#{ident}">{i+1:02} · {E(t["title"])}</a>'
   model=f'<div class="reading-model">{t["model"]}</div>' if t.get('model') else ''
   result=f'<p><strong>{E(t["result"])}</strong></p>' if t.get('result') else ''
-  cards+=f'<details id="{ident}" class="reading-topic" open><summary>{i+1:02} · {E(t["title"])}</summary><div class="reading-topic-body"><div>{"".join("<p>"+E(p)+"</p>" for p in t["text"])}{result}{model}</div><aside class="reading-example"><h3>Worked example · follow the reasoning</h3><ol>{"".join("<li>"+E(p)+"</li>" for p in t["steps"])}</ol></aside></div></details>'
+  cards+=f'<details id="{ident}" class="reading-topic" open><summary>{i+1:02} · {E(t["title"])}</summary><div class="reading-topic-body"><div>{"".join("<p>"+E(p)+"</p>" for p in t["text"])}{result}{school_notation(key,i)}{model}</div><aside class="reading-example"><h3>Worked example · follow the reasoning</h3><ol>{"".join("<li>"+E(p)+"</li>" for p in t["steps"])}</ol></aside></div></details>'
  diagram=''
  if figure:
   svg,caption=draw(figure,'en');name=key.replace('/','-')+'.svg';p=ROOT/'assets/learn-first/figures'/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(svg)
@@ -46,7 +49,7 @@ def apply_school_reading():
   path=ROOT/'activities'/key/'index.html'
   if not path.exists():raise ValueError('Missing published unit: '+key)
   page=path.read_text();page=re.sub(r'<!-- learn-first:start -->.*?<!-- learn-first:end -->','',page,flags=re.S)
-  page=re.sub(r'<link data-learn-first[^>]*>','',page);page=page.replace('</head>','<link data-learn-first rel="stylesheet" href="../../../../assets/learn-first/reading.css?v=1"></head>')
+  page=re.sub(r'<link data-learn-first[^>]*>','',page);page=page.replace('</head>','<link data-learn-first rel="stylesheet" href="../../../../assets/learn-first/reading.css?v=2"></head>')
   if key.startswith('y7/'):
    if key.endswith('/algebra'):marker=re.search(r'<nav class="algebra-steps"',page);target='translatePanel'
    else:marker=re.search(r'<section class="learning-tools"',page);target='unit-activities'

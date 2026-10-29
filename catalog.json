@@ -119,7 +119,7 @@
               ]
             },
             {
-              "id": "algebra",
+              "id": "algebra-i",
               "name": "Algebra I",
               "description": "Use variables and coordinates, then connect direct and inverse proportion to stories, tables, formulas and graphs.",
               "primaryActivity": "algebra-i-lab",
@@ -144,40 +144,13 @@
                   "href": "activities/y7/maths/algebra-i/revision.html"
                 },
                 {
-                  "id": "algebra-lab",
-                  "title": "Algebra: from boxes to brackets",
-                  "description": "Build expressions with pen and clip boxes, sort linear, square and cube terms, and open identical bags to discover the distributive law.",
-                  "format": "Boxes & brackets activity",
-                  "duration": "Work at your pace",
-                  "image": "activities/y7/maths/algebra/cover.svg",
-                  "href": "activities/y7/maths/algebra/"
-                },
-                {
-                  "id": "algebra-revision",
-                  "title": "Algebra: revision simulator",
-                  "description": "Practise translating, vocabulary, like terms, powers, substitution and expanding brackets with explanations and targeted retries.",
-                  "format": "Boxes & brackets revision",
-                  "duration": "Choose your session",
-                  "image": "activities/y7/maths/algebra/cover.svg",
-                  "href": "activities/y7/maths/algebra/revision.html"
-                },
-                {
                   "id": "algebra-i-games",
                   "title": "Algebra I: learning games",
-                  "description": "Four games: rule matching, coordinate checkpoints, mystery function machines and direct/inverse proportion paint orders. 18 rounds with hints and explanations.",
+                  "description": "7 games: variable spotting, coordinate clues and pictures, rule matching, function machines and proportion paint orders. Self-paced practice with hints and explanations.",
                   "format": "Learning games",
                   "duration": "5–15 minutes",
                   "href": "activities/y7/maths/algebra-i/games/",
                   "image": "activities/y7/maths/algebra-i/games/cover.svg"
-                },
-                {
-                  "id": "algebra-games",
-                  "title": "Boxes & Brackets: learning games",
-                  "description": "Like-Terms Recycling and Bag Factory. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
-                  "format": "Learning games",
-                  "duration": "5–15 minutes",
-                  "href": "activities/y7/maths/algebra/games/",
-                  "image": "activities/y7/maths/algebra/games/cover.svg"
                 }
               ]
             },
@@ -214,6 +187,96 @@
                   "duration": "5–15 minutes",
                   "href": "activities/y7/maths/numbers-iii/games/",
                   "image": "activities/y7/maths/numbers-iii/games/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "algebra-ii",
+              "name": "Algebra II",
+              "description": "Build expressions, collect like terms, expand brackets and solve equations with a balance of equivalent operations.",
+              "primaryActivity": "algebra-ii-lab",
+              "appTitle": "Algebra II",
+              "activities": [
+                {
+                  "id": "algebra-ii-lab",
+                  "title": "Algebra II: interactive unit",
+                  "description": "Build expressions, collect like terms, expand brackets and solve equations with a balance of equivalent operations.",
+                  "format": "Interactive maths unit",
+                  "duration": "Work at your pace",
+                  "href": "activities/y7/maths/algebra-ii/",
+                  "image": "activities/y7/maths/algebra-ii/cover.svg"
+                },
+                {
+                  "id": "algebra-ii-revision",
+                  "title": "Algebra II: revision simulator",
+                  "description": "90 questions covering translation, like terms, brackets and equations.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y7/maths/algebra-ii/revision.html",
+                  "image": "activities/y7/maths/algebra-ii/cover.svg"
+                },
+                {
+                  "id": "algebra-lab",
+                  "title": "Algebra: from boxes to brackets",
+                  "description": "Build expressions with pen and clip boxes, sort linear, square and cube terms, and open identical bags to discover the distributive law.",
+                  "format": "Boxes & brackets activity",
+                  "duration": "Work at your pace",
+                  "image": "activities/y7/maths/algebra/cover.svg",
+                  "href": "activities/y7/maths/algebra/"
+                },
+                {
+                  "id": "algebra-revision",
+                  "title": "Algebra: revision simulator",
+                  "description": "Practise translating, vocabulary, like terms, powers, substitution and expanding brackets with explanations and targeted retries.",
+                  "format": "Boxes & brackets revision",
+                  "duration": "Choose your session",
+                  "image": "activities/y7/maths/algebra/cover.svg",
+                  "href": "activities/y7/maths/algebra/revision.html"
+                },
+                {
+                  "id": "algebra-games",
+                  "title": "Boxes & Brackets: learning games",
+                  "description": "Like-Terms Recycling and Bag Factory. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/algebra/games/",
+                  "image": "activities/y7/maths/algebra/games/cover.svg"
+                }
+              ]
+            },
+            {
+              "id": "statistics",
+              "name": "Statistics",
+              "description": "Build and read charts, explore averages and quartiles, and interpret discrete frequency tables.",
+              "primaryActivity": "statistics-lab",
+              "appTitle": "Statistics",
+              "activities": [
+                {
+                  "id": "statistics-lab",
+                  "title": "Statistics: interactive unit",
+                  "description": "Build and read charts, explore averages and quartiles, and interpret discrete frequency tables.",
+                  "format": "Interactive maths unit",
+                  "duration": "Work at your pace",
+                  "href": "activities/y7/maths/statistics/",
+                  "image": "activities/y7/maths/statistics/cover.svg"
+                },
+                {
+                  "id": "statistics-revision",
+                  "title": "Statistics: revision simulator",
+                  "description": "60 questions on charts, averages, quartiles and frequency tables.",
+                  "format": "Revision simulator",
+                  "duration": "Choose your session",
+                  "href": "activities/y7/maths/statistics/revision.html",
+                  "image": "activities/y7/maths/statistics/cover.svg"
+                },
+                {
+                  "id": "statistics-games",
+                  "title": "Statistics: learning games",
+                  "description": "Data Detectives and Frequency Factory. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/statistics/games/",
+                  "image": "activities/y7/maths/statistics/games/cover.svg"
                 }
               ]
             }

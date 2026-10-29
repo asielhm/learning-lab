@@ -1,6 +1,6 @@
 # Learning games for Y7 Maths and Y10 Physics / Chemistry
 
-34 original games across all 16 existing unit pages: six maths units (including both algebra activities), six physics units and four chemistry units. Each unit has a card game and a construction/target puzzle, with three authored rounds each. Algebra I also has two six-mission games: 108 rounds total. English, computer-first, original SVG illustrations, keyboard and mouse support. No third-party runtime, account or Google calls.
+39 original games across 17 unit pages: seven maths game hubs (including the original boxes/brackets activity), six physics units and four chemistry units. Each unit has a card game and a construction/target puzzle, with three authored rounds each. Algebra I also has two six-mission games and three print-pack games (7 variable rounds, 11 detective rounds and 2 multi-point pictures): 134 authored rounds total. English, computer-first, original SVG illustrations, keyboard and mouse support. No third-party runtime, account or Google calls.
 
 ## Online research and provenance (29 October 2026)
 
@@ -69,7 +69,7 @@ Sources:
 
 Authoring: `assets/unit-games/data.mjs`. Pure models: `models.mjs`; vector scenes: `art.mjs`; UI: `games.js`; standalone styles: `games.css`; isolated lesson banner: `links.css`.
 
-Run `python3 tools/build_unit_games.py` after content/art changes. It deterministically generates 16 hubs, 34 game pages, 34 illustrations and one all-games directory. `unit_games_integration.py` idempotently inserts lesson links immediately before the final revision invitation and appends 16 catalogue discovery entries without changing the primary activities. Chemistry and physics page builders call this integration after regeneration.
+Run `python3 tools/build_unit_games.py` after content/art changes. It deterministically generates 17 hubs, 39 game pages, 39 illustrations and one all-games directory. `unit_games_integration.py` idempotently inserts lesson links immediately before the final revision invitation and appends 17 catalogue discovery entries without changing the primary activities. Chemistry and physics page builders call this integration after regeneration.
 
 Checks:
 
@@ -81,7 +81,7 @@ LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/unit-games-browser.cjs
 LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/unit-games-motion.cjs
 ```
 
-Browser checks cover all 96 rounds, errors/hints/reveal/retry/scoring, mouse and keyboard, real drag/drop, all three computer viewports, prefixed deployment links and absence of Google requests. Motion checks observe changing geometry/positions, not just CSS class names. Existing desktop layout and unit checks cover lesson integration.
+Browser checks cover all 102 core rounds, plus the 32 custom Algebra I rounds, errors/hints/reveal/retry/scoring, mouse and keyboard, real drag/drop, all three computer viewports, prefixed deployment links and absence of Google requests. Motion checks observe changing geometry/positions, not just CSS class names. Existing desktop layout and unit checks cover lesson integration.
 
 ## Two additional Algebra I games
 
@@ -90,3 +90,12 @@ Mystery Machine Mission follows the numerical Mystery/Equations patterns in [PhE
 Proportion Paintworks follows the visual ratio idea in the previously cited Proportion Playground paint documentation. Original mural orders add exact quantities, a constant-product robot crew model, and a two-stage finale. Paint hue is schematic RGB mixing; it does not claim to predict real pigments. Robots have equal rates and no interference. A mission requests completion in exactly the stated time, not merely before a deadline. Final correctness is independent of animation frames and reduced-motion settings.
 
 The two games have six scaffolded missions each, first-class hub/tabs/catalogue links, visible How to play before starting, independent hints/reveal/retry and no recording calls. Authoring: `algebra-data.mjs`; pure rules: `algebra-models.mjs`; vector scenes: `algebra-art.mjs`; controller/style: `algebra-games.js` / `algebra-games.css`. Check `node tests/algebra-games.mjs` and `LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/algebra-games-browser.cjs`.
+
+
+## Seven-unit syllabus and uploaded coordinates pack
+
+Primary Y7 units are Numbers I, Geometry I, Numbers II, Algebra I, Numbers III, Algebra II and Statistics. Algebra II links to the original boxes/brackets games; their URLs remain stable. Statistics adds Data Detectives and Frequency Factory. The latter accepts any frequency table meeting the requested observation count, mean and median, not just its example solution.
+
+`coordinate-pack.mjs`, `.js` and `.css` adapt student activities from the user-uploaded `Class_1_Variables_and_Coordinates_Print_Pack.docx`. Variable Spotter introduces quantities before letters; Coordinate Detective handles triples, the reversed-coordinate impostor and shared-axis pairs; Mystery Picture Studio plots house and rocket strokes separately and includes an unscored creator with local JSON export. The pack key omitted some valid shared-coordinate pairs; the app accepts both AC/BD for equal x and AD/BC for equal y. No teacher guide or document media is published.
+
+Check `node tests/coordinate-pack.mjs` and `LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/coordinate-pack-browser.cjs`. The tests cover all authored rounds, ordered plotting, line breaks, errors/hints/retry/scoring, mouse and keyboard alternatives, creator constraints/download and all three computer sizes with no Google requests.

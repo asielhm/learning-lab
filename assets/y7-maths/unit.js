@@ -1,4 +1,4 @@
-import {modules} from './modules.js';
+import {modules} from './modules.js?v=y7-syllabus-2';
 import {numericAnswer} from './maths.mjs';
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const root=document.querySelector('#unit-activities');
@@ -44,8 +44,17 @@ function makeWidget(d,index){
  section.querySelector('.practice input').addEventListener('input',e=>e.target.setCustomValidity(''));
  section.querySelector('.reset-widget').onclick=()=>{d.controls.forEach(c=>{values[c.id]=c.value;controlElements[c.id].value=c.value;});update();};
  if(d.id==='coordinates')section.querySelector('.visual').addEventListener('click',event=>{const svg=event.currentTarget.querySelector('svg');const matrix=svg?.getScreenCTM();if(!matrix)return;const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());values.x=Math.max(-5,Math.min(5,Math.round((point.x-280)/24)));values.y=Math.max(-5,Math.min(5,Math.round((170-point.y)/24)));controlElements.x.value=values.x;controlElements.y.value=values.y;update();});
+ if(d.id==='bar-chart'){
+  const visual=section.querySelector('.visual');let active=null;
+  function setBar(field,value){values[field]=Math.max(0,Math.min(12,Math.round(value)));controlElements[field].value=values[field];update();}
+  visual.addEventListener('pointerdown',e=>{const bar=e.target.closest('[data-stats-bar]');if(!bar)return;active=bar.dataset.statsBar;e.preventDefault();});
+  window.addEventListener('pointermove',e=>{if(!active)return;const svg=visual.querySelector('svg'),point=new DOMPoint(e.clientX,e.clientY).matrixTransform(svg.getScreenCTM().inverse());setBar(active,(270-point.y)/17);});
+  window.addEventListener('pointerup',()=>active=null);
+  visual.addEventListener('keydown',e=>{const bar=e.target.closest('[data-stats-bar]');if(!bar||!['ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();const field=bar.dataset.statsBar;setBar(field,e.key==='Home'?0:e.key==='End'?12:values[field]+(e.key==='ArrowUp'?1:-1));visual.querySelector(`[data-stats-bar="${field}"]`).focus();});
+ }
  instances.push({update});update();
 }
 if(definitions){definitions.forEach(makeWidget);document.querySelector('#activity-links').innerHTML=definitions.map((d,i)=>`<a href="#${d.id}">${String(i+1).padStart(2,'0')} ${escape(d.title)}</a>`).join('');}
-else root.textContent='This unit could not be loaded. Please return to Y7 Maths and try again.';
+if(unit==='algebra-ii')document.querySelector('#activity-links').insertAdjacentHTML('beforeend','<a href="#equation-workbench">04 Equation workbench</a>');
+else if(!definitions)root.textContent='This unit could not be loaded. Please return to Y7 Maths and try again.';
 document.querySelector('#learning-level').addEventListener('change',event=>{document.body.dataset.level=event.target.value;instances.forEach(i=>i.update());});

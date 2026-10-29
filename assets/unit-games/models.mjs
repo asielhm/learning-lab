@@ -1,13 +1,15 @@
+import {statistics,frequencyData} from '../y7-maths/statistics.mjs';
 export function expressionValue(tokens){
  let i=0;const values=tokens.map(String);const number=()=>{if(values[i]==='('){i++;const n=sum();if(values[i++]!==')')throw Error('Close the bracket.');return n;}if(values[i]==='−'||values[i]==='-'){i++;return -number();}if(!/^\d+(?:\.\d+)?$/.test(values[i]||''))throw Error('Place a number or an opening bracket here.');return Number(values[i++]);};
  const product=()=>{let n=number();while(['×','÷','*','/'].includes(values[i])){const op=values[i++],v=number();if((op==='÷'||op==='/')&&v===0)throw Error('Division by zero is not defined.');n=op==='×'||op==='*'?n*v:n/v;}return n;};
  const sum=()=>{let n=product();while(['+','−','-'].includes(values[i])){const op=values[i++],v=product();n=op==='+'?n+v:n-v;}return n;};
  try{const value=sum();if(i!==values.length||!Number.isFinite(value))throw Error('Check the order of numbers, operations and brackets.');return {valid:true,value};}catch(e){return {valid:false,value:null,message:e.message};}
 }
-export function initialWorkshop(kind){return ({expression:{tokens:[]},rectangle:{width:2,height:2},rover:{moves:[]},coordinates:{x:0,y:0},bags:{bags:1,x:1,y:0,loose:0},pizza:{slices:[]},circuit:{resistance:6,meter:'unconnected'},wave:{frequency:1,amplitude:1},lens:{object:25,screen:5},heat:{energy:0,insulation:'leaky'},catchup:{speed:1,delay:0},forces:{left:0,right:5},titration:{volume:0},displacement:{metal:'Cu',solution:'Zn'},electrons:{electrons:0,polarity:'unconnected',gas:'oxygen'},molecule:{carbons:2,bonds:[1]}})[kind];}
+export function initialWorkshop(kind){return ({statistics:{f1:0,f2:0,f3:0,f4:0},expression:{tokens:[]},rectangle:{width:2,height:2},rover:{moves:[]},coordinates:{x:0,y:0},bags:{bags:1,x:1,y:0,loose:0},pizza:{slices:[]},circuit:{resistance:6,meter:'unconnected'},wave:{frequency:1,amplitude:1},lens:{object:25,screen:5},heat:{energy:0,insulation:'leaky'},catchup:{speed:1,delay:0},forces:{left:0,right:5},titration:{volume:0},displacement:{metal:'Cu',solution:'Zn'},electrons:{electrons:0,polarity:'unconnected',gas:'oxygen'},molecule:{carbons:2,bonds:[1]}})[kind];}
 export const close=(a,b,tolerance=1e-7)=>Number.isFinite(a)&&Math.abs(a-b)<=tolerance;
 export function result(kind,p,s){
  switch(kind){
+ case'statistics':{const data=frequencyData([1,2,3,4],[s.f1,s.f2,s.f3,s.f4]),v=statistics(data);return {ok:v.n===p.n&&close(v.mean,p.mean)&&close(v.median,p.median),...v,readout:v.n?`N = ${v.n} · mean = ${Number(v.mean.toFixed(3))} · median = ${v.median}`:'No observations yet',message:'Match the number of observations, mean and median. Use Σ(fx)/Σf for the mean; locate the sorted middle positions for the median.'};}
  case'expression':{const r=expressionValue(s.tokens.map(t=>t.value)),ids=s.tokens.filter(t=>t.type==='number').map(t=>t.index),all=ids.length===p.tiles.length&&new Set(ids).size===ids.length&&ids.every(i=>Number.isInteger(i)&&i>=0&&i<p.tiles.length)&&s.tokens.filter(t=>t.type==='number').every(t=>String(t.value)===String(p.tiles[t.index]));return {...r,ok:r.valid&&all&&close(r.value,24),readout:r.valid?`Output: ${Number(r.value.toFixed(5))}`:'Machine waiting',message:!all?'Use each of the four number tiles exactly once.':r.valid?'Aim for exactly 24.':r.message};}
  case'rectangle':{const area=s.width*s.height,perimeter=2*(s.width+s.height);return {ok:area===p.area&&perimeter===p.perimeter,area,perimeter,readout:`Area ${area} m² · Perimeter ${perimeter} m`,message:'Meet both targets; changing a side changes area and perimeter differently.'};}
  case'rover':{const end=p.start+s.moves.reduce((a,b)=>a+b,0);return {ok:s.moves.length===3&&end===p.target&&s.moves.every(v=>p.moves.includes(v)),end,readout:`Start ${p.start} → finish ${end}`,message:'Choose exactly three signed moves. Their sum is the change in position.'};}
@@ -28,6 +30,7 @@ export function result(kind,p,s){
  }
 }
 export const controls={
+ statistics:[['f1','Frequency of value 1',0,6,1],['f2','Frequency of value 2',0,6,1],['f3','Frequency of value 3',0,6,1],['f4','Frequency of value 4',0,6,1]],
  rectangle:[['width','Width / m',1,8,1],['height','Height / m',1,8,1]],
  coordinates:[['x','Horizontal x',-6,12,1],['y','Vertical y',-6,12,1]],
  bags:[['bags','Number of bags',1,6,1],['x','x-boxes per bag',0,4,1],['y','y-boxes per bag',0,4,1],['loose','Loose pens per bag',0,5,1]],
@@ -41,4 +44,4 @@ export const controls={
  electrons:[['electrons','Electrons per cation',0,3,1],['polarity','Cathode connection',[['unconnected','Not connected'],['negative','Negative terminal'],['positive','Positive terminal']]],['gas','Anode product',[['oxygen','Oxygen'],['chlorine','Chlorine'],['bromine','Bromine']]]],
  molecule:[['carbons','Carbon atoms',2,8,1]]
 };
-export const runLabels={expression:'Run the 24 machine',rectangle:'Check the garden',rover:'Launch rover',coordinates:'Send the explorer',bags:'Open the bags',pizza:'Serve this pizza',circuit:'Switch on DC',wave:'Play this wave',lens:'Check the focus',heat:'Turn on heater',catchup:'Launch the runners',forces:'Test the pulls',titration:'Check equivalence',displacement:'Drop the metal strip',electrons:'Turn on DC supply',molecule:'Check this molecule'};
+export const runLabels={statistics:'Check this data order',expression:'Run the 24 machine',rectangle:'Check the garden',rover:'Launch rover',coordinates:'Send the explorer',bags:'Open the bags',pizza:'Serve this pizza',circuit:'Switch on DC',wave:'Play this wave',lens:'Check the focus',heat:'Turn on heater',catchup:'Launch the runners',forces:'Test the pulls',titration:'Check equivalence',displacement:'Drop the metal strip',electrons:'Turn on DC supply',molecule:'Check this molecule'};

@@ -1,0 +1,1277 @@
+{
+  "topicId": "algebra-ii",
+  "title": "Algebra II",
+  "categories": [
+    "Translating stories",
+    "Algebraic vocabulary",
+    "Collecting linear terms",
+    "Squares cubes and like terms",
+    "Expanding brackets",
+    "Substitution and connections",
+    "One-step equations",
+    "Two- and three-step equations",
+    "Unknown on both sides"
+  ],
+  "questions": [
+    {
+      "id": "a01",
+      "category": "Translating stories",
+      "difficulty": "Foundation",
+      "prompt": "x is the number of pens in one unopened pen box. Which expression describes that box?",
+      "options": [
+        "x",
+        "1",
+        "x²",
+        "x + 1"
+      ],
+      "answer": 0,
+      "explanation": "x represents the unknown number of pens in the box, not the name of the box."
+    },
+    {
+      "id": "a02",
+      "category": "Translating stories",
+      "difficulty": "Foundation",
+      "prompt": "One unopened box contains x pens. Three loose pens are added. What is the total?",
+      "options": [
+        "3 − x",
+        "x + 3",
+        "3x",
+        "x³"
+      ],
+      "answer": 1,
+      "explanation": "The unknown box count and the three known loose pens are added."
+    },
+    {
+      "id": "a03",
+      "category": "Translating stories",
+      "difficulty": "Foundation",
+      "prompt": "Two identical unopened pen boxes each contain x pens. What is the total?",
+      "options": [
+        "x + 2",
+        "2 + x²",
+        "2x",
+        "x²"
+      ],
+      "answer": 2,
+      "explanation": "x + x = 2x. Two copies of x are not the same as x multiplied by x."
+    },
+    {
+      "id": "a04",
+      "category": "Translating stories",
+      "difficulty": "Foundation",
+      "prompt": "A pen box contains x pens and a clip box contains y clips. Which expression counts all the items?",
+      "options": [
+        "2x",
+        "xy",
+        "x² + y²",
+        "x + y"
+      ],
+      "answer": 3,
+      "explanation": "The two unknown counts are added. Different letters need not have equal values."
+    },
+    {
+      "id": "a05",
+      "category": "Translating stories",
+      "difficulty": "Application",
+      "prompt": "There are two pen boxes of x pens each and one clip box of y clips. What is the total number of items?",
+      "options": [
+        "2x + y",
+        "2(x + y)",
+        "x + 2y",
+        "2xy"
+      ],
+      "answer": 0,
+      "explanation": "Only the pen box is repeated twice: x + x + y = 2x + y."
+    },
+    {
+      "id": "a06",
+      "category": "Translating stories",
+      "difficulty": "Foundation",
+      "prompt": "You have x pens and lend four of them, with at least four available. Which expression counts the pens left?",
+      "options": [
+        "x + 4",
+        "x − 4",
+        "4 − x",
+        "4x"
+      ],
+      "answer": 1,
+      "explanation": "Subtract four from the starting number x."
+    },
+    {
+      "id": "a07",
+      "category": "Translating stories",
+      "difficulty": "Application",
+      "prompt": "A ticket costs t pounds. Three tickets and a £2 booking fee cost how much?",
+      "options": [
+        "t + 5",
+        "2t + 3",
+        "3t + 2",
+        "3(t + 2)"
+      ],
+      "answer": 2,
+      "explanation": "The ticket price is counted three times, and the one booking fee is added once."
+    },
+    {
+      "id": "a08",
+      "category": "Translating stories",
+      "difficulty": "Foundation",
+      "prompt": "Each of b identical packets contains six cards. How many cards are in all the packets?",
+      "options": [
+        "b + 6",
+        "b⁶",
+        "6 + b²",
+        "6b"
+      ],
+      "answer": 3,
+      "explanation": "Six cards per packet multiplied by b packets gives 6b."
+    },
+    {
+      "id": "a09",
+      "category": "Translating stories",
+      "difficulty": "Application",
+      "prompt": "Each of two identical bags contains x pens and three loose clips. Which expression counts all items?",
+      "options": [
+        "2(x + 3)",
+        "2x + 3",
+        "x + 6",
+        "2x + 1"
+      ],
+      "answer": 0,
+      "explanation": "There are two copies of everything in one bag, so the whole sum x + 3 is multiplied by two."
+    },
+    {
+      "id": "a10",
+      "category": "Translating stories",
+      "difficulty": "Application",
+      "prompt": "Mia has y stickers. Ali has three more than twice Mia’s number. How many does Ali have?",
+      "options": [
+        "3y + 2",
+        "2y + 3",
+        "2(y + 3)",
+        "y + 6"
+      ],
+      "answer": 1,
+      "explanation": "Twice y is 2y; three more than that is 2y + 3."
+    },
+    {
+      "id": "a11",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "Which of these is an expression rather than an equation?",
+      "options": [
+        "x = 4",
+        "n = x + 3",
+        "2x + 3",
+        "2x + 3 = 7"
+      ],
+      "answer": 2,
+      "explanation": "An expression describes a quantity without stating equality. An equation contains an equals sign."
+    },
+    {
+      "id": "a12",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "What does the coefficient 5 mean in 5x?",
+      "options": [
+        "x is always five",
+        "x multiplied by itself five times",
+        "Five added to x",
+        "Five copies of x"
+      ],
+      "answer": 3,
+      "explanation": "The coefficient multiplies the variable: 5x means x + x + x + x + x."
+    },
+    {
+      "id": "a13",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "How many terms are in a + 2b − 3c²?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "The terms are a, +2b and −3c²; their signs belong to the terms."
+    },
+    {
+      "id": "a14",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "Which term is the constant in 4x + 7?",
+      "options": [
+        "4x",
+        "7",
+        "4",
+        "x"
+      ],
+      "answer": 1,
+      "explanation": "A constant term has no variable. The 4 is a coefficient, not a separate term."
+    },
+    {
+      "id": "a15",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "Which statement correctly describes x²?",
+      "options": [
+        "x plus two",
+        "Always two",
+        "x multiplied by x",
+        "Two copies of x added"
+      ],
+      "answer": 2,
+      "explanation": "The exponent tells us how many copies of the base are multiplied."
+    },
+    {
+      "id": "a16",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "If x is the side length of a square, what expression gives its area?",
+      "options": [
+        "2x",
+        "4x",
+        "x³",
+        "x²"
+      ],
+      "answer": 3,
+      "explanation": "Area is side × side = x × x = x². The perimeter would be 4x."
+    },
+    {
+      "id": "a17",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "If y is the edge length of a cube, what expression gives its volume?",
+      "options": [
+        "y³",
+        "3y",
+        "y²",
+        "6y"
+      ],
+      "answer": 0,
+      "explanation": "Volume is length × width × height = y × y × y = y³."
+    },
+    {
+      "id": "a18",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Application",
+      "prompt": "Which statement is an identity, true for every x?",
+      "options": [
+        "x + 1 = 2",
+        "x + x ≡ 2x",
+        "2x + 3 = 7",
+        "x = 20"
+      ],
+      "answer": 1,
+      "explanation": "Adding two copies of x is always equivalent to 2x; the other statements hold only for particular values."
+    },
+    {
+      "id": "a19",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Foundation",
+      "prompt": "In the formula n = x + 3, what happens when x changes?",
+      "options": [
+        "x must equal n",
+        "n is always three times x",
+        "n is always three greater than x",
+        "n stays fixed at three"
+      ],
+      "answer": 2,
+      "explanation": "The formula links the variables by the rule n = x + 3."
+    },
+    {
+      "id": "a20",
+      "category": "Algebraic vocabulary",
+      "difficulty": "Challenge",
+      "prompt": "In −4z³, which statement identifies the coefficient and variable part?",
+      "options": [
+        "Coefficient 3; variable part −4z",
+        "Coefficient −4z; variable part 3",
+        "Coefficient 4; variable part −z²",
+        "Coefficient −4; variable part z³"
+      ],
+      "answer": 3,
+      "explanation": "The signed numerical factor is −4 and the variable part is z³."
+    },
+    {
+      "id": "a21",
+      "category": "Collecting linear terms",
+      "difficulty": "Foundation",
+      "prompt": "Collect like terms: 3x + 2x.",
+      "options": [
+        "5x",
+        "5x²",
+        "6x",
+        "x"
+      ],
+      "answer": 0,
+      "explanation": "Add the coefficients 3 + 2 and keep x unchanged."
+    },
+    {
+      "id": "a22",
+      "category": "Collecting linear terms",
+      "difficulty": "Application",
+      "prompt": "Collect like terms: 7y − 2y + y.",
+      "options": [
+        "10y",
+        "6y",
+        "4y",
+        "6y²"
+      ],
+      "answer": 1,
+      "explanation": "The last y has coefficient 1, so 7 − 2 + 1 = 6."
+    },
+    {
+      "id": "a23",
+      "category": "Collecting linear terms",
+      "difficulty": "Foundation",
+      "prompt": "Simplify 4z + z − 3z.",
+      "options": [
+        "8z",
+        "z",
+        "2z",
+        "2z²"
+      ],
+      "answer": 2,
+      "explanation": "Add the signed coefficients: 4 + 1 − 3 = 2."
+    },
+    {
+      "id": "a24",
+      "category": "Collecting linear terms",
+      "difficulty": "Foundation",
+      "prompt": "Which pair consists of like terms?",
+      "options": [
+        "3x and 3y",
+        "x and x²",
+        "x² and y²",
+        "3x and 5x"
+      ],
+      "answer": 3,
+      "explanation": "Like terms have exactly the same variable part; coefficients may differ."
+    },
+    {
+      "id": "a25",
+      "category": "Collecting linear terms",
+      "difficulty": "Application",
+      "prompt": "Collect like terms: 2x + 3y + x − y.",
+      "options": [
+        "3x + 2y",
+        "5xy",
+        "3x + 4y",
+        "2x + 3y"
+      ],
+      "answer": 0,
+      "explanation": "The x terms give 3x and the y terms give 2y."
+    },
+    {
+      "id": "a26",
+      "category": "Collecting linear terms",
+      "difficulty": "Foundation",
+      "prompt": "Simplify 5 + 2x + 3.",
+      "options": [
+        "2x + 15",
+        "2x + 8",
+        "10x",
+        "7x + 3"
+      ],
+      "answer": 1,
+      "explanation": "The constants 5 and 3 combine, while 2x stays separate."
+    },
+    {
+      "id": "a27",
+      "category": "Collecting linear terms",
+      "difficulty": "Foundation",
+      "prompt": "A student writes x + y = 2x. What is the problem?",
+      "options": [
+        "x and y must both be zero",
+        "Every letter must be replaced by one",
+        "x and y may represent different numbers",
+        "A sum can never contain letters"
+      ],
+      "answer": 2,
+      "explanation": "Different variables cannot generally be combined as copies of x."
+    },
+    {
+      "id": "a28",
+      "category": "Collecting linear terms",
+      "difficulty": "Application",
+      "prompt": "Collect like terms: 6x − 2x − 4x.",
+      "options": [
+        "x",
+        "12x",
+        "0x² + 1",
+        "0"
+      ],
+      "answer": 3,
+      "explanation": "The signed coefficients add to zero: 6 − 2 − 4 = 0."
+    },
+    {
+      "id": "a29",
+      "category": "Collecting linear terms",
+      "difficulty": "Application",
+      "prompt": "Collect like terms: 3a + 2 + a + 5.",
+      "options": [
+        "4a + 7",
+        "11a",
+        "4a + 10",
+        "3a + 9"
+      ],
+      "answer": 0,
+      "explanation": "There are four a terms and seven units. Different letters follow the same rule."
+    },
+    {
+      "id": "a30",
+      "category": "Collecting linear terms",
+      "difficulty": "Application",
+      "prompt": "Which expression is equivalent to 5x + 2y − 3x + y?",
+      "options": [
+        "8x + 3y",
+        "2x + 3y",
+        "2x + y",
+        "5xy"
+      ],
+      "answer": 1,
+      "explanation": "Collect only matching variable parts: 5x − 3x = 2x and 2y + y = 3y."
+    },
+    {
+      "id": "a31",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Foundation",
+      "prompt": "Collect like terms: 3x² + 2x².",
+      "options": [
+        "6x²",
+        "5x",
+        "5x²",
+        "5x⁴"
+      ],
+      "answer": 2,
+      "explanation": "Adding square terms changes their coefficient, not their exponent."
+    },
+    {
+      "id": "a32",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Foundation",
+      "prompt": "Collect like terms: x³ + 4x³.",
+      "options": [
+        "5x⁶",
+        "x⁷",
+        "5x",
+        "5x³"
+      ],
+      "answer": 3,
+      "explanation": "The first cube term has coefficient 1, so 1 + 4 = 5."
+    },
+    {
+      "id": "a33",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Foundation",
+      "prompt": "Which pair can be collected as like terms?",
+      "options": [
+        "2y² and 7y²",
+        "2x and 7x²",
+        "2x² and 7y²",
+        "2z³ and 7z"
+      ],
+      "answer": 0,
+      "explanation": "The same letter and exponent are required."
+    },
+    {
+      "id": "a34",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Application",
+      "prompt": "Simplify 2x² + 3x + x² + x.",
+      "options": [
+        "4x² + 3x",
+        "3x² + 4x",
+        "7x³",
+        "3x² + 3x"
+      ],
+      "answer": 1,
+      "explanation": "Square terms give 3x²; linear terms give 4x. They remain different groups."
+    },
+    {
+      "id": "a35",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Foundation",
+      "prompt": "What is x + x + x as a collected expression?",
+      "options": [
+        "3x³",
+        "x + 3",
+        "3x",
+        "x³"
+      ],
+      "answer": 2,
+      "explanation": "Repeated addition produces a coefficient. A cube is repeated multiplication."
+    },
+    {
+      "id": "a36",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Application",
+      "prompt": "Collect like terms: 4z³ − z³ + 2z.",
+      "options": [
+        "5z³",
+        "3z⁴ + 2z",
+        "6z³",
+        "3z³ + 2z"
+      ],
+      "answer": 3,
+      "explanation": "Only the cubic terms combine; the linear z term is different."
+    },
+    {
+      "id": "a37",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Challenge",
+      "prompt": "Which expression matches four x rods, three x² squares, two x³ cubes, three y rods, two y² squares and one z rod?",
+      "options": [
+        "4x + 3x² + 2x³ + 3y + 2y² + z",
+        "9x + 5y + z",
+        "4x + 5x² + 5y + z",
+        "4x³ + 3x² + 2x + 3y² + 2y + z"
+      ],
+      "answer": 0,
+      "explanation": "Each different variable and power has its own group. This is the classroom collecting-terms model."
+    },
+    {
+      "id": "a38",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Application",
+      "prompt": "Simplify x² + y² + 2x² − y².",
+      "options": [
+        "3x⁴",
+        "3x²",
+        "3x² + 2y²",
+        "3xy²"
+      ],
+      "answer": 1,
+      "explanation": "The y² terms cancel, while the x² coefficients add to three."
+    },
+    {
+      "id": "a39",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Challenge",
+      "prompt": "A student collects x² + x³ as 2x⁵. Which explanation is correct?",
+      "options": [
+        "The answer must be 2x",
+        "The terms are like because both contain x",
+        "The powers differ, so the terms cannot be collected",
+        "The correct answer is x⁶"
+      ],
+      "answer": 2,
+      "explanation": "For addition, both variable and exponent must match. Rules for multiplying powers do not apply to this sum."
+    },
+    {
+      "id": "a40",
+      "category": "Squares cubes and like terms",
+      "difficulty": "Application",
+      "prompt": "Simplify 2x³ + 3y² + x³ − y² + z.",
+      "options": [
+        "5xy + z",
+        "3x⁶ + 2y⁴ + z",
+        "3x³ + 4y² + z",
+        "3x³ + 2y² + z"
+      ],
+      "answer": 3,
+      "explanation": "Collect each group separately: cubic x terms, square y terms and the linear z term."
+    },
+    {
+      "id": "a41",
+      "category": "Expanding brackets",
+      "difficulty": "Foundation",
+      "prompt": "Expand 2(x + 3).",
+      "options": [
+        "2x + 6",
+        "2x + 3",
+        "x + 6",
+        "2x + 5"
+      ],
+      "answer": 0,
+      "explanation": "Two bags give two copies of x and two copies of three."
+    },
+    {
+      "id": "a42",
+      "category": "Expanding brackets",
+      "difficulty": "Application",
+      "prompt": "Expand 2(2x + y).",
+      "options": [
+        "4xy",
+        "4x + 2y",
+        "4x + y",
+        "2x + 2y"
+      ],
+      "answer": 1,
+      "explanation": "Multiply both 2x and y by two, matching the classroom boxes example."
+    },
+    {
+      "id": "a43",
+      "category": "Expanding brackets",
+      "difficulty": "Foundation",
+      "prompt": "Expand 5(a + 3).",
+      "options": [
+        "a + 15",
+        "5a + 8",
+        "5a + 15",
+        "5a + 3"
+      ],
+      "answer": 2,
+      "explanation": "There are five copies of a and five copies of three."
+    },
+    {
+      "id": "a44",
+      "category": "Expanding brackets",
+      "difficulty": "Application",
+      "prompt": "Expand 10(2c + 3).",
+      "options": [
+        "20c + 3",
+        "12c + 13",
+        "20c + 13",
+        "20c + 30"
+      ],
+      "answer": 3,
+      "explanation": "The factor 10 applies to both terms: 10 × 2c and 10 × 3."
+    },
+    {
+      "id": "a45",
+      "category": "Expanding brackets",
+      "difficulty": "Application",
+      "prompt": "Expand 3(x − 2).",
+      "options": [
+        "3x − 6",
+        "3x − 2",
+        "3x + 6",
+        "x − 6"
+      ],
+      "answer": 0,
+      "explanation": "Multiply the subtraction term too: 3 × (−2) = −6."
+    },
+    {
+      "id": "a46",
+      "category": "Expanding brackets",
+      "difficulty": "Application",
+      "prompt": "Which expression describes three identical bags, each containing x + 2y?",
+      "options": [
+        "3x + 5y",
+        "3x + 6y",
+        "3x + 2y",
+        "x + 6y"
+      ],
+      "answer": 1,
+      "explanation": "Every bag contributes x and 2y, so three bags contribute 3x and 6y."
+    },
+    {
+      "id": "a47",
+      "category": "Expanding brackets",
+      "difficulty": "Challenge",
+      "prompt": "Expand −(16 − b).",
+      "options": [
+        "16 + b",
+        "16 − b",
+        "b − 16",
+        "−16 − b"
+      ],
+      "answer": 2,
+      "explanation": "An unwritten factor of −1 changes the sign of each term: −16 + b."
+    },
+    {
+      "id": "a48",
+      "category": "Expanding brackets",
+      "difficulty": "Challenge",
+      "prompt": "Expand 4d(d − 4).",
+      "options": [
+        "4d² − 4",
+        "4d − 16",
+        "4d² + 16d",
+        "4d² − 16d"
+      ],
+      "answer": 3,
+      "explanation": "4d × d = 4d², and 4d × (−4) = −16d."
+    },
+    {
+      "id": "a49",
+      "category": "Expanding brackets",
+      "difficulty": "Challenge",
+      "prompt": "Stretch: expand and collect (e − 9)(e + 3).",
+      "options": [
+        "e² − 6e − 27",
+        "e² − 27",
+        "e² + 12e − 27",
+        "e² − 12e + 27"
+      ],
+      "answer": 0,
+      "explanation": "Multiply every pair: e² + 3e − 9e − 27, then collect the linear terms."
+    },
+    {
+      "id": "a50",
+      "category": "Expanding brackets",
+      "difficulty": "Challenge",
+      "prompt": "A bag contains three pens, a key and glasses. Their individual prices are p, k and g. What is the cost of two identical sets?",
+      "options": [
+        "2p + 2k + 2g",
+        "6p + 2k + 2g",
+        "6p + k + g",
+        "3p + 2k + 2g"
+      ],
+      "answer": 1,
+      "explanation": "The whole bag costs 3p + k + g, and two copies cost 2(3p + k + g)."
+    },
+    {
+      "id": "a51",
+      "category": "Substitution and connections",
+      "difficulty": "Foundation",
+      "prompt": "If x = 20, what is x + 3?",
+      "options": [
+        "17",
+        "203",
+        "23",
+        "60"
+      ],
+      "answer": 2,
+      "explanation": "Replace x by 20, then add three: 20 + 3 = 23."
+    },
+    {
+      "id": "a52",
+      "category": "Substitution and connections",
+      "difficulty": "Foundation",
+      "prompt": "If x = 20, what is x − 4?",
+      "options": [
+        "24",
+        "80",
+        "−16",
+        "16"
+      ],
+      "answer": 3,
+      "explanation": "Start with 20 pens and subtract the four lent out."
+    },
+    {
+      "id": "a53",
+      "category": "Substitution and connections",
+      "difficulty": "Foundation",
+      "prompt": "If x = 5 and y = 3, what is 2x + y?",
+      "options": [
+        "13",
+        "16",
+        "10",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "2 × 5 + 3 = 13. The coefficient multiplies only its own term."
+    },
+    {
+      "id": "a54",
+      "category": "Substitution and connections",
+      "difficulty": "Application",
+      "prompt": "If x = 4, compare 2x and x².",
+      "options": [
+        "2x = 16 and x² = 8",
+        "2x = 8 and x² = 16",
+        "Both equal 8",
+        "Both equal 16"
+      ],
+      "answer": 1,
+      "explanation": "Two copies of four give eight; four multiplied by four gives sixteen."
+    },
+    {
+      "id": "a55",
+      "category": "Substitution and connections",
+      "difficulty": "Application",
+      "prompt": "If x = 2, what is 3x²?",
+      "options": [
+        "6",
+        "18",
+        "12",
+        "36"
+      ],
+      "answer": 2,
+      "explanation": "Square x first: 3 × (2 × 2) = 12. The exponent does not apply to the coefficient."
+    },
+    {
+      "id": "a56",
+      "category": "Substitution and connections",
+      "difficulty": "Foundation",
+      "prompt": "If z = 3, what is z³?",
+      "options": [
+        "9",
+        "6",
+        "81",
+        "27"
+      ],
+      "answer": 3,
+      "explanation": "3 × 3 × 3 = 27."
+    },
+    {
+      "id": "a57",
+      "category": "Substitution and connections",
+      "difficulty": "Application",
+      "prompt": "If x = 4 and y = 7, what is x + y? Does it equal 2x?",
+      "options": [
+        "11; no, because 2x = 8",
+        "11; yes, because x and y are letters",
+        "8; yes",
+        "28; no"
+      ],
+      "answer": 0,
+      "explanation": "The example shows why different variables cannot generally be collected as copies of x."
+    },
+    {
+      "id": "a58",
+      "category": "Substitution and connections",
+      "difficulty": "Foundation",
+      "prompt": "Which expression always has the same value as 2(x + 3)?",
+      "options": [
+        "2x + 9",
+        "2x + 6",
+        "2x + 3",
+        "x + 6"
+      ],
+      "answer": 1,
+      "explanation": "Both forms count two copies of the entire group. Checking one value can expose a mistake, while the distributive law explains the identity."
+    },
+    {
+      "id": "a59",
+      "category": "Substitution and connections",
+      "difficulty": "Foundation",
+      "prompt": "If x = 3, what is 2(x + 3)?",
+      "options": [
+        "8",
+        "18",
+        "12",
+        "9"
+      ],
+      "answer": 2,
+      "explanation": "Inside the bracket, 3 + 3 = 6; doubling it gives 12. The expanded form 2x + 6 also gives 12."
+    },
+    {
+      "id": "a60",
+      "category": "Substitution and connections",
+      "difficulty": "Challenge",
+      "prompt": "Which statement best explains why 2x + 3x = 5x but 2x + 3y stays separate?",
+      "options": [
+        "Different colours can never be added",
+        "Adding any letters makes a power",
+        "Coefficients can only be added when they are equal",
+        "The first sum counts copies of the same unknown; the second may contain different unknowns"
+      ],
+      "answer": 3,
+      "explanation": "Like terms share the complete variable part. The values of the coefficients can differ."
+    },
+    {
+      "id": "algebra-ii-061",
+      "category": "One-step equations",
+      "difficulty": "Foundation",
+      "prompt": "Solve x + (5) = 8.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "Subtract 5 from both sides: x = 8 − (5) = 3."
+    },
+    {
+      "id": "algebra-ii-062",
+      "category": "One-step equations",
+      "difficulty": "Foundation",
+      "prompt": "Solve x + (2) = 9.",
+      "options": [
+        "8",
+        "7",
+        "6",
+        "14"
+      ],
+      "answer": 1,
+      "explanation": "Subtract 2 from both sides: x = 9 − (2) = 7."
+    },
+    {
+      "id": "algebra-ii-063",
+      "category": "One-step equations",
+      "difficulty": "Foundation",
+      "prompt": "Solve x + (6) = 6.",
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "2"
+      ],
+      "answer": 2,
+      "explanation": "Subtract 6 from both sides: x = 6 − (6) = 0."
+    },
+    {
+      "id": "algebra-ii-064",
+      "category": "One-step equations",
+      "difficulty": "Foundation",
+      "prompt": "Solve x + (-3) = 6.",
+      "options": [
+        "10",
+        "8",
+        "18",
+        "9"
+      ],
+      "answer": 3,
+      "explanation": "Subtract -3 from both sides: x = 6 − (-3) = 9."
+    },
+    {
+      "id": "algebra-ii-065",
+      "category": "One-step equations",
+      "difficulty": "Application",
+      "prompt": "Solve x + (7) = 3.",
+      "options": [
+        "-4",
+        "-3",
+        "-5",
+        "-8"
+      ],
+      "answer": 0,
+      "explanation": "Subtract 7 from both sides: x = 3 − (7) = -4."
+    },
+    {
+      "id": "algebra-ii-066",
+      "category": "One-step equations",
+      "difficulty": "Application",
+      "prompt": "Solve x + (-2) = -7.",
+      "options": [
+        "-4",
+        "-5",
+        "-6",
+        "-10"
+      ],
+      "answer": 1,
+      "explanation": "Subtract -2 from both sides: x = -7 − (-2) = -5."
+    },
+    {
+      "id": "algebra-ii-067",
+      "category": "One-step equations",
+      "difficulty": "Foundation",
+      "prompt": "Solve x + (4) = 10.",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "12"
+      ],
+      "answer": 2,
+      "explanation": "Subtract 4 from both sides: x = 10 − (4) = 6."
+    },
+    {
+      "id": "algebra-ii-068",
+      "category": "One-step equations",
+      "difficulty": "Application",
+      "prompt": "Solve x + (5) = 2.",
+      "options": [
+        "-2",
+        "-4",
+        "-6",
+        "-3"
+      ],
+      "answer": 3,
+      "explanation": "Subtract 5 from both sides: x = 2 − (5) = -3."
+    },
+    {
+      "id": "algebra-ii-069",
+      "category": "One-step equations",
+      "difficulty": "Foundation",
+      "prompt": "Solve x + (-4) = 4.",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "Subtract -4 from both sides: x = 4 − (-4) = 8."
+    },
+    {
+      "id": "algebra-ii-070",
+      "category": "One-step equations",
+      "difficulty": "Application",
+      "prompt": "Solve x + (-6) = -8.",
+      "options": [
+        "-1",
+        "-2",
+        "-3",
+        "-4"
+      ],
+      "answer": 1,
+      "explanation": "Subtract -6 from both sides: x = -8 − (-6) = -2."
+    },
+    {
+      "id": "algebra-ii-071",
+      "category": "Two- and three-step equations",
+      "difficulty": "Application",
+      "prompt": "Solve 2x + (3) = 11.",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "Subtract 3 from both sides, then divide by 2: x = 4."
+    },
+    {
+      "id": "algebra-ii-072",
+      "category": "Two- and three-step equations",
+      "difficulty": "Application",
+      "prompt": "Solve 3x + (-4) = 17.",
+      "options": [
+        "8",
+        "6",
+        "14",
+        "7"
+      ],
+      "answer": 3,
+      "explanation": "Subtract -4 from both sides, then divide by 3: x = 7."
+    },
+    {
+      "id": "algebra-ii-073",
+      "category": "Two- and three-step equations",
+      "difficulty": "Challenge",
+      "prompt": "Solve 4x + (5) = -3.",
+      "options": [
+        "-2",
+        "-1",
+        "-3",
+        "-4"
+      ],
+      "answer": 0,
+      "explanation": "Subtract 5 from both sides, then divide by 4: x = -2."
+    },
+    {
+      "id": "algebra-ii-074",
+      "category": "Two- and three-step equations",
+      "difficulty": "Application",
+      "prompt": "Solve 5x + (-3) = -3.",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "answer": 1,
+      "explanation": "Subtract -3 from both sides, then divide by 5: x = 0."
+    },
+    {
+      "id": "algebra-ii-075",
+      "category": "Two- and three-step equations",
+      "difficulty": "Challenge",
+      "prompt": "Solve 2x + (-6) = -14.",
+      "options": [
+        "-3",
+        "-5",
+        "-4",
+        "-8"
+      ],
+      "answer": 2,
+      "explanation": "Subtract -6 from both sides, then divide by 2: x = -4."
+    },
+    {
+      "id": "algebra-ii-076",
+      "category": "Two- and three-step equations",
+      "difficulty": "Challenge",
+      "prompt": "Solve 2(x + (3)) = 14.",
+      "options": [
+        "5",
+        "3",
+        "8",
+        "4"
+      ],
+      "answer": 3,
+      "explanation": "Divide both sides by 2, then subtract 3: x = 4."
+    },
+    {
+      "id": "algebra-ii-077",
+      "category": "Two- and three-step equations",
+      "difficulty": "Challenge",
+      "prompt": "Solve 3(x + (-2)) = 15.",
+      "options": [
+        "7",
+        "8",
+        "6",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "Divide both sides by 3, then subtract -2: x = 7."
+    },
+    {
+      "id": "algebra-ii-078",
+      "category": "Two- and three-step equations",
+      "difficulty": "Challenge",
+      "prompt": "Solve 4(x + (1)) = -8.",
+      "options": [
+        "-2",
+        "-3",
+        "-4",
+        "-6"
+      ],
+      "answer": 1,
+      "explanation": "Divide both sides by 4, then subtract 1: x = -3."
+    },
+    {
+      "id": "algebra-ii-079",
+      "category": "Two- and three-step equations",
+      "difficulty": "Challenge",
+      "prompt": "Solve 2(x + (-3)) = 14.",
+      "options": [
+        "11",
+        "9",
+        "10",
+        "20"
+      ],
+      "answer": 2,
+      "explanation": "Divide both sides by 2, then subtract -3: x = 10."
+    },
+    {
+      "id": "algebra-ii-080",
+      "category": "Two- and three-step equations",
+      "difficulty": "Challenge",
+      "prompt": "Solve 5(x + (2)) = -10.",
+      "options": [
+        "-3",
+        "-5",
+        "-8",
+        "-4"
+      ],
+      "answer": 3,
+      "explanation": "Divide both sides by 5, then subtract 2: x = -4."
+    },
+    {
+      "id": "algebra-ii-081",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 4x + (5) = 2x + (19).",
+      "options": [
+        "7",
+        "8",
+        "6",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "subtract 2x from both sides, collect constants and divide by 2. Substitution gives x = 7."
+    },
+    {
+      "id": "algebra-ii-082",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 5x + (-3) = 2x + (9).",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "subtract 2x from both sides, collect constants and divide by 3. Substitution gives x = 4."
+    },
+    {
+      "id": "algebra-ii-083",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 3x + (7) = 1x + (3).",
+      "options": [
+        "-1",
+        "-3",
+        "-2",
+        "-4"
+      ],
+      "answer": 2,
+      "explanation": "subtract 1x from both sides, collect constants and divide by 2. Substitution gives x = -2."
+    },
+    {
+      "id": "algebra-ii-084",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 6x + (4) = 2x + (16).",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "3"
+      ],
+      "answer": 3,
+      "explanation": "subtract 2x from both sides, collect constants and divide by 4. Substitution gives x = 3."
+    },
+    {
+      "id": "algebra-ii-085",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 2x + (1) = 5x + (13).",
+      "options": [
+        "-4",
+        "-3",
+        "-5",
+        "-8"
+      ],
+      "answer": 0,
+      "explanation": "subtract 5x from both sides, collect constants and divide by -3. Substitution gives x = -4."
+    },
+    {
+      "id": "algebra-ii-086",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 3(x + (-2)) = 1x + (8).",
+      "options": [
+        "8",
+        "7",
+        "6",
+        "14"
+      ],
+      "answer": 1,
+      "explanation": "Expand the bracket, then subtract 1x from both sides, collect constants and divide by 2. Substitution gives x = 7."
+    },
+    {
+      "id": "algebra-ii-087",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 4(x + (1)) = 2x + (14).",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "Expand the bracket, then subtract 2x from both sides, collect constants and divide by 2. Substitution gives x = 5."
+    },
+    {
+      "id": "algebra-ii-088",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 2(x + (-3)) = 1x + (-11).",
+      "options": [
+        "-4",
+        "-6",
+        "-10",
+        "-5"
+      ],
+      "answer": 3,
+      "explanation": "Expand the bracket, then subtract 1x from both sides, collect constants and divide by 1. Substitution gives x = -5."
+    },
+    {
+      "id": "algebra-ii-089",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 5(x + (2)) = 3x + (18).",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Expand the bracket, then subtract 3x from both sides, collect constants and divide by 2. Substitution gives x = 4."
+    },
+    {
+      "id": "algebra-ii-090",
+      "category": "Unknown on both sides",
+      "difficulty": "Challenge",
+      "prompt": "Solve 3(x + (-4)) = 2x + (-12).",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "answer": 1,
+      "explanation": "Expand the bracket, then subtract 2x from both sides, collect constants and divide by 1. Substitution gives x = 0."
+    }
+  ]
+}

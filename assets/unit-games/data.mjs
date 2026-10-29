@@ -1,3 +1,4 @@
+import {coordinatePackGames} from './coordinate-pack.mjs';
 import {algebraGames} from './algebra-data.mjs';
 // Original Learning Lab games. Resource links and research limitations: docs/games/README.md.
 const card=(label,bin,detail='')=>({label,bin,detail});
@@ -36,7 +37,7 @@ unit('integers','y7','maths','numbers-ii','numbers-ii','Numbers II',classic('Int
  round('Start at +4. Reach −3 in exactly three moves.',{start:4,target:-3,moves:[-6,-3,2,5]},{moves:[-6,-3,2]},'The total change must be −7.','4 − 6 − 3 + 2 = −3. A negative move points left, even from a positive starting position.'),
  round('Start at −5. Reach +4 in exactly three moves.',{start:-5,target:4,moves:[-6,-3,2,5]},{moves:[2,2,5]},'You can reuse a move. You need a total change of +9.','−5 + 2 + 2 + 5 = 4. Position and change in position are different quantities.')
 ])),
-unit('coordinates','y7','maths','algebra-i','algebra','Algebra I',classic('Rule Detectives','match','Pair each story or table with its rule. Look for a constant ratio, a constant product, or neither.',[
+unit('coordinates','y7','maths','algebra-i','algebra-i','Algebra I',classic('Rule Detectives','match','Pair each story or table with its rule. Look for a constant ratio, a constant product, or neither.',[
  match('Which rule fits each table? The pairs are (x, y).', [['(1, 3), (2, 6), (4, 12)','y = 3x'],['(1, 12), (2, 6), (4, 3)','y = 12/x'],['(1, 3), (2, 4), (4, 6)','y = x + 2'],['(1, 1), (2, 4), (4, 16)','y = x²']],'Direct proportion has constant y/x. Inverse proportion has constant xy. An increasing relationship need not be directly proportional.'),
  sort('Classify each relationship for positive x.',['Direct proportion','Inverse proportion','Neither'],[['Cost of x pens at £2 each',0],['Time to share a fixed job equally between x workers at the same rate',1],['Taxi fare £4 plus £2 per km',2],['Distance at fixed speed after x seconds',0],['Side x of a square and its area',2],['Length of a rectangle of fixed area as its width increases',1]],'A fixed fee breaks direct proportion. An inverse model assumes equal workers with no interference or setup time.'),
  match('Find the coordinate from the origin.',[['3 right, 2 up','(3, 2)'],['2 left, 4 up','(−2, 4)'],['4 right, 3 down','(4, −3)'],['1 left, 2 down','(−1, −2)']],'Coordinates are ordered (x, y): horizontal movement first, then vertical.')
@@ -45,7 +46,7 @@ unit('coordinates','y7','maths','algebra-i','algebra','Algebra I',classic('Rule 
  round('A shop charges £4 per notebook. Plot (number of notebooks, cost) for 3 notebooks.',{x:3,y:12,curve:'line',slope:4,equation:'y = 4x',guideNote:'The purple line shows the notebook rule. Every point on it has cost equal to four times the number of notebooks.'},{x:3,y:12},'Use y = 4x. The first coordinate is 3.','(3, 12) lies on y = 4x. The cost per notebook is the constant ratio y/x.'),
  round('A rectangle has area 12 m². Plot (width, length) when its width is 6 m.',{x:6,y:2,curve:'inverse',constant:12,equation:'y = 12/x',guideNote:'The purple curve shows positive widths and lengths with area 12 m². Every point on it satisfies x × y = 12.'},{x:6,y:2},'The product xy must stay 12.','The point is (6, 2), because 6 × 2 = 12. This is an inverse relationship, not a straight line through the origin.')
 ])),
-unit('brackets','y7','maths','algebra','algebra','Boxes & Brackets',classic('Like-Terms Recycling','sort','Recycle each term into the right collection. Read the letter and its power; colour alone is never enough.',[
+unit('brackets','y7','maths','algebra','algebra-ii','Boxes & Brackets',classic('Like-Terms Recycling','sort','Recycle each term into the right collection. Read the letter and its power; colour alone is never enough.',[
  sort('Only terms with exactly the same letter and power can combine.',['x terms','x² terms','x³ terms','y terms'],[['3x',0],['−2x',0],['4x²',1],['−x²',1],['2x³',2],['5y',3]],'3x and −2x combine to x. x² and x³ represent different powers and cannot be collected together.'),
  sort('Separate the different variable parts.',['y² terms','y³ terms','z terms','Constants'],[['2y²',0],['−5y²',0],['y³',1],['3z',2],['−4z',2],['7',3]],'Coefficients can differ, but the variable part must match exactly. A constant has no variable factor.'),
  match('Connect each bag story to its expression.',[['3 bags, each holding x pens and 2 loose pens','3(x + 2) = 3x + 6'],['2 bags, each holding x pens and y clips','2(x + y) = 2x + 2y'],['4 boxes of x pens, plus 3 loose pens','4x + 3'],['One x-pen box and one y-clip box','x + y']],'A multiplier outside brackets acts on every term inside. x + y stays as two unlike terms.')
@@ -154,5 +155,14 @@ unit('organic','y10','chemistry','organic-chemistry','organic-chemistry','Organi
  round('Build a saturated, unbranched molecule with formula C₆H₁₄.',{carbon:6,hydrogen:14,doubles:0},{carbons:6,bonds:[1,1,1,1,1]},'For an open-chain alkane, H = 2n + 2.','Six carbons connected only by single bonds give C₆H₁₄. Each carbon has a total bond order of four, completed by hydrogen.')
 ]))
 ];
-units.find(u=>u.id==='coordinates').extraGames=algebraGames;
+units.push(unit('statistics','y7','maths','statistics','statistics','Statistics',classic('Data Detectives','match','Connect a chart clue with its meaning, then distinguish the different summary measures.',[
+ match('Read the key and the scale.',[['3 pictogram symbols, key = 2 students','6 students'],['Pie-chart sector of 90°','25% of the observations'],['Sum of all frequencies','Total number of observations'],['Height of a category bar','That category’s frequency']],'A pictogram uses a key, a pie uses a share of 360°, and a bar height uses its labelled frequency scale.'),
+ sort('Choose the calculation being described.',['Mean','Median','Range'],[['Add all values and divide by their number',0],['Order values and find the middle',1],['Subtract the minimum from the maximum',2],['Use Σ(fx)/Σf for a frequency table',0],['For an even count, average the two middle values',1],['Measure the full span from smallest to largest',2]],'The mean uses all magnitudes, the median uses ordered positions, and the range measures spread.'),
+ match('Find each requested measure.',[['Mean of 2, 4, 6','4'],['Median of 1, 2, 9','2'],['Range of 1, 4, 8','7'],['Mode of 3, 3, 5, 6','3']],'The mode is most frequent. Different measures answer different questions even for the same data set.')
+]),workshop('Frequency Factory','statistics','Build a discrete frequency table by choosing how many 1s, 2s, 3s and 4s to include. Meet all the order’s summary targets.',[
+ round('Build 8 observations with mean 2.5 and median 2.5.',{n:8,mean:2.5,median:2.5},{f1:2,f2:2,f3:2,f4:2},'A symmetric table with two of each value works. The required total sum is 8 × 2.5 = 20.','Two of each value give sum 20 and count 8. The fourth and fifth ordered observations are 2 and 3, so the median is 2.5.'),
+ round('Build 10 observations with mean 3 and median 3.',{n:10,mean:3,median:3},{f1:0,f2:2,f3:6,f4:2},'Try a symmetric distribution around 3. The total sum must be 30.','Two 2s, six 3s and two 4s give sum 30 and count 10. The fifth and sixth values are both 3. Other matching tables are accepted.'),
+ round('Build 8 observations with mean 2 and median 2.',{n:8,mean:2,median:2},{f1:2,f2:4,f3:2,f4:0},'Try two 1s, four 2s and two 3s. Zero frequency means that value does not occur.','The sum is 2 × 1 + 4 × 2 + 2 × 3 = 16, so the mean is 2. Middle positions 4 and 5 are both 2. Zero-frequency values do not add observations.')
+])));
+units.find(u=>u.id==='coordinates').extraGames=[...algebraGames,...coordinatePackGames];
 export const getUnit=id=>units.find(u=>u.id===id);

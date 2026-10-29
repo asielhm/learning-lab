@@ -1,0 +1,854 @@
+{
+  "topicId": "statistics",
+  "title": "Statistics",
+  "categories": [
+    "Data and pictograms",
+    "Bar charts and frequencies",
+    "Pie charts and percentages",
+    "Mean median and mode",
+    "Range and quartiles",
+    "Discrete frequency tables"
+  ],
+  "questions": [
+    {
+      "id": "statistics-001",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "A pictogram key says one full symbol represents 2 students. How many students do 3 full-symbol equivalents represent?",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "Multiply symbol equivalents by the key: 3 × 2 = 6."
+    },
+    {
+      "id": "statistics-002",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "A pictogram key says one full symbol represents 4 students. How many students do 3 full-symbol equivalents represent?",
+      "options": [
+        "13",
+        "12",
+        "11",
+        "24"
+      ],
+      "answer": 1,
+      "explanation": "Multiply symbol equivalents by the key: 3 × 4 = 12."
+    },
+    {
+      "id": "statistics-003",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "A pictogram key says one full symbol represents 2 students. How many students do 5/2 full-symbol equivalents represent?",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "Multiply symbol equivalents by the key: 5/2 × 2 = 5."
+    },
+    {
+      "id": "statistics-004",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "A pictogram key says one full symbol represents 4 students. How many students do 7/2 full-symbol equivalents represent?",
+      "options": [
+        "15",
+        "13",
+        "28",
+        "14"
+      ],
+      "answer": 3,
+      "explanation": "Multiply symbol equivalents by the key: 7/2 × 4 = 14."
+    },
+    {
+      "id": "statistics-005",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "A pictogram key says one full symbol represents 5 students. How many students do 4 full-symbol equivalents represent?",
+      "options": [
+        "20",
+        "21",
+        "19",
+        "40"
+      ],
+      "answer": 0,
+      "explanation": "Multiply symbol equivalents by the key: 4 × 5 = 20."
+    },
+    {
+      "id": "statistics-006",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "A pictogram key says one full symbol represents 10 students. How many students do 3 full-symbol equivalents represent?",
+      "options": [
+        "31",
+        "30",
+        "29",
+        "60"
+      ],
+      "answer": 1,
+      "explanation": "Multiply symbol equivalents by the key: 3 × 10 = 30."
+    },
+    {
+      "id": "statistics-007",
+      "category": "Data and pictograms",
+      "difficulty": "Application",
+      "prompt": "A pictogram shows 18 books, with one full symbol representing 4 books. How many full-symbol equivalents are needed?",
+      "options": [
+        "11/2",
+        "7/2",
+        "9/2",
+        "9"
+      ],
+      "answer": 2,
+      "explanation": "18 ÷ 4 = 4.5 symbols: four full symbols and one half."
+    },
+    {
+      "id": "statistics-008",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "Which is discrete numerical data?",
+      "options": [
+        "Favourite colour",
+        "A person’s measured height",
+        "Time measured continuously",
+        "Number of siblings"
+      ],
+      "answer": 3,
+      "explanation": "A count of siblings takes separate whole-number values."
+    },
+    {
+      "id": "statistics-009",
+      "category": "Data and pictograms",
+      "difficulty": "Foundation",
+      "prompt": "What does frequency mean?",
+      "options": [
+        "The number of times a value or category occurs",
+        "The largest data value",
+        "The sum of all data values",
+        "The angle of a whole circle"
+      ],
+      "answer": 0,
+      "explanation": "Frequency counts occurrences."
+    },
+    {
+      "id": "statistics-010",
+      "category": "Data and pictograms",
+      "difficulty": "Challenge",
+      "prompt": "When the pictogram key changes from 2 people per symbol to 4, while the data stay the same, what happens to the number of symbol equivalents?",
+      "options": [
+        "It doubles.",
+        "It halves.",
+        "It stays the same.",
+        "It becomes four times larger."
+      ],
+      "answer": 1,
+      "explanation": "Each symbol represents twice as many people, so half as many symbol equivalents are needed."
+    },
+    {
+      "id": "statistics-011",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Foundation",
+      "prompt": "Travel survey frequencies: Bus 6, Walk 8, Car 4, Cycle 2. How many students were surveyed?",
+      "options": [
+        "21",
+        "19",
+        "20",
+        "40"
+      ],
+      "answer": 2,
+      "explanation": "Add all category frequencies."
+    },
+    {
+      "id": "statistics-012",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Foundation",
+      "prompt": "Travel survey frequencies: Bus 3, Walk 5, Car 7, Cycle 5. How many students were surveyed?",
+      "options": [
+        "21",
+        "19",
+        "40",
+        "20"
+      ],
+      "answer": 3,
+      "explanation": "Add all category frequencies."
+    },
+    {
+      "id": "statistics-013",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Foundation",
+      "prompt": "Travel frequencies are Bus 4, Walk 9, Car 2, Cycle 5. Which category has the tallest bar?",
+      "options": [
+        "Walk",
+        "Bus",
+        "Car",
+        "Cycle"
+      ],
+      "answer": 0,
+      "explanation": "The largest frequency, 9, belongs to Walk."
+    },
+    {
+      "id": "statistics-014",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Application",
+      "prompt": "Travel frequencies are Bus 7, Walk 6, Car 3, Cycle 4. How many more travel by Bus than by Car?",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "Subtract the Car frequency from the Bus frequency."
+    },
+    {
+      "id": "statistics-015",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Application",
+      "prompt": "Travel frequencies are Bus 8, Walk 8, Car 2, Cycle 2. Which categories tie for the greatest frequency?",
+      "options": [
+        "Car and Cycle",
+        "Bus and Car",
+        "Bus and Walk",
+        "Walk and Cycle"
+      ],
+      "answer": 2,
+      "explanation": "Bus and Walk both have frequency 8."
+    },
+    {
+      "id": "statistics-016",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Application",
+      "prompt": "Travel frequencies are Bus 10, Walk 4, Car 3, Cycle 3. What fraction travel by Bus?",
+      "options": [
+        "3/2",
+        "-1/2",
+        "1",
+        "1/2"
+      ],
+      "answer": 3,
+      "explanation": "Bus frequency divided by total frequency is 10/20 = 1/2."
+    },
+    {
+      "id": "statistics-017",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Challenge",
+      "prompt": "Why should a standard bar chart’s numerical baseline normally start at zero?",
+      "options": [
+        "Bar lengths represent frequencies, so truncation can exaggerate comparisons.",
+        "Every graph must have both axes starting at zero.",
+        "The categories must be numerical.",
+        "A nonzero baseline changes the data values."
+      ],
+      "answer": 0,
+      "explanation": "A bar’s length is the encoding being compared; an unequal starting point can distort its apparent ratio."
+    },
+    {
+      "id": "statistics-018",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Foundation",
+      "prompt": "Which display is most suitable for comparing counts of four favourite fruits?",
+      "options": [
+        "An unlabelled curve",
+        "A labelled bar chart",
+        "A list of continuous intervals with no counts",
+        "A graph with no scale"
+      ],
+      "answer": 1,
+      "explanation": "Categories and their frequencies can be compared with separate bars."
+    },
+    {
+      "id": "statistics-019",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Foundation",
+      "prompt": "A bar reaches 8 on an axis labelled 0, 2, 4, 6, 8, 10. What is its frequency?",
+      "options": [
+        "9",
+        "7",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "Read the labelled vertical scale, not the number of tick marks."
+    },
+    {
+      "id": "statistics-020",
+      "category": "Bar charts and frequencies",
+      "difficulty": "Application",
+      "prompt": "A category’s frequency rises from 4 to 10. What is the increase?",
+      "options": [
+        "7",
+        "5",
+        "12",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "10 − 4 = 6 observations."
+    },
+    {
+      "id": "statistics-021",
+      "category": "Pie charts and percentages",
+      "difficulty": "Foundation",
+      "prompt": "A pie chart represents 12 observations. A category has frequency 3. What is its sector angle in degrees?",
+      "options": [
+        "90",
+        "91",
+        "89",
+        "180"
+      ],
+      "answer": 0,
+      "explanation": "Sector angle = (frequency / total) × 360° = (3/12) × 360°."
+    },
+    {
+      "id": "statistics-022",
+      "category": "Pie charts and percentages",
+      "difficulty": "Foundation",
+      "prompt": "A pie chart represents 12 observations. A category has frequency 4. What is its sector angle in degrees?",
+      "options": [
+        "121",
+        "120",
+        "119",
+        "240"
+      ],
+      "answer": 1,
+      "explanation": "Sector angle = (frequency / total) × 360° = (4/12) × 360°."
+    },
+    {
+      "id": "statistics-023",
+      "category": "Pie charts and percentages",
+      "difficulty": "Foundation",
+      "prompt": "A pie chart represents 12 observations. A category has frequency 2. What is its sector angle in degrees?",
+      "options": [
+        "61",
+        "59",
+        "60",
+        "120"
+      ],
+      "answer": 2,
+      "explanation": "Sector angle = (frequency / total) × 360° = (2/12) × 360°."
+    },
+    {
+      "id": "statistics-024",
+      "category": "Pie charts and percentages",
+      "difficulty": "Foundation",
+      "prompt": "A pie chart represents 20 observations. A category has frequency 5. What is its sector angle in degrees?",
+      "options": [
+        "91",
+        "89",
+        "180",
+        "90"
+      ],
+      "answer": 3,
+      "explanation": "Sector angle = (frequency / total) × 360° = (5/20) × 360°."
+    },
+    {
+      "id": "statistics-025",
+      "category": "Pie charts and percentages",
+      "difficulty": "Application",
+      "prompt": "A pie chart represents 8 observations. A category has frequency 3. What is its sector angle in degrees?",
+      "options": [
+        "135",
+        "136",
+        "134",
+        "270"
+      ],
+      "answer": 0,
+      "explanation": "Sector angle = (frequency / total) × 360° = (3/8) × 360°."
+    },
+    {
+      "id": "statistics-026",
+      "category": "Pie charts and percentages",
+      "difficulty": "Application",
+      "prompt": "A pie chart represents 10 observations. A category has frequency 4. What is its sector angle in degrees?",
+      "options": [
+        "145",
+        "144",
+        "143",
+        "288"
+      ],
+      "answer": 1,
+      "explanation": "Sector angle = (frequency / total) × 360° = (4/10) × 360°."
+    },
+    {
+      "id": "statistics-027",
+      "category": "Pie charts and percentages",
+      "difficulty": "Foundation",
+      "prompt": "A sector angle is 90°. What percentage of the data does it represent?",
+      "options": [
+        "26",
+        "24",
+        "25",
+        "50"
+      ],
+      "answer": 2,
+      "explanation": "90/360 × 100% = 25%."
+    },
+    {
+      "id": "statistics-028",
+      "category": "Pie charts and percentages",
+      "difficulty": "Challenge",
+      "prompt": "A 120° sector represents 8 people. How many people are represented by the whole pie chart?",
+      "options": [
+        "25",
+        "23",
+        "48",
+        "24"
+      ],
+      "answer": 3,
+      "explanation": "120° is one third of 360°, so the total is 3 × 8 = 24."
+    },
+    {
+      "id": "statistics-029",
+      "category": "Pie charts and percentages",
+      "difficulty": "Application",
+      "prompt": "Three pie-chart angles are 100°, 80° and 70°. What is the remaining angle?",
+      "options": [
+        "110",
+        "111",
+        "109",
+        "220"
+      ],
+      "answer": 0,
+      "explanation": "The whole circle is 360°: 360 − 100 − 80 − 70 = 110."
+    },
+    {
+      "id": "statistics-030",
+      "category": "Pie charts and percentages",
+      "difficulty": "Challenge",
+      "prompt": "Two correct pie charts have the same category percentages but different total sample sizes. What must be the same?",
+      "options": [
+        "Every category frequency",
+        "Corresponding sector angles",
+        "The total number of observations",
+        "The physical radius used for drawing"
+      ],
+      "answer": 1,
+      "explanation": "Angles encode proportions, so the same proportions have the same angles even if totals differ."
+    },
+    {
+      "id": "statistics-031",
+      "category": "Mean median and mode",
+      "difficulty": "Foundation",
+      "prompt": "Find the mean of 2, 4, 6, 8.",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "Mean = sum / number of observations."
+    },
+    {
+      "id": "statistics-032",
+      "category": "Mean median and mode",
+      "difficulty": "Foundation",
+      "prompt": "Find the mean of 1, 3, 5, 7, 9.",
+      "options": [
+        "6",
+        "4",
+        "10",
+        "5"
+      ],
+      "answer": 3,
+      "explanation": "Mean = sum / number of observations."
+    },
+    {
+      "id": "statistics-033",
+      "category": "Mean median and mode",
+      "difficulty": "Foundation",
+      "prompt": "Find the mean of 2, 2, 4, 6, 6.",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Mean = sum / number of observations."
+    },
+    {
+      "id": "statistics-034",
+      "category": "Mean median and mode",
+      "difficulty": "Foundation",
+      "prompt": "Find the median of 2, 5, 8, 9, 10.",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "Sort first; select the middle value or average the two middle values."
+    },
+    {
+      "id": "statistics-035",
+      "category": "Mean median and mode",
+      "difficulty": "Application",
+      "prompt": "Find the median of 1, 3, 4, 8, 9, 11.",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "12"
+      ],
+      "answer": 2,
+      "explanation": "Sort first; select the middle value or average the two middle values."
+    },
+    {
+      "id": "statistics-036",
+      "category": "Mean median and mode",
+      "difficulty": "Foundation",
+      "prompt": "Find the median of 4, 2, 8, 3, 6.",
+      "options": [
+        "5",
+        "3",
+        "8",
+        "4"
+      ],
+      "answer": 3,
+      "explanation": "Sort first; select the middle value or average the two middle values."
+    },
+    {
+      "id": "statistics-037",
+      "category": "Mean median and mode",
+      "difficulty": "Foundation",
+      "prompt": "Find the mode of 2, 3, 3, 4, 5, 5, 5, 7.",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "5 occurs three times, more often than any other value."
+    },
+    {
+      "id": "statistics-038",
+      "category": "Mean median and mode",
+      "difficulty": "Application",
+      "prompt": "What are the modes of 1, 2, 2, 3, 4, 4, 5?",
+      "options": [
+        "2 only",
+        "2 and 4",
+        "4 only",
+        "3"
+      ],
+      "answer": 1,
+      "explanation": "Both 2 and 4 share the greatest frequency."
+    },
+    {
+      "id": "statistics-039",
+      "category": "Mean median and mode",
+      "difficulty": "Application",
+      "prompt": "Which statement fits the data 1, 3, 5, 7, with every value occurring once?",
+      "options": [
+        "The mode is 4.",
+        "The mode is 7.",
+        "There is no mode under this course convention.",
+        "The mode is 1."
+      ],
+      "answer": 2,
+      "explanation": "No value occurs more often than the others; we report no mode."
+    },
+    {
+      "id": "statistics-040",
+      "category": "Mean median and mode",
+      "difficulty": "Challenge",
+      "prompt": "For 2, 3, 4, 5, 16, which centre is more affected by replacing 16 with 100?",
+      "options": [
+        "The median",
+        "The mode",
+        "Neither mean nor median changes",
+        "The mean"
+      ],
+      "answer": 3,
+      "explanation": "The mean uses every magnitude; the middle sorted value stays 4."
+    },
+    {
+      "id": "statistics-041",
+      "category": "Range and quartiles",
+      "difficulty": "Foundation",
+      "prompt": "Find the range of 3, 7, 2, 9, 5. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "7",
+        "8",
+        "6",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "Range = maximum − minimum."
+    },
+    {
+      "id": "statistics-042",
+      "category": "Range and quartiles",
+      "difficulty": "Foundation",
+      "prompt": "Find the range of 1, 4, 4, 6, 10. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "18"
+      ],
+      "answer": 1,
+      "explanation": "Range = maximum − minimum."
+    },
+    {
+      "id": "statistics-043",
+      "category": "Range and quartiles",
+      "difficulty": "Application",
+      "prompt": "Find the lower quartile Q₁ of 2, 3, 5, 7, 8, 11, 13. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "Order the values, split into lower and upper halves using the stated convention, and find the relevant half’s median."
+    },
+    {
+      "id": "statistics-044",
+      "category": "Range and quartiles",
+      "difficulty": "Application",
+      "prompt": "Find the upper quartile Q₃ of 2, 3, 5, 7, 8, 11, 13. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "12",
+        "10",
+        "22",
+        "11"
+      ],
+      "answer": 3,
+      "explanation": "Order the values, split into lower and upper halves using the stated convention, and find the relevant half’s median."
+    },
+    {
+      "id": "statistics-045",
+      "category": "Range and quartiles",
+      "difficulty": "Application",
+      "prompt": "Find the lower quartile Q₁ of 1, 2, 4, 6, 8, 10, 12, 14. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "Order the values, split into lower and upper halves using the stated convention, and find the relevant half’s median."
+    },
+    {
+      "id": "statistics-046",
+      "category": "Range and quartiles",
+      "difficulty": "Application",
+      "prompt": "Find the upper quartile Q₃ of 1, 2, 4, 6, 8, 10, 12, 14. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "12",
+        "11",
+        "10",
+        "22"
+      ],
+      "answer": 1,
+      "explanation": "Order the values, split into lower and upper halves using the stated convention, and find the relevant half’s median."
+    },
+    {
+      "id": "statistics-047",
+      "category": "Range and quartiles",
+      "difficulty": "Application",
+      "prompt": "Find the lower quartile Q₁ of 2, 2, 4, 5, 7, 8, 10. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "Order the values, split into lower and upper halves using the stated convention, and find the relevant half’s median."
+    },
+    {
+      "id": "statistics-048",
+      "category": "Range and quartiles",
+      "difficulty": "Application",
+      "prompt": "Find the upper quartile Q₃ of 2, 2, 4, 5, 7, 8, 10. For quartiles, use medians of the halves, excluding the overall median when the count is odd.",
+      "options": [
+        "9",
+        "7",
+        "16",
+        "8"
+      ],
+      "answer": 3,
+      "explanation": "Order the values, split into lower and upper halves using the stated convention, and find the relevant half’s median."
+    },
+    {
+      "id": "statistics-049",
+      "category": "Range and quartiles",
+      "difficulty": "Foundation",
+      "prompt": "A list contains 9 sorted observations. Which position gives its median?",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "The middle position is (9 + 1)/2 = 5."
+    },
+    {
+      "id": "statistics-050",
+      "category": "Range and quartiles",
+      "difficulty": "Challenge",
+      "prompt": "Why can different software sometimes give different quartiles for the same small data set?",
+      "options": [
+        "The sum of the data must have changed.",
+        "Different quartile conventions or interpolation rules may be used.",
+        "The largest value becomes the median.",
+        "Quartiles never depend on a definition."
+      ],
+      "answer": 1,
+      "explanation": "State the convention; this course uses medians of the halves, excluding the overall median when the count is odd."
+    },
+    {
+      "id": "statistics-051",
+      "category": "Discrete frequency tables",
+      "difficulty": "Foundation",
+      "prompt": "Frequency table (value: frequency): 0: 1, 1: 2, 2: 4, 3: 1. What is the total frequency N?",
+      "options": [
+        "9",
+        "7",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "Add frequencies, not the distinct data values."
+    },
+    {
+      "id": "statistics-052",
+      "category": "Discrete frequency tables",
+      "difficulty": "Challenge",
+      "prompt": "Frequency table (value: frequency): 0: 1, 1: 2, 2: 4, 3: 1. What is the mean?",
+      "options": [
+        "21/8",
+        "5/8",
+        "13/4",
+        "13/8"
+      ],
+      "answer": 3,
+      "explanation": "Compute Σ(fx), then divide by Σf. Do not give each distinct value equal weight."
+    },
+    {
+      "id": "statistics-053",
+      "category": "Discrete frequency tables",
+      "difficulty": "Foundation",
+      "prompt": "Frequency table (value: frequency): 1: 2, 2: 3, 3: 4, 4: 1. What is the total frequency N?",
+      "options": [
+        "10",
+        "11",
+        "9",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "Add frequencies, not the distinct data values."
+    },
+    {
+      "id": "statistics-054",
+      "category": "Discrete frequency tables",
+      "difficulty": "Challenge",
+      "prompt": "Frequency table (value: frequency): 1: 2, 2: 3, 3: 4, 4: 1. What is the mean?",
+      "options": [
+        "17/5",
+        "12/5",
+        "7/5",
+        "24/5"
+      ],
+      "answer": 1,
+      "explanation": "Compute Σ(fx), then divide by Σf. Do not give each distinct value equal weight."
+    },
+    {
+      "id": "statistics-055",
+      "category": "Discrete frequency tables",
+      "difficulty": "Foundation",
+      "prompt": "Frequency table (value: frequency): 0: 1, 1: 3, 2: 6, 3: 3, 4: 2. What is the total frequency N?",
+      "options": [
+        "16",
+        "14",
+        "15",
+        "30"
+      ],
+      "answer": 2,
+      "explanation": "Add frequencies, not the distinct data values."
+    },
+    {
+      "id": "statistics-056",
+      "category": "Discrete frequency tables",
+      "difficulty": "Challenge",
+      "prompt": "Frequency table (value: frequency): 0: 1, 1: 3, 2: 6, 3: 3, 4: 2. What is the mean?",
+      "options": [
+        "47/15",
+        "17/15",
+        "64/15",
+        "32/15"
+      ],
+      "answer": 3,
+      "explanation": "Compute Σ(fx), then divide by Σf. Do not give each distinct value equal weight."
+    },
+    {
+      "id": "statistics-057",
+      "category": "Discrete frequency tables",
+      "difficulty": "Foundation",
+      "prompt": "Frequency table (value: frequency): 1: 2, 2: 5, 3: 3. What is the total frequency N?",
+      "options": [
+        "10",
+        "11",
+        "9",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "Add frequencies, not the distinct data values."
+    },
+    {
+      "id": "statistics-058",
+      "category": "Discrete frequency tables",
+      "difficulty": "Challenge",
+      "prompt": "Frequency table (value: frequency): 1: 2, 2: 5, 3: 3. What is the mean?",
+      "options": [
+        "31/10",
+        "21/10",
+        "11/10",
+        "21/5"
+      ],
+      "answer": 1,
+      "explanation": "Compute Σ(fx), then divide by Σf. Do not give each distinct value equal weight."
+    },
+    {
+      "id": "statistics-059",
+      "category": "Discrete frequency tables",
+      "difficulty": "Application",
+      "prompt": "Values 0, 1, 2, 3 have frequencies 1, 2, 4, 1. What is the median?",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "N = 8. Positions 4 and 5 both have value 2, so the median is 2."
+    },
+    {
+      "id": "statistics-060",
+      "category": "Discrete frequency tables",
+      "difficulty": "Application",
+      "prompt": "Values 0, 1, 2, 3, 4 have frequencies 1, 3, 6, 3, 2. What is the mode?",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "answer": 3,
+      "explanation": "The greatest frequency is 6, belonging to value 2."
+    }
+  ]
+}

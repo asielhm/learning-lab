@@ -78,5 +78,37 @@
     "description": "Explore ratio sharing, map scales, equivalent fractions, decimals, percentages, discounts and rational-number operations.",
     "symbol": "¾",
     "art": "fractions"
+  },
+  {
+    "id": "algebra-ii",
+    "name": "Algebra II",
+    "subtitle": "Translate, collect, expand and solve",
+    "dates": "November · bridge to Y8 (2027)",
+    "calculator": "Show each equivalent step",
+    "goals": [
+      "Translate words and situations into algebraic expressions before solving.",
+      "Collect like terms and expand simple brackets.",
+      "Solve one-, two- and three-step equations, first in N and then in Z.",
+      "Solve equations with x on both sides, including an initial bracket."
+    ],
+    "description": "Build expressions, collect like terms, expand brackets and solve equations with a balance of equivalent operations.",
+    "symbol": "x = ?",
+    "art": "algebra"
+  },
+  {
+    "id": "statistics",
+    "name": "Statistics",
+    "subtitle": "Turn data into clear displays and conclusions",
+    "dates": "Final unit",
+    "calculator": "Interpret before calculating",
+    "goals": [
+      "Construct and interpret pictograms, bar charts and pie charts.",
+      "Find mean, median, mode, range and quartiles from lists.",
+      "Use discrete frequency tables, including weighted means and ordered positions.",
+      "Interpret pie-chart proportions and justify conclusions from data."
+    ],
+    "description": "Build and read charts, explore averages and quartiles, and interpret discrete frequency tables.",
+    "symbol": "Σfx/N",
+    "art": "statistics"
   }
 ]
