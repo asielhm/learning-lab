@@ -28,3 +28,7 @@ for u in units:
  path=f'activities/y10/chemistry/{u["id"]}/';subject['topics'].append(dict(id=u['id'],name=u['name'],description=u['intro'],primaryActivity=u['key']+'-lab',appTitle=u['name'],activities=[dict(id=u['key']+'-lab',title=u['name']+': interactive lab',description=u['intro'],format='Interactive chemistry lab',duration='Explore at your pace',image=path+'cover.svg',href=path),dict(id=u['key']+'-revision',title=u['name']+': revision simulator',description='80 syllabus-aligned questions with explanations, selectable areas and levels, test mode and targeted retries.',format='Revision simulator',duration='Choose your session',image=path+'cover.svg',href=path+'revision.html')]))
 p.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 print('Built four Y10 Chemistry pages and revision wrappers; updated the catalogue.')
+
+# Keep the games discoverable after regenerating lesson shells.
+from unit_games_integration import integrate
+integrate()

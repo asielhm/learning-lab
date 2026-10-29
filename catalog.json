@@ -34,6 +34,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y7/maths/numbers-i/cover.svg",
                   "href": "activities/y7/maths/numbers-i/revision.html"
+                },
+                {
+                  "id": "numbers-i-games",
+                  "title": "Numbers I: learning games",
+                  "description": "Factor Arcade and The 24 Machine. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/numbers-i/games/",
+                  "image": "activities/y7/maths/numbers-i/games/cover.svg"
                 }
               ]
             },
@@ -61,6 +70,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y7/maths/geometry-i/cover.svg",
                   "href": "activities/y7/maths/geometry-i/revision.html"
+                },
+                {
+                  "id": "geometry-i-games",
+                  "title": "Geometry I: learning games",
+                  "description": "Angle Dominoes and Fence & Floor. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/geometry-i/games/",
+                  "image": "activities/y7/maths/geometry-i/games/cover.svg"
                 }
               ]
             },
@@ -88,6 +106,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y7/maths/numbers-ii/cover.svg",
                   "href": "activities/y7/maths/numbers-ii/revision.html"
+                },
+                {
+                  "id": "numbers-ii-games",
+                  "title": "Numbers II: learning games",
+                  "description": "Integer Skyline and Number-Line Rover. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/numbers-ii/games/",
+                  "image": "activities/y7/maths/numbers-ii/games/cover.svg"
                 }
               ]
             },
@@ -133,6 +160,24 @@
                   "duration": "Choose your session",
                   "image": "activities/y7/maths/algebra/cover.svg",
                   "href": "activities/y7/maths/algebra/revision.html"
+                },
+                {
+                  "id": "algebra-i-games",
+                  "title": "Algebra I: learning games",
+                  "description": "Rule Detectives and Coordinate Quest. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/algebra-i/games/",
+                  "image": "activities/y7/maths/algebra-i/games/cover.svg"
+                },
+                {
+                  "id": "algebra-games",
+                  "title": "Boxes & Brackets: learning games",
+                  "description": "Like-Terms Recycling and Bag Factory. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/algebra/games/",
+                  "image": "activities/y7/maths/algebra/games/cover.svg"
                 }
               ]
             },
@@ -160,6 +205,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y7/maths/numbers-iii/cover.svg",
                   "href": "activities/y7/maths/numbers-iii/revision.html"
+                },
+                {
+                  "id": "numbers-iii-games",
+                  "title": "Numbers III: learning games",
+                  "description": "Fraction Café and Pizza Proportions. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y7/maths/numbers-iii/games/",
+                  "image": "activities/y7/maths/numbers-iii/games/cover.svg"
                 }
               ]
             }
@@ -320,6 +374,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y10/chemistry/acids-and-bases/cover.svg",
                   "href": "activities/y10/chemistry/acids-and-bases/revision.html"
+                },
+                {
+                  "id": "acids-and-bases-games",
+                  "title": "Acids & Bases: learning games",
+                  "description": "Reaction Recipe Cards and Neutralisation Drop Quest. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/chemistry/acids-and-bases/games/",
+                  "image": "activities/y10/chemistry/acids-and-bases/games/cover.svg"
                 }
               ]
             },
@@ -347,6 +410,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y10/chemistry/metals/cover.svg",
                   "href": "activities/y10/chemistry/metals/revision.html"
+                },
+                {
+                  "id": "metals-games",
+                  "title": "Metals: learning games",
+                  "description": "Reactivity Ladder and Displacement Vault. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/chemistry/metals/games/",
+                  "image": "activities/y10/chemistry/metals/games/cover.svg"
                 }
               ]
             },
@@ -374,6 +446,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y10/chemistry/redox/cover.svg",
                   "href": "activities/y10/chemistry/redox/revision.html"
+                },
+                {
+                  "id": "redox-games",
+                  "title": "Redox & Electrolysis: learning games",
+                  "description": "Electron Exchange and Electron Delivery. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/chemistry/redox/games/",
+                  "image": "activities/y10/chemistry/redox/games/cover.svg"
                 }
               ]
             },
@@ -401,6 +482,15 @@
                   "duration": "Choose your session",
                   "image": "activities/y10/chemistry/organic-chemistry/cover.svg",
                   "href": "activities/y10/chemistry/organic-chemistry/revision.html"
+                },
+                {
+                  "id": "organic-chemistry-games",
+                  "title": "Organic Chemistry: learning games",
+                  "description": "Molecule Families and Carbon Chain Studio. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/chemistry/organic-chemistry/games/",
+                  "image": "activities/y10/chemistry/organic-chemistry/games/cover.svg"
                 }
               ]
             }
@@ -435,6 +525,15 @@
                   "duration": "Choose your session",
                   "href": "activities/y10/physics/electricity/revision.html",
                   "image": "activities/y10/physics/electricity/cover.svg"
+                },
+                {
+                  "id": "electricity-games",
+                  "title": "Electricity: learning games",
+                  "description": "Circuit Snap and Circuit Rescue. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/physics/electricity/games/",
+                  "image": "activities/y10/physics/electricity/games/cover.svg"
                 }
               ]
             },
@@ -462,6 +561,15 @@
                   "duration": "Choose your session",
                   "href": "activities/y10/physics/waves/revision.html",
                   "image": "activities/y10/physics/waves/cover.svg"
+                },
+                {
+                  "id": "waves-games",
+                  "title": "Waves & Sound: learning games",
+                  "description": "Wave Matchmakers and Wave DJ. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/physics/waves/games/",
+                  "image": "activities/y10/physics/waves/games/cover.svg"
                 }
               ]
             },
@@ -489,6 +597,15 @@
                   "duration": "Choose your session",
                   "href": "activities/y10/physics/optics/revision.html",
                   "image": "activities/y10/physics/optics/cover.svg"
+                },
+                {
+                  "id": "optics-games",
+                  "title": "Optics & Cameras: learning games",
+                  "description": "Ray Detective and Focus Finder. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/physics/optics/games/",
+                  "image": "activities/y10/physics/optics/games/cover.svg"
                 }
               ]
             },
@@ -516,6 +633,15 @@
                   "duration": "Choose your session",
                   "href": "activities/y10/physics/thermal/revision.html",
                   "image": "activities/y10/physics/thermal/cover.svg"
+                },
+                {
+                  "id": "thermal-games",
+                  "title": "Thermal Physics: learning games",
+                  "description": "Heat Transfer Dispatch and Energy Budget Kitchen. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/physics/thermal/games/",
+                  "image": "activities/y10/physics/thermal/games/cover.svg"
                 }
               ]
             },
@@ -543,6 +669,15 @@
                   "duration": "Choose your session",
                   "href": "activities/y10/physics/kinematics/revision.html",
                   "image": "activities/y10/physics/kinematics/cover.svg"
+                },
+                {
+                  "id": "kinematics-games",
+                  "title": "Motion & Projectiles: learning games",
+                  "description": "Motion Storyboards and Catch-Up Flag. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/physics/kinematics/games/",
+                  "image": "activities/y10/physics/kinematics/games/cover.svg"
                 }
               ]
             },
@@ -570,6 +705,15 @@
                   "duration": "Choose your session",
                   "href": "activities/y10/physics/dynamics/revision.html",
                   "image": "activities/y10/physics/dynamics/cover.svg"
+                },
+                {
+                  "id": "dynamics-games",
+                  "title": "Forces & Dynamics: learning games",
+                  "description": "Force Bureau and Tugboat Targets. Three rounds each, illustrated game boards, hints, explanations and targeted retries.",
+                  "format": "Learning games",
+                  "duration": "5–15 minutes",
+                  "href": "activities/y10/physics/dynamics/games/",
+                  "image": "activities/y10/physics/dynamics/games/cover.svg"
                 }
               ]
             }

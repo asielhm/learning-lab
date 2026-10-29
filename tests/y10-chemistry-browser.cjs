@@ -10,7 +10,7 @@ const coursePath='/activities/y10/chemistry/';
   const p=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),errors=[],posts=[];
   p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(r.method()==='POST'&&/script\.google/.test(r.url()))posts.push(r.url());});
  await p.context().route('https://script.google.com/macros/s/**/exec?*',route=>{const url=new URL(route.request().url());return route.fulfill({contentType:'text/html',body:`<script>window.top.postMessage(${JSON.stringify({type:'learning-lab-recording-capabilities',nonce:url.searchParams.get('nonce'),manifest:{protocol:3,banks:[]}})},${JSON.stringify(new URL(base).origin)})</script>`});});
-  await p.goto(base+'/#/years/y10');await p.locator('#app a[href="#/years/y10/chemistry"]').click();await p.locator('.topic-apps .activity-card').first().waitFor();assert.equal(await p.locator('.topic-apps .activity-card').count(),4);assert.equal(await p.locator('.topic-study-links a').count(),4);
+  await p.goto(base+'/#/years/y10');await p.locator('#app a[href="#/years/y10/chemistry"]').click();await p.locator('.topic-apps .activity-card').first().waitFor();assert.equal(await p.locator('.topic-apps .activity-card').count(),4);assert.equal(await p.locator('.topic-study-links a').count(),8);
   await p.screenshot({path:'/tmp/y10-chemistry-menu.png',fullPage:true});
   async function prepare(page=p){
    for(let guard=0;guard<15;guard++){

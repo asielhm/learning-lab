@@ -37,3 +37,7 @@ for u in units:
  if existing is None:subject['topics'].append(topic)
  else:subject['topics'][existing]=topic
 p.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n');print('Built six Physics units, six revision pages and catalogue entries; preserved other subjects.')
+
+# Keep the games discoverable after regenerating lesson shells.
+from unit_games_integration import integrate
+integrate()
