@@ -1,6 +1,6 @@
 # OAQ · estudio autónomo en español
 
-Ruta: `activities/oaq/`. Es el único módulo de estudio en español; el resto de los cursos conserva su idioma. Se encuentra junto a los años en el catálogo y mediante el enlace OAQ de la cabecera.
+Ruta: `activities/oaq/`. OAQ y OAF son los módulos de preparación en español; los cursos escolares conservan su idioma. Se encuentra junto a los años en el catálogo y mediante el enlace OAQ de la cabecera.
 
 Alcance acordado: Nivel Inicial, Nivel 1 y Nivel 2, cuatro series por nivel. Nivel 1 incluye Inicial; Nivel 2 incluye ambos anteriores. 2-bis y 3 quedan para una ampliación posterior.
 

@@ -1,0 +1,2570 @@
+{
+  "areas": [
+    {
+      "id": "herramientas",
+      "name": "Herramientas experimentales",
+      "intro": "Medí, estimá incertidumbres y obtené relaciones a partir de gráficos.",
+      "source": "16–17"
+    },
+    {
+      "id": "mecanica",
+      "name": "Movimientos, mecánica y fluidos",
+      "intro": "De encuentros y fuerzas a conservación, rotación, gravitación y fluidos.",
+      "source": "14–16"
+    },
+    {
+      "id": "termica",
+      "name": "Fenómenos térmicos",
+      "intro": "Conectá temperatura, calor, gases y transformación de energía.",
+      "source": "14–16"
+    },
+    {
+      "id": "electromagnetismo",
+      "name": "Electricidad y magnetismo",
+      "intro": "Investigá cargas, circuitos, campos e inducción electromagnética.",
+      "source": "15–16"
+    },
+    {
+      "id": "ondas",
+      "name": "Ondas y sonido",
+      "intro": "Medí períodos y longitudes de onda; explicá superposición e interferencia.",
+      "source": "15–16"
+    },
+    {
+      "id": "optica-materia",
+      "name": "Óptica, radiación y materia",
+      "intro": "Construí imágenes y explorá fotones, espectros y fenómenos nucleares.",
+      "source": "15–17"
+    }
+  ],
+  "units": [
+    {
+      "id": "oaf-medicion",
+      "area": "herramientas",
+      "slug": "medicion",
+      "title": "Medir, graficar y argumentar",
+      "topics": [
+        "Unidades SI, notación científica y análisis dimensional",
+        "Resolución, repetibilidad, incertidumbre y cifras significativas",
+        "Tablas, gráficos, pendiente y estimación de relaciones",
+        "Diseño de experiencias, variables y comunicación de resultados"
+      ],
+      "labs": [
+        "measurement"
+      ],
+      "before": "Usá proporciones, potencias de diez y lectura de ejes. Si una unidad te cuesta, empezá por la primera lección.",
+      "lessons": [
+        {
+          "title": "Unidades que comprueban una ecuación",
+          "text": [
+            "Una magnitud combina número y unidad. En el SI, longitud se expresa en m, masa en kg y tiempo en s. Convertir conserva la magnitud: 36 km/h son 10 m/s. Escribí factores que valgan uno para que se cancelen unidades.",
+            "El análisis dimensional detecta ecuaciones imposibles, pero una ecuación dimensionalmente correcta todavía puede tener un factor numérico incorrecto. Distinguí dirección y sentido en vectores: rapidez no es velocidad, y distancia no es desplazamiento."
+          ],
+          "formula": "v = Δx/Δt → m/s · a = Δv/Δt → m/s²",
+          "example": [
+            "Un móvil recorre 72 km en 2 h.",
+            "Su rapidez media es 36 km/h.",
+            "36 × 1000/3600 = 10 m/s."
+          ],
+          "task": "Calculá la rapidez y expresala en m/s mostrando los factores de conversión.",
+          "memory": {
+            "cue": "«Las unidades son las huellas del cálculo».",
+            "reason": "Si al buscar una velocidad terminás en m²/s, revisá la ecuación o la conversión. Cancelar unidades permite seguir el significado de cada paso."
+          },
+          "trap": "No conviertas km/h a m/s multiplicando solo por 1000: también cambia la unidad de tiempo.",
+          "check": {
+            "prompt": "¿Qué unidad corresponde a una aceleración?",
+            "options": [
+              "m/s",
+              "m/s²",
+              "N·s"
+            ],
+            "answer": 1,
+            "explanation": "Aceleración es cambio de velocidad por tiempo: (m/s)/s.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Un número medido tiene un margen",
+          "text": [
+            "La resolución es el menor cambio que distingue el instrumento. Repetir una medición permite detectar dispersión, pero no elimina una calibración incorrecta. Error e incertidumbre no son lo mismo: la incertidumbre expresa un intervalo razonable, no un fallo moral ni un error conocido exacto.",
+            "En una lectura analógica ideal puede usarse media división como estimación instrumental, si el procedimiento lo justifica. En un instrumento digital se considera su resolución y especificación. Declarar el criterio es parte de la medición; no todas las incertidumbres se calculan con la misma receta."
+          ],
+          "formula": "Resultado = valor estimado ± incertidumbre, con unidades",
+          "example": [
+            "Una regla tiene divisiones de 0,2 cm y leés 8,4 cm.",
+            "Con el criterio de media división, ΔL = 0,1 cm.",
+            "Informás L = (8,4 ± 0,1) cm, no 8,40000 cm."
+          ],
+          "task": "Explicá el intervalo asociado a la lectura y qué significan sus cifras.",
+          "memory": {
+            "cue": "«Más decimales no fabrican más precisión».",
+            "reason": "La pantalla de una calculadora puede mostrar muchas cifras, pero el instrumento y el procedimiento limitan lo que conocés."
+          },
+          "trap": "No confundas exactitud con repetibilidad: un instrumento mal calibrado puede repetir siempre el mismo valor desplazado.",
+          "check": {
+            "prompt": "Varias lecturas muy parecidas con una regla mal calibrada pueden ser…",
+            "options": [
+              "Repetibles pero desplazadas",
+              "Exactas por definición",
+              "Sin incertidumbre"
+            ],
+            "answer": 0,
+            "explanation": "La repetición no corrige un sesgo de calibración.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "La pendiente cuenta una historia",
+          "text": [
+            "Al graficar, ubicá la variable independiente en el eje horizontal y la respuesta en el vertical. Rotulá magnitudes y unidades, usá una escala uniforme y no unas automáticamente cada punto si buscás una tendencia. Una recta y = mx + b separa pendiente e intercepto.",
+            "La pendiente es Δy/Δx entre puntos de la recta ajustada, no necesariamente y/x desde el origen. En x frente a t da velocidad; en v frente a t da aceleración. El área bajo v(t) da desplazamiento con signo. Una gráfica se interpreta según sus ejes, no solo por su forma."
+          ],
+          "formula": "m = (y₂ − y₁)/(x₂ − x₁)",
+          "example": [
+            "La posición cambia de 4 m a 16 m entre 1 s y 4 s.",
+            "Pendiente = (16 − 4)/(4 − 1).",
+            "La velocidad de esa recta es 4 m/s."
+          ],
+          "task": "Obtené la pendiente y explicá por qué tiene unidades de velocidad.",
+          "memory": {
+            "cue": "«Pendiente: cuánto sube por cada paso horizontal».",
+            "reason": "Una cuesta más inclinada en x(t) indica mayor cambio de posición por segundo. En otro gráfico puede significar otra magnitud."
+          },
+          "trap": "Una recta que no pasa por el origen no permite calcular su pendiente usando y/x sin restar el intercepto.",
+          "check": {
+            "prompt": "La pendiente de una gráfica velocidad–tiempo representa…",
+            "options": [
+              "Posición",
+              "Aceleración",
+              "Masa"
+            ],
+            "answer": 1,
+            "explanation": "Δv/Δt es aceleración; las unidades son m/s².",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Diseñar una comparación justa",
+          "text": [
+            "Una hipótesis debe producir una predicción que puedas contrastar. Cambiá una variable, mantené otras y repetí mediciones. Elegí un rango suficiente para distinguir tendencias y registrá también resultados que no coinciden con tu expectativa.",
+            "Si calculás una magnitud a partir de medidas, la incertidumbre también se transmite. Como estimación conservadora para un producto, sumá incertidumbres relativas; para datos independientes con un modelo estadístico puede usarse cuadratura. No mezcles criterios sin indicarlo. Concluir exige comparar resultados y límites del procedimiento."
+          ],
+          "formula": "Para A = LW: ΔA/A ≈ ΔL/L + ΔW/W (cota lineal)",
+          "example": [
+            "L = (10,0 ± 0,1) cm y W = (5,0 ± 0,1) cm.",
+            "A = 50,0 cm²; cota relativa ≈ 0,01 + 0,02 = 0,03.",
+            "Una estimación conservadora es ΔA ≈ 1,5 cm²."
+          ],
+          "task": "Calculá el área y su cota de incertidumbre, declarando el criterio usado.",
+          "memory": {
+            "cue": "«Compará causas, no cambies todo a la vez».",
+            "reason": "Si modificás masa y fuerza simultáneamente, no podés atribuir un cambio de aceleración solo a una de ellas."
+          },
+          "trap": "Una diferencia pequeña dentro de la incertidumbre no demuestra por sí sola una diferencia física real.",
+          "check": {
+            "prompt": "Para investigar efecto de fuerza sobre aceleración conviene…",
+            "options": [
+              "Cambiar fuerza con masa fija",
+              "Cambiar fuerza y masa sin registrar",
+              "Medir solo una vez sin unidades"
+            ],
+            "answer": 0,
+            "explanation": "Controlar la masa permite aislar el efecto de la fuerza neta.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "36 km/h equivalen a…",
+          "options": [
+            "10 m/s",
+            "36 m/s",
+            "36000 m/s"
+          ],
+          "answer": 0,
+          "explanation": "Multiplicá por 1000/3600.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Media división de una escala de 2 mm es…",
+          "options": [
+            "1 mm",
+            "2 mm",
+            "0 mm"
+          ],
+          "answer": 0,
+          "explanation": "Es un criterio instrumental explícito para esa lectura analógica.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Una recta x = 3 + 2t tiene velocidad…",
+          "options": [
+            "3 m/s",
+            "2 m/s",
+            "5 m/s siempre"
+          ],
+          "answer": 1,
+          "explanation": "La pendiente es 2 m/s; 3 m es el intercepto.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Si una medición no coincide con la hipótesis, debés…",
+          "options": [
+            "Borrarla",
+            "Analizar procedimiento e incertidumbre",
+            "Modificar el número para que coincida"
+          ],
+          "answer": 1,
+          "explanation": "La evidencia se analiza, no se acomoda a la expectativa.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "herramientas/medicion/",
+      "order": 1
+    },
+    {
+      "id": "oaf-cinematica",
+      "area": "mecanica",
+      "slug": "cinematica",
+      "title": "Movimientos y encuentros",
+      "topics": [
+        "Posición, desplazamiento, rapidez y velocidad; gráficos x(t) y v(t)",
+        "MRU y MRUV; encuentros con partidas demoradas y posiciones iniciales diferentes",
+        "Caída libre y tiro vertical",
+        "Movimiento de proyectiles y descomposición vectorial"
+      ],
+      "labs": [
+        "catchup"
+      ],
+      "before": "Antes: convertí unidades y calculá pendientes. Usá un eje con origen, sentido positivo y un reloj común.",
+      "lessons": [
+        {
+          "title": "Un eje y un reloj para todos",
+          "text": [
+            "La posición depende del sistema de referencia. Distancia recorrida es longitud de trayectoria; desplazamiento es posición final menos inicial y puede ser cero en un viaje de ida y vuelta. En MRU la velocidad vectorial es constante y x(t) es una recta.",
+            "Para comparar móviles usá el mismo origen espacial y el mismo reloj. Elegir x = 0 en un lugar no exige t = 0 cuando todos arrancan. Anotá qué objeto está quieto y en qué intervalo antes de aplicar su ecuación."
+          ],
+          "formula": "x(t) = x₀ + vt · vmedia = Δx/Δt",
+          "example": [
+            "A parte de x₀ = 10 m a 2 m/s.",
+            "A los 5 s: xA = 10 + 2×5.",
+            "Está en 20 m; recorrió 10 m desde su partida."
+          ],
+          "task": "Diferenciá posición final, distancia recorrida y desplazamiento de A.",
+          "memory": {
+            "cue": "«El mapa dice dónde; el reloj dice cuándo».",
+            "reason": "La constante x₀ traslada la recta sin cambiar su pendiente. No representa una velocidad adicional."
+          },
+          "trap": "No sumes una posición en metros con una velocidad en m/s sin multiplicar por tiempo.",
+          "check": {
+            "prompt": "En MRU, la gráfica x(t) tiene pendiente igual a…",
+            "options": [
+              "La velocidad",
+              "La posición inicial",
+              "La aceleración"
+            ],
+            "answer": 0,
+            "explanation": "x = x₀ + vt tiene pendiente v.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Alcanzar con una partida tardía",
+          "text": [
+            "Si B empieza en t = τ, su tiempo en movimiento es t − τ después de arrancar. Antes queda en su posición inicial: también puede haber un encuentro en ese tramo, con B quieto. El encuentro posterior a la partida se calcula igualando posiciones, pero la solución debe pertenecer al intervalo donde valen ambas ecuaciones.",
+            "Puede no haber alcance futuro: si B está detrás y no es más rápido, no reduce la separación. Una solución negativa o anterior a la partida no describe un alcance posterior válido. Graficar ayuda a interpretar cruces y a comprobar el álgebra."
+          ],
+          "formula": "xA = xA₀ + vA t · xB = xB₀ + vB(t − τ), t ≥ τ",
+          "example": [
+            "A: x₀ = 10 m, v = 2 m/s. B: x₀ = 0, v = 5 m/s, demora 4 s.",
+            "10 + 2t = 5(t − 4) → 30 = 3t.",
+            "Se encuentran en t = 10 s y x = 30 m; B corrió 6 s."
+          ],
+          "task": "Calculá el instante global, el tiempo que corre B y la posición del encuentro.",
+          "memory": {
+            "cue": "«Partir tarde resta tiempo propio, no tiempo al reloj común».",
+            "reason": "B dispone de t − τ segundos de movimiento; los dos comparten el mismo instante de encuentro."
+          },
+          "trap": "No uses xB = vBt si B permaneció quieto durante parte de ese tiempo.",
+          "check": {
+            "prompt": "B empieza 3 s tarde. En el instante global t = 8 s, se movió durante…",
+            "options": [
+              "11 s",
+              "8 s",
+              "5 s"
+            ],
+            "answer": 2,
+            "explanation": "El tiempo propio de movimiento es 8 − 3 = 5 s.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Aceleración y caída libre",
+          "text": [
+            "Con aceleración constante, la velocidad cambia linealmente y la posición cuadráticamente. Elegí el signo de g según tu eje; g es una magnitud positiva, pero la aceleración vectorial puede ser −g si el eje positivo apunta arriba.",
+            "En caída libre ideal se ignora aire. En la cima de un tiro vertical la velocidad es momentáneamente cero, pero la aceleración sigue dirigida hacia abajo. Masa no cambia la aceleración gravitatoria del modelo cerca de la superficie."
+          ],
+          "formula": "v = v₀ + at · x = x₀ + v₀t + ½at² · v² = v₀² + 2aΔx",
+          "example": [
+            "Soltás un objeto desde reposo y usás g = 10 m/s² hacia abajo.",
+            "En 2 s cae ½×10×2² = 20 m.",
+            "Su rapidez al final es 20 m/s."
+          ],
+          "task": "Calculá desplazamiento y velocidad, aclarando tu sentido positivo.",
+          "memory": {
+            "cue": "«En la cima se frena el movimiento, no la gravedad».",
+            "reason": "El valor v = 0 en un instante no significa que la fuerza neta ni a sean cero."
+          },
+          "trap": "No mezcles g = 10 positivo con un eje hacia arriba sin asignar a = −10 m/s².",
+          "check": {
+            "prompt": "En la cima de un tiro vertical ideal, la aceleración es…",
+            "options": [
+              "Cero",
+              "Hacia abajo",
+              "Hacia arriba"
+            ],
+            "answer": 1,
+            "explanation": "La gravedad sigue actuando aunque v sea momentáneamente cero.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Separar horizontal y vertical",
+          "text": [
+            "Un proyectil ideal combina MRU horizontal y movimiento vertical con aceleración −g. Las componentes se describen por separado, pero comparten el mismo tiempo. Para un lanzamiento con rapidez v₀ y ángulo θ: vx = v₀ cosθ y vy = v₀ sinθ.",
+            "Las fórmulas de alcance simétrico requieren altura de salida igual a la de llegada y terreno horizontal. Si cambiás esa condición, resolvé primero y(t) para el instante de impacto. La trayectoria es parabólica sin aire, pero una fotografía no mide directamente velocidad."
+          ],
+          "formula": "x = x₀ + v₀ cosθ·t · y = y₀ + v₀ sinθ·t − ½gt²",
+          "example": [
+            "Un objeto sale horizontalmente a 5 m/s desde 20 m de altura, g = 10.",
+            "Cae en t = √(2h/g) = 2 s.",
+            "Avanza x = 5×2 = 10 m horizontalmente."
+          ],
+          "task": "Calculá el tiempo de vuelo y el alcance de ese lanzamiento horizontal.",
+          "memory": {
+            "cue": "«Dos movimientos, un solo reloj».",
+            "reason": "La gravedad modifica la componente vertical; en el modelo sin aire no hay aceleración horizontal."
+          },
+          "trap": "No uses el tiempo de un tiro simétrico cuando el objeto cae a otra altura.",
+          "check": {
+            "prompt": "Sin aire, durante un tiro parabólico vx…",
+            "options": [
+              "Es constante",
+              "Aumenta por gravedad",
+              "Se hace cero en la cima"
+            ],
+            "answer": 0,
+            "explanation": "La aceleración horizontal es cero en el modelo.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "Volvés al punto inicial. El desplazamiento total es…",
+          "options": [
+            "Cero",
+            "Igual a toda la distancia",
+            "Siempre negativo"
+          ],
+          "answer": 0,
+          "explanation": "La posición final coincide con la inicial.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Si el perseguidor está detrás y va más lento en MRU, el alcance futuro…",
+          "options": [
+            "Siempre ocurre",
+            "No ocurre",
+            "Ocurre al instante"
+          ],
+          "answer": 1,
+          "explanation": "La distancia no se cierra.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Desde reposo con a = 3 m/s², tras 4 s la velocidad es…",
+          "options": [
+            "7 m/s",
+            "12 m/s",
+            "24 m/s"
+          ],
+          "answer": 1,
+          "explanation": "v = at = 12 m/s.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "El tiempo horizontal y vertical de un mismo proyectil…",
+          "options": [
+            "Es el mismo",
+            "Se calcula en relojes físicos distintos",
+            "No puede relacionarse"
+          ],
+          "answer": 0,
+          "explanation": "Son componentes del mismo movimiento y comparten t.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "mecanica/cinematica/",
+      "order": 2
+    },
+    {
+      "id": "oaf-dinamica",
+      "area": "mecanica",
+      "slug": "dinamica",
+      "title": "Fuerzas, rozamiento y planos",
+      "topics": [
+        "Leyes de Newton e interacciones",
+        "Diagramas de cuerpo libre y fuerza neta",
+        "Rozamiento estático y cinético; planos inclinados",
+        "Tensión, cuerpos conectados y elección de sistema"
+      ],
+      "labs": [
+        "forces"
+      ],
+      "before": "Antes: distinguí velocidad de aceleración. Repasá componentes de vectores y trigonometría de un triángulo rectángulo.",
+      "lessons": [
+        {
+          "title": "Dibujar solo lo que actúa sobre el cuerpo",
+          "text": [
+            "Un diagrama de cuerpo libre representa fuerzas ejercidas por otros cuerpos sobre el sistema elegido. Peso, normal, tensión y rozamiento son interacciones diferentes. No agregues «fuerza de movimiento» por el solo hecho de que un objeto se desplaza.",
+            "La tercera ley relaciona fuerzas de igual módulo y sentidos opuestos que actúan sobre cuerpos distintos. No se cancelan dentro del diagrama de un solo cuerpo. La primera ley permite movimiento rectilíneo uniforme sin fuerza neta."
+          ],
+          "formula": "ΣF⃗ = ma⃗",
+          "example": [
+            "Un libro está quieto sobre una mesa horizontal.",
+            "Actúan peso hacia abajo y normal de la mesa hacia arriba.",
+            "La fuerza que el libro hace sobre la mesa pertenece al diagrama de la mesa, no al del libro."
+          ],
+          "task": "Dibujá las fuerzas sobre el libro y distinguí su equilibrio del par de tercera ley.",
+          "memory": {
+            "cue": "«Elegí el cuerpo antes de sumar flechas».",
+            "reason": "Dos fuerzas pueden ser opuestas sin ser acción–reacción; verificá sobre quién actúa cada una."
+          },
+          "trap": "Peso y normal del mismo cuerpo no son un par de tercera ley.",
+          "check": {
+            "prompt": "Las fuerzas de acción y reacción actúan…",
+            "options": [
+              "Sobre el mismo cuerpo",
+              "Sobre cuerpos distintos",
+              "Solo si hay aceleración"
+            ],
+            "answer": 1,
+            "explanation": "Cada interacción ejerce una fuerza sobre cada uno de los dos cuerpos.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "La fuerza neta cambia la velocidad",
+          "text": [
+            "A masa constante, mayor fuerza neta implica mayor aceleración. A fuerza neta fija, mayor masa implica menor aceleración. Las componentes de la segunda ley pueden tener signos positivos o negativos según los ejes.",
+            "Una fuerza individual no determina a si existen otras fuerzas. Sobre un piso horizontal sin aceleración vertical, N = mg si no hay otras componentes verticales. Esta igualdad deja de ser automática en ascensores o con fuerzas inclinadas."
+          ],
+          "formula": "ax = (Faplicada − Fopuesta)/m",
+          "example": [
+            "Un carro de 2 kg recibe 10 N hacia la derecha y 4 N hacia la izquierda.",
+            "Fneta = 6 N hacia la derecha.",
+            "a = 6/2 = 3 m/s² hacia la derecha."
+          ],
+          "task": "Calculá la fuerza neta y la aceleración; indicá dirección y sentido.",
+          "memory": {
+            "cue": "«La suma manda, no la flecha más llamativa».",
+            "reason": "Una fuerza grande puede estar equilibrada por otra. Lo que modifica v es el resultado vectorial de todas."
+          },
+          "trap": "Velocidad y aceleración no tienen necesariamente el mismo sentido.",
+          "check": {
+            "prompt": "Fneta = 0 permite que un cuerpo…",
+            "options": [
+              "Solo esté quieto",
+              "Esté quieto o en MRU",
+              "Tenga aceleración constante no nula"
+            ],
+            "answer": 1,
+            "explanation": "La velocidad vectorial permanece constante, incluida la posibilidad v = 0.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Rozamiento y plano inclinado",
+          "text": [
+            "El rozamiento estático se ajusta a lo necesario hasta un máximo μsN; no vale siempre μsN. Si el cuerpo desliza, el modelo cinético aproxima f = μkN en sentido opuesto al deslizamiento relativo.",
+            "En un plano de ángulo θ, el peso tiene componente mg sinθ a lo largo y mg cosθ normal al plano. Elegir ejes paralelos y perpendiculares simplifica el balance. El rozamiento se opone al deslizamiento o su tendencia, no a cualquier velocidad respecto del aula."
+          ],
+          "formula": "fs ≤ μsN · fk = μkN · N = mg cosθ en el caso simple",
+          "example": [
+            "Un bloque de 2 kg desliza en horizontal con μk = 0,20 y g = 10.",
+            "N = 20 N y fk = 4 N.",
+            "Si lo empujás con 10 N, a = (10 − 4)/2 = 3 m/s²."
+          ],
+          "task": "Calculá rozamiento y aceleración para el bloque que ya desliza.",
+          "memory": {
+            "cue": "«Estático se acomoda; cinético acompaña el deslizamiento».",
+            "reason": "Antes de usar μN, preguntá si estás ante un máximo estático o un modelo de fricción cinética."
+          },
+          "trap": "No uses μsN como rozamiento real para una fuerza pequeña que no produce deslizamiento.",
+          "check": {
+            "prompt": "Si empujás con 2 N y el bloque sigue quieto con máximo estático de 5 N, fs es…",
+            "options": [
+              "5 N",
+              "2 N",
+              "0 N"
+            ],
+            "answer": 1,
+            "explanation": "El rozamiento se ajusta para equilibrar los 2 N aplicados.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Sistemas conectados y tensión",
+          "text": [
+            "Elegir dos masas como un solo sistema puede eliminar fuerzas internas del cálculo de aceleración. Después, estudiar una masa por separado permite obtener la tensión. Cuerda ideal inextensible y polea sin masa son hipótesis, no propiedades de cualquier montaje.",
+            "Si una polea tiene inercia, las tensiones de ambos lados pueden diferir porque producen un torque neto. Para una cuerda ideal sin masa en un tramo sin polea real, la tensión es uniforme. Separá las restricciones geométricas de las ecuaciones dinámicas."
+          ],
+          "formula": "Dos carros horizontales ideales: a = F/(m₁ + m₂)",
+          "example": [
+            "Dos carros de 1 kg y 2 kg están unidos; F = 6 N tira del de 2 kg, sin rozamiento.",
+            "a = 6/(1 + 2) = 2 m/s².",
+            "Sobre el carro de 1 kg, T = ma = 2 N."
+          ],
+          "task": "Calculá la aceleración común y la tensión de la cuerda.",
+          "memory": {
+            "cue": "«Sistema grande para acelerar; cuerpo pequeño para la tensión».",
+            "reason": "Las fuerzas internas se cancelan en el balance del conjunto, pero siguen actuando sobre cada parte."
+          },
+          "trap": "No supongas tensiones iguales a ambos lados de una polea con inercia sin justificarlo.",
+          "check": {
+            "prompt": "Al sumar las ecuaciones de dos carros conectados por una cuerda ideal, la tensión interna…",
+            "options": [
+              "Se cancela",
+              "Se duplica siempre",
+              "Se vuelve fuerza externa"
+            ],
+            "answer": 0,
+            "explanation": "Las fuerzas internas son iguales y opuestas entre partes del sistema.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "La unidad SI de fuerza es…",
+          "options": [
+            "J",
+            "N",
+            "W"
+          ],
+          "answer": 1,
+          "explanation": "1 N = 1 kg·m/s².",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Duplicar masa a fuerza neta fija hace que a…",
+          "options": [
+            "Se duplique",
+            "Se reduzca a la mitad",
+            "No cambie"
+          ],
+          "answer": 1,
+          "explanation": "a = F/m.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Sin otras fuerzas normales, sobre una rampa N es…",
+          "options": [
+            "mg siempre",
+            "mg cosθ",
+            "mg sinθ"
+          ],
+          "answer": 1,
+          "explanation": "La componente perpendicular del peso es mg cosθ.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "En una polea con momento de inercia, dos tensiones…",
+          "options": [
+            "Pueden diferir",
+            "Son siempre cero",
+            "Deben ser iguales en toda situación"
+          ],
+          "answer": 0,
+          "explanation": "La diferencia puede producir el torque que acelera la polea.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "mecanica/dinamica/",
+      "order": 3
+    },
+    {
+      "id": "oaf-energia-choques",
+      "area": "mecanica",
+      "slug": "energia-choques",
+      "title": "Energía, trabajo y cantidad de movimiento",
+      "topics": [
+        "Trabajo, energía cinética y potencial; potencia",
+        "Conservación y disipación de energía mecánica",
+        "Cantidad de movimiento, impulso y centro de masa",
+        "Choques elásticos e inelásticos; sistemas aislados"
+      ],
+      "labs": [
+        "collision"
+      ],
+      "before": "Antes: balanceá fuerzas y usá velocidad con signo. Identificá qué cuerpos forman el sistema.",
+      "lessons": [
+        {
+          "title": "Trabajo y potencia",
+          "text": [
+            "Una fuerza realiza trabajo sobre un cuerpo cuando su componente en la dirección del desplazamiento actúa a lo largo de ese desplazamiento. Para fuerza constante, W = Fd cosθ. Una fuerza perpendicular al movimiento no realiza trabajo en ese tramo.",
+            "La potencia mide ritmo de transferencia de energía. No confundas potencia con energía acumulada: un equipo de 100 W transfiere 100 J por segundo. El trabajo neto se vincula con el cambio de energía cinética, incluso cuando actúan varias fuerzas."
+          ],
+          "formula": "Wneto = ΔEc · Ec = ½mv² · Pmedia = W/Δt",
+          "example": [
+            "Una fuerza de 10 N actúa paralela a un desplazamiento de 3 m.",
+            "W = 30 J.",
+            "Si tarda 2 s, Pmedia = 15 W."
+          ],
+          "task": "Calculá trabajo y potencia, indicando las hipótesis geométricas.",
+          "memory": {
+            "cue": "«Energía es cuánto; potencia, qué tan rápido».",
+            "reason": "Dos motores pueden entregar el mismo trabajo en tiempos diferentes y tener distinta potencia."
+          },
+          "trap": "Una fuerza no hace trabajo solo por ser grande: también importan desplazamiento y ángulo.",
+          "check": {
+            "prompt": "Una fuerza perpendicular a un desplazamiento realiza trabajo…",
+            "options": [
+              "Cero",
+              "Fd",
+              "Siempre negativo"
+            ],
+            "answer": 0,
+            "explanation": "cos90° = 0 para ese desplazamiento.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Seguir la energía sin perder el sistema",
+          "text": [
+            "La energía mecánica suma cinética y potencial. Cerca de la superficie terrestre, Ep = mgh requiere elegir una referencia para h. Si solo hay fuerzas conservativas, Ec + Ep se mantiene; si hay rozamiento, parte pasa a energía interna.",
+            "La energía total se conserva en un sistema aislado, aunque la mecánica disminuya. Elegir sistema modifica qué se llama trabajo externo o transferencia de calor. Un balance útil registra entradas, salidas y cambios, en vez de decir que la energía desapareció."
+          ],
+          "formula": "Eci + Epi + Wno conservativo = Ecf + Epf",
+          "example": [
+            "Una masa de 2 kg baja desde 5 m, sin rozamiento, con g = 10.",
+            "Ep inicial = 100 J; en la base Ec = 100 J.",
+            "v = √(2Ec/m) = 10 m/s."
+          ],
+          "task": "Calculá energía y rapidez final; luego explicá qué cambiaría con rozamiento.",
+          "memory": {
+            "cue": "«La energía cambia de casillero, no se esfuma».",
+            "reason": "El rozamiento transforma energía mecánica en interna del conjunto y su entorno."
+          },
+          "trap": "Conservar energía total no implica conservar energía mecánica en cualquier proceso.",
+          "check": {
+            "prompt": "En una frenada con rozamiento, la energía mecánica…",
+            "options": [
+              "Puede disminuir y transformarse en interna",
+              "Desaparece del universo",
+              "Se conserva siempre en el vehículo"
+            ],
+            "answer": 0,
+            "explanation": "Se transforma y puede transferirse al entorno.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Momento lineal, impulso y centro de masa",
+          "text": [
+            "La cantidad de movimiento p⃗ = mv⃗ es vectorial. El impulso de la fuerza neta es el cambio de p; si la fuerza varía se usa el área bajo F(t). Aumentar el tiempo para el mismo cambio de p reduce la fuerza media, fundamento de amortiguación.",
+            "Sin fuerza externa neta, el momento total se conserva. El centro de masa se mueve según la fuerza externa total aunque las partes choquen entre sí. No confundas impulso J con momento p: sus unidades equivalentes no los convierten en el mismo concepto."
+          ],
+          "formula": "J⃗ = Δp⃗ · xCM = Σmᵢxᵢ/Σmᵢ",
+          "example": [
+            "Una pelota de 0,20 kg cambia de +10 a −5 m/s.",
+            "Δp = 0,20(−5 − 10) = −3 N·s.",
+            "Si el contacto dura 0,10 s, Fmedia = −30 N."
+          ],
+          "task": "Calculá impulso y fuerza media conservando el signo de las velocidades.",
+          "memory": {
+            "cue": "«Para cambiar de sentido, primero frenás y después volvés».",
+            "reason": "La variación de velocidad usa resta algebraica: de +10 a −5 cambia −15, no −5."
+          },
+          "trap": "El momento total puede conservarse aunque el momento de cada cuerpo cambie.",
+          "check": {
+            "prompt": "Si no hay fuerza externa neta, el momento total de un sistema…",
+            "options": [
+              "Se conserva",
+              "Debe ser cero",
+              "Crece siempre"
+            ],
+            "answer": 0,
+            "explanation": "Las fuerzas internas intercambian momento entre partes.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Dos leyes para clasificar choques",
+          "text": [
+            "En un choque aislado se conserva momento lineal. La energía cinética también se conserva solo en un choque elástico. En uno perfectamente inelástico los cuerpos quedan juntos; una parte de Ec pasa a deformación, sonido y energía interna.",
+            "Para colisiones unidimensionales, el coeficiente de restitución relaciona separación y aproximación. El modelo 0 ≤ e ≤ 1 describe los casos pasivos usuales. Conservá los signos y verificá que las velocidades iniciales produzcan un encuentro en la geometría elegida."
+          ],
+          "formula": "m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂ · v₂ − v₁ = e(u₁ − u₂)",
+          "example": [
+            "Dos carros de 1 kg: uno llega a 4 m/s y el otro está quieto.",
+            "Si quedan juntos, v = 4/2 = 2 m/s.",
+            "Ec pasa de 8 J a 4 J; los 4 J restantes se transforman."
+          ],
+          "task": "Calculá v y la disminución de Ec del choque perfectamente inelástico.",
+          "memory": {
+            "cue": "«Momento en todos los choques aislados; cinética solo en los elásticos».",
+            "reason": "No agregues conservación de Ec si los cuerpos se pegan o se deforman inelásticamente."
+          },
+          "trap": "Una disminución de Ec no permite descartar conservación de momento del sistema aislado.",
+          "check": {
+            "prompt": "En un choque perfectamente inelástico, los cuerpos…",
+            "options": [
+              "Quedan juntos",
+              "Conservan necesariamente Ec",
+              "No conservan momento aunque estén aislados"
+            ],
+            "answer": 0,
+            "explanation": "Se conserva p total si está aislado; Ec puede transformarse.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "Un watt equivale a…",
+          "options": [
+            "J/s",
+            "J·s",
+            "N/m"
+          ],
+          "answer": 0,
+          "explanation": "Potencia es energía por tiempo.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Duplicar rapidez a masa fija multiplica Ec por…",
+          "options": [
+            "2",
+            "4",
+            "1/2"
+          ],
+          "answer": 1,
+          "explanation": "Ec depende de v².",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Dos masas iguales en x = 0 y x = 6 tienen xCM…",
+          "options": [
+            "0",
+            "3",
+            "6"
+          ],
+          "answer": 1,
+          "explanation": "El promedio ponderado coincide con el punto medio.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Para e = 1, un choque ideal aislado es…",
+          "options": [
+            "Elástico",
+            "Perfectamente inelástico",
+            "Siempre explosivo"
+          ],
+          "answer": 0,
+          "explanation": "Se conserva Ec y la velocidad relativa de separación iguala la de aproximación.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "mecanica/energia-choques/",
+      "order": 4
+    },
+    {
+      "id": "oaf-rotacion-gravitacion",
+      "area": "mecanica",
+      "slug": "rotacion-gravitacion",
+      "title": "Rotación, gravitación y relatividad",
+      "topics": [
+        "Torque, cuerpo rígido y momentos de inercia",
+        "Momento angular y conservación",
+        "Gravitación universal, campo, órbitas y leyes de Kepler",
+        "Energía gravitatoria y elementos de relatividad especial"
+      ],
+      "labs": [
+        "rotation",
+        "orbit"
+      ],
+      "before": "Antes: usá segunda ley, energía y componentes. Para rotación medí ángulos en radianes en las ecuaciones.",
+      "lessons": [
+        {
+          "title": "Cambiar una rotación requiere torque",
+          "text": [
+            "El efecto rotacional de una fuerza depende de su brazo perpendicular respecto del eje: τ = rF sinθ. El momento de inercia I describe cómo se distribuye la masa respecto de ese eje. No es igual a la masa ni depende solo de cuánta hay.",
+            "Para un eje fijo en un cuerpo rígido, τneto = Iα si I es constante. Un aro y un disco de igual M y R tienen I distintos: MR² y ½MR². Elegir otro eje modifica I. La energía cinética rotacional es ½Iω²."
+          ],
+          "formula": "τ = rF sinθ · τneto = Iα · Erot = ½Iω²",
+          "example": [
+            "Un disco uniforme de 2 kg y radio 1 m gira respecto de su centro.",
+            "I = ½×2×1² = 1 kg·m².",
+            "Con τ = 3 N·m, α = 3 rad/s²."
+          ],
+          "task": "Calculá I y aceleración angular, indicando el eje.",
+          "memory": {
+            "cue": "«Masa lejos del eje cuesta más de girar».",
+            "reason": "I suma contribuciones proporcionales a r²; alejar la misma masa aumenta la resistencia al cambio de rotación."
+          },
+          "trap": "No apliques I = MR² a cualquier cuerpo: describe un aro ideal respecto de su eje central.",
+          "check": {
+            "prompt": "Alejar masas del eje, con masa total fija, suele…",
+            "options": [
+              "Aumentar I",
+              "Disminuir I siempre",
+              "No afectar I"
+            ],
+            "answer": 0,
+            "explanation": "La contribución de cada masa incluye el cuadrado de su distancia al eje.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Conservar momento angular no es conservar rapidez",
+          "text": [
+            "Sin torque externo neto respecto de un eje, el momento angular total permanece constante. Si una persona retrae masas mientras gira, I disminuye y ω aumenta para conservar L. El proceso requiere trabajo interno y puede aumentar energía cinética rotacional.",
+            "Para un modelo de rotación simple L = Iω. En movimiento de una partícula se usa r⃗ × p⃗. No confundas torque, que cambia L, con L mismo. La conservación depende del eje elegido y del torque externo respecto de él."
+          ],
+          "formula": "L = Iω · τext = ΔL/Δt",
+          "example": [
+            "I inicial = 2 kg·m² y ω inicial = 3 rad/s.",
+            "L = 6 kg·m²/s.",
+            "Si I se reduce a 1 kg·m² sin torque externo, ω = 6 rad/s."
+          ],
+          "task": "Calculá ω y explicá por qué no tiene que conservarse la energía cinética de la rotación.",
+          "memory": {
+            "cue": "«Brazos adentro, giro más rápido».",
+            "reason": "La asociación vale cuando el torque externo es despreciable. La persona aporta trabajo al cambiar su configuración."
+          },
+          "trap": "No supongas que conservar L conserva también ω o Ec si cambia I.",
+          "check": {
+            "prompt": "Si I se duplica sin torque externo, ω…",
+            "options": [
+              "Se duplica",
+              "Se reduce a la mitad",
+              "No cambia"
+            ],
+            "answer": 1,
+            "explanation": "Iω debe mantener el mismo valor.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Gravedad y órbitas",
+          "text": [
+            "La gravitación de Newton relaciona masas y distancia entre sus centros. El campo g⃗ es fuerza gravitatoria por unidad de masa de prueba. Fuera de una distribución esférica se comporta como el de una masa puntual; cerca de la superficie se aproxima g constante en alturas pequeñas.",
+            "Una órbita circular necesita aceleración centrípeta que puede aportar la gravedad. Las leyes de Kepler describen elipses, áreas iguales en tiempos iguales y T² proporcional a a³ para cuerpos que orbitan el mismo astro, despreciando su masa frente al central."
+          ],
+          "formula": "g = GM/r² · vcircular = √(GM/r) · T² = 4π²r³/(GM)",
+          "example": [
+            "Un satélite circular pasa de radio r a 4r alrededor del mismo astro.",
+            "La rapidez circular se reduce por √4: queda v/2.",
+            "El período crece por 4^(3/2) = 8: queda 8T."
+          ],
+          "task": "Compará rapidez y período, sin confundir radio orbital con altura sobre la superficie.",
+          "memory": {
+            "cue": "«Más lejos: menos tirón y vuelta más larga».",
+            "reason": "La gravedad baja con r², mientras la trayectoria orbital crece. Combinadas producen T² proporcional a r³."
+          },
+          "trap": "En órbitas, r se mide desde el centro del astro, no desde su superficie.",
+          "check": {
+            "prompt": "Al duplicar distancia a una masa puntual, g…",
+            "options": [
+              "Se duplica",
+              "Se reduce a 1/4",
+              "Se reduce a 1/2"
+            ],
+            "answer": 1,
+            "explanation": "La dependencia es inversa con r².",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Energía gravitatoria y límites clásicos",
+          "text": [
+            "La energía potencial gravitatoria con cero en el infinito es −GMm/r. Escapar requiere energía total suficiente para no volver, sin contar aire ni propulsión posterior. La expresión mgh es una aproximación local, no una ley para cualquier distancia orbital.",
+            "La relatividad especial conserva la rapidez de la luz c entre observadores inerciales. Las diferencias temporales y longitudes dependen del marco; a bajas velocidades recuperamos aproximadamente Newton. La energía en reposo E₀ = mc² no significa que toda energía se transforme libremente en masa en cualquier proceso."
+          ],
+          "formula": "Ep = −GMm/r · vescape = √(2GM/r) · γ = 1/√(1 − v²/c²)",
+          "example": [
+            "Un reloj se mueve a 0,60c respecto de un marco inercial.",
+            "γ = 1/√(1 − 0,36) = 1,25.",
+            "Un intervalo propio de 4 s corresponde a 5 s en ese marco para esos eventos del reloj."
+          ],
+          "task": "Calculá γ y diferenciá tiempo propio de tiempo medido en el otro marco.",
+          "memory": {
+            "cue": "«Newton para lo cotidiano; revisá el modelo cerca de c».",
+            "reason": "Las correcciones relativistas no son un cambio arbitrario de unidades: describen mediciones entre marcos."
+          },
+          "trap": "La dilatación temporal requiere identificar eventos y marco; no son dos relojes comparados sin condiciones.",
+          "check": {
+            "prompt": "La rapidez de escape ideal desde r es respecto de la circular en r…",
+            "options": [
+              "√2 veces mayor",
+              "Igual",
+              "La mitad"
+            ],
+            "answer": 0,
+            "explanation": "√(2GM/r) = √2·√(GM/r).",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "La unidad de torque es…",
+          "options": [
+            "N·m",
+            "kg/m",
+            "m/s"
+          ],
+          "answer": 0,
+          "explanation": "Es fuerza por brazo perpendicular; no se interpreta igual que trabajo aunque comparta dimensiones.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Un torque externo neto cero permite conservar…",
+          "options": [
+            "Momento angular",
+            "Cualquier rapidez angular",
+            "Toda energía cinética individual"
+          ],
+          "answer": 0,
+          "explanation": "Es la condición dinámica sobre L respecto del eje.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Para un mismo astro central, Kepler relaciona…",
+          "options": [
+            "T² con a³",
+            "T con a",
+            "T³ con a²"
+          ],
+          "answer": 0,
+          "explanation": "a es semieje mayor; para circular coincide con r.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "En Ep = −GMm/r, el cero de referencia está…",
+          "options": [
+            "En el infinito",
+            "En toda superficie",
+            "En r = 0"
+          ],
+          "answer": 0,
+          "explanation": "Con esa referencia, la energía potencial de masas ligadas es negativa.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "mecanica/rotacion-gravitacion/",
+      "order": 5
+    },
+    {
+      "id": "oaf-fluidos",
+      "area": "mecanica",
+      "slug": "fluidos",
+      "title": "Fluidos: presión, empuje y flujo",
+      "topics": [
+        "Hidrostática y presión con profundidad",
+        "Principio de Pascal",
+        "Principio de Arquímedes y flotación",
+        "Continuidad y Bernoulli; condiciones de aplicación"
+      ],
+      "labs": [
+        "buoyancy"
+      ],
+      "before": "Antes: distinguí presión de fuerza y volumen de masa. Usá energía y despejes de proporciones.",
+      "lessons": [
+        {
+          "title": "Presión en un fluido quieto",
+          "text": [
+            "En un fluido en reposo, la presión aumenta con profundidad por el peso del fluido superior. A igual profundidad en un mismo líquido conectado, la presión es igual en el modelo hidrostático, aunque el recipiente tenga otra forma.",
+            "La presión absoluta incluye la ejercida en la superficie. La presión manométrica mide la diferencia respecto del ambiente. La fuerza sobre una superficie plana con presión uniforme es pA; si p varía con profundidad hay que integrar o usar presión media en casos simples."
+          ],
+          "formula": "p = psuperficie + ρgh · F = pA si p es uniforme",
+          "example": [
+            "En agua ρ = 1000 kg/m³, a 2 m, con g = 10.",
+            "El aumento hidrostático es 20000 Pa.",
+            "Si psuperficie = 100000 Pa, p absoluta = 120000 Pa."
+          ],
+          "task": "Calculá presión manométrica y absoluta a esa profundidad.",
+          "memory": {
+            "cue": "«Más columna encima, más presión debajo».",
+            "reason": "No es el volumen total de agua lo que entra en ρgh, sino densidad, gravedad y profundidad."
+          },
+          "trap": "No uses presión manométrica cuando una ecuación requiere presión absoluta.",
+          "check": {
+            "prompt": "A igual profundidad en agua conectada en reposo, la presión…",
+            "options": [
+              "Es igual",
+              "Depende solo del ancho del recipiente",
+              "Es cero"
+            ],
+            "answer": 0,
+            "explanation": "Bajo las mismas condiciones de superficie, p depende de h, ρ y g.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Pascal transforma fuerza, no crea energía",
+          "text": [
+            "Una variación de presión aplicada a un fluido confinado se transmite en el modelo estático ideal. Una prensa hidráulica utiliza áreas distintas para relacionar fuerzas. La fuerza puede aumentar, pero el desplazamiento del pistón grande disminuye en proporción.",
+            "Para un fluido ideal incompresible, el volumen desplazado es el mismo a ambos lados. Las pérdidas reales hacen que el trabajo útil sea menor que el de entrada. Compará cambios de presión y tené en cuenta desniveles si son relevantes."
+          ],
+          "formula": "F₁/A₁ = F₂/A₂ · A₁d₁ = A₂d₂",
+          "example": [
+            "Un pistón tiene 2 cm² y el otro 20 cm².",
+            "Con 10 N en el pequeño se obtienen idealmente 100 N en el grande.",
+            "Si el pequeño baja 10 cm, el grande sube 1 cm."
+          ],
+          "task": "Calculá fuerza y desplazamiento de salida y compará los trabajos.",
+          "memory": {
+            "cue": "«Ganás fuerza, pagás recorrido».",
+            "reason": "La prensa ideal intercambia fuerza por distancia; no multiplica la energía entregada."
+          },
+          "trap": "Igual presión no significa igual fuerza si las áreas son diferentes.",
+          "check": {
+            "prompt": "Multiplicar por diez el área del pistón de salida a igual presión hace que su fuerza…",
+            "options": [
+              "Se multiplique por diez",
+              "No cambie",
+              "Se reduzca diez veces"
+            ],
+            "answer": 0,
+            "explanation": "F = pA.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Empuje y flotación",
+          "text": [
+            "El empuje es el peso del fluido desplazado, no el peso del objeto. Para un cuerpo parcialmente sumergido, usá solo el volumen bajo la superficie. En equilibrio flotante, empuje y peso se igualan; si está totalmente sumergido y sostenido también interviene la fuerza del soporte.",
+            "Un objeto flota parcialmente cuando su densidad media es menor que la del fluido y puede desplazar suficiente volumen. Un cuerpo hueco puede flotar aunque el material de su pared sea más denso que el agua, porque importa la densidad media del conjunto."
+          ],
+          "formula": "E = ρfluido g Vsumergido · Fracción sumergida = ρobjeto/ρfluido al flotar",
+          "example": [
+            "Un cuerpo homogéneo tiene densidad 600 kg/m³ en agua de 1000.",
+            "Para flotar: ρagua g Vs = ρobjeto g Vtotal.",
+            "Vs/Vtotal = 0,60: queda sumergido el 60 %."
+          ],
+          "task": "Deducí la fracción sumergida y explicá qué fuerzas se equilibran.",
+          "memory": {
+            "cue": "«Arquímedes pesa el agua desplazada».",
+            "reason": "Más volumen sumergido en el mismo líquido implica mayor empuje; la masa del objeto no aparece directamente en esa expresión."
+          },
+          "trap": "No uses el volumen total si parte del cuerpo está fuera del líquido.",
+          "check": {
+            "prompt": "Si duplicás Vsumergido en el mismo líquido, el empuje…",
+            "options": [
+              "Se duplica",
+              "Se reduce a la mitad",
+              "Siempre iguala al peso"
+            ],
+            "answer": 0,
+            "explanation": "E es proporcional al volumen desplazado.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Continuidad y Bernoulli",
+          "text": [
+            "Para flujo estacionario incompresible sin fugas, el caudal Av es constante. Un estrechamiento aumenta la rapidez media si el mismo caudal lo atraviesa. Bernoulli relaciona presión, energía cinética y potencial por volumen a lo largo de una línea de corriente ideal.",
+            "Aplicalo con sus condiciones: viscosidad despreciable, sin máquinas que agreguen trabajo entre los puntos y con pérdidas no relevantes. En un tubo horizontal ideal, más rapidez corresponde a menos presión estática; no conviertas esa relación en una regla universal para cualquier flujo."
+          ],
+          "formula": "A₁v₁ = A₂v₂ · p + ½ρv² + ρgh = constante",
+          "example": [
+            "Un tubo horizontal reduce su área a la mitad.",
+            "Para el mismo caudal, v₂ = 2v₁.",
+            "Si v₁ = 2 m/s y ρ = 1000, p₁ − p₂ = ½ρ(4² − 2²) = 6000 Pa."
+          ],
+          "task": "Calculá la rapidez y la diferencia de presión, indicando el modelo.",
+          "memory": {
+            "cue": "«En un paso angosto, el mismo caudal acelera».",
+            "reason": "Continuidad fija la rapidez; el balance energético explica el cambio de presión bajo condiciones ideales."
+          },
+          "trap": "No apliques Bernoulli sin considerar bombas o grandes pérdidas por fricción.",
+          "check": {
+            "prompt": "En flujo incompresible estacionario sin fugas, al reducir A a la mitad, v…",
+            "options": [
+              "Se duplica",
+              "Se reduce a la mitad",
+              "No cambia"
+            ],
+            "answer": 0,
+            "explanation": "El producto Av debe mantenerse.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "ρgh tiene unidades de…",
+          "options": [
+            "Presión",
+            "Masa",
+            "Velocidad"
+          ],
+          "answer": 0,
+          "explanation": "kg/m³ × m/s² × m = N/m².",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Una prensa ideal conserva entre entrada y salida…",
+          "options": [
+            "Trabajo",
+            "Fuerza sin importar área",
+            "Distancia sin importar área"
+          ],
+          "answer": 0,
+          "explanation": "La ganancia de fuerza se compensa con menor recorrido.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Un objeto más denso que el agua, totalmente sumergido y suelto, inicialmente…",
+          "options": [
+            "Tiende a hundirse",
+            "Siempre flota",
+            "No tiene peso"
+          ],
+          "answer": 0,
+          "explanation": "Su peso supera el empuje en el modelo simple.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Bernoulli ideal debe aplicarse considerando…",
+          "options": [
+            "Condiciones del flujo y posibles pérdidas",
+            "Solo que haya agua",
+            "Cualquier turbulencia sin cambios"
+          ],
+          "answer": 0,
+          "explanation": "Las hipótesis delimitan el balance válido.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "mecanica/fluidos/",
+      "order": 6
+    },
+    {
+      "id": "oaf-calor",
+      "area": "termica",
+      "slug": "calor",
+      "title": "Temperatura, calor y cambios de estado",
+      "topics": [
+        "Termometría, escalas y equilibrio térmico",
+        "Calorimetría y calor específico",
+        "Cambios de estado y calor latente",
+        "Conducción, convección, radiación y balances térmicos"
+      ],
+      "labs": [
+        "mixing"
+      ],
+      "before": "Antes: trabajá con masa, proporciones y conservación de energía. Distinguí temperatura de energía transferida.",
+      "lessons": [
+        {
+          "title": "Temperatura no es calor",
+          "text": [
+            "Temperatura caracteriza el estado térmico; calor es energía transferida por diferencia de temperatura. Al poner cuerpos en contacto, en condiciones habituales el calor fluye netamente del más caliente al más frío hasta equilibrio. Dos cuerpos a igual T pueden tener distinta energía interna.",
+            "Las diferencias en kelvin y Celsius tienen el mismo valor numérico: ΔT = 10 K equivale a un aumento de 10 °C. Las temperaturas absolutas no son iguales: 20 °C = 293,15 K. Los cocientes de gas y de eficiencia térmica requieren kelvin."
+          ],
+          "formula": "T(K) = t(°C) + 273,15 · t(°F) = 1,8t(°C) + 32",
+          "example": [
+            "Un termómetro pasa de 20 °C a 30 °C.",
+            "Las temperaturas son 293,15 y 303,15 K.",
+            "El aumento es 10 K, no 283,15 K."
+          ],
+          "task": "Convertí ambas temperaturas y el cambio sin confundir escala con intervalo.",
+          "memory": {
+            "cue": "«Temperatura dice el estado; calor cuenta lo que se transfiere».",
+            "reason": "Un vaso y una pileta a igual temperatura no almacenan la misma energía interna total."
+          },
+          "trap": "No sumes 273,15 a una diferencia de temperaturas.",
+          "check": {
+            "prompt": "Un aumento de 5 °C equivale a…",
+            "options": [
+              "5 K",
+              "278,15 K",
+              "−268,15 K"
+            ],
+            "answer": 0,
+            "explanation": "Los intervalos tienen el mismo tamaño en ambas escalas.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Calor específico y mezclas",
+          "text": [
+            "Si no cambia el estado y c es aproximadamente constante, Q = mcΔT. El calor específico describe energía por masa y por cambio de temperatura. La capacidad calorífica C = mc corresponde al cuerpo completo.",
+            "En una mezcla ideal aislada sin reacción, sumá los calores con signo: lo perdido por una parte se gana en la otra. Incluí el calorímetro cuando sea relevante. El promedio simple de temperaturas solo vale con capacidades caloríficas iguales."
+          ],
+          "formula": "ΣQ = 0 · Tf = (m₁c₁T₁ + m₂c₂T₂)/(m₁c₁ + m₂c₂)",
+          "example": [
+            "Mezclás 100 g de agua a 20 °C y 300 g a 60 °C, sin pérdidas.",
+            "Tf = (100×20 + 300×60)/400.",
+            "Tf = 50 °C, no 40 °C."
+          ],
+          "task": "Calculá Tf y justificá por qué queda más cerca de 60 °C.",
+          "memory": {
+            "cue": "«La temperatura final pesa capacidades, no opiniones».",
+            "reason": "La muestra con mayor mc necesita ceder o absorber más energía por cada grado y pesa más en el balance."
+          },
+          "trap": "No promedies temperaturas sin revisar masas y calores específicos.",
+          "check": {
+            "prompt": "Duplicar m a igual c y ΔT requiere un calor…",
+            "options": [
+              "Doble",
+              "Mitad",
+              "Igual"
+            ],
+            "answer": 0,
+            "explanation": "Q es proporcional a m.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Energía sin subir temperatura",
+          "text": [
+            "Durante un cambio de fase de una sustancia pura a presión fija puede entrar o salir energía sin cambiar T. Esa energía modifica la organización e interacciones entre partículas, no aumenta simplemente la energía cinética media.",
+            "El calor latente específico se expresa en J/kg. Un problema con hielo que se calienta, funde y luego se calienta como agua se separa en tramos. Antes de suponer fusión completa, comprobá si la energía disponible alcanza."
+          ],
+          "formula": "Qfase = mL · Qtotal = suma de tramos mcΔT y mL",
+          "example": [
+            "Fundís 0,10 kg de hielo a 0 °C; Lf = 334000 J/kg.",
+            "Q = 0,10×334000.",
+            "Se necesitan 33400 J para obtener agua a 0 °C."
+          ],
+          "task": "Calculá la energía y explicá por qué el agua no termina automáticamente por encima de 0 °C.",
+          "memory": {
+            "cue": "«En la meseta, la energía cambia la fase».",
+            "reason": "La constancia de temperatura durante el cambio ideal no significa que no se transfiera calor."
+          },
+          "trap": "No uses mcΔT para sustituir el término de fusión cuando ΔT = 0.",
+          "check": {
+            "prompt": "En la fusión ideal de hielo puro a presión fija, la energía aportada…",
+            "options": [
+              "Puede entrar con T constante",
+              "Es necesariamente cero",
+              "Siempre eleva T de inmediato"
+            ],
+            "answer": 0,
+            "explanation": "Se emplea en el cambio de estado.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Tres caminos de transferencia",
+          "text": [
+            "Conducción transmite energía mediante interacciones microscópicas sin transporte macroscópico de materia. Convección implica movimiento de un fluido. Radiación electromagnética puede transferir energía incluso en vacío.",
+            "Aislantes reducen ciertos mecanismos, no todos. Una superficie intercambia radiación en ambos sentidos; el flujo neto depende de su temperatura y la del entorno. Un balance real incluye pérdidas; no las atribuyas automáticamente a errores de medición."
+          ],
+          "formula": "Conducción ideal: Q/Δt = kAΔT/L · Radiación neta ≈ εσA(T⁴ − Tentorno⁴)",
+          "example": [
+            "Duplicás el espesor L de una pared, manteniendo todo lo demás.",
+            "En el modelo estacionario, el flujo conductor es inverso a L.",
+            "El calor por segundo se reduce a la mitad."
+          ],
+          "task": "Predecí cómo cambia el flujo y nombrá qué condiciones se mantienen.",
+          "memory": {
+            "cue": "«Conduce sin viaje del fluido; convecta viajando; radia sin necesitar medio».",
+            "reason": "Las tres asociaciones distinguen mecanismos; pueden actuar juntos en una misma situación."
+          },
+          "trap": "Para radiación con T⁴ usá temperatura absoluta, no Celsius.",
+          "check": {
+            "prompt": "La transferencia que puede atravesar el vacío es…",
+            "options": [
+              "Radiación",
+              "Convección de aire",
+              "Conducción a través de agua"
+            ],
+            "answer": 0,
+            "explanation": "La radiación electromagnética no necesita un medio material.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "Kelvin se escribe con símbolo…",
+          "options": [
+            "°K",
+            "K",
+            "kPa"
+          ],
+          "answer": 1,
+          "explanation": "No lleva símbolo de grado.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "En una mezcla ideal aislada, ΣQ es…",
+          "options": [
+            "0",
+            "Siempre positiva",
+            "Siempre negativa"
+          ],
+          "answer": 0,
+          "explanation": "Los intercambios internos se compensan.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "La unidad de calor latente específico es…",
+          "options": [
+            "J/kg",
+            "J/(kg·K)",
+            "K/J"
+          ],
+          "answer": 0,
+          "explanation": "Relaciona energía con masa que cambia de fase.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "El movimiento de agua caliente que transporta energía es…",
+          "options": [
+            "Convección",
+            "Solo radiación",
+            "Ausencia de transferencia"
+          ],
+          "answer": 0,
+          "explanation": "Hay transporte macroscópico de fluido.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "termica/calor/",
+      "order": 7
+    },
+    {
+      "id": "oaf-termodinamica",
+      "area": "termica",
+      "slug": "termodinamica",
+      "title": "Gases, trabajo y máquinas térmicas",
+      "topics": [
+        "Modelo cinético y ecuación del gas ideal",
+        "Procesos P–V y primera ley",
+        "Máquinas térmicas y rendimiento",
+        "Segunda ley, irreversibilidad, sistemas abiertos/cerrados y entropía"
+      ],
+      "labs": [
+        "gas-work",
+        "engine"
+      ],
+      "before": "Antes: distinguí presión, volumen y temperatura absoluta. Repasá balances de energía y áreas bajo curvas.",
+      "lessons": [
+        {
+          "title": "Un modelo microscópico para P, V y T",
+          "text": [
+            "El gas ideal supone partículas de volumen propio despreciable, sin interacciones salvo choques elásticos. La presión resulta del intercambio de momento con paredes; T absoluta se relaciona con energía cinética media de traslación.",
+            "PV = nRT conecta variables macroscópicas. Un sistema cerrado puede intercambiar energía sin intercambiar materia; aislado no intercambia ninguna de las dos. La idealidad es una aproximación que empeora a alta densidad y cerca de condensación."
+          ],
+          "formula": "PV = nRT · R = 8,314 J/(mol·K)",
+          "example": [
+            "0,10 mol a 300 K ocupan 0,0020 m³.",
+            "P = 0,10×8,314×300/0,0020.",
+            "P ≈ 124710 Pa = 124,7 kPa."
+          ],
+          "task": "Calculá P en unidades SI y luego en kPa.",
+          "memory": {
+            "cue": "«Partículas chocan; el sensor promedia».",
+            "reason": "La presión no es una partícula aislada empujando continuamente: emerge del promedio de muchísimos choques."
+          },
+          "trap": "No uses presión manométrica ni grados Celsius directamente en PV = nRT.",
+          "check": {
+            "prompt": "Un recipiente cerrado puede…",
+            "options": [
+              "Intercambiar energía sin materia",
+              "No intercambiar nada por definición",
+              "Perder masa siempre"
+            ],
+            "answer": 0,
+            "explanation": "Cerrado significa sin intercambio de materia; aislado agrega restricciones energéticas.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Primera ley y trabajo de un gas",
+          "text": [
+            "Adoptamos W positivo cuando el gas realiza trabajo sobre el entorno. Entonces ΔU = Q − W. Al expandirse cuasiestáticamente, W es el área bajo P(V); al comprimirse, W es negativo. Existen otras convenciones, por eso declararla importa.",
+            "Para gas ideal, U depende de T. En una transformación isotérmica, ΔU = 0 y Q = W bajo estas condiciones. En un proceso adiabático, Q = 0, pero T puede cambiar: adiabático no significa isotérmico."
+          ],
+          "formula": "ΔU = Q − W · Wisotérmico reversible = nRT ln(Vf/Vi)",
+          "example": [
+            "Un gas absorbe 500 J y realiza 200 J de trabajo.",
+            "ΔU = 500 − 200.",
+            "Su energía interna aumenta 300 J."
+          ],
+          "task": "Calculá ΔU y predecí el signo si el gas fuera comprimido sin intercambio de calor.",
+          "memory": {
+            "cue": "«Lo que entra menos lo que el gas entrega».",
+            "reason": "Q aporta energía y W la transfiere como trabajo hacia afuera en la convención elegida."
+          },
+          "trap": "No mezcles esta convención con ΔU = Q + W donde W se define sobre el sistema.",
+          "check": {
+            "prompt": "Una expansión isotérmica ideal con W > 0 requiere…",
+            "options": [
+              "Q = W",
+              "Q = 0 siempre",
+              "ΔU = W"
+            ],
+            "answer": 0,
+            "explanation": "Si ΔU = 0, la primera ley da Q = W.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Rendimiento de una máquina térmica",
+          "text": [
+            "Una máquina cíclica recibe Qh de una fuente caliente, entrega trabajo W y cede Qc a una fuente fría. En el ciclo ΔU = 0, por lo que W = Qh − Qc. El rendimiento compara trabajo útil con energía recibida, no con energía total intercambiada.",
+            "Entre dos reservorios a Th y Tc, el límite reversible de Carnot es 1 − Tc/Th, con T en kelvin. Un motor real opera por debajo de ese máximo bajo las mismas condiciones. Aumentar Th no garantiza cualquier rendimiento si existen límites materiales y pérdidas."
+          ],
+          "formula": "η = W/Qh = 1 − Qc/Qh · ηCarnot = 1 − Tc/Th",
+          "example": [
+            "Una máquina recibe 1000 J y rechaza 600 J por ciclo.",
+            "W = 400 J.",
+            "η = 400/1000 = 0,40 = 40 %."
+          ],
+          "task": "Calculá trabajo y rendimiento; compará con Carnot para Th = 500 K y Tc = 300 K.",
+          "memory": {
+            "cue": "«No todo el calor de entrada sale como trabajo».",
+            "reason": "El segundo principio impone límites a máquinas cíclicas entre fuentes térmicas."
+          },
+          "trap": "No insertes temperaturas Celsius en el cociente Tc/Th.",
+          "check": {
+            "prompt": "Entre 600 K y 300 K, el máximo ideal de Carnot es…",
+            "options": [
+              "100 %",
+              "50 %",
+              "200 %"
+            ],
+            "answer": 1,
+            "explanation": "1 − 300/600 = 0,5.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Irreversibilidad y entropía",
+          "text": [
+            "Los procesos espontáneos de un sistema aislado no disminuyen su entropía total. Calor que fluye de caliente a frío, rozamiento y mezcla son ejemplos irreversibles habituales. Un sistema puede bajar su entropía si la del entorno aumenta lo suficiente.",
+            "Para un intercambio reversible isotérmico, ΔS = Qrev/T; una trayectoria reversible equivalente permite calcular cambios entre estados aunque el proceso real sea irreversible. Entropía no es sinónimo de energía perdida ni de desorden visual: limita la disponibilidad de transformaciones y contabiliza estados."
+          ],
+          "formula": "ΔStotal ≥ 0 para un sistema aislado · ΔSisotérmica reversible = Qrev/T",
+          "example": [
+            "100 J pasan de un reservorio a 400 K a otro a 300 K.",
+            "ΔStotal = −100/400 + 100/300.",
+            "ΔStotal ≈ +0,0833 J/K: el proceso es compatible con el segundo principio."
+          ],
+          "task": "Calculá la entropía total y explicá por qué las dos fuentes tienen signos opuestos.",
+          "memory": {
+            "cue": "«La energía se conserva; la posibilidad de aprovecharla se degrada».",
+            "reason": "El rozamiento no destruye energía, pero una transformación irreversible genera entropía y limita trabajo recuperable."
+          },
+          "trap": "No impongas ΔS ≥ 0 a cada parte por separado sin contar su entorno.",
+          "check": {
+            "prompt": "Una disminución de entropía de una parte del sistema…",
+            "options": [
+              "Puede ocurrir si se compensa en el conjunto",
+              "Viola siempre el segundo principio",
+              "Significa energía negativa"
+            ],
+            "answer": 0,
+            "explanation": "El criterio corresponde al sistema aislado total.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "Duplicar T absoluta a V y n fijos hace P…",
+          "options": [
+            "Doble",
+            "Mitad",
+            "Igual"
+          ],
+          "answer": 0,
+          "explanation": "P/T se conserva para gas ideal con esas condiciones.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "En un proceso adiabático, por definición…",
+          "options": [
+            "Q = 0",
+            "T es constante siempre",
+            "W = 0 siempre"
+          ],
+          "answer": 0,
+          "explanation": "No hay transferencia de calor; puede haber trabajo y cambio de temperatura.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Un rendimiento 0,25 significa que de 100 J recibidos se obtienen…",
+          "options": [
+            "25 J útiles",
+            "75 J útiles",
+            "125 J útiles"
+          ],
+          "answer": 0,
+          "explanation": "η = W/Qh.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "En un ciclo completo, ΔU es…",
+          "options": [
+            "0",
+            "Igual siempre a Qh",
+            "Igual siempre a W positivo"
+          ],
+          "answer": 0,
+          "explanation": "U es función de estado y el sistema vuelve al estado inicial.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "termica/termodinamica/",
+      "order": 8
+    },
+    {
+      "id": "oaf-electricidad",
+      "area": "electromagnetismo",
+      "slug": "electricidad",
+      "title": "Cargas, campos y circuitos",
+      "topics": [
+        "Carga y ley de Coulomb",
+        "Campo eléctrico vectorial y diferencia de potencial",
+        "Corriente continua, ley de Ohm, resistencias y leyes de Kirchhoff",
+        "Medición con amperímetro/voltímetro, energía eléctrica y potencia"
+      ],
+      "labs": [
+        "circuit",
+        "coulomb"
+      ],
+      "before": "Antes: usá proporciones inversas, vectores y balance de energía. No confundas corriente, voltaje y potencia.",
+      "lessons": [
+        {
+          "title": "Cargas e interacción de Coulomb",
+          "text": [
+            "La carga eléctrica se conserva y puede transferirse entre cuerpos; cargar por frotamiento no crea electrones. Cargas del mismo signo se repelen y de signos opuestos se atraen. La ley de Coulomb describe cargas puntuales o situaciones equivalentes, en el medio especificado.",
+            "La fuerza es vectorial: sumá componentes al considerar varias cargas. El valor k ≈ 8,99×10⁹ N·m²/C² corresponde al vacío, aproximadamente aire en muchas experiencias escolares. A distancias microscópicas o con medios polarizables se requieren otras consideraciones."
+          ],
+          "formula": "F = k|q₁q₂|/r²",
+          "example": [
+            "q₁ = q₂ = 1 μC, separados 0,30 m en vacío.",
+            "F ≈ 8,99×10⁹×10⁻¹²/0,30².",
+            "F ≈ 0,10 N, repulsiva."
+          ],
+          "task": "Calculá módulo y sentido de la fuerza, convirtiendo μC a C.",
+          "memory": {
+            "cue": "«Iguales se alejan; opuestos se acercan».",
+            "reason": "La asociación fija atracción o repulsión, pero el módulo todavía depende de cargas y distancia."
+          },
+          "trap": "No olvides elevar al cuadrado la distancia ni convertir microcoulomb a coulomb.",
+          "check": {
+            "prompt": "Al duplicar r entre las mismas cargas puntuales, F…",
+            "options": [
+              "Se reduce a 1/4",
+              "Se reduce a 1/2",
+              "Se duplica"
+            ],
+            "answer": 0,
+            "explanation": "Coulomb tiene dependencia 1/r².",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Campo y potencial no son lo mismo",
+          "text": [
+            "El campo eléctrico en un punto es la fuerza por unidad de carga de prueba positiva y tiene dirección. El potencial es energía potencial eléctrica por unidad de carga, una magnitud escalar. Las líneas de campo indican dirección de fuerza sobre una carga positiva, no trayectorias obligatorias de cualquier partícula.",
+            "Una diferencia de potencial puede transferir energía al mover carga: ΔEp = qΔV. Para una carga puntual con cero en el infinito, V = kq/r y E = k",
+            "q",
+            "/r². La fuerza sobre una carga negativa apunta en sentido opuesto al campo."
+          ],
+          "formula": "E⃗ = F⃗/qprueba · ΔEp = qΔV · 1 V = 1 J/C",
+          "example": [
+            "Una carga de 2 C atraviesa una caída de potencial de 3 V.",
+            "Su energía potencial cambia qΔV = 2×(−3).",
+            "ΔEp = −6 J; esa energía puede convertirse en otras formas."
+          ],
+          "task": "Calculá el cambio de energía y diferenciá campo de diferencia de potencial.",
+          "memory": {
+            "cue": "«Campo empuja; potencial cuenta energía por carga».",
+            "reason": "La misma diferencia de potencial implica distinta energía para cantidades de carga diferentes."
+          },
+          "trap": "Voltaje no es corriente ni una cantidad de electrones.",
+          "check": {
+            "prompt": "Un electrón en un campo eléctrico recibe fuerza…",
+            "options": [
+              "En sentido opuesto a E",
+              "Siempre en el mismo sentido de E",
+              "Nula siempre"
+            ],
+            "answer": 0,
+            "explanation": "F⃗ = qE⃗ y su carga es negativa.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Corriente y resistencias en un circuito",
+          "text": [
+            "La corriente mide carga que atraviesa una sección por tiempo; su sentido convencional sigue movimiento de carga positiva. En metales, los electrones derivan en sentido contrario. Para un resistor óhmico a condiciones estables, V = IR.",
+            "En serie, la corriente es común y las resistencias se suman. En paralelo, el voltaje es común y se suman conductancias. Kirchhoff expresa conservación de carga en nodos y balance de energía por carga en lazos; no es necesario imaginar que la corriente se consume en una resistencia."
+          ],
+          "formula": "I = Δq/Δt · V = IR · Rserie = ΣR · 1/Rparalelo = Σ(1/R)",
+          "example": [
+            "Dos resistores de 10 Ω en serie se conectan a 6 V.",
+            "Req = 20 Ω.",
+            "I = 6/20 = 0,30 A; cada resistor tiene una caída de 3 V."
+          ],
+          "task": "Calculá resistencia equivalente, corriente y caídas de tensión.",
+          "memory": {
+            "cue": "«Serie comparte corriente; paralelo comparte voltaje».",
+            "reason": "La conexión geométrica determina qué magnitud es igual, no el tamaño del resistor en el dibujo."
+          },
+          "trap": "Una pila ideal fija diferencia de potencial; la corriente depende de la carga conectada.",
+          "check": {
+            "prompt": "Dos resistencias iguales R en paralelo equivalen a…",
+            "options": [
+              "2R",
+              "R/2",
+              "R²"
+            ],
+            "answer": 1,
+            "explanation": "Las dos ramas comparten V y sus corrientes se suman.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Medir y contabilizar potencia",
+          "text": [
+            "Un amperímetro se conecta en serie y se idealiza con resistencia muy baja; un voltímetro se conecta en paralelo y se idealiza con resistencia alta. Conectar incorrectamente puede cambiar o dañar un circuito real: el laboratorio virtual usa una fuente de baja tensión ideal.",
+            "La potencia disipada por un resistor es VI = I²R = V²/R. El consumo de energía depende además del tiempo; kWh es una unidad de energía, no de potencia. En balances, incluí pérdidas internas de la fuente cuando el modelo deje de ser ideal."
+          ],
+          "formula": "P = VI · Energía = PΔt · 1 kWh = 3,6 MJ",
+          "example": [
+            "Un resistor recibe 12 V y conduce 0,50 A.",
+            "P = 6 W.",
+            "Durante 2 min transforma E = 6×120 = 720 J."
+          ],
+          "task": "Calculá potencia y energía, y ubicá los instrumentos para medir V e I.",
+          "memory": {
+            "cue": "«Amperímetro atraviesa; voltímetro compara extremos».",
+            "reason": "La corriente debe pasar por el amperímetro, mientras el voltímetro compara potencial entre dos puntos."
+          },
+          "trap": "No trates kWh como potencia ni W como energía.",
+          "check": {
+            "prompt": "Un voltímetro ideal se conecta…",
+            "options": [
+              "En paralelo",
+              "En serie siempre",
+              "En cortocircuito sin carga"
+            ],
+            "answer": 0,
+            "explanation": "Compara el potencial entre dos puntos sin desviar corriente apreciable.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "1 μC equivale a…",
+          "options": [
+            "10⁻⁶ C",
+            "10⁶ C",
+            "10⁻³ C"
+          ],
+          "answer": 0,
+          "explanation": "El prefijo micro significa una millonésima.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "El campo eléctrico se mide en…",
+          "options": [
+            "N/C",
+            "J·C",
+            "kg/C"
+          ],
+          "answer": 0,
+          "explanation": "Es fuerza por unidad de carga.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Con V fijo, duplicar R hace I…",
+          "options": [
+            "Mitad",
+            "Doble",
+            "Igual"
+          ],
+          "answer": 0,
+          "explanation": "I = V/R para un resistor óhmico.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Un aparato de 100 W durante 10 s transforma…",
+          "options": [
+            "1000 J",
+            "10 J",
+            "1000 W"
+          ],
+          "answer": 0,
+          "explanation": "E = Pt = 100×10.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "electromagnetismo/electricidad/",
+      "order": 9
+    },
+    {
+      "id": "oaf-magnetismo",
+      "area": "electromagnetismo",
+      "slug": "magnetismo",
+      "title": "Magnetismo, inducción y tecnologías",
+      "topics": [
+        "Imanes, campo de corrientes y fuerzas magnéticas",
+        "Fuerza entre corrientes, motores y dínamos",
+        "Flujo, Faraday, Lenz y transformadores",
+        "Corriente alterna, semiconductores y superconductividad"
+      ],
+      "labs": [
+        "induction"
+      ],
+      "before": "Antes: distinguí fuerza, campo y energía. Repasá cómo varía una magnitud con el tiempo y qué significa una pendiente.",
+      "lessons": [
+        {
+          "title": "Campo magnético y fuerzas",
+          "text": [
+            "Un imán permanente genera un campo magnético. Alrededor de un conductor recto con corriente, el campo rodea el cable; una regla de mano derecha conecta corriente convencional y sentido del campo. Corrientes paralelas del mismo sentido se atraen, bajo condiciones ideales largas.",
+            "La fuerza magnética sobre una carga móvil es q v⃗ × B⃗: depende de velocidad y orientación. Es perpendicular a la velocidad y por sí sola no cambia la rapidez de la partícula. Un campo eléctrico, en cambio, puede hacer trabajo directo sobre una carga."
+          ],
+          "formula": "|Fm| = |q|vB sinθ · Fconductor = BIL sinθ",
+          "example": [
+            "Un tramo de 0,20 m lleva 2 A perpendicular a B = 0,50 T.",
+            "F = BIL.",
+            "F = 0,20 N; su dirección se obtiene con el producto vectorial."
+          ],
+          "task": "Calculá el módulo y explicá por qué cambiar el sentido de corriente invierte la fuerza.",
+          "memory": {
+            "cue": "«El campo magnético desvía; no acelera la rapidez por sí solo».",
+            "reason": "La fuerza perpendicular cambia dirección de la velocidad, no su energía cinética en ese caso."
+          },
+          "trap": "No uses F = qB para una carga quieta: falta la velocidad y la orientación.",
+          "check": {
+            "prompt": "Una carga en reposo en un campo magnético uniforme recibe fuerza magnética…",
+            "options": [
+              "Cero",
+              "qB",
+              "Siempre máxima"
+            ],
+            "answer": 0,
+            "explanation": "La fuerza magnética incluye v; si v = 0, es nula.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Inducir es cambiar flujo",
+          "text": [
+            "El flujo magnético depende del campo, del área y del ángulo entre campo y normal de la superficie. Una variación de flujo enlazado induce fem; un flujo grande pero constante no basta. Faraday relaciona la tasa de cambio con el voltaje inducido.",
+            "Lenz fija el sentido: la respuesta se opone al cambio que la origina. No significa que se oponga siempre al campo existente. Si un imán queda quieto respecto de la bobina en un campo estacionario, la fem inducida se anula; moverlo más rápido puede aumentar la señal."
+          ],
+          "formula": "Φ = BA cosθ · ε = −N ΔΦ/Δt",
+          "example": [
+            "El flujo por espira aumenta 0,002 Wb en 0,10 s, con N = 50.",
+            "El módulo de fem es 50×0,002/0,10.",
+            "El módulo de ε es 1,0 V; el signo depende del sentido de referencia y Lenz."
+          ],
+          "task": "Calculá la fem y distinguí flujo de tasa de cambio de flujo.",
+          "memory": {
+            "cue": "«Sin cambio, no hay inducción».",
+            "reason": "Un imán quieto puede aportar campo y flujo, pero no induce fem si nada relevante cambia."
+          },
+          "trap": "No interpretes el signo menos como una tensión necesariamente negativa en cualquier conexión del voltímetro.",
+          "check": {
+            "prompt": "Mantener un imán quieto frente a una bobina fija produce, en régimen estacionario…",
+            "options": [
+              "Fem inducida nula",
+              "Fem máxima permanente",
+              "Corriente sin energía de entrada"
+            ],
+            "answer": 0,
+            "explanation": "El flujo no cambia con el tiempo.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Motores, generadores y corriente alterna",
+          "text": [
+            "Un motor convierte energía eléctrica en mecánica mediante fuerzas y torques; un generador convierte trabajo mecánico en energía eléctrica por inducción. No producen energía de la nada. Un transformador ideal transfiere energía entre bobinas mediante flujo variable.",
+            "Una tensión sinusoidal cambia de signo; su valor eficaz es el de una tensión continua que produce igual potencia media en una resistencia. En un transformador ideal V₂/V₁ = N₂/N₁ y potencia de entrada igual a salida. Una corriente continua estable no mantiene la transformación ideal por flujo variable."
+          ],
+          "formula": "Vef = Vmáx/√2 para seno · V₂/V₁ = N₂/N₁",
+          "example": [
+            "Transformador ideal con N₁ = 200 y N₂ = 100, V₁ef = 12 V.",
+            "V₂ef = 12×100/200.",
+            "V₂ef = 6 V; si entrega más corriente, no implica crear potencia."
+          ],
+          "task": "Calculá el voltaje de salida y explicá el balance energético ideal.",
+          "memory": {
+            "cue": "«Motor recibe electricidad; generador recibe giro».",
+            "reason": "La dirección de conversión cambia, pero ambos respetan conservación de energía y tienen pérdidas reales."
+          },
+          "trap": "No confundas valor máximo con eficaz de una señal alterna.",
+          "check": {
+            "prompt": "Una tensión sinusoidal con pico de 10 V tiene valor eficaz…",
+            "options": [
+              "10√2 V",
+              "10/√2 V",
+              "0 V porque promedia cero"
+            ],
+            "answer": 1,
+            "explanation": "El valor eficaz depende del promedio de V², no del promedio simple de V.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Semiconductores y superconductividad",
+          "text": [
+            "En un semiconductor, la estructura electrónica permite controlar portadores mediante dopaje, temperatura o luz. Una unión p–n conduce de manera asimétrica y permite rectificación; el modelo de diodo ideal es una aproximación, no una ley de Ohm para todos los dispositivos.",
+            "Un superconductor presenta resistencia eléctrica nula en ciertas condiciones y efectos magnéticos característicos como expulsión de flujo. Existen límites de temperatura, campo y corriente. Superconductividad no significa que un aparato completo sea 100 % eficiente ni que cualquier metal frío alcance ese estado."
+          ],
+          "formula": "Resistor óhmico: V = IR · Un diodo no tiene una R constante para todo V",
+          "example": [
+            "Un circuito conecta un diodo ideal y resistencia a una fuente alterna.",
+            "En una orientación conduce solo en un semiperíodo.",
+            "La señal de corriente se rectifica; la resistencia todavía disipa energía."
+          ],
+          "task": "Explicá por qué el diodo no se describe como el mismo resistor en ambos sentidos.",
+          "memory": {
+            "cue": "«Semiconductor se controla; superconductor exige condiciones».",
+            "reason": "Son fenómenos diferentes: no interpretes «super» como simplemente una conductividad algo mayor."
+          },
+          "trap": "Resistencia cero en un material no elimina todas las pérdidas de un sistema real.",
+          "check": {
+            "prompt": "La conducción asimétrica de una unión p–n permite…",
+            "options": [
+              "Rectificar",
+              "Crear energía",
+              "Hacer constante cualquier voltaje sin circuito"
+            ],
+            "answer": 0,
+            "explanation": "Puede favorecer un sentido de corriente bajo condiciones apropiadas.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "La unidad SI de campo magnético es…",
+          "options": [
+            "Tesla",
+            "Volt",
+            "Newton"
+          ],
+          "answer": 0,
+          "explanation": "B se expresa en T.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Duplicar N a igual variación de flujo por espira produce fem…",
+          "options": [
+            "Doble",
+            "Mitad",
+            "Igual"
+          ],
+          "answer": 0,
+          "explanation": "La fem es proporcional a N.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Un generador ideal entrega energía eléctrica a partir de…",
+          "options": [
+            "Trabajo mecánico",
+            "Nada",
+            "Solo un campo estático sin movimiento ni cambio"
+          ],
+          "answer": 0,
+          "explanation": "La inducción transforma la energía aportada al movimiento.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "La superconductividad depende de…",
+          "options": [
+            "Condiciones críticas del material",
+            "Solo ser un buen conductor a ambiente",
+            "Que no haya electrones"
+          ],
+          "answer": 0,
+          "explanation": "Temperatura, campo y corriente pueden limitar el estado superconductor.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "electromagnetismo/magnetismo/",
+      "order": 10
+    },
+    {
+      "id": "oaf-ondas-sonido",
+      "area": "ondas",
+      "slug": "ondas-sonido",
+      "title": "Ondas, sonido y superposición",
+      "topics": [
+        "Amplitud, fase, frecuencia, período y longitud de onda",
+        "Ondas transversales/longitudinales y propagación",
+        "Interferencia, difracción y resonancia",
+        "Sonido, ondas estacionarias y efecto Doppler"
+      ],
+      "labs": [
+        "wave"
+      ],
+      "before": "Antes: leé gráficos y usá proporciones. Separá oscilación local de propagación de una perturbación.",
+      "lessons": [
+        {
+          "title": "Oscilar no es viajar con la onda",
+          "text": [
+            "Una onda transporta energía e información mediante una perturbación. Las partes del medio oscilan alrededor de posiciones de equilibrio sin acompañar necesariamente a la onda a grandes distancias. En ondas mecánicas el medio importa; las electromagnéticas pueden propagarse en vacío.",
+            "Amplitud mide el máximo alejamiento del equilibrio. Longitud de onda mide separación espacial entre puntos de igual fase. El período es tiempo por ciclo y la frecuencia, ciclos por segundo. No confundas una gráfica espacial con la historia temporal de un punto."
+          ],
+          "formula": "f = 1/T · v = λf",
+          "example": [
+            "Una onda se propaga a 12 m/s con f = 3 Hz.",
+            "λ = v/f.",
+            "La longitud de onda es 4 m y el período 1/3 s."
+          ],
+          "task": "Calculá λ y T, distinguiendo qué distancia y qué tiempo representan.",
+          "memory": {
+            "cue": "«La gente hace la ola sin correr por la tribuna».",
+            "reason": "La perturbación avanza mientras cada parte oscila localmente; es una analogía, no una descripción de todo tipo de onda."
+          },
+          "trap": "No identifiques rapidez de propagación con rapidez instantánea de una partícula del medio.",
+          "check": {
+            "prompt": "Si v permanece fija y duplicás f, λ…",
+            "options": [
+              "Se reduce a la mitad",
+              "Se duplica",
+              "No cambia"
+            ],
+            "answer": 0,
+            "explanation": "λ = v/f.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Superponer y encontrar diferencias de fase",
+          "text": [
+            "En un medio lineal, la perturbación total es la suma de las contribuciones. Dos ondas coherentes pueden reforzarse o cancelarse según diferencia de fase. Cancelación local no significa destrucción global de energía: el patrón redistribuye intensidades.",
+            "La difracción es la expansión de una onda al pasar por una abertura o bordear un obstáculo; es más notable cuando su tamaño es comparable con λ. Interferencia y difracción permiten interpretar luz como onda, pero no sustituyen todos sus comportamientos cuánticos."
+          ],
+          "formula": "Desfase = 2π Δcamino/λ · Refuerzo: Δcamino = mλ",
+          "example": [
+            "Dos ondas iguales llegan con diferencia de camino λ/2.",
+            "El desfase es π rad.",
+            "En ese punto ideal están en oposición y sus desplazamientos se cancelan."
+          ],
+          "task": "Calculá el desfase y explicá la condición para cancelación completa.",
+          "memory": {
+            "cue": "«Cresta con cresta suma; cresta con valle resta».",
+            "reason": "La cancelación total requiere amplitudes iguales y oposición de fase, no solo dos ondas cualesquiera."
+          },
+          "trap": "No llames difracción a todo cambio de dirección de una onda: reflexión y refracción son procesos distintos.",
+          "check": {
+            "prompt": "La difracción es más notable si la abertura es…",
+            "options": [
+              "Comparable con λ",
+              "Siempre infinitamente grande",
+              "Independiente de λ"
+            ],
+            "answer": 0,
+            "explanation": "La relación entre tamaño de abertura y longitud de onda controla el efecto.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Sonido y ondas estacionarias",
+          "text": [
+            "El sonido en aire se propaga mediante compresiones y rarefacciones longitudinales. Mayor frecuencia suele percibirse como tono más agudo; intensidad y percepción de sonoridad son conceptos diferentes. Una onda estacionaria se forma por superposición adecuada de ondas opuestas, con nodos y vientres.",
+            "En una cuerda ideal fija en ambos extremos, L = nλ/2. La resonancia ocurre cuando un sistema responde fuertemente cerca de ciertas frecuencias propias, con pérdidas que limitan la amplitud. No toda oscilación forzada produce amplitud infinita."
+          ],
+          "formula": "Cuerda fija: fn = nv/(2L) · Aire cerca de 20 °C: vsonido ≈ 343 m/s",
+          "example": [
+            "Una cuerda de 1 m tiene v = 100 m/s y extremos fijos.",
+            "f₁ = 100/(2×1).",
+            "La fundamental es 50 Hz; el segundo modo es 100 Hz."
+          ],
+          "task": "Calculá las dos frecuencias y ubicá nodos en los extremos.",
+          "memory": {
+            "cue": "«Frecuencia cambia el tono; amplitud cambia la intensidad del modelo».",
+            "reason": "No confundas gritar más fuerte con emitir una frecuencia mayor."
+          },
+          "trap": "La intensidad sonora no determina por sí sola el tono.",
+          "check": {
+            "prompt": "En un nodo ideal de una onda estacionaria, el desplazamiento es…",
+            "options": [
+              "Siempre cero",
+              "Siempre máximo",
+              "Igual a la longitud de onda"
+            ],
+            "answer": 0,
+            "explanation": "Las contribuciones se cancelan permanentemente allí.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Doppler y lectura de información",
+          "text": [
+            "La frecuencia observada puede diferir de la emitida cuando fuente y receptor se mueven relativamente respecto del medio. Una fuente que se acerca comprime los frentes de onda delante de ella y produce mayor frecuencia recibida en el caso simple.",
+            "En sonido, las velocidades se comparan con el medio. Las fórmulas para luz requieren relatividad y no se intercambian directamente. El cambio de tono de una sirena al pasar no exige que la fuente cambie la frecuencia que emite; cambia la recepción."
+          ],
+          "formula": "Fuente sonora acercándose, receptor quieto: fobs = femit·v/(v − vfuente)",
+          "example": [
+            "Una fuente emite 500 Hz y se acerca a 34,3 m/s, con v = 343 m/s.",
+            "fobs = 500×343/(343 − 34,3).",
+            "fobs ≈ 556 Hz."
+          ],
+          "task": "Calculá la frecuencia recibida y comparala con la emitida.",
+          "memory": {
+            "cue": "«Al acercarse, los frentes llegan más seguidos».",
+            "reason": "El receptor cuenta más ciclos por segundo aunque el mecanismo emisor mantenga su oscilación."
+          },
+          "trap": "No uses la fórmula sonora simple para una galaxia o una fuente de luz a velocidad relativista.",
+          "check": {
+            "prompt": "Una sirena se aleja de un receptor quieto en aire. El tono observado suele ser…",
+            "options": [
+              "Más grave",
+              "Más agudo",
+              "Necesariamente igual"
+            ],
+            "answer": 0,
+            "explanation": "Los frentes llegan más separados temporalmente.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "El período de una onda de 5 Hz es…",
+          "options": [
+            "0,2 s",
+            "5 s",
+            "20 s"
+          ],
+          "answer": 0,
+          "explanation": "T = 1/f.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Dos ondas en fase de igual amplitud A suman un máximo de…",
+          "options": [
+            "2A",
+            "0",
+            "A/2"
+          ],
+          "answer": 0,
+          "explanation": "Los desplazamientos se suman en el modelo lineal.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "El sonido en aire es principalmente…",
+          "options": [
+            "Longitudinal",
+            "Una cuerda transversal",
+            "Una onda que no necesita materia"
+          ],
+          "answer": 0,
+          "explanation": "La oscilación de compresión es paralela a propagación.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Al alejarse una fuente sonora subsónica del receptor quieto, f observada…",
+          "options": [
+            "Disminuye",
+            "Aumenta siempre",
+            "Se hace negativa"
+          ],
+          "answer": 0,
+          "explanation": "Las separaciones entre frentes crecen hacia el receptor.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "ondas/ondas-sonido/",
+      "order": 11
+    },
+    {
+      "id": "oaf-optica",
+      "area": "optica-materia",
+      "slug": "optica",
+      "title": "Luz, imágenes e instrumentos",
+      "topics": [
+        "Reflexión, espejos planos/esféricos y formación de imágenes",
+        "Refracción, Snell y reflexión total interna",
+        "Lentes convergentes/divergentes y ecuación de lentes",
+        "Prisma, dispersión, lupa, microscopio, telescopio y polarización"
+      ],
+      "labs": [
+        "lens"
+      ],
+      "before": "Antes: medí ángulos respecto de la normal y usá trigonometría. Una convención de signos evita confundir imágenes reales y virtuales.",
+      "lessons": [
+        {
+          "title": "Reflexión y rayos que forman una imagen",
+          "text": [
+            "La reflexión especular conserva el ángulo respecto de la normal: i = r. Un espejo plano produce imagen virtual detrás del espejo a igual distancia que el objeto delante. «Virtual» describe cómo convergen prolongaciones, no una imagen imaginaria sin efectos visuales.",
+            "En espejos curvos, una aproximación paraxial relaciona foco, objeto e imagen. Rayos principales ayudan a construirla, pero no son los únicos rayos que existen. El ojo recibe rayos reflejados reales y los interpreta como procedentes de la posición virtual."
+          ],
+          "formula": "θi = θr · Espejo esférico paraxial: 1/f = 1/do + 1/di",
+          "example": [
+            "Un objeto está a 2 m delante de un espejo plano.",
+            "Su imagen está 2 m detrás.",
+            "La separación objeto–imagen es 4 m."
+          ],
+          "task": "Ubicá objeto e imagen y explicá por qué una pantalla detrás del espejo no captura esa imagen.",
+          "memory": {
+            "cue": "«La normal es el cero del ángulo».",
+            "reason": "Medir respecto de la superficie en vez de la normal cambia la interpretación de la ley."
+          },
+          "trap": "No confundas imagen virtual con una imagen que no puede verse.",
+          "check": {
+            "prompt": "Un rayo incide a 30° de la normal. Se refleja a…",
+            "options": [
+              "30° de la normal",
+              "60° de la normal",
+              "0° siempre"
+            ],
+            "answer": 0,
+            "explanation": "Los ángulos de incidencia y reflexión son iguales.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Refracción y reflexión total",
+          "text": [
+            "Al cruzar una interfaz, la luz puede cambiar rapidez y dirección según índices de refracción. La frecuencia se conserva al atravesar una interfaz estacionaria; la longitud de onda puede cambiar. Snell relaciona ángulos respecto de la normal.",
+            "La reflexión total interna requiere viajar desde mayor n hacia menor n y superar un ángulo crítico. No aparece al ir de aire a vidrio en la interfaz usual. La rapidez de fase en un medio simple es c/n; no confundas menor rapidez con menor frecuencia necesariamente."
+          ],
+          "formula": "n₁ sinθ₁ = n₂ sinθ₂ · sinθc = n₂/n₁ si n₁ > n₂",
+          "example": [
+            "De vidrio n₁ = 1,50 hacia aire n₂ = 1,00.",
+            "sinθc = 1/1,50.",
+            "θc ≈ 41,8°; por encima puede haber reflexión total interna."
+          ],
+          "task": "Calculá el ángulo crítico y explicá por qué exige ese orden de medios.",
+          "memory": {
+            "cue": "«Hacia un índice mayor, más cerca de la normal».",
+            "reason": "La relación de Snell reduce sinθ al entrar en mayor n para los casos de transmisión usuales."
+          },
+          "trap": "El ángulo crítico no existe para reflexión total al pasar de menor n a mayor n.",
+          "check": {
+            "prompt": "Al pasar luz de aire a vidrio en una interfaz estacionaria, se conserva…",
+            "options": [
+              "Frecuencia",
+              "Longitud de onda siempre",
+              "Rapidez siempre"
+            ],
+            "answer": 0,
+            "explanation": "La continuidad temporal mantiene f; v y λ pueden cambiar.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Lentes y aumento",
+          "text": [
+            "Para lentes delgadas y rayos paraxiales usamos 1/f = 1/do + 1/di. Con objeto real, do > 0; lente convergente f > 0 y divergente f < 0. Imagen real tiene di > 0 en esta convención y puede capturarse en pantalla.",
+            "El aumento transversal m = −di/do indica tamaño relativo y orientación. En una convergente, un objeto dentro del foco produce imagen virtual y derecha; fuera del foco puede dar real e invertida. No uses la ecuación exactamente en do = f esperando una imagen a distancia finita."
+          ],
+          "formula": "di = f do/(do − f) · m = −di/do",
+          "example": [
+            "f = +10 cm y do = 30 cm.",
+            "di = 10×30/(30 − 10) = 15 cm.",
+            "m = −0,5: imagen real, invertida y de mitad de altura."
+          ],
+          "task": "Calculá distancia, tipo, orientación y tamaño relativo de la imagen.",
+          "memory": {
+            "cue": "«El signo cuenta dónde; el aumento cuenta cómo se ve».",
+            "reason": "di negativo ubica una imagen virtual en la convención elegida; m negativo indica inversión."
+          },
+          "trap": "No borres signos para obtener una distancia positiva por comodidad.",
+          "check": {
+            "prompt": "Una imagen con di > 0 y m < 0 en esta convención es…",
+            "options": [
+              "Real e invertida",
+              "Virtual y derecha",
+              "Siempre mayor"
+            ],
+            "answer": 0,
+            "explanation": "El tipo y orientación salen de signos distintos.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Prismas, instrumentos y polarización",
+          "text": [
+            "La dispersión ocurre porque n depende de la frecuencia: un prisma desvía componentes de luz blanca en ángulos distintos. Un filtro de color y un polarizador no realizan la misma selección. La polarización describe orientación del campo de una onda transversal.",
+            "Una lupa usa una lente para producir una imagen angularmente ampliada bajo condiciones adecuadas. Microscopios y telescopios combinan elementos con funciones distintas; aumento no equivale a resolución. La difracción limita distinguir detalles aunque una imagen se agrande mucho."
+          ],
+          "formula": "Polarizadores ideales: I = I₀ cos²θ para luz inicialmente polarizada",
+          "example": [
+            "Luz linealmente polarizada atraviesa un analizador a 60°.",
+            "I/I₀ = cos²60°.",
+            "La intensidad transmitida es 1/4 de la inicial."
+          ],
+          "task": "Calculá la fracción transmitida y distinguí polarización de dispersión de colores.",
+          "memory": {
+            "cue": "«Agrandar no inventa detalle».",
+            "reason": "La resolución depende de apertura, longitud de onda y sistema óptico, no solo del aumento."
+          },
+          "trap": "No apliques Malus a luz no polarizada sin considerar primero su transmisión por el primer polarizador ideal.",
+          "check": {
+            "prompt": "La separación de colores por un prisma se debe a…",
+            "options": [
+              "Dispersión del índice",
+              "Cambio de masa del fotón",
+              "Conservación de todos los ángulos"
+            ],
+            "answer": 0,
+            "explanation": "Cada frecuencia puede tener un índice distinto en el material.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "La imagen de un espejo plano es…",
+          "options": [
+            "Virtual",
+            "Siempre capturable detrás en una pantalla",
+            "Necesariamente invertida verticalmente"
+          ],
+          "answer": 0,
+          "explanation": "Las prolongaciones de rayos sitúan la imagen detrás del espejo.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Reflexión total interna requiere ir de…",
+          "options": [
+            "Mayor n a menor n",
+            "Menor n a mayor n",
+            "Cualquier medio a cualquier ángulo"
+          ],
+          "answer": 0,
+          "explanation": "Además se debe superar θc.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Con f = 10 cm y do = 20 cm, di es…",
+          "options": [
+            "20 cm",
+            "10 cm",
+            "−20 cm"
+          ],
+          "answer": 0,
+          "explanation": "1/di = 1/10 − 1/20 = 1/20.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Dos polarizadores ideales cruzados con luz apropiada transmiten idealmente…",
+          "options": [
+            "Cero",
+            "Toda la intensidad",
+            "El doble"
+          ],
+          "answer": 0,
+          "explanation": "cos²90° = 0.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "optica-materia/optica/",
+      "order": 12
+    },
+    {
+      "id": "oaf-radiacion-materia",
+      "area": "optica-materia",
+      "slug": "radiacion-materia",
+      "title": "Fotones, espectros y núcleo",
+      "topics": [
+        "Espectro electromagnético y relación energía–frecuencia",
+        "Efecto fotoeléctrico, cuantificación y efecto Compton",
+        "Espectros atómicos/moleculares y modelos de materia",
+        "Núcleo, fuerzas nucleares, estabilidad, decaimiento, E = mc², fisión y fusión; aplicaciones médicas"
+      ],
+      "labs": [
+        "photoelectric",
+        "decay"
+      ],
+      "before": "Antes: distinguí frecuencia, longitud de onda y energía. Repasá funciones exponenciales y potencias de diez.",
+      "lessons": [
+        {
+          "title": "Energía de un fotón y efecto fotoeléctrico",
+          "text": [
+            "La radiación electromagnética combina descripción ondulatoria y fenómenos que requieren fotones de energía hf. A mayor frecuencia, cada fotón lleva más energía. Aumentar intensidad puede aumentar el número de fotones, sin aumentar la energía de cada uno si f no cambia.",
+            "En el efecto fotoeléctrico ideal, un electrón puede salir si hf supera la función trabajo del material. La energía cinética máxima depende de f, no de la intensidad sola. Un potencial de frenado permite medirla; la emisión real también depende de superficie y eficiencia."
+          ],
+          "formula": "Efotón = hf · Kmax = hf − φ si hf ≥ φ · eVfrenado = Kmax",
+          "example": [
+            "Un fotón tiene 3,0 eV y el metal φ = 2,0 eV.",
+            "Kmax = 1,0 eV.",
+            "El potencial de frenado correspondiente es 1,0 V."
+          ],
+          "task": "Calculá Kmax y Vfrenado; predecí el efecto de duplicar intensidad a igual frecuencia.",
+          "memory": {
+            "cue": "«Frecuencia decide energía por fotón; intensidad cuenta cuántos llegan».",
+            "reason": "Por debajo del umbral, más fotones de la misma baja frecuencia no resuelve la falta de energía en el modelo de un fotón."
+          },
+          "trap": "No atribuyas mayor Kmax solo a una lámpara más intensa a frecuencia fija.",
+          "check": {
+            "prompt": "A frecuencia fija por encima del umbral, subir intensidad aumenta principalmente…",
+            "options": [
+              "Número de electrones emitidos",
+              "Kmax por electrón siempre",
+              "Función trabajo"
+            ],
+            "answer": 0,
+            "explanation": "En el modelo, aumenta el flujo de fotones y emisiones, no hf.",
+            "area": 0,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Ondas y partículas: espectro y Compton",
+          "text": [
+            "Radio, microondas, infrarrojo, visible, ultravioleta, rayos X y gamma forman regiones del espectro electromagnético. No son partículas con distinta rapidez en vacío: todas las frecuencias se propagan a c. La energía por fotón cambia con f y afecta su interacción con materia.",
+            "En dispersión Compton, un fotón intercambia energía y momento con un electrón. La longitud de onda dispersada depende del ángulo en el modelo de electrón libre inicialmente en reposo. Esta evidencia complementa interferencia y difracción; no obliga a elegir una sola imagen clásica para toda la luz."
+          ],
+          "formula": "c = λf · pfotón = h/λ · ΔλCompton = h/(mec)(1 − cosθ)",
+          "example": [
+            "Compará fotones de frecuencia f y 2f.",
+            "El segundo tiene doble energía y mitad de longitud de onda en vacío.",
+            "Ambos se propagan a c."
+          ],
+          "task": "Compará energía, longitud de onda y rapidez de ambos fotones.",
+          "memory": {
+            "cue": "«La luz cambia de color y energía, no de c en vacío».",
+            "reason": "Confundir frecuencia mayor con rapidez mayor produce conclusiones falsas sobre el espectro."
+          },
+          "trap": "No uses el modelo de Compton para toda interacción sin revisar sus condiciones.",
+          "check": {
+            "prompt": "Un fotón de mayor frecuencia en vacío tiene…",
+            "options": [
+              "Mayor energía",
+              "Mayor rapidez que c",
+              "Menor energía"
+            ],
+            "answer": 0,
+            "explanation": "E = hf; la rapidez en vacío sigue siendo c.",
+            "area": 1,
+            "level": "Fundamentos"
+          }
+        },
+        {
+          "title": "Líneas que revelan estructura",
+          "text": [
+            "Los átomos y moléculas presentan estados energéticos cuantizados. Una transición puede absorber o emitir un fotón cuya energía iguala la diferencia entre niveles. Las líneas espectrales ofrecen evidencia de estructura e identificación, bajo condiciones y resolución adecuadas.",
+            "Los espectros moleculares incluyen transiciones electrónicas, vibracionales y rotacionales. Los modelos se contrastan con mediciones; no se observan electrones como planetas en órbitas clásicas exactas. Las aplicaciones diagnósticas y terapéuticas usan distintas interacciones y energías, no toda radiación actúa igual."
+          ],
+          "formula": "ΔE = hf = hc/λ · hc ≈ 1240 eV·nm",
+          "example": [
+            "Una transición emite un fotón de 2,0 eV.",
+            "λ ≈ 1240/2,0.",
+            "La longitud de onda es aproximadamente 620 nm, en el visible."
+          ],
+          "task": "Calculá λ y explicá qué diferencia de energía representa.",
+          "memory": {
+            "cue": "«Cada salto deja una firma de luz».",
+            "reason": "El color emitido corresponde a una diferencia entre niveles, no a cualquier energía elegida de manera continua."
+          },
+          "trap": "No confundas energía del estado final con diferencia entre estado inicial y final.",
+          "check": {
+            "prompt": "Una línea emitida con mayor ΔE tiene en vacío…",
+            "options": [
+              "Menor λ",
+              "Mayor λ",
+              "Misma λ obligatoria"
+            ],
+            "answer": 0,
+            "explanation": "λ = hc/ΔE.",
+            "area": 2,
+            "level": "Aplicación"
+          }
+        },
+        {
+          "title": "Energía nuclear y decaimiento",
+          "text": [
+            "La estabilidad nuclear depende de la competencia entre interacciones nucleares y repulsión eléctrica, entre otros factores. En un decaimiento radiactivo no se predice el instante de un núcleo particular, pero una población grande tiene comportamiento estadístico. La semivida reduce a la mitad la cantidad esperada de núcleos padres.",
+            "Fisión divide un núcleo pesado y fusión une núcleos ligeros en condiciones apropiadas. Si la masa en reposo de productos es menor que la inicial, la diferencia corresponde a energía liberada: ΔE = Δmc². Radiación ionizante requiere protección y procedimientos profesionales; acá se estudian modelos virtuales, no manipulación de fuentes."
+          ],
+          "formula": "N(t) = N₀ 2^(−t/T½) · A = λN · λ = ln2/T½ · ΔE = Δmc²",
+          "example": [
+            "Una población esperada inicial de 800 núcleos tiene T½ = 5 s.",
+            "Tras 10 s transcurren dos semividas.",
+            "Quedan en promedio 800/4 = 200 núcleos padres."
+          ],
+          "task": "Calculá la población esperada y explicá por qué un experimento pequeño no da siempre exactamente ese número.",
+          "memory": {
+            "cue": "«Cada semivida parte lo que queda, no resta lo mismo».",
+            "reason": "La disminución es exponencial. La ley describe poblaciones y probabilidades, no un reloj individual de cada núcleo."
+          },
+          "trap": "No confundas actividad en Bq con energía de cada emisión ni con dosis absorbida.",
+          "check": {
+            "prompt": "Después de tres semividas, la fracción esperada de núcleos padres es…",
+            "options": [
+              "1/3",
+              "1/8",
+              "3/4"
+            ],
+            "answer": 1,
+            "explanation": "Cada semivida multiplica la población por 1/2.",
+            "area": 3,
+            "level": "Aplicación"
+          }
+        }
+      ],
+      "review": [
+        {
+          "prompt": "Si hf < φ en el modelo fotoeléctrico de un fotón, aumentar solo intensidad…",
+          "options": [
+            "No supera el umbral",
+            "Aumenta hf",
+            "Baja φ por definición"
+          ],
+          "answer": 0,
+          "explanation": "Se necesitan fotones de suficiente energía, no solo más de la misma energía insuficiente.",
+          "area": 0,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "En vacío, al duplicar f, λ…",
+          "options": [
+            "Se reduce a la mitad",
+            "Se duplica",
+            "No cambia"
+          ],
+          "answer": 0,
+          "explanation": "c = λf se conserva.",
+          "area": 1,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "Un fotón de 4 eV corresponde aproximadamente a…",
+          "options": [
+            "310 nm",
+            "4960 nm",
+            "1240 nm"
+          ],
+          "answer": 0,
+          "explanation": "1240/4 = 310 nm.",
+          "area": 2,
+          "level": "Aplicación"
+        },
+        {
+          "prompt": "La actividad de una fuente expresa…",
+          "options": [
+            "Decaimientos por tiempo",
+            "Energía por fotón",
+            "Masa por volumen"
+          ],
+          "answer": 0,
+          "explanation": "El becquerel equivale a un decaimiento por segundo.",
+          "area": 3,
+          "level": "Desafío"
+        }
+      ],
+      "path": "optica-materia/radiacion-materia/",
+      "order": 13
+    }
+  ]
+}

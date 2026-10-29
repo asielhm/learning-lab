@@ -17,3 +17,6 @@
 .platform-header nav .oaq-nav-link{background:#e3eee5;border:1px solid #9db6a4;color:#225c4e;font-weight:750;border-radius:7px;padding:10px 15px}
 .year-tile[href="activities/oaq/"]{background:#173f48;border-color:#173f48}.year-tile[href="activities/oaq/"]>span:first-child,.year-tile[href="activities/oaq/"]>span:last-child{color:#e5f2e8}
 @media(min-width:1024px){.year-preview .year-tiles{grid-template-columns:repeat(7,minmax(0,1fr))}}
+.platform-header nav .oaf-nav-link{background:#e2ecf8;border:1px solid #9bb8d1;color:#245d87;font-weight:750;border-radius:7px;padding:10px 15px}.year-tile[href="activities/oaf/"]{background:#274f75;border-color:#274f75}.year-tile[href="activities/oaf/"]>span:first-child,.year-tile[href="activities/oaf/"]>span:last-child{color:#e5f1fb}
+@media(min-width:1024px){.year-preview .year-tiles{grid-template-columns:repeat(8,minmax(0,1fr))}}
+@media(max-width:740px){.platform-header nav{flex-wrap:wrap}}

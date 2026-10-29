@@ -212,4 +212,8 @@ The teacher landing page reports coverage and links to the password-protected Go
 
 ### OAQ · preparación autónoma en español
 
-[OAQ](activities/oaq/) aparece junto a los años y en la cabecera. Incluye Nivel Inicial, Nivel 1 y Nivel 2: 12 series, 48 lecciones con asociaciones explicadas, ejemplos y pistas, 15 investigaciones/talleres guiados y 96 preguntas de repaso. Es el único módulo en español y está diseñado para estudiarlo sin intervención docente. El progreso y los cuadernos permanecen en el navegador; no se envían al panel de Google. Fuente, alcance, modelos y verificaciones: [documentación OAQ](docs/oaq/README.md).
+[OAQ](activities/oaq/) aparece junto a los años y en la cabecera. Incluye Nivel Inicial, Nivel 1 y Nivel 2: 12 series, 48 lecciones con asociaciones explicadas, ejemplos y pistas, 15 investigaciones/talleres guiados y 96 preguntas de repaso. Junto con OAF, forma la preparación en español y está diseñado para estudiarlo sin intervención docente. El progreso y los cuadernos permanecen en el navegador; no se envían al panel de Google. Fuente, alcance, modelos y verificaciones: [documentación OAQ](docs/oaq/README.md).
+
+### OAF · preparación autónoma de física
+
+[OAF](activities/oaf/) aparece junto a los años y OAQ. Basada en las normas aportadas de 2022, incluye seis áreas, 13 unidades, 52 lecciones, 17 investigaciones y 104 preguntas de repaso con pistas, ejemplos y asociaciones explicadas. Nivel 1 y Nivel 2 se presentan como rutas didácticas sobre un programa común; el PDF define básica y extensión, no temarios separados. Los avances y cuadernos son locales y no se envían a Google. Fuente y mantenimiento: [documentación OAF](docs/oaf/README.md).

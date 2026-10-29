@@ -948,6 +948,289 @@
           ]
         }
       ]
+    },
+    {
+      "id": "oaf",
+      "name": "Olimpíada Argentina de Física",
+      "shortName": "OAF",
+      "subjects": [
+        {
+          "id": "herramientas",
+          "name": "Herramientas experimentales",
+          "description": "Medí, estimá incertidumbres y obtené relaciones a partir de gráficos.",
+          "topics": [
+            {
+              "id": "medicion",
+              "name": "Medir, graficar y argumentar",
+              "description": "Unidades SI, notación científica y análisis dimensional · Resolución, repetibilidad, incertidumbre y cifras significativas · Tablas, gráficos, pendiente y estimación de relaciones · Diseño de experiencias, variables y comunicación de resultados",
+              "primaryActivity": "oaf-medicion",
+              "appTitle": "Medir, graficar y argumentar",
+              "activities": [
+                {
+                  "id": "oaf-medicion",
+                  "title": "Medir, graficar y argumentar",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/herramientas/medicion/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mecanica",
+          "name": "Movimientos, mecánica y fluidos",
+          "description": "De encuentros y fuerzas a conservación, rotación, gravitación y fluidos.",
+          "topics": [
+            {
+              "id": "cinematica",
+              "name": "Movimientos y encuentros",
+              "description": "Posición, desplazamiento, rapidez y velocidad; gráficos x(t) y v(t) · MRU y MRUV; encuentros con partidas demoradas y posiciones iniciales diferentes · Caída libre y tiro vertical · Movimiento de proyectiles y descomposición vectorial",
+              "primaryActivity": "oaf-cinematica",
+              "appTitle": "Movimientos y encuentros",
+              "activities": [
+                {
+                  "id": "oaf-cinematica",
+                  "title": "Movimientos y encuentros",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/mecanica/cinematica/"
+                }
+              ]
+            },
+            {
+              "id": "dinamica",
+              "name": "Fuerzas, rozamiento y planos",
+              "description": "Leyes de Newton e interacciones · Diagramas de cuerpo libre y fuerza neta · Rozamiento estático y cinético; planos inclinados · Tensión, cuerpos conectados y elección de sistema",
+              "primaryActivity": "oaf-dinamica",
+              "appTitle": "Fuerzas, rozamiento y planos",
+              "activities": [
+                {
+                  "id": "oaf-dinamica",
+                  "title": "Fuerzas, rozamiento y planos",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/mecanica/dinamica/"
+                }
+              ]
+            },
+            {
+              "id": "energia-choques",
+              "name": "Energía, trabajo y cantidad de movimiento",
+              "description": "Trabajo, energía cinética y potencial; potencia · Conservación y disipación de energía mecánica · Cantidad de movimiento, impulso y centro de masa · Choques elásticos e inelásticos; sistemas aislados",
+              "primaryActivity": "oaf-energia-choques",
+              "appTitle": "Energía, trabajo y cantidad de movimiento",
+              "activities": [
+                {
+                  "id": "oaf-energia-choques",
+                  "title": "Energía, trabajo y cantidad de movimiento",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/mecanica/energia-choques/"
+                }
+              ]
+            },
+            {
+              "id": "rotacion-gravitacion",
+              "name": "Rotación, gravitación y relatividad",
+              "description": "Torque, cuerpo rígido y momentos de inercia · Momento angular y conservación · Gravitación universal, campo, órbitas y leyes de Kepler · Energía gravitatoria y elementos de relatividad especial",
+              "primaryActivity": "oaf-rotacion-gravitacion",
+              "appTitle": "Rotación, gravitación y relatividad",
+              "activities": [
+                {
+                  "id": "oaf-rotacion-gravitacion",
+                  "title": "Rotación, gravitación y relatividad",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/mecanica/rotacion-gravitacion/"
+                }
+              ]
+            },
+            {
+              "id": "fluidos",
+              "name": "Fluidos: presión, empuje y flujo",
+              "description": "Hidrostática y presión con profundidad · Principio de Pascal · Principio de Arquímedes y flotación · Continuidad y Bernoulli; condiciones de aplicación",
+              "primaryActivity": "oaf-fluidos",
+              "appTitle": "Fluidos: presión, empuje y flujo",
+              "activities": [
+                {
+                  "id": "oaf-fluidos",
+                  "title": "Fluidos: presión, empuje y flujo",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/mecanica/fluidos/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "termica",
+          "name": "Fenómenos térmicos",
+          "description": "Conectá temperatura, calor, gases y transformación de energía.",
+          "topics": [
+            {
+              "id": "calor",
+              "name": "Temperatura, calor y cambios de estado",
+              "description": "Termometría, escalas y equilibrio térmico · Calorimetría y calor específico · Cambios de estado y calor latente · Conducción, convección, radiación y balances térmicos",
+              "primaryActivity": "oaf-calor",
+              "appTitle": "Temperatura, calor y cambios de estado",
+              "activities": [
+                {
+                  "id": "oaf-calor",
+                  "title": "Temperatura, calor y cambios de estado",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/termica/calor/"
+                }
+              ]
+            },
+            {
+              "id": "termodinamica",
+              "name": "Gases, trabajo y máquinas térmicas",
+              "description": "Modelo cinético y ecuación del gas ideal · Procesos P–V y primera ley · Máquinas térmicas y rendimiento · Segunda ley, irreversibilidad, sistemas abiertos/cerrados y entropía",
+              "primaryActivity": "oaf-termodinamica",
+              "appTitle": "Gases, trabajo y máquinas térmicas",
+              "activities": [
+                {
+                  "id": "oaf-termodinamica",
+                  "title": "Gases, trabajo y máquinas térmicas",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/termica/termodinamica/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "electromagnetismo",
+          "name": "Electricidad y magnetismo",
+          "description": "Investigá cargas, circuitos, campos e inducción electromagnética.",
+          "topics": [
+            {
+              "id": "electricidad",
+              "name": "Cargas, campos y circuitos",
+              "description": "Carga y ley de Coulomb · Campo eléctrico vectorial y diferencia de potencial · Corriente continua, ley de Ohm, resistencias y leyes de Kirchhoff · Medición con amperímetro/voltímetro, energía eléctrica y potencia",
+              "primaryActivity": "oaf-electricidad",
+              "appTitle": "Cargas, campos y circuitos",
+              "activities": [
+                {
+                  "id": "oaf-electricidad",
+                  "title": "Cargas, campos y circuitos",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/electromagnetismo/electricidad/"
+                }
+              ]
+            },
+            {
+              "id": "magnetismo",
+              "name": "Magnetismo, inducción y tecnologías",
+              "description": "Imanes, campo de corrientes y fuerzas magnéticas · Fuerza entre corrientes, motores y dínamos · Flujo, Faraday, Lenz y transformadores · Corriente alterna, semiconductores y superconductividad",
+              "primaryActivity": "oaf-magnetismo",
+              "appTitle": "Magnetismo, inducción y tecnologías",
+              "activities": [
+                {
+                  "id": "oaf-magnetismo",
+                  "title": "Magnetismo, inducción y tecnologías",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/electromagnetismo/magnetismo/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ondas",
+          "name": "Ondas y sonido",
+          "description": "Medí períodos y longitudes de onda; explicá superposición e interferencia.",
+          "topics": [
+            {
+              "id": "ondas-sonido",
+              "name": "Ondas, sonido y superposición",
+              "description": "Amplitud, fase, frecuencia, período y longitud de onda · Ondas transversales/longitudinales y propagación · Interferencia, difracción y resonancia · Sonido, ondas estacionarias y efecto Doppler",
+              "primaryActivity": "oaf-ondas-sonido",
+              "appTitle": "Ondas, sonido y superposición",
+              "activities": [
+                {
+                  "id": "oaf-ondas-sonido",
+                  "title": "Ondas, sonido y superposición",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/ondas/ondas-sonido/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "optica-materia",
+          "name": "Óptica, radiación y materia",
+          "description": "Construí imágenes y explorá fotones, espectros y fenómenos nucleares.",
+          "topics": [
+            {
+              "id": "optica",
+              "name": "Luz, imágenes e instrumentos",
+              "description": "Reflexión, espejos planos/esféricos y formación de imágenes · Refracción, Snell y reflexión total interna · Lentes convergentes/divergentes y ecuación de lentes · Prisma, dispersión, lupa, microscopio, telescopio y polarización",
+              "primaryActivity": "oaf-optica",
+              "appTitle": "Luz, imágenes e instrumentos",
+              "activities": [
+                {
+                  "id": "oaf-optica",
+                  "title": "Luz, imágenes e instrumentos",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/optica-materia/optica/"
+                }
+              ]
+            },
+            {
+              "id": "radiacion-materia",
+              "name": "Fotones, espectros y núcleo",
+              "description": "Espectro electromagnético y relación energía–frecuencia · Efecto fotoeléctrico, cuantificación y efecto Compton · Espectros atómicos/moleculares y modelos de materia · Núcleo, fuerzas nucleares, estabilidad, decaimiento, E = mc², fisión y fusión; aplicaciones médicas",
+              "primaryActivity": "oaf-radiacion-materia",
+              "appTitle": "Fotones, espectros y núcleo",
+              "activities": [
+                {
+                  "id": "oaf-radiacion-materia",
+                  "title": "Fotones, espectros y núcleo",
+                  "description": "Cuatro lecciones en español, instrumentos interactivos, investigación y repaso con explicaciones.",
+                  "format": "Lección e investigación",
+                  "duration": "A tu ritmo",
+                  "image": "activities/oaf/cover.svg",
+                  "href": "activities/oaf/optica-materia/radiacion-materia/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
