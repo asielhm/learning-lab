@@ -82,16 +82,17 @@
   {
     "id": "algebra-ii",
     "name": "Algebra II",
-    "subtitle": "Translate, collect, expand and solve",
+    "subtitle": "Translate, collect, multiply, expand and solve",
     "dates": "November · bridge to Y8 (2027)",
     "calculator": "Show each equivalent step",
     "goals": [
       "Translate words and situations into algebraic expressions before solving.",
       "Collect like terms and expand simple brackets.",
+      "Add like variable terms and multiply constants and variable terms, explaining a + a = 2a versus a × a = a².",
       "Solve one-, two- and three-step equations, first in N and then in Z.",
       "Solve equations with x on both sides, including an initial bracket."
     ],
-    "description": "Build expressions, collect like terms, expand brackets and solve equations with a balance of equivalent operations.",
+    "description": "Build expressions, collect like terms, multiply constants and variable terms, expand brackets and solve equations with a balance of equivalent operations.",
     "symbol": "x = ?",
     "art": "algebra"
   },

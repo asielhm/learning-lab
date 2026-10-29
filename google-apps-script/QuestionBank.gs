@@ -2,7 +2,7 @@
 var RECORDING_MANIFEST_ = {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1450,
+  "questionCount": 1460,
   "banks": [
     {
       "topic": "algebra",
@@ -15,8 +15,8 @@ var RECORDING_MANIFEST_ = {
       "topic": "algebra-ii",
       "course": "Year 7 Maths",
       "title": "Algebra II",
-      "questionCount": 90,
-      "signature": "e938b350de6ac5065cfb9c3e840b4fab0307a1f219fe9602ae6213d48a1f5373"
+      "questionCount": 100,
+      "signature": "7101f4517b821eafbb68e774cb1182c6774502a180255a18bba1939edc0b78cb"
     },
     {
       "topic": "statistics",
@@ -1978,6 +1978,126 @@ var QUESTION_BANKS_ = {
           "2"
         ],
         "answer": 1
+      },
+      "algebra-ii-091": {
+        "prompt": "Simplify 2 × 3.",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Foundation",
+        "options": [
+          "5",
+          "23",
+          "6",
+          "9"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-092": {
+        "prompt": "Simplify 2a × 3.",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Foundation",
+        "options": [
+          "5a",
+          "6a²",
+          "23a",
+          "6a"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-093": {
+        "prompt": "Simplify 2a × 3a.",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Application",
+        "options": [
+          "6a²",
+          "5a",
+          "6a",
+          "5a²"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-094": {
+        "prompt": "Simplify 2a × 3b.",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Application",
+        "options": [
+          "5ab",
+          "6ab",
+          "6a²",
+          "6a + b"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-095": {
+        "prompt": "Simplify a + a.",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Foundation",
+        "options": [
+          "a²",
+          "a",
+          "2a",
+          "2"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-096": {
+        "prompt": "Simplify 2a + 3a.",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Foundation",
+        "options": [
+          "6a²",
+          "5a²",
+          "6a",
+          "5a"
+        ],
+        "answer": 3
+      },
+      "algebra-ii-097": {
+        "prompt": "Which is the simplified form of 2a + 3b?",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Application",
+        "options": [
+          "2a + 3b",
+          "5ab",
+          "5a",
+          "6ab"
+        ],
+        "answer": 0
+      },
+      "algebra-ii-098": {
+        "prompt": "Simplify 3a² × 2a.",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Challenge",
+        "options": [
+          "5a³",
+          "6a³",
+          "6a²",
+          "6a⁴"
+        ],
+        "answer": 1
+      },
+      "algebra-ii-099": {
+        "prompt": "Simplify (−2a) × (−3a).",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Challenge",
+        "options": [
+          "−6a²",
+          "−5a",
+          "6a²",
+          "6a"
+        ],
+        "answer": 2
+      },
+      "algebra-ii-100": {
+        "prompt": "Let a = 4. What are a² and 2a, in that order?",
+        "category": "Adding and multiplying variable terms",
+        "difficulty": "Application",
+        "options": [
+          "8 and 16",
+          "8 and 8",
+          "16 and 16",
+          "16 and 8"
+        ],
+        "answer": 3
       }
     },
     "title": "Algebra II",
@@ -1990,9 +2110,10 @@ var QUESTION_BANKS_ = {
       "Substitution and connections",
       "One-step equations",
       "Two- and three-step equations",
-      "Unknown on both sides"
+      "Unknown on both sides",
+      "Adding and multiplying variable terms"
     ],
-    "signature": "e938b350de6ac5065cfb9c3e840b4fab0307a1f219fe9602ae6213d48a1f5373"
+    "signature": "7101f4517b821eafbb68e774cb1182c6774502a180255a18bba1939edc0b78cb"
   },
   "statistics": {
     "course": "Year 7 Maths",

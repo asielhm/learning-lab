@@ -85,5 +85,19 @@ for a,b,x,bracket in [(2,3,4,False),(3,-4,7,False),(4,5,-2,False),(5,-3,0,False)
  add(A,7,prompt,x,why,'Application' if x>=0 and not bracket else 'Challenge')
 for a,c,b,x,bracket in [(4,2,5,7,False),(5,2,-3,4,False),(3,1,7,-2,False),(6,2,4,3,False),(2,5,1,-4,False),(3,1,-2,7,True),(4,2,1,5,True),(2,1,-3,-5,True),(5,3,2,4,True),(3,2,-4,0,True)]:
  d=a*(x+b)-c*x if bracket else (a-c)*x+b;left=f'{a}(x + ({b}))' if bracket else f'{a}x + ({b})';add(A,8,f'Solve {left} = {c}x + ({d}).',x,f'{"Expand the bracket, then " if bracket else ""}subtract {c}x from both sides, collect constants and divide by {a-c}. Substitution gives x = {x}.','Challenge')
-assert len(A['questions'])==90
+A['categories'].append('Adding and multiplying variable terms')
+for prompt,correct,wrong,why,level in [
+ ('Simplify 2 × 3.','6',['5','23','9'],'Multiply the two numerical factors: 2 × 3 = 6.','Foundation'),
+ ('Simplify 2a × 3.','6a',['5a','6a²','23a'],'Write 2 × a × 3, then group the numbers: (2 × 3) × a = 6a. There is only one factor of a.','Foundation'),
+ ('Simplify 2a × 3a.','6a²',['5a','6a','5a²'],'Multiply 2 × 3 = 6 and a × a = a². The exponent 2 counts two a factors.','Application'),
+ ('Simplify 2a × 3b.','6ab',['5ab','6a²','6a + b'],'Group the factors: (2 × 3) × (a × b) = 6ab. Different letters remain separate factors.','Application'),
+ ('Simplify a + a.','2a',['a²','a','2'],'Two copies of a add to 2a. This is addition, not a × a.','Foundation'),
+ ('Simplify 2a + 3a.','5a',['6a²','5a²','6a'],'Add coefficients of like terms: (2 + 3)a = 5a. The variable part a stays unchanged.','Foundation'),
+ ('Which is the simplified form of 2a + 3b?','2a + 3b',['5ab','5a','6ab'],'The letters differ, so these are unlike terms. Keep both terms with their own coefficients.','Application'),
+ ('Simplify 3a² × 2a.','6a³',['5a³','6a²','6a⁴'],'There are three a factors: a × a × a. Multiply coefficients 3 × 2 = 6, giving 6a³.','Challenge'),
+ ('Simplify (−2a) × (−3a).','6a²',['−6a²','−5a','6a'],'Two negative coefficients give positive 6; a × a gives a².','Challenge'),
+ ('Let a = 4. What are a² and 2a, in that order?','16 and 8',['8 and 16','8 and 8','16 and 16'],'a² = a × a = 4 × 4 = 16. But 2a = 2 × 4 = 8. The exponent and coefficient have different jobs.','Application')
+]:add(A,9,prompt,correct,why,level,wrong)
+assert len(A['questions'])==100
+
 for b in [S,A]:(ROOT/'assets/revision/questions'/f'{b["topicId"]}.json').write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n');print(b['topicId'],len(b['questions']),'questions')

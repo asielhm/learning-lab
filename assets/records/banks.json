@@ -1,7 +1,7 @@
 {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1450,
+  "questionCount": 1460,
   "banks": [
     {
       "topic": "algebra",
@@ -14,8 +14,8 @@
       "topic": "algebra-ii",
       "course": "Year 7 Maths",
       "title": "Algebra II",
-      "questionCount": 90,
-      "signature": "e938b350de6ac5065cfb9c3e840b4fab0307a1f219fe9602ae6213d48a1f5373"
+      "questionCount": 100,
+      "signature": "7101f4517b821eafbb68e774cb1182c6774502a180255a18bba1939edc0b78cb"
     },
     {
       "topic": "statistics",

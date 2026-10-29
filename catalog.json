@@ -193,14 +193,14 @@
             {
               "id": "algebra-ii",
               "name": "Algebra II",
-              "description": "Build expressions, collect like terms, expand brackets and solve equations with a balance of equivalent operations.",
+              "description": "Build expressions, collect like terms, multiply constants and variable terms, expand brackets and solve equations with a balance of equivalent operations.",
               "primaryActivity": "algebra-ii-lab",
               "appTitle": "Algebra II",
               "activities": [
                 {
                   "id": "algebra-ii-lab",
                   "title": "Algebra II: interactive unit",
-                  "description": "Build expressions, collect like terms, expand brackets and solve equations with a balance of equivalent operations.",
+                  "description": "Build expressions, collect like terms, multiply constants and variable terms, expand brackets and solve equations with a balance of equivalent operations.",
                   "format": "Interactive maths unit",
                   "duration": "Work at your pace",
                   "href": "activities/y7/maths/algebra-ii/",
@@ -209,7 +209,7 @@
                 {
                   "id": "algebra-ii-revision",
                   "title": "Algebra II: revision simulator",
-                  "description": "90 questions covering translation, like terms, brackets and equations.",
+                  "description": "100 questions covering translation, like terms, multiplying terms, brackets and equations.",
                   "format": "Revision simulator",
                   "duration": "Choose your session",
                   "href": "activities/y7/maths/algebra-ii/revision.html",

@@ -10,7 +10,8 @@
     "Substitution and connections",
     "One-step equations",
     "Two- and three-step equations",
-    "Unknown on both sides"
+    "Unknown on both sides",
+    "Adding and multiplying variable terms"
   ],
   "questions": [
     {
@@ -1272,6 +1273,146 @@
       ],
       "answer": 1,
       "explanation": "Expand the bracket, then subtract 2x from both sides, collect constants and divide by 1. Substitution gives x = 0."
+    },
+    {
+      "id": "algebra-ii-091",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Foundation",
+      "prompt": "Simplify 2 × 3.",
+      "options": [
+        "5",
+        "23",
+        "6",
+        "9"
+      ],
+      "answer": 2,
+      "explanation": "Multiply the two numerical factors: 2 × 3 = 6."
+    },
+    {
+      "id": "algebra-ii-092",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Foundation",
+      "prompt": "Simplify 2a × 3.",
+      "options": [
+        "5a",
+        "6a²",
+        "23a",
+        "6a"
+      ],
+      "answer": 3,
+      "explanation": "Write 2 × a × 3, then group the numbers: (2 × 3) × a = 6a. There is only one factor of a."
+    },
+    {
+      "id": "algebra-ii-093",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Application",
+      "prompt": "Simplify 2a × 3a.",
+      "options": [
+        "6a²",
+        "5a",
+        "6a",
+        "5a²"
+      ],
+      "answer": 0,
+      "explanation": "Multiply 2 × 3 = 6 and a × a = a². The exponent 2 counts two a factors."
+    },
+    {
+      "id": "algebra-ii-094",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Application",
+      "prompt": "Simplify 2a × 3b.",
+      "options": [
+        "5ab",
+        "6ab",
+        "6a²",
+        "6a + b"
+      ],
+      "answer": 1,
+      "explanation": "Group the factors: (2 × 3) × (a × b) = 6ab. Different letters remain separate factors."
+    },
+    {
+      "id": "algebra-ii-095",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Foundation",
+      "prompt": "Simplify a + a.",
+      "options": [
+        "a²",
+        "a",
+        "2a",
+        "2"
+      ],
+      "answer": 2,
+      "explanation": "Two copies of a add to 2a. This is addition, not a × a."
+    },
+    {
+      "id": "algebra-ii-096",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Foundation",
+      "prompt": "Simplify 2a + 3a.",
+      "options": [
+        "6a²",
+        "5a²",
+        "6a",
+        "5a"
+      ],
+      "answer": 3,
+      "explanation": "Add coefficients of like terms: (2 + 3)a = 5a. The variable part a stays unchanged."
+    },
+    {
+      "id": "algebra-ii-097",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Application",
+      "prompt": "Which is the simplified form of 2a + 3b?",
+      "options": [
+        "2a + 3b",
+        "5ab",
+        "5a",
+        "6ab"
+      ],
+      "answer": 0,
+      "explanation": "The letters differ, so these are unlike terms. Keep both terms with their own coefficients."
+    },
+    {
+      "id": "algebra-ii-098",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Challenge",
+      "prompt": "Simplify 3a² × 2a.",
+      "options": [
+        "5a³",
+        "6a³",
+        "6a²",
+        "6a⁴"
+      ],
+      "answer": 1,
+      "explanation": "There are three a factors: a × a × a. Multiply coefficients 3 × 2 = 6, giving 6a³."
+    },
+    {
+      "id": "algebra-ii-099",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Challenge",
+      "prompt": "Simplify (−2a) × (−3a).",
+      "options": [
+        "−6a²",
+        "−5a",
+        "6a²",
+        "6a"
+      ],
+      "answer": 2,
+      "explanation": "Two negative coefficients give positive 6; a × a gives a²."
+    },
+    {
+      "id": "algebra-ii-100",
+      "category": "Adding and multiplying variable terms",
+      "difficulty": "Application",
+      "prompt": "Let a = 4. What are a² and 2a, in that order?",
+      "options": [
+        "8 and 16",
+        "8 and 8",
+        "16 and 16",
+        "16 and 8"
+      ],
+      "answer": 3,
+      "explanation": "a² = a × a = 4 × 4 = 16. But 2a = 2 × 4 = 8. The exponent and coefficient have different jobs."
     }
   ]
 }

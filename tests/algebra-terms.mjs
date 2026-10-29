@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import{term,multiplyTerms,termText,parseTerm,checkTerm,addTerms,checkSum,multiplicationCase,multiplyModule}from'../assets/y7-maths/terms.mjs';
+const t=(n,p={})=>term(n,p);
+for(const [left,right,answer]of[[t(2),t(3),'6'],[t(2,{a:1}),t(3),'6a'],[t(2,{a:1}),t(3,{a:1}),'6a²'],[t(2,{a:1}),t(3,{b:1}),'6ab'],[t(3,{a:2}),t(2,{a:1}),'6a³'],[t(-2,{a:1}),t(-3,{a:1}),'6a²'],[t(0),t(5,{b:1}),'0']])assert.equal(termText(multiplyTerms(left,right)),answer);
+for(const raw of['6a²','6a^2','6*a^2','a^2*6'])assert(checkTerm(raw,t(6,{a:2})).correct,raw);
+assert(checkTerm('6ba',t(6,{a:1,b:1})).correct);for(const raw of['6aa','2a*3a','5a','6a','6A²','6a2','6a^0','alert(1)','6/a','6a+2','a^99999999','__proto__',''])assert(!checkTerm(raw,t(6,{a:2})).correct,raw);
+assert.equal(parseTerm('6aa').simplified,false);assert(!checkTerm('0a',t(0)).correct);assert(checkTerm('0',t(0)).correct);
+assert.deepEqual(addTerms(t(2,{a:1}),t(3,{a:1})),[t(5,{a:1})]);assert.deepEqual(addTerms(t(2,{a:1}),t(3,{b:1})),[t(2,{a:1}),t(3,{b:1})]);assert.deepEqual(addTerms(t(2,{a:2}),t(-2,{a:2})),[t(0)]);
+assert(checkSum('3b + 2a',[t(2,{a:1}),t(3,{b:1})]).correct);assert(!checkSum('5ab',[t(2,{a:1}),t(3,{b:1})]).correct);assert(!checkSum('a+a',[t(2,{a:1})]).correct);assert(checkSum('5a^2',[t(5,{a:2})]).correct);
+const base=Object.fromEntries(multiplyModule.controls.map(c=>[c.id,c.value])),evaluate=(v,a,b,x,y,z)=>v.coefficient*Object.entries(v.powers).reduce((s,[l,n])=>s*({a,b,x,y,z}[l]**n),1);
+for(const first of[-3,0,1,2,5])for(const second of[-2,0,1,3])for(const kind of['numbers','constant','same','different','powers']){const v={...base,first,second,kind,stage:3},c=multiplicationCase(v);for(const value of[-2,0,3]){const inputs=[value,4,2,-3,5];assert(evaluate(c.product,...inputs)===evaluate(c.left,...inputs)*evaluate(c.right,...inputs));const sum=addTerms(c.left,c.right);assert(sum.reduce((s,t)=>s+evaluate(t,...inputs),0)===evaluate(c.left,...inputs)+evaluate(c.right,...inputs));}for(const operation of['multiply','add']){const o=multiplyModule.compute({...v,operation});assert(o.practice.validate(o.practice.answer).correct,JSON.stringify({v,operation,answer:o.practice.answer}));}}
+console.log('Algebra terms: board progression, coefficient/exponent distinctions, order equivalence, safe answer parsing, unsimplified answers, like/unlike sums, signs/zero/powers and independent numeric substitution invariants passed.');

@@ -1,4 +1,4 @@
-import {extensionModules} from './extension-modules.mjs';
+import {extensionModules} from './extension-modules.mjs?v=term-products-1';
 import {gcd,lcm,factors,primes,fraction,fracText,add,subtract,multiply,divide,fmt,signed} from './maths.mjs';
 const range=(id,label,min,max,value,step=1)=>({id,label,min,max,value,step,type:'range'});
 const select=(id,label,options,value)=>({id,label,options,value:value??options[0][0],type:'select'});
