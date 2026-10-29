@@ -13,7 +13,8 @@ def integrate():
   if not p.exists():continue
   page=p.read_text();page=re.sub(r'<!-- unit-games:start -->.*?<!-- unit-games:end -->','',page,flags=re.S)
   page=re.sub(r'<link data-unit-games[^>]*>','',page)
-  page=page.replace('</head>','<link data-unit-games rel="stylesheet" href="../../../../assets/unit-games/links.css?v=1"></head>')
+  anchor='<link data-learn-first' if '<link data-learn-first' in page else '</head>'
+  page=page.replace(anchor,'<link data-unit-games rel="stylesheet" href="../../../../assets/unit-games/links.css?v=1">'+anchor,1)
   page=re.sub(r'<a data-unit-games-nav[^>]*>.*?</a>','',page)
   header_end=page.index('</header>');before,after=page[:header_end],page[header_end:]
   last_nav=before.rfind('</nav>')

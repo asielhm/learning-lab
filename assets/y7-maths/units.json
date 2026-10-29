@@ -13,8 +13,7 @@
     ],
     "description": "Investigate primes, factors, multiples, decimals, HCF, LCM, powers, roots and order of operations.",
     "symbol": "24",
-    "art": "numbers",
-    "resource": "https://drive.google.com/file/d/1Bo2jiN49bEt2y3VkDL76_E0ILqHV4FM7/view?usp=drive_link"
+    "art": "numbers"
   },
   {
     "id": "geometry-i",
@@ -30,8 +29,7 @@
     ],
     "description": "Explore shape properties, polygon and parallel-line angles, compass constructions, compound area and perimeter.",
     "symbol": "120°",
-    "art": "geometry",
-    "resource": "https://drive.google.com/file/d/1QiVkg73FKQzHuOpgILpCTPBnODJO7ZlI/view?usp=drive_link"
+    "art": "geometry"
   },
   {
     "id": "numbers-ii",
@@ -47,8 +45,7 @@
     ],
     "description": "Investigate number sets, signed arithmetic, negative bases, powers, roots and BIDMAS with integers.",
     "symbol": "−3",
-    "art": "integers",
-    "resource": "https://drive.google.com/file/d/1A2iLOq-sSWOcNKGH-e9X_gMuPAFkJk4f/view?usp=drive_link"
+    "art": "integers"
   },
   {
     "id": "algebra-i",
@@ -64,8 +61,7 @@
     ],
     "description": "Use variables and coordinates, then connect direct and inverse proportion to stories, tables, formulas and graphs.",
     "symbol": "y=kx",
-    "art": "algebra",
-    "resource": "https://docs.google.com/document/d/1SnsnUrVQ30xjvndB5_U0PUFivnDwjCed/edit"
+    "art": "algebra"
   },
   {
     "id": "numbers-iii",
@@ -81,7 +77,6 @@
     ],
     "description": "Explore ratio sharing, map scales, equivalent fractions, decimals, percentages, discounts and rational-number operations.",
     "symbol": "¾",
-    "art": "fractions",
-    "resource": "https://drive.google.com/file/d/1YkgG-E361w5mAezeoq_DaUQOff4t6MGd/view?usp=drive_link"
+    "art": "fractions"
   }
 ]
