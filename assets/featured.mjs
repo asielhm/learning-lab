@@ -1,0 +1,3 @@
+// Choose uniformly from catalogue activities, excluding the previous visit where possible.
+export function featuredCandidates(catalogue){const seen=new Set(),items=[];for(const year of catalogue.years||[])for(const subject of year.subjects||[])for(const topic of subject.topics||[])for(const activity of topic.activities||[]){if(typeof activity.href!=='string'||!activity.href||seen.has(activity.href))continue;seen.add(activity.href);items.push({year,subject,topic,activity});}return items;}
+export function chooseFeatured(catalogue,previousHref='',random=Math.random){const all=featuredCandidates(catalogue),other=all.filter(item=>item.activity.href!==previousHref),pool=other.length?other:all;return pool.length?pool[Math.floor(random()*pool.length)]:null;}

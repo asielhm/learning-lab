@@ -1,3 +1,4 @@
+import {algebraGames} from './algebra-data.mjs';
 // Original Learning Lab games. Resource links and research limitations: docs/games/README.md.
 const card=(label,bin,detail='')=>({label,bin,detail});
 const sort=(prompt,bins,rows,explanation)=>({kind:'sort',prompt,bins:bins.map((label,i)=>({id:String(i),label})),cards:rows.map(([label,bin,detail])=>card(label,String(bin),detail)),explanation});
@@ -153,4 +154,5 @@ unit('organic','y10','chemistry','organic-chemistry','organic-chemistry','Organi
  round('Build a saturated, unbranched molecule with formula C₆H₁₄.',{carbon:6,hydrogen:14,doubles:0},{carbons:6,bonds:[1,1,1,1,1]},'For an open-chain alkane, H = 2n + 2.','Six carbons connected only by single bonds give C₆H₁₄. Each carbon has a total bond order of four, completed by hydrogen.')
 ]))
 ];
+units.find(u=>u.id==='coordinates').extraGames=algebraGames;
 export const getUnit=id=>units.find(u=>u.id===id);

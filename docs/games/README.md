@@ -1,6 +1,6 @@
 # Learning games for Y7 Maths and Y10 Physics / Chemistry
 
-32 original games across all 16 existing unit pages: six maths units (including both algebra activities), six physics units and four chemistry units. Each unit has a card game and a construction/target puzzle, with three authored rounds each: 96 rounds total. English, computer-first, original SVG illustrations, keyboard and mouse support. No third-party runtime, account or Google calls.
+34 original games across all 16 existing unit pages: six maths units (including both algebra activities), six physics units and four chemistry units. Each unit has a card game and a construction/target puzzle, with three authored rounds each. Algebra I also has two six-mission games: 108 rounds total. English, computer-first, original SVG illustrations, keyboard and mouse support. No third-party runtime, account or Google calls.
 
 ## Online research and provenance (29 October 2026)
 
@@ -69,7 +69,7 @@ Sources:
 
 Authoring: `assets/unit-games/data.mjs`. Pure models: `models.mjs`; vector scenes: `art.mjs`; UI: `games.js`; standalone styles: `games.css`; isolated lesson banner: `links.css`.
 
-Run `python3 tools/build_unit_games.py` after content/art changes. It deterministically generates 16 hubs, 32 game pages, 32 illustrations and one all-games directory. `unit_games_integration.py` idempotently inserts lesson links immediately before the final revision invitation and appends 16 catalogue discovery entries without changing the primary activities. Chemistry and physics page builders call this integration after regeneration.
+Run `python3 tools/build_unit_games.py` after content/art changes. It deterministically generates 16 hubs, 34 game pages, 34 illustrations and one all-games directory. `unit_games_integration.py` idempotently inserts lesson links immediately before the final revision invitation and appends 16 catalogue discovery entries without changing the primary activities. Chemistry and physics page builders call this integration after regeneration.
 
 Checks:
 
@@ -82,3 +82,11 @@ LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/unit-games-motion.cjs
 ```
 
 Browser checks cover all 96 rounds, errors/hints/reveal/retry/scoring, mouse and keyboard, real drag/drop, all three computer viewports, prefixed deployment links and absence of Google requests. Motion checks observe changing geometry/positions, not just CSS class names. Existing desktop layout and unit checks cover lesson integration.
+
+## Two additional Algebra I games
+
+Mystery Machine Mission follows the numerical Mystery/Equations patterns in [PhET Function Builder’s public model documentation](https://github.com/phetsims/function-builder/blob/main/doc/model.md), consulted 29 October 2026. The Basics variant uses images, so it is not described as the numerical source. Students probe inputs, place two operation tiles, and use counterexamples to revise. The model accepts all equivalent affine rules, not just one chosen tile order; fractional results and negative multipliers occur in later challenges. Identity is an explicit Pass through tile.
+
+Proportion Paintworks follows the visual ratio idea in the previously cited Proportion Playground paint documentation. Original mural orders add exact quantities, a constant-product robot crew model, and a two-stage finale. Paint hue is schematic RGB mixing; it does not claim to predict real pigments. Robots have equal rates and no interference. A mission requests completion in exactly the stated time, not merely before a deadline. Final correctness is independent of animation frames and reduced-motion settings.
+
+The two games have six scaffolded missions each, first-class hub/tabs/catalogue links, visible How to play before starting, independent hints/reveal/retry and no recording calls. Authoring: `algebra-data.mjs`; pure rules: `algebra-models.mjs`; vector scenes: `algebra-art.mjs`; controller/style: `algebra-games.js` / `algebra-games.css`. Check `node tests/algebra-games.mjs` and `LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/algebra-games-browser.cjs`.
