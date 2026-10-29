@@ -29,3 +29,7 @@ The tyre temperature slider ranges from −30°C to 70°C. Cooling progressively
 
 
 A fourth example, `examples/syringe-balloon.html`, places a small tied balloon inside a capped syringe. It is linked beside the original syringe example and from all example-page tabs. The total chamber starts at 20 mL: 5 mL inside the balloon and 15 mL of separate surrounding air, both at 101.3 kPa absolute and 20°C. With negligible membrane tension, the ideal pressures balance; each gas sample obeys its own constant PV. At 10 mL total, the balloon is 2.5 mL and pressure 202.6 kPa; at 40 mL total, the balloon is 10 mL and pressure 50.65 kPa. No gas crosses the balloon or syringe seals. `examples/gas-models.mjs` implements this equilibrium model. Balloon dimensions scale with the cube root of its volume. The plunger supports mouse, touch and keyboard; the table records total, balloon and surrounding volumes separately. Real latex membrane tension is a stated limitation.
+
+## Practice games
+
+The lesson now links to [Name That Gas Law](games/picture-law.html) (nine picture models) and [Mystery Word](games/mystery-word.html) (30 clues and common mix-ups with explanations). These are English, computer-first practice activities with no teacher-result submissions. See [games documentation](games/README.md) for scientific assumptions, scoring, optional timers and checks.

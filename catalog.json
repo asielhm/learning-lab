@@ -259,6 +259,24 @@
                   "duration": "Choose your session",
                   "image": "activities/y9/science/gas-laws/cover.svg",
                   "href": "activities/y9/science/gas-laws/revision.html"
+                },
+                {
+                  "id": "gas-laws-picture-game",
+                  "title": "Name That Gas Law",
+                  "description": "Match nine everyday pictures to the changing quantities and their gas law.",
+                  "format": "Picture game",
+                  "duration": "5–10 minutes",
+                  "image": "activities/y9/science/gas-laws/games/images/gas-law-cards.png",
+                  "href": "activities/y9/science/gas-laws/games/picture-law.html"
+                },
+                {
+                  "id": "gas-laws-word-game",
+                  "title": "Mystery Word",
+                  "description": "Solve science clues and untangle commonly confused words with explanations.",
+                  "format": "Vocabulary game",
+                  "duration": "5–10 minutes",
+                  "image": "activities/y9/science/gas-laws/games/images/gas-law-cards.png",
+                  "href": "activities/y9/science/gas-laws/games/mystery-word.html"
                 }
               ],
               "primaryActivity": "gas-laws-lab",
