@@ -41,3 +41,6 @@ p.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n');print('Built 
 # Keep the games discoverable after regenerating lesson shells.
 from unit_games_integration import integrate
 integrate()
+
+from build_learn_first import apply_school_reading
+apply_school_reading()

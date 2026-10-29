@@ -32,3 +32,6 @@ print('Built four Y10 Chemistry pages and revision wrappers; updated the catalog
 # Keep the games discoverable after regenerating lesson shells.
 from unit_games_integration import integrate
 integrate()
+
+from build_learn_first import apply_school_reading
+apply_school_reading()

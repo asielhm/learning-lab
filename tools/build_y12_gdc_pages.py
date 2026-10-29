@@ -21,3 +21,6 @@ for t in manifest['topics']:
  else:subject['topics'][old]=entry
 p.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 print('Built six Y12 Maths entry pages: essentials plus the five IB topic groups.')
+
+from build_learn_first import apply_school_reading
+apply_school_reading()

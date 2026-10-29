@@ -1,0 +1,53 @@
+# Explain first, then investigate
+
+The published curriculum now has a shared reading-first structure across **50 unit entry pages**:
+
+- **OAQ / OAF:** 25 units, with a new topic-specific beginner opening and everyday/industry connection for every one of the 100 existing lessons. The original theory, formulas, worked challenges, memory aids with causal explanations, traps, checks, labs, notebooks and reviews remain. Worked solutions are expanded by default, so a first-time reader can follow them before attempting practical work; they can still be collapsed for independent problem solving.
+- **Published school units:** 25 units: six Y7 Maths pages, three Y9 Science pages, four Y10 Chemistry pages, six Y10 Physics pages and six Y12 Maths pages. Each has an introductory explanation, a causal model, a concrete everyday/industrial example and a navigable chapter of theory and worked examples **before** the interactive practicals/calculator exercises. The chapter contains 118 topic explanations in total. Existing school explanations/examples are reused from the authored manifests where available; new conceptual primers cover anatomy, the gas laws, boxes/brackets and Y12 maths concepts.
+- OAQ and OAF remain Spanish; school pages remain English. Y8 and Y11 are empty catalogue categories, not invented courses.
+- 36 new labelled teaching SVGs supplement the existing 24 Y7 model illustrations that can be read as static worked examples. A figure is used only when it illustrates the concept. Captions distinguish a schematic from an anatomical layout, a particle model from visible pores, and a qualitative curve from a measurement.
+
+The sequence is **start from a familiar idea → explain the relationship → work an example → use a memory aid where provided → predict and investigate → explain and review**. Students can navigate to practicals directly; the reading order supports independent learning without locking controls behind mandatory reading or creating teacher dependency.
+
+The additions are static HTML: explanations and worked examples remain readable with JavaScript disabled. The simulator controllers, personal-data requirements and Google result-recording paths were not changed. New reading material sends no requests to Google or analytics. Existing Test yourself recording remains separate from practice.
+
+## Authoring sources
+
+- `tools/beginner_lessons.py`: 100 original beginner openings and 100 real-life/industry connections, keyed to the existing OAQ/OAF units and four lesson positions. The course builders validate coverage and render the fields into the page and course JSON.
+- `tools/school_reading.py`: introductions, causal explanations and real-world examples for all 25 school unit paths, plus topic content where there was no reusable lesson manifest.
+- `tools/build_learn_first.py`: loads the existing Y7 module default explanations/worked steps and Y10 theory manifests, then renders the school chapter immediately before practicals. Illustrative Y7 SVG markers are namespaced to avoid interfering with live diagrams. It removes and recreates only its own marked block and stylesheet link, so regeneration is idempotent.
+- `tools/learning_figures.py`: original bilingual diagrams and captions. Keep ratios, units and geometry meaningful; do not use a decorative picture as a substitute for an explanation. This generator fixes particle placements without overlap, keeps particle counts under compression/dilution, and scales the lens and catch-up examples consistently.
+- `assets/learn-first/reading.css`: styles scoped to reading blocks. It leaves apparatus controls and experiment workspace layout intact.
+
+`build_oaq.py` and `build_oaf.py` apply enrichment as part of their authoritative generation. Chemistry, physics and Y12 builders reapply the school reading chapter after generating unit shells. The games builder edits a separate marked invitation and preserves the reading chapter.
+
+Regenerate:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 tools/build_oaq.py
+PYTHONDONTWRITEBYTECODE=1 python3 tools/build_oaf.py
+PYTHONDONTWRITEBYTECODE=1 python3 tools/build_learn_first.py
+```
+
+When adding a school unit, add its introduction, concrete context and topic explanations to the sources above. Do not silently fill missing lessons with a repeated generic paragraph. When adding an Olympiad lesson, supply its own opening and application alongside its original theory and worked problem.
+
+## Checks
+
+```sh
+python3 tests/learn-first.py
+python3 tools/validate_catalog.py
+node tests/oaq-models.mjs
+node tests/oaf-models.mjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/learn-first-browser.cjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/oaq-browser.cjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/oaf-browser.cjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/desktop-layout.cjs
+```
+
+The new checks cover all 50 unit pages, all 100 enriched Olympiad lesson controls, 118 school topic chapters, open examples, practical targets and local assets. They verify three computer sizes (1366×768, 1440×900, 1920×1080), static no-JS reading and absence of Google calls. The existing Olympiad suites also replay all practicals, quizzes, notebooks, retries, progress and expanded benches.
+
+## Teaching boundaries
+
+This is preparation, not official certification or a replacement for the governing syllabuses. OAF still follows the shared 2022 programme and editorial base/extension routes; no separate official topic allocation per level is invented. Y12 conceptual primers support the existing AA/AI SL/HL calculator paths and do not claim complete IB course coverage.
+
+Numerical and physical models retain their stated assumptions. The robot proportion game, ideal gas, thin lens, friction and calorimetry examples should be interpreted using those assumptions, not as complete predictions for real equipment. The figures introduce ideas; practical investigations provide additional conditions and measurements.

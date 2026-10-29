@@ -83,6 +83,10 @@
             "explanation": "Aceleración es cambio de velocidad por tiempo: (m/s)/s.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Medir es comparar una magnitud con una unidad elegida. El número solo no alcanza: 3 metros y 3 segundos describen cosas diferentes. Antes de calcular, anotá qué representa cada símbolo y qué unidades deben quedar en el resultado.",
+            "connection": "Al controlar el consumo de un equipo, watts y kilowatt-hora no son intercambiables. El primero expresa rapidez de transferencia de energía; el segundo, una cantidad de energía acumulada."
           }
         },
         {
@@ -114,6 +118,10 @@
             "explanation": "La repetición no corrige un sesgo de calibración.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "El borde de un objeto no siempre coincide exactamente con una marca. Una lectura es una estimación respaldada por instrumento y procedimiento. Repetir ayuda a conocer dispersión; revisar calibración ayuda a reconocer un desplazamiento sistemático.",
+            "connection": "Una pieza mecánica puede necesitar tolerancias pequeñas para encajar. Informar longitud con incertidumbre permite discutir si cumple una especificación, en lugar de decidir por decimales que el instrumento no puede distinguir."
           }
         },
         {
@@ -145,6 +153,10 @@
             "explanation": "Δv/Δt es aceleración; las unidades son m/s².",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Un gráfico conecta dos magnitudes con sus unidades. Cada punto representa una pareja de valores; su pendiente compara cuánto cambia una respecto de la otra. La interpretación depende de los ejes: el mismo aspecto de línea puede contar historias físicas diferentes.",
+            "connection": "En un registro de posición frente al tiempo, una pendiente mayor indica mayor velocidad. En un registro de temperatura frente al tiempo, la pendiente describe otra magnitud: la rapidez de cambio de temperatura."
           }
         },
         {
@@ -176,6 +188,10 @@
             "explanation": "Controlar la masa permite aislar el efecto de la fuerza neta.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Una investigación compara resultados para evaluar una idea. Separá lo que cambiás deliberadamente, lo que medís y lo que intentás mantener igual. Una variación simultánea de varias condiciones dificulta atribuir el efecto observado a una causa específica.",
+            "connection": "Para comparar aislantes, usá recipientes, masas de agua, temperaturas iniciales y tiempos comparables. Si una muestra tiene más agua, una menor caída de temperatura podría deberse a eso y no al aislante."
           }
         }
       ],
@@ -277,6 +293,10 @@
             "explanation": "x = x₀ + vt tiene pendiente v.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Para describir movimiento necesitás un origen, una dirección positiva y un reloj. La posición dice dónde está un cuerpo respecto de ese origen; el desplazamiento compara dos posiciones. No cambies de referencia silenciosamente al escribir ecuaciones de distintos móviles.",
+            "connection": "El seguimiento de un tren usa posiciones y tiempos referidos a un sistema definido. La distancia recorrida por una ruta y el desplazamiento entre estaciones pueden diferir, especialmente si hay cambios de sentido."
           }
         },
         {
@@ -308,6 +328,10 @@
             "explanation": "El tiempo propio de movimiento es 8 − 3 = 5 s.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "En un encuentro, ambos objetos ocupan la misma posición al mismo tiempo. Una salida tardía cambia cuánto tiempo lleva moviéndose uno de ellos. Antes de su partida permanece en su posición inicial: no extiendas hacia atrás su movimiento como si ya hubiera arrancado.",
+            "connection": "En una persecución o servicio de reparto, una ventaja de posición y una ventaja de tiempo producen historias diferentes. Un único reloj permite comparar ambas trayectorias sin confundir duración de viaje con instante de encuentro."
           }
         },
         {
@@ -339,6 +363,10 @@
             "explanation": "La gravedad sigue actuando aunque v sea momentáneamente cero.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Acelerar es cambiar la velocidad, en magnitud o dirección. Una velocidad cero en un instante no implica aceleración cero. En caída libre ideal, la gravedad produce aceleración hacia abajo incluso mientras un objeto lanzado hacia arriba todavía está subiendo.",
+            "connection": "Las pruebas en vacío muestran cómo caen cuerpos sin la diferencia de resistencia del aire que observamos cotidianamente. El modelo de caída libre no afirma que una pluma y una pelota caigan igual en cualquier ambiente."
           }
         },
         {
@@ -370,6 +398,10 @@
             "explanation": "La aceleración horizontal es cero en el modelo.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Descomponer un movimiento significa describir sus componentes con el mismo reloj. Sin resistencia del aire, la gravedad actúa verticalmente; la componente horizontal conserva su velocidad. La trayectoria curva aparece al combinar ambos cambios, no por una fuerza que empuje horizontalmente.",
+            "connection": "Un chorro de agua o un lanzamiento deportivo puede aproximarse como proyectil en ciertas condiciones. El aire, el giro y la propulsión pueden introducir diferencias respecto del modelo ideal que se deben evaluar."
           }
         }
       ],
@@ -471,6 +503,10 @@
             "explanation": "Cada interacción ejerce una fuerza sobre cada uno de los dos cuerpos.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Elegí un cuerpo y dibujalo separado de su entorno. Cada flecha representa una interacción que actúa sobre él, no una propiedad de su movimiento. Las fuerzas de acción y reacción corresponden a cuerpos diferentes y no se cancelan dentro del mismo diagrama.",
+            "connection": "Un ascensor puede moverse hacia arriba mientras la fuerza neta es hacia abajo, si está frenando. Dibujar fuerzas a partir de la dirección del movimiento llevaría a una conclusión equivocada."
           }
         },
         {
@@ -502,6 +538,10 @@
             "explanation": "La velocidad vectorial permanece constante, incluida la posibilidad v = 0.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "La fuerza neta es la suma vectorial de todas las fuerzas sobre el cuerpo. Su efecto es cambiar velocidad, no simplemente mantenerla. La masa relaciona cuánto cambia el movimiento con una fuerza neta dada; no confundas masa con peso.",
+            "connection": "Al empujar un carro, una mayor carga exige más fuerza neta para conseguir la misma aceleración. Si se mueve a velocidad constante, las fuerzas pueden estar equilibradas aunque el motor o la persona sigan transfiriendo energía."
           }
         },
         {
@@ -533,6 +573,10 @@
             "explanation": "El rozamiento se ajusta para equilibrar los 2 N aplicados.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "El rozamiento estático se ajusta hasta cierto máximo; no tiene siempre ese valor máximo. Cuando hay deslizamiento, el modelo cinético aproxima su magnitud. En una pendiente, separá el peso en componentes paralela y perpendicular antes de decidir si el cuerpo se mueve.",
+            "connection": "En una rampa de carga, cambiar inclinación altera tanto la fuerza que favorece el deslizamiento como la normal. Un valor de coeficiente aislado no dice por sí solo si un bloque empezará a deslizar."
           }
         },
         {
@@ -564,6 +608,10 @@
             "explanation": "Las fuerzas internas son iguales y opuestas entre partes del sistema.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Una cuerda ideal vincula movimientos de cuerpos conectados y transmite tensión. Dibujá primero cada cuerpo por separado y luego decidí si conviene analizar el conjunto. Las tensiones internas pueden cancelarse en el balance del sistema sin ser cero sobre cada cuerpo.",
+            "connection": "Un contrapeso en un mecanismo permite intercambiar movimiento con otra carga. La tensión de una cuerda no es automáticamente igual al peso de la masa colgante cuando esa masa acelera."
           }
         }
       ],
@@ -665,6 +713,10 @@
             "explanation": "cos90° = 0 para ese desplazamiento.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "El trabajo conecta una fuerza con un desplazamiento y depende de su componente en esa dirección. La potencia indica qué tan rápido se transfiere energía. Una fuerza grande puede hacer trabajo nulo sobre un cuerpo si su punto de aplicación no se desplaza.",
+            "connection": "Un elevador que sube la misma carga a la misma altura realiza un trabajo gravitatorio comparable, pero necesita mayor potencia media si lo hace en menos tiempo. Energía y rapidez de transferencia responden preguntas distintas."
           }
         },
         {
@@ -696,6 +748,10 @@
             "explanation": "Se transforma y puede transferirse al entorno.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Fijá la frontera del sistema antes de seguir energía. La energía cinética describe movimiento; la potencial representa una interacción en una configuración. El rozamiento no destruye energía total: puede convertir energía mecánica en energía interna y transferirla al entorno.",
+            "connection": "Los frenos de una bicicleta reducen energía cinética y calientan piezas y entorno. Decir que se perdió energía mecánica no significa que la energía desapareció; hay que seguir su transformación."
           }
         },
         {
@@ -727,6 +783,10 @@
             "explanation": "Las fuerzas internas intercambian momento entre partes.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "La cantidad de movimiento combina masa y velocidad, por lo que incluye dirección. Un impulso cambia esa cantidad durante una interacción. Para un sistema, las fuerzas externas determinan su cambio total; las internas intercambian momento entre partes.",
+            "connection": "Un airbag aumenta el tiempo de frenado del ocupante para una variación de momento comparable, reduciendo la fuerza media. El diseño real incluye geometría, contacto y otros límites además de esa relación básica."
           }
         },
         {
@@ -758,6 +818,10 @@
             "explanation": "Se conserva p total si está aislado; Ec puede transformarse.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "En un choque aislado, se conserva el momento total aunque cambie la energía cinética. La elasticidad clasifica esa conservación adicional. Antes de sustituir números, elegí una dirección positiva y conservá los signos de las velocidades de cada cuerpo.",
+            "connection": "En un ensayo de seguridad, parte de la energía cinética pasa a deformación y energía interna. La conservación del momento no obliga a que la energía cinética final sea la misma que antes del impacto."
           }
         }
       ],
@@ -860,6 +924,10 @@
             "explanation": "La contribución de cada masa incluye el cuadrado de su distancia al eje.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Girar un cuerpo alrededor de un eje requiere describir cuánto cambia su movimiento angular. El torque depende de la fuerza y de su brazo perpendicular. El momento de inercia depende de cómo se distribuye la masa respecto del eje, no solo de cuánta masa hay.",
+            "connection": "Una llave larga facilita aflojar una tuerca porque aumenta el brazo de palanca. Empujar casi hacia el eje puede producir poco torque aunque la fuerza tenga gran magnitud."
           }
         },
         {
@@ -891,6 +959,10 @@
             "explanation": "Iω debe mantener el mismo valor.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Si el torque externo neto es despreciable, se conserva el momento angular. Cambiar la distribución de masa puede entonces cambiar la velocidad angular. No deduzcas de esa conservación que también se mantiene la energía cinética de rotación: mover las masas puede requerir trabajo.",
+            "connection": "Un patinador que acerca sus brazos reduce su momento de inercia y aumenta su rapidez de giro. Sus músculos realizan trabajo durante el cambio de configuración; no se crea energía de la nada."
           }
         },
         {
@@ -922,6 +994,10 @@
             "explanation": "La dependencia es inversa con r².",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "La gravedad atrae masas y puede proporcionar la aceleración que curva una órbita. En una órbita circular, la velocidad cambia de dirección continuamente aunque su magnitud sea constante. Distinguí el radio medido desde el centro de la altura sobre la superficie.",
+            "connection": "Los satélites no están libres de gravedad: están en caída continua alrededor de la Tierra. Una órbita de mayor radio tiene relaciones distintas de rapidez y período según el modelo gravitatorio utilizado."
           }
         },
         {
@@ -953,6 +1029,10 @@
             "explanation": "√(2GM/r) = √2·√(GM/r).",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "El cero de energía potencial gravitatoria se elige por convenio. Cerca de la superficie, mgΔh aproxima diferencias pequeñas; a grandes distancias se necesita la dependencia con r. La mecánica clásica también tiene límites de precisión para velocidades o campos extremos.",
+            "connection": "Los sistemas de posicionamiento por satélite requieren correcciones relativistas de relojes. Esa aplicación no invalida usar mecánica clásica para una bicicleta: los modelos se eligen según las condiciones y la precisión requerida."
           }
         }
       ],
@@ -1054,6 +1134,10 @@
             "explanation": "Bajo las mismas condiciones de superficie, p depende de h, ρ y g.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "La presión compara una fuerza normal con el área sobre la que actúa. En un fluido en reposo aumenta con la profundidad porque hay que sostener el fluido situado por encima. Especificá si usás presión absoluta o diferencia respecto del ambiente.",
+            "connection": "Un buzo siente mayor presión al descender, aunque el agua no se vuelva mucho más densa. La presión atmosférica también contribuye a la presión absoluta y no debe omitirse en cualquier cálculo."
           }
         },
         {
@@ -1085,6 +1169,10 @@
             "explanation": "F = pA.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Un cambio de presión en un fluido confinado puede transmitirse a otras zonas. Sobre un pistón mayor, esa misma diferencia de presión produce una fuerza mayor. La contrapartida ideal es un desplazamiento menor: multiplicar fuerza no multiplica energía disponible.",
+            "connection": "Un elevador hidráulico puede levantar una carga grande con una fuerza aplicada menor. Se debe desplazar más recorrido en el pistón pequeño; las pérdidas reales exigen además trabajo adicional."
           }
         },
         {
@@ -1116,6 +1204,10 @@
             "explanation": "E es proporcional al volumen desplazado.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "El fluido ejerce presión en distintas zonas de un cuerpo sumergido. La resultante vertical es el empuje, relacionado con el peso del fluido desplazado. Distinguí volumen total del cuerpo y volumen realmente sumergido al comparar empuje con peso.",
+            "connection": "Un barco de acero puede flotar porque su forma incluye un gran volumen y desplaza suficiente agua. No significa que el acero sólido tenga menor densidad que el agua ni que el empuje dependa solo del material del casco."
           }
         },
         {
@@ -1147,6 +1239,10 @@
             "explanation": "El producto Av debe mantenerse.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Para un flujo estacionario, la conservación de masa vincula áreas y velocidades. Bernoulli relaciona presión, altura y energía cinética bajo hipótesis más restrictivas. No identifiques automáticamente una región rápida con baja presión si cambian otras condiciones o hay aportes y pérdidas.",
+            "connection": "En una tubería que se estrecha puede aumentar la rapidez del agua. Bombas, rozamiento, cambios de altura y turbulencia pueden alterar las relaciones de presión respecto de un modelo ideal sin pérdidas."
           }
         }
       ],
@@ -1248,6 +1344,10 @@
             "explanation": "Los intervalos tienen el mismo tamaño en ambas escalas.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "La temperatura describe un estado térmico; el calor es energía que se transfiere por una diferencia de temperatura. Dos cuerpos a igual temperatura pueden tener masas y energías internas muy distintas. Kelvin y Celsius usan escalas relacionadas, pero sus ceros tienen significados diferentes.",
+            "connection": "Una piscina tibia y una taza tibia pueden tener la misma temperatura, pero requieren cantidades de energía muy diferentes para calentarse el mismo número de grados. Un termómetro no mide energía total almacenada."
           }
         },
         {
@@ -1279,6 +1379,10 @@
             "explanation": "Q es proporcional a m.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Para una misma sustancia sin cambio de estado, el aumento de temperatura depende de la energía recibida y de su masa. El calor específico expresa cuánta energía corresponde por unidad de masa y por grado. En una mezcla aislada, compará pérdidas y ganancias de energía.",
+            "connection": "El agua se usa como fluido térmico porque puede intercambiar mucha energía con cambios moderados de temperatura. En un montaje real también se calientan el recipiente y otros componentes, que el modelo simple puede despreciar."
           }
         },
         {
@@ -1310,6 +1414,10 @@
             "explanation": "Se emplea en el cambio de estado.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Durante un cambio de estado, la energía puede modificar la organización y las interacciones sin aumentar la temperatura de una sustancia pura a presión fija. Separá las etapas de calentamiento y cambio de fase antes de sumar energías.",
+            "connection": "El hielo enfría una bebida tanto al calentarse como al fundirse. La energía de fusión no se calcula como un aumento ficticio de temperatura durante toda la transición."
           }
         },
         {
@@ -1341,6 +1449,10 @@
             "explanation": "La radiación electromagnética no necesita un medio material.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Conducción, convección y radiación describen mecanismos distintos. La conducción no necesita transporte macroscópico de materia; la convección implica movimiento de fluido; la radiación transporta energía mediante ondas electromagnéticas y no necesita un medio material.",
+            "connection": "En una casa pueden actuar los tres mecanismos a la vez. Un aislamiento de pared reduce ciertas transferencias, mientras corrientes de aire y radiación a través de ventanas pueden seguir contribuyendo."
           }
         }
       ],
@@ -1443,6 +1555,10 @@
             "explanation": "Cerrado significa sin intercambio de materia; aislado agrega restricciones energéticas.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Un modelo ideal de gas simplifica las partículas y sus interacciones. Conecta el comportamiento microscópico con presión, volumen, temperatura y cantidad de sustancia. Antes de usar una relación proporcional, elegí qué variables se mantienen constantes y cuáles se dejan cambiar.",
+            "connection": "En una jeringa sellada, comprimir lentamente puede aproximarse a temperatura constante si hay intercambio térmico suficiente. Una compresión rápida puede calentar el gas y seguir otra trayectoria."
           }
         },
         {
@@ -1474,6 +1590,10 @@
             "explanation": "Si ΔU = 0, la primera ley da Q = W.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "La primera ley contabiliza energía transferida como calor y trabajo. Elegí y declará un convenio de signos coherente. El estado final del gas no determina por sí solo cuánto calor y trabajo hubo: esas transferencias dependen de la trayectoria.",
+            "connection": "Un gas puede expandirse y hacer trabajo sobre un pistón. En una expansión isotérmica ideal, su energía interna no cambia, pero eso no significa que calor y trabajo sean ambos cero."
           }
         },
         {
@@ -1505,6 +1625,10 @@
             "explanation": "1 − 300/600 = 0,5.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Una máquina térmica toma energía de una fuente caliente, entrega parte como trabajo y rechaza otra parte hacia una fuente fría. El rendimiento compara trabajo útil con calor absorbido. La segunda ley impone límites, incluso antes de añadir rozamiento u otras pérdidas.",
+            "connection": "Los motores y centrales necesitan transferir energía al entorno además de producir trabajo. Un rendimiento menor que uno no demuestra por sí solo un defecto de diseño: existe una limitación termodinámica."
           }
         },
         {
@@ -1536,6 +1660,10 @@
             "explanation": "El criterio corresponde al sistema aislado total.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "La entropía permite analizar qué cambios globales son compatibles con la segunda ley. Un sistema puede reducir su entropía si el entorno compensa el cambio. No confundas irreversibilidad con imposibilidad de volver visualmente a una configuración mediante otro proceso que consume recursos.",
+            "connection": "Una heladera transfiere calor desde una región fría hacia una más caliente consumiendo trabajo. No contradice la segunda ley: hay que incluir equipo, fuentes de energía y entorno en el balance."
           }
         }
       ],
@@ -1638,6 +1766,10 @@
             "explanation": "Coulomb tiene dependencia 1/r².",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "La carga eléctrica puede ser positiva o negativa. Su interacción tiene dirección y depende de separación y magnitudes. En Coulomb, la ley de inversa del cuadrado se refiere a magnitud para cargas puntuales ideales; los signos permiten decidir atracción o repulsión.",
+            "connection": "Una carga electrostática puede atraer pequeños objetos por redistribución de cargas incluso si el objeto no tenía carga neta inicial. Ese fenómeno requiere distinguir carga total de distribución local."
           }
         },
         {
@@ -1671,6 +1803,10 @@
             "explanation": "F⃗ = qE⃗ y su carga es negativa.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "El campo eléctrico describe fuerza por carga de prueba positiva. El potencial describe energía potencial por unidad de carga respecto de una referencia. Una diferencia de potencial y un campo no son la misma magnitud ni se expresan en las mismas unidades.",
+            "connection": "Una batería establece una diferencia de potencial entre terminales. La fuerza sobre una carga en una zona concreta depende del campo allí presente; no se obtiene tratando los volts como si fueran newtons."
           }
         },
         {
@@ -1702,6 +1838,10 @@
             "explanation": "Las dos ramas comparten V y sus corrientes se suman.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Una corriente es una tasa de paso de carga. Los portadores necesitan un camino conductor cerrado para una corriente sostenida en el modelo de circuito. En serie se comparte corriente; en paralelo, las ramas comparten diferencia de potencial entre sus extremos.",
+            "connection": "Las luces domésticas se conectan de forma que una rama pueda funcionar aunque otra se interrumpa. Eso ayuda a entender por qué desconectar un aparato no corta toda la instalación idealizada."
           }
         },
         {
@@ -1733,6 +1873,10 @@
             "explanation": "Compara el potencial entre dos puntos sin desviar corriente apreciable.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Un instrumento cambia el circuito si su conexión o resistencia no es apropiada. El amperímetro se coloca en serie y el voltímetro en paralelo. La potencia expresa energía por tiempo; la energía total requiere además duración de funcionamiento.",
+            "connection": "Una factura de electricidad utiliza kilowatt-hora. Un aparato de mayor potencia no consume necesariamente más energía total que otro si se usa durante mucho menos tiempo; conviene comparar ambos factores."
           }
         }
       ],
@@ -1834,6 +1978,10 @@
             "explanation": "La fuerza magnética incluye v; si v = 0, es nula.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Un campo magnético interacciona con imanes, corrientes y cargas en movimiento. La fuerza sobre una carga depende también de su velocidad y dirección, no solo del campo. La regla vectorial ayuda a distinguir perpendicularidad de una atracción siempre hacia el imán.",
+            "connection": "Un haz de partículas cargadas puede desviarse en un campo magnético. El modelo permite relacionar trayectoria con carga, masa y velocidad, bajo hipótesis como un campo conocido y pérdidas despreciables."
           }
         },
         {
@@ -1865,6 +2013,10 @@
             "explanation": "El flujo no cambia con el tiempo.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "El flujo magnético combina campo, área y orientación. Una fem inducida aparece cuando cambia el flujo enlazado con un circuito, no por la sola presencia de un imán quieto. Lenz fija un sentido que se opone al cambio que la produce.",
+            "connection": "Al mover un imán respecto de una bobina puede aparecer una señal eléctrica; detenerlo cambia el resultado. Aumentar vueltas o rapidez puede modificar la señal sin convertir la bobina en una fuente ilimitada de energía."
           }
         },
         {
@@ -1896,6 +2048,10 @@
             "explanation": "El valor eficaz depende del promedio de V², no del promedio simple de V.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Un motor convierte energía eléctrica en movimiento, mientras un generador convierte trabajo mecánico en energía eléctrica. La corriente alterna cambia con el tiempo. Un transformador ideal relaciona tensiones y corrientes, pero necesita flujo variable y conserva potencia en su aproximación ideal.",
+            "connection": "La transmisión eléctrica usa tensiones elevadas para reducir ciertas pérdidas al transferir una potencia dada. Un transformador no aumenta simultáneamente tensión, corriente y potencia disponible sin aporte adicional de energía."
           }
         },
         {
@@ -1927,6 +2083,10 @@
             "explanation": "Puede favorecer un sentido de corriente bajo condiciones apropiadas.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Un semiconductor permite controlar conducción mediante composición y condiciones, con electrones y huecos en el modelo. Un superconductor es otro fenómeno: presenta propiedades especiales bajo condiciones críticas. No son dos nombres para un material que conduce simplemente «mejor».",
+            "connection": "Los transistores permiten controlar señales en dispositivos electrónicos. Los imanes superconductores se usan en ciertos equipos médicos, pero requieren condiciones de operación muy diferentes de las de un circuito cotidiano."
           }
         }
       ],
@@ -2028,6 +2188,10 @@
             "explanation": "λ = v/f.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Una onda transmite una perturbación y energía. Las partículas del medio pueden oscilar alrededor de posiciones sin viajar con cada cresta. Separá frecuencia, amplitud y longitud de onda: describen propiedades distintas y no tienen las mismas unidades.",
+            "connection": "Un corcho puede subir y bajar mientras una onda avanza sobre el agua. En el modelo transversal simple, su oscilación ayuda a distinguir movimiento local de propagación de la perturbación."
           }
         },
         {
@@ -2059,6 +2223,10 @@
             "explanation": "La relación entre tamaño de abertura y longitud de onda controla el efecto.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Cuando se superponen ondas, se suman desplazamientos en un modelo lineal. Según la diferencia de fase, pueden reforzarse o reducirse localmente. Cancelación en un lugar no significa que la energía total del sistema haya desaparecido.",
+            "connection": "Los sistemas de cancelación activa de ruido producen una señal para reducir presión sonora en una región. Su eficacia depende de frecuencia, posición y control, y no crea silencio perfecto en cualquier punto."
           }
         },
         {
@@ -2090,6 +2258,10 @@
             "explanation": "Las contribuciones se cancelan permanentemente allí.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "El sonido es una perturbación mecánica que necesita medio. Una onda estacionaria surge por superposición bajo condiciones de contorno; tiene nodos y antinodos. La frecuencia permitida depende de la geometría y de la rapidez de propagación, no solo de cuánto se agita el sistema.",
+            "connection": "Las cuerdas y columnas de aire de instrumentos seleccionan modos de vibración. Cambiar longitud puede cambiar las frecuencias, mientras aumentar amplitud se asocia principalmente con intensidad y no por sí solo con el tono."
           }
         },
         {
@@ -2121,6 +2293,10 @@
             "explanation": "Los frentes llegan más separados temporalmente.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Una fuente puede emitir a frecuencia fija y aun así un observador registrar otra frecuencia si hay movimiento relativo adecuado. Para Doppler en sonido, distinguí movimiento de fuente y observador respecto del medio. Separación entre crestas y frecuencia recibida requieren ese contexto.",
+            "connection": "La sirena de una ambulancia puede oírse más aguda al acercarse y más grave al alejarse. Eso no significa necesariamente que el mecanismo emisor haya cambiado su frecuencia propia durante el paso."
           }
         }
       ],
@@ -2222,6 +2398,10 @@
             "explanation": "Los ángulos de incidencia y reflexión son iguales.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Los rayos indican direcciones de propagación en un modelo geométrico. Para reflexión, medí ángulos desde la normal a la superficie. La posición de una imagen se obtiene siguiendo rayos o sus prolongaciones; no se decide por dónde imaginás que debería estar el objeto.",
+            "connection": "Un espejo plano produce una imagen virtual que parece detrás de él. Los rayos no atraviesan el espejo para juntarse allí: el ojo interpreta sus direcciones como si provinieran de esa posición."
           }
         },
         {
@@ -2253,6 +2433,10 @@
             "explanation": "La continuidad temporal mantiene f; v y λ pueden cambiar.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "Al cruzar una frontera, la frecuencia de la luz se mantiene en un medio estacionario, pero pueden cambiar rapidez y longitud de onda. La desviación depende del ángulo de incidencia. La reflexión total requiere ciertas condiciones, no cualquier paso de un medio a otro.",
+            "connection": "La fibra óptica guía luz aprovechando reflexión total bajo condiciones apropiadas. Una observación de un lápiz aparentemente quebrado en agua se explica con trayectorias de luz, no con una fractura real del objeto."
           }
         },
         {
@@ -2284,6 +2468,10 @@
             "explanation": "El tipo y orientación salen de signos distintos.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Una lente desvía rayos y puede formar imágenes reales o virtuales según tipo y ubicación del objeto. Una pantalla solo captura una imagen real formada por convergencia de luz. El aumento tiene magnitud y signo: tamaño y orientación aportan información distinta.",
+            "connection": "Una cámara enfoca una imagen real sobre un sensor. Una lupa, usada de manera habitual con el objeto dentro de su distancia focal, se interpreta mediante una imagen virtual; no funciona igual que proyectar sobre una pared."
           }
         },
         {
@@ -2315,6 +2503,10 @@
             "explanation": "Cada frecuencia puede tener un índice distinto en el material.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "La luz blanca incluye frecuencias diferentes. La dispersión permite separarlas porque el índice puede depender de la frecuencia. La polarización describe otra propiedad y no es sinónimo de color. Un instrumento combina elementos ópticos con funciones específicas.",
+            "connection": "Un prisma puede separar colores y un filtro polarizador puede reducir ciertos reflejos. El primero explota dispersión; el segundo selecciona componentes de polarización. Son mecanismos distintos aunque ambos cambien lo que observamos."
           }
         }
       ],
@@ -2417,6 +2609,10 @@
             "explanation": "En el modelo, aumenta el flujo de fotones y emisiones, no hf.",
             "area": 0,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "El modelo de fotones asocia energía con frecuencia. Un material necesita una energía mínima para liberar ciertos electrones en el efecto fotoeléctrico. Aumentar intensidad puede añadir fotones, pero no aumenta la energía de cada fotón si la frecuencia sigue igual.",
+            "connection": "Los sensores fotoeléctricos convierten interacción de luz y materia en señales. Las condiciones del material y del dispositivo importan; no cualquier superficie emite electrones por aumentar la intensidad de luz roja."
           }
         },
         {
@@ -2448,6 +2644,10 @@
             "explanation": "E = hf; la rapidez en vacío sigue siendo c.",
             "area": 1,
             "level": "Fundamentos"
+          },
+          "beginner": {
+            "start": "La luz muestra comportamientos que se describen con modelos ondulatorios y corpusculares. Elegí el modelo que permite predecir la observación. En Compton, el intercambio de energía y momento con un electrón cambia la radiación dispersada; no se explica como simple reflexión de un espejo.",
+            "connection": "Las técnicas que estudian radiación dispersada obtienen información de la materia. Una longitud de onda corta puede relacionarse con alta energía por fotón, sin que eso determine por sí solo la potencia total del haz."
           }
         },
         {
@@ -2479,6 +2679,10 @@
             "explanation": "λ = hc/ΔE.",
             "area": 2,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "Los átomos y moléculas tienen diferencias de energía permitidas. La emisión o absorción de fotones puede revelar esas diferencias. Una línea espectral registra una transición, no una fotografía de un electrón girando en una trayectoria visible.",
+            "connection": "La espectroscopía ayuda a identificar elementos en estrellas o muestras industriales. Es necesario considerar patrones y condiciones: una sola línea aislada puede ser insuficiente para atribuir composición con seguridad."
           }
         },
         {
@@ -2510,6 +2714,10 @@
             "explanation": "Cada semivida multiplica la población por 1/2.",
             "area": 3,
             "level": "Aplicación"
+          },
+          "beginner": {
+            "start": "El núcleo tiene protones y neutrones unidos por interacciones nucleares. Un decaimiento cambia el núcleo y se describe estadísticamente para grandes conjuntos. La semivida no anuncia cuándo decaerá un núcleo individual; expresa una pauta de disminución de una población.",
+            "connection": "La medicina utiliza radioisótopos con semividas y emisiones apropiadas para una finalidad. La actividad cambia con el número de núcleos no decaídos; no basta con conocer la masa total de cualquier material."
           }
         }
       ],

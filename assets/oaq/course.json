@@ -72,7 +72,11 @@
             "cue": "«Densidad: lo apretada que está la masa».",
             "reason": "Imaginá dos mochilas del mismo volumen: la de mayor masa tiene mayor densidad. Al dividir un material uniforme, masa y volumen cambian juntos; su cociente no."
           },
-          "task": "Calculá la densidad de la pieza y predecí qué pasará con ella al partir la pieza por la mitad."
+          "task": "Calculá la densidad de la pieza y predecí qué pasará con ella al partir la pieza por la mitad.",
+          "beginner": {
+            "start": "Empezá eligiendo qué parte del mundo vas a estudiar: ese es tu sistema. Una propiedad es algo que podés describir o medir. Para comparar materiales, no alcanza con decir que uno es «más pesado»: necesitás especificar masa, volumen y condiciones.",
+            "connection": "En una fábrica de envases, dos piezas con la misma masa pueden ocupar volúmenes distintos. Medir masa y volumen permite comparar densidades y detectar un material o una pieza fuera de especificación."
+          }
         },
         {
           "title": "Fases, soluciones y separación",
@@ -103,7 +107,11 @@
             "cue": "«El filtro frena granos, no lo que ya está disuelto».",
             "reason": "Asociá el papel con un colador: arena queda, pero sal disuelta pasa con agua. Para separar especies disueltas necesitás otra propiedad, como volatilidad."
           },
-          "task": "Proponé una secuencia para recuperar arena y sal por separado. Justificá qué propiedad aprovecha cada paso."
+          "task": "Proponé una secuencia para recuperar arena y sal por separado. Justificá qué propiedad aprovecha cada paso.",
+          "beginner": {
+            "start": "Imaginá una lupa que te permite distinguir regiones uniformes. Cada región es una fase, mientras que una sustancia describe composición química. Disolver sal distribuye sus iones en el agua: dejan de verse granos, pero el soluto sigue presente.",
+            "connection": "Una planta de tratamiento retira sólidos suspendidos por filtración, pero las sales disueltas requieren otros procesos, como membranas apropiadas o destilación. El método depende de qué especie se quiere separar."
+          }
         },
         {
           "title": "Partículas y transformaciones",
@@ -134,7 +142,11 @@
             "cue": "«Cambio de traje, misma molécula».",
             "reason": "Hielo, agua y vapor son distintas organizaciones de H₂O. Una reacción cambia las especies; un cambio de estado conserva su identidad química."
           },
-          "task": "Explicá qué cambia antes y durante la fusión y si se transforma la identidad de las moléculas."
+          "task": "Explicá qué cambia antes y durante la fusión y si se transforma la identidad de las moléculas.",
+          "beginner": {
+            "start": "Una partícula no es un pedacito visible de la muestra: es una entidad del modelo, como un átomo, molécula o ion. Primero preguntá si cambió su organización o su identidad. Después analizá de dónde viene y adónde va la energía.",
+            "connection": "En una heladera, un refrigerante absorbe energía al evaporarse y la entrega en otra zona al condensarse. Un cambio de estado puede transportar energía sin producir una sustancia nueva."
+          }
         },
         {
           "title": "Del núcleo a la tabla periódica",
@@ -165,7 +177,11 @@
             "cue": "«Z da identidad; A agrega neutrones».",
             "reason": "Z cuenta protones; A suma protones y neutrones. Para los alcalinos y, en general, alcalinotérreos: «Más lejos y más protegido, más fácil de perder». Al bajar, el electrón de valencia está más lejos y apantallado por capas internas; suele bajar la energía necesaria para retirarlo y aumentar reactividad. No es una regla universal para todos los metales."
           },
-          "task": "Determiná protones, neutrones y electrones del ion. Explicá qué indica su carga."
+          "task": "Determiná protones, neutrones y electrones del ion. Explicá qué indica su carga.",
+          "beginner": {
+            "start": "Un átomo tiene un núcleo pequeño con protones y neutrones y una región electrónica mucho más extensa. El número de protones identifica al elemento. Cambiar electrones modifica la carga; cambiar neutrones modifica el isótopo, sin crear otro elemento.",
+            "connection": "El carbono-14 se utiliza para estimar edades de materiales orgánicos bajo condiciones y calibraciones específicas. La información procede de un isótopo radiactivo, no de un elemento llamado «carbono distinto»."
+          }
         }
       ],
       "review": [
@@ -263,7 +279,11 @@
             "cue": "«Las cargas se compensan, los grupos se conservan».",
             "reason": "En Ca(OH)₂ se necesitan dos OH⁻ para compensar Ca²⁺. El paréntesis recuerda que se repite el grupo completo, no solo el H."
           },
-          "task": "Escribí la fórmula neutra que forman esos iones y explicá los subíndices y paréntesis."
+          "task": "Escribí la fórmula neutra que forman esos iones y explicá los subíndices y paréntesis.",
+          "beginner": {
+            "start": "Leé una fórmula como una instrucción de conteo. Un subíndice afecta al símbolo anterior; un paréntesis agrupa varios átomos. En compuestos iónicos, primero escribí las cargas y buscá una proporción eléctricamente neutra, sin imaginar moléculas aisladas.",
+            "connection": "En sales usadas para fertilizantes o tratamiento de agua, confundir CaCl₂ con CaCl cambia la composición y las cantidades calculadas. Una fórmula correcta es el primer control de una receta química."
+          }
         },
         {
           "title": "Nombrar sin perder información",
@@ -294,7 +314,11 @@
             "cue": "«Stock cuenta oxidación, prefijos cuentan átomos».",
             "reason": "El III de hierro(III) no es un subíndice: es un estado formal. En trióxido, tri sí señala tres oxígenos."
           },
-          "task": "Deducí el estado de oxidación del hierro y nombrá el compuesto por Stock, sistemática y tradicional."
+          "task": "Deducí el estado de oxidación del hierro y nombrá el compuesto por Stock, sistemática y tradicional.",
+          "beginner": {
+            "start": "El nombre y la fórmula son dos maneras de describir una sustancia. Antes de memorizar terminaciones, identificá sus elementos y la familia química. Un número romano expresa un estado de oxidación, no la cantidad de átomos del metal.",
+            "connection": "Una etiqueta industrial distingue sales de hierro(II) y hierro(III) porque pueden comportarse de manera diferente. La nomenclatura comunica composición y evita intercambiar reactivos por tener un nombre parecido."
+          }
         },
         {
           "title": "Balancear conservando átomos",
@@ -325,7 +349,11 @@
             "cue": "«Ajustá la receta, no cambies los ingredientes».",
             "reason": "Los coeficientes cambian cuántas moléculas participan; los subíndices definen la sustancia. Es como duplicar porciones sin convertir agua en otro ingrediente."
           },
-          "task": "Encontrá los coeficientes enteros mínimos sin cambiar las fórmulas de las sustancias."
+          "task": "Encontrá los coeficientes enteros mínimos sin cambiar las fórmulas de las sustancias.",
+          "beginner": {
+            "start": "Imaginá que desarmás los reactivos en una mesa de piezas y armás productos sin perder átomos. El coeficiente cambia cuántas entidades hay; el subíndice cambia qué entidad es. Hacé un inventario por elemento a ambos lados.",
+            "connection": "La industria calcula oxígeno y combustible con ecuaciones balanceadas. Una ecuación con menos oxígeno escrito no convierte por sí sola una combustión en más económica: tiene que conservar todos los átomos."
+          }
         },
         {
           "title": "Reconocer familias de reacciones",
@@ -356,7 +384,11 @@
             "cue": "«Carbono bien oxigenado termina en CO₂».",
             "reason": "Con O₂ suficiente, la combustión completa de hidrocarburos forma CO₂ y H₂O; si falta oxígeno pueden aparecer CO y hollín. La regla necesita identificar combustible y condiciones."
           },
-          "task": "Escribí y balanceá la neutralización completa e indicá la sal obtenida."
+          "task": "Escribí y balanceá la neutralización completa e indicá la sal obtenida.",
+          "beginner": {
+            "start": "Una reacción es una reorganización de átomos que cambia las sustancias presentes. Las familias permiten anticipar productos posibles, pero siempre hay que considerar qué reactivos hay y bajo qué condiciones. Mirá también los estados físicos y cualquier gas producido.",
+            "connection": "La efervescencia de bicarbonato con un ácido libera CO₂. Esa familia de reacción ayuda a explicar un polvo de hornear; el hidrógeno corresponde a otra reacción, la de ciertos metales con ácidos."
+          }
         }
       ],
       "review": [
@@ -453,7 +485,11 @@
             "cue": "«El mol es una docena enorme».",
             "reason": "Como una docena cuenta doce objetos, un mol cuenta Nₐ entidades. La masa de esa cantidad cambia con la sustancia, igual que una docena de plumas no pesa como una de ladrillos."
           },
-          "task": "Convertí esa masa a moles de moléculas, número de moléculas y moles de átomos de hidrógeno."
+          "task": "Convertí esa masa a moles de moléculas, número de moléculas y moles de átomos de hidrógeno.",
+          "beginner": {
+            "start": "Los átomos son demasiado pequeños para contarlos uno por uno en una muestra de laboratorio. El mol es una unidad de conteo, como una docena de tamaño enorme. La masa molar permite pasar de gramos medidos a cantidad de entidades especificadas.",
+            "connection": "Una planta que produce CO₂ puede pesar materias primas y convertir sus masas a moles. La balanza mide masa; la ecuación química relaciona cantidades de partículas mediante sus proporciones molares."
+          }
         },
         {
           "title": "Deducir fórmulas a partir de masas",
@@ -484,7 +520,11 @@
             "cue": "«Primero moles, después proporciones».",
             "reason": "Los átomos se comparan por cantidad, no por gramos. Convertir masas a moles evita confundir un átomo pesado con muchos átomos livianos."
           },
-          "task": "Deducí la fórmula empírica. Luego usá M = 180 g/mol para deducir la fórmula molecular."
+          "task": "Deducí la fórmula empírica. Luego usá M = 180 g/mol para deducir la fórmula molecular.",
+          "beginner": {
+            "start": "Un porcentaje en masa cuenta gramos dentro de cada cien gramos, no cuántos átomos hay. Para descubrir una fórmula, convertí cada masa a moles de átomos. Recién entonces compará las cantidades relativas y buscá enteros pequeños.",
+            "connection": "El análisis elemental permite comprobar la composición de un producto farmacéutico. La misma fórmula empírica puede corresponder a varias fórmulas moleculares: se necesita otra medición, como la masa molar."
+          }
         },
         {
           "title": "Relacionar presión, volumen y temperatura",
@@ -515,7 +555,11 @@
             "cue": "«Menos espacio, más choques».",
             "reason": "A n y T constantes, las partículas llegan más seguido a las paredes si reducís V: aumenta P. La asociación no vale si dejás escapar gas o cambiás T sin considerarlo."
           },
-          "task": "Calculá la presión final al comprimir el gas a 20 mL, manteniendo la temperatura."
+          "task": "Calculá la presión final al comprimir el gas a 20 mL, manteniendo la temperatura.",
+          "beginner": {
+            "start": "La presión de un gas aparece por los intercambios de cantidad de movimiento en los choques con las paredes. La temperatura absoluta se relaciona con la energía cinética media. Cambiar el espacio disponible modifica esos choques, aunque no cambie la cantidad de gas.",
+            "connection": "Un sensor de presión en un depósito rígido puede registrar un aumento cuando el gas se calienta. Para predecirlo, hay que mantener fija la cantidad y usar temperatura en kelvin y presión absoluta."
+          }
         },
         {
           "title": "Usar unidades y condiciones de referencia",
@@ -546,7 +590,11 @@
             "cue": "«R pide sus unidades».",
             "reason": "Usá R como una etiqueta que exige L, kPa y K, o L, atm y K según su valor. «22,4» solo viene acompañado de sus condiciones de referencia."
           },
-          "task": "Calculá el volumen y justificá por qué no alcanza con multiplicar por 22,4 L/mol."
+          "task": "Calculá el volumen y justificá por qué no alcanza con multiplicar por 22,4 L/mol.",
+          "beginner": {
+            "start": "Una ecuación representa una relación entre magnitudes, no entre números sin unidades. Elegí primero la forma de R que vas a usar. «Condiciones normales» es una referencia que debe explicitar temperatura y presión; no es cualquier situación de un laboratorio.",
+            "connection": "Los proveedores de gases especifican volúmenes referidos a ciertas condiciones. El mismo número de moles ocupa otro volumen a otra temperatura o presión, sin que haya cambiado la masa de gas."
+          }
         }
       ],
       "review": [
@@ -643,7 +691,11 @@
             "cue": "«Molaridad mira el matraz; molalidad mira la masa».",
             "reason": "El matraz fija litros de solución para c; la balanza da kg de solvente para b. La diferencia explica por qué expansión térmica afecta c y no b en un sistema cerrado."
           },
-          "task": "Calculá la molaridad y los moles contenidos en una porción de 0,10 L de esa solución."
+          "task": "Calculá la molaridad y los moles contenidos en una porción de 0,10 L de esa solución.",
+          "beginner": {
+            "start": "Una solución es una mezcla uniforme. El soluto es el componente cuya cantidad te interesa expresar; el solvente es el medio en que se distribuye. Concentración compara cantidad de soluto con una cantidad de solución o solvente, según la definición elegida.",
+            "connection": "Dos bolsas de solución salina con la misma concentración pueden contener distintas masas totales de sal si sus volúmenes son diferentes. Concentración y dosis total no son la misma magnitud."
+          }
         },
         {
           "title": "Porcentajes y trazas",
@@ -674,7 +726,11 @@
             "cue": "«Porcentaje: de cada cien, ¿cien qué?».",
             "reason": "Antes de calcular, decí g por 100 g, g por 100 mL o mL por 100 mL. El apellido del porcentaje define el denominador."
           },
-          "task": "Expresá la concentración en % m/V y en g/L. Indicá qué dato falta para obtener % m/m."
+          "task": "Expresá la concentración en % m/V y en g/L. Indicá qué dato falta para obtener % m/m.",
+          "beginner": {
+            "start": "Antes de operar con un porcentaje, escribí qué representa el cien: cien gramos de solución, cien mililitros o alguna otra base. En ppm, indicá igualmente la base. Esta decisión determina las unidades y las conversiones que necesitás.",
+            "connection": "Un informe de agua puede expresar una sustancia en mg/L. Interpretarlo como mg/kg exige conocer o aproximar la densidad; la aproximación de agua muy diluida no sirve automáticamente para cualquier líquido."
+          }
         },
         {
           "title": "Preparar y diluir con material volumétrico",
@@ -705,7 +761,11 @@
             "cue": "«Más agua, mismo soluto, menor concentración».",
             "reason": "Imaginá repartir el mismo colorante en un matraz mayor. No desaparece soluto: baja la cantidad por volumen si no hay reacción ni pérdidas."
           },
-          "task": "Calculá la alícuota necesaria y describí cómo preparar el volumen final con material aforado."
+          "task": "Calculá la alícuota necesaria y describí cómo preparar el volumen final con material aforado.",
+          "beginner": {
+            "start": "Diluir significa añadir solvente a una porción de solución, no fabricar ni destruir soluto. La cantidad de soluto de esa porción se conserva si no hay reacción ni pérdida. El volumen final se mide después de mezclar, no se adivina sumando volúmenes.",
+            "connection": "En un laboratorio de control se prepara una solución de trabajo a partir de una solución madre. La pipeta determina la porción transferida y el matraz fija el volumen final, con funciones distintas."
+          }
         },
         {
           "title": "De la ecuación a la cantidad de producto",
@@ -736,7 +796,11 @@
             "cue": "«Gramos → moles → receta → pedido».",
             "reason": "La ecuación es una receta molar. Pasar por moles conecta masas distintas con la proporción correcta de partículas."
           },
-          "task": "Calculá los moles y la masa de CO₂ producidos, suponiendo descomposición completa."
+          "task": "Calculá los moles y la masa de CO₂ producidos, suponiendo descomposición completa.",
+          "beginner": {
+            "start": "Pensá la ecuación como una receta de cantidades de sustancia. Primero obtené moles del reactivo conocido; después aplicá la razón entre coeficientes; finalmente convertí a la magnitud solicitada. No uses directamente la razón de masas como si fueran coeficientes.",
+            "connection": "Para fabricar una cantidad prevista de sal, la ecuación indica cuántos moles de reactivo corresponden. La masa de producto solo se obtiene al multiplicar los moles resultantes por su propia masa molar."
+          }
         }
       ],
       "review": [
@@ -832,7 +896,11 @@
             "cue": "«Cada gas pone su parte».",
             "reason": "Las presiones parciales se suman en la mezcla ideal. A igual T y V, cada gas aporta presión según sus propios moles."
           },
-          "task": "Calculá la fracción molar y la presión parcial de cada gas."
+          "task": "Calculá la fracción molar y la presión parcial de cada gas.",
+          "beginner": {
+            "start": "En una mezcla ideal, cada gas contribuye a la presión total. La presión parcial es la que aportaría ese componente a igual volumen y temperatura. La fracción molar expresa qué parte de las entidades pertenece a ese gas, no qué parte de la masa.",
+            "connection": "En atmósferas de proceso se controla la fracción de oxígeno o nitrógeno. Una misma fracción molar no implica la misma masa de ambos gases, porque sus masas molares son distintas."
+          }
         },
         {
           "title": "Solubilidad y concentración de especies",
@@ -863,7 +931,11 @@
             "cue": "«Solubilidad es el límite; concentración es lo que hay».",
             "reason": "Pensá en capacidad y ocupación de una sala. Estar muy lleno no significa alcanzar el límite; además el límite depende del soluto, T y otras condiciones."
           },
-          "task": "Calculá la masa que se disuelve y la que queda sólida en equilibrio."
+          "task": "Calculá la masa que se disuelve y la que queda sólida en equilibrio.",
+          "beginner": {
+            "start": "Disolver una sal puede producir varios tipos de iones. Distinguí la concentración del compuesto añadido de la concentración de cada especie. La solubilidad establece cuánto puede disolverse en equilibrio bajo condiciones definidas, no qué tan rápido desaparece un cristal.",
+            "connection": "El tratamiento de aguas utiliza diferencias de solubilidad para retirar ciertos iones como precipitados. Cambiar temperatura o añadir un ion común puede modificar la cantidad que permanece disuelta."
+          }
         },
         {
           "title": "Encontrar el reactivo que se agota",
@@ -894,7 +966,11 @@
             "cue": "«La receta se frena por lo que primero se acaba».",
             "reason": "Para armar sándwiches de dos panes y un relleno comparás existencias divididas por lo que usa cada sándwich: es n/ν, no simplemente la menor masa."
           },
-          "task": "Determiná el reactivo limitante, los moles de agua producidos y el reactivo sobrante."
+          "task": "Determiná el reactivo limitante, los moles de agua producidos y el reactivo sobrante.",
+          "beginner": {
+            "start": "Una reacción necesita las proporciones de la ecuación. Aunque sobre mucha cantidad de un reactivo, el proceso se detiene cuando falta otro indispensable. Compará cuántas veces puede ejecutarse la receta con los moles disponibles de cada reactivo.",
+            "connection": "Una fábrica no obtiene más producto simplemente añadiendo exceso de una materia prima. El reactivo limitante fija el máximo teórico; el resto puede quedar sin reaccionar y requerir recuperación o separación."
+          }
         },
         {
           "title": "Separar rendimiento de pureza",
@@ -925,7 +1001,11 @@
             "cue": "«Pureza antes; rendimiento después».",
             "reason": "La pureza corrige lo que entra como reactivo activo. El rendimiento compara lo que realmente sale con el máximo que esa entrada permitiría."
           },
-          "task": "Calculá el rendimiento e indicá por qué el producto debe estar seco para evaluarlo."
+          "task": "Calculá el rendimiento e indicá por qué el producto debe estar seco para evaluarlo.",
+          "beginner": {
+            "start": "Pureza pregunta qué fracción de una muestra es el reactivo deseado. Rendimiento compara el producto real recuperado con el máximo calculado. Aplicá cada corrección en el lugar correspondiente: una cambia la cantidad inicial útil y la otra el resultado real.",
+            "connection": "Un mineral contiene material útil e impurezas, y además una extracción industrial puede perder parte del producto. Son dos limitaciones diferentes, aunque ambas reduzcan la masa recuperada respecto de la muestra original."
+          }
         }
       ],
       "review": [
@@ -1022,7 +1102,11 @@
             "cue": "«Pares dibujados, electrones contados».",
             "reason": "Antes de trazar enlaces sumá valencias y ajustá por carga. Los dibujos no pueden gastar más electrones que el total disponible."
           },
-          "task": "Contá electrones y dibujá enlaces y pares libres en una estructura de Lewis del agua."
+          "task": "Contá electrones y dibujá enlaces y pares libres en una estructura de Lewis del agua.",
+          "beginner": {
+            "start": "Los electrones de valencia son los que más directamente intervienen en enlaces del modelo básico. Una estructura de Lewis los representa como pares y electrones no compartidos. Es un instrumento de conteo y conectividad, no una fotografía exacta de posiciones electrónicas.",
+            "connection": "El agua, la sal y un metal presentan propiedades distintas porque sus partículas e interacciones no se organizan del mismo modo. El modelo de enlace permite conectar estructura con observaciones de laboratorio."
+          }
         },
         {
           "title": "Predecir forma con TREPEV",
@@ -1053,7 +1137,11 @@
             "cue": "«Los pares también piden espacio».",
             "reason": "Como personas que se separan alrededor de una mesa, las regiones electrónicas se distribuyen. Los pares libres no se ven como átomos, pero influyen en la forma."
           },
-          "task": "Compará las regiones electrónicas y la forma molecular de CO₂ con las de H₂O."
+          "task": "Compará las regiones electrónicas y la forma molecular de CO₂ con las de H₂O.",
+          "beginner": {
+            "start": "La conectividad no alcanza para describir la forma de una molécula. Contá regiones electrónicas alrededor de un átomo central y buscá cómo separarlas. Un enlace múltiple cuenta como una región en TREPEV, mientras los pares libres también influyen en la disposición.",
+            "connection": "La forma de una molécula puede afectar cómo interacciona con otras. Comparar CO₂ lineal con H₂O angular ayuda a entender por qué enlaces polares no garantizan una molécula con dipolo neto."
+          }
         },
         {
           "title": "De la polaridad a la ebullición",
@@ -1084,7 +1172,11 @@
             "cue": "«Hervir separa vecinos; reaccionar cambia parejas».",
             "reason": "En una sustancia molecular, hervir vence principalmente atracciones entre moléculas; no rompe de forma general sus enlaces internos."
           },
-          "task": "Usá interacciones intermoleculares para explicar por qué la masa molar sola no ordena su ebullición."
+          "task": "Usá interacciones intermoleculares para explicar por qué la masa molar sola no ordena su ebullición.",
+          "beginner": {
+            "start": "Distinguí los enlaces dentro de una molécula de las atracciones entre moléculas. Hervir un líquido molecular normalmente separa moléculas sin descomponerlas en átomos. La energía necesaria depende de las interacciones, del tamaño y de la forma, entre otros factores.",
+            "connection": "El etanol y el agua forman puentes de hidrógeno. El comportamiento de mezclas como perfumes y solventes no se explica solo mirando la masa molecular ni diciendo que al hervir se rompen todos los enlaces."
+          }
         },
         {
           "title": "Explicar tendencias periódicas",
@@ -1115,7 +1207,11 @@
             "cue": "«Más capas, más lejos; misma capa, más tirón».",
             "reason": "Al bajar un grupo aumenta el tamaño por capas nuevas; en un período suele aumentar atracción nuclear efectiva y disminuir radio. En alcalinos, el electrón más lejano y apantallado se pierde más fácilmente: suele aumentar reactividad hacia abajo. En halógenos la tendencia de reactividad es diferente; no lo generalices a todos los grupos."
           },
-          "task": "Predecí cuál tiene menor radio atómico y explicá la tendencia con atracción nuclear efectiva."
+          "task": "Predecí cuál tiene menor radio atómico y explicá la tendencia con atracción nuclear efectiva.",
+          "beginner": {
+            "start": "La tabla periódica permite comparar estructuras electrónicas. Al bajar en un grupo aparecen capas más externas y mayor apantallamiento. Analizá qué electrón se pierde o gana: no basta con contar protones del núcleo para predecir la facilidad de un proceso.",
+            "connection": "En los metales alcalinos, el electrón externo suele perderse más fácilmente al bajar en el grupo. Esa tendencia no debe copiarse sin más a la reactividad de los halógenos ni a cualquier reacción de un metal."
+          }
         }
       ],
       "review": [
@@ -1211,7 +1307,11 @@
             "cue": "«Exo: el calor sale; endo: el calor entra».",
             "reason": "El signo se mira desde el sistema que reacciona: si entrega calor, su ΔH es negativo. La solución que lo recibe puede calentarse."
           },
-          "task": "Calculá el calor de reacción al quemar 8,0 g de metano y distinguí su signo del calor recibido por el entorno."
+          "task": "Calculá el calor de reacción al quemar 8,0 g de metano y distinguí su signo del calor recibido por el entorno.",
+          "beginner": {
+            "start": "Definí primero el sistema y el entorno. Si el sistema entrega energía como calor a presión constante, su cambio de entalpía es negativo. Los enlaces se rompen absorbiendo energía y se forman liberándola; el balance de ambos procesos determina el resultado.",
+            "connection": "Las bolsas térmicas y las compresas frías aprovechan procesos con intercambio de energía. Una bajada de temperatura del entorno indica absorción de calor por el sistema estudiado, según cómo fijaste sus límites."
+          }
         },
         {
           "title": "Medir calor con un calorímetro",
@@ -1242,7 +1342,11 @@
             "cue": "«Lo que pierde uno, lo gana el otro».",
             "reason": "En un calorímetro ideal, qreacción + qsolución = 0 si ignorás recipiente y pérdidas. Por eso sus signos son opuestos."
           },
-          "task": "Calculá el calor absorbido por la solución y el calor de la reacción en un calorímetro ideal."
+          "task": "Calculá el calor absorbido por la solución y el calor de la reacción en un calorímetro ideal.",
+          "beginner": {
+            "start": "Un calorímetro estima energía transferida a partir de un cambio de temperatura. El termómetro no mide joules directamente. Necesitás conocer masa, calor específico y qué partes del montaje absorben energía; también declarar pérdidas y aproximaciones.",
+            "connection": "En control de alimentos se realizan mediciones de energía con equipos calibrados. El cambio de temperatura debe interpretarse junto con la capacidad calorífica del montaje, no como una medida universal por sí sola."
+          }
         },
         {
           "title": "Predecir reacciones con agua",
@@ -1273,7 +1377,11 @@
             "cue": "«La familia orienta; la sustancia decide».",
             "reason": "Na₂O reacciona con agua, pero no todos los óxidos metálicos lo hacen igual. Usá la familia para proponer y luego comprobá propiedades y condiciones."
           },
-          "task": "Escribí la ecuación de hidratación de CaO y describí el carácter ácido-base del producto."
+          "task": "Escribí la ecuación de hidratación de CaO y describí el carácter ácido-base del producto.",
+          "beginner": {
+            "start": "Usá la serie de reactividad como una guía de tendencias, no como autorización para mezclar sustancias. Agua fría, vapor y ácidos son medios diferentes. Una capa superficial o una barrera cinética puede impedir una reacción apreciable aun cuando una transformación sea favorable.",
+            "connection": "El aluminio suele estar protegido por una capa de óxido. Esa pasivación ayuda a explicar por qué un metal relativamente reactivo puede usarse en estructuras y no reaccionar visiblemente de la manera esperada por una regla simple."
+          }
         },
         {
           "title": "Calcular una neutralización fuerte",
@@ -1304,7 +1412,11 @@
             "cue": "«Contá manos ácidas y manos básicas».",
             "reason": "Un mol de Ca(OH)₂ puede entregar dos OH⁻: hacen falta dos H⁺ para neutralizarlo. Equivalencia compara capacidades reactivas, no solo volúmenes."
           },
-          "task": "Calculá el volumen de NaOH necesario para alcanzar equivalencia."
+          "task": "Calculá el volumen de NaOH necesario para alcanzar equivalencia.",
+          "beginner": {
+            "start": "En una neutralización fuerte, compará primero cantidades de H⁺ y OH⁻ disponibles. Si una está en exceso, determina el medio final después de reaccionar. Equivalencia significa capacidades reactivas iguales, no necesariamente volúmenes iguales ni cualquier lectura de pH 7.",
+            "connection": "Una valoración permite inferir concentración a partir de una reacción conocida y un volumen medido. El punto final del indicador es una observación experimental; no es idéntico por definición al punto de equivalencia calculado."
+          }
         }
       ],
       "review": [
@@ -1401,7 +1513,11 @@
             "cue": "«Oxidación pierde; reducción recibe».",
             "reason": "El reductor entrega electrones y por eso se oxida. El oxidante los recibe y se reduce: nombrá al agente por lo que provoca en el otro."
           },
-          "task": "Identificá qué especie se oxida, cuál se reduce y quiénes son oxidante y reductor."
+          "task": "Identificá qué especie se oxida, cuál se reduce y quiénes son oxidante y reductor.",
+          "beginner": {
+            "start": "Un estado de oxidación es una herramienta formal para seguir redistribuciones de electrones. Oxidarse significa perder electrones en la descripción redox; reducirse, ganarlos. Identificá ambas transformaciones juntas: los electrones cedidos deben ser aceptados por otra especie.",
+            "connection": "La corrosión del hierro combina oxidación del metal y una reducción del entorno, frecuentemente asociada al oxígeno disuelto. No se explica como una pérdida aislada de electrones sin proceso complementario."
+          }
         },
         {
           "title": "Usar corriente para producir sustancias",
@@ -1432,7 +1548,11 @@
             "cue": "«Corriente por tiempo: la cuenta de electrones».",
             "reason": "I mide cuánta carga pasa cada segundo. Más tiempo o corriente suma carga y, con igual eficiencia y reacción, más producto."
           },
-          "task": "Calculá carga, moles de electrones y moles de H₂ y O₂ producidos en el modelo ideal."
+          "task": "Calculá carga, moles de electrones y moles de H₂ y O₂ producidos en el modelo ideal.",
+          "beginner": {
+            "start": "Una corriente transporta carga. La fuente externa puede impulsar una reacción electroquímica no espontánea y la carga acumulada permite calcular producto. En el líquido se mueven iones; en los cables metálicos, electrones. No son el mismo mecanismo de transporte.",
+            "connection": "La galvanoplastia deposita recubrimientos metálicos mediante reducción de iones. La masa depositada depende de la carga, de cuántos electrones requiere cada ion y de la eficiencia real del proceso."
+          }
         },
         {
           "title": "Calcular pH de especies fuertes",
@@ -1463,7 +1583,11 @@
             "cue": "«Un escalón de pH, diez veces H⁺».",
             "reason": "La escala es logarítmica: bajar de pH 5 a 3 no suma dos unidades de concentración; multiplica aproximadamente por cien en el modelo ideal."
           },
-          "task": "Calculá primero pOH y después pH a 25 °C."
+          "task": "Calculá primero pOH y después pH a 25 °C.",
+          "beginner": {
+            "start": "La escala de pH utiliza un logaritmo: relaciona saltos numéricos pequeños con factores grandes de concentración aproximada de H₃O⁺. Antes de tomar logaritmos, calculá qué especie queda en exceso y su concentración después de mezclar, si corresponde.",
+            "connection": "En piscinas y tratamiento de agua, pasar de pH 6 a 4 no representa un aumento de dos unidades de H₃O⁺. En el modelo diluido representa un factor cercano a cien, por eso importa interpretar la escala."
+          }
         },
         {
           "title": "Comparar fuerza y concentración",
@@ -1494,7 +1618,11 @@
             "cue": "«Fuerza es cuánto reacciona; concentración, cuánto hay».",
             "reason": "Un ácido fuerte muy diluido puede tener menos H₃O⁺ que uno débil concentrado. No ordenes pH usando solo la palabra fuerte."
           },
-          "task": "Ordená los pH según Ka y explicá qué condición hace válida esa comparación."
+          "task": "Ordená los pH según Ka y explicá qué condición hace válida esa comparación.",
+          "beginner": {
+            "start": "Concentración indica cuánto ácido se añadió por volumen; fuerza describe el grado de ionización bajo condiciones definidas. Un ácido débil establece un equilibrio. Diluirlo reduce su concentración analítica, aunque pueda aumentar la fracción que está ionizada.",
+            "connection": "El vinagre y un ácido fuerte diluido pueden tener concentraciones o pH que no se ordenan simplemente con la palabra «fuerte». El uso doméstico de una sustancia no define su fuerza química ni su seguridad."
+          }
         }
       ],
       "review": [
@@ -1592,7 +1720,11 @@
             "cue": "«Menos solvente en la superficie ideal, menos escape».",
             "reason": "Raoult expresa P = xsolvente P°. Es una asociación al modelo ideal, no una explicación de bloqueo físico total: las moléculas siguen evaporando y condensando."
           },
-          "task": "Calculá la presión de vapor de la solución y comparala con la del agua pura."
+          "task": "Calculá la presión de vapor de la solución y comparala con la del agua pura.",
+          "beginner": {
+            "start": "En un recipiente cerrado, moléculas pasan del líquido al vapor y también regresan. En equilibrio dinámico ambos procesos continúan a igual velocidad media. La presión de vapor de equilibrio depende de temperatura y composición; no equivale a la presión de cualquier gas sobre el líquido.",
+            "connection": "Un líquido hierve cuando su presión de vapor alcanza la presión externa. La menor presión atmosférica en altura explica cambios en la temperatura de ebullición, sin que haya cambiado la identidad del agua."
+          }
         },
         {
           "title": "Henry y desviaciones de idealidad",
@@ -1623,7 +1755,11 @@
             "cue": "«Positiva: escapan más; negativa: se retienen más».",
             "reason": "Compará siempre contra la mezcla ideal a la misma T y composición. Interacciones A–B relativamente menos favorables aumentan la tendencia de escape."
           },
-          "task": "Determiná el signo de la desviación y asociá el resultado con tendencia al escape."
+          "task": "Determiná el signo de la desviación y asociá el resultado con tendencia al escape.",
+          "beginner": {
+            "start": "Un gas disuelto intercambia partículas con la fase gaseosa. Al analizar Henry, especificá la definición de la constante y las condiciones. Una mezcla ideal es un modelo de referencia: las interacciones reales pueden favorecer o dificultar la salida de moléculas respecto de él.",
+            "connection": "Al abrir una bebida gaseosa baja la presión parcial de CO₂ sobre el líquido. El estado de equilibrio cambia y puede desprenderse gas; la rapidez observada también depende de nucleación y otras condiciones."
+          }
         },
         {
           "title": "Contar partículas en propiedades coligativas",
@@ -1654,7 +1790,11 @@
             "cue": "«Coligativas cuentan compañía».",
             "reason": "Importa cuántas partículas de soluto hay, no solo cuántos gramos pesaste. Disociación o asociación cambia ese número efectivo mediante i."
           },
-          "task": "Calculá el descenso crioscópico y la temperatura de inicio de congelación."
+          "task": "Calculá el descenso crioscópico y la temperatura de inicio de congelación.",
+          "beginner": {
+            "start": "Una propiedad coligativa se conecta con la cantidad efectiva de partículas de soluto. Primero identificá el solvente, la concentración adecuada y si el soluto se asocia o disocia. Igual masa de sustancias diferentes no significa igual número de partículas.",
+            "connection": "Los anticongelantes modifican el comportamiento de congelación de un fluido. En un cálculo real se necesitan composición, concentraciones y límites del modelo; no se suma una bajada fija de temperatura por cualquier cantidad de producto."
+          }
         },
         {
           "title": "De una medición a una fórmula o masa molar",
@@ -1685,7 +1825,11 @@
             "cue": "«El termómetro puede contar moles».",
             "reason": "Un descenso de congelación permite obtener partículas por kg de solvente. Si conocés i, obtenés moles y luego masa molar; no es una lectura directa de identidad."
           },
-          "task": "Deducí la molalidad, los moles de soluto y su masa molar."
+          "task": "Deducí la molalidad, los moles de soluto y su masa molar.",
+          "beginner": {
+            "start": "Una medición indirecta conecta una observación macroscópica con una cantidad microscópica. Escribí la relación usada, despejá la cantidad de sustancia y recién después calculá la masa molar. La conclusión depende de las hipótesis del modelo y de la incertidumbre experimental.",
+            "connection": "La crioscopía puede aportar una masa molar a partir del descenso de congelación de una solución. Si se desconoce disociación o asociación, el dato puede reflejar partículas efectivas y no una masa molar identificada sin ambigüedad."
+          }
         }
       ],
       "review": [
@@ -1783,7 +1927,11 @@
             "cue": "«Hund reparte asientos; Pauli limita cada asiento».",
             "reason": "En orbitales degenerados se ocupan primero cajas separadas con espines paralelos. Cada caja admite como máximo dos electrones con espines opuestos."
           },
-          "task": "Escribí la configuración y dibujá la ocupación de los tres orbitales 2p respetando Pauli y Hund."
+          "task": "Escribí la configuración y dibujá la ocupación de los tres orbitales 2p respetando Pauli y Hund.",
+          "beginner": {
+            "start": "Un orbital no es una órbita dibujada alrededor del núcleo. Describe un estado electrónico y una distribución de probabilidad en el modelo cuántico. Las reglas de ocupación organizan electrones en estados permitidos; flechas y cajas representan esa información de manera esquemática.",
+            "connection": "Las configuraciones electrónicas ayudan a interpretar espectros y propiedades periódicas. Un dibujo de cajas no implica que un electrón sea una bolita inmóvil en un casillero físico dentro del átomo."
+          }
         },
         {
           "title": "Interpretar tendencias y polarización",
@@ -1814,7 +1962,11 @@
             "cue": "«Pequeño y cargado, deforma más».",
             "reason": "Un catión pequeño y de carga alta tiene fuerte poder polarizante sobre un anión. Un anión grande suele ser más fácil de deformar: es más polarizable."
           },
-          "task": "Elegí el catión de mayor poder polarizante y justificá el efecto sobre el carácter del enlace."
+          "task": "Elegí el catión de mayor poder polarizante y justificá el efecto sobre el carácter del enlace.",
+          "beginner": {
+            "start": "Compará tamaño y carga de los iones antes de explicar polarización. Un catión concentra más su acción eléctrica si es pequeño y tiene carga alta; una nube electrónica grande puede deformarse más fácilmente. La carga formal no describe por sí sola toda la distribución real.",
+            "connection": "Las tendencias de covalencia y solubilidad de sales pueden discutirse con polarización, pero requieren considerar también otras contribuciones energéticas. Una regla de tendencias orienta una comparación, sin reemplazar un análisis completo."
+          }
         },
         {
           "title": "Lewis, resonancia y tipos de enlace",
@@ -1845,7 +1997,11 @@
             "cue": "«Primero σ; lo extra es π».",
             "reason": "En el modelo usual de enlaces entre dos átomos, simple = σ, doble = σ + π, triple = σ + 2π. Resonancia cambia el dibujo electrónico, no las posiciones de los núcleos."
           },
-          "task": "Dibujá las formas de resonancia, verificá la carga total y explicá qué es equivalente en la especie real."
+          "task": "Dibujá las formas de resonancia, verificá la carga total y explicá qué es equivalente en la especie real.",
+          "beginner": {
+            "start": "Lewis muestra una representación de enlaces y pares electrónicos. Cuando una sola estructura no describe bien la distribución, se usan formas de resonancia. La molécula real no alterna mecánicamente entre dibujos completos: las formas contribuyen a una descripción deslocalizada.",
+            "connection": "En el ion carbonato los enlaces se describen mediante deslocalización, no como una unión doble que salta de lugar. Esto conecta la representación con propiedades que una estructura localizada única no reproduce."
+          }
         },
         {
           "title": "Leer estructuras orgánicas e isomería",
@@ -1876,7 +2032,11 @@
             "cue": "«Misma lista de piezas, distinto armado».",
             "reason": "Los isómeros constitucionales tienen igual fórmula molecular y distinta conexión. Rotar un dibujo sin cambiar conexiones no construye otro isómero constitucional."
           },
-          "task": "Compará las conexiones y los grupos funcionales para decidir qué tipo de isomería presentan."
+          "task": "Compará las conexiones y los grupos funcionales para decidir qué tipo de isomería presentan.",
+          "beginner": {
+            "start": "Una fórmula molecular cuenta átomos, pero no define todas sus conexiones ni disposición. Leé primero el esqueleto y luego los grupos funcionales. Para decidir isomería, comprobá qué cambió realmente y si solo giraste el mismo dibujo.",
+            "connection": "Moléculas con igual fórmula pueden tener propiedades diferentes. El etanol y el dimetil éter comparten C₂H₆O, pero su conectividad y sus interacciones explican diferencias importantes, como el comportamiento de ebullición."
+          }
         }
       ],
       "review": [
@@ -1974,7 +2134,11 @@
             "cue": "«Hess: importa el destino, no el camino».",
             "reason": "La entalpía es función de estado: podés sumar rutas y sus ΔH. El calor y el trabajo por separado sí pueden cambiar con el camino."
           },
-          "task": "Calculá ΔU usando la convención química de signos para calor y trabajo."
+          "task": "Calculá ΔU usando la convención química de signos para calor y trabajo.",
+          "beginner": {
+            "start": "La energía interna y la entalpía describen estados del sistema. Calor y trabajo describen formas de transferencia, no sustancias almacenadas. Para sumar etapas, verificá que sus reactivos y productos intermedios se cancelen y que sus condiciones y cantidades sean compatibles.",
+            "connection": "La ley de Hess permite estimar energía de una ruta industrial a partir de datos de otras reacciones. Cambiar el camino puede alterar la rapidez y la operación del proceso, aunque el cambio de entalpía entre estados sea el mismo."
+          }
         },
         {
           "title": "Predecir espontaneidad con Gibbs",
@@ -2005,7 +2169,11 @@
             "cue": "«Gibbs pregunta si conviene; cinética, cuánto tarda».",
             "reason": "ΔG negativo permite una dirección espontánea a T y P constantes, pero una barrera alta puede hacerla muy lenta. No deduzcas rapidez de ΔG."
           },
-          "task": "Calculá ΔG a 300 K con unidades compatibles y distinguí favorabilidad de rapidez."
+          "task": "Calculá ΔG a 300 K con unidades compatibles y distinguí favorabilidad de rapidez.",
+          "beginner": {
+            "start": "Espontáneo significa que una dirección es termodinámicamente favorecida bajo condiciones especificadas, no que ocurra rápidamente. A temperatura y presión constantes, Gibbs combina entalpía y entropía. Siempre distinguí un cambio estándar del cambio bajo la composición real del sistema.",
+            "connection": "Un combustible puede permanecer sin reaccionar apreciablemente hasta que se inicia la combustión. La barrera cinética explica por qué la posibilidad termodinámica de liberar energía no implica una reacción instantánea."
+          }
         },
         {
           "title": "Determinar una ley de velocidad",
@@ -2036,7 +2204,11 @@
             "cue": "«Cero: recta; uno: log; dos: inversa».",
             "reason": "Para los casos simples estudiados, [A], ln[A] o 1/[A] frente a t son lineales para órdenes 0, 1 o 2 respectivamente. La ley se verifica con datos, no solo por la ecuación global."
           },
-          "task": "Calculá [A] a 10 s y el tiempo de semirreacción."
+          "task": "Calculá [A] a 10 s y el tiempo de semirreacción.",
+          "beginner": {
+            "start": "Una ley de velocidad se determina con datos cinéticos. Compara cómo cambia la rapidez cuando varía una concentración y las otras condiciones se controlan. Los exponentes de la ley no se copian automáticamente de los coeficientes de la ecuación global.",
+            "connection": "En producción farmacéutica, conocer cómo depende una degradación del tiempo y de las condiciones ayuda a estudiar estabilidad. El orden de reacción se apoya en mediciones, no en el aspecto de una ecuación escrita."
+          }
         },
         {
           "title": "Relacionar barreras y mecanismos",
@@ -2067,7 +2239,11 @@
             "cue": "«Catalizador abre un paso más bajo, no cambia la llegada».",
             "reason": "Ofrece una ruta de menor barrera que acelera ida y vuelta. A T fija no modifica K, ΔG° ni la composición final de equilibrio."
           },
-          "task": "Deducí la ley de velocidad observable usando la hipótesis de preequilibrio."
+          "task": "Deducí la ley de velocidad observable usando la hipótesis de preequilibrio.",
+          "beginner": {
+            "start": "Una reacción puede seguir varias etapas microscópicas. Una barrera de activación limita la rapidez de una ruta; un catalizador ofrece otra ruta. No cambia el balance energético global ni el valor de la constante de equilibrio a temperatura fija.",
+            "connection": "Los catalizadores de automóviles aceleran transformaciones de gases de escape bajo condiciones apropiadas. No hacen desaparecer átomos ni convierten un equilibrio químico en uno diferente solo por estar presentes."
+          }
         }
       ],
       "review": [
@@ -2166,7 +2342,11 @@
             "cue": "«Q dice dónde estás; K, dónde equilibrás».",
             "reason": "Si Q < K faltan productos respecto del equilibrio; si Q > K sobran relativamente. A T fija, el sistema ajusta composición, no el valor de K."
           },
-          "task": "Calculá Q, comparalo con K y predecí la dirección del cambio. Luego analizá qué favorece comprimir."
+          "task": "Calculá Q, comparalo con K y predecí la dirección del cambio. Luego analizá qué favorece comprimir.",
+          "beginner": {
+            "start": "Un sistema fuera del equilibrio tiene una composición actual, que se describe con Q. K corresponde al equilibrio para esa reacción y temperatura. Escribí ambos con el mismo convenio antes de comparar: invertir una reacción invierte las expresiones correspondientes.",
+            "connection": "En la fabricación de amoníaco se combinan decisiones de equilibrio y velocidad. Aumentar producción por unidad de tiempo no significa necesariamente maximizar la fracción de equilibrio en cada pasada."
+          }
         },
         {
           "title": "Resolver un ácido débil y su titulación",
@@ -2197,7 +2377,11 @@
             "cue": "«Media equivalencia, mismo ácido y base: pH cerca de pKa».",
             "reason": "Tras neutralizar la mitad de HA con base fuerte, cantidades de HA y A⁻ se igualan. En la región reguladora ideal, log del cociente 1 es cero."
           },
-          "task": "Estimá [H₃O⁺], pH y porcentaje de disociación. Verificá la aproximación utilizada."
+          "task": "Estimá [H₃O⁺], pH y porcentaje de disociación. Verificá la aproximación utilizada.",
+          "beginner": {
+            "start": "Un ácido débil distribuye su cantidad analítica entre formas relacionadas por equilibrio. Durante una valoración cambian las cantidades de ácido, base conjugada y cualquier exceso de titulante. Identificá la región antes de elegir una aproximación: inicial, reguladora, equivalencia o exceso.",
+            "connection": "Los sistemas reguladores se usan cuando conviene amortiguar cambios de pH. Su capacidad es limitada: añadir suficiente ácido o base puede agotarla, aunque inicialmente hubiera una proporción adecuada de ambas formas."
+          }
         },
         {
           "title": "Precipitación, ion común y anfoterismo",
@@ -2228,7 +2412,11 @@
             "cue": "«Qps por encima: el sólido aparece».",
             "reason": "Si el producto iónico supera Kps se favorece precipitar hasta reducir iones libres. Mezclar diluye: calculá primero las concentraciones finales."
           },
-          "task": "Calculá la solubilidad ideal en agua y comparala con la de una solución 0,10 M en cloruro."
+          "task": "Calculá la solubilidad ideal en agua y comparala con la de una solución 0,10 M en cloruro.",
+          "beginner": {
+            "start": "Un precipitado aparece cuando formar sólido es favorecido por las concentraciones iónicas actuales. Al mezclar, calculá primero las concentraciones tras diluir. Solubilidad, presencia de un ion común y reacciones ácido-base pueden interactuar; no apliques Kps sin identificar las especies libres.",
+            "connection": "La formación de incrustaciones en cañerías depende de equilibrios y condiciones del agua. Un cambio de pH puede modificar las especies presentes y, por tanto, favorecer o reducir un depósito sólido."
+          }
         },
         {
           "title": "Predecir una pila con Nernst",
@@ -2259,7 +2447,11 @@
             "cue": "«Ánodo oxida; cátodo reduce, siempre».",
             "reason": "Los signos de los electrodos cambian entre pila y electrólisis, pero las reacciones definitorias no. Para Nernst: al crecer Q, el término que se resta aumenta y E disminuye para la reacción escrita."
           },
-          "task": "Calculá E con Nernst para el cociente dado y comparalo con E°."
+          "task": "Calculá E con Nernst para el cociente dado y comparalo con E°.",
+          "beginner": {
+            "start": "Una pila transforma energía química disponible en trabajo eléctrico mediante reacciones separadas. El potencial depende de la reacción escrita y de las actividades de las especies. Nernst conecta la diferencia respecto del estado estándar con Q, sin cambiar qué proceso es oxidación o reducción.",
+            "connection": "Las baterías cambian su comportamiento al modificarse la composición durante el uso. El voltaje bajo carga también incluye pérdidas y limitaciones cinéticas; no es siempre idéntico al potencial reversible calculado por Nernst."
+          }
         }
       ],
       "review": [
