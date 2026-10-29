@@ -1,6 +1,6 @@
 import {getUnit} from './data.mjs';
 import {initialWorkshop,result,controls,runLabels} from './models.mjs';
-import {scene,cardArt,esc} from './art.mjs';
+import {scene,cardArt,esc} from './art.mjs?v=plain-term-markers-1';
 const root=document.querySelector('#game-app'),unit=getUnit(document.body.dataset.unit),mode=document.body.dataset.mode,game=unit?.[mode];
 const shuffle=a=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;};
 let queue=[],index=0,points=0,firstTry=0,attempts=0,assisted=false,done=false,busy=false,selected=null,placements={},cards=[],s={},tricky=new Set(),outcomes=[],timer=null,dragId=null,motionFrame=null;
