@@ -25,3 +25,7 @@ if idx is None:subject['topics'].insert(1,topic)
 else:subject['topics'][idx]=topic
 cpath.write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n')
 print('Built Inside your blood vessels, Transport Dispatch and a separate revision wrapper; Y9 Science catalogue integrated.')
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

@@ -6,6 +6,8 @@ from html.parser import HTMLParser
 from validate_questions import BANKS
 
 ROOT=Path(__file__).resolve().parent.parent
+from brand import apply_branding
+apply_branding()
 class RevisionPage(HTMLParser):
     def __init__(self):super().__init__();self.attrs=None
     def handle_starttag(self,tag,attributes):

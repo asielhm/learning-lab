@@ -24,3 +24,7 @@ print('Built six Y12 Maths entry pages: essentials plus the five IB topic groups
 
 from build_learn_first import apply_school_reading
 apply_school_reading()
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

@@ -55,3 +55,7 @@ for a in AREAS:
  subjects.append(dict(id=a['id'],name=a['name'],description=a['intro'],topics=topics))
 catalog['years'].append(dict(id='oaf',name='Olimpíada Argentina de Física',shortName='OAF',subjects=subjects));p.write_text(dump(catalog)+'\n')
 print(f'OAF: {len(AREAS)} áreas, {len(UNITS)} unidades, {sum(len(u["lessons"]) for u in UNITS)} lecciones y {sum(len(u["lessons"])+len(u["review"]) for u in UNITS)} preguntas de repaso.')
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

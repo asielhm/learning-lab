@@ -3,6 +3,11 @@
 This release covers 24 revision question banks / 1,580 questions in Year 7 Maths,
 Year 9 Science, Year 10 Chemistry and Year 10 Physics.
 
+The dashboard header now uses **Learning Lab by Asiel**. If all question banks
+already show Ready, this visual change only needs Dashboard.html replaced and
+the existing web-app deployment updated to a new version. Passwords, results and
+question-bank signatures stay unchanged.
+
 1. In your existing private results spreadsheet, choose Extensions → Apps Script.
 2. Replace all three files: Code.gs, QuestionBank.gs and Dashboard.html. If the
    main script is named Código.gs, replace it; do not add duplicate functions.

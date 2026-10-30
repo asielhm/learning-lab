@@ -118,7 +118,7 @@ in-progress transfers. Charges remain drawn when the circuit is off.
   categorical axis, never a continuous fitted line. Drift/vibrations are enlarged
   and illustrative; marker counts do not measure carrier density.
 
-The four circuit pages keep apparatus, controls and graphs in the same desktop
+The circuit examples and construction studio keep apparatus, controls and graphs in the same desktop
 workspace. Local evidence tables are directly below it, retain at most 18
 settings, reject duplicates, and compare saved predictions with recorded results.
 Twenty local conceptual checks allow explained retries. Check-your-understanding

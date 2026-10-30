@@ -25,3 +25,7 @@ for name in ['syringe','syringe-balloon','balloon','tyre']:
  p=folder/(name+'.html');s=p.read_text();s=re.sub(r'<a href="barometer.html"[^>]*>Mercury barometer</a>','',s);s=s.replace('</nav>\n<div class="object-layout">','<a href="barometer.html">Mercury barometer</a></nav>\n<div class="object-layout">');p.write_text(s)
 p=ROOT/'catalog.json';c=json.loads(p.read_text());topic=next(t for y in c['years'] if y['id']=='y9' for sub in y['subjects'] if sub['id']=='science' for t in sub['topics'] if t['id']=='gas-laws');activity=dict(id='mercury-barometer',title='Mercury barometer: measure atmospheric pressure',description='Move the pressure slider, compare Pa and atm and investigate the height of a mercury column, with a live graph and local measurements.',format='Interactive pressure instrument',duration='10–15 minutes',href='activities/y9/science/gas-laws/examples/barometer.html',image='activities/y9/science/gas-laws/images/mercury-barometer.svg');topic['activities']=[a for a in topic['activities'] if a['id']!=activity['id']]+[activity];p.write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n')
 print('Mercury barometer page, illustration, application card, five example tabs and catalogue entry generated.')
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

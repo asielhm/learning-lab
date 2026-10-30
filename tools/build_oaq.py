@@ -79,3 +79,7 @@ for l in LEVELS:
 catalog['years'].append(dict(id='oaq',name='Olimpíada Argentina de Química',shortName='OAQ',subjects=subjects))
 p.write_text(dump(catalog)+'\n')
 print(f"OAQ: {len(LEVELS)} niveles, {len(UNITS)} unidades, {sum(len(u['lessons']) for u in UNITS)} lecciones y {sum(len(u['lessons'])+len(u['review']) for u in UNITS)} preguntas de repaso.")
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

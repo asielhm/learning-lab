@@ -17,3 +17,7 @@ for key,title,desc,href in [('picture','Name That Gas Law','Match nine everyday 
  topic['activities'].append(dict(id=f'gas-laws-{key}-game',title=title,description=desc,format='Picture game' if key=='picture' else 'Vocabulary game',duration='5–10 minutes',image='activities/y9/science/gas-laws/games/images/gas-law-cards.png',href='activities/y9/science/gas-laws/games/'+href))
 p.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 print('Built Gas Laws game hub, picture game and Mystery Word; added two catalogue links.')
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

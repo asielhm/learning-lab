@@ -68,3 +68,7 @@ def apply_school_reading():
  print(f'Reading first: {count} published school units with explanations, worked examples and everyday/industry contexts before practicals.')
 
 if __name__=='__main__':apply_school_reading()
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

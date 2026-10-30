@@ -49,3 +49,7 @@ integrate()
 from build_learn_first import apply_school_reading
 apply_school_reading()
 print('Y7 Maths: seven units in syllabus order; Algebra II and Statistics separate, older object activities retained.')
+
+# Preserve the shared author wordmark when regenerating this section.
+from brand import apply_branding
+apply_branding()

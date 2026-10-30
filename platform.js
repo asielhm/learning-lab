@@ -87,19 +87,19 @@ function render(focus = false) {
   let parts;
   try { parts = location.hash.replace(/^#\/?/,'').split('/').filter(Boolean).map(decodeURIComponent); }
   catch { parts = ['invalid']; }
-  let content, title='Learning Lab';
+  let content, title='Learning Lab by Asiel';
   const [section,yearId,subjectId,topicId]=parts;
   const year=catalogue.years.find(item=>item.id===yearId);
   const subject=year?.subjects.find(item=>item.id===subjectId);
   const topic=subject?.topics.find(item=>item.id===topicId);
   if(section==='years'&&['oaq','oaf'].includes(yearId)&&year&&(!subjectId||subject)&&(!topicId||topic)){location.replace(new URL(route(...parts.slice(1)),location.href.split('#')[0]));return;}
-  if(!section){content=home();title='Learning Lab | Explore. Understand. Discover.';}
-  else if(section==='about'&&parts.length===1){content=about();title='How it works | Learning Lab';}
+  if(!section){content=home();title='Learning Lab by Asiel | Explore. Understand. Discover.';}
+  else if(section==='about'&&parts.length===1){content=about();title='How it works | Learning Lab by Asiel';}
   else if(section==='years'&&parts.length===1){content=years();title='Choose your year | Learning Lab';}
   else if(section==='years'&&year&&parts.length===2){content=subjects(year);title=`${year.name} | Learning Lab`;}
   else if(section==='years'&&subject&&parts.length===3){content=topics(year,subject);title=`${year.shortName} ${subject.name} | Learning Lab`;}
   else if(section==='years'&&topic&&parts.length===4){content=activities(year,subject,topic);title=`${topic.name} | ${year.shortName} ${subject.name} | Learning Lab`;}
-  else {content=`<section class="catalogue-section">${heading('LET’S FIND YOUR WAY', 'This page is not here.', 'The activity or category may have moved. Browse the catalogue to find your next discovery.')}<a class="button primary" href="#/years">Explore activities →</a></section>`;title='Page not found | Learning Lab';}
+  else {content=`<section class="catalogue-section">${heading('LET’S FIND YOUR WAY', 'This page is not here.', 'The activity or category may have moved. Browse the catalogue to find your next discovery.')}<a class="button primary" href="#/years">Explore activities →</a></section>`;title='Page not found | Learning Lab by Asiel';}
   app.innerHTML=decorate(content);document.title=title;
   document.querySelector('#browse-link').toggleAttribute('aria-current',section==='years');
   if(section==='years')document.querySelector('#browse-link').setAttribute('aria-current','page');

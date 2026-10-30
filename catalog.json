@@ -454,7 +454,7 @@
                 {
                   "id": "y9-electricity-lab",
                   "title": "Electricity: charge and circuits",
-                  "description": "Two beginner-friendly lessons, guided static experiments and four separate circuit investigations.",
+                  "description": "Two beginner-friendly lessons, guided static experiments and five separate circuit investigations.",
                   "href": "activities/y9/science/electricity/",
                   "image": "activities/y9/science/electricity/images/unit.svg",
                   "format": "Interactive science unit",
@@ -531,6 +531,15 @@
                   "image": "activities/y9/science/electricity/images/circuit.svg",
                   "format": "Inside a resistance wire",
                   "duration": "10–20 min"
+                },
+                {
+                  "id": "y9-electricity-construction",
+                  "title": "Circuit Construction Studio",
+                  "description": "Drag equipment and probes; follow four worksheet investigations or freely build series, parallel and mixed circuits.",
+                  "href": "activities/y9/science/electricity/simulators/construction.html",
+                  "image": "activities/y9/science/electricity/images/construction-studio.svg",
+                  "format": "Circuit construction studio",
+                  "duration": "Work at your pace"
                 }
               ]
             }
