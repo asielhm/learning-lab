@@ -19510,3 +19510,1981 @@ var QUESTION_BANKS_ = {
     "signature": "06578d9a9807e0ce0e103cff94f934919c6baa011df6037c8f4462892e7ea4ea"
   }
 };
+var GAME_MANIFEST_ = {
+  "protocol": 1,
+  "games": [
+    {
+      "id": "factors-classic",
+      "title": "Factor Arcade",
+      "course": "Year 7 Maths",
+      "topic": "numbers-i",
+      "signature": "0a3de5783c37697d3700097b92b9a27b5020ab418bd003c56f8ced3c147863e6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-i/prepare.html"
+    },
+    {
+      "id": "factors-workshop",
+      "title": "The 24 Machine",
+      "course": "Year 7 Maths",
+      "topic": "numbers-i",
+      "signature": "e48fd15213f32c1018c657d1cf3f111d3bfbfded2677e751c574340f3e0555e6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-i/prepare.html"
+    },
+    {
+      "id": "geometry-classic",
+      "title": "Angle Dominoes",
+      "course": "Year 7 Maths",
+      "topic": "geometry-i",
+      "signature": "b9539a3405e25fc0a8794587f8ad211dab86bf90c443ad6aa530ed92edbe5a12",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/geometry-i/prepare.html"
+    },
+    {
+      "id": "geometry-workshop",
+      "title": "Fence & Floor",
+      "course": "Year 7 Maths",
+      "topic": "geometry-i",
+      "signature": "4ec1e74625da0bd6639891432cb285fb94b6448f2895f4d2301918f211182298",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/geometry-i/prepare.html"
+    },
+    {
+      "id": "integers-classic",
+      "title": "Integer Skyline",
+      "course": "Year 7 Maths",
+      "topic": "numbers-ii",
+      "signature": "ca89f51c3cff89a3ccef733ac92520ebdb687fb370c2be159e324b033d7fd505",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-ii/prepare.html"
+    },
+    {
+      "id": "integers-workshop",
+      "title": "Number-Line Rover",
+      "course": "Year 7 Maths",
+      "topic": "numbers-ii",
+      "signature": "d6fe3bb7e592c4a69eefb2d3e7a7ccbef7d846137209bbb1542f6a7ba56448c3",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-ii/prepare.html"
+    },
+    {
+      "id": "coordinates-classic",
+      "title": "Rule Detectives",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "a5623b1b273ef122a75f29b47ec260e08be2ec6a3d9a901618a26ae875b8551d",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-workshop",
+      "title": "Coordinate Quest",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "c9fae8fad297c9bd81fd009b3d903dba70465b1f341eb2d6ecce4a9142205df9",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "brackets-classic",
+      "title": "Like-Terms Recycling",
+      "course": "Year 7 Maths",
+      "topic": "algebra-ii",
+      "signature": "0648cd9ed140fa33f3fbb156f174860e905936e14976dba566b8006a17a0a89e",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-ii/prepare.html"
+    },
+    {
+      "id": "brackets-workshop",
+      "title": "Bag Factory",
+      "course": "Year 7 Maths",
+      "topic": "algebra-ii",
+      "signature": "d67457d508a54c7313dc9c68e06079df1c72502511252798fa0aa6900e37464d",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-ii/prepare.html"
+    },
+    {
+      "id": "fractions-classic",
+      "title": "Fraction Café",
+      "course": "Year 7 Maths",
+      "topic": "numbers-iii",
+      "signature": "3806b43a829adbf477f501da84f203b39c63ac75df9116c5f56de7625f1f35fa",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-iii/prepare.html"
+    },
+    {
+      "id": "fractions-workshop",
+      "title": "Pizza Proportions",
+      "course": "Year 7 Maths",
+      "topic": "numbers-iii",
+      "signature": "2d972808c8b90f8e12f5a777dea128066aaf017b3932153c8798d53b68fb79a6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-iii/prepare.html"
+    },
+    {
+      "id": "electricity-classic",
+      "title": "Circuit Snap",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-electricity",
+      "signature": "ebf67ea94da390398f1d675e122e1ab04613c5f121ec29b9cf82a6a653ff8f1b",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/electricity/prepare.html"
+    },
+    {
+      "id": "electricity-workshop",
+      "title": "Circuit Rescue",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-electricity",
+      "signature": "61eacc9073375917f12601e93a70ea2359917f9258d61b8998c0180b30a9e349",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/electricity/prepare.html"
+    },
+    {
+      "id": "waves-classic",
+      "title": "Wave Matchmakers",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-waves",
+      "signature": "e4d9b15035734598cb6e858e369f16389414c31610875fbd847fc788f1addbd7",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/waves/prepare.html"
+    },
+    {
+      "id": "waves-workshop",
+      "title": "Wave DJ",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-waves",
+      "signature": "e5d9b8a32f164f54247dfe19014dc6bf2440f53618d01c2c600515d1cfbc1169",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/waves/prepare.html"
+    },
+    {
+      "id": "optics-classic",
+      "title": "Ray Detective",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-optics",
+      "signature": "52620cae7117fd43dd077c9285e5bbfa79b2d7de89121cd8fcaf199df235e9ae",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/optics/prepare.html"
+    },
+    {
+      "id": "optics-workshop",
+      "title": "Focus Finder",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-optics",
+      "signature": "e701eba74d3e78eed89c594b175c397a45911583d411ca5ed030fbd90b0ad75e",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/optics/prepare.html"
+    },
+    {
+      "id": "thermal-classic",
+      "title": "Heat Transfer Dispatch",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-thermal",
+      "signature": "ca86eb8365972605abb3dbabef9a350a35e945a4dcf8ca191993aead09ea3065",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/thermal/prepare.html"
+    },
+    {
+      "id": "thermal-workshop",
+      "title": "Energy Budget Kitchen",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-thermal",
+      "signature": "61570762de39521b46a90da515702e309bea3af59ea0f7606961d6f22e011823",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/thermal/prepare.html"
+    },
+    {
+      "id": "kinematics-classic",
+      "title": "Motion Storyboards",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-kinematics",
+      "signature": "ad4c6ac71f215e4ebedde8e57c84685640b0eaf5f89318856993f4149ae2ad86",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/kinematics/prepare.html"
+    },
+    {
+      "id": "kinematics-workshop",
+      "title": "Catch-Up Flag",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-kinematics",
+      "signature": "04427723766e01fc24d579f80461ac901f69e3c7ccba9351c99e62743cbdab09",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/kinematics/prepare.html"
+    },
+    {
+      "id": "dynamics-classic",
+      "title": "Force Bureau",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-dynamics",
+      "signature": "c0a58da6427184cd43248babf22762fcc17b750a8d0e2c6a3c5e761b93ccd03c",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/dynamics/prepare.html"
+    },
+    {
+      "id": "dynamics-workshop",
+      "title": "Tugboat Targets",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-dynamics",
+      "signature": "0fa12c983b60af0f96f009854a3886aafff7cf653feb4625bf4b627b84548b23",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/dynamics/prepare.html"
+    },
+    {
+      "id": "acids-classic",
+      "title": "Reaction Recipe Cards",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-acids-bases",
+      "signature": "f9fab4ddddc22a13303cc0dc71273b534a17eb79f7293cc6ada16a19d1ab9fc3",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/acids-and-bases/prepare.html"
+    },
+    {
+      "id": "acids-workshop",
+      "title": "Neutralisation Drop Quest",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-acids-bases",
+      "signature": "29a4cfd5458a026a35434c66da1a342925713702881fba00ad499240881be944",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/acids-and-bases/prepare.html"
+    },
+    {
+      "id": "metals-classic",
+      "title": "Reactivity Ladder",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-metals",
+      "signature": "1255ab65fa01ba3ec70874aff28cb7d4e3db89e8b4144dbc2cb44a7e879a8633",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/metals/prepare.html"
+    },
+    {
+      "id": "metals-workshop",
+      "title": "Displacement Vault",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-metals",
+      "signature": "b874c471f715160f63651efb9af506da1a02b3d514d607b481bd0f1bf46d7b01",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/metals/prepare.html"
+    },
+    {
+      "id": "redox-classic",
+      "title": "Electron Exchange",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-redox",
+      "signature": "bdb9ace253e3ddf925416013ca941ab74e4a1bcfb1390bbb4b9ee1ff31bc759a",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/redox/prepare.html"
+    },
+    {
+      "id": "redox-workshop",
+      "title": "Electron Delivery",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-redox",
+      "signature": "23667036057dcaf5a4bc9d814499eda069dcf46a7be3c220af915410fdee6d92",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/redox/prepare.html"
+    },
+    {
+      "id": "organic-classic",
+      "title": "Molecule Families",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-organic",
+      "signature": "5e17a8a4d9693f4c914f408c470b503c810a362d12fd4c5e27cb6c7a8549a0cb",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/organic-chemistry/prepare.html"
+    },
+    {
+      "id": "organic-workshop",
+      "title": "Carbon Chain Studio",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-organic",
+      "signature": "2fc557d9591b3a3d87c1754802f123b21c0027c1c15fe68862d4b515360b8361",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/organic-chemistry/prepare.html"
+    },
+    {
+      "id": "statistics-classic",
+      "title": "Data Detectives",
+      "course": "Year 7 Maths",
+      "topic": "statistics",
+      "signature": "a7e7cdd7ff12abfa249df77350eb64fc1cf219e41a67b64d824ce8167b63ec60",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/statistics/prepare.html"
+    },
+    {
+      "id": "statistics-workshop",
+      "title": "Frequency Factory",
+      "course": "Year 7 Maths",
+      "topic": "statistics",
+      "signature": "f029150908f685d37a7c4c653f54539da74b508e694106fd435e2354b18591d6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/statistics/prepare.html"
+    },
+    {
+      "id": "algebra-machine",
+      "title": "Mystery Machine Mission",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "c288121186f38bbfb3d55fec9bfa7e2e1a1f356d1b8669e8a1e6abf7a4b3f5b6",
+      "roundCount": 6,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "algebra-paint",
+      "title": "Proportion Paintworks",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "e44d9e7671da8b81b9f750acf6baffcc30dc6104fd476a553e212c3b2007272f",
+      "roundCount": 6,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-variables",
+      "title": "Variable Spotter",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "0e7e2895bc3fd0a7ba45d4b00f929d0c9a8d1c9b624f35855151d865a8baa98f",
+      "roundCount": 7,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-detective",
+      "title": "Coordinate Detective",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "346de174c3052bf0b03b7d42855e3c8ee9b0ff4a62facf79e4750af55c3373e7",
+      "roundCount": 11,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-pictures",
+      "title": "Mystery Picture Studio",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "cad06424160005c9652df2c9c45d7876c999c8c25b0bd433a3efa6b63d0e2818",
+      "roundCount": 2,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "gas-picture",
+      "title": "Name That Gas Law",
+      "course": "Year 9 Science",
+      "topic": "gas-laws",
+      "signature": "428a3b368a98b13d53102d8d1a237948cc1361dbc3e9d5a1ae8fd4d5db6a15bf",
+      "roundCount": 9,
+      "preparation": "activities/y9/science/gas-laws/prepare.html"
+    },
+    {
+      "id": "gas-word",
+      "title": "Mystery Word",
+      "course": "Year 9 Science",
+      "topic": "gas-laws",
+      "signature": "25c4e28471e0064741a8316f7dca61d730351dd422da86442d520379e95ad4c4",
+      "roundCount": 30,
+      "preparation": "activities/y9/science/gas-laws/prepare.html"
+    },
+    {
+      "id": "blood-dispatch",
+      "title": "Transport Dispatch",
+      "course": "Year 9 Science",
+      "topic": "blood-vessels",
+      "signature": "782b0d532a3371699ec4e7b3b89a6d47110a7f73ad0c3dc9aad5a3a39200d316",
+      "roundCount": 10,
+      "preparation": "activities/y9/science/blood-vessels/prepare.html"
+    }
+  ]
+};
+var GAME_CATALOG_ = {
+  "factors-classic": {
+    "id": "factors-classic",
+    "title": "Factor Arcade",
+    "course": "Year 7 Maths",
+    "topic": "numbers-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Which numbers divide 12 and 18 exactly?",
+        "explanation": "A factor divides without a remainder. Common factors belong in Both; the largest is the HCF.",
+        "solution": "2 → Both; 3 → Both; 4 → 12 only; 6 → Both; 9 → 18 only; 5 → Neither"
+      },
+      "1": {
+        "prompt": "Is each number a perfect square, a perfect cube, both or neither?",
+        "explanation": "64 = 8² = 4³. Being a square does not stop a number from also being a cube.",
+        "solution": "4 → Square only; 8 → Cube only; 16 → Square only; 27 → Cube only; 64 → Both; 12 → Neither"
+      },
+      "2": {
+        "prompt": "Pair each calculation with its value. Use BIDMAS.",
+        "explanation": "Brackets and powers come first, then multiplication/division, then addition/subtraction. Equal-priority operations run left to right.",
+        "solution": "3 + 4 × 2 → 11; (3 + 4) × 2 → 14; 2³ + 5 → 13; 18 ÷ 3 − 2 → 4"
+      }
+    },
+    "signature": "0a3de5783c37697d3700097b92b9a27b5020ab418bd003c56f8ced3c147863e6"
+  },
+  "factors-workshop": {
+    "id": "factors-workshop",
+    "title": "The 24 Machine",
+    "course": "Year 7 Maths",
+    "topic": "numbers-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Build 24 with 2, 3, 4 and 6.",
+        "explanation": "(6 + 4 − 2) × 3 = 24. Brackets change which operation happens first.",
+        "solution": "( 6 + 4 − 2 ) × 3"
+      },
+      "1": {
+        "prompt": "Build 24 with 1, 3, 4 and 6.",
+        "explanation": "6 ÷ (1 − 3 ÷ 4) = 6 ÷ ¼ = 24.",
+        "solution": "6 ÷ ( 1 − 3 ÷ 4 )"
+      },
+      "2": {
+        "prompt": "Build 24 with 1, 5, 5 and 5.",
+        "explanation": "5 × (5 − 1/5) = 5 × 4.8 = 24. Each of the three 5 tiles has its own job.",
+        "solution": "5 × ( 5 − 1 ÷ 5 )"
+      }
+    },
+    "signature": "e48fd15213f32c1018c657d1cf3f111d3bfbfded2677e751c574340f3e0555e6"
+  },
+  "geometry-classic": {
+    "id": "geometry-classic",
+    "title": "Angle Dominoes",
+    "course": "Year 7 Maths",
+    "topic": "geometry-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Match each regular polygon to one interior angle.",
+        "explanation": "Interior-angle sum is (n − 2) × 180°. Only for a regular polygon can you divide the sum equally by n.",
+        "solution": "Equilateral triangle → 60°; Square → 90°; Regular pentagon → 108°; Regular hexagon → 120°"
+      },
+      "1": {
+        "prompt": "Find each missing angle.",
+        "explanation": "A straight angle totals 180°, a full turn 360°, and a triangle 180°. An isosceles triangle has equal base angles.",
+        "solution": "Straight line: 47° + ? → 133°; Around a point: 110° + 90° + ? → 160°; Triangle: 50° + 60° + ? → 70°; Isosceles triangle: two base angles 40°, apex ? → 100°"
+      },
+      "2": {
+        "prompt": "Classify these angle sizes.",
+        "explanation": "Acute is less than 90°, obtuse is between 90° and 180°, and reflex is between 180° and 360°.",
+        "solution": "35° → Acute; 90° → Right; 120° → Obtuse; 240° → Reflex; 179° → Obtuse; 300° → Reflex"
+      }
+    },
+    "signature": "b9539a3405e25fc0a8794587f8ad211dab86bf90c443ad6aa530ed92edbe5a12"
+  },
+  "geometry-workshop": {
+    "id": "geometry-workshop",
+    "title": "Fence & Floor",
+    "course": "Year 7 Maths",
+    "topic": "geometry-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Make a garden with area 12 m² and perimeter 14 m.",
+        "explanation": "4 × 3 = 12 m² and 2(4 + 3) = 14 m. Area counts squares; perimeter measures the boundary.",
+        "solution": "Width / m: 4; Height / m: 3"
+      },
+      "1": {
+        "prompt": "Make a garden with area 10 m² and perimeter 14 m.",
+        "explanation": "5 × 2 = 10 m², while 2(5 + 2) = 14 m. The same perimeter can enclose different areas.",
+        "solution": "Width / m: 5; Height / m: 2"
+      },
+      "2": {
+        "prompt": "Make a garden with area 18 m² and perimeter 18 m.",
+        "explanation": "6 × 3 = 18 m² and 2(6 + 3) = 18 m. The equal numbers have different units and meanings.",
+        "solution": "Width / m: 6; Height / m: 3"
+      }
+    },
+    "signature": "4ec1e74625da0bd6639891432cb285fb94b6448f2895f4d2301918f211182298"
+  },
+  "integers-classic": {
+    "id": "integers-classic",
+    "title": "Integer Skyline",
+    "course": "Year 7 Maths",
+    "topic": "numbers-ii",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Sort these integers from smallest to largest.",
+        "explanation": "On a number line, numbers increase to the right. A negative number with a larger magnitude lies further left.",
+        "solution": "−9 → 1 · first; −4 → 2; −1 → 3; 0 → 4; 3 → 5; 7 → 6"
+      },
+      "1": {
+        "prompt": "Sort the values, not the written appearance.",
+        "explanation": "−3² = −9 but (−2)² = 4. Brackets decide whether the negative sign is part of the base.",
+        "solution": "−3² → 1 · first; −5 → 2; −2 → 3; √9 → 4; (−2)² → 5; 2³ → 6"
+      },
+      "2": {
+        "prompt": "Evaluate, then arrange from least to greatest.",
+        "explanation": "A negative times a negative is positive. Subtracting a negative adds its opposite.",
+        "solution": "−4 × 3 → 1 · first; −10 + 4 → 2; 8 ÷ (−4) → 3; −2 + 2 → 4; (−3) × (−2) → 5; 2 − (−7) → 6"
+      }
+    },
+    "signature": "ca89f51c3cff89a3ccef733ac92520ebdb687fb370c2be159e324b033d7fd505"
+  },
+  "integers-workshop": {
+    "id": "integers-workshop",
+    "title": "Number-Line Rover",
+    "course": "Year 7 Maths",
+    "topic": "numbers-ii",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Start at −2. Reach +2 in exactly three moves.",
+        "explanation": "−2 + 2 − 3 + 5 = 2. Signed changes add to the final position.",
+        "solution": "Signed moves in order: 2, -3, 5"
+      },
+      "1": {
+        "prompt": "Start at +4. Reach −3 in exactly three moves.",
+        "explanation": "4 − 6 − 3 + 2 = −3. A negative move points left, even from a positive starting position.",
+        "solution": "Signed moves in order: -6, -3, 2"
+      },
+      "2": {
+        "prompt": "Start at −5. Reach +4 in exactly three moves.",
+        "explanation": "−5 + 2 + 2 + 5 = 4. Position and change in position are different quantities.",
+        "solution": "Signed moves in order: 2, 2, 5"
+      }
+    },
+    "signature": "d6fe3bb7e592c4a69eefb2d3e7a7ccbef7d846137209bbb1542f6a7ba56448c3"
+  },
+  "coordinates-classic": {
+    "id": "coordinates-classic",
+    "title": "Rule Detectives",
+    "course": "Year 7 Maths",
+    "topic": "algebra-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Which rule fits each table? The pairs are (x, y).",
+        "explanation": "Direct proportion has constant y/x. Inverse proportion has constant xy. An increasing relationship need not be directly proportional.",
+        "solution": "(1, 3), (2, 6), (4, 12) → y = 3x; (1, 12), (2, 6), (4, 3) → y = 12/x; (1, 3), (2, 4), (4, 6) → y = x + 2; (1, 1), (2, 4), (4, 16) → y = x²"
+      },
+      "1": {
+        "prompt": "Classify each relationship for positive x.",
+        "explanation": "A fixed fee breaks direct proportion. An inverse model assumes equal workers with no interference or setup time.",
+        "solution": "Cost of x pens at £2 each → Direct proportion; Time to share a fixed job equally between x workers at the same rate → Inverse proportion; Taxi fare £4 plus £2 per km → Neither; Distance at fixed speed after x seconds → Direct proportion; Side x of a square and its area → Neither; Length of a rectangle of fixed area as its width increases → Inverse proportion"
+      },
+      "2": {
+        "prompt": "Find the coordinate from the origin.",
+        "explanation": "Coordinates are ordered (x, y): horizontal movement first, then vertical.",
+        "solution": "3 right, 2 up → (3, 2); 2 left, 4 up → (−2, 4); 4 right, 3 down → (4, −3); 1 left, 2 down → (−1, −2)"
+      }
+    },
+    "signature": "a5623b1b273ef122a75f29b47ec260e08be2ec6a3d9a901618a26ae875b8551d"
+  },
+  "coordinates-workshop": {
+    "id": "coordinates-workshop",
+    "title": "Coordinate Quest",
+    "course": "Year 7 Maths",
+    "topic": "algebra-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "From the origin, travel 4 east and 3 north. Set the checkpoint coordinate.",
+        "explanation": "The checkpoint is (4, 3). The first coordinate gives horizontal position.",
+        "solution": "Horizontal x: 4; Vertical y: 3"
+      },
+      "1": {
+        "prompt": "A shop charges £4 per notebook. Plot (number of notebooks, cost) for 3 notebooks.",
+        "explanation": "(3, 12) lies on y = 4x. The cost per notebook is the constant ratio y/x.",
+        "solution": "Horizontal x: 3; Vertical y: 12"
+      },
+      "2": {
+        "prompt": "A rectangle has area 12 m². Plot (width, length) when its width is 6 m.",
+        "explanation": "The point is (6, 2), because 6 × 2 = 12. This is an inverse relationship, not a straight line through the origin.",
+        "solution": "Horizontal x: 6; Vertical y: 2"
+      }
+    },
+    "signature": "c9fae8fad297c9bd81fd009b3d903dba70465b1f341eb2d6ecce4a9142205df9"
+  },
+  "brackets-classic": {
+    "id": "brackets-classic",
+    "title": "Like-Terms Recycling",
+    "course": "Year 7 Maths",
+    "topic": "algebra-ii",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Only terms with exactly the same letter and power can combine.",
+        "explanation": "3x and −2x combine to x. x² and x³ represent different powers and cannot be collected together.",
+        "solution": "3x → x terms; −2x → x terms; 4x² → x² terms; −x² → x² terms; 2x³ → x³ terms; 5y → y terms"
+      },
+      "1": {
+        "prompt": "Separate the different variable parts.",
+        "explanation": "Coefficients can differ, but the variable part must match exactly. A constant has no variable factor.",
+        "solution": "2y² → y² terms; −5y² → y² terms; y³ → y³ terms; 3z → z terms; −4z → z terms; 7 → Constants"
+      },
+      "2": {
+        "prompt": "Connect each bag story to its expression.",
+        "explanation": "A multiplier outside brackets acts on every term inside. x + y stays as two unlike terms.",
+        "solution": "3 bags, each holding x pens and 2 loose pens → 3(x + 2) = 3x + 6; 2 bags, each holding x pens and y clips → 2(x + y) = 2x + 2y; 4 boxes of x pens, plus 3 loose pens → 4x + 3; One x-pen box and one y-clip box → x + y"
+      }
+    },
+    "signature": "0648cd9ed140fa33f3fbb156f174860e905936e14976dba566b8006a17a0a89e"
+  },
+  "brackets-workshop": {
+    "id": "brackets-workshop",
+    "title": "Bag Factory",
+    "course": "Year 7 Maths",
+    "topic": "algebra-ii",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Make an order of 6x + 3y + 3 using identical bags.",
+        "explanation": "3(2x + y + 1) = 6x + 3y + 3. The 3 multiplies every object in a bag.",
+        "solution": "Number of bags: 3; x-boxes per bag: 2; y-boxes per bag: 1; Loose pens per bag: 1"
+      },
+      "1": {
+        "prompt": "Make an order of 8x + 4y + 8 using identical bags.",
+        "explanation": "4(2x + y + 2) = 8x + 4y + 8. Loose pens are constants, not another x term.",
+        "solution": "Number of bags: 4; x-boxes per bag: 2; y-boxes per bag: 1; Loose pens per bag: 2"
+      },
+      "2": {
+        "prompt": "Make an order of 6x + 6y + 12 using identical bags.",
+        "explanation": "3(2x + 2y + 4) = 6x + 6y + 12. Other valid equal-bag arrangements can work too.",
+        "solution": "Number of bags: 3; x-boxes per bag: 2; y-boxes per bag: 2; Loose pens per bag: 4"
+      }
+    },
+    "signature": "d67457d508a54c7313dc9c68e06079df1c72502511252798fa0aa6900e37464d"
+  },
+  "fractions-classic": {
+    "id": "fractions-classic",
+    "title": "Fraction Café",
+    "course": "Year 7 Maths",
+    "topic": "numbers-iii",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Match each fraction to its percentage.",
+        "explanation": "A percentage means per hundred. For example, ¾ = 75/100 = 75%.",
+        "solution": "¼ → 25%; ½ → 50%; ¾ → 75%; ⅕ → 20%"
+      },
+      "1": {
+        "prompt": "Find each sale price.",
+        "explanation": "Discount = original price × rate. Subtract the discount from the original price.",
+        "solution": "£40 with 25% off → £30; £60 with 10% off → £54; £80 with 50% off → £40; £50 with 30% off → £35"
+      },
+      "2": {
+        "prompt": "Scale and share.",
+        "explanation": "Keep units consistent for scales. For ratios, add the parts before dividing the total.",
+        "solution": "Map scale 1 : 1000; 3 cm on map → 30 m real distance; Share £20 in ratio 1 : 3; smaller share → £5; Share 12 slices in ratio 2 : 1; larger share → 8 slices; Increase £50 by 10% → £55"
+      }
+    },
+    "signature": "3806b43a829adbf477f501da84f203b39c63ac75df9116c5f56de7625f1f35fa"
+  },
+  "fractions-workshop": {
+    "id": "fractions-workshop",
+    "title": "Pizza Proportions",
+    "course": "Year 7 Maths",
+    "topic": "numbers-iii",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Colour exactly ¾ of a twelve-slice pizza.",
+        "explanation": "9/12 = 3/4 = 75%. The whole still has twelve equal slices.",
+        "solution": "Selected slice indices (starting at zero): 0, 1, 2, 3, 4, 5, 6, 7, 8"
+      },
+      "1": {
+        "prompt": "Colour exactly 50% of the pizza.",
+        "explanation": "6/12 = 1/2 = 50%. A fraction and a percentage can describe the same part of a whole.",
+        "solution": "Selected slice indices (starting at zero): 0, 1, 2, 3, 4, 5"
+      },
+      "2": {
+        "prompt": "Use red and gold slices in the ratio 2 : 1. Colour the red share.",
+        "explanation": "Red gets 8 slices and gold 4, so 8 : 4 simplifies to 2 : 1. The red share is 2/3, not 2/1 of the whole.",
+        "solution": "Selected slice indices (starting at zero): 0, 1, 2, 3, 4, 5, 6, 7"
+      }
+    },
+    "signature": "2d972808c8b90f8e12f5a777dea128066aaf017b3932153c8798d53b68fb79a6"
+  },
+  "electricity-classic": {
+    "id": "electricity-classic",
+    "title": "Circuit Snap",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-electricity",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Connect each quantity to its relationship or unit.",
+        "explanation": "Voltage is energy transferred per coulomb; current is charge flow per second. Power measures energy transfer per second.",
+        "solution": "Current → Charge per second / A; Voltage → Energy per charge / V; Resistance → V/I / Ω; Power → VI / W"
+      },
+      "1": {
+        "prompt": "Place the correct meter or safety device.",
+        "explanation": "A fuse reacts to excessive current. An RCD compares live and neutral currents and disconnects on an imbalance.",
+        "solution": "Measure current through a lamp → Ammeter in series; Measure voltage across a lamp → Voltmeter in parallel; Excess current in a wire → Fuse or circuit breaker; Leakage current to earth → Residual-current device / RCD"
+      },
+      "2": {
+        "prompt": "For a fixed pair of charges, how does the force magnitude change?",
+        "explanation": "Coulomb force magnitude is k|q₁q₂|/r². Direction and magnitude must be considered separately.",
+        "solution": "Double their separation → Decreases; Halve their separation → Increases; Reverse both charge signs → Unchanged; Double one charge magnitude → Increases; Halve both charge magnitudes → Decreases; Swap the positions of the two charges → Unchanged"
+      }
+    },
+    "signature": "ebf67ea94da390398f1d675e122e1ab04613c5f121ec29b9cf82a6a653ff8f1b"
+  },
+  "electricity-workshop": {
+    "id": "electricity-workshop",
+    "title": "Circuit Rescue",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-electricity",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "With a 6 V battery, make the lamp current 0.50 A.",
+        "explanation": "R = 6/0.50 = 12 Ω. In this ideal resistive model, power is VI = 3 W.",
+        "solution": "Resistor / Ω: 12 Ω; Ammeter connection: Series"
+      },
+      "1": {
+        "prompt": "With a 9 V battery, make the lamp current 0.50 A.",
+        "explanation": "9 V / 18 Ω = 0.50 A. The ideal resistor transfers energy at 4.5 W.",
+        "solution": "Resistor / Ω: 18 Ω; Ammeter connection: Series"
+      },
+      "2": {
+        "prompt": "With a 12 V battery, make the lamp current 0.50 A.",
+        "explanation": "12 V / 24 Ω = 0.50 A and P = 6 W. The virtual model blocks an unsafe ammeter bypass.",
+        "solution": "Resistor / Ω: 24 Ω; Ammeter connection: Series"
+      }
+    },
+    "signature": "61eacc9073375917f12601e93a70ea2359917f9258d61b8998c0180b30a9e349"
+  },
+  "waves-classic": {
+    "id": "waves-classic",
+    "title": "Wave Matchmakers",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-waves",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Match each wave quantity to its meaning.",
+        "explanation": "Frequency and period are reciprocals. Amplitude is not the distance from a crest to a trough: that distance is 2A.",
+        "solution": "Amplitude → Maximum displacement from equilibrium; Frequency → Oscillations per second; Wavelength → Distance between neighbouring crests; Period → Time for one oscillation"
+      },
+      "1": {
+        "prompt": "Sound in the same medium: classify the change.",
+        "explanation": "Pitch relates to frequency. Amplitude relates to sound intensity. A stationary source moved closer can sound louder without its source amplitude changing.",
+        "solution": "Increase frequency → Pitch rises; Increase amplitude at the same frequency → Louder at the same pitch; Double frequency and halve wavelength → Pitch rises; Decrease amplitude only → Neither; Increase wavelength at fixed wave speed → Neither; Move source closer without changing its motion or output → Louder at the same pitch"
+      },
+      "2": {
+        "prompt": "Pair each effect with its explanation.",
+        "explanation": "Wave effects describe different processes. Refraction changes direction only when incidence is not normal.",
+        "solution": "Reflection → Wave returns from a boundary; Refraction → Wave changes direction because its speed changes at a boundary; Diffraction → Wave spreads around an edge or through a gap; Interference → Displacements add where waves overlap"
+      }
+    },
+    "signature": "e4d9b15035734598cb6e858e369f16389414c31610875fbd847fc788f1addbd7"
+  },
+  "waves-workshop": {
+    "id": "waves-workshop",
+    "title": "Wave DJ",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-waves",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Wave speed 4 m/s. Make wavelength 2 m and amplitude 3 cm.",
+        "explanation": "f = 4/2 = 2 Hz. Changing amplitude does not change wavelength in this model.",
+        "solution": "Frequency / Hz: 2; Amplitude / cm: 3"
+      },
+      "1": {
+        "prompt": "Wave speed 6 m/s. Make wavelength 2 m and amplitude 2 cm.",
+        "explanation": "At 3 Hz, λ = 6/3 = 2 m. The particles vibrate; the wave transports energy along the medium.",
+        "solution": "Frequency / Hz: 3; Amplitude / cm: 2"
+      },
+      "2": {
+        "prompt": "Wave speed 12 m/s. Make wavelength 3 m and amplitude 4 cm.",
+        "explanation": "12/4 = 3 m. A 4 cm amplitude means an 8 cm crest-to-trough separation.",
+        "solution": "Frequency / Hz: 4; Amplitude / cm: 4"
+      }
+    },
+    "signature": "e5d9b8a32f164f54247dfe19014dc6bf2440f53618d01c2c600515d1cfbc1169"
+  },
+  "optics-classic": {
+    "id": "optics-classic",
+    "title": "Ray Detective",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-optics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Pair each clue with the correct rule.",
+        "explanation": "Measure angles from the normal, not the surface. Total internal reflection needs travel from higher to lower refractive index.",
+        "solution": "Plane mirror: incidence 35° → Reflection 35° from the normal; Air to glass, oblique incidence → Bends towards the normal; Glass to air above critical angle → Total internal reflection; Ray through the centre of a thin lens → Continues approximately straight"
+      },
+      "1": {
+        "prompt": "Classify the image.",
+        "explanation": "Real images form where rays actually converge and can be caught on a screen. Virtual images are located by extending diverging rays backwards.",
+        "solution": "Converging lens, object beyond 2f → Real; Converging lens, object between lens and f → Virtual; Plane mirror → Virtual; Diverging lens, real object → Virtual; Converging lens, object at 2f → Real; Camera image on a sensor → Real"
+      },
+      "2": {
+        "prompt": "What changes at an air-to-glass boundary?",
+        "explanation": "Frequency is fixed by the source across a stationary boundary. Speed and wavelength change together, v = fλ.",
+        "solution": "Light frequency → Stays the same; Light speed → Decreases; Light wavelength → Becomes shorter; Direction at normal incidence → Remains straight"
+      }
+    },
+    "signature": "52620cae7117fd43dd077c9285e5bbfa79b2d7de89121cd8fcaf199df235e9ae"
+  },
+  "optics-workshop": {
+    "id": "optics-workshop",
+    "title": "Focus Finder",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-optics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "A converging lens has f = 10 cm. Catch a real image half the object height.",
+        "explanation": "do = 30 cm and di = 15 cm give m = −0.5. The real image is inverted.",
+        "solution": "Object distance / cm: 30; Screen distance / cm: 15"
+      },
+      "1": {
+        "prompt": "With f = 10 cm, catch a real image the same height as the object.",
+        "explanation": "At do = di = 20 cm, m = −1. Equal size does not mean upright.",
+        "solution": "Object distance / cm: 20; Screen distance / cm: 20"
+      },
+      "2": {
+        "prompt": "With f = 10 cm, catch a real image twice the object height.",
+        "explanation": "At do = 15 cm, di = 30 cm and m = −2. A screen belongs at the actual convergence point.",
+        "solution": "Object distance / cm: 15; Screen distance / cm: 30"
+      }
+    },
+    "signature": "e701eba74d3e78eed89c594b175c397a45911583d411ca5ed030fbd90b0ad75e"
+  },
+  "thermal-classic": {
+    "id": "thermal-classic",
+    "title": "Heat Transfer Dispatch",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-thermal",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Which mechanism is described?",
+        "explanation": "Conduction transfers energy through interactions in matter; convection moves fluid; radiation needs no material medium.",
+        "solution": "Energy along a metal spoon → Conduction; Warm water rising in a pan → Convection; Sunlight crossing empty space → Radiation; Air circulating above a heater → Convection; Infrared from a glowing element to your skin → Radiation; Heat through a solid wall → Conduction"
+      },
+      "1": {
+        "prompt": "Match the energy equation or condition.",
+        "explanation": "Heat is energy in transfer because of a temperature difference. Equal temperature does not imply equal internal energy.",
+        "solution": "Temperature changes without change of state → Q = mcΔT; Melting at the melting point → Q = mL; Thermal equilibrium → Equal temperature; no net heat flow; Ideal insulated mixing → Energy lost = energy gained"
+      },
+      "2": {
+        "prompt": "Order the stages of heating ice into steam at atmospheric pressure.",
+        "explanation": "During a pure-substance phase change at fixed pressure, energy changes the state while temperature stays constant.",
+        "solution": "Warm ice below 0 °C → 1 · first; Melt ice at 0 °C → 2; Warm liquid water → 3; Reach 100 °C → 4; Boil at 100 °C → 5; Warm steam above 100 °C → 6"
+      }
+    },
+    "signature": "ca86eb8365972605abb3dbabef9a350a35e945a4dcf8ca191993aead09ea3065"
+  },
+  "thermal-workshop": {
+    "id": "thermal-workshop",
+    "title": "Energy Budget Kitchen",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-thermal",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Warm 0.50 kg of water from 20 °C to 40 °C. Use an insulated vessel.",
+        "explanation": "Q = 0.50 × 4200 × 20 = 42 000 J = 42 kJ. Vessel heat capacity is ignored.",
+        "solution": "Heater energy / kJ: 42; Vessel: Insulated: 100% retained"
+      },
+      "1": {
+        "prompt": "Warm 0.25 kg of water from 20 °C to 60 °C. Keep all heater energy in the water.",
+        "explanation": "0.25 × 4200 × 40 = 42 kJ. In the leaky model, only 80% of supplied energy reaches the water.",
+        "solution": "Heater energy / kJ: 42; Vessel: Insulated: 100% retained"
+      },
+      "2": {
+        "prompt": "Warm 0.10 kg of water from 20 °C to 70 °C, with ideal insulation.",
+        "explanation": "21 kJ raises this sample by 50 °C. This model stays below boiling and ignores the heat capacity of the apparatus.",
+        "solution": "Heater energy / kJ: 21; Vessel: Insulated: 100% retained"
+      }
+    },
+    "signature": "61570762de39521b46a90da515702e309bea3af59ea0f7606961d6f22e011823"
+  },
+  "kinematics-classic": {
+    "id": "kinematics-classic",
+    "title": "Motion Storyboards",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-kinematics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Match each graph description.",
+        "explanation": "The gradient of a position–time graph is velocity. The area under a velocity–time graph is displacement.",
+        "solution": "Horizontal position–time line → Object at rest; Straight rising position–time line → Constant positive velocity; Straight rising velocity–time line → Constant positive acceleration; Horizontal negative velocity–time line → Constant motion in the negative direction"
+      },
+      "1": {
+        "prompt": "Classify each quantity.",
+        "explanation": "Vectors require a direction as well as a magnitude. Average speed uses total distance, not displacement magnitude.",
+        "solution": "Distance → Scalar; Speed → Scalar; Displacement → Vector; Velocity → Vector; Acceleration → Vector; Elapsed time → Scalar"
+      },
+      "2": {
+        "prompt": "Ideal projectiles: no air resistance.",
+        "explanation": "At the top, vertical velocity is zero but acceleration is still downwards. Horizontal and vertical motion share the same time.",
+        "solution": "Horizontal acceleration → 0 m/s²; Vertical acceleration → g downwards; Vertical velocity at the highest point → 0 m/s; Horizontal velocity → Constant throughout flight"
+      }
+    },
+    "signature": "ad4c6ac71f215e4ebedde8e57c84685640b0eaf5f89318856993f4149ae2ad86"
+  },
+  "kinematics-workshop": {
+    "id": "kinematics-workshop",
+    "title": "Catch-Up Flag",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-kinematics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "A starts at 10 m, moving at 2 m/s. B starts at 0 m. Make their first meeting at 30 m.",
+        "explanation": "With vB = 5 m/s and a 4 s delay, both reach 30 m at t = 10 s. B is stationary before release.",
+        "solution": "B speed / m/s: 5; B start delay / s: 4"
+      },
+      "1": {
+        "prompt": "A starts at 0 m, moving at 2 m/s. B also starts at 0 m. Make their first meeting AFTER B launches at 40 m.",
+        "explanation": "A needs 20 s. At 4 m/s B takes 10 s, so B starts at t = 10 s and catches A at t = 20 s.",
+        "solution": "B speed / m/s: 4; B start delay / s: 10"
+      },
+      "2": {
+        "prompt": "A starts at 20 m, moving at 2 m/s. B starts at 0 m. Meet at the 60 m flag.",
+        "explanation": "B needs 12 s, so an 8 s delay gives a meeting at 20 s and 60 m. A head start in position differs from a delayed launch.",
+        "solution": "B speed / m/s: 5; B start delay / s: 8"
+      }
+    },
+    "signature": "04427723766e01fc24d579f80461ac901f69e3c7ccba9351c99e62743cbdab09"
+  },
+  "dynamics-classic": {
+    "id": "dynamics-classic",
+    "title": "Force Bureau",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-dynamics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Find the net force and acceleration.",
+        "explanation": "Use the vector sum of forces in Fnet = ma. Zero net force means constant velocity, not necessarily rest.",
+        "solution": "5 kg, net force 10 N right → 2 m/s² right; 4 kg, 12 N right and 4 N left → 2 m/s² right, with 8 N net; 2 kg, zero net force → 0 m/s²; 3 kg, net force 9 N left → 3 m/s² left"
+      },
+      "1": {
+        "prompt": "Identify the force.",
+        "explanation": "Draw only forces acting ON the selected object. Its motion is not an extra force.",
+        "solution": "Earth pulling on a falling ball → Weight; Table pushing on a book → Normal contact force; Rope pulling a hanging load → Tension; Rough surface opposing sliding → Kinetic friction"
+      },
+      "2": {
+        "prompt": "Are the two forces a Newton third-law pair?",
+        "explanation": "A third-law pair acts on two different objects. Forces on the same object can balance but are not a third-law pair.",
+        "solution": "Earth on book; book on Earth → Third-law pair; Weight on book; table on book → Not a third-law pair; Hand on wall; wall on hand → Third-law pair; Rope on load; load on rope → Third-law pair; Two opposing pushes on the same trolley → Not a third-law pair; Normal force and friction on the same block → Not a third-law pair"
+      }
+    },
+    "signature": "c0a58da6427184cd43248babf22762fcc17b750a8d0e2c6a3c5e761b93ccd03c"
+  },
+  "dynamics-workshop": {
+    "id": "dynamics-workshop",
+    "title": "Tugboat Targets",
+    "course": "Year 10 Physics",
+    "topic": "y10-physics-dynamics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Mass 5 kg, sliding right. Friction is 5 N left. Make acceleration 2 m/s² right.",
+        "explanation": "20 − 5 − 5 = 10 N; a = 10/5 = 2 m/s² right. Other pull pairs with the same difference also work.",
+        "solution": "Pull left / N: 5; Pull right / N: 20"
+      },
+      "1": {
+        "prompt": "Mass 10 kg, sliding right. Friction is 10 N left. Make acceleration 1 m/s² right.",
+        "explanation": "25 − 5 − 10 = 10 N and a = 1 m/s². This is an instantaneous sliding-right model.",
+        "solution": "Pull left / N: 5; Pull right / N: 25"
+      },
+      "2": {
+        "prompt": "Mass 5 kg, sliding right. Friction is 10 N left. Make acceleration 2 m/s² left.",
+        "explanation": "10 − 10 − 10 = −10 N, so a = −2 m/s². Velocity and acceleration need not point in the same direction.",
+        "solution": "Pull left / N: 10; Pull right / N: 10"
+      }
+    },
+    "signature": "0fa12c983b60af0f96f009854a3886aafff7cf653feb4625bf4b627b84548b23"
+  },
+  "acids-classic": {
+    "id": "acids-classic",
+    "title": "Reaction Recipe Cards",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-acids-bases",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Match the reaction family to its usual products.",
+        "explanation": "These are different reaction families. Neutralisation removes H⁺ and OH⁻; a metal reaction produces hydrogen.",
+        "solution": "Acid + reactive metal → Salt + hydrogen; Acid + carbonate → Salt + water + carbon dioxide; Acid + hydroxide → Salt + water; Hydrogen ions + hydroxide ions → H⁺ + OH⁻ → H₂O"
+      },
+      "1": {
+        "prompt": "Classify the description.",
+        "explanation": "Strong does not mean concentrated. Dilution changes concentration but does not turn a strong acid into a weak acid.",
+        "solution": "Fraction of acid particles that ionise → Strength; Moles of solute per litre → Concentration; Diluting with water lowers this → Concentration; Strong acid ionises essentially completely in water → Strength; 0.10 mol/dm³ → Concentration; Weak acid only partly ionises → Strength"
+      },
+      "2": {
+        "prompt": "Choose the salt made by complete neutralisation.",
+        "explanation": "The metal or ammonium ion comes from the base; the anion comes from the acid.",
+        "solution": "Hydrochloric acid + sodium hydroxide → Sodium chloride; Sulfuric acid + magnesium oxide → Magnesium sulfate; Nitric acid + potassium hydroxide → Potassium nitrate; Ethanoic acid + sodium hydroxide → Sodium ethanoate"
+      }
+    },
+    "signature": "f9fab4ddddc22a13303cc0dc71273b534a17eb79f7293cc6ada16a19d1ab9fc3"
+  },
+  "acids-workshop": {
+    "id": "acids-workshop",
+    "title": "Neutralisation Drop Quest",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-acids-bases",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "20 mL of 0.10 mol/dm³ HCl. Add 0.10 mol/dm³ NaOH to reach equivalence.",
+        "explanation": "20 × 0.10 = Vbase × 0.10, so 20 mL is needed. Strong acid/strong base at 25 °C gives pH 7 at equivalence.",
+        "solution": "Volume delivered / mL: 20"
+      },
+      "1": {
+        "prompt": "25 mL of 0.20 mol/dm³ HCl. The NaOH is 0.10 mol/dm³.",
+        "explanation": "25 × 0.20 = Vbase × 0.10 gives 50 mL. Equal volume does not always mean equal amount of substance.",
+        "solution": "Volume delivered / mL: 50"
+      },
+      "2": {
+        "prompt": "10 mL of 0.20 mol/dm³ HCl. The NaOH is 0.20 mol/dm³.",
+        "explanation": "10 mL is the ideal equivalence volume. The colour is a schematic universal indicator; real endpoint uncertainty and drop size matter.",
+        "solution": "Volume delivered / mL: 10"
+      }
+    },
+    "signature": "29a4cfd5458a026a35434c66da1a342925713702881fba00ad499240881be944"
+  },
+  "metals-classic": {
+    "id": "metals-classic",
+    "title": "Reactivity Ladder",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-metals",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Arrange from MOST to LEAST reactive.",
+        "explanation": "More reactive metals lose electrons more readily. A metal can displace a less reactive metal from its salt solution.",
+        "solution": "Potassium → 1 · first; Magnesium → 2; Zinc → 3; Iron → 4; Copper → 5; Silver → 6"
+      },
+      "1": {
+        "prompt": "Put the ideal copper-from-copper-oxide practical in order.",
+        "explanation": "Carbon can reduce oxides of metals below carbon in the reactivity series. The sequence is a virtual planning task, not permission to heat chemicals alone.",
+        "solution": "Wear eye protection and prepare apparatus → 1 · first; Place copper oxide and carbon in a suitable tube → 2; Heat the mixture safely under supervision → 3; Allow apparatus to cool → 4; Observe the copper product → 5; Collect and dispose of material as instructed → 6"
+      },
+      "2": {
+        "prompt": "From MOST to LEAST reactive, using these solution observations.",
+        "explanation": "Each observation places the solid metal above the displaced metal: Mg > Zn > Fe > Cu > Ag. The cards are links in that evidence chain.",
+        "solution": "Mg displaces Zn → 1 · first; Zn displaces Fe → 2; Fe displaces Cu → 3; Cu displaces Ag → 4"
+      }
+    },
+    "signature": "1255ab65fa01ba3ec70874aff28cb7d4e3db89e8b4144dbc2cb44a7e879a8633"
+  },
+  "metals-workshop": {
+    "id": "metals-workshop",
+    "title": "Displacement Vault",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-metals",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Deposit copper. Among Mg, Zn, Fe and Cu, use the LEAST reactive solid that can displace it.",
+        "explanation": "Fe + Cu²⁺ → Fe²⁺ + Cu. Iron is oxidised and copper ions are reduced; a copper coating forms.",
+        "solution": "Solid strip: Iron; Solution contains: Copper(II) ions"
+      },
+      "1": {
+        "prompt": "Deposit silver, using the least reactive available solid that works.",
+        "explanation": "Cu + 2Ag⁺ → Cu²⁺ + 2Ag. Copper is the least reactive offered solid above silver.",
+        "solution": "Solid strip: Copper; Solution contains: Silver ions"
+      },
+      "2": {
+        "prompt": "Deposit zinc, using the least reactive available solid that works.",
+        "explanation": "Mg + Zn²⁺ → Mg²⁺ + Zn. These are ideal aqueous displacement models; the animation shows deposited metal, not hydrogen bubbles.",
+        "solution": "Solid strip: Magnesium; Solution contains: Zinc ions"
+      }
+    },
+    "signature": "b874c471f715160f63651efb9af506da1a02b3d514d607b481bd0f1bf46d7b01"
+  },
+  "redox-classic": {
+    "id": "redox-classic",
+    "title": "Electron Exchange",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-redox",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Is the species being oxidised or reduced?",
+        "explanation": "OIL RIG: Oxidation Is Loss, Reduction Is Gain of electrons. Check the electron side of each half-equation.",
+        "solution": "Zn → Zn²⁺ + 2e⁻ → Oxidation; Cu²⁺ + 2e⁻ → Cu → Reduction; 2Cl⁻ → Cl₂ + 2e⁻ → Oxidation; Ag⁺ + e⁻ → Ag → Reduction; Fe²⁺ → Fe³⁺ + e⁻ → Oxidation; 2H⁺ + 2e⁻ → H₂ → Reduction"
+      },
+      "1": {
+        "prompt": "Match the electrolysis clue.",
+        "explanation": "Electrons travel in the external circuit; ions carry charge through the electrolyte. They are different charge carriers.",
+        "solution": "Cathode in an electrolytic cell → Negative electrode; reduction; Anode in an electrolytic cell → Positive electrode; oxidation; Current through the metal wires → Moving electrons; Current through the electrolyte → Moving ions"
+      },
+      "2": {
+        "prompt": "Predict the ideal molten-electrolyte products.",
+        "explanation": "Molten salts contain their ions but no water. Aqueous solutions can give different products because water competes.",
+        "solution": "Molten lead bromide: cathode → Lead; Molten lead bromide: anode → Bromine; Molten sodium chloride: cathode → Sodium; Molten sodium chloride: anode → Chlorine"
+      }
+    },
+    "signature": "bdb9ace253e3ddf925416013ca941ab74e4a1bcfb1390bbb4b9ee1ff31bc759a"
+  },
+  "redox-workshop": {
+    "id": "redox-workshop",
+    "title": "Electron Delivery",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-redox",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Electrolyse molten PbBr₂. Reduce one Pb²⁺ ion and choose the anode product.",
+        "explanation": "Pb²⁺ + 2e⁻ → Pb. At the anode, 2Br⁻ → Br₂ + 2e⁻. Virtual model only; bromine is hazardous.",
+        "solution": "Electrons per cation: 2; Cathode connection: Negative terminal; Anode product: Bromine"
+      },
+      "1": {
+        "prompt": "Electrolyse molten NaCl. Reduce one Na⁺ ion and choose the anode product.",
+        "explanation": "Na⁺ + e⁻ → Na. At the anode, 2Cl⁻ → Cl₂ + 2e⁻. Water is absent in this molten-salt model.",
+        "solution": "Electrons per cation: 1; Cathode connection: Negative terminal; Anode product: Chlorine"
+      },
+      "2": {
+        "prompt": "Electrolyse molten MgCl₂. Reduce one Mg²⁺ ion and choose the anode product.",
+        "explanation": "Mg²⁺ + 2e⁻ → Mg. Chloride forms chlorine at the anode. The full equation is MgCl₂ → Mg + Cl₂.",
+        "solution": "Electrons per cation: 2; Cathode connection: Negative terminal; Anode product: Chlorine"
+      }
+    },
+    "signature": "23667036057dcaf5a4bc9d814499eda069dcf46a7be3c220af915410fdee6d92"
+  },
+  "organic-classic": {
+    "id": "organic-classic",
+    "title": "Molecule Families",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-organic",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Classify the open-chain hydrocarbon formula, assuming the indicated bond pattern.",
+        "explanation": "Open-chain alkanes are saturated. A diene has two carbon–carbon double bonds; its exact arrangement matters.",
+        "solution": "CH₃–CH₃ → Alkane; CH₂=CH₂ → Alkene: one C=C; CH₂=CH–CH=CH₂ → Diene: two C=C; CH₃–CH₂–CH₃ → Alkane; CH₃–CH=CH₂ → Alkene: one C=C; CH₂=CH–CH₂–CH=CH₂ → Diene: two C=C"
+      },
+      "1": {
+        "prompt": "Match each functional group.",
+        "explanation": "An –OH within –COOH is part of a carboxylic acid group. Identify the complete functional group.",
+        "solution": "–OH on an alkyl chain → Alcohol; –COOH → Carboxylic acid; –COO– between carbon groups → Ester; –CONH– linking carbon groups → Amide link"
+      },
+      "2": {
+        "prompt": "Match the industrial or laboratory process.",
+        "explanation": "Distillation separates without changing molecules. Cracking changes covalent bonds and must conserve atoms.",
+        "solution": "Separate crude oil by boiling ranges → Fractional distillation; Break long hydrocarbons into smaller molecules → Cracking; Join many alkene monomers without eliminating a small molecule → Addition polymerisation; Alcohol + carboxylic acid, acid catalyst → Esterification"
+      }
+    },
+    "signature": "5e17a8a4d9693f4c914f408c470b503c810a362d12fd4c5e27cb6c7a8549a0cb"
+  },
+  "organic-workshop": {
+    "id": "organic-workshop",
+    "title": "Carbon Chain Studio",
+    "course": "Year 10 Chemistry",
+    "topic": "y10-organic",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Build an open-chain alkene with formula C₄H₈.",
+        "explanation": "A four-carbon chain with one C=C has C₄H₈. A formula alone could also describe a ring, so the open-chain condition matters.",
+        "solution": "Carbon atoms: 4; Bond orders in chain (1 = single, 2 = double): 2, 1, 1"
+      },
+      "1": {
+        "prompt": "Challenge cracking: C₈H₁₈ → your diene + C₄H₁₀ + H₂. Build the diene.",
+        "explanation": "C₈H₁₈ → C₄H₆ + C₄H₁₀ + H₂ conserves 8 C and 18 H. This is an illustrative possible product balance, not a guaranteed single cracking pathway.",
+        "solution": "Carbon atoms: 4; Bond orders in chain (1 = single, 2 = double): 2, 1, 2"
+      },
+      "2": {
+        "prompt": "Build a saturated, unbranched molecule with formula C₆H₁₄.",
+        "explanation": "Six carbons connected only by single bonds give C₆H₁₄. Each carbon has a total bond order of four, completed by hydrogen.",
+        "solution": "Carbon atoms: 6; Bond orders in chain (1 = single, 2 = double): 1, 1, 1, 1, 1"
+      }
+    },
+    "signature": "2fc557d9591b3a3d87c1754802f123b21c0027c1c15fe68862d4b515360b8361"
+  },
+  "statistics-classic": {
+    "id": "statistics-classic",
+    "title": "Data Detectives",
+    "course": "Year 7 Maths",
+    "topic": "statistics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Read the key and the scale.",
+        "explanation": "A pictogram uses a key, a pie uses a share of 360°, and a bar height uses its labelled frequency scale.",
+        "solution": "3 pictogram symbols, key = 2 students → 6 students; Pie-chart sector of 90° → 25% of the observations; Sum of all frequencies → Total number of observations; Height of a category bar → That category’s frequency"
+      },
+      "1": {
+        "prompt": "Choose the calculation being described.",
+        "explanation": "The mean uses all magnitudes, the median uses ordered positions, and the range measures spread.",
+        "solution": "Add all values and divide by their number → Mean; Order values and find the middle → Median; Subtract the minimum from the maximum → Range; Use Σ(fx)/Σf for a frequency table → Mean; For an even count, average the two middle values → Median; Measure the full span from smallest to largest → Range"
+      },
+      "2": {
+        "prompt": "Find each requested measure.",
+        "explanation": "The mode is most frequent. Different measures answer different questions even for the same data set.",
+        "solution": "Mean of 2, 4, 6 → 4; Median of 1, 2, 9 → 2; Range of 1, 4, 8 → 7; Mode of 3, 3, 5, 6 → 3"
+      }
+    },
+    "signature": "a7e7cdd7ff12abfa249df77350eb64fc1cf219e41a67b64d824ce8167b63ec60"
+  },
+  "statistics-workshop": {
+    "id": "statistics-workshop",
+    "title": "Frequency Factory",
+    "course": "Year 7 Maths",
+    "topic": "statistics",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Build 8 observations with mean 2.5 and median 2.5.",
+        "explanation": "Two of each value give sum 20 and count 8. The fourth and fifth ordered observations are 2 and 3, so the median is 2.5.",
+        "solution": "Frequency of value 1: 2; Frequency of value 2: 2; Frequency of value 3: 2; Frequency of value 4: 2"
+      },
+      "1": {
+        "prompt": "Build 10 observations with mean 3 and median 3.",
+        "explanation": "Two 2s, six 3s and two 4s give sum 30 and count 10. The fifth and sixth values are both 3. Other matching tables are accepted.",
+        "solution": "Frequency of value 1: 0; Frequency of value 2: 2; Frequency of value 3: 6; Frequency of value 4: 2"
+      },
+      "2": {
+        "prompt": "Build 8 observations with mean 2 and median 2.",
+        "explanation": "The sum is 2 × 1 + 4 × 2 + 2 × 3 = 16, so the mean is 2. Middle positions 4 and 5 are both 2. Zero-frequency values do not add observations.",
+        "solution": "Frequency of value 1: 2; Frequency of value 2: 4; Frequency of value 3: 2; Frequency of value 4: 0"
+      }
+    },
+    "signature": "f029150908f685d37a7c4c653f54539da74b508e694106fd435e2354b18591d6"
+  },
+  "algebra-machine": {
+    "id": "algebra-machine",
+    "title": "Mystery Machine Mission",
+    "course": "Year 7 Maths",
+    "topic": "algebra-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "A machine that scales",
+        "explanation": "The rule is y = 3x. Multiplying by 3 and passing through is direct proportion: every output is three times its input."
+      },
+      "1": {
+        "prompt": "A machine with a fixed addition",
+        "explanation": "The rule is y = x + 4. The difference y − x stays 4. This is not direct proportion, because zero input gives output 4."
+      },
+      "2": {
+        "prompt": "Order matters",
+        "explanation": "The rule is y = 2x + 3. Double first, then add 3. Adding 3 first and doubling gives 2x + 6, a different rule."
+      },
+      "3": {
+        "prompt": "A bracket in disguise",
+        "explanation": "y = 3(x + 2) = 3x + 6. Add 2 then multiply by 3, or multiply by 3 then add 6: both produce the same output for every input."
+      },
+      "4": {
+        "prompt": "Unpack a half-sized output",
+        "explanation": "y = (x − 4)/2 = x/2 − 2. Both operation orders shown by these equivalent forms work. Halving an odd input can produce a non-integer output."
+      },
+      "5": {
+        "prompt": "Challenge: the output moves backwards",
+        "explanation": "y = −2x + 6. A negative multiplier reverses the direction of change. Multiplying by −2 is different from subtracting 2."
+      }
+    },
+    "signature": "c288121186f38bbfb3d55fec9bfa7e2e1a1f356d1b8669e8a1e6abf7a4b3f5b6"
+  },
+  "algebra-paint": {
+    "id": "algebra-paint",
+    "title": "Proportion Paintworks",
+    "course": "Year 7 Maths",
+    "topic": "algebra-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Sunrise mural",
+        "explanation": "3 blue + 6 gold = 9 units. Gold = 2 × blue, so their ratio stays 1 : 2. Doubling the batch doubles both amounts."
+      },
+      "1": {
+        "prompt": "Lagoon delivery",
+        "explanation": "8 : 12 simplifies to 2 : 3. Both colours were scaled by the same factor, 4. Equal additions to both colours would not generally preserve the recipe."
+      },
+      "2": {
+        "prompt": "Ocean batch",
+        "explanation": "9 blue and 6 gold preserve the ratio 3 : 2. The gold-versus-blue graph is a straight line through the origin: gold = (2/3) × blue."
+      },
+      "3": {
+        "prompt": "Robots against the clock",
+        "explanation": "3 robots × 2 panels/min × 2 min = 12 panels. For a fixed job and equal independent robots, more robots means less time: nT = 6 robot-minutes."
+      },
+      "4": {
+        "prompt": "The long wall",
+        "explanation": "4 robots × 1 panel/min × 5 min = 20 panels. Doubling the crew would halve the completion time, not double it. This ideal model assumes equal rates and no interference."
+      },
+      "5": {
+        "prompt": "Festival finale · two models",
+        "explanation": "Mix 8 blue with 4 gold. Then 4 robots × 2 panels/min × 3 min cover 24 panels. The recipe uses a constant ratio; crew and time use a constant product. Neither rule can replace the other."
+      }
+    },
+    "signature": "e44d9e7671da8b81b9f750acf6baffcc30dc6104fd476a553e212c3b2007272f"
+  },
+  "coordinates-variables": {
+    "id": "coordinates-variables",
+    "title": "Variable Spotter",
+    "course": "Year 7 Maths",
+    "topic": "algebra-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Buying water bottles",
+        "explanation": "Number purchased, total price and total volume can vary. A unit price declared fixed is a constant in this situation. You may name either selected variable x, provided you state its meaning."
+      },
+      "1": {
+        "prompt": "A bicycle journey",
+        "explanation": "Time, distance and speed can vary. The fixed wheel count does not vary within this stated situation. Constant speed would be an extra assumption, not something guaranteed by the word bicycle."
+      },
+      "2": {
+        "prompt": "Downloading a file",
+        "explanation": "Time, amount received and transfer rate can vary. A fixed unit conversion is not a changing quantity. The amount received need not increase at a constant rate."
+      },
+      "3": {
+        "prompt": "Filling a swimming pool",
+        "explanation": "Time, water volume and depth can change, while the stated pool length remains fixed. Their relationships depend on geometry and how water is supplied."
+      },
+      "4": {
+        "prompt": "Studying for a test",
+        "explanation": "All three selected quantity types can vary. More study time does not guarantee a particular score or direct proportion; other factors and the assessment matter."
+      },
+      "5": {
+        "prompt": "What is a variable?",
+        "explanation": "A variable is a quantity that can change or take different values. A letter is a name for it; a constant is fixed in the stated situation."
+      },
+      "6": {
+        "prompt": "Exit check · define x and y",
+        "explanation": "x can mean number of bottles and y total price, or the labels can be reversed if clearly defined. Letters do not have permanent meanings across every problem."
+      }
+    },
+    "signature": "0e7e2895bc3fd0a7ba45d4b00f929d0c9a8d1c9b624f35855151d865a8baa98f"
+  },
+  "coordinates-detective": {
+    "id": "coordinates-detective",
+    "title": "Coordinate Detective",
+    "course": "Year 7 Maths",
+    "topic": "algebra-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Match the three clues · 1",
+        "explanation": "The ordered pair is (2, 4): 2 across on x first, then 4 up on y. The origin is (0, 0)."
+      },
+      "1": {
+        "prompt": "Match the three clues · 2",
+        "explanation": "The ordered pair is (5, 1): 5 across on x first, then 1 up on y. The origin is (0, 0)."
+      },
+      "2": {
+        "prompt": "Match the three clues · 3",
+        "explanation": "The ordered pair is (3, 6): 3 across on x first, then 6 up on y. The origin is (0, 0)."
+      },
+      "3": {
+        "prompt": "Match the three clues · 4",
+        "explanation": "The ordered pair is (1, 3): 1 across on x first, then 3 up on y. The origin is (0, 0)."
+      },
+      "4": {
+        "prompt": "Match the three clues · 5",
+        "explanation": "The ordered pair is (6, 2): 6 across on x first, then 2 up on y. The origin is (0, 0)."
+      },
+      "5": {
+        "prompt": "Match the three clues · 6",
+        "explanation": "The ordered pair is (4, 5): 4 across on x first, then 5 up on y. The origin is (0, 0)."
+      },
+      "6": {
+        "prompt": "Find and repair the impostor",
+        "explanation": "The instruction was reversed. (4, 2) means 4 across and 2 up; moving 2 across and 4 up plots (2, 4)."
+      },
+      "7": {
+        "prompt": "Find ALL pairs with the same x-coordinate",
+        "explanation": "A and C both have x = 2; B and D both have x = 5. Points with the same x lie on a vertical line, even when their y values differ."
+      },
+      "8": {
+        "prompt": "Find ALL pairs with the same y-coordinate",
+        "explanation": "A and D both have y = 5; B and C both have y = 2. Points with the same y lie on a horizontal line."
+      },
+      "9": {
+        "prompt": "Which points are furthest to the right?",
+        "explanation": "B and D share the largest x-coordinate, 5. A point’s y-coordinate does not determine how far right it is."
+      },
+      "10": {
+        "prompt": "Which points are highest?",
+        "explanation": "A and D share the largest y-coordinate, 5. Two points can be equally high while having different x-coordinates."
+      }
+    },
+    "signature": "346de174c3052bf0b03b7d42855e3c8ee9b0ff4a62facf79e4750af55c3373e7"
+  },
+  "coordinates-pictures": {
+    "id": "coordinates-pictures",
+    "title": "Mystery Picture Studio",
+    "course": "Year 7 Maths",
+    "topic": "algebra-i",
+    "grader": "reported",
+    "rule": "standard",
+    "rounds": {
+      "0": {
+        "prompt": "Picture 1 · build the outline",
+        "explanation": "Read x across first, then y up; lift the pencil at NEW LINE."
+      },
+      "1": {
+        "prompt": "Picture 2 · extension challenge",
+        "explanation": "Read x across first, then y up; lift the pencil at NEW LINE."
+      }
+    },
+    "signature": "cad06424160005c9652df2c9c45d7876c999c8c25b0bd433a3efa6b63d0e2818"
+  },
+  "gas-picture": {
+    "id": "gas-picture",
+    "title": "Name That Gas Law",
+    "course": "Year 9 Science",
+    "topic": "gas-laws",
+    "grader": "picture",
+    "rule": "standard",
+    "rounds": {
+      "syringe": {
+        "prompt": "The capped syringe: Push the plunger slowly. The same trapped air occupies less space and becomes harder to compress. The syringe is sealed. Move slowly so temperature stays constant.",
+        "explanation": "Reducing volume makes particles strike the walls more often, raising pressure. At constant T and n, halving V doubles P.",
+        "law": "boyle",
+        "quantities": [
+          "P",
+          "V"
+        ],
+        "solution": "Boyle–Mariotte · P, V"
+      },
+      "flask-balloon": {
+        "prompt": "A balloon on a warmed flask: The air inside the flask and attached balloon warms. The balloon expands as the gas takes up more space. Follow the trapped air only: ignore extra water vapour and assume a flexible balloon keeps pressure approximately constant.",
+        "explanation": "Warmer particles move faster. The flexible boundary expands until the gas again balances the approximately constant surrounding pressure.",
+        "law": "charles",
+        "quantities": [
+          "V",
+          "T"
+        ],
+        "solution": "Charles · V, T"
+      },
+      "aerosol": {
+        "prompt": "The warmed aerosol can: Imagine a fixed amount of dry gas warming inside a sealed, rigid can. Its volume cannot expand. Keep the volume and amount of gas fixed; compare absolute pressure as temperature rises.",
+        "explanation": "At fixed volume, warmer particles transfer more momentum in their wall collisions, increasing pressure.",
+        "law": "pressure",
+        "quantities": [
+          "P",
+          "T"
+        ],
+        "solution": "Gay-Lussac / Amontons · P, T"
+      },
+      "diver": {
+        "prompt": "Bubbles rising from a diver: Follow one air bubble as it rises. The surrounding water pressure decreases and the bubble expands. Assume the same bubble retains its gas and its temperature stays approximately constant.",
+        "explanation": "Lower outside pressure lets the bubble expand. For its fixed gas sample at constant T, P decreases while V increases.",
+        "law": "boyle",
+        "quantities": [
+          "P",
+          "V"
+        ],
+        "solution": "Boyle–Mariotte · P, V"
+      },
+      "tyre": {
+        "prompt": "A tyre in the sunshine: A sealed tyre warms in the sun. Treat its volume as almost fixed and predict the change in gas pressure. No air enters or leaks out, and the tyre volume stays approximately constant.",
+        "explanation": "Raising absolute temperature raises absolute pressure in the same proportion when V and n are fixed.",
+        "law": "pressure",
+        "quantities": [
+          "P",
+          "T"
+        ],
+        "solution": "Gay-Lussac / Amontons · P, T"
+      },
+      "hot-air-balloon": {
+        "prompt": "Warm air in a balloon envelope: Use the picture as an expansion analogy: imagine a fixed sample of air warming in a flexible envelope at constant pressure. For this question only, keep gas amount and pressure constant while its temperature changes.",
+        "explanation": "In this simplified fixed-sample model, a warmer gas occupies a larger volume: V/T stays constant when T is in kelvin.",
+        "law": "charles",
+        "quantities": [
+          "V",
+          "T"
+        ],
+        "solution": "Charles · V, T"
+      },
+      "weighted-piston": {
+        "prompt": "Weights on a gas piston: Add weights to the piston and let the gas return to its initial temperature. Its pressure rises and its volume decreases. Compare the final equilibrium states at the same temperature. No gas escapes.",
+        "explanation": "The additional load requires greater gas pressure to balance it. The fixed gas sample has a smaller volume at the same temperature.",
+        "law": "boyle",
+        "quantities": [
+          "P",
+          "V"
+        ],
+        "solution": "Boyle–Mariotte · P, V"
+      },
+      "pressure-cooker": {
+        "prompt": "Gas inside a closed cooker: Focus on a fixed amount of gas warming in a rigid, sealed vessel before a valve opens. What happens to its pressure? For this model, hold volume and gas amount constant. Ignore additional vapour from liquid water.",
+        "explanation": "With no room to expand, the fixed gas sample has a higher pressure at a higher absolute temperature.",
+        "law": "pressure",
+        "quantities": [
+          "P",
+          "T"
+        ],
+        "solution": "Gay-Lussac / Amontons · P, T"
+      },
+      "cold-balloon": {
+        "prompt": "A balloon in cold water: A tied balloon cools in a cold-water bath. Its trapped gas shrinks as its temperature falls. Assume pressure is approximately constant, immersion depth is unchanged and no gas leaks out.",
+        "explanation": "At constant pressure and fixed gas amount, a decrease in absolute temperature produces a decrease in volume.",
+        "law": "charles",
+        "quantities": [
+          "V",
+          "T"
+        ],
+        "solution": "Charles · V, T"
+      }
+    },
+    "signature": "428a3b368a98b13d53102d8d1a237948cc1361dbc3e9d5a1ae8fd4d5db6a15bf"
+  },
+  "gas-word": {
+    "id": "gas-word",
+    "title": "Mystery Word",
+    "course": "Year 9 Science",
+    "topic": "gas-laws",
+    "grader": "word",
+    "rule": "standard",
+    "rounds": {
+      "pressure": {
+        "prompt": "The force exerted by gas particles on each unit area of a container wall.",
+        "explanation": "P = force/area. Wall collisions transfer momentum and produce pressure.",
+        "accepted": [
+          "Pressure",
+          "gas pressure"
+        ],
+        "solution": "Pressure"
+      },
+      "volume": {
+        "prompt": "The three-dimensional space occupied by a gas, often measured in litres or millilitres.",
+        "explanation": "A gas fills its available container space. Volume is not a count of particles.",
+        "accepted": [
+          "Volume"
+        ],
+        "solution": "Volume"
+      },
+      "temperature": {
+        "prompt": "A measure related to the average kinetic energy of particles, expressed in kelvin in gas-law ratios.",
+        "explanation": "Higher temperature means greater average translational kinetic energy in the ideal-gas model.",
+        "accepted": [
+          "Temperature"
+        ],
+        "solution": "Temperature"
+      },
+      "heat": {
+        "prompt": "Energy transferred between objects or systems because they have different temperatures.",
+        "explanation": "Heat is a transfer of energy. An object has internal energy; it does not contain a substance called heat.",
+        "accepted": [
+          "Heat",
+          "heat transfer"
+        ],
+        "solution": "Heat"
+      },
+      "kelvin": {
+        "prompt": "The SI unit of thermodynamic temperature. Add 273.15 to the Celsius reading to use this scale.",
+        "explanation": "Write K, without a degree symbol: 20 °C is 293.15 K.",
+        "accepted": [
+          "Kelvin",
+          "K"
+        ],
+        "solution": "Kelvin"
+      },
+      "absolute-zero": {
+        "prompt": "The lower limit of thermodynamic temperature: 0 K, equivalent to −273.15 °C.",
+        "explanation": "Absolute zero is the reference for the absolute temperature scale; it is not the freezing point of water.",
+        "accepted": [
+          "Absolute zero"
+        ],
+        "solution": "Absolute zero"
+      },
+      "boyle": {
+        "prompt": "The law linking pressure and volume inversely for a fixed amount of gas at constant temperature.",
+        "explanation": "P₁V₁ = P₂V₂: if V doubles at constant T and n, P halves.",
+        "accepted": [
+          "Boyle–Mariotte’s law",
+          "Boyle's law",
+          "Boyle",
+          "Boyle Mariotte",
+          "Boyle Mariotte law",
+          "Boyle Mariotte’s law"
+        ],
+        "solution": "Boyle–Mariotte’s law"
+      },
+      "charles": {
+        "prompt": "The law in which gas volume and absolute temperature change in the same proportion at fixed pressure and gas amount.",
+        "explanation": "V₁/T₁ = V₂/T₂, with T in kelvin.",
+        "accepted": [
+          "Charles’s law",
+          "Charles",
+          "Charles law"
+        ],
+        "solution": "Charles’s law"
+      },
+      "pressure-law": {
+        "prompt": "The pressure law: pressure and absolute temperature are proportional for a fixed gas sample at constant volume.",
+        "explanation": "Also called Amontons’s law: P₁/T₁ = P₂/T₂.",
+        "accepted": [
+          "Gay-Lussac’s law",
+          "Gay Lussac",
+          "Gay Lussac law",
+          "Amontons",
+          "Amontons law",
+          "Amontons’s law",
+          "pressure law",
+          "Gay-Lussac / Amontons"
+        ],
+        "solution": "Gay-Lussac’s law"
+      },
+      "inverse": {
+        "prompt": "A relationship in which multiplying one quantity by a factor divides the other by the same factor.",
+        "explanation": "At constant T and gas amount, Boyle’s law makes P inversely proportional to V.",
+        "accepted": [
+          "Inverse proportion",
+          "inversely proportional",
+          "inverse relationship",
+          "inverse proportionality"
+        ],
+        "solution": "Inverse proportion"
+      },
+      "direct": {
+        "prompt": "A relationship in which multiplying one quantity by a factor multiplies the other by that same factor.",
+        "explanation": "For Charles’s law, doubling absolute temperature doubles volume if pressure and gas amount stay fixed.",
+        "accepted": [
+          "Direct proportion",
+          "directly proportional",
+          "direct relationship",
+          "direct proportionality"
+        ],
+        "solution": "Direct proportion"
+      },
+      "collision": {
+        "prompt": "An event in which a gas particle strikes another particle or a container wall.",
+        "explanation": "Wall collisions transfer momentum. More frequent or more forceful wall collisions can raise pressure.",
+        "accepted": [
+          "Collision",
+          "collisions"
+        ],
+        "solution": "Collision"
+      },
+      "compression": {
+        "prompt": "A change that reduces the volume occupied by a gas, such as pushing a sealed syringe plunger inward.",
+        "explanation": "With a fixed gas amount at constant temperature, compression raises pressure.",
+        "accepted": [
+          "Compression",
+          "compressing"
+        ],
+        "solution": "Compression"
+      },
+      "expansion": {
+        "prompt": "An increase in the volume occupied by a gas.",
+        "explanation": "Expansion can result from lower external pressure or from warming under suitable conditions.",
+        "accepted": [
+          "Expansion",
+          "expanding"
+        ],
+        "solution": "Expansion"
+      },
+      "density": {
+        "prompt": "The mass of a sample divided by the volume that it occupies.",
+        "explanation": "Density = mass/volume. A fixed gas mass becomes less dense when it expands.",
+        "accepted": [
+          "Density"
+        ],
+        "solution": "Density"
+      },
+      "mass": {
+        "prompt": "The quantity measured in grams or kilograms, conserved for the trapped gas in these sealed models.",
+        "explanation": "Mass is different from volume and from gravitational force.",
+        "accepted": [
+          "Mass"
+        ],
+        "solution": "Mass"
+      },
+      "mole": {
+        "prompt": "The SI unit of amount of substance. One of these contains exactly 6.02214076 × 10²³ specified entities.",
+        "explanation": "The symbol is mol. Gas-law calculations often label amount of substance n.",
+        "accepted": [
+          "Mole",
+          "mol"
+        ],
+        "solution": "Mole"
+      },
+      "pascal": {
+        "prompt": "The SI unit of pressure, equal to one newton per square metre.",
+        "explanation": "1 Pa = 1 N/m²; 1 kPa = 1000 Pa.",
+        "accepted": [
+          "Pascal",
+          "Pa",
+          "pascals"
+        ],
+        "solution": "Pascal"
+      },
+      "absolute-pressure": {
+        "prompt": "Pressure measured relative to a perfect vacuum. This is the pressure used in gas-law equations.",
+        "explanation": "For a positive gauge reading, Pabsolute = Pgauge + Patmospheric.",
+        "accepted": [
+          "Absolute pressure"
+        ],
+        "solution": "Absolute pressure"
+      },
+      "gauge-pressure": {
+        "prompt": "Pressure measured relative to the surrounding atmosphere, as on a typical tyre gauge.",
+        "explanation": "A tyre gauge reading must be converted to absolute pressure before using P/T ratios.",
+        "accepted": [
+          "Gauge pressure"
+        ],
+        "solution": "Gauge pressure"
+      },
+      "evaporation": {
+        "prompt": "A change from liquid to gas occurring at the liquid surface; it can happen below the boiling point.",
+        "explanation": "Faster-moving particles can escape from a liquid surface without the whole liquid boiling.",
+        "accepted": [
+          "Evaporation"
+        ],
+        "solution": "Evaporation"
+      },
+      "boiling": {
+        "prompt": "Vapour bubbles form throughout a liquid when its vapour pressure reaches the external pressure.",
+        "explanation": "Boiling temperature depends on external pressure as well as the substance.",
+        "accepted": [
+          "Boiling"
+        ],
+        "solution": "Boiling"
+      },
+      "condensation": {
+        "prompt": "The change of state from a gas to a liquid.",
+        "explanation": "Cooling water vapour can form liquid droplets on a cold surface.",
+        "accepted": [
+          "Condensation"
+        ],
+        "solution": "Condensation"
+      },
+      "melting": {
+        "prompt": "The change of state from a solid to a liquid.",
+        "explanation": "During melting of a pure substance at constant pressure, energy can enter without raising temperature.",
+        "accepted": [
+          "Melting"
+        ],
+        "solution": "Melting"
+      },
+      "freezing": {
+        "prompt": "The change of state from a liquid to a solid.",
+        "explanation": "Freezing releases energy to the surroundings as the solid forms.",
+        "accepted": [
+          "Freezing"
+        ],
+        "solution": "Freezing"
+      },
+      "diffusion": {
+        "prompt": "The net spreading of particles from a region of higher concentration towards a region of lower concentration through random motion.",
+        "explanation": "Particles move randomly in both directions; the overall concentration difference produces a net spreading.",
+        "accepted": [
+          "Diffusion"
+        ],
+        "solution": "Diffusion"
+      },
+      "controlled-variable": {
+        "prompt": "A factor kept the same so that an investigation can isolate the effect of the quantity being changed.",
+        "explanation": "In a Boyle experiment, temperature and gas amount are controlled.",
+        "accepted": [
+          "Controlled variable",
+          "control variable",
+          "constant variable"
+        ],
+        "solution": "Controlled variable"
+      },
+      "independent-variable": {
+        "prompt": "The quantity you deliberately change in a controlled investigation.",
+        "explanation": "If you move a syringe plunger to set volume, volume is the independent variable.",
+        "accepted": [
+          "Independent variable",
+          "independent"
+        ],
+        "solution": "Independent variable"
+      },
+      "dependent-variable": {
+        "prompt": "The response you measure to see the effect of changing another quantity in an investigation.",
+        "explanation": "If you set a syringe volume and read its pressure sensor, pressure is the dependent variable.",
+        "accepted": [
+          "Dependent variable",
+          "dependent"
+        ],
+        "solution": "Dependent variable"
+      },
+      "ideal-gas": {
+        "prompt": "A model of gas particles with negligible own volume and no attractions between them, apart from elastic collisions.",
+        "explanation": "The model follows PV = nRT. Real gases deviate more strongly at high pressure and near condensation.",
+        "accepted": [
+          "Ideal gas"
+        ],
+        "solution": "Ideal gas"
+      }
+    },
+    "signature": "25c4e28471e0064741a8316f7dca61d730351dd422da86442d520379e95ad4c4"
+  },
+  "blood-dispatch": {
+    "id": "blood-dispatch",
+    "title": "Transport Dispatch",
+    "course": "Year 9 Science",
+    "topic": "blood-vessels",
+    "grader": "dispatch",
+    "rule": "dispatch",
+    "rounds": {
+      "oxygen": {
+        "prompt": "Fuel a working muscle: A muscle needs oxygen for aerobic respiration. Choose the component that carries most oxygen. What crosses from blood towards the muscle?",
+        "explanation": "Most oxygen binds reversibly to haemoglobin in red cells. It unloads at tissues with a lower oxygen partial pressure.",
+        "carrier": "rbc",
+        "target": "muscle",
+        "answer": 0,
+        "options": [
+          "Oxygen molecules; red cells normally stay in the vessel.",
+          "Whole red cells burst through the wall.",
+          "A bubble of inhaled air."
+        ],
+        "solution": "Red blood cell → Muscle; Oxygen molecules; red cells normally stay in the vessel."
+      },
+      "glucose": {
+        "prompt": "Deliver a usable nutrient: After absorption and processing by the liver, glucose needs to reach a working muscle. Choose its main travelling medium. What does the glucose provide when used in respiration?",
+        "explanation": "Glucose is dissolved in plasma. Uptake into body cells then requires suitable membrane transport proteins; it is not a red-cell oxygen cargo.",
+        "carrier": "plasma",
+        "target": "muscle",
+        "answer": 0,
+        "options": [
+          "A chemical fuel from which energy can be transferred.",
+          "An enzyme that pumps the heart.",
+          "A replacement for all oxygen."
+        ],
+        "solution": "Plasma → Muscle; A chemical fuel from which energy can be transferred."
+      },
+      "co2": {
+        "prompt": "Bring a waste gas back: Active tissues produce carbon dioxide. Choose the medium carrying most of its transported form. At the lungs, the bicarbonate pathway can reverse. What can then leave the blood?",
+        "explanation": "Most carbon dioxide is transported as bicarbonate ions in plasma, formed largely through reactions inside red cells. Some CO₂ also binds haemoglobin or stays dissolved.",
+        "carrier": "plasma",
+        "target": "lungs",
+        "answer": 0,
+        "options": [
+          "Carbon dioxide gas, which diffuses towards alveolar air.",
+          "Urea, which is breathed out as the main gas.",
+          "All the plasma as a spray."
+        ],
+        "solution": "Plasma → Lungs; Carbon dioxide gas, which diffuses towards alveolar air."
+      },
+      "urea": {
+        "prompt": "Send nitrogen waste for removal: The liver has made urea while processing excess amino acids. Send this dissolved waste to the organ that removes it from blood. Which statement separates production from removal?",
+        "explanation": "Urea travels dissolved in plasma from the liver to the kidneys. The kidneys filter blood and excrete urea in urine; the liver makes it but is not its final exit.",
+        "carrier": "plasma",
+        "target": "kidneys",
+        "answer": 0,
+        "options": [
+          "The liver produces urea; the kidneys excrete it.",
+          "The kidneys make all urea and the lungs excrete it.",
+          "Red cells turn urea into oxygen."
+        ],
+        "solution": "Plasma → Kidneys; The liver produces urea; the kidneys excrete it."
+      },
+      "hormone": {
+        "prompt": "Deliver a chemical message: An endocrine gland releases a hormone with a role in muscle cells. Choose its travelling medium and a possible responding tissue. Why does every tissue reached by the blood not respond in the same way?",
+        "explanation": "Hormones circulate in plasma, freely dissolved or bound to carrier proteins. Only cells with an appropriate receptor respond; this selected hormone has a receptor on the muscle cells in this mission.",
+        "carrier": "plasma",
+        "target": "muscle",
+        "answer": 0,
+        "options": [
+          "A response requires the appropriate receptor and cell machinery.",
+          "Hormones can only travel in red cells.",
+          "Only arteries contain hormones."
+        ],
+        "solution": "Plasma → Muscle; A response requires the appropriate receptor and cell machinery."
+      },
+      "heat": {
+        "prompt": "Redistribute heat after exercise: Working muscles have warmed the blood. Choose its water-rich medium and take heat towards the surface. What is actually transported in this mission?",
+        "explanation": "The water-rich plasma is an important part of blood’s heat capacity: the energy needed for a temperature change. The entire circulating blood carries thermal energy; increased skin blood flow can aid heat loss when conditions allow.",
+        "carrier": "plasma",
+        "target": "skin",
+        "answer": 0,
+        "options": [
+          "Thermal energy, rather than a special heat molecule.",
+          "Particles made of pure heat.",
+          "Cold platelets that cancel temperature."
+        ],
+        "solution": "Plasma → Skin; Thermal energy, rather than a special heat molecule."
+      },
+      "defence": {
+        "prompt": "Respond to a microbe: A small tissue region needs cells that can engulf microbes. Choose the appropriate cell family. Which statement fits the neutrophil shown?",
+        "explanation": "Neutrophils are white cells that can move towards an affected tissue and engulf microbes. Other white-cell types have different jobs; the blood transports them as part of the response.",
+        "carrier": "wbc",
+        "target": "infection",
+        "answer": 0,
+        "options": [
+          "It has a nucleus and can engulf microbes.",
+          "It carries most oxygen using haemoglobin.",
+          "It is a fragment whose only job is clotting."
+        ],
+        "solution": "White blood cell → Affected tissue; It has a nucleus and can engulf microbes."
+      },
+      "plug": {
+        "prompt": "Seal a small vessel break: A small vessel is damaged. Deliver fragments that adhere and aggregate at the injury. What stabilises the plug in clot formation?",
+        "explanation": "Platelets form a temporary plug at the damaged surface. Plasma clotting proteins are also needed to stabilise it with fibrin; platelets do not do the whole job alone.",
+        "carrier": "platelets",
+        "target": "wound",
+        "answer": 0,
+        "options": [
+          "Fibrin strands formed from plasma fibrinogen.",
+          "A stream of oxygen bubbles.",
+          "White cells changing into arteries."
+        ],
+        "solution": "Platelets → Small injury; Fibrin strands formed from plasma fibrinogen."
+      },
+      "fibrin": {
+        "prompt": "Strengthen the repair: Platelets are already at an injury. Deliver the soluble proteins needed for the stabilising mesh. Which change occurs at the injury?",
+        "explanation": "Fibrinogen circulates dissolved in plasma. The clotting process converts it to fibrin strands locally. The plug and mesh work together; the rest of the circulation should stay fluid.",
+        "carrier": "plasma",
+        "target": "wound",
+        "answer": 0,
+        "options": [
+          "Soluble fibrinogen is converted into insoluble fibrin.",
+          "All blood is converted permanently into serum.",
+          "Red cells make a new valve."
+        ],
+        "solution": "Plasma → Small injury; Soluble fibrinogen is converted into insoluble fibrin."
+      },
+      "oxygen2": {
+        "prompt": "Supply cells near a healing wound: Living cells near an injury need oxygen for respiration during repair. Deliver oxygen without mistaking this for the clotting job. Why is this mission different from making a plug?",
+        "explanation": "Red cells transport oxygen to living tissue near the wound. Platelets help seal the break; they do not replace oxygen transport. One location can need several components for different jobs.",
+        "carrier": "rbc",
+        "target": "wound",
+        "answer": 0,
+        "options": [
+          "The required cargo is oxygen, so haemoglobin is needed.",
+          "Any component does every blood function.",
+          "Oxygen can be transported only by fibrin."
+        ],
+        "solution": "Red blood cell → Small injury; The required cargo is oxygen, so haemoglobin is needed."
+      }
+    },
+    "signature": "782b0d532a3371699ec4e7b3b89a6d47110a7f73ad0c3dc9aad5a3a39200d316"
+  }
+};

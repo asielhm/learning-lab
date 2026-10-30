@@ -28,7 +28,7 @@ const notify = () => document.dispatchEvent(new Event('learning-lab-recording-ch
 
 // Apps Script redirects POSTs to a Google HTML response. An iframe lets us receive
 // an explicit server acknowledgement without pretending an opaque fetch was saved.
-function deliver(url, payload) {
+export function deliver(url, payload) {
   return new Promise((resolve, reject) => {
     const nonce = crypto.randomUUID();
     const frame = document.createElement('iframe');

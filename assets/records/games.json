@@ -1,0 +1,383 @@
+{
+  "protocol": 1,
+  "games": [
+    {
+      "id": "factors-classic",
+      "title": "Factor Arcade",
+      "course": "Year 7 Maths",
+      "topic": "numbers-i",
+      "signature": "0a3de5783c37697d3700097b92b9a27b5020ab418bd003c56f8ced3c147863e6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-i/prepare.html"
+    },
+    {
+      "id": "factors-workshop",
+      "title": "The 24 Machine",
+      "course": "Year 7 Maths",
+      "topic": "numbers-i",
+      "signature": "e48fd15213f32c1018c657d1cf3f111d3bfbfded2677e751c574340f3e0555e6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-i/prepare.html"
+    },
+    {
+      "id": "geometry-classic",
+      "title": "Angle Dominoes",
+      "course": "Year 7 Maths",
+      "topic": "geometry-i",
+      "signature": "b9539a3405e25fc0a8794587f8ad211dab86bf90c443ad6aa530ed92edbe5a12",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/geometry-i/prepare.html"
+    },
+    {
+      "id": "geometry-workshop",
+      "title": "Fence & Floor",
+      "course": "Year 7 Maths",
+      "topic": "geometry-i",
+      "signature": "4ec1e74625da0bd6639891432cb285fb94b6448f2895f4d2301918f211182298",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/geometry-i/prepare.html"
+    },
+    {
+      "id": "integers-classic",
+      "title": "Integer Skyline",
+      "course": "Year 7 Maths",
+      "topic": "numbers-ii",
+      "signature": "ca89f51c3cff89a3ccef733ac92520ebdb687fb370c2be159e324b033d7fd505",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-ii/prepare.html"
+    },
+    {
+      "id": "integers-workshop",
+      "title": "Number-Line Rover",
+      "course": "Year 7 Maths",
+      "topic": "numbers-ii",
+      "signature": "d6fe3bb7e592c4a69eefb2d3e7a7ccbef7d846137209bbb1542f6a7ba56448c3",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-ii/prepare.html"
+    },
+    {
+      "id": "coordinates-classic",
+      "title": "Rule Detectives",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "a5623b1b273ef122a75f29b47ec260e08be2ec6a3d9a901618a26ae875b8551d",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-workshop",
+      "title": "Coordinate Quest",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "c9fae8fad297c9bd81fd009b3d903dba70465b1f341eb2d6ecce4a9142205df9",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "brackets-classic",
+      "title": "Like-Terms Recycling",
+      "course": "Year 7 Maths",
+      "topic": "algebra-ii",
+      "signature": "0648cd9ed140fa33f3fbb156f174860e905936e14976dba566b8006a17a0a89e",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-ii/prepare.html"
+    },
+    {
+      "id": "brackets-workshop",
+      "title": "Bag Factory",
+      "course": "Year 7 Maths",
+      "topic": "algebra-ii",
+      "signature": "d67457d508a54c7313dc9c68e06079df1c72502511252798fa0aa6900e37464d",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/algebra-ii/prepare.html"
+    },
+    {
+      "id": "fractions-classic",
+      "title": "Fraction Café",
+      "course": "Year 7 Maths",
+      "topic": "numbers-iii",
+      "signature": "3806b43a829adbf477f501da84f203b39c63ac75df9116c5f56de7625f1f35fa",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-iii/prepare.html"
+    },
+    {
+      "id": "fractions-workshop",
+      "title": "Pizza Proportions",
+      "course": "Year 7 Maths",
+      "topic": "numbers-iii",
+      "signature": "2d972808c8b90f8e12f5a777dea128066aaf017b3932153c8798d53b68fb79a6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/numbers-iii/prepare.html"
+    },
+    {
+      "id": "electricity-classic",
+      "title": "Circuit Snap",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-electricity",
+      "signature": "ebf67ea94da390398f1d675e122e1ab04613c5f121ec29b9cf82a6a653ff8f1b",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/electricity/prepare.html"
+    },
+    {
+      "id": "electricity-workshop",
+      "title": "Circuit Rescue",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-electricity",
+      "signature": "61eacc9073375917f12601e93a70ea2359917f9258d61b8998c0180b30a9e349",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/electricity/prepare.html"
+    },
+    {
+      "id": "waves-classic",
+      "title": "Wave Matchmakers",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-waves",
+      "signature": "e4d9b15035734598cb6e858e369f16389414c31610875fbd847fc788f1addbd7",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/waves/prepare.html"
+    },
+    {
+      "id": "waves-workshop",
+      "title": "Wave DJ",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-waves",
+      "signature": "e5d9b8a32f164f54247dfe19014dc6bf2440f53618d01c2c600515d1cfbc1169",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/waves/prepare.html"
+    },
+    {
+      "id": "optics-classic",
+      "title": "Ray Detective",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-optics",
+      "signature": "52620cae7117fd43dd077c9285e5bbfa79b2d7de89121cd8fcaf199df235e9ae",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/optics/prepare.html"
+    },
+    {
+      "id": "optics-workshop",
+      "title": "Focus Finder",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-optics",
+      "signature": "e701eba74d3e78eed89c594b175c397a45911583d411ca5ed030fbd90b0ad75e",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/optics/prepare.html"
+    },
+    {
+      "id": "thermal-classic",
+      "title": "Heat Transfer Dispatch",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-thermal",
+      "signature": "ca86eb8365972605abb3dbabef9a350a35e945a4dcf8ca191993aead09ea3065",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/thermal/prepare.html"
+    },
+    {
+      "id": "thermal-workshop",
+      "title": "Energy Budget Kitchen",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-thermal",
+      "signature": "61570762de39521b46a90da515702e309bea3af59ea0f7606961d6f22e011823",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/thermal/prepare.html"
+    },
+    {
+      "id": "kinematics-classic",
+      "title": "Motion Storyboards",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-kinematics",
+      "signature": "ad4c6ac71f215e4ebedde8e57c84685640b0eaf5f89318856993f4149ae2ad86",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/kinematics/prepare.html"
+    },
+    {
+      "id": "kinematics-workshop",
+      "title": "Catch-Up Flag",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-kinematics",
+      "signature": "04427723766e01fc24d579f80461ac901f69e3c7ccba9351c99e62743cbdab09",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/kinematics/prepare.html"
+    },
+    {
+      "id": "dynamics-classic",
+      "title": "Force Bureau",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-dynamics",
+      "signature": "c0a58da6427184cd43248babf22762fcc17b750a8d0e2c6a3c5e761b93ccd03c",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/dynamics/prepare.html"
+    },
+    {
+      "id": "dynamics-workshop",
+      "title": "Tugboat Targets",
+      "course": "Year 10 Physics",
+      "topic": "y10-physics-dynamics",
+      "signature": "0fa12c983b60af0f96f009854a3886aafff7cf653feb4625bf4b627b84548b23",
+      "roundCount": 3,
+      "preparation": "activities/y10/physics/dynamics/prepare.html"
+    },
+    {
+      "id": "acids-classic",
+      "title": "Reaction Recipe Cards",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-acids-bases",
+      "signature": "f9fab4ddddc22a13303cc0dc71273b534a17eb79f7293cc6ada16a19d1ab9fc3",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/acids-and-bases/prepare.html"
+    },
+    {
+      "id": "acids-workshop",
+      "title": "Neutralisation Drop Quest",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-acids-bases",
+      "signature": "29a4cfd5458a026a35434c66da1a342925713702881fba00ad499240881be944",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/acids-and-bases/prepare.html"
+    },
+    {
+      "id": "metals-classic",
+      "title": "Reactivity Ladder",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-metals",
+      "signature": "1255ab65fa01ba3ec70874aff28cb7d4e3db89e8b4144dbc2cb44a7e879a8633",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/metals/prepare.html"
+    },
+    {
+      "id": "metals-workshop",
+      "title": "Displacement Vault",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-metals",
+      "signature": "b874c471f715160f63651efb9af506da1a02b3d514d607b481bd0f1bf46d7b01",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/metals/prepare.html"
+    },
+    {
+      "id": "redox-classic",
+      "title": "Electron Exchange",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-redox",
+      "signature": "bdb9ace253e3ddf925416013ca941ab74e4a1bcfb1390bbb4b9ee1ff31bc759a",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/redox/prepare.html"
+    },
+    {
+      "id": "redox-workshop",
+      "title": "Electron Delivery",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-redox",
+      "signature": "23667036057dcaf5a4bc9d814499eda069dcf46a7be3c220af915410fdee6d92",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/redox/prepare.html"
+    },
+    {
+      "id": "organic-classic",
+      "title": "Molecule Families",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-organic",
+      "signature": "5e17a8a4d9693f4c914f408c470b503c810a362d12fd4c5e27cb6c7a8549a0cb",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/organic-chemistry/prepare.html"
+    },
+    {
+      "id": "organic-workshop",
+      "title": "Carbon Chain Studio",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-organic",
+      "signature": "2fc557d9591b3a3d87c1754802f123b21c0027c1c15fe68862d4b515360b8361",
+      "roundCount": 3,
+      "preparation": "activities/y10/chemistry/organic-chemistry/prepare.html"
+    },
+    {
+      "id": "statistics-classic",
+      "title": "Data Detectives",
+      "course": "Year 7 Maths",
+      "topic": "statistics",
+      "signature": "a7e7cdd7ff12abfa249df77350eb64fc1cf219e41a67b64d824ce8167b63ec60",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/statistics/prepare.html"
+    },
+    {
+      "id": "statistics-workshop",
+      "title": "Frequency Factory",
+      "course": "Year 7 Maths",
+      "topic": "statistics",
+      "signature": "f029150908f685d37a7c4c653f54539da74b508e694106fd435e2354b18591d6",
+      "roundCount": 3,
+      "preparation": "activities/y7/maths/statistics/prepare.html"
+    },
+    {
+      "id": "algebra-machine",
+      "title": "Mystery Machine Mission",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "c288121186f38bbfb3d55fec9bfa7e2e1a1f356d1b8669e8a1e6abf7a4b3f5b6",
+      "roundCount": 6,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "algebra-paint",
+      "title": "Proportion Paintworks",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "e44d9e7671da8b81b9f750acf6baffcc30dc6104fd476a553e212c3b2007272f",
+      "roundCount": 6,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-variables",
+      "title": "Variable Spotter",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "0e7e2895bc3fd0a7ba45d4b00f929d0c9a8d1c9b624f35855151d865a8baa98f",
+      "roundCount": 7,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-detective",
+      "title": "Coordinate Detective",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "346de174c3052bf0b03b7d42855e3c8ee9b0ff4a62facf79e4750af55c3373e7",
+      "roundCount": 11,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "coordinates-pictures",
+      "title": "Mystery Picture Studio",
+      "course": "Year 7 Maths",
+      "topic": "algebra-i",
+      "signature": "cad06424160005c9652df2c9c45d7876c999c8c25b0bd433a3efa6b63d0e2818",
+      "roundCount": 2,
+      "preparation": "activities/y7/maths/algebra-i/prepare.html"
+    },
+    {
+      "id": "gas-picture",
+      "title": "Name That Gas Law",
+      "course": "Year 9 Science",
+      "topic": "gas-laws",
+      "signature": "428a3b368a98b13d53102d8d1a237948cc1361dbc3e9d5a1ae8fd4d5db6a15bf",
+      "roundCount": 9,
+      "preparation": "activities/y9/science/gas-laws/prepare.html"
+    },
+    {
+      "id": "gas-word",
+      "title": "Mystery Word",
+      "course": "Year 9 Science",
+      "topic": "gas-laws",
+      "signature": "25c4e28471e0064741a8316f7dca61d730351dd422da86442d520379e95ad4c4",
+      "roundCount": 30,
+      "preparation": "activities/y9/science/gas-laws/prepare.html"
+    },
+    {
+      "id": "blood-dispatch",
+      "title": "Transport Dispatch",
+      "course": "Year 9 Science",
+      "topic": "blood-vessels",
+      "signature": "782b0d532a3371699ec4e7b3b89a6d47110a7f73ad0c3dc9aad5a3a39200d316",
+      "roundCount": 10,
+      "preparation": "activities/y9/science/blood-vessels/prepare.html"
+    }
+  ]
+}

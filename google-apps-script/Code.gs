@@ -35,6 +35,8 @@ function setupLearningLab_() {
     var answers = ensureSheet_(book, 'Answers', ANSWER_HEADERS_);
     var sessions = ensureSheet_(book, 'Sessions', SESSION_HEADERS_);
     var recovered = repairTestSummaries_(answers, sessions);
+    ensureSheet_(book, 'GameAnswers', GAME_ANSWER_HEADERS_);
+    repairGameSummaries_(ensureSheet_(book, 'GameAnswers', GAME_ANSWER_HEADERS_), ensureSheet_(book, 'GameSessions', GAME_SESSION_HEADERS_));
     if (recovered) console.log('Recovered ' + recovered + ' completed test summaries from saved answers.');
   } finally {lock.releaseLock();}
   var properties = PropertiesService.getScriptProperties();
@@ -60,7 +62,7 @@ function doGet(event) {
     var nonce = String(event.parameter.nonce || '');
     if (!/^[a-f0-9-]{36}$/.test(nonce)) throw new Error('Invalid capability nonce');
     requireManifest_();
-    var capabilities = JSON.stringify({type:'learning-lab-recording-capabilities',nonce:nonce,manifest:RECORDING_MANIFEST_}).replace(/</g, '\\u003c');
+    var capabilities = JSON.stringify({type:'learning-lab-recording-capabilities',nonce:nonce,manifest:RECORDING_MANIFEST_,gameManifest:typeof GAME_MANIFEST_ === 'undefined' ? null : GAME_MANIFEST_}).replace(/</g, '\\u003c');
     return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><script>window.top.postMessage(' + capabilities + ', ' + JSON.stringify(PLATFORM_ORIGIN_) + ');</script>')
       .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
   }
@@ -76,7 +78,7 @@ function doPost(event) {
     if (raw.length > 12000) throw new Error('Answer too large');
     var payload = JSON.parse(raw);
     eventId = String(payload.eventId || '').slice(0, 100);
-    ignored = saveAnswer_(payload) === false;
+    ignored = (payload.kind === 'game' ? saveGameAnswer_(payload) : saveAnswer_(payload)) === false;
     ok = true;
   } catch (error) {
     // No student names, answers, password or sheet details in public errors or logs.
@@ -264,6 +266,7 @@ function getTeacherResults(token, filters) {
   requireTeacher_(token); // Every data read checks server-side authentication.
   requireManifest_();
   filters = filters || {};
+  if (filters.view === 'games' || filters.view === 'gameAnswers') return getGameResults_(token, filters);
   var query = text_(filters.search || '', 100, false).toLowerCase();
   var topic = resultFilter_(filters.topic, 80);
   var course = resultFilter_(filters.course, 80);
@@ -334,4 +337,87 @@ function requireManifest_() {
   if (typeof RECORDING_MANIFEST_ === 'undefined' || RECORDING_MANIFEST_.protocol !== 3 || !Array.isArray(RECORDING_MANIFEST_.banks)) {
     throw new Error('Replace QuestionBank.gs with the latest Learning Lab file, save all three Google files and deploy a new version.');
   }
+}
+
+// Game outcomes are separate from revision tests. Existing tabs are never rewritten.
+var GAME_ANSWER_HEADERS_ = ['Event ID','Received at','Session ID','Student name','Class','Teacher','Course','Topic','Game ID','Game','Question ID','Question','Started at','Question number','Total rounds','First answer','Final answer','Attempts','Hint used','Revealed','Stars','Maximum stars','Feedback source'];
+var GAME_SESSION_HEADERS_ = ['Session ID','Completed at','Student name','Class','Teacher','Course','Topic','Game ID','Game','Started at','Rounds','Stars','Maximum stars','Score (%)'];
+function gameJson_(value) {
+  var text = JSON.stringify(value === undefined ? null : value);
+  if (text.length > 3000) throw new Error('Game answer too large');
+  return text;
+}
+function gameNormal_(value) {
+  return String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+}
+function gameAnswerText_(game, question, answer) {
+  if (answer === null || answer === undefined) return 'Not answered';
+  if (game.grader === 'word') return text_(String(answer),3000,false);
+  if (game.grader === 'picture' && typeof answer === 'object') {
+    var names={P:'Pressure (P)',V:'Volume (V)',T:'Temperature (T)'},laws={boyle:'Boyle–Mariotte',charles:'Charles',pressure:'Gay-Lussac / Amontons'};
+    return 'Quantities: '+(Array.isArray(answer.quantities)?answer.quantities.map(function(q){return names[q]||String(q);}).join(', '):'Not selected')+'; Law: '+(laws[answer.law]||'Not selected');
+  }
+  if (game.grader === 'dispatch' && typeof answer === 'object') {
+    var carriers={rbc:'Red blood cells',wbc:'White blood cells',plasma:'Plasma',platelets:'Platelets'},targets={lungs:'Lungs',heart:'Left heart',right:'Right heart',muscle:'Muscle',liver:'Liver',kidneys:'Kidneys',skin:'Skin',gland:'Endocrine gland',infection:'Affected tissue',wound:'Small injury'};
+    return 'Carrier: '+(carriers[answer.carrier]||'Not selected')+'; Destination: '+(targets[answer.target]||'Not selected')+'; Explanation: '+(Number.isInteger(answer.explanation)&&question.options[answer.explanation]||'Not answered');
+  }
+  return gameJson_(answer);
+}
+function gameGrade_(game, question, p) {
+  if (p.revealed) return 0;
+  var a = p.answer, correct = true;
+  if (game.grader === 'picture') correct = !!a && a.law === question.law && Array.isArray(a.quantities) && a.quantities.length === 2 && new Set(a.quantities).size === 2 && question.quantities.every(function(q) {return a.quantities.includes(q);});
+  if (game.grader === 'word') correct = typeof a === 'string' && question.accepted.some(function(w) {return gameNormal_(w) === gameNormal_(a);});
+  if (game.grader === 'dispatch') correct = !!a && a.carrier === question.carrier && a.target === question.target && a.explanation === question.answer;
+  if (!correct) throw new Error('Game solution does not match');
+  return p.assisted ? 1 : game.rule === 'dispatch' ? (p.attempts > 1 ? 2 : 3) : Math.max(1, 4-p.attempts);
+}
+function saveGameAnswer_(p) {
+  if (p.mode !== 'game' || p.retry === true) return false;
+  if (p.retry !== false || p.version !== 1 || !/^[a-f0-9-]{36}$/.test(p.sessionId||'') || !Number.isInteger(p.questionNumber)) throw new Error('Invalid game session');
+  if (p.eventId !== p.sessionId+'-'+p.questionNumber) throw new Error('Invalid game event');
+  var game = typeof GAME_CATALOG_ !== 'undefined' && GAME_CATALOG_[text_(p.gameId,80,true)];
+  if (!game || !Object.prototype.hasOwnProperty.call(GAME_CATALOG_,p.gameId) || p.signature !== game.signature) throw new Error('Update the game catalogue');
+  if (!Array.isArray(p.questionIds) || !p.questionIds.length || p.questionIds.length > Object.keys(game.rounds).length || new Set(p.questionIds).size !== p.questionIds.length || p.questionIds.some(function(id) {return typeof id !== 'string' || !Object.prototype.hasOwnProperty.call(game.rounds,id);}) || p.questionNumber<1 || p.questionNumber>p.questionIds.length || p.questionIds[p.questionNumber-1] !== p.questionId) throw new Error('Invalid game rounds');
+  if (!Number.isInteger(p.attempts) || p.attempts < (p.revealed?0:1) || p.attempts > 10000 || typeof p.assisted !== 'boolean' || typeof p.revealed !== 'boolean') throw new Error('Invalid game attempts');
+  var name=text_(p.studentName,100,true), classroom=text_(p.classroom,60,true), teacher=text_(p.teacherName,100,true), started=new Date(p.startedAt);
+  if (!Number.isFinite(started.getTime())) throw new Error('Invalid game date');
+  gameJson_(p.firstAnswer);gameJson_(p.answer);
+  var question=game.rounds[p.questionId], stars=gameGrade_(game,question,p), first=gameAnswerText_(game,question,p.firstAnswer), final=gameAnswerText_(game,question,p.answer);
+  var row=[p.eventId,new Date().toISOString(),p.sessionId,name,classroom,teacher,game.course,game.topic,game.id,game.title,p.questionId,question.prompt,started.toISOString(),p.questionNumber,p.questionIds.length,first,final,p.attempts,p.assisted,p.revealed,stars,3,game.grader === 'reported'?'Game model feedback; self-reported':'Server-checked solution'];
+  var lock=LockService.getScriptLock();lock.waitLock(20000);
+  try {
+    var book=SpreadsheetApp.openById(SPREADSHEET_ID_), answers=ensureSheet_(book,'GameAnswers',GAME_ANSWER_HEADERS_), sessions=ensureSheet_(book,'GameSessions',GAME_SESSION_HEADERS_);
+    var entries=gameRows_(answers,GAME_ANSWER_HEADERS_).filter(function(r){return r[2]===p.sessionId;}), identity=JSON.stringify(row.slice(3,10).concat(row[12],row[14]).map(safeCell_));
+    if(entries.some(function(r){return JSON.stringify(r.slice(3,10).concat(r[12],r[14]))!==identity;}))throw new Error('Game identity changed');
+    var existing=entries.find(function(r){return r[0]===p.eventId;});
+    if(existing){if(JSON.stringify(existing.slice(3))!==JSON.stringify(row.slice(3).map(safeCell_)))throw new Error('Game answer already submitted');}
+    else {if(entries.some(function(r){return r[10]===p.questionId;}))throw new Error('Repeated game round');append_(answers,row);}
+    repairGameSummaries_(answers,sessions);SpreadsheetApp.flush();return true;
+  } finally {lock.releaseLock();}
+}
+function gameRows_(sheet, headers) {
+  return rows_(sheet,headers).map(function(row){return row.map(function(v,i){var h=headers[i];if(['Question number','Total rounds','Attempts','Stars','Maximum stars','Rounds','Score (%)'].includes(h))return Number(v);if(h==='Hint used'||h==='Revealed')return v===true||String(v).toLowerCase()==='true';return v;});});
+}
+function repairGameSummaries_(answers,sessions) {
+  var known=new Set(gameRows_(sessions,GAME_SESSION_HEADERS_).map(function(r){return r[0];})),groups=new Map(),repaired=0;
+  gameRows_(answers,GAME_ANSWER_HEADERS_).forEach(function(r){if(!known.has(r[2])){if(!groups.has(r[2]))groups.set(r[2],[]);groups.get(r[2]).push(r);}});
+  groups.forEach(function(rows,id){var r=rows[0],total=r[14];if(!Number.isInteger(total)||total<1||rows.length!==total||new Set(rows.map(function(v){return v[13];})).size!==total||new Set(rows.map(function(v){return v[10];})).size!==total)return;
+    var identity=JSON.stringify(r.slice(3,10).concat(r[12],total));
+    if(rows.some(function(v){return v[13]<1||v[13]>total||JSON.stringify(v.slice(3,10).concat(v[12],v[14]))!==identity;}))return;
+    var stars=rows.reduce(function(n,v){return n+v[20];},0),max=total*3,completed=rows.map(function(v){return v[1];}).sort().pop();
+    append_(sessions,[id,completed,r[3],r[4],r[5],r[6],r[7],r[8],r[9],r[12],total,stars,max,Math.round(100*stars/max)]);known.add(id);repaired++;
+  });return repaired;
+}
+function getGameResults_(token,filters) {
+  requireTeacher_(token);
+  var view=filters.view==='gameAnswers',headers=view?GAME_ANSWER_HEADERS_:GAME_SESSION_HEADERS_,lock=LockService.getScriptLock(),answers,sessions;
+  lock.waitLock(20000);try{var book=SpreadsheetApp.openById(SPREADSHEET_ID_),a=ensureSheet_(book,'GameAnswers',GAME_ANSWER_HEADERS_),s=ensureSheet_(book,'GameSessions',GAME_SESSION_HEADERS_);repairGameSummaries_(a,s);answers=gameRows_(a,GAME_ANSWER_HEADERS_);sessions=gameRows_(s,GAME_SESSION_HEADERS_);}finally{lock.releaseLock();}
+  var idx=view?{name:3,cls:4,teacher:5,course:6,topic:7,game:8,stars:20,max:21}:{name:2,cls:3,teacher:4,course:5,topic:6,game:7,stars:11,max:12};
+  var query=text_(filters.search||'',100,false).toLowerCase(),f={teacher:resultFilter_(filters.teacher,100),cls:resultFilter_(filters.classroom,60),course:resultFilter_(filters.course,80),topic:resultFilter_(filters.topic,80)};
+  var rows=(view?answers:sessions).filter(function(r){return (!query||(String(r[idx.name])+' '+String(r[idx.cls])).toLowerCase().includes(query))&&Object.keys(f).every(function(k){return matchesResultFilter_(f[k],r[idx[k]]);});}).sort(function(a,b){return String(b[1]).localeCompare(String(a[1]));});
+  var stars=rows.reduce(function(n,r){return n+r[idx.stars];},0),max=rows.reduce(function(n,r){return n+r[idx.max];},0),offset=Number.isInteger(filters.offset)&&filters.offset>0?filters.offset:0,catalog=typeof GAME_MANIFEST_==='undefined'?[]:GAME_MANIFEST_.games;
+  var topics=new Map();catalog.forEach(function(g){topics.set(g.topic,{value:g.topic,label:typeof QUESTION_BANKS_!=='undefined'&&QUESTION_BANKS_[g.topic]?QUESTION_BANKS_[g.topic].title:g.topic,course:g.course});});
+  var groups=new Map();rows.forEach(function(r){var key=r[idx.course]+'\u0000'+r[idx.topic];if(!groups.has(key))groups.set(key,{course:r[idx.course],topic:r[idx.topic],tests:new Set(),students:new Set(),answers:0,correct:0});var g=groups.get(key);g.tests.add(r[view?2:0]);g.students.add(r[idx.name]+'\u0000'+r[idx.cls]);g.answers+=r[idx.max];g.correct+=r[idx.stars];});
+  return {headers:headers,rows:rows.slice(offset,offset+50),total:rows.length,offset:offset,pageSize:50,students:new Set(rows.map(function(r){return r[idx.name]+'\u0000'+r[idx.cls];})).size,accuracy:max?Math.round(100*stars/max):null,teachers:uniqueChoices_(answers.map(function(r){return r[5];})),classes:uniqueChoices_(answers.map(function(r){return r[4];})),courses:uniqueChoices_(catalog.map(function(g){return g.course;})),topics:Array.from(topics.values()),gameCount:catalog.length,bankCount:RECORDING_MANIFEST_.banks.length,questionCount:RECORDING_MANIFEST_.questionCount,topicSummary:Array.from(groups.values()).map(function(g){return {course:g.course,topic:g.topic,tests:g.tests.size,students:g.students.size,answers:g.answers,correct:g.correct,accuracy:Math.round(100*g.correct/g.answers)};}),spreadsheetUrl:'https://docs.google.com/spreadsheets/d/'+SPREADSHEET_ID_+'/edit'};
 }

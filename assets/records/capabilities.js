@@ -16,7 +16,7 @@ export function probeRecording(url,{timeout=8000}={}){
    if(!trustedGoogleOrigin(event.origin)||event.data?.type!=='learning-lab-recording-capabilities'||event.data.nonce!==nonce)return;
    const manifest=event.data.manifest;
    if(manifest?.protocol!==3||!Array.isArray(manifest.banks)||manifest.banks.some(bank=>typeof bank.topic!=='string'||typeof bank.course!=='string'||!/^[a-f0-9]{64}$/.test(bank.signature||'')))return;
-   finish({manifest,reason:''});
+   finish({manifest,gameManifest:event.data.gameManifest||null,reason:''});
   };
   const timer=setTimeout(()=>finish({manifest:null,reason:'not-confirmed'}),timeout);
   window.addEventListener('message',receive);document.body.append(frame);

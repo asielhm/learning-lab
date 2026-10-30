@@ -168,6 +168,42 @@ assert.equal(result.topicSummary.reduce((sum,group)=>sum+group.tests,0),result.t
 assert(result.topics.some(topic=>topic.value==='y10-physics-kinematics'&&topic.label==='Motion and projectiles'));
 const publicNonce=crypto.randomUUID(),publicCapabilities=context.doGet({parameter:{action:'capabilities',nonce:publicNonce}}).html;
 assert(publicCapabilities.includes('learning-lab-recording-capabilities'));assert(publicCapabilities.includes(publicNonce));assert(publicCapabilities.includes('all-courses-1'));assert(!publicCapabilities.includes('New Course Student'));assert(!publicCapabilities.includes(token));assert(!publicCapabilities.includes(password));assert.throws(()=>context.doGet({parameter:{action:'capabilities',nonce:'bad'}}),/Invalid capability/);
+// Game recording has its own authenticated views and never changes test results.
+const testCount=context.getTeacherResults(token,{}).total;
+const gameManifest=JSON.parse(fs.readFileSync(path.join(root,'assets/records/games.json')));
+assert.equal(gameManifest.games.length,42);assert.equal(context.GAME_MANIFEST_.games.length,42);
+function gamePayload(gameId,ids,number=1,answer=null){const game=context.GAME_CATALOG_[gameId],id=crypto.randomUUID();return {kind:'game',version:1,mode:'game',retry:false,eventId:id+'-'+number,sessionId:id,gameId,signature:game.signature,studentName:'Game Student',classroom:'9G',teacherName:'Ms Rivera',startedAt:'2026-10-30T12:00:00Z',questionIds:ids,questionNumber:number,questionId:ids[number-1],attempts:1,assisted:false,revealed:false,firstAnswer:answer,answer};}
+const pic=context.GAME_CATALOG_['gas-picture'],picIds=Object.keys(pic.rounds).slice(0,2),picQ=pic.rounds[picIds[0]];
+const gp=gamePayload('gas-picture',picIds,1,{law:picQ.law,quantities:picQ.quantities});
+assert.throws(()=>context.saveGameAnswer_({...gp,signature:'0'.repeat(64)}),/catalogue/);
+assert.throws(()=>context.saveGameAnswer_({...gp,classroom:' '}),/Required/);
+assert.throws(()=>context.saveGameAnswer_({...gp,answer:{law:'wrong',quantities:['P','V']}}),/solution/);
+assert.equal(context.saveGameAnswer_({...gp,mode:'practice'}),false);
+assert.equal(context.saveGameAnswer_({...gp,retry:true}),false);
+context.saveGameAnswer_(gp);context.saveGameAnswer_(gp);
+assert.equal(context.getTeacherResults(token,{view:'games'}).total,0);
+assert.equal(context.getTeacherResults(token,{view:'gameAnswers'}).total,1);
+const secondPic=pic.rounds[picIds[1]],gp2={...gp,eventId:gp.sessionId+'-2',questionNumber:2,questionId:picIds[1],assisted:true,answer:{law:secondPic.law,quantities:secondPic.quantities}};
+context.saveGameAnswer_(gp2);
+let gameResult=context.getTeacherResults(token,{view:'games',classroom:['9G'],course:['Year 9 Science']});assert.equal(gameResult.total,1);assert.equal(gameResult.accuracy,67);assert.equal(gameResult.rows[0][11],4);assert.equal(gameResult.rows[0][12],6);
+assert.equal(context.getTeacherResults(token,{view:'games',classroom:[]}).total,0);
+assert.throws(()=>context.getTeacherResults('not-a-token',{view:'games'}),/Sign in/);
+assert.throws(()=>context.saveGameAnswer_({...gp,teacherName:'Changed'}),/identity/);
+assert.throws(()=>context.saveGameAnswer_({...gp,attempts:3}),/already submitted/);
+for(const row of sheets.get('GameAnswers').rows.slice(1))for(let i=0;i<row.length;i++)row[i]=String(row[i]);context.saveGameAnswer_(gp);assert.equal(context.getTeacherResults(token,{view:'gameAnswers'}).total,2);
+const word=context.GAME_CATALOG_['gas-word'],wid=Object.keys(word.rounds)[0],wp=gamePayload('gas-word',[wid],1,word.rounds[wid].accepted[0].toUpperCase());context.saveGameAnswer_(wp);assert.throws(()=>context.saveGameAnswer_({...wp,answer:'wrong'}),/solution/);
+const dispatch=context.GAME_CATALOG_['blood-dispatch'],did=Object.keys(dispatch.rounds)[0],dq=dispatch.rounds[did];context.saveGameAnswer_(gamePayload('blood-dispatch',[did],1,{carrier:dq.carrier,target:dq.target,explanation:dq.answer}));
+const reveal={...gamePayload('gas-word',[wid]),revealed:true,attempts:0};context.saveGameAnswer_(reveal);assert.equal(context.getTeacherResults(token,{view:'games',search:'Game Student'}).total,4);
+assert(context.getTeacherResults(token,{view:'gameAnswers'}).rows.some(r=>r[19]===true&&r[20]===0));
+// Repair a completed game after its summary was lost, without duplicating any rows.
+sheets.get('GameSessions').rows.pop();context.setupLearningLab();assert.equal(context.getTeacherResults(token,{view:'games'}).total,4);
+for(const metadata of gameManifest.games){const game=context.GAME_CATALOG_[metadata.id],round=Object.keys(game.rounds)[0];context.saveGameAnswer_({...gamePayload(metadata.id,[round]),revealed:true,attempts:0});const filtered=context.getTeacherResults(token,{view:'games',course:metadata.course,topic:metadata.topic});assert(filtered.rows.some(r=>r[7]===metadata.id));}
+assert.throws(()=>context.saveGameAnswer_({...gp,questionIds:['__proto__'],questionId:'__proto__'}),/rounds/);
+assert.throws(()=>context.saveGameAnswer_({...gp,questionNumber:0,eventId:gp.sessionId+'-0'}),/rounds/);
+assert.equal(context.getTeacherResults(token,{}).total,testCount,'Games never inflate revision accuracy');
+assert(context.doGet({parameter:{action:'capabilities',nonce:crypto.randomUUID()}}).html.includes('gameManifest'));
+console.log('Game server: 42 catalogued games, Y9 solution validation, derived stars, required identity, separate views, duplicates, hints/reveals, practice/retry exclusion, text-formatted rows, filters, protected reads and summary repair passed.');
+
 context.logoutTeacher(token);assert.throws(()=>context.getTeacherResults(token,{}),/expired/);
 const nextToken=context.loginTeacher(password).token;context.resetTeacherPassword();assert.throws(()=>context.getTeacherResults(nextToken,{}),/expired/);
 for(let i=0;i<20;i++)assert.throws(()=>context.loginTeacher('wrong'),/failed/);

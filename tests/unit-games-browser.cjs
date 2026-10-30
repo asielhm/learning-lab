@@ -1,6 +1,6 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs');
 const base=(process.env.LEARNING_LAB_BASE_URL||'http://127.0.0.1:8067').replace(/\/$/,'');
-(async()=>{const {units}=await import('../assets/unit-games/data.mjs');const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});try{const p=await b.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'}),errors=[],google=[];p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(/script\.google|googleusercontent/.test(r.url()))google.push(r.url());});
+(async()=>{const {units}=await import('../assets/unit-games/data.mjs');const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});try{const p=await b.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'}),errors=[],google=[];p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(r.method()==='POST'&&/script\.google|googleusercontent/.test(r.url()))google.push(r.url());});
  const click=a=>p.locator(`[data-action="${a}"]`).click();
  async function roundFor(game){const prompt=await p.locator('.round-title').innerText();const r=game.rounds.find(r=>r.prompt===prompt);assert(r,prompt);return r;}
  async function control(key,value){const el=p.locator(`[data-control="${key}"]`);if(await el.evaluate(el=>el.tagName==='SELECT'))await el.selectOption(String(value));else{await el.fill(String(value));await el.press('Tab');}}
