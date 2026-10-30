@@ -33,3 +33,24 @@ A fourth example, `examples/syringe-balloon.html`, places a small tied balloon i
 ## Practice games
 
 The lesson now links to [Name That Gas Law](games/picture-law.html) (nine picture models) and [Mystery Word](games/mystery-word.html) (30 clues and common mix-ups with explanations). These are English, computer-first practice activities with no teacher-result submissions. See [games documentation](games/README.md) for scientific assumptions, scoring, optional timers and checks.
+
+## Mercury barometer
+
+`examples/barometer.html` is the fifth everyday instrument, linked from “Where do we meet gas laws?”, every example tab and the catalogue. Original glass/metal SVG apparatus includes a near-vacuum, atmospheric arrows on the open reservoir, a convex mercury meniscus, a height overlay and a slightly shifting reservoir surface. It measures atmospheric pressure through hydrostatic balance, not by applying a gas law to the vacuum space.
+
+The pressure slider spans **50–110 kPa** in 0.025 kPa increments, with live **Pa and atm** references beside it. One standard atmosphere is exactly **101,325 Pa = 101.325 kPa**, supporting about **760 mm** at the selected mercury density of 13,595.1 kg/m³ (0°C reference) and g = 9.80665 m/s². The model neglects upper mercury-vapour pressure and surface-tension corrections. `P_atm = ρgh` uses h as the vertical difference between liquid surfaces, not the submerged tube length or vacuum-space length. A 20:1 reservoir-to-tube area ratio conserves mercury volume; the virtual zero-height guide follows the reservoir surface. Drawing widths are illustrative.
+
+`barometer-model.mjs` contains the equilibrium calculation and volume geometry. `barometer-art.mjs` produces original apparatus, cover and graph SVGs. `barometer.js` animates current height towards equilibrium, updates all units, cancels interrupted moves, gates measurement recording until settled and supports prediction feedback, local tables and four explanatory checks. Animation is qualitative, not a fluid-dynamics solver. The graph distinguishes the current moving height from the predicted equilibrium point. Reduced motion snaps to equilibrium and keeps air dots static.
+
+The simulator is self-contained, English and computer-first. The atmospheric slider, pressure conversions, presets and record/reset actions are within the instrument panel. Equations define every symbol and unit. The visible air dots stay outside the tube and do not numerically determine pressure. Measurements and checks are local only; the established gas-laws revision bank and recording signatures are unchanged. The final revision invitation remains last. The mercury material hazard is stated as context; no actual construction procedure is provided.
+
+Regenerate the page, cover, lesson link, tabs and catalogue entry using `python3 tools/build_barometer.py`. The builder is idempotent and preserves the other examples and the final lesson revision section. Validate with:
+
+```sh
+node tests/barometer.mjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/barometer-browser.cjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/barometer-motion.cjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/gas-examples.cjs
+```
+
+Checks cover unit conversion, hydrostatics, linearity, liquid-volume conservation, height/scale alignment, bounds, actual geometry motion, settled-record gates, interrupted moves and reset, predictions, four concept checks, all five tabs, catalogue links, readable no-JS explanations, three desktop sizes and no Google requests.

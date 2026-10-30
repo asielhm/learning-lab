@@ -430,6 +430,15 @@
                   "duration": "5–10 minutes",
                   "image": "activities/y9/science/gas-laws/games/images/gas-law-cards.png",
                   "href": "activities/y9/science/gas-laws/games/mystery-word.html"
+                },
+                {
+                  "id": "mercury-barometer",
+                  "title": "Mercury barometer: measure atmospheric pressure",
+                  "description": "Move the pressure slider, compare Pa and atm and investigate the height of a mercury column, with a live graph and local measurements.",
+                  "format": "Interactive pressure instrument",
+                  "duration": "10–15 minutes",
+                  "href": "activities/y9/science/gas-laws/examples/barometer.html",
+                  "image": "activities/y9/science/gas-laws/images/mercury-barometer.svg"
                 }
               ],
               "primaryActivity": "gas-laws-lab",
