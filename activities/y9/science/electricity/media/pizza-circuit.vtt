@@ -1,0 +1,17 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+The same couriers collect pizzas at the shop, deliver them to the party and return empty.
+Each courier represents 1 C; at 2 V, each load represents 2 J. Current is 0.67 A with 3 Ω.
+
+00:06.000 --> 00:12.000
+Raise voltage to 6 V, keeping resistance at 3 Ω.
+Each courier carries 6 J; current rises to 2 A. The number of couriers does not change.
+
+00:12.000 --> 00:18.000
+Raise resistance to 6 Ω at the same 6 V: speed humps grow and the road gets rougher.
+Each courier still carries 6 J, but current falls to 1 A around the entire loop.
+
+00:18.000 --> 00:24.000
+Lower resistance to 1 Ω at 6 V: the road is easier and current rises to 6 A.
+The party receives energy faster. Pizzas are delivered; charge is not used up.

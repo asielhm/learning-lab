@@ -499,7 +499,7 @@
                 {
                   "id": "y9-electricity-pizza",
                   "title": "The Pizza Circuit",
-                  "description": "Change the supply energy per charge. Track a highlighted courier past the shop, party and counting gate.",
+                  "description": "Bring the picture to life: collect pizzas at the shop, deliver energy to the party, then follow the same couriers back.",
                   "href": "activities/y9/science/electricity/simulators/pizza.html",
                   "image": "activities/y9/science/electricity/images/pizza-circuit.png",
                   "format": "The Pizza Circuit",

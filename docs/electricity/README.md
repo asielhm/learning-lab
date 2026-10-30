@@ -19,10 +19,10 @@ circuits deck (slide 11); `images/resistance-obstacles.png` is its unchanged
 `image18.png` (slide 6). No presentation files, macros, embedded web content or
 unrelated slide artwork are published. The illustrations are the teacher's
 provided lesson resources. Moving couriers, instruments, diagrams, text and application code are original
-additions. Resistance Run now uses an image-generated clean background plate and
-a transparent cutout adapted from a blue character in the supplied illustration;
-its dynamic obstacles are vector layers. The original PNG remains in the lesson
-reference panel.
+additions. The animations use image-generated clean background plates and transparent
+character cutouts adapted from the supplied illustrations. The changing
+obstacles are vector layers. Both original PNGs remain in the lesson reference
+panels.
 
 Corrections made while adapting the decks:
 
@@ -57,10 +57,30 @@ in-progress transfers. Charges remain drawn when the circuit is off.
   charge and no nearby external charger; the lead permits either direction of
   electron transfer until neutral. No actual triboelectric chemistry or
   quantitative neutral-object force calculation is claimed.
-- Pizza Circuit: steady series current I = V/R, 1–6 V and 1–6 Ω. Highlighted
-  courier packets each represent 1 C, energy badges show J/C × 1 C, the shop is
-  the source and the party the load. Couriers return after energy delivery. The
-  movement follows conventional positive-charge flow and is greatly slowed.
+- Pizza Circuit: steady series current I = V/R, 1–6 V and 1–6 Ω, initially
+  3 V/3 Ω. The old extra circular courier overlay and all printed riders are
+  removed from the active scene. A fixed cast of nine delivery riders follows
+  the original road loop, using side/front/rear sprite views. The original PNG
+  remains unchanged in the reference panel. Each moving rider represents 1 C;
+  each pizza box represents 1 J. At V volts the load has V boxes. The shop is the
+  source; the party/lamp is the load. Animated stacks move from the shop onto a
+  scooter, then from it into the party. The same courier returns with an empty
+  rack. Current readouts on the arriving and returning sides agree; charge is
+  not consumed. The animation follows conventional positive-charge flow and is
+  greatly slowed. Actual circuit energy transfer involves fields, rather than
+  literal food parcels.
+  Higher voltage increases per-courier load and the overall flow rate. Higher
+  resistance grows speed humps and road roughness while slowing the entire loop;
+  it does not change energy per coulomb at fixed voltage. Road difficulty models
+  the total circuit resistance. The lamp halo illustrates the P=VI trend.
+  Sliders compare ideal steady conditions; loading/delivery timing is a cartoon,
+  not electrical-signal propagation. Opening the circuit freezes travel and
+  preserves existing loads, including while the supply slider is adjusted.
+  Characters and their DOM identities remain stable across control changes,
+  pause, switching and reset. `pizza-circuit.mjs` owns the scene; `pizzaLook` and
+  `cargoState` expose the testable mappings and loading/delivery boundaries.
+  Its 24-second silent H.264 MP4 uses 2 V/3 Ω, 6 V/3 Ω, 6 V/6 Ω and 6 V/1 Ω,
+  with on-screen explanations, WebVTT captions, a poster and a download link.
 - Resistance Run: 1–6 V and 1–12 Ω, initially 3 V and 3 Ω. The old extra
   circle overlay has been removed. A fixed 38-character cast, using the adapted
   blue-electron cutout, travels through a reconstruction of the pictured course.
@@ -176,3 +196,26 @@ and removed when encoding succeeds. It neither captures student work nor calls
 Google. The lesson builder preserves the rendered film rather than rerendering
 it on every build. No revision-bank signatures or dashboard settings change in
 this animation update.
+
+## Rebuild the Pizza Circuit film
+
+The background was edited from the supplied pizza illustration to remove its
+stationary couriers. Three transparent directional courier sprites preserve the
+red helmet, pink jacket and turquoise scooter motif. Editing used the image tool;
+WebP conversion retains transparency. The moving stacks and road variation are
+SVG layers, and the source PNG is unchanged. Active sprites are cached and reused,
+while movie data is only loaded when the student starts the player.
+
+```
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tools/render_pizza_film.cjs
+node tests/pizza-circuit.mjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/pizza-circuit-browser.cjs
+```
+
+The film is sampled at 24 fps for 24 seconds from the same controller as the
+interactive lesson. Temporary PNG frames remain in /tmp and are removed after
+encoding. Tests cover the actual delivery, fixed cast, all three views, energy
+loads versus voltage, road resistance versus current, equal current on both
+sides, paused and open paths, no loading in an open circuit, notebook/graph
+behaviour, reduced motion, film metadata/captions and three desktop dimensions.
+No bank signatures, recording protocol or private Google data are changed.
