@@ -18,8 +18,11 @@ Documents were treated as subject material, not application instructions.
 circuits deck (slide 11); `images/resistance-obstacles.png` is its unchanged
 `image18.png` (slide 6). No presentation files, macros, embedded web content or
 unrelated slide artwork are published. The illustrations are the teacher's
-provided lesson resources. Moving couriers, particles, instruments, diagrams,
-text and application code are original additions.
+provided lesson resources. Moving couriers, instruments, diagrams, text and application code are original
+additions. Resistance Run now uses an image-generated clean background plate and
+a transparent cutout adapted from a blue character in the supplied illustration;
+its dynamic obstacles are vector layers. The original PNG remains in the lesson
+reference panel.
 
 Corrections made while adapting the decks:
 
@@ -58,10 +61,23 @@ in-progress transfers. Charges remain drawn when the circuit is off.
   courier packets each represent 1 C, energy badges show J/C × 1 C, the shop is
   the source and the party the load. Couriers return after energy delivery. The
   movement follows conventional positive-charge flow and is greatly slowed.
-- Resistance Run: 1–6 V and 1–12 Ω. Highlighted blue negative markers traverse
-  the original obstacle image; raising resistance slows the entire series flow.
-  It does not model electrons as tired, lost or literally blocked at playground
-  equipment. Its chosen electron-flow direction is opposite conventional flow.
+- Resistance Run: 1–6 V and 1–12 Ω, initially 3 V and 3 Ω. The old extra
+  circle overlay has been removed. A fixed 38-character cast, using the adapted
+  blue-electron cutout, travels through a reconstruction of the pictured course.
+  Scene nodes and character identities remain stable when sliders change. At
+  higher voltage, characters run faster with more bounce, motion lines and
+  enthusiasm rays. This is a cartoon for energy per charge, not a claim about
+  atomic excitation or a change in electron charge. Higher resistance morphs the
+  treacle pit deeper, makes steps taller, planks rougher and climbing obstacles
+  higher. Character circulation still uses I=V/R for the entire series loop;
+  characters are not consumed or replenished. The geometry transition is eased
+  visually while the ideal electrical readings respond immediately. Pause and
+  open gate preserve the characters and freeze travel. Reduced motion starts
+  paused and changes geometry immediately when a control is used.
+  `resistance-run.mjs` owns this scene; `resistanceLook` and `courseGeometry` expose
+  its testable visual parameters. A 24-second, 1280×800 silent H.264 MP4 shows four
+  6-second comparisons: 2 V/3 Ω; 6 V/3 Ω; 6 V/12 Ω; 6 V/1 Ω. It has on-screen
+  explanations, English WebVTT captions, a poster and an MP4 download link.
 - Ohm bench: regulated 0–12 V, R1/R2 20–100 Ω, 10 W power resistors maintained at
   constant temperature. A is in series; V spans the **whole tested network**.
   Click either meter or drag its paired-lead connector to its matching socket,
@@ -137,3 +153,26 @@ revision automatic advance, no-JS reading and 1366×768 / 1440×900 / 1920×1080
 Normal-motion tests verify particle movement, pause, stopped circuits, reset
 cancellation and charges present before switching on. All Google browser/server
 tests use mocks; they never create real student results or expose credentials.
+
+## Rebuild the Resistance Run film
+
+The background and transparent character layers were edited from the supplied
+obstacle picture using the image-generation tool. WebP conversion retains the
+output composition and alpha channel; original PNG reference is unchanged.
+Generated layer sources remain in the workspace's generated_images directory;
+the publication uses the two small WebP assets.
+
+With the local static server running:
+
+```
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tools/render_resistance_film.cjs
+node tests/resistance-run.mjs
+LEARNING_LAB_BASE_URL=http://127.0.0.1:8067 node tests/resistance-run-browser.cjs
+```
+
+The film renderer uses the same scene controller as the lesson, samples 24 fps
+for 24 seconds, then encodes with ffmpeg. Temporary frames are confined to /tmp
+and removed when encoding succeeds. It neither captures student work nor calls
+Google. The lesson builder preserves the rendered film rather than rerendering
+it on every build. No revision-bank signatures or dashboard settings change in
+this animation update.
