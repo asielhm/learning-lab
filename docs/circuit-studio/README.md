@@ -111,7 +111,8 @@ keyboard construction, charge motion/freeze and real CDP touch drag.
 ## Shared author branding
 
 `tools/brand.py` applies an idempotent, accessible **Learning Lab by Asiel** lockup
-where the platform's logo appears. The existing favicon/logo artwork is retained.
+where the platform's logo appears, retaining **A PLACE FOR CURIOUS MINDS** beneath
+the name and orange author signature. The existing favicon/logo artwork is retained.
 The wordmark uses bold/light title weights and a small orange signature (#AD542F),
 with 4.71:1 contrast against the landing background. All styles are scoped to the
 lockup in `assets/brand/brand.css`, preserving each activity's content styling.

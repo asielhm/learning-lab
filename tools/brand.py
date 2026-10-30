@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 ROOT=Path(__file__).resolve().parent.parent
-SIGNATURE='<span class="ll-brand-name"><span class="ll-brand-title">Learning <span>Lab</span></span><span class="ll-brand-by">by <b>Asiel</b></span></span>'
+SIGNATURE='<span class="ll-brand-name"><span class="ll-brand-title">Learning <span>Lab</span></span><span class="ll-brand-by">by <b>Asiel</b></span><span class="ll-brand-tagline">A PLACE FOR CURIOUS MINDS</span></span>'
 CLASSES={'wordmark','brand','blood-brand','footer-brand','brand-lockup'}
 def brand_html(text,prefix='',dashboard=False):
  changed=False
@@ -25,8 +25,8 @@ def brand_html(text,prefix='',dashboard=False):
   if dashboard:
    style=(ROOT/'assets/brand/brand.css').read_text();text=re.sub(r'<style id="asiel-brand">.*?</style>','',text,flags=re.S);text=text.replace('</head>',f'<style id="asiel-brand">{style}</style></head>')
   else:
-   if re.search(r'<link\b[^>]*assets/brand/brand\.css[^>]*>',text):text=re.sub(r'assets/brand/brand\.css(?:\?[^\"\']*)?', 'assets/brand/brand.css?v=asiel-1',text)
-   else:text=text.replace('</head>',f'<link rel="stylesheet" href="{prefix}assets/brand/brand.css?v=asiel-1"></head>')
+   if re.search(r'<link\b[^>]*assets/brand/brand\.css[^>]*>',text):text=re.sub(r'assets/brand/brand\.css(?:\?[^\"\']*)?', 'assets/brand/brand.css?v=asiel-2',text)
+   else:text=text.replace('</head>',f'<link rel="stylesheet" href="{prefix}assets/brand/brand.css?v=asiel-2"></head>')
   text=re.sub(r'<title>(.*?)</title>',lambda m:'<title>'+m[1].replace('Learning Lab by Asiel','Learning Lab').replace('Learning Lab','Learning Lab by Asiel')+'</title>',text,flags=re.S)
  return text
 
