@@ -1,0 +1,854 @@
+{
+  "topicId": "y9-electricity-static",
+  "title": "Static electricity and charge",
+  "categories": [
+    "Atoms and charge",
+    "Electron transfer and conservation",
+    "Forces and polarisation",
+    "Conductors and insulators",
+    "Earthing and discharge",
+    "Static electricity in everyday life"
+  ],
+  "questions": [
+    {
+      "id": "y9-electricity-static-100",
+      "category": "Atoms and charge",
+      "difficulty": "Foundation",
+      "prompt": "Which particle has negative electric charge?",
+      "options": [
+        "An electron.",
+        "A proton.",
+        "A neutron.",
+        "An entire neutral nucleus."
+      ],
+      "answer": 0,
+      "explanation": "Electrons are negative. Protons are positive and neutrons have no electric charge."
+    },
+    {
+      "id": "y9-electricity-static-101",
+      "category": "Atoms and charge",
+      "difficulty": "Foundation",
+      "prompt": "Where are protons found in an atom?",
+      "options": [
+        "Only in wires outside the atom.",
+        "In its nucleus.",
+        "In a separate cloud of negative electrons.",
+        "Only on the outside of a charged balloon."
+      ],
+      "answer": 1,
+      "explanation": "The nucleus is the central region containing protons and neutrons. Electrons occupy the surrounding region."
+    },
+    {
+      "id": "y9-electricity-static-102",
+      "category": "Atoms and charge",
+      "difficulty": "Foundation",
+      "prompt": "What does electrically neutral mean?",
+      "options": [
+        "There are no electrons or protons.",
+        "Every particle is a neutron.",
+        "Positive and negative charges balance to give zero net charge.",
+        "The object cannot contain atoms."
+      ],
+      "answer": 2,
+      "explanation": "Neutral matter contains charged particles, but their charges cancel overall."
+    },
+    {
+      "id": "y9-electricity-static-103",
+      "category": "Atoms and charge",
+      "difficulty": "Foundation",
+      "prompt": "Which is the correct unit symbol for electric charge?",
+      "options": [
+        "A.",
+        "V.",
+        "Ω.",
+        "C."
+      ],
+      "answer": 3,
+      "explanation": "Charge is measured in coulombs, symbol C. A is ampere, V volt and Ω ohm."
+    },
+    {
+      "id": "y9-electricity-static-104",
+      "category": "Atoms and charge",
+      "difficulty": "Application",
+      "prompt": "A selected patch has 8 protons and 9 electrons. What is its net charge?",
+      "options": [
+        "−1 elementary charge.",
+        "+1 elementary charge.",
+        "Zero.",
+        "−17 elementary charges."
+      ],
+      "answer": 0,
+      "explanation": "Eight positive and nine negative equal-sized elementary charges give 8 − 9 = −1."
+    },
+    {
+      "id": "y9-electricity-static-105",
+      "category": "Atoms and charge",
+      "difficulty": "Application",
+      "prompt": "A selected patch has 8 protons and 6 electrons. What is its net charge?",
+      "options": [
+        "−2 elementary charges.",
+        "+2 elementary charges.",
+        "+14 elementary charges.",
+        "Zero."
+      ],
+      "answer": 1,
+      "explanation": "Its positive total exceeds its negative total by two elementary charges: 8 − 6 = +2."
+    },
+    {
+      "id": "y9-electricity-static-106",
+      "category": "Atoms and charge",
+      "difficulty": "Application",
+      "prompt": "Which particle has no electric charge?",
+      "options": [
+        "A proton.",
+        "An electron.",
+        "A neutron.",
+        "A positively charged ion."
+      ],
+      "answer": 2,
+      "explanation": "A neutron is electrically neutral. An ion is an atom or group of atoms with net charge."
+    },
+    {
+      "id": "y9-electricity-static-107",
+      "category": "Atoms and charge",
+      "difficulty": "Application",
+      "prompt": "How many coulombs is 1 μC?",
+      "options": [
+        "1000000 C.",
+        "0.001 C.",
+        "1 C.",
+        "0.000001 C."
+      ],
+      "answer": 3,
+      "explanation": "Micro means one millionth: 1 μC = 10⁻⁶ C. The prefix is different from milli, which is one thousandth."
+    },
+    {
+      "id": "y9-electricity-static-108",
+      "category": "Atoms and charge",
+      "difficulty": "Challenge",
+      "prompt": "Approximately how many excess electrons give a charge of −1 C?",
+      "options": [
+        "6.24 × 10¹⁸.",
+        "6.24.",
+        "1 × 10⁻¹⁹.",
+        "6.24 × 10⁻¹⁸."
+      ],
+      "answer": 0,
+      "explanation": "The magnitude of one electron’s charge is about 1.602 × 10⁻¹⁹ C. Divide 1 C by this magnitude to obtain about 6.24 × 10¹⁸ electrons."
+    },
+    {
+      "id": "y9-electricity-static-109",
+      "category": "Atoms and charge",
+      "difficulty": "Challenge",
+      "prompt": "Why can a neutral metal still conduct charge?",
+      "options": [
+        "Neutral means it has no particles.",
+        "It has mobile electrons, despite having zero net charge overall.",
+        "Only net-positive objects can conduct.",
+        "All its protons move freely between atoms."
+      ],
+      "answer": 1,
+      "explanation": "Conductivity depends on mobile carriers, not a pre-existing net charge. The positive ion cores and electrons can balance while some electrons remain mobile."
+    },
+    {
+      "id": "y9-electricity-static-200",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Foundation",
+      "prompt": "In the chosen balloon–cloth model, which particles transfer to the balloon?",
+      "options": [
+        "Protons.",
+        "Whole nuclei.",
+        "Electrons.",
+        "Neutrons only."
+      ],
+      "answer": 2,
+      "explanation": "The model transfers electrons from cloth to balloon; the positive nuclei stay in their materials."
+    },
+    {
+      "id": "y9-electricity-static-201",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Foundation",
+      "prompt": "What happens to a neutral balloon when it gains electrons?",
+      "options": [
+        "It becomes positively charged.",
+        "It loses all its protons.",
+        "Its net charge must stay zero.",
+        "It becomes negatively charged."
+      ],
+      "answer": 3,
+      "explanation": "Adding negative charge produces a negative imbalance if the positive total stays unchanged."
+    },
+    {
+      "id": "y9-electricity-static-202",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Foundation",
+      "prompt": "What happens to the cloth when it loses electrons to the balloon?",
+      "options": [
+        "It becomes positively charged.",
+        "It becomes negatively charged.",
+        "Its protons all disappear.",
+        "It becomes a pure electron gas."
+      ],
+      "answer": 0,
+      "explanation": "Losing negative electrons leaves a positive excess. Positive charge does not require protons to move into the cloth."
+    },
+    {
+      "id": "y9-electricity-static-203",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Foundation",
+      "prompt": "What does conservation of charge mean for an isolated pair?",
+      "options": [
+        "Neither object can ever change charge.",
+        "Its total charge stays the same.",
+        "Rubbing creates equal amounts of new matter.",
+        "Only the negative total is conserved."
+      ],
+      "answer": 1,
+      "explanation": "Charge can transfer between the objects while the total of the isolated system stays unchanged."
+    },
+    {
+      "id": "y9-electricity-static-204",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Application",
+      "prompt": "Two initially neutral patches exchange three electrons from cloth to balloon. What are their net charges?",
+      "options": [
+        "Balloon +3 e; cloth −3 e.",
+        "Both −3 e.",
+        "Balloon −3 e; cloth +3 e.",
+        "Both zero."
+      ],
+      "answer": 2,
+      "explanation": "Three negative elementary charges leave one patch and enter the other. The total is still zero."
+    },
+    {
+      "id": "y9-electricity-static-205",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Application",
+      "prompt": "Which statement about rubbing is correct?",
+      "options": [
+        "Friction manufactures new electrons from energy in every case.",
+        "Protons always move from cloth into plastic.",
+        "Every rubbed material must become negative.",
+        "Contact and separation can transfer existing electrons."
+      ],
+      "answer": 3,
+      "explanation": "The transferred electrons already exist. The direction depends on the material pair and surface conditions."
+    },
+    {
+      "id": "y9-electricity-static-206",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Application",
+      "prompt": "What does static mean in static electricity?",
+      "options": [
+        "A charge imbalance persists without a continuous circuit current.",
+        "Electrons can never move at any stage.",
+        "There is no electric force.",
+        "Only positively charged matter is present."
+      ],
+      "answer": 0,
+      "explanation": "Static charge can move while an object is charging, redistributing charge or discharging. Static does not mean charge is permanently immobile."
+    },
+    {
+      "id": "y9-electricity-static-207",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Application",
+      "prompt": "An isolated pair starts with total charge zero. One object finishes at +2 μC. What is the other object’s charge?",
+      "options": [
+        "+2 μC.",
+        "−2 μC.",
+        "Zero.",
+        "−4 μC."
+      ],
+      "answer": 1,
+      "explanation": "Conservation requires the two final charges to add to the initial zero total."
+    },
+    {
+      "id": "y9-electricity-static-208",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Challenge",
+      "prompt": "Why is an object positive after electron loss, even though no proton entered?",
+      "options": [
+        "Electrons changed into protons.",
+        "Losing matter always produces positive charge.",
+        "Its unchanged positive charge now exceeds its negative charge.",
+        "Positive charge is made by rubbing air."
+      ],
+      "answer": 2,
+      "explanation": "Net charge is the signed sum. Removing negative charge leaves an imbalance in favour of the positive total already present."
+    },
+    {
+      "id": "y9-electricity-static-209",
+      "category": "Electron transfer and conservation",
+      "difficulty": "Challenge",
+      "prompt": "An isolated pair initially totals +1 μC. After contact, one object is −2 μC. What is the other?",
+      "options": [
+        "−3 μC.",
+        "+1 μC.",
+        "Zero.",
+        "+3 μC."
+      ],
+      "answer": 3,
+      "explanation": "The total remains +1 μC. The other charge must satisfy −2 + Q = +1, so Q = +3 μC."
+    },
+    {
+      "id": "y9-electricity-static-300",
+      "category": "Forces and polarisation",
+      "difficulty": "Foundation",
+      "prompt": "How do two negative net charges interact?",
+      "options": [
+        "They repel.",
+        "They always attract.",
+        "They cancel without contact.",
+        "They exert no force because both are negative."
+      ],
+      "answer": 0,
+      "explanation": "Like net charges repel: negative–negative and positive–positive."
+    },
+    {
+      "id": "y9-electricity-static-301",
+      "category": "Forces and polarisation",
+      "difficulty": "Foundation",
+      "prompt": "How do opposite net charges interact?",
+      "options": [
+        "They repel.",
+        "They attract.",
+        "They always become neutral without transfer.",
+        "They cannot interact across a gap."
+      ],
+      "answer": 1,
+      "explanation": "Opposite charge signs attract. A force can act without direct contact."
+    },
+    {
+      "id": "y9-electricity-static-302",
+      "category": "Forces and polarisation",
+      "difficulty": "Foundation",
+      "prompt": "What is an electrical force?",
+      "options": [
+        "A quantity measured only in coulombs per second.",
+        "A kind of chemical fuel.",
+        "A push or pull associated with charge.",
+        "The number of neutrons in an atom."
+      ],
+      "answer": 2,
+      "explanation": "Force is a push or pull. Electrical forces are associated with charge and can act across a space."
+    },
+    {
+      "id": "y9-electricity-static-303",
+      "category": "Forces and polarisation",
+      "difficulty": "Foundation",
+      "prompt": "What does polarisation mean here?",
+      "options": [
+        "Turning every neutron into an electron.",
+        "Destroying all positive charge.",
+        "Requiring the object to acquire a non-zero net charge.",
+        "A small redistribution of charge within an object."
+      ],
+      "answer": 3,
+      "explanation": "Charges shift slightly so opposite charge can be nearer an external charged object; the polarised object can remain neutral overall."
+    },
+    {
+      "id": "y9-electricity-static-304",
+      "category": "Forces and polarisation",
+      "difficulty": "Application",
+      "prompt": "Why can a negative balloon attract a neutral wall?",
+      "options": [
+        "The wall’s charge distribution shifts, with positive charge effectively nearer.",
+        "The wall must always have a negative net charge.",
+        "Gravity reverses near balloons.",
+        "The balloon sends new protons through the wall."
+      ],
+      "answer": 0,
+      "explanation": "Polarisation puts opposite charge closer. That attraction can outweigh the more distant like-charge repulsion."
+    },
+    {
+      "id": "y9-electricity-static-305",
+      "category": "Forces and polarisation",
+      "difficulty": "Application",
+      "prompt": "Does attraction prove that a nearby object has the opposite net charge?",
+      "options": [
+        "Yes, in every possible case.",
+        "No; a neutral object can be polarised and attracted.",
+        "Yes, because neutral objects have no charges inside.",
+        "No, because charges never attract."
+      ],
+      "answer": 1,
+      "explanation": "Both an oppositely charged object and a neutral polarised object can be attracted."
+    },
+    {
+      "id": "y9-electricity-static-306",
+      "category": "Forces and polarisation",
+      "difficulty": "Application",
+      "prompt": "Which observation best supports a like net charge in this introductory rod test?",
+      "options": [
+        "Attraction to a known charged rod alone.",
+        "The rod being the same colour.",
+        "Repulsion from a rod with known charge.",
+        "The rod having greater mass."
+      ],
+      "answer": 2,
+      "explanation": "Repulsion provides stronger evidence of like charge. Attraction alone can also occur through polarisation of neutral matter."
+    },
+    {
+      "id": "y9-electricity-static-307",
+      "category": "Forces and polarisation",
+      "difficulty": "Application",
+      "prompt": "For unchanged point charges in air, what generally happens as separation increases?",
+      "options": [
+        "The charge signs automatically reverse.",
+        "Electrons turn into neutrons.",
+        "The force always grows.",
+        "The magnitude of electric force decreases."
+      ],
+      "answer": 3,
+      "explanation": "For the point-charge idealisation, force magnitude is proportional to 1/r². The force arrows in our introductory lab are qualitative."
+    },
+    {
+      "id": "y9-electricity-static-308",
+      "category": "Forces and polarisation",
+      "difficulty": "Challenge",
+      "prompt": "A neutral object is polarised beside a charged one, with no charge transferred. What is its total charge?",
+      "options": [
+        "Still zero.",
+        "Always positive.",
+        "Always negative.",
+        "Equal to the charged object’s charge."
+      ],
+      "answer": 0,
+      "explanation": "Redistribution changes position, not the signed total, when no charge enters or leaves."
+    },
+    {
+      "id": "y9-electricity-static-309",
+      "category": "Forces and polarisation",
+      "difficulty": "Challenge",
+      "prompt": "Two like charged rods are moved further apart. Which statement is consistent?",
+      "options": [
+        "They must begin attracting at any larger distance.",
+        "They still repel, usually with a weaker force.",
+        "Each rod instantly becomes neutral.",
+        "Their protons leave through the air."
+      ],
+      "answer": 1,
+      "explanation": "Changing distance changes force magnitude without necessarily changing net charge or whether the interaction attracts or repels."
+    },
+    {
+      "id": "y9-electricity-static-400",
+      "category": "Conductors and insulators",
+      "difficulty": "Foundation",
+      "prompt": "What makes a metal a good conductor?",
+      "options": [
+        "Its protons travel around a circuit freely.",
+        "It contains no charges at all.",
+        "It has mobile charge carriers, including electrons.",
+        "It is always positively charged."
+      ],
+      "answer": 2,
+      "explanation": "Some electrons in a metal can move through it; the positive ion cores remain part of the lattice."
+    },
+    {
+      "id": "y9-electricity-static-401",
+      "category": "Conductors and insulators",
+      "difficulty": "Foundation",
+      "prompt": "Why can charge persist on a dry plastic comb?",
+      "options": [
+        "Plastic has no atoms.",
+        "Plastic makes new charge continuously.",
+        "Its protons are moving faster than light.",
+        "Plastic does not let charge move through it easily."
+      ],
+      "answer": 3,
+      "explanation": "An insulator does not readily conduct charge through its bulk, so a surface imbalance can persist."
+    },
+    {
+      "id": "y9-electricity-static-402",
+      "category": "Conductors and insulators",
+      "difficulty": "Foundation",
+      "prompt": "Which is normally a good electrical conductor?",
+      "options": [
+        "Copper.",
+        "Dry polythene.",
+        "Dry glass.",
+        "Dry rubber."
+      ],
+      "answer": 0,
+      "explanation": "Copper has mobile electrons. These dry insulating materials do not conduct nearly as readily under ordinary conditions."
+    },
+    {
+      "id": "y9-electricity-static-403",
+      "category": "Conductors and insulators",
+      "difficulty": "Foundation",
+      "prompt": "What is a lattice in this lesson?",
+      "options": [
+        "A unit of current.",
+        "An organised arrangement of particles in a solid.",
+        "A single electron in empty space.",
+        "An electrical energy unit."
+      ],
+      "answer": 1,
+      "explanation": "Metal ion cores occupy positions in a solid lattice and vibrate around those positions."
+    },
+    {
+      "id": "y9-electricity-static-404",
+      "category": "Conductors and insulators",
+      "difficulty": "Application",
+      "prompt": "What usually moves through a metal earth wire?",
+      "options": [
+        "Protons migrating from nucleus to nucleus.",
+        "Whole balloon molecules.",
+        "Electrons.",
+        "Only neutrons."
+      ],
+      "answer": 2,
+      "explanation": "Electronic conduction in metal involves mobile electrons; positive ion cores do not travel along the wire."
+    },
+    {
+      "id": "y9-electricity-static-405",
+      "category": "Conductors and insulators",
+      "difficulty": "Application",
+      "prompt": "Can a neutral copper wire carry current?",
+      "options": [
+        "No, it must first lose all electrons.",
+        "No, only charged insulators conduct.",
+        "Yes, because its protons flow through the circuit.",
+        "Yes, its mobile electrons can drift while it stays nearly neutral overall."
+      ],
+      "answer": 3,
+      "explanation": "A wire can have balanced overall charge and still support a directed flow of mobile electrons."
+    },
+    {
+      "id": "y9-electricity-static-406",
+      "category": "Conductors and insulators",
+      "difficulty": "Application",
+      "prompt": "Why might humid conditions reduce some static effects?",
+      "options": [
+        "Moisture can provide paths for charge to leak away.",
+        "Water destroys all electrons.",
+        "Humidity turns all matter into a perfect conductor.",
+        "Protons stop having charge in damp air."
+      ],
+      "answer": 0,
+      "explanation": "The leakage depends on surface and environmental conditions. The point is a possible discharge path, not disappearance of charge."
+    },
+    {
+      "id": "y9-electricity-static-407",
+      "category": "Conductors and insulators",
+      "difficulty": "Application",
+      "prompt": "Why does touching one patch of a charged insulator with an earth lead not guarantee complete discharge?",
+      "options": [
+        "The Earth cannot ever accept electrons.",
+        "Charge cannot readily move from all other patches to that contact.",
+        "The wire’s protons must first become electrons.",
+        "Insulators cannot contain net charge."
+      ],
+      "answer": 1,
+      "explanation": "Local contact may discharge a patch, but poor bulk and surface conduction can keep remote charge in place."
+    },
+    {
+      "id": "y9-electricity-static-408",
+      "category": "Conductors and insulators",
+      "difficulty": "Challenge",
+      "prompt": "Which comparison separates conductivity from net charge?",
+      "options": [
+        "Every charged object is automatically a good conductor.",
+        "Only metals contain electrons.",
+        "A neutral metal can conduct while a charged plastic surface can retain local charge.",
+        "An insulator must be neutral at all times."
+      ],
+      "answer": 2,
+      "explanation": "Net charge is an imbalance; conductivity describes mobility. They are different properties."
+    },
+    {
+      "id": "y9-electricity-static-409",
+      "category": "Conductors and insulators",
+      "difficulty": "Challenge",
+      "prompt": "Why are the positive ion cores not shown circulating with electrons in a metal?",
+      "options": [
+        "Their positive charge has no force.",
+        "They disappear as soon as current starts.",
+        "Every metal nucleus is actually neutral.",
+        "They remain bound in the lattice, although they vibrate."
+      ],
+      "answer": 3,
+      "explanation": "The metal’s structure holds the ion cores in the solid. Mobile electrons carry the net drift current."
+    },
+    {
+      "id": "y9-electricity-static-500",
+      "category": "Earthing and discharge",
+      "difficulty": "Foundation",
+      "prompt": "What is earthing a metal object?",
+      "options": [
+        "Connecting it to Earth by a conducting path.",
+        "Adding an insulating stand only.",
+        "Rubbing it until protons leave.",
+        "Removing every electron permanently."
+      ],
+      "answer": 0,
+      "explanation": "An earth connection allows charge transfer between the conducting object and the large charge reservoir of Earth."
+    },
+    {
+      "id": "y9-electricity-static-501",
+      "category": "Earthing and discharge",
+      "difficulty": "Foundation",
+      "prompt": "A negative metal sphere is earthed with no nearby charging object. Which way do excess electrons move?",
+      "options": [
+        "From Earth to sphere only.",
+        "From sphere to Earth.",
+        "From the sphere’s nuclei into new protons.",
+        "Nowhere, because metals are insulators."
+      ],
+      "answer": 1,
+      "explanation": "The sphere’s excess electrons can flow through the conducting lead into Earth until the isolated imbalance is removed."
+    },
+    {
+      "id": "y9-electricity-static-502",
+      "category": "Earthing and discharge",
+      "difficulty": "Foundation",
+      "prompt": "A positive metal sphere is earthed with no nearby charging object. Which way can electrons move?",
+      "options": [
+        "Only from sphere to Earth.",
+        "Only from the insulating stand to the air.",
+        "From Earth to sphere.",
+        "Electrons cannot respond to a positive object."
+      ],
+      "answer": 2,
+      "explanation": "The electron deficit can be filled from Earth through the conducting connection."
+    },
+    {
+      "id": "y9-electricity-static-503",
+      "category": "Earthing and discharge",
+      "difficulty": "Foundation",
+      "prompt": "What is an electrical discharge?",
+      "options": [
+        "Creation of charge from nothing.",
+        "A proton losing its mass.",
+        "A continuous current in every object forever.",
+        "Transfer of charge that reduces or redistributes an imbalance."
+      ],
+      "answer": 3,
+      "explanation": "A discharge transfers existing charge. A spark is one visible form of discharge through air."
+    },
+    {
+      "id": "y9-electricity-static-504",
+      "category": "Earthing and discharge",
+      "difficulty": "Application",
+      "prompt": "Why is the metal sphere mounted on an insulating stand in the model?",
+      "options": [
+        "To stop an unintended conducting path to the surroundings.",
+        "To provide a second metal wire to Earth.",
+        "To make the sphere have no atoms.",
+        "To increase the number of protons by rubbing."
+      ],
+      "answer": 0,
+      "explanation": "The stand helps the isolated sphere retain charge until the intended lead is attached."
+    },
+    {
+      "id": "y9-electricity-static-505",
+      "category": "Earthing and discharge",
+      "difficulty": "Application",
+      "prompt": "A sufficiently strong electric field can make air do what?",
+      "options": [
+        "Become a perfect permanent insulator.",
+        "Conduct, allowing a spark.",
+        "Remove all electrical forces.",
+        "Turn every electron into light with no charge left."
+      ],
+      "answer": 1,
+      "explanation": "Electrical breakdown can make air conduct. Charge transfer through the conducting region can produce light, sound and heating."
+    },
+    {
+      "id": "y9-electricity-static-506",
+      "category": "Earthing and discharge",
+      "difficulty": "Application",
+      "prompt": "What does bonding conducting fuel-handling parts aim to reduce?",
+      "options": [
+        "The number of nuclei in the fuel.",
+        "The Earth’s size.",
+        "Potential differences and the risk of a spark between them.",
+        "All chemical energy in the fuel."
+      ],
+      "answer": 2,
+      "explanation": "Bonding provides an electrical link between conducting parts; engineered procedures reduce spark risk. This is not a fuel-handling activity for students."
+    },
+    {
+      "id": "y9-electricity-static-507",
+      "category": "Earthing and discharge",
+      "difficulty": "Application",
+      "prompt": "How does bonding differ from earthing?",
+      "options": [
+        "Bonding creates electrons; earthing creates protons.",
+        "They are names for opposite charge signs.",
+        "Bonding always uses an insulator.",
+        "Bonding joins conducting objects; earthing connects to Earth."
+      ],
+      "answer": 3,
+      "explanation": "The purposes can overlap in systems, but an inter-object connection and a connection to Earth are distinct ideas."
+    },
+    {
+      "id": "y9-electricity-static-508",
+      "category": "Earthing and discharge",
+      "difficulty": "Challenge",
+      "prompt": "A selected sphere has 8 positive cores and 11 electrons. After ideal earthing without external influences, how many selected electrons balance those cores?",
+      "options": [
+        "8.",
+        "11.",
+        "3.",
+        "0."
+      ],
+      "answer": 0,
+      "explanation": "Three excess electrons leave in the simplified selected-patch model, leaving 8 positives and 8 negatives."
+    },
+    {
+      "id": "y9-electricity-static-509",
+      "category": "Earthing and discharge",
+      "difficulty": "Challenge",
+      "prompt": "Why is a shortest-path-only rule insufficient to predict lightning?",
+      "options": [
+        "Lightning can flow only through plastic.",
+        "Air breakdown and electric-field conditions determine a complex route.",
+        "Lightning never occurs inside clouds.",
+        "Charge cannot move through ionised air."
+      ],
+      "answer": 1,
+      "explanation": "Lightning paths are more complex than a geometric shortest line; it may occur within clouds as well as to ground."
+    },
+    {
+      "id": "y9-electricity-static-600",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Foundation",
+      "prompt": "What helps a photocopier place toner on selected regions?",
+      "options": [
+        "Using up electrons as ink.",
+        "Converting protons into paper.",
+        "Controlled electrical attraction.",
+        "Making the entire page a magnet only."
+      ],
+      "answer": 2,
+      "explanation": "Toner particles respond to controlled charge patterns, then the image is transferred and fixed."
+    },
+    {
+      "id": "y9-electricity-static-601",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Foundation",
+      "prompt": "What can electrostatic spray painting use?",
+      "options": [
+        "Neutrons leaving every paint molecule.",
+        "Gravity being switched off.",
+        "A continuous supply of new charge created from nothing.",
+        "Attraction of charged droplets to a suitably connected workpiece."
+      ],
+      "answer": 3,
+      "explanation": "Electrostatic forces can assist deposition, while repulsion between similarly charged droplets can help spread a spray."
+    },
+    {
+      "id": "y9-electricity-static-602",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Foundation",
+      "prompt": "What is the main target of an electrostatic precipitator?",
+      "options": [
+        "Suspended particles in a gas stream.",
+        "Every gas molecule without exception.",
+        "All heat in the chimney.",
+        "The whole building’s protons."
+      ],
+      "answer": 0,
+      "explanation": "Charged particles are attracted towards collecting surfaces. This does not guarantee removal of gaseous pollutants."
+    },
+    {
+      "id": "y9-electricity-static-603",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Foundation",
+      "prompt": "Which is an everyday example of electrostatic discharge?",
+      "options": [
+        "A book simply resting on a table.",
+        "A brief spark after walking on carpet and touching metal.",
+        "Water freezing in a tray.",
+        "A wooden ruler measuring a length."
+      ],
+      "answer": 1,
+      "explanation": "Contact and separation can charge a person; touching a conductor can allow a brief discharge."
+    },
+    {
+      "id": "y9-electricity-static-604",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Application",
+      "prompt": "What makes a charged dust collector useful?",
+      "options": [
+        "It creates dust from electrons.",
+        "It makes dust mass disappear.",
+        "Electrical forces can direct charged particles towards a collection surface.",
+        "It blocks all gases by turning them into protons."
+      ],
+      "answer": 2,
+      "explanation": "The charge helps separate suspended material from flowing gas, but collection and later removal are still needed."
+    },
+    {
+      "id": "y9-electricity-static-605",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Application",
+      "prompt": "Which statement about a defibrillator is most accurate?",
+      "options": [
+        "It is simply a charged comb attracting the heart.",
+        "It restarts every heart regardless of rhythm.",
+        "It removes all electrons from a patient.",
+        "It delivers a controlled electrical pulse for certain abnormal heart rhythms."
+      ],
+      "answer": 3,
+      "explanation": "A defibrillator concerns stored electrical energy and a controlled current pulse; it is not merely electrostatic attraction or a universal restart device."
+    },
+    {
+      "id": "y9-electricity-static-606",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Application",
+      "prompt": "Why can clothing cling after drying?",
+      "options": [
+        "Contact and separation can produce charge imbalances and attraction.",
+        "Fabric atoms have lost all nuclei.",
+        "Every item has exactly the same net charge and must attract.",
+        "Only gravity can act between fabrics."
+      ],
+      "answer": 0,
+      "explanation": "Dry insulating materials can retain charge. Attraction may involve opposite charges or polarisation."
+    },
+    {
+      "id": "y9-electricity-static-607",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Application",
+      "prompt": "What keeps the pizza analogy distinct from static attraction?",
+      "options": [
+        "Static attraction requires a steady closed metal loop.",
+        "The circuit model represents a continuing current in a closed loop.",
+        "The pizza model has no energy transfer.",
+        "Static charge has no electric forces."
+      ],
+      "answer": 1,
+      "explanation": "Static examples concern a persisting imbalance; a driven circuit can sustain current and energy transfer."
+    },
+    {
+      "id": "y9-electricity-static-608",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Challenge",
+      "prompt": "Why should an industrial particle filter not be described as removing all pollution?",
+      "options": [
+        "It cannot attract any charged matter.",
+        "Only neutral gases have mass.",
+        "It targets particles and does not necessarily capture gaseous pollutants.",
+        "All pollution consists of electrons."
+      ],
+      "answer": 2,
+      "explanation": "Particles and gaseous pollutants are different. A particular separation method addresses specific materials."
+    },
+    {
+      "id": "y9-electricity-static-609",
+      "category": "Static electricity in everyday life",
+      "difficulty": "Challenge",
+      "prompt": "Which statement connects static and circuit electricity correctly?",
+      "options": [
+        "Static electricity contains only protons; circuits only neutrons.",
+        "Charge exists only when a switch is closed.",
+        "Circuit charge is always created by the battery.",
+        "Both involve charge, but their arrangements and patterns of movement differ."
+      ],
+      "answer": 3,
+      "explanation": "The same charge concepts underlie both. A battery supplies energy and maintains conditions for flow; rubbing can redistribute existing charge."
+    }
+  ]
+}

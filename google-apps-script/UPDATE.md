@@ -1,6 +1,6 @@
 # Learning Lab: all-course dashboard update
 
-This release covers 22 revision question banks / 1,460 questions in Year 7 Maths,
+This release covers 24 revision question banks / 1,580 questions in Year 7 Maths,
 Year 9 Science, Year 10 Chemistry and Year 10 Physics.
 
 1. In your existing private results spreadsheet, choose Extensions → Apps Script.

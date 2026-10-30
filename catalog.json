@@ -443,6 +443,96 @@
               ],
               "primaryActivity": "gas-laws-lab",
               "appTitle": "Gas laws web app"
+            },
+            {
+              "id": "electricity",
+              "name": "Electricity",
+              "appTitle": "Electricity: charge and circuits",
+              "description": "Explore static electricity and charge, then investigate current, voltage, resistance, circuits and power.",
+              "primaryActivity": "y9-electricity-lab",
+              "activities": [
+                {
+                  "id": "y9-electricity-lab",
+                  "title": "Electricity: charge and circuits",
+                  "description": "Two beginner-friendly lessons, guided static experiments and four separate circuit investigations.",
+                  "href": "activities/y9/science/electricity/",
+                  "image": "activities/y9/science/electricity/images/unit.svg",
+                  "format": "Interactive science unit",
+                  "duration": "Work at your pace"
+                },
+                {
+                  "id": "y9-electricity-static",
+                  "title": "Static electricity and charge",
+                  "description": "Read from the beginning and investigate the ideas with animated models.",
+                  "href": "activities/y9/science/electricity/static/",
+                  "image": "activities/y9/science/electricity/images/static.svg",
+                  "format": "Part 1 · Static electricity",
+                  "duration": "Work at your pace"
+                },
+                {
+                  "id": "y9-electricity-static-revision",
+                  "title": "Static electricity and charge: revision simulator",
+                  "description": "60 explained questions with selectable areas and levels, practice and Test yourself.",
+                  "href": "activities/y9/science/electricity/static/revision.html",
+                  "image": "activities/y9/science/electricity/images/static.svg",
+                  "format": "Static charge revision",
+                  "duration": "Choose your session"
+                },
+                {
+                  "id": "y9-electricity-circuits",
+                  "title": "Electric circuits",
+                  "description": "Read from the beginning and investigate the ideas with animated models.",
+                  "href": "activities/y9/science/electricity/circuits/",
+                  "image": "activities/y9/science/electricity/images/circuit.svg",
+                  "format": "Part 2 · Circuits",
+                  "duration": "Work at your pace"
+                },
+                {
+                  "id": "y9-electricity-circuits-revision",
+                  "title": "Electric circuits: revision simulator",
+                  "description": "60 explained questions with selectable areas and levels, practice and Test yourself.",
+                  "href": "activities/y9/science/electricity/circuits/revision.html",
+                  "image": "activities/y9/science/electricity/images/circuit.svg",
+                  "format": "Circuits revision",
+                  "duration": "Choose your session"
+                },
+                {
+                  "id": "y9-electricity-pizza",
+                  "title": "The Pizza Circuit",
+                  "description": "Change the supply energy per charge. Track a highlighted courier past the shop, party and counting gate.",
+                  "href": "activities/y9/science/electricity/simulators/pizza.html",
+                  "image": "activities/y9/science/electricity/images/pizza-circuit.png",
+                  "format": "The Pizza Circuit",
+                  "duration": "10–20 min"
+                },
+                {
+                  "id": "y9-electricity-resistance",
+                  "title": "The Resistance Run",
+                  "description": "Change resistance. Watch the highlighted charges continue around the entire obstacle loop.",
+                  "href": "activities/y9/science/electricity/simulators/resistance.html",
+                  "image": "activities/y9/science/electricity/images/resistance-obstacles.png",
+                  "format": "The Resistance Run",
+                  "duration": "10–20 min"
+                },
+                {
+                  "id": "y9-electricity-ohms-law",
+                  "title": "Build an Ohm’s law circuit",
+                  "description": "Step 1 · Connect the ammeter: click the yellow meter, or drag its green plug to the green series socket.",
+                  "href": "activities/y9/science/electricity/simulators/ohms-law.html",
+                  "image": "activities/y9/science/electricity/images/circuit.svg",
+                  "format": "Build an Ohm’s law circuit",
+                  "duration": "10–20 min"
+                },
+                {
+                  "id": "y9-electricity-wire-resistance",
+                  "title": "Inside a resistance wire",
+                  "description": "Keep the measuring current fixed. Change one wire factor and record the resistance.",
+                  "href": "activities/y9/science/electricity/simulators/wire-resistance.html",
+                  "image": "activities/y9/science/electricity/images/circuit.svg",
+                  "format": "Inside a resistance wire",
+                  "duration": "10–20 min"
+                }
+              ]
             }
           ]
         }

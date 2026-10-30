@@ -2,7 +2,7 @@
 var RECORDING_MANIFEST_ = {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1460,
+  "questionCount": 1580,
   "banks": [
     {
       "topic": "algebra",
@@ -73,6 +73,20 @@ var RECORDING_MANIFEST_ = {
       "title": "Blood vessels and blood",
       "questionCount": 60,
       "signature": "27a3ccfce7909a4151d5008a00eb5276b499e03f6bf08318f43d3d40d42de0af"
+    },
+    {
+      "topic": "y9-electricity-static",
+      "course": "Year 9 Science",
+      "title": "Static electricity and charge",
+      "questionCount": 60,
+      "signature": "bc4fe1503feeace9d84c06af736a2bea843586004fa15b5bdc7272dcad3fcf92"
+    },
+    {
+      "topic": "y9-electricity-circuits",
+      "course": "Year 9 Science",
+      "title": "Electric circuits",
+      "questionCount": 60,
+      "signature": "3f8ca9c0cdff72b771d37ca8d2dcb37851055c2c579b7657a1f0361d62292903"
     },
     {
       "topic": "breathing-system",
@@ -7994,6 +8008,1476 @@ var QUESTION_BANKS_ = {
       "Exchange and investigations"
     ],
     "signature": "27a3ccfce7909a4151d5008a00eb5276b499e03f6bf08318f43d3d40d42de0af"
+  },
+  "y9-electricity-static": {
+    "course": "Year 9 Science",
+    "questions": {
+      "y9-electricity-static-100": {
+        "prompt": "Which particle has negative electric charge?",
+        "category": "Atoms and charge",
+        "difficulty": "Foundation",
+        "options": [
+          "An electron.",
+          "A proton.",
+          "A neutron.",
+          "An entire neutral nucleus."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-101": {
+        "prompt": "Where are protons found in an atom?",
+        "category": "Atoms and charge",
+        "difficulty": "Foundation",
+        "options": [
+          "Only in wires outside the atom.",
+          "In its nucleus.",
+          "In a separate cloud of negative electrons.",
+          "Only on the outside of a charged balloon."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-102": {
+        "prompt": "What does electrically neutral mean?",
+        "category": "Atoms and charge",
+        "difficulty": "Foundation",
+        "options": [
+          "There are no electrons or protons.",
+          "Every particle is a neutron.",
+          "Positive and negative charges balance to give zero net charge.",
+          "The object cannot contain atoms."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-103": {
+        "prompt": "Which is the correct unit symbol for electric charge?",
+        "category": "Atoms and charge",
+        "difficulty": "Foundation",
+        "options": [
+          "A.",
+          "V.",
+          "Ω.",
+          "C."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-104": {
+        "prompt": "A selected patch has 8 protons and 9 electrons. What is its net charge?",
+        "category": "Atoms and charge",
+        "difficulty": "Application",
+        "options": [
+          "−1 elementary charge.",
+          "+1 elementary charge.",
+          "Zero.",
+          "−17 elementary charges."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-105": {
+        "prompt": "A selected patch has 8 protons and 6 electrons. What is its net charge?",
+        "category": "Atoms and charge",
+        "difficulty": "Application",
+        "options": [
+          "−2 elementary charges.",
+          "+2 elementary charges.",
+          "+14 elementary charges.",
+          "Zero."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-106": {
+        "prompt": "Which particle has no electric charge?",
+        "category": "Atoms and charge",
+        "difficulty": "Application",
+        "options": [
+          "A proton.",
+          "An electron.",
+          "A neutron.",
+          "A positively charged ion."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-107": {
+        "prompt": "How many coulombs is 1 μC?",
+        "category": "Atoms and charge",
+        "difficulty": "Application",
+        "options": [
+          "1000000 C.",
+          "0.001 C.",
+          "1 C.",
+          "0.000001 C."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-108": {
+        "prompt": "Approximately how many excess electrons give a charge of −1 C?",
+        "category": "Atoms and charge",
+        "difficulty": "Challenge",
+        "options": [
+          "6.24 × 10¹⁸.",
+          "6.24.",
+          "1 × 10⁻¹⁹.",
+          "6.24 × 10⁻¹⁸."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-109": {
+        "prompt": "Why can a neutral metal still conduct charge?",
+        "category": "Atoms and charge",
+        "difficulty": "Challenge",
+        "options": [
+          "Neutral means it has no particles.",
+          "It has mobile electrons, despite having zero net charge overall.",
+          "Only net-positive objects can conduct.",
+          "All its protons move freely between atoms."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-200": {
+        "prompt": "In the chosen balloon–cloth model, which particles transfer to the balloon?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Foundation",
+        "options": [
+          "Protons.",
+          "Whole nuclei.",
+          "Electrons.",
+          "Neutrons only."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-201": {
+        "prompt": "What happens to a neutral balloon when it gains electrons?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Foundation",
+        "options": [
+          "It becomes positively charged.",
+          "It loses all its protons.",
+          "Its net charge must stay zero.",
+          "It becomes negatively charged."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-202": {
+        "prompt": "What happens to the cloth when it loses electrons to the balloon?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Foundation",
+        "options": [
+          "It becomes positively charged.",
+          "It becomes negatively charged.",
+          "Its protons all disappear.",
+          "It becomes a pure electron gas."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-203": {
+        "prompt": "What does conservation of charge mean for an isolated pair?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Foundation",
+        "options": [
+          "Neither object can ever change charge.",
+          "Its total charge stays the same.",
+          "Rubbing creates equal amounts of new matter.",
+          "Only the negative total is conserved."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-204": {
+        "prompt": "Two initially neutral patches exchange three electrons from cloth to balloon. What are their net charges?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Application",
+        "options": [
+          "Balloon +3 e; cloth −3 e.",
+          "Both −3 e.",
+          "Balloon −3 e; cloth +3 e.",
+          "Both zero."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-205": {
+        "prompt": "Which statement about rubbing is correct?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Application",
+        "options": [
+          "Friction manufactures new electrons from energy in every case.",
+          "Protons always move from cloth into plastic.",
+          "Every rubbed material must become negative.",
+          "Contact and separation can transfer existing electrons."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-206": {
+        "prompt": "What does static mean in static electricity?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Application",
+        "options": [
+          "A charge imbalance persists without a continuous circuit current.",
+          "Electrons can never move at any stage.",
+          "There is no electric force.",
+          "Only positively charged matter is present."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-207": {
+        "prompt": "An isolated pair starts with total charge zero. One object finishes at +2 μC. What is the other object’s charge?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Application",
+        "options": [
+          "+2 μC.",
+          "−2 μC.",
+          "Zero.",
+          "−4 μC."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-208": {
+        "prompt": "Why is an object positive after electron loss, even though no proton entered?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Challenge",
+        "options": [
+          "Electrons changed into protons.",
+          "Losing matter always produces positive charge.",
+          "Its unchanged positive charge now exceeds its negative charge.",
+          "Positive charge is made by rubbing air."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-209": {
+        "prompt": "An isolated pair initially totals +1 μC. After contact, one object is −2 μC. What is the other?",
+        "category": "Electron transfer and conservation",
+        "difficulty": "Challenge",
+        "options": [
+          "−3 μC.",
+          "+1 μC.",
+          "Zero.",
+          "+3 μC."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-300": {
+        "prompt": "How do two negative net charges interact?",
+        "category": "Forces and polarisation",
+        "difficulty": "Foundation",
+        "options": [
+          "They repel.",
+          "They always attract.",
+          "They cancel without contact.",
+          "They exert no force because both are negative."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-301": {
+        "prompt": "How do opposite net charges interact?",
+        "category": "Forces and polarisation",
+        "difficulty": "Foundation",
+        "options": [
+          "They repel.",
+          "They attract.",
+          "They always become neutral without transfer.",
+          "They cannot interact across a gap."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-302": {
+        "prompt": "What is an electrical force?",
+        "category": "Forces and polarisation",
+        "difficulty": "Foundation",
+        "options": [
+          "A quantity measured only in coulombs per second.",
+          "A kind of chemical fuel.",
+          "A push or pull associated with charge.",
+          "The number of neutrons in an atom."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-303": {
+        "prompt": "What does polarisation mean here?",
+        "category": "Forces and polarisation",
+        "difficulty": "Foundation",
+        "options": [
+          "Turning every neutron into an electron.",
+          "Destroying all positive charge.",
+          "Requiring the object to acquire a non-zero net charge.",
+          "A small redistribution of charge within an object."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-304": {
+        "prompt": "Why can a negative balloon attract a neutral wall?",
+        "category": "Forces and polarisation",
+        "difficulty": "Application",
+        "options": [
+          "The wall’s charge distribution shifts, with positive charge effectively nearer.",
+          "The wall must always have a negative net charge.",
+          "Gravity reverses near balloons.",
+          "The balloon sends new protons through the wall."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-305": {
+        "prompt": "Does attraction prove that a nearby object has the opposite net charge?",
+        "category": "Forces and polarisation",
+        "difficulty": "Application",
+        "options": [
+          "Yes, in every possible case.",
+          "No; a neutral object can be polarised and attracted.",
+          "Yes, because neutral objects have no charges inside.",
+          "No, because charges never attract."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-306": {
+        "prompt": "Which observation best supports a like net charge in this introductory rod test?",
+        "category": "Forces and polarisation",
+        "difficulty": "Application",
+        "options": [
+          "Attraction to a known charged rod alone.",
+          "The rod being the same colour.",
+          "Repulsion from a rod with known charge.",
+          "The rod having greater mass."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-307": {
+        "prompt": "For unchanged point charges in air, what generally happens as separation increases?",
+        "category": "Forces and polarisation",
+        "difficulty": "Application",
+        "options": [
+          "The charge signs automatically reverse.",
+          "Electrons turn into neutrons.",
+          "The force always grows.",
+          "The magnitude of electric force decreases."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-308": {
+        "prompt": "A neutral object is polarised beside a charged one, with no charge transferred. What is its total charge?",
+        "category": "Forces and polarisation",
+        "difficulty": "Challenge",
+        "options": [
+          "Still zero.",
+          "Always positive.",
+          "Always negative.",
+          "Equal to the charged object’s charge."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-309": {
+        "prompt": "Two like charged rods are moved further apart. Which statement is consistent?",
+        "category": "Forces and polarisation",
+        "difficulty": "Challenge",
+        "options": [
+          "They must begin attracting at any larger distance.",
+          "They still repel, usually with a weaker force.",
+          "Each rod instantly becomes neutral.",
+          "Their protons leave through the air."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-400": {
+        "prompt": "What makes a metal a good conductor?",
+        "category": "Conductors and insulators",
+        "difficulty": "Foundation",
+        "options": [
+          "Its protons travel around a circuit freely.",
+          "It contains no charges at all.",
+          "It has mobile charge carriers, including electrons.",
+          "It is always positively charged."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-401": {
+        "prompt": "Why can charge persist on a dry plastic comb?",
+        "category": "Conductors and insulators",
+        "difficulty": "Foundation",
+        "options": [
+          "Plastic has no atoms.",
+          "Plastic makes new charge continuously.",
+          "Its protons are moving faster than light.",
+          "Plastic does not let charge move through it easily."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-402": {
+        "prompt": "Which is normally a good electrical conductor?",
+        "category": "Conductors and insulators",
+        "difficulty": "Foundation",
+        "options": [
+          "Copper.",
+          "Dry polythene.",
+          "Dry glass.",
+          "Dry rubber."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-403": {
+        "prompt": "What is a lattice in this lesson?",
+        "category": "Conductors and insulators",
+        "difficulty": "Foundation",
+        "options": [
+          "A unit of current.",
+          "An organised arrangement of particles in a solid.",
+          "A single electron in empty space.",
+          "An electrical energy unit."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-404": {
+        "prompt": "What usually moves through a metal earth wire?",
+        "category": "Conductors and insulators",
+        "difficulty": "Application",
+        "options": [
+          "Protons migrating from nucleus to nucleus.",
+          "Whole balloon molecules.",
+          "Electrons.",
+          "Only neutrons."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-405": {
+        "prompt": "Can a neutral copper wire carry current?",
+        "category": "Conductors and insulators",
+        "difficulty": "Application",
+        "options": [
+          "No, it must first lose all electrons.",
+          "No, only charged insulators conduct.",
+          "Yes, because its protons flow through the circuit.",
+          "Yes, its mobile electrons can drift while it stays nearly neutral overall."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-406": {
+        "prompt": "Why might humid conditions reduce some static effects?",
+        "category": "Conductors and insulators",
+        "difficulty": "Application",
+        "options": [
+          "Moisture can provide paths for charge to leak away.",
+          "Water destroys all electrons.",
+          "Humidity turns all matter into a perfect conductor.",
+          "Protons stop having charge in damp air."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-407": {
+        "prompt": "Why does touching one patch of a charged insulator with an earth lead not guarantee complete discharge?",
+        "category": "Conductors and insulators",
+        "difficulty": "Application",
+        "options": [
+          "The Earth cannot ever accept electrons.",
+          "Charge cannot readily move from all other patches to that contact.",
+          "The wire’s protons must first become electrons.",
+          "Insulators cannot contain net charge."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-408": {
+        "prompt": "Which comparison separates conductivity from net charge?",
+        "category": "Conductors and insulators",
+        "difficulty": "Challenge",
+        "options": [
+          "Every charged object is automatically a good conductor.",
+          "Only metals contain electrons.",
+          "A neutral metal can conduct while a charged plastic surface can retain local charge.",
+          "An insulator must be neutral at all times."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-409": {
+        "prompt": "Why are the positive ion cores not shown circulating with electrons in a metal?",
+        "category": "Conductors and insulators",
+        "difficulty": "Challenge",
+        "options": [
+          "Their positive charge has no force.",
+          "They disappear as soon as current starts.",
+          "Every metal nucleus is actually neutral.",
+          "They remain bound in the lattice, although they vibrate."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-500": {
+        "prompt": "What is earthing a metal object?",
+        "category": "Earthing and discharge",
+        "difficulty": "Foundation",
+        "options": [
+          "Connecting it to Earth by a conducting path.",
+          "Adding an insulating stand only.",
+          "Rubbing it until protons leave.",
+          "Removing every electron permanently."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-501": {
+        "prompt": "A negative metal sphere is earthed with no nearby charging object. Which way do excess electrons move?",
+        "category": "Earthing and discharge",
+        "difficulty": "Foundation",
+        "options": [
+          "From Earth to sphere only.",
+          "From sphere to Earth.",
+          "From the sphere’s nuclei into new protons.",
+          "Nowhere, because metals are insulators."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-502": {
+        "prompt": "A positive metal sphere is earthed with no nearby charging object. Which way can electrons move?",
+        "category": "Earthing and discharge",
+        "difficulty": "Foundation",
+        "options": [
+          "Only from sphere to Earth.",
+          "Only from the insulating stand to the air.",
+          "From Earth to sphere.",
+          "Electrons cannot respond to a positive object."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-503": {
+        "prompt": "What is an electrical discharge?",
+        "category": "Earthing and discharge",
+        "difficulty": "Foundation",
+        "options": [
+          "Creation of charge from nothing.",
+          "A proton losing its mass.",
+          "A continuous current in every object forever.",
+          "Transfer of charge that reduces or redistributes an imbalance."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-504": {
+        "prompt": "Why is the metal sphere mounted on an insulating stand in the model?",
+        "category": "Earthing and discharge",
+        "difficulty": "Application",
+        "options": [
+          "To stop an unintended conducting path to the surroundings.",
+          "To provide a second metal wire to Earth.",
+          "To make the sphere have no atoms.",
+          "To increase the number of protons by rubbing."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-505": {
+        "prompt": "A sufficiently strong electric field can make air do what?",
+        "category": "Earthing and discharge",
+        "difficulty": "Application",
+        "options": [
+          "Become a perfect permanent insulator.",
+          "Conduct, allowing a spark.",
+          "Remove all electrical forces.",
+          "Turn every electron into light with no charge left."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-506": {
+        "prompt": "What does bonding conducting fuel-handling parts aim to reduce?",
+        "category": "Earthing and discharge",
+        "difficulty": "Application",
+        "options": [
+          "The number of nuclei in the fuel.",
+          "The Earth’s size.",
+          "Potential differences and the risk of a spark between them.",
+          "All chemical energy in the fuel."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-507": {
+        "prompt": "How does bonding differ from earthing?",
+        "category": "Earthing and discharge",
+        "difficulty": "Application",
+        "options": [
+          "Bonding creates electrons; earthing creates protons.",
+          "They are names for opposite charge signs.",
+          "Bonding always uses an insulator.",
+          "Bonding joins conducting objects; earthing connects to Earth."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-508": {
+        "prompt": "A selected sphere has 8 positive cores and 11 electrons. After ideal earthing without external influences, how many selected electrons balance those cores?",
+        "category": "Earthing and discharge",
+        "difficulty": "Challenge",
+        "options": [
+          "8.",
+          "11.",
+          "3.",
+          "0."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-509": {
+        "prompt": "Why is a shortest-path-only rule insufficient to predict lightning?",
+        "category": "Earthing and discharge",
+        "difficulty": "Challenge",
+        "options": [
+          "Lightning can flow only through plastic.",
+          "Air breakdown and electric-field conditions determine a complex route.",
+          "Lightning never occurs inside clouds.",
+          "Charge cannot move through ionised air."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-600": {
+        "prompt": "What helps a photocopier place toner on selected regions?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Foundation",
+        "options": [
+          "Using up electrons as ink.",
+          "Converting protons into paper.",
+          "Controlled electrical attraction.",
+          "Making the entire page a magnet only."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-601": {
+        "prompt": "What can electrostatic spray painting use?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Foundation",
+        "options": [
+          "Neutrons leaving every paint molecule.",
+          "Gravity being switched off.",
+          "A continuous supply of new charge created from nothing.",
+          "Attraction of charged droplets to a suitably connected workpiece."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-602": {
+        "prompt": "What is the main target of an electrostatic precipitator?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Foundation",
+        "options": [
+          "Suspended particles in a gas stream.",
+          "Every gas molecule without exception.",
+          "All heat in the chimney.",
+          "The whole building’s protons."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-603": {
+        "prompt": "Which is an everyday example of electrostatic discharge?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Foundation",
+        "options": [
+          "A book simply resting on a table.",
+          "A brief spark after walking on carpet and touching metal.",
+          "Water freezing in a tray.",
+          "A wooden ruler measuring a length."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-604": {
+        "prompt": "What makes a charged dust collector useful?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Application",
+        "options": [
+          "It creates dust from electrons.",
+          "It makes dust mass disappear.",
+          "Electrical forces can direct charged particles towards a collection surface.",
+          "It blocks all gases by turning them into protons."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-605": {
+        "prompt": "Which statement about a defibrillator is most accurate?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Application",
+        "options": [
+          "It is simply a charged comb attracting the heart.",
+          "It restarts every heart regardless of rhythm.",
+          "It removes all electrons from a patient.",
+          "It delivers a controlled electrical pulse for certain abnormal heart rhythms."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-static-606": {
+        "prompt": "Why can clothing cling after drying?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Application",
+        "options": [
+          "Contact and separation can produce charge imbalances and attraction.",
+          "Fabric atoms have lost all nuclei.",
+          "Every item has exactly the same net charge and must attract.",
+          "Only gravity can act between fabrics."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-static-607": {
+        "prompt": "What keeps the pizza analogy distinct from static attraction?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Application",
+        "options": [
+          "Static attraction requires a steady closed metal loop.",
+          "The circuit model represents a continuing current in a closed loop.",
+          "The pizza model has no energy transfer.",
+          "Static charge has no electric forces."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-static-608": {
+        "prompt": "Why should an industrial particle filter not be described as removing all pollution?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Challenge",
+        "options": [
+          "It cannot attract any charged matter.",
+          "Only neutral gases have mass.",
+          "It targets particles and does not necessarily capture gaseous pollutants.",
+          "All pollution consists of electrons."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-static-609": {
+        "prompt": "Which statement connects static and circuit electricity correctly?",
+        "category": "Static electricity in everyday life",
+        "difficulty": "Challenge",
+        "options": [
+          "Static electricity contains only protons; circuits only neutrons.",
+          "Charge exists only when a switch is closed.",
+          "Circuit charge is always created by the battery.",
+          "Both involve charge, but their arrangements and patterns of movement differ."
+        ],
+        "answer": 3
+      }
+    },
+    "title": "Static electricity and charge",
+    "categories": [
+      "Atoms and charge",
+      "Electron transfer and conservation",
+      "Forces and polarisation",
+      "Conductors and insulators",
+      "Earthing and discharge",
+      "Static electricity in everyday life"
+    ],
+    "signature": "bc4fe1503feeace9d84c06af736a2bea843586004fa15b5bdc7272dcad3fcf92"
+  },
+  "y9-electricity-circuits": {
+    "course": "Year 9 Science",
+    "questions": {
+      "y9-electricity-circuits-100": {
+        "prompt": "What does electric current measure?",
+        "category": "Current and charge flow",
+        "difficulty": "Foundation",
+        "options": [
+          "Rate of flow of charge.",
+          "Energy per coulomb.",
+          "Total resistance of a wire.",
+          "Number of neutrons in a cell."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-101": {
+        "prompt": "What does a current of 1 A mean?",
+        "category": "Current and charge flow",
+        "difficulty": "Foundation",
+        "options": [
+          "1 J is stored in every electron.",
+          "1 C passes a point each second.",
+          "1 Ω passes a point each second.",
+          "1 V is used up every second."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-102": {
+        "prompt": "What does closing a switch do in a simple battery loop?",
+        "category": "Current and charge flow",
+        "difficulty": "Foundation",
+        "options": [
+          "Creates all the wire’s electrons.",
+          "Removes the cell’s positive terminal.",
+          "Completes the conducting path.",
+          "Uses up every charged particle."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-103": {
+        "prompt": "In a steady series circuit, how does current before a resistor compare with current after it?",
+        "category": "Current and charge flow",
+        "difficulty": "Foundation",
+        "options": [
+          "The current after is always zero.",
+          "The current before is twice the current after.",
+          "The resistor creates extra charge, so current after is greater.",
+          "They are equal."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-104": {
+        "prompt": "6 C passes a point in 3 s. What is the current?",
+        "category": "Current and charge flow",
+        "difficulty": "Application",
+        "options": [
+          "2 A.",
+          "18 A.",
+          "0.5 A.",
+          "9 A."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-105": {
+        "prompt": "A steady current is 0.5 A for 8 s. How much charge passes?",
+        "category": "Current and charge flow",
+        "difficulty": "Application",
+        "options": [
+          "16 C.",
+          "4 C.",
+          "0.0625 C.",
+          "8.5 C."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-106": {
+        "prompt": "Which direction is conventional current in the external circuit?",
+        "category": "Current and charge flow",
+        "difficulty": "Application",
+        "options": [
+          "From negative towards positive by definition.",
+          "Only from Earth to a lamp.",
+          "From positive towards negative.",
+          "Only towards the cell’s centre from both sides."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-107": {
+        "prompt": "Which carriers drift through ordinary metal wires?",
+        "category": "Current and charge flow",
+        "difficulty": "Application",
+        "options": [
+          "Positive ion cores flowing freely around the loop.",
+          "Neutrons only.",
+          "Whole battery cells.",
+          "Electrons."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-108": {
+        "prompt": "At a junction, 0.7 A arrives and one branch takes 0.2 A. What current takes the other branch?",
+        "category": "Current and charge flow",
+        "difficulty": "Challenge",
+        "options": [
+          "0.5 A.",
+          "0.9 A.",
+          "0.14 A.",
+          "3.5 A."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-109": {
+        "prompt": "Why can a lamp respond quickly when electrons drift slowly?",
+        "category": "Current and charge flow",
+        "difficulty": "Challenge",
+        "options": [
+          "One electron must complete the whole loop before the lamp responds.",
+          "An electrical signal propagates through a circuit with charges already present.",
+          "The lamp creates electrons from light first.",
+          "Electrons drift at the speed of light in every metal."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-200": {
+        "prompt": "What is potential difference?",
+        "category": "Potential difference and energy",
+        "difficulty": "Foundation",
+        "options": [
+          "Charge transferred per second.",
+          "Resistance multiplied by time.",
+          "Energy transferred per unit charge between two points.",
+          "The number of electrons stored in a wire."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-201": {
+        "prompt": "What does 1 V mean?",
+        "category": "Potential difference and energy",
+        "difficulty": "Foundation",
+        "options": [
+          "1 C per second.",
+          "1 Ω per second.",
+          "1 W per metre.",
+          "1 J per coulomb."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-202": {
+        "prompt": "In the pizza model, what does the shop represent?",
+        "category": "Potential difference and energy",
+        "difficulty": "Foundation",
+        "options": [
+          "The cell supplying energy.",
+          "A resistor using up charge.",
+          "An ammeter measuring food.",
+          "The Earth removing all couriers."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-203": {
+        "prompt": "In the pizza model, what happens to couriers after the party?",
+        "category": "Potential difference and energy",
+        "difficulty": "Foundation",
+        "options": [
+          "They are destroyed as the lamp uses charge.",
+          "They return to the shop without the delivered energy badge.",
+          "They become new cell nuclei.",
+          "They remain permanently at the party."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-204": {
+        "prompt": "A component transfers 12 J when 2 C passes. What is its potential difference?",
+        "category": "Potential difference and energy",
+        "difficulty": "Application",
+        "options": [
+          "24 V.",
+          "0.167 V.",
+          "6 V.",
+          "14 V."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-205": {
+        "prompt": "Across a 3 V component, 4 C passes. How much energy transfers?",
+        "category": "Potential difference and energy",
+        "difficulty": "Application",
+        "options": [
+          "0.75 J.",
+          "7 J.",
+          "1.33 J.",
+          "12 J."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-206": {
+        "prompt": "Why is voltage not the same thing as current?",
+        "category": "Potential difference and energy",
+        "difficulty": "Application",
+        "options": [
+          "Voltage is energy per charge; current is charge per time.",
+          "Both mean charge per time in different colours.",
+          "Voltage counts only protons and current only neutrons.",
+          "Voltage is always zero when current is non-zero."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-207": {
+        "prompt": "In a two-resistor series network, the supply is 6 V and one resistor has 2 V. What is the other potential difference?",
+        "category": "Potential difference and energy",
+        "difficulty": "Application",
+        "options": [
+          "8 V.",
+          "4 V.",
+          "12 V.",
+          "3 V."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-208": {
+        "prompt": "At fixed 3 Ω resistance, the supply changes from 3 V to 6 V. How do current and energy per coulomb change?",
+        "category": "Potential difference and energy",
+        "difficulty": "Challenge",
+        "options": [
+          "Only energy per coulomb doubles; current is unchanged.",
+          "Current halves while energy per coulomb doubles.",
+          "Both double.",
+          "Both halve."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-209": {
+        "prompt": "What is an important limit of the pizza model?",
+        "category": "Potential difference and energy",
+        "difficulty": "Challenge",
+        "options": [
+          "A cell cannot supply energy.",
+          "Real lamps must consume charge.",
+          "There is no complete path in any real circuit.",
+          "Real circuit energy transfer involves electromagnetic fields, not literal parcels carried on electrons."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-300": {
+        "prompt": "What unit measures resistance?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Foundation",
+        "options": [
+          "Ohm, Ω.",
+          "Ampere, A.",
+          "Coulomb, C.",
+          "Watt, W."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-301": {
+        "prompt": "Which expression gives current from voltage and resistance?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Foundation",
+        "options": [
+          "I = VR.",
+          "I = V/R.",
+          "I = R/V.",
+          "I = V + R."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-302": {
+        "prompt": "For an ohmic resistor, when does current stay proportional to voltage?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Foundation",
+        "options": [
+          "Only when its charge is used up.",
+          "Whenever temperature changes without limit.",
+          "When temperature and other physical conditions stay constant.",
+          "Only when it is an insulator with zero current."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-303": {
+        "prompt": "At fixed voltage, what happens when resistance increases?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Foundation",
+        "options": [
+          "Current always increases.",
+          "Current stays identical in every circuit.",
+          "Charge begins to be destroyed.",
+          "Current decreases."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-304": {
+        "prompt": "A 20 Ω resistor has 6 V across it. What current flows?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Application",
+        "options": [
+          "0.30 A.",
+          "120 A.",
+          "3.33 A.",
+          "26 A."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-305": {
+        "prompt": "A resistor has 4 V across it and 0.20 A through it. What is its resistance?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Application",
+        "options": [
+          "0.8 Ω.",
+          "20 Ω.",
+          "0.05 Ω.",
+          "4.2 Ω."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-306": {
+        "prompt": "At fixed resistance, what does doubling voltage do to current?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Application",
+        "options": [
+          "Halves it.",
+          "Leaves it unchanged.",
+          "Doubles it.",
+          "Makes it four times as large."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-307": {
+        "prompt": "Why can an incandescent filament lamp have a curved I–V graph?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Application",
+        "options": [
+          "It uses up more electrons at higher voltage.",
+          "It has no charge carriers.",
+          "Every conductor must have a straight I–V graph.",
+          "Its temperature and resistance rise as current heats it."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-308": {
+        "prompt": "Why does R = V/I at one operating point not prove Ohm’s law?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Challenge",
+        "options": [
+          "Many components have a ratio at one point without a constant ratio across voltages.",
+          "The ratio cannot ever be calculated.",
+          "Every component has identical resistance.",
+          "Ohm’s law requires current to decrease when voltage increases."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-309": {
+        "prompt": "Why should R not be obtained from 0 V divided by 0 A?",
+        "category": "Resistance and Ohm’s law",
+        "difficulty": "Challenge",
+        "options": [
+          "Every resistor has zero resistance at zero voltage.",
+          "0/0 is undefined; use a non-zero point or the line gradient.",
+          "Zero current proves infinite resistance for every component.",
+          "The meter always measures protons at zero voltage."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-400": {
+        "prompt": "How should an ammeter be connected?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Foundation",
+        "options": [
+          "Directly across the supply without a load.",
+          "In place of both supply terminals at once.",
+          "In series with the measured path.",
+          "Outside the circuit with no connection."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-401": {
+        "prompt": "How should a voltmeter be connected?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Foundation",
+        "options": [
+          "Only in series as the sole path.",
+          "Inside the battery’s chemical material.",
+          "To one unconnected wire only.",
+          "In parallel across the component or network."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-402": {
+        "prompt": "On our I–V graph, what is on the horizontal axis?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Foundation",
+        "options": [
+          "Potential difference in volts.",
+          "Current in amps.",
+          "Resistance in ohms.",
+          "Power in watts."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-403": {
+        "prompt": "What graph represents an ohmic resistor at constant temperature?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Foundation",
+        "options": [
+          "A horizontal line at non-zero current for all voltages.",
+          "A straight I–V line through the origin.",
+          "A circle centred on the origin.",
+          "An arbitrary curve whose slope changes continuously."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-404": {
+        "prompt": "For I vertically and V horizontally, what does the gradient equal?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Application",
+        "options": [
+          "R.",
+          "VI.",
+          "1/R.",
+          "The total number of electrons."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-405": {
+        "prompt": "Which I–V line means a lower resistance under these axis conventions?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Application",
+        "options": [
+          "The shallower line.",
+          "Any line with a higher maximum x-axis label.",
+          "Only a curved line.",
+          "The steeper line."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-406": {
+        "prompt": "Why should one I–V dataset keep the same resistor and temperature?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Application",
+        "options": [
+          "To test voltage–current proportionality for fixed physical conditions.",
+          "To make charge disappear at the same rate.",
+          "Because voltage is not allowed to change.",
+          "To avoid needing an ammeter."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-407": {
+        "prompt": "If V is plotted vertically against I horizontally, what is the ohmic gradient?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Application",
+        "options": [
+          "1/R.",
+          "R.",
+          "Q/t.",
+          "Always 1 regardless of resistor."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-408": {
+        "prompt": "A graph rises 0.20 A over a 4 V horizontal change. What resistance does it indicate?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Challenge",
+        "options": [
+          "0.05 Ω.",
+          "0.8 Ω.",
+          "20 Ω.",
+          "4.2 Ω."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-409": {
+        "prompt": "Why does our ideal voltmeter not materially change branch current?",
+        "category": "Meters and current–voltage graphs",
+        "difficulty": "Challenge",
+        "options": [
+          "It has zero resistance and short-circuits the branch.",
+          "It creates exactly the same charge it uses.",
+          "It connects to only one point.",
+          "It is modelled with infinite resistance and draws no current."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-500": {
+        "prompt": "What describes two resistors in series?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Foundation",
+        "options": [
+          "They are in one path, one after the other.",
+          "They are connected across the same two junctions.",
+          "They must have equal resistance.",
+          "Neither is connected to the supply."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-501": {
+        "prompt": "What describes two resistors in parallel?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Foundation",
+        "options": [
+          "They always carry exactly equal currents.",
+          "They connect across the same two junctions.",
+          "Their resistances must be added directly.",
+          "Only one can be connected at a time."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-502": {
+        "prompt": "What is the total resistance of 20 Ω and 40 Ω in series?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Foundation",
+        "options": [
+          "13.33 Ω.",
+          "800 Ω.",
+          "60 Ω.",
+          "2 Ω."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-503": {
+        "prompt": "Which quantity is the same across ideal parallel branches?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Foundation",
+        "options": [
+          "Current in every unequal branch.",
+          "Resistance of every branch.",
+          "Number of components in each branch.",
+          "Potential difference."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-504": {
+        "prompt": "A 6 V supply drives 20 Ω and 40 Ω in series. What is the current?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Application",
+        "options": [
+          "0.10 A.",
+          "0.30 A.",
+          "0.45 A.",
+          "10 A."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-505": {
+        "prompt": "At 6 V, how much current flows in a 40 Ω parallel branch?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Application",
+        "options": [
+          "0.30 A.",
+          "0.15 A.",
+          "0.45 A.",
+          "240 A."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-506": {
+        "prompt": "At 6 V, 20 Ω and 40 Ω are in parallel. What is supply current?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Application",
+        "options": [
+          "0.10 A.",
+          "0.15 A.",
+          "0.45 A.",
+          "0.30 A."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-507": {
+        "prompt": "What happens to equivalent resistance when an extra finite-resistance parallel branch is added?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Application",
+        "options": [
+          "It always increases.",
+          "It is unchanged for every new branch.",
+          "It becomes the sum of all branch resistances.",
+          "It decreases."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-508": {
+        "prompt": "For 20 Ω and 40 Ω in parallel, which total resistance is correct?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Challenge",
+        "options": [
+          "Approximately 13.33 Ω.",
+          "60 Ω.",
+          "30 Ω.",
+          "800 Ω."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-509": {
+        "prompt": "In a series circuit, current is 0.10 A through 20 Ω and 40 Ω. What are the voltage drops?",
+        "category": "Series and parallel circuits",
+        "difficulty": "Challenge",
+        "options": [
+          "4 V and 2 V.",
+          "2 V and 4 V.",
+          "6 V and 6 V.",
+          "0.2 V and 0.4 V."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-600": {
+        "prompt": "Which wire factor describes the material itself at a stated temperature?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Foundation",
+        "options": [
+          "Length, L.",
+          "Cross-sectional area, A.",
+          "Resistivity, ρ.",
+          "Circuit time, t."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-601": {
+        "prompt": "Keeping material, area and temperature fixed, what does doubling wire length do?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Foundation",
+        "options": [
+          "Halves resistance.",
+          "Divides resistance by four.",
+          "Leaves resistance unchanged.",
+          "Doubles resistance."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-602": {
+        "prompt": "Keeping other factors fixed, what does increasing wire cross-sectional area do?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Foundation",
+        "options": [
+          "Lowers resistance.",
+          "Raises resistance.",
+          "Uses up electrons.",
+          "Changes all electrons to positive particles."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-603": {
+        "prompt": "What is electrical power?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Foundation",
+        "options": [
+          "Charge stored per metre.",
+          "Rate of energy transfer.",
+          "Total energy regardless of time.",
+          "Voltage divided by charge."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-604": {
+        "prompt": "A 6 V component carries 0.30 A. What is its power?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Application",
+        "options": [
+          "20 W.",
+          "0.05 W.",
+          "1.8 W.",
+          "6.3 W."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-605": {
+        "prompt": "A component transfers energy at 2 W for 10 s. How much energy transfers?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Application",
+        "options": [
+          "0.2 J.",
+          "5 J.",
+          "12 J.",
+          "20 J."
+        ],
+        "answer": 3
+      },
+      "y9-electricity-circuits-606": {
+        "prompt": "For our ordinary metal models, what usually happens when temperature increases?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Application",
+        "options": [
+          "Resistance increases because lattice vibrations increase scattering.",
+          "Positive ion cores flow around the loop.",
+          "Resistance must become exactly zero.",
+          "Every material has an identical temperature response."
+        ],
+        "answer": 0
+      },
+      "y9-electricity-circuits-607": {
+        "prompt": "Keeping material, length and temperature fixed, what does doubling a round wire’s diameter do to resistance?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Application",
+        "options": [
+          "Doubles it.",
+          "Divides it by four.",
+          "Halves it.",
+          "Multiplies it by four."
+        ],
+        "answer": 1
+      },
+      "y9-electricity-circuits-608": {
+        "prompt": "At fixed transmitted power, why can higher transmission voltage reduce cable losses?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Challenge",
+        "options": [
+          "Voltage itself makes the cable’s resistivity zero.",
+          "It removes the need for a complete circuit.",
+          "It allows lower current, reducing I²R heating without needing a change in cable resistance.",
+          "It makes current and power identical quantities."
+        ],
+        "answer": 2
+      },
+      "y9-electricity-circuits-609": {
+        "prompt": "At fixed supply voltage, what happens to resistor power if resistance doubles?",
+        "category": "Wire factors, power and applications",
+        "difficulty": "Challenge",
+        "options": [
+          "Power doubles.",
+          "Power increases fourfold.",
+          "Power is unchanged.",
+          "Power halves."
+        ],
+        "answer": 3
+      }
+    },
+    "title": "Electric circuits",
+    "categories": [
+      "Current and charge flow",
+      "Potential difference and energy",
+      "Resistance and Ohm’s law",
+      "Meters and current–voltage graphs",
+      "Series and parallel circuits",
+      "Wire factors, power and applications"
+    ],
+    "signature": "3f8ca9c0cdff72b771d37ca8d2dcb37851055c2c579b7657a1f0361d62292903"
   },
   "breathing-system": {
     "course": "Year 9 Science",

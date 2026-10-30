@@ -1,7 +1,7 @@
 {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1460,
+  "questionCount": 1580,
   "banks": [
     {
       "topic": "algebra",
@@ -72,6 +72,20 @@
       "title": "Blood vessels and blood",
       "questionCount": 60,
       "signature": "27a3ccfce7909a4151d5008a00eb5276b499e03f6bf08318f43d3d40d42de0af"
+    },
+    {
+      "topic": "y9-electricity-static",
+      "course": "Year 9 Science",
+      "title": "Static electricity and charge",
+      "questionCount": 60,
+      "signature": "bc4fe1503feeace9d84c06af736a2bea843586004fa15b5bdc7272dcad3fcf92"
+    },
+    {
+      "topic": "y9-electricity-circuits",
+      "course": "Year 9 Science",
+      "title": "Electric circuits",
+      "questionCount": 60,
+      "signature": "3f8ca9c0cdff72b771d37ca8d2dcb37851055c2c579b7657a1f0361d62292903"
     },
     {
       "topic": "breathing-system",

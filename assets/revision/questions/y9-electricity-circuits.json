@@ -1,0 +1,854 @@
+{
+  "topicId": "y9-electricity-circuits",
+  "title": "Electric circuits",
+  "categories": [
+    "Current and charge flow",
+    "Potential difference and energy",
+    "Resistance and Ohm’s law",
+    "Meters and current–voltage graphs",
+    "Series and parallel circuits",
+    "Wire factors, power and applications"
+  ],
+  "questions": [
+    {
+      "id": "y9-electricity-circuits-100",
+      "category": "Current and charge flow",
+      "difficulty": "Foundation",
+      "prompt": "What does electric current measure?",
+      "options": [
+        "Rate of flow of charge.",
+        "Energy per coulomb.",
+        "Total resistance of a wire.",
+        "Number of neutrons in a cell."
+      ],
+      "answer": 0,
+      "explanation": "Current is charge transferred per time: I = Q/t. Its unit is the ampere, A."
+    },
+    {
+      "id": "y9-electricity-circuits-101",
+      "category": "Current and charge flow",
+      "difficulty": "Foundation",
+      "prompt": "What does a current of 1 A mean?",
+      "options": [
+        "1 J is stored in every electron.",
+        "1 C passes a point each second.",
+        "1 Ω passes a point each second.",
+        "1 V is used up every second."
+      ],
+      "answer": 1,
+      "explanation": "One ampere is one coulomb per second: 1 A = 1 C/s."
+    },
+    {
+      "id": "y9-electricity-circuits-102",
+      "category": "Current and charge flow",
+      "difficulty": "Foundation",
+      "prompt": "What does closing a switch do in a simple battery loop?",
+      "options": [
+        "Creates all the wire’s electrons.",
+        "Removes the cell’s positive terminal.",
+        "Completes the conducting path.",
+        "Uses up every charged particle."
+      ],
+      "answer": 2,
+      "explanation": "A complete loop permits sustained current. Mobile charges were present throughout the metal before closure."
+    },
+    {
+      "id": "y9-electricity-circuits-103",
+      "category": "Current and charge flow",
+      "difficulty": "Foundation",
+      "prompt": "In a steady series circuit, how does current before a resistor compare with current after it?",
+      "options": [
+        "The current after is always zero.",
+        "The current before is twice the current after.",
+        "The resistor creates extra charge, so current after is greater.",
+        "They are equal."
+      ],
+      "answer": 3,
+      "explanation": "Charge does not accumulate indefinitely in a steady series loop. Energy transfers, while the same charge rate continues."
+    },
+    {
+      "id": "y9-electricity-circuits-104",
+      "category": "Current and charge flow",
+      "difficulty": "Application",
+      "prompt": "6 C passes a point in 3 s. What is the current?",
+      "options": [
+        "2 A.",
+        "18 A.",
+        "0.5 A.",
+        "9 A."
+      ],
+      "answer": 0,
+      "explanation": "I = Q/t = 6 C ÷ 3 s = 2 C/s = 2 A."
+    },
+    {
+      "id": "y9-electricity-circuits-105",
+      "category": "Current and charge flow",
+      "difficulty": "Application",
+      "prompt": "A steady current is 0.5 A for 8 s. How much charge passes?",
+      "options": [
+        "16 C.",
+        "4 C.",
+        "0.0625 C.",
+        "8.5 C."
+      ],
+      "answer": 1,
+      "explanation": "Q = It = 0.5 A × 8 s = 4 C. The circuit does not use up this charge."
+    },
+    {
+      "id": "y9-electricity-circuits-106",
+      "category": "Current and charge flow",
+      "difficulty": "Application",
+      "prompt": "Which direction is conventional current in the external circuit?",
+      "options": [
+        "From negative towards positive by definition.",
+        "Only from Earth to a lamp.",
+        "From positive towards negative.",
+        "Only towards the cell’s centre from both sides."
+      ],
+      "answer": 2,
+      "explanation": "Conventional current follows positive-charge flow. Metal electrons drift in the opposite direction."
+    },
+    {
+      "id": "y9-electricity-circuits-107",
+      "category": "Current and charge flow",
+      "difficulty": "Application",
+      "prompt": "Which carriers drift through ordinary metal wires?",
+      "options": [
+        "Positive ion cores flowing freely around the loop.",
+        "Neutrons only.",
+        "Whole battery cells.",
+        "Electrons."
+      ],
+      "answer": 3,
+      "explanation": "Mobile electrons carry the net drift current; positive ion cores remain in the lattice."
+    },
+    {
+      "id": "y9-electricity-circuits-108",
+      "category": "Current and charge flow",
+      "difficulty": "Challenge",
+      "prompt": "At a junction, 0.7 A arrives and one branch takes 0.2 A. What current takes the other branch?",
+      "options": [
+        "0.5 A.",
+        "0.9 A.",
+        "0.14 A.",
+        "3.5 A."
+      ],
+      "answer": 0,
+      "explanation": "In a steady junction, entering current equals leaving current. The remaining branch current is 0.7 − 0.2 = 0.5 A."
+    },
+    {
+      "id": "y9-electricity-circuits-109",
+      "category": "Current and charge flow",
+      "difficulty": "Challenge",
+      "prompt": "Why can a lamp respond quickly when electrons drift slowly?",
+      "options": [
+        "One electron must complete the whole loop before the lamp responds.",
+        "An electrical signal propagates through a circuit with charges already present.",
+        "The lamp creates electrons from light first.",
+        "Electrons drift at the speed of light in every metal."
+      ],
+      "answer": 1,
+      "explanation": "Individual drift and electrical signal propagation are different. The current involves mobile charges already present around the circuit."
+    },
+    {
+      "id": "y9-electricity-circuits-200",
+      "category": "Potential difference and energy",
+      "difficulty": "Foundation",
+      "prompt": "What is potential difference?",
+      "options": [
+        "Charge transferred per second.",
+        "Resistance multiplied by time.",
+        "Energy transferred per unit charge between two points.",
+        "The number of electrons stored in a wire."
+      ],
+      "answer": 2,
+      "explanation": "V = E/Q. Voltage compares two points and is measured in joules per coulomb, or volts."
+    },
+    {
+      "id": "y9-electricity-circuits-201",
+      "category": "Potential difference and energy",
+      "difficulty": "Foundation",
+      "prompt": "What does 1 V mean?",
+      "options": [
+        "1 C per second.",
+        "1 Ω per second.",
+        "1 W per metre.",
+        "1 J per coulomb."
+      ],
+      "answer": 3,
+      "explanation": "The volt is a joule per coulomb: 1 V = 1 J/C. It is not itself a flow rate."
+    },
+    {
+      "id": "y9-electricity-circuits-202",
+      "category": "Potential difference and energy",
+      "difficulty": "Foundation",
+      "prompt": "In the pizza model, what does the shop represent?",
+      "options": [
+        "The cell supplying energy.",
+        "A resistor using up charge.",
+        "An ammeter measuring food.",
+        "The Earth removing all couriers."
+      ],
+      "answer": 0,
+      "explanation": "The shop supplies pizzas as the cell supplies energy per charge. Couriers represent charge packets."
+    },
+    {
+      "id": "y9-electricity-circuits-203",
+      "category": "Potential difference and energy",
+      "difficulty": "Foundation",
+      "prompt": "In the pizza model, what happens to couriers after the party?",
+      "options": [
+        "They are destroyed as the lamp uses charge.",
+        "They return to the shop without the delivered energy badge.",
+        "They become new cell nuclei.",
+        "They remain permanently at the party."
+      ],
+      "answer": 1,
+      "explanation": "Energy transfers at the component; charge continues around a complete loop."
+    },
+    {
+      "id": "y9-electricity-circuits-204",
+      "category": "Potential difference and energy",
+      "difficulty": "Application",
+      "prompt": "A component transfers 12 J when 2 C passes. What is its potential difference?",
+      "options": [
+        "24 V.",
+        "0.167 V.",
+        "6 V.",
+        "14 V."
+      ],
+      "answer": 2,
+      "explanation": "V = E/Q = 12 J ÷ 2 C = 6 V."
+    },
+    {
+      "id": "y9-electricity-circuits-205",
+      "category": "Potential difference and energy",
+      "difficulty": "Application",
+      "prompt": "Across a 3 V component, 4 C passes. How much energy transfers?",
+      "options": [
+        "0.75 J.",
+        "7 J.",
+        "1.33 J.",
+        "12 J."
+      ],
+      "answer": 3,
+      "explanation": "E = VQ = 3 V × 4 C = 12 J."
+    },
+    {
+      "id": "y9-electricity-circuits-206",
+      "category": "Potential difference and energy",
+      "difficulty": "Application",
+      "prompt": "Why is voltage not the same thing as current?",
+      "options": [
+        "Voltage is energy per charge; current is charge per time.",
+        "Both mean charge per time in different colours.",
+        "Voltage counts only protons and current only neutrons.",
+        "Voltage is always zero when current is non-zero."
+      ],
+      "answer": 0,
+      "explanation": "Potential difference and charge-flow rate are distinct physical quantities with different units."
+    },
+    {
+      "id": "y9-electricity-circuits-207",
+      "category": "Potential difference and energy",
+      "difficulty": "Application",
+      "prompt": "In a two-resistor series network, the supply is 6 V and one resistor has 2 V. What is the other potential difference?",
+      "options": [
+        "8 V.",
+        "4 V.",
+        "12 V.",
+        "3 V."
+      ],
+      "answer": 1,
+      "explanation": "Series potential differences add to the supply voltage, neglecting wire and internal resistance: 6 − 2 = 4 V."
+    },
+    {
+      "id": "y9-electricity-circuits-208",
+      "category": "Potential difference and energy",
+      "difficulty": "Challenge",
+      "prompt": "At fixed 3 Ω resistance, the supply changes from 3 V to 6 V. How do current and energy per coulomb change?",
+      "options": [
+        "Only energy per coulomb doubles; current is unchanged.",
+        "Current halves while energy per coulomb doubles.",
+        "Both double.",
+        "Both halve."
+      ],
+      "answer": 2,
+      "explanation": "I = V/R doubles when V doubles at fixed R. Energy per coulomb is V and doubles too."
+    },
+    {
+      "id": "y9-electricity-circuits-209",
+      "category": "Potential difference and energy",
+      "difficulty": "Challenge",
+      "prompt": "What is an important limit of the pizza model?",
+      "options": [
+        "A cell cannot supply energy.",
+        "Real lamps must consume charge.",
+        "There is no complete path in any real circuit.",
+        "Real circuit energy transfer involves electromagnetic fields, not literal parcels carried on electrons."
+      ],
+      "answer": 3,
+      "explanation": "The analogy separates charge circulation from energy transfer. It does not describe the full electromagnetic mechanism."
+    },
+    {
+      "id": "y9-electricity-circuits-300",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Foundation",
+      "prompt": "What unit measures resistance?",
+      "options": [
+        "Ohm, Ω.",
+        "Ampere, A.",
+        "Coulomb, C.",
+        "Watt, W."
+      ],
+      "answer": 0,
+      "explanation": "Resistance is measured in ohms. A, C and W measure current, charge and power respectively."
+    },
+    {
+      "id": "y9-electricity-circuits-301",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Foundation",
+      "prompt": "Which expression gives current from voltage and resistance?",
+      "options": [
+        "I = VR.",
+        "I = V/R.",
+        "I = R/V.",
+        "I = V + R."
+      ],
+      "answer": 1,
+      "explanation": "Rearrange V = IR by dividing both sides by R. Use volts and ohms to obtain amps."
+    },
+    {
+      "id": "y9-electricity-circuits-302",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Foundation",
+      "prompt": "For an ohmic resistor, when does current stay proportional to voltage?",
+      "options": [
+        "Only when its charge is used up.",
+        "Whenever temperature changes without limit.",
+        "When temperature and other physical conditions stay constant.",
+        "Only when it is an insulator with zero current."
+      ],
+      "answer": 2,
+      "explanation": "Ohm’s law describes a constant-resistance relationship under unchanged physical conditions."
+    },
+    {
+      "id": "y9-electricity-circuits-303",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Foundation",
+      "prompt": "At fixed voltage, what happens when resistance increases?",
+      "options": [
+        "Current always increases.",
+        "Current stays identical in every circuit.",
+        "Charge begins to be destroyed.",
+        "Current decreases."
+      ],
+      "answer": 3,
+      "explanation": "I = V/R. Increasing the denominator at fixed V reduces the steady current."
+    },
+    {
+      "id": "y9-electricity-circuits-304",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Application",
+      "prompt": "A 20 Ω resistor has 6 V across it. What current flows?",
+      "options": [
+        "0.30 A.",
+        "120 A.",
+        "3.33 A.",
+        "26 A."
+      ],
+      "answer": 0,
+      "explanation": "I = V/R = 6/20 = 0.30 A."
+    },
+    {
+      "id": "y9-electricity-circuits-305",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Application",
+      "prompt": "A resistor has 4 V across it and 0.20 A through it. What is its resistance?",
+      "options": [
+        "0.8 Ω.",
+        "20 Ω.",
+        "0.05 Ω.",
+        "4.2 Ω."
+      ],
+      "answer": 1,
+      "explanation": "R = V/I = 4/0.20 = 20 Ω. Divide by 0.20, rather than multiply."
+    },
+    {
+      "id": "y9-electricity-circuits-306",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Application",
+      "prompt": "At fixed resistance, what does doubling voltage do to current?",
+      "options": [
+        "Halves it.",
+        "Leaves it unchanged.",
+        "Doubles it.",
+        "Makes it four times as large."
+      ],
+      "answer": 2,
+      "explanation": "Direct proportion means the same multiplicative change in V and I when R is constant."
+    },
+    {
+      "id": "y9-electricity-circuits-307",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Application",
+      "prompt": "Why can an incandescent filament lamp have a curved I–V graph?",
+      "options": [
+        "It uses up more electrons at higher voltage.",
+        "It has no charge carriers.",
+        "Every conductor must have a straight I–V graph.",
+        "Its temperature and resistance rise as current heats it."
+      ],
+      "answer": 3,
+      "explanation": "Heating changes the filament’s resistance, so it is not a constant-temperature ohmic resistor across its full range."
+    },
+    {
+      "id": "y9-electricity-circuits-308",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Challenge",
+      "prompt": "Why does R = V/I at one operating point not prove Ohm’s law?",
+      "options": [
+        "Many components have a ratio at one point without a constant ratio across voltages.",
+        "The ratio cannot ever be calculated.",
+        "Every component has identical resistance.",
+        "Ohm’s law requires current to decrease when voltage increases."
+      ],
+      "answer": 0,
+      "explanation": "An ohmic test checks proportionality over several readings with temperature and conditions controlled."
+    },
+    {
+      "id": "y9-electricity-circuits-309",
+      "category": "Resistance and Ohm’s law",
+      "difficulty": "Challenge",
+      "prompt": "Why should R not be obtained from 0 V divided by 0 A?",
+      "options": [
+        "Every resistor has zero resistance at zero voltage.",
+        "0/0 is undefined; use a non-zero point or the line gradient.",
+        "Zero current proves infinite resistance for every component.",
+        "The meter always measures protons at zero voltage."
+      ],
+      "answer": 1,
+      "explanation": "The ratio at the origin is indeterminate. A constant-resistance line’s non-zero points or gradient provide the resistance."
+    },
+    {
+      "id": "y9-electricity-circuits-400",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Foundation",
+      "prompt": "How should an ammeter be connected?",
+      "options": [
+        "Directly across the supply without a load.",
+        "In place of both supply terminals at once.",
+        "In series with the measured path.",
+        "Outside the circuit with no connection."
+      ],
+      "answer": 2,
+      "explanation": "An ammeter measures current through a path. Its very low resistance makes a direct supply connection inappropriate."
+    },
+    {
+      "id": "y9-electricity-circuits-401",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Foundation",
+      "prompt": "How should a voltmeter be connected?",
+      "options": [
+        "Only in series as the sole path.",
+        "Inside the battery’s chemical material.",
+        "To one unconnected wire only.",
+        "In parallel across the component or network."
+      ],
+      "answer": 3,
+      "explanation": "A voltmeter compares two points across the measured component and has high resistance."
+    },
+    {
+      "id": "y9-electricity-circuits-402",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Foundation",
+      "prompt": "On our I–V graph, what is on the horizontal axis?",
+      "options": [
+        "Potential difference in volts.",
+        "Current in amps.",
+        "Resistance in ohms.",
+        "Power in watts."
+      ],
+      "answer": 0,
+      "explanation": "Our graph plots I vertically against V horizontally. Axis orientation matters when interpreting gradient."
+    },
+    {
+      "id": "y9-electricity-circuits-403",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Foundation",
+      "prompt": "What graph represents an ohmic resistor at constant temperature?",
+      "options": [
+        "A horizontal line at non-zero current for all voltages.",
+        "A straight I–V line through the origin.",
+        "A circle centred on the origin.",
+        "An arbitrary curve whose slope changes continuously."
+      ],
+      "answer": 1,
+      "explanation": "Direct proportion means a straight line through (0,0) for I versus V."
+    },
+    {
+      "id": "y9-electricity-circuits-404",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Application",
+      "prompt": "For I vertically and V horizontally, what does the gradient equal?",
+      "options": [
+        "R.",
+        "VI.",
+        "1/R.",
+        "The total number of electrons."
+      ],
+      "answer": 2,
+      "explanation": "Gradient is ΔI/ΔV. Since I = V/R, it equals reciprocal resistance, in A/V."
+    },
+    {
+      "id": "y9-electricity-circuits-405",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Application",
+      "prompt": "Which I–V line means a lower resistance under these axis conventions?",
+      "options": [
+        "The shallower line.",
+        "Any line with a higher maximum x-axis label.",
+        "Only a curved line.",
+        "The steeper line."
+      ],
+      "answer": 3,
+      "explanation": "At a given voltage, lower resistance permits greater current, so I/V and the graph gradient are larger."
+    },
+    {
+      "id": "y9-electricity-circuits-406",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Application",
+      "prompt": "Why should one I–V dataset keep the same resistor and temperature?",
+      "options": [
+        "To test voltage–current proportionality for fixed physical conditions.",
+        "To make charge disappear at the same rate.",
+        "Because voltage is not allowed to change.",
+        "To avoid needing an ammeter."
+      ],
+      "answer": 0,
+      "explanation": "Changing resistor or temperature changes resistance and creates a different relationship, not another point on the same controlled test."
+    },
+    {
+      "id": "y9-electricity-circuits-407",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Application",
+      "prompt": "If V is plotted vertically against I horizontally, what is the ohmic gradient?",
+      "options": [
+        "1/R.",
+        "R.",
+        "Q/t.",
+        "Always 1 regardless of resistor."
+      ],
+      "answer": 1,
+      "explanation": "With V = RI, the gradient ΔV/ΔI equals resistance. Always read the axis labels before interpreting slope."
+    },
+    {
+      "id": "y9-electricity-circuits-408",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Challenge",
+      "prompt": "A graph rises 0.20 A over a 4 V horizontal change. What resistance does it indicate?",
+      "options": [
+        "0.05 Ω.",
+        "0.8 Ω.",
+        "20 Ω.",
+        "4.2 Ω."
+      ],
+      "answer": 2,
+      "explanation": "The I–V gradient is 0.20/4 = 0.05 A/V = 1/R, so R = 1/0.05 = 20 Ω."
+    },
+    {
+      "id": "y9-electricity-circuits-409",
+      "category": "Meters and current–voltage graphs",
+      "difficulty": "Challenge",
+      "prompt": "Why does our ideal voltmeter not materially change branch current?",
+      "options": [
+        "It has zero resistance and short-circuits the branch.",
+        "It creates exactly the same charge it uses.",
+        "It connects to only one point.",
+        "It is modelled with infinite resistance and draws no current."
+      ],
+      "answer": 3,
+      "explanation": "An ideal voltmeter has infinite resistance. Real voltmeters have high, finite resistance, which can affect sensitive circuits."
+    },
+    {
+      "id": "y9-electricity-circuits-500",
+      "category": "Series and parallel circuits",
+      "difficulty": "Foundation",
+      "prompt": "What describes two resistors in series?",
+      "options": [
+        "They are in one path, one after the other.",
+        "They are connected across the same two junctions.",
+        "They must have equal resistance.",
+        "Neither is connected to the supply."
+      ],
+      "answer": 0,
+      "explanation": "Series means a single sequential path, so steady current is the same through both components."
+    },
+    {
+      "id": "y9-electricity-circuits-501",
+      "category": "Series and parallel circuits",
+      "difficulty": "Foundation",
+      "prompt": "What describes two resistors in parallel?",
+      "options": [
+        "They always carry exactly equal currents.",
+        "They connect across the same two junctions.",
+        "Their resistances must be added directly.",
+        "Only one can be connected at a time."
+      ],
+      "answer": 1,
+      "explanation": "Parallel branches share the same potential difference; their currents depend on their resistances."
+    },
+    {
+      "id": "y9-electricity-circuits-502",
+      "category": "Series and parallel circuits",
+      "difficulty": "Foundation",
+      "prompt": "What is the total resistance of 20 Ω and 40 Ω in series?",
+      "options": [
+        "13.33 Ω.",
+        "800 Ω.",
+        "60 Ω.",
+        "2 Ω."
+      ],
+      "answer": 2,
+      "explanation": "For series resistors, R_total = R₁ + R₂ = 20 + 40 = 60 Ω."
+    },
+    {
+      "id": "y9-electricity-circuits-503",
+      "category": "Series and parallel circuits",
+      "difficulty": "Foundation",
+      "prompt": "Which quantity is the same across ideal parallel branches?",
+      "options": [
+        "Current in every unequal branch.",
+        "Resistance of every branch.",
+        "Number of components in each branch.",
+        "Potential difference."
+      ],
+      "answer": 3,
+      "explanation": "Each branch connects across the same pair of junctions and therefore has the same voltage."
+    },
+    {
+      "id": "y9-electricity-circuits-504",
+      "category": "Series and parallel circuits",
+      "difficulty": "Application",
+      "prompt": "A 6 V supply drives 20 Ω and 40 Ω in series. What is the current?",
+      "options": [
+        "0.10 A.",
+        "0.30 A.",
+        "0.45 A.",
+        "10 A."
+      ],
+      "answer": 0,
+      "explanation": "The total resistance is 60 Ω, so I = 6/60 = 0.10 A through both resistors."
+    },
+    {
+      "id": "y9-electricity-circuits-505",
+      "category": "Series and parallel circuits",
+      "difficulty": "Application",
+      "prompt": "At 6 V, how much current flows in a 40 Ω parallel branch?",
+      "options": [
+        "0.30 A.",
+        "0.15 A.",
+        "0.45 A.",
+        "240 A."
+      ],
+      "answer": 1,
+      "explanation": "That branch has the full 6 V, so I₂ = 6/40 = 0.15 A."
+    },
+    {
+      "id": "y9-electricity-circuits-506",
+      "category": "Series and parallel circuits",
+      "difficulty": "Application",
+      "prompt": "At 6 V, 20 Ω and 40 Ω are in parallel. What is supply current?",
+      "options": [
+        "0.10 A.",
+        "0.15 A.",
+        "0.45 A.",
+        "0.30 A."
+      ],
+      "answer": 2,
+      "explanation": "Branch currents are 6/20 = 0.30 A and 6/40 = 0.15 A. Their sum is 0.45 A."
+    },
+    {
+      "id": "y9-electricity-circuits-507",
+      "category": "Series and parallel circuits",
+      "difficulty": "Application",
+      "prompt": "What happens to equivalent resistance when an extra finite-resistance parallel branch is added?",
+      "options": [
+        "It always increases.",
+        "It is unchanged for every new branch.",
+        "It becomes the sum of all branch resistances.",
+        "It decreases."
+      ],
+      "answer": 3,
+      "explanation": "The extra branch provides another conducting path. For positive branch resistances, equivalent resistance is lower than before."
+    },
+    {
+      "id": "y9-electricity-circuits-508",
+      "category": "Series and parallel circuits",
+      "difficulty": "Challenge",
+      "prompt": "For 20 Ω and 40 Ω in parallel, which total resistance is correct?",
+      "options": [
+        "Approximately 13.33 Ω.",
+        "60 Ω.",
+        "30 Ω.",
+        "800 Ω."
+      ],
+      "answer": 0,
+      "explanation": "R_total = R₁R₂/(R₁ + R₂) = 800/60 ≈ 13.33 Ω, less than either branch resistance."
+    },
+    {
+      "id": "y9-electricity-circuits-509",
+      "category": "Series and parallel circuits",
+      "difficulty": "Challenge",
+      "prompt": "In a series circuit, current is 0.10 A through 20 Ω and 40 Ω. What are the voltage drops?",
+      "options": [
+        "4 V and 2 V.",
+        "2 V and 4 V.",
+        "6 V and 6 V.",
+        "0.2 V and 0.4 V."
+      ],
+      "answer": 1,
+      "explanation": "V₁ = IR₁ = 0.10 × 20 = 2 V; V₂ = 0.10 × 40 = 4 V. The larger resistance takes the larger share of voltage."
+    },
+    {
+      "id": "y9-electricity-circuits-600",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Foundation",
+      "prompt": "Which wire factor describes the material itself at a stated temperature?",
+      "options": [
+        "Length, L.",
+        "Cross-sectional area, A.",
+        "Resistivity, ρ.",
+        "Circuit time, t."
+      ],
+      "answer": 2,
+      "explanation": "Resistivity is a material property in Ω m. Resistance also depends on geometry: R = ρL/A."
+    },
+    {
+      "id": "y9-electricity-circuits-601",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Foundation",
+      "prompt": "Keeping material, area and temperature fixed, what does doubling wire length do?",
+      "options": [
+        "Halves resistance.",
+        "Divides resistance by four.",
+        "Leaves resistance unchanged.",
+        "Doubles resistance."
+      ],
+      "answer": 3,
+      "explanation": "R is directly proportional to L for a uniform wire at fixed resistivity and area."
+    },
+    {
+      "id": "y9-electricity-circuits-602",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Foundation",
+      "prompt": "Keeping other factors fixed, what does increasing wire cross-sectional area do?",
+      "options": [
+        "Lowers resistance.",
+        "Raises resistance.",
+        "Uses up electrons.",
+        "Changes all electrons to positive particles."
+      ],
+      "answer": 0,
+      "explanation": "R = ρL/A. A larger conducting area provides more parallel paths and lowers resistance."
+    },
+    {
+      "id": "y9-electricity-circuits-603",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Foundation",
+      "prompt": "What is electrical power?",
+      "options": [
+        "Charge stored per metre.",
+        "Rate of energy transfer.",
+        "Total energy regardless of time.",
+        "Voltage divided by charge."
+      ],
+      "answer": 1,
+      "explanation": "P = E/t, measured in watts, where 1 W = 1 J/s. For a circuit component, P = VI."
+    },
+    {
+      "id": "y9-electricity-circuits-604",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Application",
+      "prompt": "A 6 V component carries 0.30 A. What is its power?",
+      "options": [
+        "20 W.",
+        "0.05 W.",
+        "1.8 W.",
+        "6.3 W."
+      ],
+      "answer": 2,
+      "explanation": "P = VI = 6 × 0.30 = 1.8 W."
+    },
+    {
+      "id": "y9-electricity-circuits-605",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Application",
+      "prompt": "A component transfers energy at 2 W for 10 s. How much energy transfers?",
+      "options": [
+        "0.2 J.",
+        "5 J.",
+        "12 J.",
+        "20 J."
+      ],
+      "answer": 3,
+      "explanation": "E = Pt = 2 W × 10 s = 20 J."
+    },
+    {
+      "id": "y9-electricity-circuits-606",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Application",
+      "prompt": "For our ordinary metal models, what usually happens when temperature increases?",
+      "options": [
+        "Resistance increases because lattice vibrations increase scattering.",
+        "Positive ion cores flow around the loop.",
+        "Resistance must become exactly zero.",
+        "Every material has an identical temperature response."
+      ],
+      "answer": 0,
+      "explanation": "These approximate metal models have positive temperature coefficients. Other materials and temperature ranges can behave differently."
+    },
+    {
+      "id": "y9-electricity-circuits-607",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Application",
+      "prompt": "Keeping material, length and temperature fixed, what does doubling a round wire’s diameter do to resistance?",
+      "options": [
+        "Doubles it.",
+        "Divides it by four.",
+        "Halves it.",
+        "Multiplies it by four."
+      ],
+      "answer": 1,
+      "explanation": "Area A = π(d/2)² grows by a factor of four, so R = ρL/A falls to one quarter."
+    },
+    {
+      "id": "y9-electricity-circuits-608",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Challenge",
+      "prompt": "At fixed transmitted power, why can higher transmission voltage reduce cable losses?",
+      "options": [
+        "Voltage itself makes the cable’s resistivity zero.",
+        "It removes the need for a complete circuit.",
+        "It allows lower current, reducing I²R heating without needing a change in cable resistance.",
+        "It makes current and power identical quantities."
+      ],
+      "answer": 2,
+      "explanation": "P = VI, so higher V permits lower I at the same P. Cable heating depends on I²R; the resistance need not decrease."
+    },
+    {
+      "id": "y9-electricity-circuits-609",
+      "category": "Wire factors, power and applications",
+      "difficulty": "Challenge",
+      "prompt": "At fixed supply voltage, what happens to resistor power if resistance doubles?",
+      "options": [
+        "Power doubles.",
+        "Power increases fourfold.",
+        "Power is unchanged.",
+        "Power halves."
+      ],
+      "answer": 3,
+      "explanation": "At fixed V, P = V²/R, so doubling R halves total power. The statement P = I²R must be used with the actual changed current, not a falsely fixed I."
+    }
+  ]
+}
