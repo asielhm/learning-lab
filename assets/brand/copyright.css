@@ -1,0 +1,2 @@
+/* Shared author notice; scoped so each activity keeps its own footer design. */
+footer.ll-has-copyright{flex-wrap:wrap}footer .ll-copyright{display:block;flex:0 0 100%;grid-column:1/-1;width:100%;box-sizing:border-box;margin:12px 0 0;padding:10px 0 0;border-top:1px solid currentColor;font:12px/1.6 system-ui,sans-serif;letter-spacing:0;text-align:center;opacity:.85;overflow-wrap:anywhere}.ll-copyright-footer{max-width:1250px;box-sizing:border-box;margin:0 auto;padding:20px 32px;color:#53665e}.ll-copyright-footer .ll-copyright{margin:0}

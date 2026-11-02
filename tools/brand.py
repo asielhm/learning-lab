@@ -30,12 +30,43 @@ def brand_html(text,prefix='',dashboard=False):
   text=re.sub(r'<title>(.*?)</title>',lambda m:'<title>'+m[1].replace('Learning Lab by Asiel','Learning Lab').replace('Learning Lab','Learning Lab by Asiel')+'</title>',text,flags=re.S)
  return text
 
+def copyright_html(text,relative_path,prefix='',dashboard=False):
+ # The Y9 heart viewer retains its source-model attribution and existing footer.
+ if relative_path=='activities/y9/science/circulatory-system/index.html':return text
+ embedded=relative_path.startswith('activities/y12/maths/gdc-trainer/')
+ css_name='copyright-embedded.css' if embedded else 'copyright.css'
+ if dashboard:
+  text=re.sub(r'<style id="learning-lab-copyright">.*?</style>','',text,flags=re.S)
+  text=text.replace('</head>','<style id="learning-lab-copyright">'+(ROOT/'assets/brand'/css_name).read_text()+'</style></head>')
+ elif not re.search(r'<link\b[^>]*assets/brand/'+re.escape(css_name),text):
+  text=text.replace('</head>',f'<link rel="stylesheet" href="{prefix}assets/brand/{css_name}?v=1"></head>')
+ if embedded:return text
+ # Only remove this platform-wide link; keep source/licence files and other credits.
+ text=re.sub(r'<a\b[^>]*>\s*Heart model: BodyParts3D.*?</a>','',text,flags=re.S)
+ spanish=bool(re.search(r'<html[^>]*lang=[\"\']es',text))
+ notice='© 2026 Asiel Hernandez Martínez. '+('Todos los derechos reservados.' if spanish else 'All rights reserved.')
+ markup=f'<small class="ll-copyright">{notice}</small>'
+ if 'class="ll-copyright"' in text:
+  return re.sub(r'<small class="ll-copyright">.*?</small>',markup,text,flags=re.S)
+ footers=list(re.finditer(r'<footer\b[^>]*>.*?</footer>',text,flags=re.S))
+ if footers:
+  last=footers[-1];footer=last[0];opening=re.match(r'<footer\b[^>]*>',footer)[0]
+  c=re.search(r'class=[\"\']([^\"\']*)[\"\']',opening)
+  if c:
+   if 'll-has-copyright' not in c[1].split():new_opening=opening[:c.start(1)]+c[1]+' ll-has-copyright'+opening[c.end(1):]
+   else:new_opening=opening
+  else:new_opening=opening[:-1]+' class="ll-has-copyright">'
+  footer=new_opening+footer[len(opening):-len('</footer>')]+markup+'</footer>'
+  text=text[:last.start()]+footer+text[last.end():]
+ else:text=text.replace('</body>','<footer class="ll-copyright-footer ll-has-copyright">'+markup+'</footer></body>')
+ return text
+
 def apply_branding():
  paths=[*ROOT.glob('*.html'),*(ROOT/'activities').rglob('*.html'),*(ROOT/'teacher').rglob('*.html')];count=0
  for path in paths:
-  prefix='../'*len(path.relative_to(ROOT).parts[:-1]);old=path.read_text();new=brand_html(old,prefix)
+  prefix='../'*len(path.relative_to(ROOT).parts[:-1]);old=path.read_text();new=copyright_html(brand_html(old,prefix),str(path.relative_to(ROOT)),prefix)
   if new!=old:path.write_text(new);count+=1
- dashboard=ROOT/'google-apps-script/Dashboard.html';old=dashboard.read_text();new=brand_html(old,dashboard=True)
+ dashboard=ROOT/'google-apps-script/Dashboard.html';old=dashboard.read_text();new=copyright_html(brand_html(old,dashboard=True),'google-apps-script/Dashboard.html',dashboard=True)
  if new!=old:dashboard.write_text(new);count+=1
  return count
 if __name__=='__main__':print(f'Branded {apply_branding()} pages with Learning Lab by Asiel.')

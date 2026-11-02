@@ -13,6 +13,8 @@ a.ll-brand-lockup{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;
 
 /* Keep the original invitation beneath the platform name and author signature. */
 .ll-brand-lockup .ll-brand-tagline{display:block;font-size:9px;font-weight:600;letter-spacing:1px;line-height:1.35;color:#53665e;margin-top:2px}footer .ll-brand-lockup .ll-brand-tagline{font-size:8px;letter-spacing:.65px}@media(max-width:740px){.ll-brand-lockup .ll-brand-tagline{font-size:8px;letter-spacing:.75px}}
+</style><style id="learning-lab-copyright">/* Shared author notice; scoped so each activity keeps its own footer design. */
+footer.ll-has-copyright{flex-wrap:wrap}footer .ll-copyright{display:block;flex:0 0 100%;grid-column:1/-1;width:100%;box-sizing:border-box;margin:12px 0 0;padding:10px 0 0;border-top:1px solid currentColor;font:12px/1.6 system-ui,sans-serif;letter-spacing:0;text-align:center;opacity:.85;overflow-wrap:anywhere}.ll-copyright-footer{max-width:1250px;box-sizing:border-box;margin:0 auto;padding:20px 32px;color:#53665e}.ll-copyright-footer .ll-copyright{margin:0}
 </style></head><body>
 <header><a class="brand-lockup ll-brand-lockup" href="https://asielhm.github.io/learning-lab/" aria-label="Learning Lab by Asiel home"><img src="https://asielhm.github.io/learning-lab/assets/brand/learning-lab-logo.png" width="44" height="44" alt=""><span class="ll-brand-name"><span class="ll-brand-title">Learning <span>Lab</span></span><span class="ll-brand-by">by <b>Asiel</b></span><span class="ll-brand-tagline">A PLACE FOR CURIOUS MINDS</span></span></a><span class="eyebrow">Teacher results</span></header>
 <main>
@@ -138,4 +140,4 @@ function load() {
   $('previous').disabled=offset===0;$('next').disabled=offset+50>=total;$('page-label').textContent=total?`${offset+1}–${Math.min(offset+50,total)} of ${total}`:'0 records';
  }).withFailureHandler(error=>{if(token===requestToken)failure(error);}).getTeacherResults(token,{search:$('search').value.trim(),teacher:selections.teacher,classroom:selections.classroom,course:selections.course,topic:selections.topic,view:$('view').value,offset});
 }
-</script></body></html>
+</script><footer class="ll-copyright-footer ll-has-copyright"><small class="ll-copyright">© 2026 Asiel Hernandez Martínez. All rights reserved.</small></footer></body></html>
