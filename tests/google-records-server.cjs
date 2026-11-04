@@ -28,7 +28,7 @@ const context=vm.createContext({console:{log:s=>logs.push(s),warn:()=>{}},
 });
 for(const file of ['QuestionBank.gs','Code.gs'])vm.runInContext(fs.readFileSync(path.join(root,'google-apps-script',file),'utf8'),context,{filename:file});
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/records/banks.json'),'utf8'));
-assert.equal(manifest.banks.length,24);assert.equal(manifest.questionCount,1580);
+assert.equal(manifest.banks.length,25);assert.equal(manifest.questionCount,1640);
 assert.equal(JSON.stringify(context.RECORDING_MANIFEST_),JSON.stringify(manifest));
 for(const metadata of manifest.banks){
  const filename=metadata.topic==='circulatory-system'?'circulatory':metadata.topic==='breathing-system'?'breathing':metadata.topic;
@@ -163,7 +163,7 @@ for(const metadata of manifest.banks.filter(b=>!originalTopics.includes(b.topic)
 }
 const oneWrong={...payload(undefined,1,false,'Single Question Test','y10-physics-kinematics'),classroom:'10P',totalQuestions:1};context.saveAnswer_(oneWrong);
 const physicsSummary=context.getTeacherResults(token,{topic:'y10-physics-kinematics',classroom:['10P']});assert.equal(physicsSummary.total,2);assert.equal(physicsSummary.accuracy,67);assert.equal(physicsSummary.topicSummary[0].accuracy,67,'Aggregate accuracy is weighted by answer count');
-result=context.getTeacherResults(token,{});assert.equal(result.bankCount,24);assert.equal(result.questionCount,1580);assert.equal(result.courses.length,4);assert.equal(result.topics.length,24);assert(result.classes.includes('7N')&&result.classes.includes('10C')&&result.classes.includes('10P'));
+result=context.getTeacherResults(token,{});assert.equal(result.bankCount,25);assert.equal(result.questionCount,1640);assert.equal(result.courses.length,4);assert.equal(result.topics.length,25);assert(result.classes.includes('7N')&&result.classes.includes('10C')&&result.classes.includes('10P'));
 assert.equal(result.topicSummary.reduce((sum,group)=>sum+group.tests,0),result.total,'Overview includes the whole filtered selection, not just 50 rows');
 assert(result.topics.some(topic=>topic.value==='y10-physics-kinematics'&&topic.label==='Motion and projectiles'));
 const publicNonce=crypto.randomUUID(),publicCapabilities=context.doGet({parameter:{action:'capabilities',nonce:publicNonce}}).html;
@@ -171,7 +171,7 @@ assert(publicCapabilities.includes('learning-lab-recording-capabilities'));asser
 // Game recording has its own authenticated views and never changes test results.
 const testCount=context.getTeacherResults(token,{}).total;
 const gameManifest=JSON.parse(fs.readFileSync(path.join(root,'assets/records/games.json')));
-assert.equal(gameManifest.games.length,42);assert.equal(context.GAME_MANIFEST_.games.length,42);
+assert.equal(gameManifest.games.length,43);assert.equal(context.GAME_MANIFEST_.games.length,43);
 function gamePayload(gameId,ids,number=1,answer=null){const game=context.GAME_CATALOG_[gameId],id=crypto.randomUUID();return {kind:'game',version:1,mode:'game',retry:false,eventId:id+'-'+number,sessionId:id,gameId,signature:game.signature,studentName:'Game Student',classroom:'9G',teacherName:'Ms Rivera',startedAt:'2026-10-30T12:00:00Z',questionIds:ids,questionNumber:number,questionId:ids[number-1],attempts:1,assisted:false,revealed:false,firstAnswer:answer,answer};}
 const pic=context.GAME_CATALOG_['gas-picture'],picIds=Object.keys(pic.rounds).slice(0,2),picQ=pic.rounds[picIds[0]];
 const gp=gamePayload('gas-picture',picIds,1,{law:picQ.law,quantities:picQ.quantities});
@@ -197,12 +197,21 @@ const reveal={...gamePayload('gas-word',[wid]),revealed:true,attempts:0};context
 assert(context.getTeacherResults(token,{view:'gameAnswers'}).rows.some(r=>r[19]===true&&r[20]===0));
 // Repair a completed game after its summary was lost, without duplicating any rows.
 sheets.get('GameSessions').rows.pop();context.setupLearningLab();assert.equal(context.getTeacherResults(token,{view:'games'}).total,4);
+const organicGame=context.GAME_CATALOG_['organic-molecule-mission'];
+const moleculeId=Object.keys(organicGame.rounds).find(id=>organicGame.rounds[id].kind==='molecule'),moleculeRound=organicGame.rounds[moleculeId];
+const organicPayload=gamePayload('organic-molecule-mission',[moleculeId],1,{family:moleculeRound.family,group:moleculeRound.group,reason:moleculeRound.answer});
+assert.throws(()=>context.saveGameAnswer_({...organicPayload,answer:{...organicPayload.answer,family:'wrong'}}),/solution/);
+assert.throws(()=>context.saveGameAnswer_({...organicPayload,answer:{...organicPayload.answer,reason:99}}),/solution/);
+context.saveGameAnswer_(organicPayload);
+const namingId=Object.keys(organicGame.rounds).find(id=>organicGame.rounds[id].kind==='naming'),namingRound=organicGame.rounds[namingId];
+context.saveGameAnswer_(gamePayload('organic-molecule-mission',[namingId],1,{choice:namingRound.answer}));
+assert(context.getTeacherResults(token,{view:'gameAnswers',topic:'y10-alcohols-acids'}).rows.every(row=>row[22]==='Server-checked solution'));
 for(const metadata of gameManifest.games){const game=context.GAME_CATALOG_[metadata.id],round=Object.keys(game.rounds)[0];context.saveGameAnswer_({...gamePayload(metadata.id,[round]),revealed:true,attempts:0});const filtered=context.getTeacherResults(token,{view:'games',course:metadata.course,topic:metadata.topic});assert(filtered.rows.some(r=>r[7]===metadata.id));}
 assert.throws(()=>context.saveGameAnswer_({...gp,questionIds:['__proto__'],questionId:'__proto__'}),/rounds/);
 assert.throws(()=>context.saveGameAnswer_({...gp,questionNumber:0,eventId:gp.sessionId+'-0'}),/rounds/);
 assert.equal(context.getTeacherResults(token,{}).total,testCount,'Games never inflate revision accuracy');
 assert(context.doGet({parameter:{action:'capabilities',nonce:crypto.randomUUID()}}).html.includes('gameManifest'));
-console.log('Game server: 42 catalogued games, Y9 solution validation, derived stars, required identity, separate views, duplicates, hints/reveals, practice/retry exclusion, text-formatted rows, filters, protected reads and summary repair passed.');
+console.log('Game server: 43 catalogued games, Y9 solution validation, derived stars, required identity, separate views, duplicates, hints/reveals, practice/retry exclusion, text-formatted rows, filters, protected reads and summary repair passed.');
 
 context.logoutTeacher(token);assert.throws(()=>context.getTeacherResults(token,{}),/expired/);
 const nextToken=context.loginTeacher(password).token;context.resetTeacherPassword();assert.throws(()=>context.getTeacherResults(nextToken,{}),/expired/);
@@ -214,4 +223,4 @@ const publicFunctions=[...source.matchAll(/^function (\w+)\(/gm)].map(match=>mat
 assert.deepEqual(publicFunctions,['doGet','doPost','getTeacherResults','loginTeacher','logoutTeacher','resetTeacherPassword','setupLearningLab']);
 assert.equal(context.doGet().name,'Dashboard');
 assert.equal(context.doGet().favicon,'https://asielhm.github.io/learning-lab/assets/brand/learning-lab-logo.png');
-console.log('Google records server: all 24 banks / 1,580 questions, class filters, dynamic course/topic choices, full-selection weighted summaries, public readiness metadata, bank signatures, protected reads, password rotation/logout/rate limit, authoritative scoring, partial quizzes, idempotent writes, summary repair, formula escaping and filtered pagination passed.');
+console.log('Google records server: all 25 banks / 1,640 questions, class filters, dynamic course/topic choices, full-selection weighted summaries, public readiness metadata, bank signatures, protected reads, password rotation/logout/rate limit, authoritative scoring, partial quizzes, idempotent writes, summary repair, formula escaping and filtered pagination passed.');

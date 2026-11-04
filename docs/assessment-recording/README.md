@@ -1,7 +1,7 @@
 # Teaching, games and teacher records
 
-Revision coverage remains 24 banks / 1,580 questions. Games add 42 catalogued games
-with 183 rounds. The course menu covers Y7 Maths, Y9 Science, Y10 Physics and Y10
+Revision coverage remains 25 banks / 1,640 questions. Games add 43 catalogued games
+with 197 rounds. The course menu covers Y7 Maths, Y9 Science, Y10 Physics and Y10
 Chemistry; Y9 games are Name That Gas Law (9), Mystery Word (30) and Transport
 Dispatch (10). Other simulations' practical controls and notebooks remain local.
 
@@ -18,7 +18,7 @@ on Google. Closing the tab can lose unsaved records. Practice, targeted retry
 rounds and free picture creation never enqueue records. Restarting a full
 recorded game creates a distinct session rather than overwriting an earlier one.
 
-Y9 final solutions are checked against the Google catalogue: both magnitudes and
+Y9 and Molecule Mission final solutions are checked against the Google catalogue: both magnitudes and
 law for pictures, accepted scientific terms for words, and carrier/destination/
 explanation for transport. Other game models report their evaluated construction;
 the feedback source column explicitly identifies these as self-reported. The

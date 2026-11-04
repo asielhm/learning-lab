@@ -1,8 +1,8 @@
 # Learning Lab: all-course dashboard update
 
-This release covers 24 revision question banks / 1,580 questions in Year 7 Maths,
-Year 9 Science, Year 10 Chemistry and Year 10 Physics, plus **42 question-based
-games / 183 rounds**.
+This release covers 25 revision question banks / 1,640 questions in Year 7 Maths,
+Year 9 Science, Year 10 Chemistry and Year 10 Physics, plus **43 question-based
+games / 197 rounds**.
 
 Included recent additions:
 
@@ -44,3 +44,8 @@ identity or sending answers. An old, mismatched or unreachable deployment leaves
 those quizzes local. The original four connected quizzes keep their current
 recording while this update is installed. No passwords or student data are in
 these files.
+
+The alcohol/carboxylic-acid class now has its own 60-question bank and the
+14-round Molecule Mission game, including naming. Replace all three Google
+files and deploy a new version to record these two additions. Existing banks
+and games retain their signatures and existing results.

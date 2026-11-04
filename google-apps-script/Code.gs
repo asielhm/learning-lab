@@ -361,6 +361,7 @@ function gameAnswerText_(game, question, answer) {
     var carriers={rbc:'Red blood cells',wbc:'White blood cells',plasma:'Plasma',platelets:'Platelets'},targets={lungs:'Lungs',heart:'Left heart',right:'Right heart',muscle:'Muscle',liver:'Liver',kidneys:'Kidneys',skin:'Skin',gland:'Endocrine gland',infection:'Affected tissue',wound:'Small injury'};
     return 'Carrier: '+(carriers[answer.carrier]||'Not selected')+'; Destination: '+(targets[answer.target]||'Not selected')+'; Explanation: '+(Number.isInteger(answer.explanation)&&question.options[answer.explanation]||'Not answered');
   }
+  if (game.grader === 'organic' && typeof answer === 'object') return question.kind === 'molecule' ? 'Group: '+(answer.group||'Not selected')+'; Family: '+(answer.family==='acid'?'Carboxylic acid':answer.family==='alcohol'?'Alcohol':'Not selected')+'; Explanation: '+(question.options[answer.reason]||'Not answered') : (question.options[answer.choice]||'Not answered');
   return gameJson_(answer);
 }
 function gameGrade_(game, question, p) {
@@ -368,6 +369,7 @@ function gameGrade_(game, question, p) {
   var a = p.answer, correct = true;
   if (game.grader === 'picture') correct = !!a && a.law === question.law && Array.isArray(a.quantities) && a.quantities.length === 2 && new Set(a.quantities).size === 2 && question.quantities.every(function(q) {return a.quantities.includes(q);});
   if (game.grader === 'word') correct = typeof a === 'string' && question.accepted.some(function(w) {return gameNormal_(w) === gameNormal_(a);});
+  if (game.grader === 'organic') correct = !!a && (question.kind === 'molecule' ? a.family === question.family && a.group === question.group && a.reason === question.answer : a.choice === question.answer);
   if (game.grader === 'dispatch') correct = !!a && a.carrier === question.carrier && a.target === question.target && a.explanation === question.answer;
   if (!correct) throw new Error('Game solution does not match');
   return p.assisted ? 1 : game.rule === 'dispatch' ? (p.attempts > 1 ? 2 : 3) : Math.max(1, 4-p.attempts);

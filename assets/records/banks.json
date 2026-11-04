@@ -1,7 +1,7 @@
 {
   "protocol": 3,
   "release": "all-courses-1",
-  "questionCount": 1580,
+  "questionCount": 1640,
   "banks": [
     {
       "topic": "algebra",
@@ -100,6 +100,13 @@
       "title": "Gas laws",
       "questionCount": 80,
       "signature": "209a23d04cfefc87682104795efd5c73b23602e8fc9625a700bf2a7d3087a3bb"
+    },
+    {
+      "topic": "y10-alcohols-acids",
+      "course": "Year 10 Chemistry",
+      "title": "Alcohols and carboxylic acids",
+      "questionCount": 60,
+      "signature": "180e0a1f2c7cfe8a87d6ae71da218c2d1776ba243758216d2afbd5fbe18e2765"
     },
     {
       "topic": "y10-acids-bases",

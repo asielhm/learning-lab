@@ -378,6 +378,15 @@
       "signature": "782b0d532a3371699ec4e7b3b89a6d47110a7f73ad0c3dc9aad5a3a39200d316",
       "roundCount": 10,
       "preparation": "activities/y9/science/blood-vessels/prepare.html"
+    },
+    {
+      "id": "organic-molecule-mission",
+      "title": "Molecule Mission",
+      "course": "Year 10 Chemistry",
+      "topic": "y10-alcohols-acids",
+      "signature": "507c4d79f1c1d704eba808494619c6c0c87025d5cdb1a62ce580056b5e43ca45",
+      "roundCount": 14,
+      "preparation": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/prepare.html"
     }
   ]
 }

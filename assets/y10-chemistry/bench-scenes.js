@@ -1,3 +1,4 @@
+import {acidGroup,alcoholGroup} from './alcohols/art.mjs?v=1';
 import {svg,text,line,beaker,flask,tube,bottle,lattice,chain,burner,meter} from './drawing.js?v=diene-1';
 import {indicator,displaces,gasFromAcid,waterElectrolysis,dieneCracking} from './science.mjs?v=diene-1';
 export const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -33,7 +34,7 @@ export function toolArt(type,x,y,{v={},name=''}={}){
   case 'chain':art=chain(-54,0,4,v.family==='alkene'||v.monomer!==undefined,'#6d9c8a');break;
   case 'hydrogen':art=[[-24,-14],[20,-14],[-24,25],[20,25]].map(([xx,yy])=>`<circle cx="${xx}" cy="${yy}" r="18" fill="#f6f6e6" stroke="#849e94" stroke-width="2"/>`+label(xx,yy+5,'H')).join('');break;
   case 'electron':art=ring(0,0)+'<circle r="19" fill="#dab079"/>'+label(0,6,v.reaction==='magnesium'?'4e⁻':'2e⁻');break;
-  case 'formula':art='<rect x="-75" y="-35" width="150" height="70" rx="10" fill="#fcf7e9" stroke="#6b9285" stroke-width="2"/>'+label(0,6,'Structural formula');break;
+  case 'formula':if(v.compound==='ethanoic'){art='<rect x="-77" y="-69" width="154" height="138" rx="12" fill="#fcf7e9" stroke="#6b9285" stroke-width="2"/>'+acidGroup({x:12,y:0,prefix:'CH₃',scale:.56});break;}art='<rect x="-75" y="-35" width="150" height="70" rx="10" fill="#fcf7e9" stroke="#6b9285" stroke-width="2"/>'+label(0,6,'Structural formula');break;
   case 'group':art='<rect x="-60" y="-31" width="120" height="62" rx="12" fill="#b7d3c3" stroke="#4c7e6f" stroke-width="2"/>'+label(0,6,v.route==='polyamide'?'H₂N–R–NH₂':v.route==='ester'?'C₂H₅–OH':'HO–R–OH');break;
   case 'water-packet':art='<circle cx="-19" r="18" fill="#f4f1da" stroke="#849e94"/><circle cx="20" r="22" fill="#dfb7a4" stroke="#997664"/>'+label(-19,5,'H')+label(20,5,'OH');break;
   case 'handle':art='<rect x="-27" y="-35" width="54" height="70" rx="12" fill="#c49368" stroke="#815f45" stroke-width="2"/><path d="M-12 0H13m-7-8 8 8-8 8" fill="none" stroke="#fff3d8" stroke-width="3"/>';break;
@@ -264,8 +265,8 @@ export function sceneFor(d,s,plan,result){
    footer=has('join')?'All monomer atoms remain in the chain; no small molecule is released.':'Side groups stay attached when the C=C bonds open.';
   }
   if(id==='functional-groups'&&has('formula')){
-   const [prefix,group]=structureData[v.compound];body+=label(235,187,prefix,'structure');body+=`<rect x="278" y="151" width="238" height="56" rx="12" fill="${has('group')?'#f1d3ae':'transparent'}" stroke="${has('group')?'#c08957':'transparent'}"/>`+label(396,187,group,'structure');
-   if(has('inspect'))body+=label(340,276,structureData[v.compound][2],'large');footer='Inspect the whole group, including the carbonyl where present.';
+   const [prefix,group]=structureData[v.compound];if(v.compound==='ethanoic')body+=acidGroup({x:345,y:195,prefix:'CH₃',scale:.72,highlight:has('group')});else{body+=label(235,187,prefix,'structure');body+=`<rect x="278" y="151" width="238" height="56" rx="12" fill="${has('group')?'#f1d3ae':'transparent'}" stroke="${has('group')?'#c08957':'transparent'}"/>`+label(396,187,group,'structure');}
+   if(has('inspect'))body+=label(330,v.compound==='ethanoic'?305:276,structureData[v.compound][2],'large');footer='Inspect the whole group, including the carbonyl where present.';
   }
   if(id==='condensation'){
    body+='<rect x="190" y="159" width="120" height="62" rx="12" fill="#d6ad8c" stroke="#947052" stroke-width="2"/>'+label(250,196,'R–COOH');

@@ -10,7 +10,7 @@ Every submitted answer has a stable session/ordinal ID. Writes use ScriptLock; r
 
 The browser posts a hidden form to Google and waits for a Google-origin `postMessage` receipt with a random nonce and matching event ID. Only acknowledged answers are removed from the pending queue. Failed deliveries retry after 20 seconds, on reconnect, or manually. Pending records use sessionStorage, not persistent shared-device storage; closing the tab can discard them. Apps Script quotas/availability can delay saves. The dashboard's 50-row pages are filtered server-side; all data stays on Google. Its accuracy metric is total correct answers divided by total answered questions across the selection.
 
-Update `QuestionBank.gs` with `python3 tools/build_google_question_bank.py` after changing any source question bank, then deploy a new Apps Script version. The static website cannot update the owner's Google deployment itself. Current scope is all 24 revision question banks / 1,580 questions. Inline lesson/model checks, practical notebooks, gas-law object explorations, the external Heart Lab and guided GDC practice are not recorded.
+Update `QuestionBank.gs` with `python3 tools/build_google_question_bank.py` after changing any source question bank, then deploy a new Apps Script version. The static website cannot update the owner's Google deployment itself. Current scope is all 25 revision question banks / 1,640 questions. Inline lesson/model checks, practical notebooks, gas-law object explorations, the external Heart Lab and guided GDC practice are not recorded.
 
 Run `node tests/google-records-server.cjs` for backend validation, authentication, scoring, deduplication and partial-write tests against a simulated Apps Script runtime. Run `node tests/google-records-browser.cjs` with a local static server for the browser's identity flow, receipts, retries, queued reloads and mobile UI. These tests cannot replace a final live Google deployment check.
 
@@ -39,7 +39,7 @@ Copy Code.gs, QuestionBank.gs and Dashboard.html and deploy a new version to act
 
 ## All-course release and automatic recording readiness
 
-Use [UPDATE.md](UPDATE.md) or the platform update guide. The download bundle contains the exact current Code.gs, QuestionBank.gs, Dashboard.html and instructions. Existing results, sheet columns and the existing password are preserved. The server bank includes eight Y7 Maths banks (including the original algebra, Algebra II and Statistics), six Y9 Science banks, four Y10 Chemistry banks and six Y10 Physics banks.
+Use [UPDATE.md](UPDATE.md) or the platform update guide. The download bundle contains the exact current Code.gs, QuestionBank.gs, Dashboard.html and instructions. Existing results, sheet columns and the existing password are preserved. The server bank includes eight Y7 Maths banks (including the original algebra, Algebra II and Statistics), six Y9 Science banks, five Y10 Chemistry banks and six Y10 Physics banks.
 
 Run `python3 tools/build_google_question_bank.py` after editing any bank. It writes the full scoring source, public `assets/records/banks.json` and a reproducible update ZIP. A SHA-256 fingerprint covers each course and its canonical question IDs, prompts, categories, difficulty, options and answers. Changes to questions therefore require matching static and Google versions.
 
@@ -47,11 +47,11 @@ A GET with action=capabilities and a valid random nonce returns protocol-3 publi
 
 Authenticated results include complete class choices, all course/topic choices from the bank catalogue plus historical tests, and full-selection topic summaries. Class filtering uses the same OR-within / AND-between semantics as the existing menus. Accuracy is weighted by question count. Topic labels are human-readable; underlying stable topic IDs remain in the sheet. Choices and rows are removed from the UI on logout; every read remains protected by the existing teacher token.
 
-Local server/browser checks cover all 24 banks, identity requirements, recording gates, old/stale deployment fallback, record receipts, session repair and aggregation without live writes. A live test after the owner publishes the Google version remains necessary to verify Google authorisation, spreadsheet access and quotas.
+Local server/browser checks cover all 25 banks, identity requirements, recording gates, old/stale deployment fallback, record receipts, session repair and aggregation without live writes. A live test after the owner publishes the Google version remains necessary to verify Google authorisation, spreadsheet access and quotas.
 
 ## Recorded question games
 
-The game catalogue includes 42 games / 183 rounds across Y7 Maths, Y9 Science,
+The game catalogue includes 43 games / 197 rounds across Y7 Maths, Y9 Science,
 Y10 Physics and Y10 Chemistry. Public `assets/records/games.json` fingerprints
 match the catalogue appended to QuestionBank.gs. The capability endpoint returns
 `gameManifest` separately, preserving protocol-3 revision compatibility. Old
@@ -65,7 +65,7 @@ GameSessions aggregates completed games. Individual rounds remain visible for
 unfinished games. Setup and authenticated reads repair complete missing summaries.
 No existing revision tabs, bank signatures or passwords are changed.
 
-Y9 picture, vocabulary and transport solutions are checked against the server
+Y9 picture, vocabulary, transport and Y10 Molecule Mission solutions are checked against the server
 catalogue. Other interactive game models report their evaluated final construction;
 these rows are labelled “Game model feedback; self-reported”. Stars are derived
 server-side from attempts and assistance, with revealed solutions worth zero.

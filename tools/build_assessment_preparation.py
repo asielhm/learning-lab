@@ -21,6 +21,8 @@ def apply_preparation():
   parser=Wrapper();parser.feed(wrapper.read_text())
   if not parser.attrs:continue
   attrs=parser.attrs;bank=json.loads((wrapper.parent/attrs['data-bank']).resolve().read_text());topic=bank['topicId'];folder=wrapper.parent;path=folder/'prepare.html';relative=folder.relative_to(ROOT);prefix='../'*len(relative.parts);key=str(folder.relative_to(ROOT/'activities'));course=attrs.get('data-course','Year 9 Science');title=bank['title'];grouped=collections.defaultdict(list)
+  from alcohols_book import formula_html
+  format_content=formula_html if topic=='y10-alcohols-acids' else E
   for q in bank['questions']:grouped[q['category']].append(q)
   start=DATA.get(key);intro=''.join('<p>'+E(x)+'</p>' for x in start[:3]) if start else '<p>Start with the unit’s illustrated lesson, then use these notes to connect the vocabulary, models and worked examples before you answer questions. An example shows the reasoning; the practical lets you test it.</p>'
   lesson='index.html';cover='cover.svg'
@@ -29,11 +31,11 @@ def apply_preparation():
   for i,(category,questions) in enumerate(grouped.items()):
    ident=f'concept-{i+1}';toc+=f'<a href="#{ident}">{i+1:02} · {E(category)}</a>'
    # All authored explanations are readable as concept notes before opening examples.
-   notes=list(dict.fromkeys(q['explanation'] for q in questions));notes_html=''.join(f'<li>{E(n)}</li>' for n in notes)
+   notes=list(dict.fromkeys(q['explanation'] for q in questions));notes_html=''.join(f'<li>{format_content(n)}</li>' for n in notes)
    examples=''
    for q in questions:
     anchor='example-'+q['id'];audit['revision'][topic]['questions'][q['id']]=str(path.relative_to(ROOT))+'#'+anchor
-    examples+=f'<details class="prep-example" id="{E(anchor)}"><summary>Worked example · {E(q["prompt"])}</summary><div><p class="prep-answer"><strong>Result:</strong> {E(q["options"][q["answer"]])}</p><p><strong>Reasoning:</strong> {E(q["explanation"])}</p><p class="prep-think">Explain the reasoning in your own words, then compare it with the practical model. For a calculation, identify the known quantities and units before choosing the rule.</p></div></details>'
+    examples+=f'<details class="prep-example" id="{E(anchor)}"><summary>Worked example · {format_content(q["prompt"])}</summary><div><p class="prep-answer"><strong>Result:</strong> {format_content(q["options"][q["answer"]])}</p><p><strong>Reasoning:</strong> {format_content(q["explanation"])}</p><p class="prep-think">Explain the reasoning in your own words, then compare it with the practical model. For a calculation, identify the known quantities and units before choosing the rule.</p></div></details>'
    notation=''
    sections+=f'<section id="{ident}" class="prep-section"><div class="prep-heading"><span>{i+1:02}</span><h2>{E(category)}</h2></div><h3>Understand the ideas</h3><ul class="prep-notes">{notes_html}</ul>{notation}<h3>Follow the worked examples</h3><p>Try to explain the example first, then open it to compare your reasoning.</p>{examples}</section>'
   if key in SCHOOL:
@@ -50,6 +52,7 @@ def apply_preparation():
    game_sections+=f'<details class="prep-game" id="game-{game["id"]}"><summary>{E(game["title"])} · concepts and examples</summary><div>{entries}</div></details>'
   if game_sections:sections+=f'<section id="game-preparation" class="prep-section"><div class="prep-heading"><span>PLAY</span><h2>Understand before you play</h2></div><p>Read the situation and its conditions, identify the changing quantities and explain why your model fits. These examples teach the ideas used by this unit’s games. Hints and revealed solutions are learning tools; they reduce the game stars.</p>{game_sections}</section>'
   page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)} · Preparation | Learning Lab</title><link rel="icon" href="{prefix}assets/brand/learning-lab-logo.png"><link rel="stylesheet" href="{prefix}platform.css"><link rel="stylesheet" href="{prefix}assets/assessment-preparation/prepare.css?v=1"></head><body><header class="site-header"><a class="brand" href="{prefix}index.html"><img src="{prefix}assets/brand/learning-lab-logo.png" alt="" width="44" height="44">Learning Lab</a><nav aria-label="Main navigation"><a href="{lesson}">Unit lesson</a><a href="revision.html">Revision simulator</a></nav></header><main class="prep-main"><a href="{lesson}">← Back to {E(title)}</a><p class="eyebrow">{E(course.upper())} · LEARN BEFORE YOU ANSWER</p><h1>{E(title)}<br><span>Preparation and worked examples</span></h1><div class="prep-intro"><div>{intro}</div>{hero}</div><ol class="prep-steps"><li><b>Read and explain.</b> Learn the vocabulary and say why the process works.</li><li><b>Work through an example.</b> Identify the known information, rule and result.</li><li><b>Investigate, then apply.</b> Return to the practical, game or revision simulator.</li></ol><nav class="prep-toc" aria-label="Preparation topics">{toc}{'<a href="#game-preparation">Game preparation</a>' if relevant else ''}</nav>{sections}<section class="prep-ready"><h2>Ready to apply the ideas?</h2><a href="{lesson}">Return to the practical activities →</a><a href="revision.html">Open revision simulator →</a></section></main></body></html>'''
+  if topic=='y10-alcohols-acids':page=page.replace('</head>',f'<link rel="stylesheet" href="{prefix}assets/y10-chemistry/alcohols/groups.css?v=1"></head>')
   path.write_text(page)
   # Put an explicit prerequisite link before the question engine starts.
   text=wrapper.read_text();text=re.sub(r'<!-- assessment-preparation:start -->.*?<!-- assessment-preparation:end -->','',text,flags=re.S)

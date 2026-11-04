@@ -1,10 +1,11 @@
+import {formulaHTML} from './alcohols/format.mjs?v=1';
 import {organicClassDefinitions} from './organic-classes.mjs?v=1';
 import {acids} from './acids.js';
 import {metals} from './metals.js';
 import {redox} from './redox.js';
 import {organic} from './organic.js?v=organic-classes-1';
 import {planFor} from './bench-plans.js?v=diene-1';
-import {sceneFor,effectArt,escape} from './bench-scenes.js?v=diene-1';
+import {sceneFor,effectArt,escape} from './bench-scenes.js?v=alcohol-book-1';
 import {createCrackingExtension} from './cracking-extension.js?v=diene-1';
 const renderCrackingExtension=createCrackingExtension();
 const $=selector=>document.querySelector(selector);
@@ -27,7 +28,7 @@ function render(){
  $('#bench-instruction').textContent=current?.label||(!complete&&result.nextInstruction?result.nextInstruction:active.doses&&!complete?'Turn the burette tap. Add 0.1 mL near the faint-pink endpoint.':'Your practical is complete. Record the evidence, then explain your observation.');
  const summary=active.controls.filter(c=>!c.showIf||c.showIf(state.values)).map(c=>c.options?c.options.find(o=>o[0]===state.values[c.id])?.[1]:`${c.label}: ${c.format?c.format(state.values[c.id]):state.values[c.id]}`).join(' · ');
  $('#bench-settings summary span').textContent=summary;$('#bench-settings summary span').title=summary;
- $('#lab-equation').textContent=result.equation;
+ if(document.body.dataset.organicClass==='alcohols-carboxylic-acids')$('#lab-equation').innerHTML=formulaHTML(result.equation);else $('#lab-equation').textContent=result.equation;
  $('#readouts').replaceChildren(...result.readings.map(([label,value])=>{const div=document.createElement('div');div.className='readout';const span=document.createElement('span'),b=document.createElement('b');span.textContent=label;b.textContent=finished?String(value):'—';div.append(span,b);return div;}));
  $('#bench-help').disabled=finished||busy;$('#bench-help').textContent='Help with this step';$('#bench-hint').hidden=true;$('#demonstrate-step').disabled=busy;
  $('#record-reading').disabled=!complete||state.recorded||state.records.length>=10||busy;

@@ -1,3 +1,4 @@
+import {ALCOHOL_GAME} from '../assets/y10-chemistry/alcohols/game-data.mjs';
 import {controls} from '../assets/unit-games/models.mjs';
 import {units} from '../assets/unit-games/data.mjs';
 import {algebraGames} from '../assets/unit-games/algebra-data.mjs';
@@ -20,4 +21,5 @@ for(const g of coordinatePackGames)add('coordinates-'+g.id,g.title,'Year 7 Maths
 add('gas-picture','Name That Gas Law','Year 9 Science','gas-laws',Object.fromEntries(pictures.map(r=>[r.id,{prompt:r.title+': '+r.story+' '+r.condition,explanation:r.why,law:r.law,quantities:laws[r.law].quantities,solution:laws[r.law].name+' · '+laws[r.law].quantities.join(', ')}])),'picture');
 add('gas-word','Mystery Word','Year 9 Science','gas-laws',Object.fromEntries(words.map(r=>[r.id,{prompt:r.clue,explanation:r.explanation,accepted:[r.answer,...(r.aliases||[])],solution:r.answer}])),'word');
 add('blood-dispatch','Transport Dispatch','Year 9 Science','blood-vessels',Object.fromEntries(MISSIONS.map(r=>[r.id,{prompt:r.title+': '+r.need+' '+r.question,explanation:r.why,carrier:r.carrier,target:r.target,answer:r.answer,options:r.options,solution:COMPONENTS[r.carrier].name+' → '+NODES[r.target].name+'; '+r.options[r.answer]}])),'dispatch','dispatch');
+add(ALCOHOL_GAME.id,ALCOHOL_GAME.title,'Year 10 Chemistry','y10-alcohols-acids',Object.fromEntries(ALCOHOL_GAME.rounds.map(r=>[r.id,{prompt:r.prompt,explanation:r.explanation,solution:r.kind==='molecule'?(r.family==='acid'?'Carboxylic acid':'Alcohol')+' · '+r.options[r.answer]:r.options[r.answer],kind:r.kind,family:r.family,group:r.group,options:r.options,answer:r.answer}])),'organic');
 process.stdout.write(JSON.stringify(games));

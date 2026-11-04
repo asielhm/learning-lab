@@ -12,9 +12,12 @@ The Organic Chemistry topic now contains three independently addressable classes
    carbonyls and delocalisation, salt versus amide formation, polyamide monomers,
    finite chains, nylon and peptide links.
 
-Each has six detailed, readable chapters, six worked examples, six highlighted
-memory boxes, an original labelled structural-formula cover, an instrument-driven
-practical and six independent practice checks with coloured explanatory feedback.
+The alcohol/carboxylic-acid class is a ten-chapter introductory illustrated book,
+including two naming chapters, new-word definitions, numbered-chain examples,
+worked steps and pause-and-think checks. Its whole acid group is coral with C=O
+angled upwards and OH downwards; alcohol OH is teal. The other two classes retain
+six detailed chapters each. All have an instrument-driven practical and six local
+practice checks with explanatory feedback.
 The text remains readable with JavaScript disabled. Every check is taught earlier
 in its class; practical distractors are scoped to the concepts just introduced.
 Desktop layouts are checked at 1366×768, 1440×900 and 1920×1080.
@@ -34,11 +37,12 @@ pairs of complementary monomers give 2n−1 waters in these chosen acid routes.
 Repeat-unit n and end-group omissions are explained separately.
 
 The three class cards precede the general organic reading/lab and are separately
-linked in Y10 Chemistry's topic menu and the full catalogue (109 entries). The
-full 80-question organic revision remains a separate whole-unit activity, with
-its preparation link and existing Test yourself connection. The six new checks
-per class are labelled local practice; no new recording bank, game or Google
-backend deployment is required.
+linked in Y10 Chemistry's topic menu and the full catalogue (110 entries). The
+full 80-question organic revision remains a whole-unit activity. Alcohols and
+carboxylic acids additionally has an exclusive 60-question bank and 14-round
+Molecule Mission game, with structures, naming and real-life applications taught
+in the book. The six inline checks per class remain local practice. Recording
+the new quiz/game requires the latest three Google files deployed by the owner.
 
 Authored content: `tools/organic_class_content.py`. Rebuild using
 `python3 tools/build_organic_classes.py`, or rebuild the chemistry shells using
@@ -51,3 +55,13 @@ and the existing chemistry model, apparatus, full chemistry browser, catalogue,
 featured-catalogue and assessment-preparation checks. Browser tests exercise
 actual SVG dragging, restricted controls, notebook gating, all 18 practice
 answers and no-JS text. Google submissions are excluded from local class checks.
+
+The book source is `tools/alcohols_book.py`; game/art/formatting modules are under
+`assets/y10-chemistry/alcohols/`. Rebuild its exclusive bank with
+`tools/build_alcohols_questions.py`, then run the class builder and
+`tools/build_google_question_bank.py`. The latter updates teaching references,
+public readiness metadata and the complete owner-deployed Google ZIP. All 24
+previous revision-bank signatures and 42 previous game signatures are preserved.
+Additional checks: `tests/alcohol-book.mjs` and `tests/alcohol-book-browser.cjs`
+cover colour semantics, SVG geometry, all ten book pages, no-JS reading, actual
+molecule dragging, all fourteen game rounds and the dedicated quiz recording.

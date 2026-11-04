@@ -23,8 +23,8 @@ for topic,item in audit['revision'].items():
 for game,item in audit['games'].items():
  s=(ROOT/item['path']).read_text();parser=Page();parser.feed(s)
  for round,reference in item['rounds'].items():assert reference.split('#')[1] in parser.ids
-assert len(audit['revision'])==24 and count==1580 and len(audit['games'])==42
-assert sum(len(g['rounds']) for g in audit['games'].values())==183
+assert len(audit['revision'])==25 and count==1640 and len(audit['games'])==43
+assert sum(len(g['rounds']) for g in audit['games'].values())==197
 for game in json.loads((ROOT/'assets/records/games.json').read_text())['games']:
  assert game['preparation']==audit['games'][game['id']]['path']
-print('Teaching coverage: all 1,580 revision questions and 183 rounds in 42 games have explicit prior explanation/worked-example anchors; links precede quizzes and final revision invitations.')
+print('Teaching coverage: all 1,640 revision questions and 197 rounds in 43 games have explicit prior explanation/worked-example anchors; links precede quizzes and final revision invitations.')

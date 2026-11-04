@@ -706,7 +706,7 @@
                   "format": "Class 01 · Alcohols and carboxylic acids",
                   "duration": "Study and investigate at your pace",
                   "href": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/",
-                  "image": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/cover.svg"
+                  "image": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/cover-book.svg"
                 },
                 {
                   "id": "esters-polyesters-class",
@@ -725,6 +725,15 @@
                   "duration": "Study and investigate at your pace",
                   "href": "activities/y10/chemistry/organic-chemistry/amines-amides-polyamides/",
                   "image": "activities/y10/chemistry/organic-chemistry/amines-amides-polyamides/cover.svg"
+                },
+                {
+                  "id": "alcohols-acids-revision",
+                  "title": "Alcohols and carboxylic acids: revision simulator",
+                  "description": "60 section-exclusive questions covering structures, naming, properties, production and reactions, with Practice and Test yourself modes.",
+                  "format": "Revision · Alcohols and carboxylic acids",
+                  "duration": "Choose your session",
+                  "href": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/revision.html",
+                  "image": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/cover.svg"
                 }
               ]
             }

@@ -1,0 +1,854 @@
+{
+  "topicId": "y10-alcohols-acids",
+  "title": "Alcohols and carboxylic acids",
+  "categories": [
+    "Reading structures and functional groups",
+    "Naming alcohols and carboxylic acids",
+    "Alcohol properties production and uses",
+    "Carboxylic acids strength and concentration",
+    "Acid reactions and observations",
+    "Ethanol oxidation and comparing the families"
+  ],
+  "questions": [
+    {
+      "id": "y10-alcohols-acids-001",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Foundation",
+      "prompt": "What does one line in the structural formulas represent?",
+      "options": [
+        "One covalent bond, a shared pair of electrons.",
+        "One whole molecule.",
+        "One free proton.",
+        "A double bond with two shared pairs."
+      ],
+      "answer": 0,
+      "explanation": "One line represents one shared electron pair; two lines represent a double bond."
+    },
+    {
+      "id": "y10-alcohols-acids-002",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Foundation",
+      "prompt": "In CH₃, what does the subscript ₃ count?",
+      "options": [
+        "Three complete ethanol molecules.",
+        "Three hydrogen atoms attached to that carbon.",
+        "Three carbon atoms.",
+        "Three oxygen atoms."
+      ],
+      "answer": 1,
+      "explanation": "A subscript applies to the element immediately before it: H₃ means three H atoms."
+    },
+    {
+      "id": "y10-alcohols-acids-003",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Application",
+      "prompt": "What is the total molecular formula of CH₃–CH₂–OH?",
+      "options": [
+        "CH₆O₂",
+        "C₃H₆O",
+        "C₂H₆O",
+        "C₂H₅O"
+      ],
+      "answer": 2,
+      "explanation": "Count two C, 3 + 2 + 1 = 6 H, and one O."
+    },
+    {
+      "id": "y10-alcohols-acids-004",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Foundation",
+      "prompt": "Which group identifies the simple alcohols studied here?",
+      "options": [
+        "Any O and H anywhere in a molecule.",
+        "Only a C=O group.",
+        "A free hydroxide ion OH⁻.",
+        "A bonded –OH on a saturated carbon, outside a carboxyl group."
+      ],
+      "answer": 3,
+      "explanation": "An alcohol hydroxyl is bonded within the molecule; the complete neighbouring structure matters."
+    },
+    {
+      "id": "y10-alcohols-acids-005",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Foundation",
+      "prompt": "Which arrangement is the complete carboxyl group?",
+      "options": [
+        "–C(=O)–OH",
+        "–CH₂–OH only",
+        "–CH₃",
+        "–OH⁻"
+      ],
+      "answer": 0,
+      "explanation": "The same carbon has a C=O double bond and a single bond to O–H."
+    },
+    {
+      "id": "y10-alcohols-acids-006",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Application",
+      "prompt": "In the acid drawings, which atom joins both the upper O and lower OH branches?",
+      "options": [
+        "The H atom in OH.",
+        "The same carboxyl carbon.",
+        "Two unrelated carbon atoms.",
+        "A sodium atom."
+      ],
+      "answer": 1,
+      "explanation": "C is double-bonded to O above and single-bonded to OH below."
+    },
+    {
+      "id": "y10-alcohols-acids-007",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Application",
+      "prompt": "How many bonds, counting a double bond as two, surround the carboxyl carbon?",
+      "options": [
+        "Three",
+        "Five",
+        "Four",
+        "Two"
+      ],
+      "answer": 2,
+      "explanation": "C=O contributes two, C–OH one and the bond to the attached group one: 2 + 1 + 1 = 4."
+    },
+    {
+      "id": "y10-alcohols-acids-008",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Foundation",
+      "prompt": "What does a structural formula show that a molecular formula alone may not?",
+      "options": [
+        "Only the liquid volume.",
+        "The exact reaction time.",
+        "The temperature of the sample.",
+        "How the atoms are connected."
+      ],
+      "answer": 3,
+      "explanation": "A molecular formula counts atoms; a structural formula adds connectivity."
+    },
+    {
+      "id": "y10-alcohols-acids-009",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Challenge",
+      "prompt": "Why is ethanoic acid not classified as an alcohol just because it contains OH?",
+      "options": [
+        "Its OH belongs to a complete –COOH group on a carbonyl carbon.",
+        "It contains no oxygen.",
+        "OH is never bonded to hydrogen.",
+        "Every acid must contain sodium."
+      ],
+      "answer": 0,
+      "explanation": "Read C=O and O–H together on the same carbon."
+    },
+    {
+      "id": "y10-alcohols-acids-010",
+      "category": "Reading structures and functional groups",
+      "difficulty": "Challenge",
+      "prompt": "An acid formula is redrawn with C=O tilted upward and OH downward. What has changed?",
+      "options": [
+        "A new atom has been created.",
+        "The display of the same connectivity, not the identity of the compound.",
+        "The number of carbon atoms.",
+        "The acid has necessarily become an alcohol."
+      ],
+      "answer": 1,
+      "explanation": "The drawing directions help reading; rotating a drawing does not change which atoms are bonded."
+    },
+    {
+      "id": "y10-alcohols-acids-011",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Foundation",
+      "prompt": "What is the systematic name of CH₃OH?",
+      "options": [
+        "Methanoic acid",
+        "Propan-1-ol",
+        "Methanol",
+        "Ethanol"
+      ],
+      "answer": 2,
+      "explanation": "One carbon gives meth-, and the alcohol group gives –ol."
+    },
+    {
+      "id": "y10-alcohols-acids-012",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Foundation",
+      "prompt": "Name CH₃–CH₂–OH.",
+      "options": [
+        "Ethanoic acid",
+        "Methanol",
+        "Butan-1-ol",
+        "Ethanol"
+      ],
+      "answer": 3,
+      "explanation": "Two carbons give eth-; the alcohol ending is –ol."
+    },
+    {
+      "id": "y10-alcohols-acids-013",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Application",
+      "prompt": "Name CH₃–CH₂–CH₂–OH using the lowest OH position.",
+      "options": [
+        "Propan-1-ol",
+        "Propan-3-ol",
+        "Propanoic acid",
+        "Ethanol"
+      ],
+      "answer": 0,
+      "explanation": "Number from the OH end: three carbons, OH at carbon 1."
+    },
+    {
+      "id": "y10-alcohols-acids-014",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Application",
+      "prompt": "Name CH₃–CH(OH)–CH₃.",
+      "options": [
+        "Butan-2-ol",
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "Propanoic acid"
+      ],
+      "answer": 1,
+      "explanation": "The three-carbon chain has OH on its middle carbon, carbon 2."
+    },
+    {
+      "id": "y10-alcohols-acids-015",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Challenge",
+      "prompt": "What is the preferred name for CH₃–CH₂–CH₂–CH₂–OH in this lesson?",
+      "options": [
+        "Propan-1-ol",
+        "Butanoic acid",
+        "Butan-1-ol",
+        "Butan-4-ol"
+      ],
+      "answer": 2,
+      "explanation": "There are four carbons; numbering from OH gives the lowest locant, 1."
+    },
+    {
+      "id": "y10-alcohols-acids-016",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Foundation",
+      "prompt": "What is the systematic name of H–C(=O)–OH?",
+      "options": [
+        "Methanol",
+        "Ethanoic acid",
+        "Ethanol",
+        "Methanoic acid"
+      ],
+      "answer": 3,
+      "explanation": "The carboxyl carbon is the only carbon: methanoic acid."
+    },
+    {
+      "id": "y10-alcohols-acids-017",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Application",
+      "prompt": "Name CH₃COOH, remembering the carboxyl carbon.",
+      "options": [
+        "Ethanoic acid",
+        "Methanoic acid",
+        "Ethanol",
+        "Propanoic acid"
+      ],
+      "answer": 0,
+      "explanation": "Count the CH₃ carbon and the COOH carbon: two."
+    },
+    {
+      "id": "y10-alcohols-acids-018",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Application",
+      "prompt": "Name CH₃–CH₂–COOH.",
+      "options": [
+        "Butanoic acid",
+        "Propanoic acid",
+        "Ethanoic acid",
+        "Propan-1-ol"
+      ],
+      "answer": 1,
+      "explanation": "There are three carbons including the carboxyl carbon."
+    },
+    {
+      "id": "y10-alcohols-acids-019",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Challenge",
+      "prompt": "What is the systematic name of CH₃–CH₂–CH₂–COOH?",
+      "options": [
+        "Butan-1-ol",
+        "Ethanoic acid",
+        "Butanoic acid",
+        "Propanoic acid"
+      ],
+      "answer": 2,
+      "explanation": "Four carbon atoms give but-, followed by the carboxylic-acid ending –oic acid."
+    },
+    {
+      "id": "y10-alcohols-acids-020",
+      "category": "Naming alcohols and carboxylic acids",
+      "difficulty": "Foundation",
+      "prompt": "Which statement about acetic acid is correct?",
+      "options": [
+        "It is another name for ethanol.",
+        "It is always sodium ethanoate.",
+        "It is the systematic name of a four-carbon acid.",
+        "It is a common name for ethanoic acid."
+      ],
+      "answer": 3,
+      "explanation": "Ethanoic acid and acetic acid name the same compound. Sodium ethanoate is a salt, not unchanged ethanoic acid."
+    },
+    {
+      "id": "y10-alcohols-acids-021",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Foundation",
+      "prompt": "What is a solvent?",
+      "options": [
+        "A substance that dissolves another substance.",
+        "A formula subscript.",
+        "A gas that must turn limewater milky.",
+        "A number before a formula."
+      ],
+      "answer": 0,
+      "explanation": "Ethanol can act as a solvent in formulated products."
+    },
+    {
+      "id": "y10-alcohols-acids-022",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Foundation",
+      "prompt": "What do the short-chain alcohols here share despite different chain lengths?",
+      "options": [
+        "A free sodium ion.",
+        "The alcohol hydroxyl functional group.",
+        "Exactly the same total carbon count.",
+        "A carboxyl group in every molecule."
+      ],
+      "answer": 1,
+      "explanation": "Methanol, ethanol and propan-1-ol have different carbon counts but share the alcohol pattern."
+    },
+    {
+      "id": "y10-alcohols-acids-023",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Foundation",
+      "prompt": "In the ordinary dilute-water comparison, how is ethanol described?",
+      "options": [
+        "A strongly acidic carboxylic acid.",
+        "Necessarily a concentrated base.",
+        "Approximately neutral.",
+        "Identical to sodium hydroxide."
+      ],
+      "answer": 2,
+      "explanation": "Its bonded OH is not a free hydroxide ion, and ethanol is approximately neutral in this comparison."
+    },
+    {
+      "id": "y10-alcohols-acids-024",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Foundation",
+      "prompt": "Which products form in the simplified yeast fermentation of glucose?",
+      "options": [
+        "Ethanoic acid only.",
+        "Sodium ethanoate and hydrogen.",
+        "Sodium hydroxide and water.",
+        "Ethanol and carbon dioxide."
+      ],
+      "answer": 3,
+      "explanation": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂."
+    },
+    {
+      "id": "y10-alcohols-acids-025",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Foundation",
+      "prompt": "What is the role of yeast enzymes in the fermentation model?",
+      "options": [
+        "They act as biological catalysts.",
+        "They supply new carbon atoms from nothing.",
+        "They are the carboxyl carbon.",
+        "They are position numbers in an alcohol name."
+      ],
+      "answer": 0,
+      "explanation": "An enzyme is a biological catalyst that speeds the reaction without being consumed overall."
+    },
+    {
+      "id": "y10-alcohols-acids-026",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Application",
+      "prompt": "Which condition belongs to the simplified yeast fermentation described in the book?",
+      "options": [
+        "No glucose molecules present.",
+        "Oxygen-poor conditions.",
+        "A guarantee that ethanoic acid is the only product.",
+        "The same process as neutralising vinegar with NaOH."
+      ],
+      "answer": 1,
+      "explanation": "Keep oxygen-poor fermentation distinct from ethanol oxidation in vinegar production."
+    },
+    {
+      "id": "y10-alcohols-acids-027",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Application",
+      "prompt": "In 2C₂H₅OH, what does the coefficient 2 multiply?",
+      "options": [
+        "Only the oxygen atom.",
+        "The acidity of the liquid.",
+        "The entire ethanol formula.",
+        "Only the last hydrogen atom."
+      ],
+      "answer": 2,
+      "explanation": "A coefficient counts complete molecules; it does not change the formula inside each molecule."
+    },
+    {
+      "id": "y10-alcohols-acids-028",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Application",
+      "prompt": "How many carbon atoms are in two ethanol molecules?",
+      "options": [
+        "Two",
+        "Six",
+        "Eight",
+        "Four"
+      ],
+      "answer": 3,
+      "explanation": "Each ethanol contains two carbons, so 2 × 2 = 4."
+    },
+    {
+      "id": "y10-alcohols-acids-029",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Challenge",
+      "prompt": "Which statement best describes the water-solubility trend taught for these alcohols?",
+      "options": [
+        "A longer carbon chain generally reduces water solubility, even when OH remains.",
+        "Adding a carbon always removes the OH group.",
+        "All alcohols contain no oxygen.",
+        "Solubility means the number of bonds on carbon."
+      ],
+      "answer": 0,
+      "explanation": "The carbon-containing part becomes larger while the hydroxyl group is still present."
+    },
+    {
+      "id": "y10-alcohols-acids-030",
+      "category": "Alcohol properties production and uses",
+      "difficulty": "Challenge",
+      "prompt": "Why does the name “alcohol” not guarantee that a substance is suitable for drinking?",
+      "options": [
+        "It means all alcohols are dilute acids.",
+        "It is a chemical family name; different members have different properties and hazards.",
+        "It means every member is ethanol.",
+        "It means a molecule contains no carbon."
+      ],
+      "answer": 1,
+      "explanation": "Methanol and ethanol are different compounds; the book uses family names to describe chemistry."
+    },
+    {
+      "id": "y10-alcohols-acids-031",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Foundation",
+      "prompt": "What does “aqueous” mean?",
+      "options": [
+        "Always a pure acid.",
+        "Only in the gas state.",
+        "Dissolved in water.",
+        "Containing no atoms."
+      ],
+      "answer": 2,
+      "explanation": "Vinegar is an aqueous solution containing ethanoic acid."
+    },
+    {
+      "id": "y10-alcohols-acids-032",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Foundation",
+      "prompt": "What does it mean that ethanoic acid is weak in water?",
+      "options": [
+        "There must be very little acid per litre.",
+        "It contains no hydrogen.",
+        "All its molecules are sodium ions.",
+        "Only a proportion of its molecules ionise."
+      ],
+      "answer": 3,
+      "explanation": "Weak describes partial ionisation; dilute describes concentration."
+    },
+    {
+      "id": "y10-alcohols-acids-033",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Foundation",
+      "prompt": "What does “dilute” describe?",
+      "options": [
+        "A relatively low concentration.",
+        "The absence of carbonyl groups.",
+        "A molecule with only one bond.",
+        "Complete ionisation in every case."
+      ],
+      "answer": 0,
+      "explanation": "Concentration concerns amount per stated amount or volume of solution."
+    },
+    {
+      "id": "y10-alcohols-acids-034",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Application",
+      "prompt": "Which question is about acid strength rather than concentration?",
+      "options": [
+        "How much acid is present per solution volume?",
+        "How extensively does the acid ionise under the stated conditions?",
+        "How much solution is in the bottle?",
+        "How many millilitres were poured?"
+      ],
+      "answer": 1,
+      "explanation": "Strength concerns ionisation; amount per solution volume concerns concentration."
+    },
+    {
+      "id": "y10-alcohols-acids-035",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Foundation",
+      "prompt": "In CH₃COOH ⇌ CH₃COO⁻ + H⁺, which species is the ethanoate ion?",
+      "options": [
+        "H₂O",
+        "CH₃CH₂OH",
+        "CH₃COO⁻",
+        "CH₃COOH"
+      ],
+      "answer": 2,
+      "explanation": "The acid has donated H⁺, leaving the negatively charged ethanoate ion."
+    },
+    {
+      "id": "y10-alcohols-acids-036",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Foundation",
+      "prompt": "What does the raised minus sign in CH₃COO⁻ indicate?",
+      "options": [
+        "One fewer carbon atom.",
+        "The boiling point.",
+        "A fourth type of oxygen atom.",
+        "An electrical charge on the ion."
+      ],
+      "answer": 3,
+      "explanation": "An ion is an atom or group with an electrical charge."
+    },
+    {
+      "id": "y10-alcohols-acids-037",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Application",
+      "prompt": "How should H⁺ in an aqueous acid equation be understood?",
+      "options": [
+        "As convenient shorthand for a proton associated with water molecules.",
+        "As a bare proton permanently isolated from all water.",
+        "As a neutral ethanol molecule.",
+        "As the symbol for carbon dioxide."
+      ],
+      "answer": 0,
+      "explanation": "H⁺ is hydrated in water; the simplified equation omits that detail."
+    },
+    {
+      "id": "y10-alcohols-acids-038",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Foundation",
+      "prompt": "At about 25 °C, which pH is neutral for water?",
+      "options": [
+        "14",
+        "7",
+        "0",
+        "2"
+      ],
+      "answer": 1,
+      "explanation": "The book uses pH 7 as neutral for water at about 25 °C."
+    },
+    {
+      "id": "y10-alcohols-acids-039",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Challenge",
+      "prompt": "Can the word “weak” alone give the exact pH of an ethanoic-acid solution?",
+      "options": [
+        "Yes; weak always means pH 0.",
+        "Yes; weak means no ions exist.",
+        "No; concentration and the solution conditions also matter.",
+        "Yes; every weak acid solution is exactly pH 7."
+      ],
+      "answer": 2,
+      "explanation": "Weak does not specify a unique concentration or pH."
+    },
+    {
+      "id": "y10-alcohols-acids-040",
+      "category": "Carboxylic acids strength and concentration",
+      "difficulty": "Challenge",
+      "prompt": "Why is “all weak acid solutions have one fixed percentage ionised” unreliable?",
+      "options": [
+        "Weak acids have no functional group.",
+        "Dilution creates new carbon atoms.",
+        "The carboxyl carbon disappears in water.",
+        "The extent of ionisation can also depend on concentration and conditions."
+      ],
+      "answer": 3,
+      "explanation": "Weak is a description of acid behaviour; it is not one fixed ionisation percentage for every solution."
+    },
+    {
+      "id": "y10-alcohols-acids-041",
+      "category": "Acid reactions and observations",
+      "difficulty": "Foundation",
+      "prompt": "What products form when ethanoic acid neutralises sodium hydroxide?",
+      "options": [
+        "Sodium ethanoate and water.",
+        "Ethanol and oxygen.",
+        "Methanol and hydrogen.",
+        "Carbon dioxide only."
+      ],
+      "answer": 0,
+      "explanation": "CH₃COOH + NaOH → CH₃COONa + H₂O."
+    },
+    {
+      "id": "y10-alcohols-acids-042",
+      "category": "Acid reactions and observations",
+      "difficulty": "Foundation",
+      "prompt": "What is a salt in the ionic-compound sense used here?",
+      "options": [
+        "A position number in a name.",
+        "A compound made from positive and negative ions.",
+        "Any molecule containing bonded OH.",
+        "A double bond to oxygen."
+      ],
+      "answer": 1,
+      "explanation": "Sodium ethanoate contains sodium ions and ethanoate ions."
+    },
+    {
+      "id": "y10-alcohols-acids-043",
+      "category": "Acid reactions and observations",
+      "difficulty": "Application",
+      "prompt": "Does the word neutralisation guarantee that any chosen mixture finishes at pH 7?",
+      "options": [
+        "Yes, even without a base.",
+        "No, because neutralisation cannot make water.",
+        "No; the final solution depends on substances and amounts mixed.",
+        "Yes, for any quantities whatsoever."
+      ],
+      "answer": 2,
+      "explanation": "Neutralisation names the reaction, not a universal final-pH guarantee."
+    },
+    {
+      "id": "y10-alcohols-acids-044",
+      "category": "Acid reactions and observations",
+      "difficulty": "Foundation",
+      "prompt": "Which gas is expected from vinegar reacting with sodium hydrogencarbonate?",
+      "options": [
+        "Hydrogen",
+        "Oxygen",
+        "Nitrogen",
+        "Carbon dioxide"
+      ],
+      "answer": 3,
+      "explanation": "The acid–hydrogencarbonate reaction gives a salt, water and CO₂."
+    },
+    {
+      "id": "y10-alcohols-acids-045",
+      "category": "Acid reactions and observations",
+      "difficulty": "Foundation",
+      "prompt": "What is another familiar name for sodium hydrogencarbonate?",
+      "options": [
+        "Baking soda",
+        "Ethanol",
+        "Limewater",
+        "Ethanoic acid"
+      ],
+      "answer": 0,
+      "explanation": "Sodium hydrogencarbonate is NaHCO₃, commonly called baking soda."
+    },
+    {
+      "id": "y10-alcohols-acids-046",
+      "category": "Acid reactions and observations",
+      "difficulty": "Foundation",
+      "prompt": "What is effervescence?",
+      "options": [
+        "A name ending for alcohols.",
+        "Visible formation of gas bubbles.",
+        "A guarantee that the liquid is boiling.",
+        "The dissolution of all carbon atoms."
+      ],
+      "answer": 1,
+      "explanation": "Effervescence is gas formation; bubbles alone do not identify the gas."
+    },
+    {
+      "id": "y10-alcohols-acids-047",
+      "category": "Acid reactions and observations",
+      "difficulty": "Application",
+      "prompt": "Which standard observation supports identifying the gas as carbon dioxide?",
+      "options": [
+        "Its presence always makes ethanol strongly basic.",
+        "It removes the carboxyl carbon from every remaining acid molecule.",
+        "It turns limewater milky.",
+        "It must have a blue colour."
+      ],
+      "answer": 2,
+      "explanation": "Carbon dioxide turns limewater milky in the standard gas test."
+    },
+    {
+      "id": "y10-alcohols-acids-048",
+      "category": "Acid reactions and observations",
+      "difficulty": "Application",
+      "prompt": "In the ordinary comparison, should ethanol show the same acid–carbonate effervescence as ethanoic acid?",
+      "options": [
+        "Yes, because both contain the letters OH.",
+        "Yes, because ethanol is NaOH.",
+        "No, because ethanol has no oxygen.",
+        "No; their complete functional groups have different behaviour."
+      ],
+      "answer": 3,
+      "explanation": "A bonded alcohol OH is not the same as the OH in a carboxyl group."
+    },
+    {
+      "id": "y10-alcohols-acids-049",
+      "category": "Acid reactions and observations",
+      "difficulty": "Challenge",
+      "prompt": "Which set lists all the products in CH₃COOH + NaHCO₃ → … ?",
+      "options": [
+        "CH₃COONa, H₂O and CO₂",
+        "CH₃CH₂OH, H₂ and O₂",
+        "CH₃OH and NaOH only",
+        "CO₂ only, with sodium disappearing"
+      ],
+      "answer": 0,
+      "explanation": "The salt, water and CO₂ account for the atoms supplied by the acid and hydrogencarbonate."
+    },
+    {
+      "id": "y10-alcohols-acids-050",
+      "category": "Acid reactions and observations",
+      "difficulty": "Challenge",
+      "prompt": "Why is observing bubbles alone insufficient to identify a gas?",
+      "options": [
+        "Every bubbling process is the same chemical reaction.",
+        "Different gases can form bubbles, so an appropriate identification test is needed.",
+        "Bubbles can only ever contain hydrogen.",
+        "Bubbles contain no matter."
+      ],
+      "answer": 1,
+      "explanation": "Distinguish the observation, gas formation, from the interpretation, the gas identity."
+    },
+    {
+      "id": "y10-alcohols-acids-051",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Foundation",
+      "prompt": "Which organic product forms in the simplified oxidation of ethanol followed in this class?",
+      "options": [
+        "Sodium hydroxide",
+        "Glucose",
+        "Ethanoic acid",
+        "Methanol"
+      ],
+      "answer": 2,
+      "explanation": "CH₃CH₂OH + O₂ → CH₃COOH + H₂O."
+    },
+    {
+      "id": "y10-alcohols-acids-052",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Application",
+      "prompt": "What happens to the two-carbon skeleton in the ethanol-to-ethanoic-acid conversion?",
+      "options": [
+        "It necessarily becomes a one-carbon skeleton.",
+        "It gains four new carbon atoms from oxygen.",
+        "All carbon atoms disappear.",
+        "It remains two carbons long while the end group changes."
+      ],
+      "answer": 3,
+      "explanation": "The alcohol end becomes a carboxyl group; the two carbons are retained."
+    },
+    {
+      "id": "y10-alcohols-acids-053",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Foundation",
+      "prompt": "In the oxidation description used for this conversion, what can oxidation mean?",
+      "options": [
+        "Gaining oxygen and/or losing hydrogen.",
+        "Always gaining sodium atoms.",
+        "Only dissolving without changing bonds.",
+        "Adding a position number to a name."
+      ],
+      "answer": 0,
+      "explanation": "The book uses this introductory description for the ethanol conversion."
+    },
+    {
+      "id": "y10-alcohols-acids-054",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Foundation",
+      "prompt": "Which process uses glucose to produce ethanol and CO₂ under the stated oxygen-poor conditions?",
+      "options": [
+        "Acid–hydrogencarbonate effervescence",
+        "Fermentation",
+        "Ethanol oxidation to vinegar",
+        "Acid–base neutralisation"
+      ],
+      "answer": 1,
+      "explanation": "Do not confuse the different starting substances and conditions."
+    },
+    {
+      "id": "y10-alcohols-acids-055",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Application",
+      "prompt": "Which comparison between fermentation and vinegar production is correct?",
+      "options": [
+        "Neither changes atom connections.",
+        "Both are identical to reacting vinegar with baking soda.",
+        "Fermentation makes ethanol from glucose; the vinegar conversion uses oxygen to oxidise ethanol to ethanoic acid.",
+        "Both always have ethanoic acid as their only product."
+      ],
+      "answer": 2,
+      "explanation": "Follow the starting molecule and reaction conditions rather than just noticing bubbles."
+    },
+    {
+      "id": "y10-alcohols-acids-056",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Foundation",
+      "prompt": "What does the ordinary reversible arrow ⇌ indicate?",
+      "options": [
+        "The amounts on both sides must be equal.",
+        "No molecules can change.",
+        "Carbon atoms do not need to be conserved.",
+        "The reaction can proceed in both directions."
+      ],
+      "answer": 3,
+      "explanation": "The arrow describes possible reaction directions; it is not a statement of equal amounts."
+    },
+    {
+      "id": "y10-alcohols-acids-057",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Challenge",
+      "prompt": "Which statement is a sensible limit of the ethanol example?",
+      "options": [
+        "Do not assume every alcohol oxidises to the same acid.",
+        "Every alcohol must give ethanoic acid.",
+        "Every oxygen-containing molecule is ethanol.",
+        "No alcohol can change functional group."
+      ],
+      "answer": 0,
+      "explanation": "The class follows a particular primary-alcohol conversion, not every possible alcohol reaction."
+    },
+    {
+      "id": "y10-alcohols-acids-058",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Application",
+      "prompt": "How many oxygen atoms are present on the reactant side of CH₃CH₂OH + O₂ → CH₃COOH + H₂O?",
+      "options": [
+        "Four",
+        "Three",
+        "One",
+        "Two"
+      ],
+      "answer": 1,
+      "explanation": "One O is in ethanol and two are in O₂: three in total."
+    },
+    {
+      "id": "y10-alcohols-acids-059",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Challenge",
+      "prompt": "Which evidence-and-reasoning sequence is most appropriate before using the work mat?",
+      "options": [
+        "Choose a family from bottle colour alone.",
+        "Ignore the carbonyl and count only loose hydrogens.",
+        "Read the complete group, identify the family, predict behaviour, then compare observations.",
+        "Call any OH-containing substance an alcohol immediately."
+      ],
+      "answer": 2,
+      "explanation": "The lesson builds structure → family → prediction → evidence → explanation."
+    },
+    {
+      "id": "y10-alcohols-acids-060",
+      "category": "Ethanol oxidation and comparing the families",
+      "difficulty": "Challenge",
+      "prompt": "A formula has OH attached to a carbon that is also double-bonded to O. What is the best classification?",
+      "options": [
+        "An alcohol simply because OH is visible.",
+        "Sodium hydroxide.",
+        "A carbon-free molecule.",
+        "A carboxylic acid with the complete –COOH group."
+      ],
+      "answer": 3,
+      "explanation": "The entire carboxyl arrangement, not OH in isolation, determines this classification."
+    }
+  ]
+}

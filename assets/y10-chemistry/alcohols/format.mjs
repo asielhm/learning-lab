@@ -1,0 +1,2 @@
+const E=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function formulaHTML(value){const saved=[];let text=E(value).replace(/[–-]?C(?:\(=O\)[–-]?OH|OOH)/g,match=>{saved.push(`<span class="fg-acid">${match}</span>`);return `\uE000${saved.length-1}\uE001`;});text=text.replace(/(?<=[0-9₀-₉(–-])OH(?![⁻−-])/g,'<span class="fg-alcohol">OH</span>');return text.replace(/\uE000(\d+)\uE001/g,(_,i)=>saved[Number(i)]);}

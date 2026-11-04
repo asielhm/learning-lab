@@ -9,8 +9,8 @@ let sending=false,error='',saved=0,durable=true,config,refresh=()=>{},retryTimer
 async function flush(){clearTimeout(retryTimer);if(sending||!config?.url||!queue.length)return;sending=true;error='';refresh();try{while(queue.length){const item=queue[0];await deliver(config.url,item);queue.shift();saved++;durable=write(key,queue);refresh();}}catch(e){error=e.message;retryTimer=setTimeout(flush,20000);}finally{sending=false;refresh();}}
 window.addEventListener('online',flush);
 const safe=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export function gameRecording(id,onStart){
- const root=document.querySelector('#game-app')||document.querySelector('#dispatch-board'),panel=document.createElement('section');panel.className='game-record-panel';panel.setAttribute('aria-label','Game recording');root.before(panel);
+export function gameRecording(id,onStart,root=document.querySelector('#game-app')||document.querySelector('#dispatch-board')){
+ const panel=document.createElement('section');panel.className='game-record-panel';panel.setAttribute('aria-label','Game recording');root.before(panel);
  const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./game-records.css',import.meta.url);document.head.append(css);
  let available=false,metadata,session=null,recordMode=false,attempts=new Map(),profile=read(profileKey,{name:'',classroom:'',teacherName:''});
  panel.innerHTML='<p role="status">Checking teacher game recording… You can practise while it connects.</p>';
