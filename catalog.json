@@ -698,6 +698,33 @@
                   "duration": "5–15 minutes",
                   "href": "activities/y10/chemistry/organic-chemistry/games/",
                   "image": "activities/y10/chemistry/organic-chemistry/games/cover.svg"
+                },
+                {
+                  "id": "alcohols-carboxylic-acids-class",
+                  "title": "Alcohols and carboxylic acids: Class 1",
+                  "description": "Discover why two molecules containing O–H can behave differently. Read their structures, compare ethanol with ethanoic acid and connect the chemistry to fuels and vinegar.",
+                  "format": "Class 01 · Alcohols and carboxylic acids",
+                  "duration": "Study and investigate at your pace",
+                  "href": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/",
+                  "image": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/cover.svg"
+                },
+                {
+                  "id": "esters-polyesters-class",
+                  "title": "Esters and polyesters: Class 2",
+                  "description": "Build an ester from an alcohol and an acid, then discover how two reactive ends turn small molecules into a polyester chain.",
+                  "format": "Class 02 · Esters and polyesters",
+                  "duration": "Study and investigate at your pace",
+                  "href": "activities/y10/chemistry/organic-chemistry/esters-polyesters/",
+                  "image": "activities/y10/chemistry/organic-chemistry/esters-polyesters/cover.svg"
+                },
+                {
+                  "id": "amines-amides-polyamides-class",
+                  "title": "Amines, amides and polyamides: Class 3",
+                  "description": "Follow nitrogen’s electrons to distinguish an amine from an amide, then build the amide links found in nylon and proteins.",
+                  "format": "Class 03 · Amines, amides and polyamides",
+                  "duration": "Study and investigate at your pace",
+                  "href": "activities/y10/chemistry/organic-chemistry/amines-amides-polyamides/",
+                  "image": "activities/y10/chemistry/organic-chemistry/amines-amides-polyamides/cover.svg"
                 }
               ]
             }

@@ -1,13 +1,14 @@
+import {organicClassDefinitions} from './organic-classes.mjs?v=1';
 import {acids} from './acids.js';
 import {metals} from './metals.js';
 import {redox} from './redox.js';
-import {organic} from './organic.js?v=diene-1';
+import {organic} from './organic.js?v=organic-classes-1';
 import {planFor} from './bench-plans.js?v=diene-1';
 import {sceneFor,effectArt,escape} from './bench-scenes.js?v=diene-1';
 import {createCrackingExtension} from './cracking-extension.js?v=diene-1';
 const renderCrackingExtension=createCrackingExtension();
 const $=selector=>document.querySelector(selector);
-const definitions={acids,metals,redox,organic}[document.body.dataset.unit];
+const definitions=document.body.dataset.unit==='organic'?organicClassDefinitions(organic,document.body.dataset.organicClass):{acids,metals,redox}[document.body.dataset.unit];
 const states=new Map();let active=definitions[0],state,status='',busy=false,selected=false,drag=null,touchPress=null,lastTouchAt=-Infinity,operation=0,suppressClick=false;
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 function fresh(d){return {values:Object.fromEntries(d.controls.map(c=>[c.id,c.value])),phase:0,benchStep:0,extra:{delivered:0},elapsed:0,records:[],trial:1,recorded:false,answer:null,rotation:Math.floor(Math.random()*4),helped:new Set()};}
