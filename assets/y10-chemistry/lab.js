@@ -187,7 +187,7 @@ async function addDose(amount,keyboard=false){
  status=isComplete(result)?'Faint-pink endpoint reached. Record the titre.':state.extra.delivered>0&&result.readings[1][1]==='Deep pink'?'Overshot: deep pink. Start another trial and use smaller additions near the endpoint.':'NaOH added. Observe the flask and approach the endpoint carefully.';render();if(keyboard)scene.querySelector(`[data-bench-dose="${amount}"]`)?.focus({preventScroll:true});
 }
 $('#experiment-select').replaceChildren(...definitions.map((d,i)=>new Option(`${String(i+1).padStart(2,'0')} · ${d.title}`,d.id)));
-$('#experiment-select').addEventListener('change',event=>{const next=definitions.find(d=>d.id===event.target.value);if(next)choose(next);});
+$('#experiment-select').addEventListener('change',event=>{const next=definitions.find(d=>d.id===event.target.value);if(next?.id==='titration'&&!new URLSearchParams(location.search).has('illustrated-titration')){location.href=new URL('titration-3d.html',location.href);return;}if(next)choose(next);});
 $('#record-reading').onclick=()=>{const result=model();if(busy||!isComplete(result)||state.recorded||state.records.length>=10)return;state.records.push(result.row.map(value=>value===null?state.records.length+1:value));state.recorded=true;state.answer=null;status='Observation recorded. Use it to answer the question below.';render();};
 $('#new-trial').onclick=()=>{startTrial();status='New trial started. Earlier readings stay in your notebook.';render();};
 $('#reset-lab').onclick=()=>{states.set(active.id,fresh(active));choose(active);status='Experiment reset to its starting conditions; its notebook is cleared.';render();};
@@ -198,3 +198,5 @@ function openDieneLink(){
 }
 window.addEventListener('hashchange',openDieneLink);
 openDieneLink();
+
+if(new URLSearchParams(location.search).has("illustrated-titration")&&definitions.some(d=>d.id==="titration"))choose(definitions.find(d=>d.id==="titration"));

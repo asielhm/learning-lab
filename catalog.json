@@ -608,6 +608,15 @@
                   "duration": "5–15 minutes",
                   "href": "activities/y10/chemistry/acids-and-bases/games/",
                   "image": "activities/y10/chemistry/acids-and-bases/games/cover.svg"
+                },
+                {
+                  "id": "vinegar-titration-3d",
+                  "title": "Vinegar titration: interactive 3D laboratory",
+                  "description": "Prepare a burette and measured vinegar aliquot, control the tap, swirl, inspect the meniscus and record persistent faint-pink endpoints.",
+                  "format": "3D practical",
+                  "duration": "Work at your pace",
+                  "href": "activities/y10/chemistry/acids-and-bases/titration-3d.html",
+                  "image": "activities/y10/chemistry/acids-and-bases/cover.svg"
                 }
               ]
             },
