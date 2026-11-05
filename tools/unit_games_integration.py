@@ -30,3 +30,5 @@ def integrate():
   ident=u['slug']+'-games';topic['activities']=[a for a in topic['activities'] if a['id']!=ident]
   topic['activities'].append(dict(id=ident,title=u['name']+': learning games',description=(u['classic']['title']+' and '+u['workshop']['title']+'. Three rounds each, illustrated game boards, hints, explanations and targeted retries.') if not extra else f'{game_count} games: variable spotting, coordinate clues and pictures, rule matching, function machines and proportion paint orders. Self-paced practice with hints and explanations.',format='Learning games',duration='5–15 minutes',href=u['path']+'games/',image=u['path']+'games/cover.svg'))
  (ROOT/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
+ from like_terms_rpg import integrate_quest
+ integrate_quest()

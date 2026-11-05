@@ -1,8 +1,8 @@
 # Learning Lab: all-course dashboard update
 
 This release covers 25 revision question banks / 1,640 questions in Year 7 Maths,
-Year 9 Science, Year 10 Chemistry and Year 10 Physics, plus **43 question-based
-games / 197 rounds**.
+Year 9 Science, Year 10 Chemistry and Year 10 Physics, plus **44 question-based
+games / 221 rounds**.
 
 Included recent additions:
 
@@ -49,3 +49,9 @@ The alcohol/carboxylic-acid class now has its own 60-question bank and the
 14-round Molecule Mission game, including naming. Replace all three Google
 files and deploy a new version to record these two additions. Existing banks
 and games retain their signatures and existing results.
+
+Runehaven: The Like-Terms Quest adds 24 Y7 Maths / Algebra II checkpoints. Each
+level is a separate four-checkpoint recorded game. Unfinished levels keep their
+individual rounds; the summary appears once all four answers are saved. Local
+resume, repeat practice and portraits are never submitted. Install all three
+files and redeploy a new version to enable this new game.

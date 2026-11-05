@@ -241,6 +241,15 @@
                   "duration": "5–15 minutes",
                   "href": "activities/y7/maths/algebra/games/",
                   "image": "activities/y7/maths/algebra/games/cover.svg"
+                },
+                {
+                  "id": "like-terms-quest",
+                  "title": "Runehaven: The Like-Terms Quest",
+                  "description": "Create a pixel hero, solve like-term challenges across six worlds and collect 24 treasures. Guided rules, worked examples, a study journal and local adventure saves.",
+                  "format": "Pixel adventure game",
+                  "duration": "Six levels · save and return",
+                  "href": "activities/y7/maths/algebra-ii/games/like-terms-quest.html",
+                  "image": "assets/like-terms-rpg/cover.svg"
                 }
               ]
             },

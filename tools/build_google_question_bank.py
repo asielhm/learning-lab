@@ -44,6 +44,7 @@ games=json.loads(subprocess.check_output(['node',str(ROOT/'tools/export_game_cat
 game_manifest={'protocol':1,'games':[{key:game[key] for key in ('id','title','course','topic','signature')}|{'roundCount':len(game['rounds']),'preparation':preparation_paths[game['topic']]} for game in games.values()]}
 output+='var GAME_MANIFEST_ = '+json.dumps(game_manifest,ensure_ascii=False,indent=2)+';\n'
 output+='var GAME_CATALOG_ = '+json.dumps(games,ensure_ascii=False,indent=2)+';\n'
+output+=subprocess.check_output(['node',str(ROOT/'tools/export_rpg_grader.mjs')],text=True)
 (ROOT/'assets/records/games.json').write_text(json.dumps(game_manifest,ensure_ascii=False,indent=2)+'\n')
 (ROOT/'google-apps-script/QuestionBank.gs').write_text(output)
 (ROOT/'assets/records/banks.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')

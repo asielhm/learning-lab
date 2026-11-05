@@ -51,7 +51,7 @@ Local server/browser checks cover all 25 banks, identity requirements, recording
 
 ## Recorded question games
 
-The game catalogue includes 43 games / 197 rounds across Y7 Maths, Y9 Science,
+The game catalogue includes 44 games / 221 rounds across Y7 Maths, Y9 Science,
 Y10 Physics and Y10 Chemistry. Public `assets/records/games.json` fingerprints
 match the catalogue appended to QuestionBank.gs. The capability endpoint returns
 `gameManifest` separately, preserving protocol-3 revision compatibility. Old
@@ -76,3 +76,11 @@ pagination protect both game views in the existing private dashboard.
 `tools/build_google_question_bank.py` regenerates the catalogue, matching package,
 preparation references and public coverage. See `docs/assessment-coverage.json`
 for question/round links to the preceding teaching reference.
+
+Runehaven adds six four-checkpoint level sessions (24 quests, 72 authored variants).
+The server validates the chosen canonical variant and collected expression using
+the same safe non-evaluating parser as the client. Matching terms must be fully
+collected. First/final answers include the prompt so variant changes after a
+worked example remain understandable. Hints and worked-example use cap stars at
+one; full rewards require a subsequent fresh answer. Portraits and hero names
+are local, separate from the required student name/class/teacher recording form.

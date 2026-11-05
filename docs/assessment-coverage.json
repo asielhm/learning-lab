@@ -2035,6 +2035,35 @@
         "2": "activities/y7/maths/algebra-ii/prepare.html#game-brackets-workshop-2"
       }
     },
+    "like-terms-rpg": {
+      "path": "activities/y7/maths/algebra-ii/prepare.html",
+      "rounds": {
+        "village-coefficient": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-village-coefficient",
+        "village-family": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-village-family",
+        "village-constant": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-village-constant",
+        "village-first-sum": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-village-first-sum",
+        "meadow-sort": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-meadow-sort",
+        "meadow-combine": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-meadow-combine",
+        "meadow-input": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-meadow-input",
+        "meadow-reason": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-meadow-reason",
+        "cavern-subtract": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-cavern-subtract",
+        "cavern-combine": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-cavern-combine",
+        "cavern-minus-one": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-cavern-minus-one",
+        "cavern-zero": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-cavern-zero",
+        "tower-sort": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-tower-sort",
+        "tower-combine": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-tower-combine",
+        "tower-reason": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-tower-reason",
+        "tower-cubic": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-tower-cubic",
+        "forge-mixed": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-forge-mixed",
+        "forge-sort": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-forge-sort",
+        "forge-combine": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-forge-combine",
+        "forge-signs": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-forge-signs",
+        "vault-story": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-vault-story",
+        "vault-squares": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-vault-squares",
+        "vault-combine": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-vault-combine",
+        "vault-finale": "activities/y7/maths/algebra-ii/prepare.html#game-like-terms-rpg-vault-finale"
+      }
+    },
     "geometry-classic": {
       "path": "activities/y7/maths/geometry-i/prepare.html",
       "rounds": {

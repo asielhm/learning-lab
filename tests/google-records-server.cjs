@@ -171,7 +171,7 @@ assert(publicCapabilities.includes('learning-lab-recording-capabilities'));asser
 // Game recording has its own authenticated views and never changes test results.
 const testCount=context.getTeacherResults(token,{}).total;
 const gameManifest=JSON.parse(fs.readFileSync(path.join(root,'assets/records/games.json')));
-assert.equal(gameManifest.games.length,43);assert.equal(context.GAME_MANIFEST_.games.length,43);
+assert.equal(gameManifest.games.length,44);assert.equal(context.GAME_MANIFEST_.games.length,44);
 function gamePayload(gameId,ids,number=1,answer=null){const game=context.GAME_CATALOG_[gameId],id=crypto.randomUUID();return {kind:'game',version:1,mode:'game',retry:false,eventId:id+'-'+number,sessionId:id,gameId,signature:game.signature,studentName:'Game Student',classroom:'9G',teacherName:'Ms Rivera',startedAt:'2026-10-30T12:00:00Z',questionIds:ids,questionNumber:number,questionId:ids[number-1],attempts:1,assisted:false,revealed:false,firstAnswer:answer,answer};}
 const pic=context.GAME_CATALOG_['gas-picture'],picIds=Object.keys(pic.rounds).slice(0,2),picQ=pic.rounds[picIds[0]];
 const gp=gamePayload('gas-picture',picIds,1,{law:picQ.law,quantities:picQ.quantities});
@@ -206,12 +206,26 @@ context.saveGameAnswer_(organicPayload);
 const namingId=Object.keys(organicGame.rounds).find(id=>organicGame.rounds[id].kind==='naming'),namingRound=organicGame.rounds[namingId];
 context.saveGameAnswer_(gamePayload('organic-molecule-mission',[namingId],1,{choice:namingRound.answer}));
 assert(context.getTeacherResults(token,{view:'gameAnswers',topic:'y10-alcohols-acids'}).rows.every(row=>row[22]==='Server-checked solution'));
+// Runehaven records one four-checkpoint session per level, not one unfinished 24-round game.
+const rpg=context.GAME_CATALOG_['like-terms-rpg'],rpgIds=Object.keys(rpg.rounds);
+for(let level=0;level<6;level++){
+ const ids=rpgIds.slice(level*4,level*4+4),session=crypto.randomUUID();
+ for(const [i,id]of ids.entries()){
+  const variant=rpg.rounds[id].variants[0],answer={variant:0,...(variant.type==='choice'?{choice:variant.answer}:variant.type==='sort'?{placements:Object.fromEntries(variant.cards.map(c=>[c.id,c.key]))}:{expression:variant.solution})};
+  const item={...gamePayload('like-terms-rpg',ids,i+1,answer),sessionId:session,eventId:session+'-'+(i+1),classroom:'7R',assisted:i===1};
+  if(i===0)assert.throws(()=>context.saveGameAnswer_({...item,answer:{variant:99}}),/solution/);
+  context.saveGameAnswer_(item);context.saveGameAnswer_(item);
+  assert.equal(context.getTeacherResults(token,{view:'games',classroom:'7R'}).total,level+(i===3?1:0));
+ }
+}
+const rpgResults=context.getTeacherResults(token,{view:'games',classroom:'7R'});assert.equal(rpgResults.total,6);assert.equal(rpgResults.accuracy,83);assert(rpgResults.rows.every(row=>row[8].includes('Level ')&&row[10]===4));
+assert.equal(context.getTeacherResults(token,{view:'gameAnswers',classroom:'7R'}).total,24);
 for(const metadata of gameManifest.games){const game=context.GAME_CATALOG_[metadata.id],round=Object.keys(game.rounds)[0];context.saveGameAnswer_({...gamePayload(metadata.id,[round]),revealed:true,attempts:0});const filtered=context.getTeacherResults(token,{view:'games',course:metadata.course,topic:metadata.topic});assert(filtered.rows.some(r=>r[7]===metadata.id));}
 assert.throws(()=>context.saveGameAnswer_({...gp,questionIds:['__proto__'],questionId:'__proto__'}),/rounds/);
 assert.throws(()=>context.saveGameAnswer_({...gp,questionNumber:0,eventId:gp.sessionId+'-0'}),/rounds/);
 assert.equal(context.getTeacherResults(token,{}).total,testCount,'Games never inflate revision accuracy');
 assert(context.doGet({parameter:{action:'capabilities',nonce:crypto.randomUUID()}}).html.includes('gameManifest'));
-console.log('Game server: 43 catalogued games, Y9 solution validation, derived stars, required identity, separate views, duplicates, hints/reveals, practice/retry exclusion, text-formatted rows, filters, protected reads and summary repair passed.');
+console.log('Game server: 44 catalogued games, Y9 solution validation, derived stars, required identity, separate views, duplicates, hints/reveals, practice/retry exclusion, text-formatted rows, filters, protected reads and summary repair passed.');
 
 context.logoutTeacher(token);assert.throws(()=>context.getTeacherResults(token,{}),/expired/);
 const nextToken=context.loginTeacher(password).token;context.resetTeacherPassword();assert.throws(()=>context.getTeacherResults(nextToken,{}),/expired/);

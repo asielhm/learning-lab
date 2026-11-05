@@ -1,0 +1,16 @@
+// Self-contained so the exact same parser can be included in Google's scoring file.
+export function parseRpgExpression(raw){
+ let text=String(raw).trim().replace(/[−–]/g,'-').replace(/([xyz])²/g,'$1^2').replace(/([xyz])³/g,'$1^3').replace(/\s+/g,'').replace(/(\d)\*([xyz])/g,'$1$2');
+ if(!text||text.length>140||!/^[0-9xyz^+-]+$/.test(text))return null;
+ const chunks=text.match(/[+-]?[^+-]+/g);if(!chunks||chunks.join('')!==text||chunks.length>24)return null;
+ const map={},seen=new Set();let simplified=true;
+ for(const chunk of chunks){const match=chunk.match(/^([+-]?)(\d*)([xyz])?(?:\^([123]))?$/);if(!match||!match[2]&&!match[3]||match[4]&&!match[3])return null;const key=match[3]?match[3]+(match[4]&&match[4]!=='1'?'^'+match[4]:''):'constant';const n=(match[1]==='-'?-1:1)*(match[2]?Number(match[2]):1);if(!Number.isSafeInteger(n)||Math.abs(n)>999)return null;if(seen.has(key))simplified=false;seen.add(key);if(n===0&&(chunks.length>1||key!=='constant'))simplified=false;map[key]=(map[key]||0)+n;}
+ const result={};for(const key of Object.keys(map).sort())if(map[key])result[key]=map[key];return {map:result,simplified};
+}
+export const familyLabel=key=>key==='constant'?'Constants':key.replace('^2','²').replace('^3','³')+' terms';
+export const termText=({n,key})=>key==='constant'?String(n).replace('-','−'):(n===1?'':n===-1?'−':String(n).replace('-','−'))+key.replace('^2','²').replace('^3','³');
+export function expressionText(terms){return terms.filter(t=>t.n).map((t,i)=>i?(t.n<0?' − ':' + ')+termText({n:Math.abs(t.n),key:t.key}):termText(t)).join('')||'0';}
+export function collectTerms(terms){const map={};for(const t of terms)map[t.key]=(map[t.key]||0)+t.n;return Object.fromEntries(Object.keys(map).sort().filter(k=>map[k]).map(k=>[k,map[k]]));}
+export function mapText(map){const order=['x^3','x^2','x','y^3','y^2','y','z^3','z^2','z','constant'];return expressionText(order.filter(k=>map[k]).map(key=>({key,n:map[key]})));}
+export function checkExpression(raw,expected){const parsed=parseRpgExpression(raw);if(!parsed)return {ok:false,why:'Write a sum of terms using x, y or z, whole-number coefficients and powers ² or ³ (or ^2 / ^3). Keep a sign with every term.'};if(JSON.stringify(parsed.map)!==JSON.stringify(expected))return {ok:false,why:'Keep each letter AND power together. Add signed coefficients within each matching family; constants form their own family.'};if(!parsed.simplified)return {ok:false,why:'Your value matches. Now finish collecting: leave only one term in each family, remove zero terms and keep the variable part unchanged.'};return {ok:true,why:'The coefficients are collected and every variable part is preserved.'};}
+export function checkRpgAnswer(round,answer){if(!Number.isInteger(answer?.variant)||answer.variant<0)return false;const variant=round.variants[answer.variant];if(!variant)return false;if(variant.type==='choice')return answer.choice===variant.answer;if(variant.type==='sort')return !!answer.placements&&typeof answer.placements==='object'&&!Array.isArray(answer.placements)&&variant.cards.every(c=>answer.placements[c.id]===c.key)&&Object.keys(answer.placements).length===variant.cards.length;return typeof answer.expression==='string'&&checkExpression(answer.expression,variant.expected).ok;}

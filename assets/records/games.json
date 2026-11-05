@@ -387,6 +387,15 @@
       "signature": "507c4d79f1c1d704eba808494619c6c0c87025d5cdb1a62ce580056b5e43ca45",
       "roundCount": 14,
       "preparation": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/prepare.html"
+    },
+    {
+      "id": "like-terms-rpg",
+      "title": "Runehaven: The Like-Terms Quest",
+      "course": "Year 7 Maths",
+      "topic": "algebra-ii",
+      "signature": "459bb97cfa30a48c47ef7a29cf5c62a10c8bcb99248db6796d07853b5cd8c754",
+      "roundCount": 24,
+      "preparation": "activities/y7/maths/algebra-ii/prepare.html"
     }
   ]
 }

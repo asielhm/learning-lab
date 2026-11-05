@@ -20641,6 +20641,15 @@ var GAME_MANIFEST_ = {
       "signature": "507c4d79f1c1d704eba808494619c6c0c87025d5cdb1a62ce580056b5e43ca45",
       "roundCount": 14,
       "preparation": "activities/y10/chemistry/organic-chemistry/alcohols-carboxylic-acids/prepare.html"
+    },
+    {
+      "id": "like-terms-rpg",
+      "title": "Runehaven: The Like-Terms Quest",
+      "course": "Year 7 Maths",
+      "topic": "algebra-ii",
+      "signature": "459bb97cfa30a48c47ef7a29cf5c62a10c8bcb99248db6796d07853b5cd8c754",
+      "roundCount": 24,
+      "preparation": "activities/y7/maths/algebra-ii/prepare.html"
     }
   ]
 };
@@ -22432,5 +22441,2212 @@ var GAME_CATALOG_ = {
       }
     },
     "signature": "507c4d79f1c1d704eba808494619c6c0c87025d5cdb1a62ce580056b5e43ca45"
+  },
+  "like-terms-rpg": {
+    "id": "like-terms-rpg",
+    "title": "Runehaven: The Like-Terms Quest",
+    "course": "Year 7 Maths",
+    "topic": "algebra-ii",
+    "grader": "like-terms-rpg",
+    "rule": "standard",
+    "rounds": {
+      "village-coefficient": {
+        "prompt": "Level 1 · Read the coefficient",
+        "explanation": "A variable is a letter representing a number. A term is a number, a variable, or their product. A coefficient is the numerical multiplier: in 4x it is 4. A constant has no variable factor. Like terms have the same letter AND power. Worked example: 3x + 2x = (3 + 2)x = 5x. You are adding copies of x, so the result is not 5x².",
+        "solution": "What is the coefficient of 3x? → 3. 3x means 3 × x. The numerical multiplier is 3.\nWhat is the coefficient of 7y? → 7. The coefficient counts copies of y: seven.\nWhat is the coefficient of 4z? → 4. 4z has coefficient 4 and variable part z.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "What is the coefficient of 3x?",
+            "options": [
+              "3",
+              "x",
+              "3x",
+              "1"
+            ],
+            "answer": 0,
+            "why": "3x means 3 × x. The numerical multiplier is 3."
+          },
+          {
+            "type": "choice",
+            "prompt": "What is the coefficient of 7y?",
+            "options": [
+              "y",
+              "7y",
+              "7",
+              "0"
+            ],
+            "answer": 2,
+            "why": "The coefficient counts copies of y: seven."
+          },
+          {
+            "type": "choice",
+            "prompt": "What is the coefficient of 4z?",
+            "options": [
+              "4z",
+              "z",
+              "1",
+              "4"
+            ],
+            "answer": 3,
+            "why": "4z has coefficient 4 and variable part z."
+          }
+        ]
+      },
+      "village-family": {
+        "prompt": "Level 1 · Find a matching rune",
+        "explanation": "A variable is a letter representing a number. A term is a number, a variable, or their product. A coefficient is the numerical multiplier: in 4x it is 4. A constant has no variable factor. Like terms have the same letter AND power. Worked example: 3x + 2x = (3 + 2)x = 5x. You are adding copies of x, so the result is not 5x².",
+        "solution": "Which term is like 2x? → 5x. Only 5x has exactly the same variable part x.\nWhich term is like 3y? → 8y. The coefficients can differ; the variable part must stay y.\nWhich term is like 6z? → 2z. Both 6z and 2z are z terms.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Which term is like 2x?",
+            "options": [
+              "2y",
+              "5x",
+              "2x²",
+              "7"
+            ],
+            "answer": 1,
+            "why": "Only 5x has exactly the same variable part x."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which term is like 3y?",
+            "options": [
+              "3x",
+              "y²",
+              "8y",
+              "3"
+            ],
+            "answer": 2,
+            "why": "The coefficients can differ; the variable part must stay y."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which term is like 6z?",
+            "options": [
+              "2z",
+              "6",
+              "z²",
+              "6x"
+            ],
+            "answer": 0,
+            "why": "Both 6z and 2z are z terms."
+          }
+        ]
+      },
+      "village-constant": {
+        "prompt": "Level 1 · Find the known number",
+        "explanation": "A variable is a letter representing a number. A term is a number, a variable, or their product. A coefficient is the numerical multiplier: in 4x it is 4. A constant has no variable factor. Like terms have the same letter AND power. Worked example: 3x + 2x = (3 + 2)x = 5x. You are adding copies of x, so the result is not 5x².",
+        "solution": "Which term is a constant in 3x + 8 + 2y? → 8. 8 has no variable factor.\nWhich term is a constant in 5y + 4 + x? → 4. 4 is a known number, with no variable part.\nWhich term is a constant in z + 6 + 3x? → 6. A constant can stand alone as a numerical term.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Which term is a constant in 3x + 8 + 2y?",
+            "options": [
+              "3x",
+              "2y",
+              "8",
+              "x"
+            ],
+            "answer": 2,
+            "why": "8 has no variable factor."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which term is a constant in 5y + 4 + x?",
+            "options": [
+              "4",
+              "5y",
+              "x",
+              "y"
+            ],
+            "answer": 0,
+            "why": "4 is a known number, with no variable part."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which term is a constant in z + 6 + 3x?",
+            "options": [
+              "z",
+              "6",
+              "3x",
+              "x"
+            ],
+            "answer": 1,
+            "why": "A constant can stand alone as a numerical term."
+          }
+        ]
+      },
+      "village-first-sum": {
+        "prompt": "Level 1 · Repair the village sign",
+        "explanation": "A variable is a letter representing a number. A term is a number, a variable, or their product. A coefficient is the numerical multiplier: in 4x it is 4. A constant has no variable factor. Like terms have the same letter AND power. Worked example: 3x + 2x = (3 + 2)x = 5x. You are adding copies of x, so the result is not 5x².",
+        "solution": "Collect 2x + 3x. → 5x. Add coefficients 2 + 3. Keep the variable part x.\nCollect 4y + 2y. → 6y. Four copies and two copies of y make six copies.\nCollect 3z + 5z. → 8z. 3 + 5 = 8, and the variable part remains z.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Collect 2x + 3x.",
+            "options": [
+              "5x²",
+              "6x",
+              "5x",
+              "5"
+            ],
+            "answer": 2,
+            "why": "Add coefficients 2 + 3. Keep the variable part x."
+          },
+          {
+            "type": "choice",
+            "prompt": "Collect 4y + 2y.",
+            "options": [
+              "8y",
+              "6y",
+              "6y²",
+              "6"
+            ],
+            "answer": 1,
+            "why": "Four copies and two copies of y make six copies."
+          },
+          {
+            "type": "choice",
+            "prompt": "Collect 3z + 5z.",
+            "options": [
+              "8",
+              "15z",
+              "8z²",
+              "8z"
+            ],
+            "answer": 3,
+            "why": "3 + 5 = 8, and the variable part remains z."
+          }
+        ]
+      },
+      "meadow-sort": {
+        "prompt": "Level 2 · Sort the supply crates",
+        "explanation": "Collect matching variable parts separately. x and y can stand for different numbers, so they do not combine into one term. You may reorder a sum if you carry each sign with its term. Worked example: 2x + 3y + 4x + y = 6x + 4y. The coefficient of y is 1 when no number is written.",
+        "solution": "Sort the signed terms into matching letter-and-power families. → 3x belongs to x terms; 2y belongs to y terms; 4 belongs to Constants; 5x belongs to x terms; y belongs to y terms; 7 belongs to Constants. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.\nSort the signed terms into matching letter-and-power families. → 2x belongs to x terms; 6y belongs to y terms; 3 belongs to Constants; 4x belongs to x terms; 3y belongs to y terms; 2 belongs to Constants. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.\nSort the signed terms into matching letter-and-power families. → x belongs to x terms; 4y belongs to y terms; 6 belongs to Constants; 7x belongs to x terms; 2y belongs to y terms; 3 belongs to Constants. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.",
+        "variants": [
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 3,
+                "key": "x",
+                "id": "t0",
+                "label": "3x"
+              },
+              {
+                "n": 2,
+                "key": "y",
+                "id": "t1",
+                "label": "2y"
+              },
+              {
+                "n": 4,
+                "key": "constant",
+                "id": "t2",
+                "label": "4"
+              },
+              {
+                "n": 5,
+                "key": "x",
+                "id": "t3",
+                "label": "5x"
+              },
+              {
+                "n": 1,
+                "key": "y",
+                "id": "t4",
+                "label": "y"
+              },
+              {
+                "n": 7,
+                "key": "constant",
+                "id": "t5",
+                "label": "7"
+              }
+            ],
+            "bins": [
+              {
+                "key": "x",
+                "label": "x terms"
+              },
+              {
+                "key": "y",
+                "label": "y terms"
+              },
+              {
+                "key": "constant",
+                "label": "Constants"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 2,
+                "key": "x",
+                "id": "t0",
+                "label": "2x"
+              },
+              {
+                "n": 6,
+                "key": "y",
+                "id": "t1",
+                "label": "6y"
+              },
+              {
+                "n": 3,
+                "key": "constant",
+                "id": "t2",
+                "label": "3"
+              },
+              {
+                "n": 4,
+                "key": "x",
+                "id": "t3",
+                "label": "4x"
+              },
+              {
+                "n": 3,
+                "key": "y",
+                "id": "t4",
+                "label": "3y"
+              },
+              {
+                "n": 2,
+                "key": "constant",
+                "id": "t5",
+                "label": "2"
+              }
+            ],
+            "bins": [
+              {
+                "key": "x",
+                "label": "x terms"
+              },
+              {
+                "key": "y",
+                "label": "y terms"
+              },
+              {
+                "key": "constant",
+                "label": "Constants"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 1,
+                "key": "x",
+                "id": "t0",
+                "label": "x"
+              },
+              {
+                "n": 4,
+                "key": "y",
+                "id": "t1",
+                "label": "4y"
+              },
+              {
+                "n": 6,
+                "key": "constant",
+                "id": "t2",
+                "label": "6"
+              },
+              {
+                "n": 7,
+                "key": "x",
+                "id": "t3",
+                "label": "7x"
+              },
+              {
+                "n": 2,
+                "key": "y",
+                "id": "t4",
+                "label": "2y"
+              },
+              {
+                "n": 3,
+                "key": "constant",
+                "id": "t5",
+                "label": "3"
+              }
+            ],
+            "bins": [
+              {
+                "key": "x",
+                "label": "x terms"
+              },
+              {
+                "key": "y",
+                "label": "y terms"
+              },
+              {
+                "key": "constant",
+                "label": "Constants"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          }
+        ]
+      },
+      "meadow-combine": {
+        "prompt": "Level 2 · Rebuild the rune bridge",
+        "explanation": "Collect matching variable parts separately. x and y can stand for different numbers, so they do not combine into one term. You may reorder a sum if you carry each sign with its term. Worked example: 2x + 3y + 4x + y = 6x + 4y. The coefficient of y is 1 when no number is written.",
+        "solution": "Collect the like terms: 3x + 2x + 4y + y → 3x + 2x + 4y + y = 5x + 5y. Combine x with x, and y with y. A bare y has coefficient 1.\nCollect the like terms: 2x + 5x + 3y + 2y → 2x + 5x + 3y + 2y = 7x + 5y. Each matching family keeps its variable part.\nCollect the like terms: 4x + x + 2y + 6y → 4x + x + 2y + 6y = 5x + 8y. Add the coefficients inside each family.",
+        "variants": [
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 3,
+                "key": "x"
+              },
+              {
+                "n": 2,
+                "key": "x"
+              },
+              {
+                "n": 4,
+                "key": "y"
+              },
+              {
+                "n": 1,
+                "key": "y"
+              }
+            ],
+            "prompt": "Collect the like terms: 3x + 2x + 4y + y",
+            "expected": {
+              "x": 5,
+              "y": 5
+            },
+            "solution": "5x + 5y",
+            "why": "Combine x with x, and y with y. A bare y has coefficient 1."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x"
+              },
+              {
+                "n": 5,
+                "key": "x"
+              },
+              {
+                "n": 3,
+                "key": "y"
+              },
+              {
+                "n": 2,
+                "key": "y"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x + 5x + 3y + 2y",
+            "expected": {
+              "x": 7,
+              "y": 5
+            },
+            "solution": "7x + 5y",
+            "why": "Each matching family keeps its variable part."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 4,
+                "key": "x"
+              },
+              {
+                "n": 1,
+                "key": "x"
+              },
+              {
+                "n": 2,
+                "key": "y"
+              },
+              {
+                "n": 6,
+                "key": "y"
+              }
+            ],
+            "prompt": "Collect the like terms: 4x + x + 2y + 6y",
+            "expected": {
+              "x": 5,
+              "y": 8
+            },
+            "solution": "5x + 8y",
+            "why": "Add the coefficients inside each family."
+          }
+        ]
+      },
+      "meadow-input": {
+        "prompt": "Level 2 · Pack the travelling bags",
+        "explanation": "Collect matching variable parts separately. x and y can stand for different numbers, so they do not combine into one term. You may reorder a sum if you carry each sign with its term. Worked example: 2x + 3y + 4x + y = 6x + 4y. The coefficient of y is 1 when no number is written.",
+        "solution": "Collect the like terms: 4x + 2y + 3x + y → 4x + 2y + 3x + y = 7x + 3y. Collect the x copies and the y copies independently.\nCollect the like terms: 2x + 5y + 6x + 2y → 2x + 5y + 6x + 2y = 8x + 7y. The x coefficient is 2 + 6; the y coefficient is 5 + 2.\nCollect the like terms: 5x + y + 2x + 4y → 5x + y + 2x + 4y = 7x + 5y. Remember y is 1y.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 4,
+                "key": "x"
+              },
+              {
+                "n": 2,
+                "key": "y"
+              },
+              {
+                "n": 3,
+                "key": "x"
+              },
+              {
+                "n": 1,
+                "key": "y"
+              }
+            ],
+            "prompt": "Collect the like terms: 4x + 2y + 3x + y",
+            "expected": {
+              "x": 7,
+              "y": 3
+            },
+            "solution": "7x + 3y",
+            "why": "Collect the x copies and the y copies independently."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x"
+              },
+              {
+                "n": 5,
+                "key": "y"
+              },
+              {
+                "n": 6,
+                "key": "x"
+              },
+              {
+                "n": 2,
+                "key": "y"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x + 5y + 6x + 2y",
+            "expected": {
+              "x": 8,
+              "y": 7
+            },
+            "solution": "8x + 7y",
+            "why": "The x coefficient is 2 + 6; the y coefficient is 5 + 2."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 5,
+                "key": "x"
+              },
+              {
+                "n": 1,
+                "key": "y"
+              },
+              {
+                "n": 2,
+                "key": "x"
+              },
+              {
+                "n": 4,
+                "key": "y"
+              }
+            ],
+            "prompt": "Collect the like terms: 5x + y + 2x + 4y",
+            "expected": {
+              "x": 7,
+              "y": 5
+            },
+            "solution": "7x + 5y",
+            "why": "Remember y is 1y."
+          }
+        ]
+      },
+      "meadow-reason": {
+        "prompt": "Level 2 · Explain an unlike pair",
+        "explanation": "Collect matching variable parts separately. x and y can stand for different numbers, so they do not combine into one term. You may reorder a sum if you carry each sign with its term. Worked example: 2x + 3y + 4x + y = 6x + 4y. The coefficient of y is 1 when no number is written.",
+        "solution": "Why does 3x + 2y stay as two terms? → The variable parts differ.. x and y can have different values. Their variable parts do not match.\nWhich explanation justifies 2x + 5y + x = 3x + 5y? → A bare x has coefficient 1, so 2x + x = 3x.. Only the two x terms combine; the y term stays.\nWhich expression is already collected? → 3x + 2y. 3x and 2y belong to different families; no collection remains.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Why does 3x + 2y stay as two terms?",
+            "options": [
+              "The variable parts differ.",
+              "All coefficients must be equal.",
+              "Addition always makes powers.",
+              "x must be 2."
+            ],
+            "answer": 0,
+            "why": "x and y can have different values. Their variable parts do not match."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which explanation justifies 2x + 5y + x = 3x + 5y?",
+            "options": [
+              "The y is removed.",
+              "A bare x has coefficient 1, so 2x + x = 3x.",
+              "x becomes x².",
+              "All coefficients multiply."
+            ],
+            "answer": 1,
+            "why": "Only the two x terms combine; the y term stays."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which expression is already collected?",
+            "options": [
+              "x + x",
+              "2y + y",
+              "3x + 2y",
+              "4z + z"
+            ],
+            "answer": 2,
+            "why": "3x and 2y belong to different families; no collection remains."
+          }
+        ]
+      },
+      "cavern-subtract": {
+        "prompt": "Level 3 · Light the first lantern",
+        "explanation": "The sign is part of a term. −x means −1x. Add signed coefficients: 7x − 3x = 4x. Equal positive and negative copies cancel: x − x = 0. A zero coefficient means that term contributes nothing. Worked example: 5x − 2x − x + 4 = (5 − 2 − 1)x + 4 = 2x + 4.",
+        "solution": "Collect the like terms: 7x − 3x + 2y → 7x − 3x + 2y = 4x + 2y. The x coefficient is 7 − 3. Keep the y term.\nCollect the like terms: 8y − 5y + 3z → 8y − 5y + 3z = 3y + 3z. Subtract the y coefficients, not their letters.\nCollect the like terms: 9z − 4z + 2x → 9z − 4z + 2x = 2x + 5z. The subtraction sign travels with −4z.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 7,
+                "key": "x"
+              },
+              {
+                "n": -3,
+                "key": "x"
+              },
+              {
+                "n": 2,
+                "key": "y"
+              }
+            ],
+            "prompt": "Collect the like terms: 7x − 3x + 2y",
+            "expected": {
+              "x": 4,
+              "y": 2
+            },
+            "solution": "4x + 2y",
+            "why": "The x coefficient is 7 − 3. Keep the y term."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 8,
+                "key": "y"
+              },
+              {
+                "n": -5,
+                "key": "y"
+              },
+              {
+                "n": 3,
+                "key": "z"
+              }
+            ],
+            "prompt": "Collect the like terms: 8y − 5y + 3z",
+            "expected": {
+              "y": 3,
+              "z": 3
+            },
+            "solution": "3y + 3z",
+            "why": "Subtract the y coefficients, not their letters."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 9,
+                "key": "z"
+              },
+              {
+                "n": -4,
+                "key": "z"
+              },
+              {
+                "n": 2,
+                "key": "x"
+              }
+            ],
+            "prompt": "Collect the like terms: 9z − 4z + 2x",
+            "expected": {
+              "x": 2,
+              "z": 5
+            },
+            "solution": "2x + 5z",
+            "why": "The subtraction sign travels with −4z."
+          }
+        ]
+      },
+      "cavern-combine": {
+        "prompt": "Level 3 · Balance the crystals",
+        "explanation": "The sign is part of a term. −x means −1x. Add signed coefficients: 7x − 3x = 4x. Equal positive and negative copies cancel: x − x = 0. A zero coefficient means that term contributes nothing. Worked example: 5x − 2x − x + 4 = (5 − 2 − 1)x + 4 = 2x + 4.",
+        "solution": "Collect the like terms: 5x − 2x − x + 3 → 5x − 2x − x + 3 = 2x + 3. −x counts as −1x.\nCollect the like terms: 6y − 3y − y + 4 → 6y − 3y − y + 4 = 2y + 4. Add 6, −3 and −1 for the y family.\nCollect the like terms: 7z − 2z − z + 2 → 7z − 2z − z + 2 = 4z + 2. Keep the constant separate while collecting z terms.",
+        "variants": [
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 5,
+                "key": "x"
+              },
+              {
+                "n": -2,
+                "key": "x"
+              },
+              {
+                "n": -1,
+                "key": "x"
+              },
+              {
+                "n": 3,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 5x − 2x − x + 3",
+            "expected": {
+              "constant": 3,
+              "x": 2
+            },
+            "solution": "2x + 3",
+            "why": "−x counts as −1x."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 6,
+                "key": "y"
+              },
+              {
+                "n": -3,
+                "key": "y"
+              },
+              {
+                "n": -1,
+                "key": "y"
+              },
+              {
+                "n": 4,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 6y − 3y − y + 4",
+            "expected": {
+              "constant": 4,
+              "y": 2
+            },
+            "solution": "2y + 4",
+            "why": "Add 6, −3 and −1 for the y family."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 7,
+                "key": "z"
+              },
+              {
+                "n": -2,
+                "key": "z"
+              },
+              {
+                "n": -1,
+                "key": "z"
+              },
+              {
+                "n": 2,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 7z − 2z − z + 2",
+            "expected": {
+              "constant": 2,
+              "z": 4
+            },
+            "solution": "4z + 2",
+            "why": "Keep the constant separate while collecting z terms."
+          }
+        ]
+      },
+      "cavern-minus-one": {
+        "prompt": "Level 3 · Read the hidden coefficient",
+        "explanation": "The sign is part of a term. −x means −1x. Add signed coefficients: 7x − 3x = 4x. Equal positive and negative copies cancel: x − x = 0. A zero coefficient means that term contributes nothing. Worked example: 5x − 2x − x + 4 = (5 − 2 − 1)x + 4 = 2x + 4.",
+        "solution": "What is the coefficient of −x? → −1. −x means −1 × x.\nWhat is the coefficient of −y? → −1. The unwritten numerical coefficient is −1.\nWhich term means negative one copy of z? → −z. A minus sign with no number means coefficient −1.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "What is the coefficient of −x?",
+            "options": [
+              "0",
+              "1",
+              "−1",
+              "x"
+            ],
+            "answer": 2,
+            "why": "−x means −1 × x."
+          },
+          {
+            "type": "choice",
+            "prompt": "What is the coefficient of −y?",
+            "options": [
+              "y",
+              "−1",
+              "0",
+              "1"
+            ],
+            "answer": 1,
+            "why": "The unwritten numerical coefficient is −1."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which term means negative one copy of z?",
+            "options": [
+              "z",
+              "0z",
+              "z²",
+              "−z"
+            ],
+            "answer": 3,
+            "why": "A minus sign with no number means coefficient −1."
+          }
+        ]
+      },
+      "cavern-zero": {
+        "prompt": "Level 3 · Open the cancellation gate",
+        "explanation": "The sign is part of a term. −x means −1x. Add signed coefficients: 7x − 3x = 4x. Equal positive and negative copies cancel: x − x = 0. A zero coefficient means that term contributes nothing. Worked example: 5x − 2x − x + 4 = (5 − 2 − 1)x + 4 = 2x + 4.",
+        "solution": "Collect the like terms: 4x − 4x + 5 → 4x − 4x + 5 = 5. The x terms cancel; keep the constant.\nCollect the like terms: 6y − 6y + 2 → 6y − 6y + 2 = 2. Zero copies of y add nothing.\nCollect the like terms: 3z − 3z → 3z − 3z = 0. Every positive copy has a matching negative copy. The whole expression is 0.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 4,
+                "key": "x"
+              },
+              {
+                "n": -4,
+                "key": "x"
+              },
+              {
+                "n": 5,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 4x − 4x + 5",
+            "expected": {
+              "constant": 5
+            },
+            "solution": "5",
+            "why": "The x terms cancel; keep the constant."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 6,
+                "key": "y"
+              },
+              {
+                "n": -6,
+                "key": "y"
+              },
+              {
+                "n": 2,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 6y − 6y + 2",
+            "expected": {
+              "constant": 2
+            },
+            "solution": "2",
+            "why": "Zero copies of y add nothing."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 3,
+                "key": "z"
+              },
+              {
+                "n": -3,
+                "key": "z"
+              }
+            ],
+            "prompt": "Collect the like terms: 3z − 3z",
+            "expected": {},
+            "solution": "0",
+            "why": "Every positive copy has a matching negative copy. The whole expression is 0."
+          }
+        ]
+      },
+      "tower-sort": {
+        "prompt": "Level 4 · File the power scrolls",
+        "explanation": "x² means x × x; x³ means x × x × x. An exponent counts repeated factors, not copies being added. x, x² and x³ are different variable parts. In 2x² + 3x², add 2 + 3 and keep x² unchanged. Worked example: 4x² + x + 2x² = 6x² + x. You do not add exponents when collecting a sum.",
+        "solution": "Sort the signed terms into matching letter-and-power families. → 3x belongs to x terms; 2x² belongs to x² terms; x³ belongs to x³ terms; −x belongs to x terms; 4x² belongs to x² terms; 2x³ belongs to x³ terms. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.\nSort the signed terms into matching letter-and-power families. → 2x belongs to x terms; 5x² belongs to x² terms; 3x³ belongs to x³ terms; 4x belongs to x terms; −2x² belongs to x² terms; x³ belongs to x³ terms. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.\nSort the signed terms into matching letter-and-power families. → x belongs to x terms; 3x² belongs to x² terms; 5x³ belongs to x³ terms; 6x belongs to x terms; 2x² belongs to x² terms; −x³ belongs to x³ terms. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.",
+        "variants": [
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 3,
+                "key": "x",
+                "id": "t0",
+                "label": "3x"
+              },
+              {
+                "n": 2,
+                "key": "x^2",
+                "id": "t1",
+                "label": "2x²"
+              },
+              {
+                "n": 1,
+                "key": "x^3",
+                "id": "t2",
+                "label": "x³"
+              },
+              {
+                "n": -1,
+                "key": "x",
+                "id": "t3",
+                "label": "−x"
+              },
+              {
+                "n": 4,
+                "key": "x^2",
+                "id": "t4",
+                "label": "4x²"
+              },
+              {
+                "n": 2,
+                "key": "x^3",
+                "id": "t5",
+                "label": "2x³"
+              }
+            ],
+            "bins": [
+              {
+                "key": "x",
+                "label": "x terms"
+              },
+              {
+                "key": "x^2",
+                "label": "x² terms"
+              },
+              {
+                "key": "x^3",
+                "label": "x³ terms"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 2,
+                "key": "x",
+                "id": "t0",
+                "label": "2x"
+              },
+              {
+                "n": 5,
+                "key": "x^2",
+                "id": "t1",
+                "label": "5x²"
+              },
+              {
+                "n": 3,
+                "key": "x^3",
+                "id": "t2",
+                "label": "3x³"
+              },
+              {
+                "n": 4,
+                "key": "x",
+                "id": "t3",
+                "label": "4x"
+              },
+              {
+                "n": -2,
+                "key": "x^2",
+                "id": "t4",
+                "label": "−2x²"
+              },
+              {
+                "n": 1,
+                "key": "x^3",
+                "id": "t5",
+                "label": "x³"
+              }
+            ],
+            "bins": [
+              {
+                "key": "x",
+                "label": "x terms"
+              },
+              {
+                "key": "x^2",
+                "label": "x² terms"
+              },
+              {
+                "key": "x^3",
+                "label": "x³ terms"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 1,
+                "key": "x",
+                "id": "t0",
+                "label": "x"
+              },
+              {
+                "n": 3,
+                "key": "x^2",
+                "id": "t1",
+                "label": "3x²"
+              },
+              {
+                "n": 5,
+                "key": "x^3",
+                "id": "t2",
+                "label": "5x³"
+              },
+              {
+                "n": 6,
+                "key": "x",
+                "id": "t3",
+                "label": "6x"
+              },
+              {
+                "n": 2,
+                "key": "x^2",
+                "id": "t4",
+                "label": "2x²"
+              },
+              {
+                "n": -1,
+                "key": "x^3",
+                "id": "t5",
+                "label": "−x³"
+              }
+            ],
+            "bins": [
+              {
+                "key": "x",
+                "label": "x terms"
+              },
+              {
+                "key": "x^2",
+                "label": "x² terms"
+              },
+              {
+                "key": "x^3",
+                "label": "x³ terms"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          }
+        ]
+      },
+      "tower-combine": {
+        "prompt": "Level 4 · Focus the square lenses",
+        "explanation": "x² means x × x; x³ means x × x × x. An exponent counts repeated factors, not copies being added. x, x² and x³ are different variable parts. In 2x² + 3x², add 2 + 3 and keep x² unchanged. Worked example: 4x² + x + 2x² = 6x² + x. You do not add exponents when collecting a sum.",
+        "solution": "Collect the like terms: 2x² + 3x² + 4y² + y² → 2x² + 3x² + 4y² + y² = 5x² + 5y². Match both the letter and its exponent.\nCollect the like terms: 5x² − 2x² + 3y² + 2y² → 5x² − 2x² + 3y² + 2y² = 3x² + 5y². x² and y² are different families even though both are squared.\nCollect the like terms: 4x² + x² + 6y² − 3y² → 4x² + x² + 6y² − 3y² = 5x² + 3y². Collect each square family separately.",
+        "variants": [
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x^2"
+              },
+              {
+                "n": 3,
+                "key": "x^2"
+              },
+              {
+                "n": 4,
+                "key": "y^2"
+              },
+              {
+                "n": 1,
+                "key": "y^2"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x² + 3x² + 4y² + y²",
+            "expected": {
+              "x^2": 5,
+              "y^2": 5
+            },
+            "solution": "5x² + 5y²",
+            "why": "Match both the letter and its exponent."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 5,
+                "key": "x^2"
+              },
+              {
+                "n": -2,
+                "key": "x^2"
+              },
+              {
+                "n": 3,
+                "key": "y^2"
+              },
+              {
+                "n": 2,
+                "key": "y^2"
+              }
+            ],
+            "prompt": "Collect the like terms: 5x² − 2x² + 3y² + 2y²",
+            "expected": {
+              "x^2": 3,
+              "y^2": 5
+            },
+            "solution": "3x² + 5y²",
+            "why": "x² and y² are different families even though both are squared."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 4,
+                "key": "x^2"
+              },
+              {
+                "n": 1,
+                "key": "x^2"
+              },
+              {
+                "n": 6,
+                "key": "y^2"
+              },
+              {
+                "n": -3,
+                "key": "y^2"
+              }
+            ],
+            "prompt": "Collect the like terms: 4x² + x² + 6y² − 3y²",
+            "expected": {
+              "x^2": 5,
+              "y^2": 3
+            },
+            "solution": "5x² + 3y²",
+            "why": "Collect each square family separately."
+          }
+        ]
+      },
+      "tower-reason": {
+        "prompt": "Level 4 · Protect the exponents",
+        "explanation": "x² means x × x; x³ means x × x × x. An exponent counts repeated factors, not copies being added. x, x² and x³ are different variable parts. In 2x² + 3x², add 2 + 3 and keep x² unchanged. Worked example: 4x² + x + 2x² = 6x² + x. You do not add exponents when collecting a sum.",
+        "solution": "Collect 3x² + 2x². → 5x². You add coefficients and keep the matching variable part x².\nWhy can 2x² and 3x not collect into one term? → Their powers differ.. The variable part includes the power: x² is not x.\nWhich description of x³ is correct? → x × x × x. A power counts factors. Three copies added would be 3x.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Collect 3x² + 2x².",
+            "options": [
+              "5x⁴",
+              "5x²",
+              "6x²",
+              "5x"
+            ],
+            "answer": 1,
+            "why": "You add coefficients and keep the matching variable part x²."
+          },
+          {
+            "type": "choice",
+            "prompt": "Why can 2x² and 3x not collect into one term?",
+            "options": [
+              "Their coefficients differ.",
+              "They both contain x.",
+              "Their powers differ.",
+              "x must be zero."
+            ],
+            "answer": 2,
+            "why": "The variable part includes the power: x² is not x."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which description of x³ is correct?",
+            "options": [
+              "x + x + x",
+              "3 × x",
+              "x × x × x",
+              "x × 3"
+            ],
+            "answer": 2,
+            "why": "A power counts factors. Three copies added would be 3x."
+          }
+        ]
+      },
+      "tower-cubic": {
+        "prompt": "Level 4 · Restore the cubic beacon",
+        "explanation": "x² means x × x; x³ means x × x × x. An exponent counts repeated factors, not copies being added. x, x² and x³ are different variable parts. In 2x² + 3x², add 2 + 3 and keep x² unchanged. Worked example: 4x² + x + 2x² = 6x² + x. You do not add exponents when collecting a sum.",
+        "solution": "Collect the like terms: 2x³ + 4x³ − x³ → 2x³ + 4x³ − x³ = 5x³. Add coefficients 2 + 4 − 1; keep x³.\nCollect the like terms: 7y³ − 2y³ − y³ → 7y³ − 2y³ − y³ = 4y³. All three terms have variable part y³.\nCollect the like terms: 3z³ + 5z³ − 2z³ → 3z³ + 5z³ − 2z³ = 6z³. The exponent stays 3 while signed coefficients combine.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x^3"
+              },
+              {
+                "n": 4,
+                "key": "x^3"
+              },
+              {
+                "n": -1,
+                "key": "x^3"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x³ + 4x³ − x³",
+            "expected": {
+              "x^3": 5
+            },
+            "solution": "5x³",
+            "why": "Add coefficients 2 + 4 − 1; keep x³."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 7,
+                "key": "y^3"
+              },
+              {
+                "n": -2,
+                "key": "y^3"
+              },
+              {
+                "n": -1,
+                "key": "y^3"
+              }
+            ],
+            "prompt": "Collect the like terms: 7y³ − 2y³ − y³",
+            "expected": {
+              "y^3": 4
+            },
+            "solution": "4y³",
+            "why": "All three terms have variable part y³."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 3,
+                "key": "z^3"
+              },
+              {
+                "n": 5,
+                "key": "z^3"
+              },
+              {
+                "n": -2,
+                "key": "z^3"
+              }
+            ],
+            "prompt": "Collect the like terms: 3z³ + 5z³ − 2z³",
+            "expected": {
+              "z^3": 6
+            },
+            "solution": "6z³",
+            "why": "The exponent stays 3 while signed coefficients combine."
+          }
+        ]
+      },
+      "forge-mixed": {
+        "prompt": "Level 5 · Sort out the order form",
+        "explanation": "A simplified sum contains one term per matching variable part. Constants form their own family. Reordering is allowed when signs stay attached. Remove zero terms, but do not drop an unlike family just because it has no partner. Worked example: 3x + 2y + 5 + 4x − y + 2 = 7x + y + 7. Collect x, y and constants separately.",
+        "solution": "Collect the like terms: 3x + 2y + 5 + 4x − y + 2 → 3x + 2y + 5 + 4x − y + 2 = 7x + y + 7. There are three families: x, y and constants.\nCollect the like terms: 5x + 3y + 4 − 2x + y + 3 → 5x + 3y + 4 − 2x + y + 3 = 3x + 4y + 7. Carry the minus sign with −2x.\nCollect the like terms: 2x + 6y + 3 + 4x − 2y + 5 → 2x + 6y + 3 + 4x − 2y + 5 = 6x + 4y + 8. Add matching coefficients, including those of constants.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 3,
+                "key": "x"
+              },
+              {
+                "n": 2,
+                "key": "y"
+              },
+              {
+                "n": 5,
+                "key": "constant"
+              },
+              {
+                "n": 4,
+                "key": "x"
+              },
+              {
+                "n": -1,
+                "key": "y"
+              },
+              {
+                "n": 2,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 3x + 2y + 5 + 4x − y + 2",
+            "expected": {
+              "constant": 7,
+              "x": 7,
+              "y": 1
+            },
+            "solution": "7x + y + 7",
+            "why": "There are three families: x, y and constants."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 5,
+                "key": "x"
+              },
+              {
+                "n": 3,
+                "key": "y"
+              },
+              {
+                "n": 4,
+                "key": "constant"
+              },
+              {
+                "n": -2,
+                "key": "x"
+              },
+              {
+                "n": 1,
+                "key": "y"
+              },
+              {
+                "n": 3,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 5x + 3y + 4 − 2x + y + 3",
+            "expected": {
+              "constant": 7,
+              "x": 3,
+              "y": 4
+            },
+            "solution": "3x + 4y + 7",
+            "why": "Carry the minus sign with −2x."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x"
+              },
+              {
+                "n": 6,
+                "key": "y"
+              },
+              {
+                "n": 3,
+                "key": "constant"
+              },
+              {
+                "n": 4,
+                "key": "x"
+              },
+              {
+                "n": -2,
+                "key": "y"
+              },
+              {
+                "n": 5,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x + 6y + 3 + 4x − 2y + 5",
+            "expected": {
+              "constant": 8,
+              "x": 6,
+              "y": 4
+            },
+            "solution": "6x + 4y + 8",
+            "why": "Add matching coefficients, including those of constants."
+          }
+        ]
+      },
+      "forge-sort": {
+        "prompt": "Level 5 · Store the rare materials",
+        "explanation": "A simplified sum contains one term per matching variable part. Constants form their own family. Reordering is allowed when signs stay attached. Remove zero terms, but do not drop an unlike family just because it has no partner. Worked example: 3x + 2y + 5 + 4x − y + 2 = 7x + y + 7. Collect x, y and constants separately.",
+        "solution": "Sort the signed terms into matching letter-and-power families. → 2y² belongs to y² terms; −y³ belongs to y³ terms; 4z belongs to z terms; 3 belongs to Constants; 5y² belongs to y² terms; 2z belongs to z terms. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.\nSort the signed terms into matching letter-and-power families. → 3y² belongs to y² terms; 2y³ belongs to y³ terms; −2z belongs to z terms; 7 belongs to Constants; y² belongs to y² terms; 5z belongs to z terms. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.\nSort the signed terms into matching letter-and-power families. → −y² belongs to y² terms; 4y³ belongs to y³ terms; 3z belongs to z terms; 2 belongs to Constants; 6y² belongs to y² terms; −z belongs to z terms. A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part.",
+        "variants": [
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 2,
+                "key": "y^2",
+                "id": "t0",
+                "label": "2y²"
+              },
+              {
+                "n": -1,
+                "key": "y^3",
+                "id": "t1",
+                "label": "−y³"
+              },
+              {
+                "n": 4,
+                "key": "z",
+                "id": "t2",
+                "label": "4z"
+              },
+              {
+                "n": 3,
+                "key": "constant",
+                "id": "t3",
+                "label": "3"
+              },
+              {
+                "n": 5,
+                "key": "y^2",
+                "id": "t4",
+                "label": "5y²"
+              },
+              {
+                "n": 2,
+                "key": "z",
+                "id": "t5",
+                "label": "2z"
+              }
+            ],
+            "bins": [
+              {
+                "key": "y^2",
+                "label": "y² terms"
+              },
+              {
+                "key": "y^3",
+                "label": "y³ terms"
+              },
+              {
+                "key": "z",
+                "label": "z terms"
+              },
+              {
+                "key": "constant",
+                "label": "Constants"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": 3,
+                "key": "y^2",
+                "id": "t0",
+                "label": "3y²"
+              },
+              {
+                "n": 2,
+                "key": "y^3",
+                "id": "t1",
+                "label": "2y³"
+              },
+              {
+                "n": -2,
+                "key": "z",
+                "id": "t2",
+                "label": "−2z"
+              },
+              {
+                "n": 7,
+                "key": "constant",
+                "id": "t3",
+                "label": "7"
+              },
+              {
+                "n": 1,
+                "key": "y^2",
+                "id": "t4",
+                "label": "y²"
+              },
+              {
+                "n": 5,
+                "key": "z",
+                "id": "t5",
+                "label": "5z"
+              }
+            ],
+            "bins": [
+              {
+                "key": "y^2",
+                "label": "y² terms"
+              },
+              {
+                "key": "y^3",
+                "label": "y³ terms"
+              },
+              {
+                "key": "z",
+                "label": "z terms"
+              },
+              {
+                "key": "constant",
+                "label": "Constants"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the signed terms into matching letter-and-power families.",
+            "cards": [
+              {
+                "n": -1,
+                "key": "y^2",
+                "id": "t0",
+                "label": "−y²"
+              },
+              {
+                "n": 4,
+                "key": "y^3",
+                "id": "t1",
+                "label": "4y³"
+              },
+              {
+                "n": 3,
+                "key": "z",
+                "id": "t2",
+                "label": "3z"
+              },
+              {
+                "n": 2,
+                "key": "constant",
+                "id": "t3",
+                "label": "2"
+              },
+              {
+                "n": 6,
+                "key": "y^2",
+                "id": "t4",
+                "label": "6y²"
+              },
+              {
+                "n": -1,
+                "key": "z",
+                "id": "t5",
+                "label": "−z"
+              }
+            ],
+            "bins": [
+              {
+                "key": "y^2",
+                "label": "y² terms"
+              },
+              {
+                "key": "y^3",
+                "label": "y³ terms"
+              },
+              {
+                "key": "z",
+                "label": "z terms"
+              },
+              {
+                "key": "constant",
+                "label": "Constants"
+              }
+            ],
+            "why": "A like-term family has exactly the same variable letter and power. The sign belongs to the term; constants have no variable part."
+          }
+        ]
+      },
+      "forge-combine": {
+        "prompt": "Level 5 · Reforge the old key",
+        "explanation": "A simplified sum contains one term per matching variable part. Constants form their own family. Reordering is allowed when signs stay attached. Remove zero terms, but do not drop an unlike family just because it has no partner. Worked example: 3x + 2y + 5 + 4x − y + 2 = 7x + y + 7. Collect x, y and constants separately.",
+        "solution": "Collect the like terms: 2x³ + 3x² + x + 4x³ − x² + 2x → 2x³ + 3x² + x + 4x³ − x² + 2x = 6x³ + 2x² + 3x. Different powers remain separate even when every term uses x.\nCollect the like terms: 3x³ + 4x² + 2x − x³ + 2x² − x → 3x³ + 4x² + 2x − x³ + 2x² − x = 2x³ + 6x² + x. Keep x³, x² and x in different families.\nCollect the like terms: 5x³ + 2x² + 4x − 2x³ + x² + 3x → 5x³ + 2x² + 4x − 2x³ + x² + 3x = 3x³ + 3x² + 7x. Only coefficients are added within matching families.",
+        "variants": [
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x^3"
+              },
+              {
+                "n": 3,
+                "key": "x^2"
+              },
+              {
+                "n": 1,
+                "key": "x"
+              },
+              {
+                "n": 4,
+                "key": "x^3"
+              },
+              {
+                "n": -1,
+                "key": "x^2"
+              },
+              {
+                "n": 2,
+                "key": "x"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x³ + 3x² + x + 4x³ − x² + 2x",
+            "expected": {
+              "x": 3,
+              "x^2": 2,
+              "x^3": 6
+            },
+            "solution": "6x³ + 2x² + 3x",
+            "why": "Different powers remain separate even when every term uses x."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 3,
+                "key": "x^3"
+              },
+              {
+                "n": 4,
+                "key": "x^2"
+              },
+              {
+                "n": 2,
+                "key": "x"
+              },
+              {
+                "n": -1,
+                "key": "x^3"
+              },
+              {
+                "n": 2,
+                "key": "x^2"
+              },
+              {
+                "n": -1,
+                "key": "x"
+              }
+            ],
+            "prompt": "Collect the like terms: 3x³ + 4x² + 2x − x³ + 2x² − x",
+            "expected": {
+              "x": 1,
+              "x^2": 6,
+              "x^3": 2
+            },
+            "solution": "2x³ + 6x² + x",
+            "why": "Keep x³, x² and x in different families."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 5,
+                "key": "x^3"
+              },
+              {
+                "n": 2,
+                "key": "x^2"
+              },
+              {
+                "n": 4,
+                "key": "x"
+              },
+              {
+                "n": -2,
+                "key": "x^3"
+              },
+              {
+                "n": 1,
+                "key": "x^2"
+              },
+              {
+                "n": 3,
+                "key": "x"
+              }
+            ],
+            "prompt": "Collect the like terms: 5x³ + 2x² + 4x − 2x³ + x² + 3x",
+            "expected": {
+              "x": 7,
+              "x^2": 3,
+              "x^3": 3
+            },
+            "solution": "3x³ + 3x² + 7x",
+            "why": "Only coefficients are added within matching families."
+          }
+        ]
+      },
+      "forge-signs": {
+        "prompt": "Level 5 · Check the signed manifest",
+        "explanation": "A simplified sum contains one term per matching variable part. Constants form their own family. Reordering is allowed when signs stay attached. Remove zero terms, but do not drop an unlike family just because it has no partner. Worked example: 3x + 2y + 5 + 4x − y + 2 = 7x + y + 7. Collect x, y and constants separately.",
+        "solution": "Collect the like terms: 4z − 3z − 2x + 5x − 1 → 4z − 3z − 2x + 5x − 1 = 3x + z − 1. −2x + 5x = 3x; 4z − 3z = z.\nCollect the like terms: 6z − 4z + 3x − 5x + 2 → 6z − 4z + 3x − 5x + 2 = −2x + 2z + 2. A collected coefficient can be negative.\nCollect the like terms: 3z − 5z + 4x − x + 6 → 3z − 5z + 4x − x + 6 = 3x − 2z + 6. Keep −2z as a negative term in the final expression.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 4,
+                "key": "z"
+              },
+              {
+                "n": -3,
+                "key": "z"
+              },
+              {
+                "n": -2,
+                "key": "x"
+              },
+              {
+                "n": 5,
+                "key": "x"
+              },
+              {
+                "n": -1,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 4z − 3z − 2x + 5x − 1",
+            "expected": {
+              "constant": -1,
+              "x": 3,
+              "z": 1
+            },
+            "solution": "3x + z − 1",
+            "why": "−2x + 5x = 3x; 4z − 3z = z."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 6,
+                "key": "z"
+              },
+              {
+                "n": -4,
+                "key": "z"
+              },
+              {
+                "n": 3,
+                "key": "x"
+              },
+              {
+                "n": -5,
+                "key": "x"
+              },
+              {
+                "n": 2,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 6z − 4z + 3x − 5x + 2",
+            "expected": {
+              "constant": 2,
+              "x": -2,
+              "z": 2
+            },
+            "solution": "−2x + 2z + 2",
+            "why": "A collected coefficient can be negative."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 3,
+                "key": "z"
+              },
+              {
+                "n": -5,
+                "key": "z"
+              },
+              {
+                "n": 4,
+                "key": "x"
+              },
+              {
+                "n": -1,
+                "key": "x"
+              },
+              {
+                "n": 6,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 3z − 5z + 4x − x + 6",
+            "expected": {
+              "constant": 6,
+              "x": 3,
+              "z": -2
+            },
+            "solution": "3x − 2z + 6",
+            "why": "Keep −2z as a negative term in the final expression."
+          }
+        ]
+      },
+      "vault-story": {
+        "prompt": "Level 6 · Count the expedition supplies",
+        "explanation": "Retrieve the rules without guessing: same letters AND powers; signs travel with terms; bare letters have coefficient 1; constants stay separate; zero terms disappear. Check your reasoning before confirming an expression. Worked example: 2x³ + 4x² + x − x + 3x³ − x² + 5 = 5x³ + 3x² + 5.",
+        "solution": "Three x-sized pen boxes and two more x-sized pen boxes contain how many pens altogether? → 5x. The same box size x is counted five times: 3x + 2x = 5x.\nTwo x-pen boxes and three y-clip boxes are represented by which expression? → 2x + 3y. Different quantities stay as two unlike terms.\nA chest holds 4z gems and another holds 3z gems. Which expression counts both chests? → 7z. The two terms share variable part z, so add coefficients 4 + 3.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Three x-sized pen boxes and two more x-sized pen boxes contain how many pens altogether?",
+            "options": [
+              "5x²",
+              "5x",
+              "6x",
+              "5"
+            ],
+            "answer": 1,
+            "why": "The same box size x is counted five times: 3x + 2x = 5x."
+          },
+          {
+            "type": "choice",
+            "prompt": "Two x-pen boxes and three y-clip boxes are represented by which expression?",
+            "options": [
+              "5xy",
+              "5x",
+              "2x + 3y",
+              "6xy"
+            ],
+            "answer": 2,
+            "why": "Different quantities stay as two unlike terms."
+          },
+          {
+            "type": "choice",
+            "prompt": "A chest holds 4z gems and another holds 3z gems. Which expression counts both chests?",
+            "options": [
+              "12z",
+              "7z²",
+              "7",
+              "7z"
+            ],
+            "answer": 3,
+            "why": "The two terms share variable part z, so add coefficients 4 + 3."
+          }
+        ]
+      },
+      "vault-squares": {
+        "prompt": "Level 6 · Balance the warding stones",
+        "explanation": "Retrieve the rules without guessing: same letters AND powers; signs travel with terms; bare letters have coefficient 1; constants stay separate; zero terms disappear. Check your reasoning before confirming an expression. Worked example: 2x³ + 4x² + x − x + 3x³ − x² + 5 = 5x³ + 3x² + 5.",
+        "solution": "Collect the like terms: 5x² − 2x² + 3y + y − 4 + 6 → 5x² − 2x² + 3y + y − 4 + 6 = 3x² + 4y + 2. Collect square runes, y runes and known numbers separately.\nCollect the like terms: 6x² − 3x² + 2y − y + 5 − 2 → 6x² − 3x² + 2y − y + 5 − 2 = 3x² + y + 3. Keep the squared part unchanged and retain the unpaired y.\nCollect the like terms: 4x² + 2x² + 5y − 3y − 1 + 4 → 4x² + 2x² + 5y − 3y − 1 + 4 = 6x² + 2y + 3. Treat a negative constant as a signed numerical term.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 5,
+                "key": "x^2"
+              },
+              {
+                "n": -2,
+                "key": "x^2"
+              },
+              {
+                "n": 3,
+                "key": "y"
+              },
+              {
+                "n": 1,
+                "key": "y"
+              },
+              {
+                "n": -4,
+                "key": "constant"
+              },
+              {
+                "n": 6,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 5x² − 2x² + 3y + y − 4 + 6",
+            "expected": {
+              "constant": 2,
+              "x^2": 3,
+              "y": 4
+            },
+            "solution": "3x² + 4y + 2",
+            "why": "Collect square runes, y runes and known numbers separately."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 6,
+                "key": "x^2"
+              },
+              {
+                "n": -3,
+                "key": "x^2"
+              },
+              {
+                "n": 2,
+                "key": "y"
+              },
+              {
+                "n": -1,
+                "key": "y"
+              },
+              {
+                "n": 5,
+                "key": "constant"
+              },
+              {
+                "n": -2,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 6x² − 3x² + 2y − y + 5 − 2",
+            "expected": {
+              "constant": 3,
+              "x^2": 3,
+              "y": 1
+            },
+            "solution": "3x² + y + 3",
+            "why": "Keep the squared part unchanged and retain the unpaired y."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 4,
+                "key": "x^2"
+              },
+              {
+                "n": 2,
+                "key": "x^2"
+              },
+              {
+                "n": 5,
+                "key": "y"
+              },
+              {
+                "n": -3,
+                "key": "y"
+              },
+              {
+                "n": -1,
+                "key": "constant"
+              },
+              {
+                "n": 4,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 4x² + 2x² + 5y − 3y − 1 + 4",
+            "expected": {
+              "constant": 3,
+              "x^2": 6,
+              "y": 2
+            },
+            "solution": "6x² + 2y + 3",
+            "why": "Treat a negative constant as a signed numerical term."
+          }
+        ]
+      },
+      "vault-combine": {
+        "prompt": "Level 6 · Join the final rune sets",
+        "explanation": "Retrieve the rules without guessing: same letters AND powers; signs travel with terms; bare letters have coefficient 1; constants stay separate; zero terms disappear. Check your reasoning before confirming an expression. Worked example: 2x³ + 4x² + x − x + 3x³ − x² + 5 = 5x³ + 3x² + 5.",
+        "solution": "Collect the like terms: 3x³ + 2x² + 4z + x³ − x² − 2z → 3x³ + 2x² + 4z + x³ − x² − 2z = 4x³ + x² + 2z. Keep three distinct variable families.\nCollect the like terms: 2x³ + 5x² + 3z + 4x³ − 3x² + z → 2x³ + 5x² + 3z + 4x³ − 3x² + z = 6x³ + 2x² + 4z. Do not combine x² with x³.\nCollect the like terms: 5x³ + 3x² + 2z − 2x³ + 2x² − z → 5x³ + 3x² + 2z − 2x³ + 2x² − z = 3x³ + 5x² + z. The final coefficient of z can be the unwritten 1.",
+        "variants": [
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 3,
+                "key": "x^3"
+              },
+              {
+                "n": 2,
+                "key": "x^2"
+              },
+              {
+                "n": 4,
+                "key": "z"
+              },
+              {
+                "n": 1,
+                "key": "x^3"
+              },
+              {
+                "n": -1,
+                "key": "x^2"
+              },
+              {
+                "n": -2,
+                "key": "z"
+              }
+            ],
+            "prompt": "Collect the like terms: 3x³ + 2x² + 4z + x³ − x² − 2z",
+            "expected": {
+              "x^2": 1,
+              "x^3": 4,
+              "z": 2
+            },
+            "solution": "4x³ + x² + 2z",
+            "why": "Keep three distinct variable families."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x^3"
+              },
+              {
+                "n": 5,
+                "key": "x^2"
+              },
+              {
+                "n": 3,
+                "key": "z"
+              },
+              {
+                "n": 4,
+                "key": "x^3"
+              },
+              {
+                "n": -3,
+                "key": "x^2"
+              },
+              {
+                "n": 1,
+                "key": "z"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x³ + 5x² + 3z + 4x³ − 3x² + z",
+            "expected": {
+              "x^2": 2,
+              "x^3": 6,
+              "z": 4
+            },
+            "solution": "6x³ + 2x² + 4z",
+            "why": "Do not combine x² with x³."
+          },
+          {
+            "type": "combine",
+            "terms": [
+              {
+                "n": 5,
+                "key": "x^3"
+              },
+              {
+                "n": 3,
+                "key": "x^2"
+              },
+              {
+                "n": 2,
+                "key": "z"
+              },
+              {
+                "n": -2,
+                "key": "x^3"
+              },
+              {
+                "n": 2,
+                "key": "x^2"
+              },
+              {
+                "n": -1,
+                "key": "z"
+              }
+            ],
+            "prompt": "Collect the like terms: 5x³ + 3x² + 2z − 2x³ + 2x² − z",
+            "expected": {
+              "x^2": 5,
+              "x^3": 3,
+              "z": 1
+            },
+            "solution": "3x³ + 5x² + z",
+            "why": "The final coefficient of z can be the unwritten 1."
+          }
+        ]
+      },
+      "vault-finale": {
+        "prompt": "Level 6 · Restore the crown inscription",
+        "explanation": "Retrieve the rules without guessing: same letters AND powers; signs travel with terms; bare letters have coefficient 1; constants stay separate; zero terms disappear. Check your reasoning before confirming an expression. Worked example: 2x³ + 4x² + x − x + 3x³ − x² + 5 = 5x³ + 3x² + 5.",
+        "solution": "Collect the like terms: 2x³ + 4x² + x − x + 3x³ − x² + 5 → 2x³ + 4x² + x − x + 3x³ − x² + 5 = 5x³ + 3x² + 5. Cancel x − x, collect x³ and x², then keep 5.\nCollect the like terms: 3y³ + 2y² + 4z − 2z + 2y³ + y² + 6 → 3y³ + 2y² + 4z − 2z + 2y³ + y² + 6 = 5y³ + 3y² + 2z + 6. Retrieve all the rules: power, letter, sign and constants.\nCollect the like terms: 4z³ + 5z² + 2x − 2x − z³ − 3z² + 7 → 4z³ + 5z² + 2x − 2x − z³ − 3z² + 7 = 3z³ + 2z² + 7. The x terms cancel. The cubic and squared z terms stay separate.",
+        "variants": [
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 2,
+                "key": "x^3"
+              },
+              {
+                "n": 4,
+                "key": "x^2"
+              },
+              {
+                "n": 1,
+                "key": "x"
+              },
+              {
+                "n": -1,
+                "key": "x"
+              },
+              {
+                "n": 3,
+                "key": "x^3"
+              },
+              {
+                "n": -1,
+                "key": "x^2"
+              },
+              {
+                "n": 5,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 2x³ + 4x² + x − x + 3x³ − x² + 5",
+            "expected": {
+              "constant": 5,
+              "x^2": 3,
+              "x^3": 5
+            },
+            "solution": "5x³ + 3x² + 5",
+            "why": "Cancel x − x, collect x³ and x², then keep 5."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 3,
+                "key": "y^3"
+              },
+              {
+                "n": 2,
+                "key": "y^2"
+              },
+              {
+                "n": 4,
+                "key": "z"
+              },
+              {
+                "n": -2,
+                "key": "z"
+              },
+              {
+                "n": 2,
+                "key": "y^3"
+              },
+              {
+                "n": 1,
+                "key": "y^2"
+              },
+              {
+                "n": 6,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 3y³ + 2y² + 4z − 2z + 2y³ + y² + 6",
+            "expected": {
+              "constant": 6,
+              "y^2": 3,
+              "y^3": 5,
+              "z": 2
+            },
+            "solution": "5y³ + 3y² + 2z + 6",
+            "why": "Retrieve all the rules: power, letter, sign and constants."
+          },
+          {
+            "type": "input",
+            "terms": [
+              {
+                "n": 4,
+                "key": "z^3"
+              },
+              {
+                "n": 5,
+                "key": "z^2"
+              },
+              {
+                "n": 2,
+                "key": "x"
+              },
+              {
+                "n": -2,
+                "key": "x"
+              },
+              {
+                "n": -1,
+                "key": "z^3"
+              },
+              {
+                "n": -3,
+                "key": "z^2"
+              },
+              {
+                "n": 7,
+                "key": "constant"
+              }
+            ],
+            "prompt": "Collect the like terms: 4z³ + 5z² + 2x − 2x − z³ − 3z² + 7",
+            "expected": {
+              "constant": 7,
+              "z^2": 2,
+              "z^3": 3
+            },
+            "solution": "3z³ + 2z² + 7",
+            "why": "The x terms cancel. The cubic and squared z terms stay separate."
+          }
+        ]
+      }
+    },
+    "signature": "459bb97cfa30a48c47ef7a29cf5c62a10c8bcb99248db6796d07853b5cd8c754"
   }
+};
+var parseRpgTerms_ = function parseRpgExpression(raw){
+ let text=String(raw).trim().replace(/[−–]/g,'-').replace(/([xyz])²/g,'$1^2').replace(/([xyz])³/g,'$1^3').replace(/\s+/g,'').replace(/(\d)\*([xyz])/g,'$1$2');
+ if(!text||text.length>140||!/^[0-9xyz^+-]+$/.test(text))return null;
+ const chunks=text.match(/[+-]?[^+-]+/g);if(!chunks||chunks.join('')!==text||chunks.length>24)return null;
+ const map={},seen=new Set();let simplified=true;
+ for(const chunk of chunks){const match=chunk.match(/^([+-]?)(\d*)([xyz])?(?:\^([123]))?$/);if(!match||!match[2]&&!match[3]||match[4]&&!match[3])return null;const key=match[3]?match[3]+(match[4]&&match[4]!=='1'?'^'+match[4]:''):'constant';const n=(match[1]==='-'?-1:1)*(match[2]?Number(match[2]):1);if(!Number.isSafeInteger(n)||Math.abs(n)>999)return null;if(seen.has(key))simplified=false;seen.add(key);if(n===0&&(chunks.length>1||key!=='constant'))simplified=false;map[key]=(map[key]||0)+n;}
+ const result={};for(const key of Object.keys(map).sort())if(map[key])result[key]=map[key];return {map:result,simplified};
 };
