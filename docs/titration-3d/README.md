@@ -41,3 +41,7 @@ browser test. It checks preparation, dosing, swirling, the real 30-second timer,
 endpoint/overshoot gates, recording, camera views and desktop widths. Direct
 raycast bottle dragging, illustrated fallback and selector navigation were also
 checked in Chromium. Videos stay outside the repository.
+
+The current titration-3d.html is also the complete standalone first-person file: inline CSS/JS, CDN Three.js and RoomEnvironment, PBR glass, readable DOM labels and linked preparation inputs (acid concentration, calibrated aliquot volume, NaOH concentration, and dissolved acid mass). Right-drag changes eye direction; WASD moves the viewer. Wheel changes magnification. A direct-file copy is delivered as Experiment-05-Titration.html. Internet is required for CDN modules. Managed-browser file:// navigation is blocked, so validation uses HTTP and locally mirrored CDN module responses. Physical preparation values start a fresh trial; recorded rows retain their preparation values.
+
+First-person refinements use 0.020 mL fine additions and wall-clock elapsed time for the tap flow and endpoint persistence, independent of frame rate. The full end-to-end test supplies mirrored CDN modules in the managed browser.
