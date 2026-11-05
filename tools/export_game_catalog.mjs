@@ -1,6 +1,8 @@
 import {ALCOHOL_GAME} from '../assets/y10-chemistry/alcohols/game-data.mjs';
 import {GAME as RPG_GAME,LEVELS} from '../assets/like-terms-rpg/data.mjs';
 import {expressionText} from '../assets/like-terms-rpg/math.mjs';
+import {GAME as ELECTRICITY_GAME,LEVELS as ELECTRICITY_LEVELS,gameForLevel} from '../assets/electricity-quest/data.mjs';
+import {labSolution} from '../assets/electricity-quest/lab.mjs';
 import {controls} from '../assets/unit-games/models.mjs';
 import {units} from '../assets/unit-games/data.mjs';
 import {algebraGames} from '../assets/unit-games/algebra-data.mjs';
@@ -25,4 +27,5 @@ add('gas-word','Mystery Word','Year 9 Science','gas-laws',Object.fromEntries(wor
 add('blood-dispatch','Transport Dispatch','Year 9 Science','blood-vessels',Object.fromEntries(MISSIONS.map(r=>[r.id,{prompt:r.title+': '+r.need+' '+r.question,explanation:r.why,carrier:r.carrier,target:r.target,answer:r.answer,options:r.options,solution:COMPONENTS[r.carrier].name+' → '+NODES[r.target].name+'; '+r.options[r.answer]}])),'dispatch','dispatch');
 add(ALCOHOL_GAME.id,ALCOHOL_GAME.title,'Year 10 Chemistry','y10-alcohols-acids',Object.fromEntries(ALCOHOL_GAME.rounds.map(r=>[r.id,{prompt:r.prompt,explanation:r.explanation,solution:r.kind==='molecule'?(r.family==='acid'?'Carboxylic acid':'Alcohol')+' · '+r.options[r.answer]:r.options[r.answer],kind:r.kind,family:r.family,group:r.group,options:r.options,answer:r.answer}])),'organic');
 add(RPG_GAME.id,RPG_GAME.title,'Year 7 Maths','algebra-ii',Object.fromEntries(RPG_GAME.rounds.map(r=>[r.id,{prompt:'Level '+(r.levelIndex+1)+' · '+r.title,explanation:LEVELS[r.levelIndex].lesson+' Worked example: '+LEVELS[r.levelIndex].example,solution:r.variants.map(v=>v.prompt+' → '+(v.type==='choice'?v.options[v.answer]:v.type==='sort'?v.cards.map(c=>c.label+' belongs to '+v.bins.find(b=>b.key===c.key).label).join('; '):expressionText(v.terms)+' = '+v.solution)+'. '+v.why).join('\n'),variants:r.variants}])),'like-terms-rpg');
+for(const [id,topic,label]of [['electricity-quest-static','y9-electricity-static','Static charge'],['electricity-quest-circuits','y9-electricity-circuits','Circuits']])add(id,ELECTRICITY_GAME.title+' · '+label,'Year 9 Science',topic,Object.fromEntries(ELECTRICITY_GAME.rounds.filter(r=>gameForLevel(r.levelIndex)===id).map(r=>[r.id,{prompt:'Level '+(r.levelIndex+1)+' · '+r.title,explanation:ELECTRICITY_LEVELS[r.levelIndex].lesson+' Worked example: '+ELECTRICITY_LEVELS[r.levelIndex].example,solution:r.variants.map(v=>v.prompt+' → '+(v.type==='choice'?v.options[v.answer]:v.type==='sort'?v.cards.map(c=>c.label+' → '+v.bins.find(b=>b.key===c.key).label).join('; '):labSolution(v).replace(/<[^>]+>/g,' ').replaceAll('&gt;','>').replaceAll('&amp;','&'))+'. '+v.why).join('\n'),variants:r.variants}])),'electricity-quest');
 process.stdout.write(JSON.stringify(games));

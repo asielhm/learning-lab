@@ -171,7 +171,7 @@ assert(publicCapabilities.includes('learning-lab-recording-capabilities'));asser
 // Game recording has its own authenticated views and never changes test results.
 const testCount=context.getTeacherResults(token,{}).total;
 const gameManifest=JSON.parse(fs.readFileSync(path.join(root,'assets/records/games.json')));
-assert.equal(gameManifest.games.length,44);assert.equal(context.GAME_MANIFEST_.games.length,44);
+assert.equal(gameManifest.games.length,46);assert.equal(context.GAME_MANIFEST_.games.length,46);
 function gamePayload(gameId,ids,number=1,answer=null){const game=context.GAME_CATALOG_[gameId],id=crypto.randomUUID();return {kind:'game',version:1,mode:'game',retry:false,eventId:id+'-'+number,sessionId:id,gameId,signature:game.signature,studentName:'Game Student',classroom:'9G',teacherName:'Ms Rivera',startedAt:'2026-10-30T12:00:00Z',questionIds:ids,questionNumber:number,questionId:ids[number-1],attempts:1,assisted:false,revealed:false,firstAnswer:answer,answer};}
 const pic=context.GAME_CATALOG_['gas-picture'],picIds=Object.keys(pic.rounds).slice(0,2),picQ=pic.rounds[picIds[0]];
 const gp=gamePayload('gas-picture',picIds,1,{law:picQ.law,quantities:picQ.quantities});
@@ -220,12 +220,30 @@ for(let level=0;level<6;level++){
 }
 const rpgResults=context.getTeacherResults(token,{view:'games',classroom:'7R'});assert.equal(rpgResults.total,6);assert.equal(rpgResults.accuracy,83);assert(rpgResults.rows.every(row=>row[8].includes('Level ')&&row[10]===4));
 assert.equal(context.getTeacherResults(token,{view:'gameAnswers',classroom:'7R'}).total,24);
+// The electricity adventure crosses two topic catalogues with one unchanged student identity.
+let districts=0;
+for(const gameId of ['electricity-quest-static','electricity-quest-circuits']){
+ const game=context.GAME_CATALOG_[gameId],allIds=Object.keys(game.rounds);
+ for(let offset=0;offset<allIds.length;offset+=4){
+  const ids=allIds.slice(offset,offset+4),session=crypto.randomUUID();
+  for(const[i,id]of ids.entries()){
+   const v=game.rounds[id].variants[0];let values={};
+   if(v.kind==='charge')values={transfers:-v.targetNet};if(v.kind==='earth')values={wire:true,grounded:true,settled:true,net:0};if(v.kind==='loop')values={slots:{source:'cell',control:'switch',load:'lamp'},closed:true};if(v.kind==='meter')values={placement:v.meter==='ammeter'?'series':'parallel'};if(v.kind==='calculation')values={value:v.expectedValue,unit:v.unit};if(v.kind==='ohm')values={voltage:v.resistance*v.targetCurrent};if(v.kind==='wire')values=v.targetRatio===.25?{length:1,diameter:2}:{length:v.targetRatio,diameter:1};if(v.kind==='network')values={connection:v.targetConnection,a:v.targetA,b:v.targetB};
+   const answer={variant:0,...(v.type==='choice'?{choice:v.answer}:v.type==='sort'?{placements:Object.fromEntries(v.cards.map(c=>[c.id,c.key]))}:{values,reason:v.correctReason})};
+   const payload={...gamePayload(gameId,ids,i+1,answer),sessionId:session,eventId:session+'-'+(i+1),classroom:'9V'};
+   assert.throws(()=>context.saveGameAnswer_({...payload,answer:{variant:99}}),/solution/);
+   context.saveGameAnswer_(payload);context.saveGameAnswer_(payload);
+  }
+  districts++;
+ }
+}
+assert.equal(districts,6);assert.equal(context.getTeacherResults(token,{view:'games',classroom:'9V'}).total,6);assert.equal(context.getTeacherResults(token,{view:'gameAnswers',classroom:'9V',topic:'y9-electricity-static'}).total,8);assert.equal(context.getTeacherResults(token,{view:'gameAnswers',classroom:'9V',topic:'y9-electricity-circuits'}).total,16);
 for(const metadata of gameManifest.games){const game=context.GAME_CATALOG_[metadata.id],round=Object.keys(game.rounds)[0];context.saveGameAnswer_({...gamePayload(metadata.id,[round]),revealed:true,attempts:0});const filtered=context.getTeacherResults(token,{view:'games',course:metadata.course,topic:metadata.topic});assert(filtered.rows.some(r=>r[7]===metadata.id));}
 assert.throws(()=>context.saveGameAnswer_({...gp,questionIds:['__proto__'],questionId:'__proto__'}),/rounds/);
 assert.throws(()=>context.saveGameAnswer_({...gp,questionNumber:0,eventId:gp.sessionId+'-0'}),/rounds/);
 assert.equal(context.getTeacherResults(token,{}).total,testCount,'Games never inflate revision accuracy');
 assert(context.doGet({parameter:{action:'capabilities',nonce:crypto.randomUUID()}}).html.includes('gameManifest'));
-console.log('Game server: 44 catalogued games, Y9 solution validation, derived stars, required identity, separate views, duplicates, hints/reveals, practice/retry exclusion, text-formatted rows, filters, protected reads and summary repair passed.');
+console.log('Game server: 46 catalogued games, Y9 solution validation, derived stars, required identity, separate views, duplicates, hints/reveals, practice/retry exclusion, text-formatted rows, filters, protected reads and summary repair passed.');
 
 context.logoutTeacher(token);assert.throws(()=>context.getTeacherResults(token,{}),/expired/);
 const nextToken=context.loginTeacher(password).token;context.resetTeacherPassword();assert.throws(()=>context.getTeacherResults(nextToken,{}),/expired/);

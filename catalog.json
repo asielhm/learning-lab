@@ -549,6 +549,15 @@
                   "image": "activities/y9/science/electricity/images/construction-studio.svg",
                   "format": "Circuit construction studio",
                   "duration": "Work at your pace"
+                },
+                {
+                  "id": "electricity-power-quest",
+                  "title": "Voltvale: The Power Quest",
+                  "description": "A pixel adventure through static charge, circuit building, meters, Ohm’s law and parallel paths. Create a hero, use the apparatus, solve 24 challenges and earn six power relics.",
+                  "format": "Pixel adventure game",
+                  "duration": "Six districts · save and return",
+                  "href": "activities/y9/science/electricity/games/power-quest.html",
+                  "image": "assets/electricity-quest/cover.svg"
                 }
               ]
             }

@@ -20650,6 +20650,24 @@ var GAME_MANIFEST_ = {
       "signature": "459bb97cfa30a48c47ef7a29cf5c62a10c8bcb99248db6796d07853b5cd8c754",
       "roundCount": 24,
       "preparation": "activities/y7/maths/algebra-ii/prepare.html"
+    },
+    {
+      "id": "electricity-quest-static",
+      "title": "Voltvale: The Power Quest · Static charge",
+      "course": "Year 9 Science",
+      "topic": "y9-electricity-static",
+      "signature": "561a199967ff7c496321972ff6c1d79af6f2d7d74eebd0c6389b6650569ddc75",
+      "roundCount": 8,
+      "preparation": "activities/y9/science/electricity/static/prepare.html"
+    },
+    {
+      "id": "electricity-quest-circuits",
+      "title": "Voltvale: The Power Quest · Circuits",
+      "course": "Year 9 Science",
+      "topic": "y9-electricity-circuits",
+      "signature": "ace8ce5c9bc9e6bdb86f65fb0980b3a2898aaddf768b71f3d50643d56f227ccf",
+      "roundCount": 16,
+      "preparation": "activities/y9/science/electricity/circuits/prepare.html"
     }
   ]
 };
@@ -24640,6 +24658,1312 @@ var GAME_CATALOG_ = {
       }
     },
     "signature": "459bb97cfa30a48c47ef7a29cf5c62a10c8bcb99248db6796d07853b5cd8c754"
+  },
+  "electricity-quest-static": {
+    "id": "electricity-quest-static",
+    "title": "Voltvale: The Power Quest · Static charge",
+    "course": "Year 9 Science",
+    "topic": "y9-electricity-static",
+    "grader": "electricity-quest",
+    "rule": "standard",
+    "rounds": {
+      "charge-particles": {
+        "prompt": "Level 1 · Meet the charge carriers",
+        "explanation": "An atom contains positive protons and neutral neutrons in its nucleus, with negative electrons around it. Neutral means equal total positive and negative charge, not no charged particles. In ordinary contact charging, electrons transfer; protons remain in nuclei. Count net charge as positive charges minus negative charges. One elementary charge is the magnitude of one proton’s charge, far smaller than a coulomb (C). Like net charges repel; opposite net charges attract. A charged object can also attract a neutral object by polarisation: its charge distribution shifts while its total stays zero. Worked example: A model with 8 protons and 10 electrons has net charge 8 − 10 = −2 elementary charges. If two electrons came from a neutral cloth, that cloth is +2. The pair’s total charge is still zero.",
+        "solution": "Which particle is transferred when our balloon is charged by contact? → An electron. Electrons can transfer between the surfaces. Protons stay bound in nuclei.\nA neutral atom has 8 protons. How many electrons does it have? → 8. Equal amounts of positive and negative charge give zero net charge.\nWhich description of a neutron is correct? → No net electric charge. A neutron has no net electric charge; a proton is positive and an electron negative.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Which particle is transferred when our balloon is charged by contact?",
+            "options": [
+              "An electron",
+              "A proton",
+              "A neutron",
+              "A whole nucleus"
+            ],
+            "answer": 0,
+            "why": "Electrons can transfer between the surfaces. Protons stay bound in nuclei."
+          },
+          {
+            "type": "choice",
+            "prompt": "A neutral atom has 8 protons. How many electrons does it have?",
+            "options": [
+              "0",
+              "4",
+              "8",
+              "16"
+            ],
+            "answer": 2,
+            "why": "Equal amounts of positive and negative charge give zero net charge."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which description of a neutron is correct?",
+            "options": [
+              "Negative charge",
+              "Positive charge",
+              "No net electric charge",
+              "A moving electron"
+            ],
+            "answer": 2,
+            "why": "A neutron has no net electric charge; a proton is positive and an electron negative."
+          }
+        ]
+      },
+      "charge-transfer": {
+        "prompt": "Level 1 · Charge the harbour balloon",
+        "explanation": "An atom contains positive protons and neutral neutrons in its nucleus, with negative electrons around it. Neutral means equal total positive and negative charge, not no charged particles. In ordinary contact charging, electrons transfer; protons remain in nuclei. Count net charge as positive charges minus negative charges. One elementary charge is the magnitude of one proton’s charge, far smaller than a coulomb (C). Like net charges repel; opposite net charges attract. A charged object can also attract a neutral object by polarisation: its charge distribution shifts while its total stays zero. Worked example: A model with 8 protons and 10 electrons has net charge 8 − 10 = −2 elementary charges. If two electrons came from a neutral cloth, that cloth is +2. The pair’s total charge is still zero.",
+        "solution": "Give the balloon a net charge of −2 elementary charges by moving electrons from the cloth. →  Transfer 2 electrons from cloth to balloon.  Transfer 2 electrons to the balloon. Its net charge is −2; the cloth is +2. The total stays zero.   Explanation:  The balloon gains negative electrons; the cloth loses the same number. . Transfer 2 electrons to the balloon. Its net charge is −2; the cloth is +2. The total stays zero.\nGive the balloon a net charge of −3 elementary charges by moving electrons from the cloth. →  Transfer 3 electrons from cloth to balloon.  Transfer 3 electrons to the balloon. Its net charge is −3; the cloth is +3. The total stays zero.   Explanation:  The balloon gains negative electrons; the cloth loses the same number. . Transfer 3 electrons to the balloon. Its net charge is −3; the cloth is +3. The total stays zero.\nGive the balloon a net charge of −4 elementary charges by moving electrons from the cloth. →  Transfer 4 electrons from cloth to balloon.  Transfer 4 electrons to the balloon. Its net charge is −4; the cloth is +4. The total stays zero.   Explanation:  The balloon gains negative electrons; the cloth loses the same number. . Transfer 4 electrons to the balloon. Its net charge is −4; the cloth is +4. The total stays zero.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "charge",
+            "prompt": "Give the balloon a net charge of −2 elementary charges by moving electrons from the cloth.",
+            "targetNet": -2,
+            "reasons": [
+              "The balloon gains negative electrons; the cloth loses the same number.",
+              "Protons travel from the balloon into the cloth.",
+              "Rubbing creates extra charge."
+            ],
+            "correctReason": 0,
+            "why": "Transfer 2 electrons to the balloon. Its net charge is −2; the cloth is +2. The total stays zero."
+          },
+          {
+            "type": "lab",
+            "kind": "charge",
+            "prompt": "Give the balloon a net charge of −3 elementary charges by moving electrons from the cloth.",
+            "targetNet": -3,
+            "reasons": [
+              "The balloon gains negative electrons; the cloth loses the same number.",
+              "Protons travel from the balloon into the cloth.",
+              "Rubbing creates extra charge."
+            ],
+            "correctReason": 0,
+            "why": "Transfer 3 electrons to the balloon. Its net charge is −3; the cloth is +3. The total stays zero."
+          },
+          {
+            "type": "lab",
+            "kind": "charge",
+            "prompt": "Give the balloon a net charge of −4 elementary charges by moving electrons from the cloth.",
+            "targetNet": -4,
+            "reasons": [
+              "The balloon gains negative electrons; the cloth loses the same number.",
+              "Protons travel from the balloon into the cloth.",
+              "Rubbing creates extra charge."
+            ],
+            "correctReason": 0,
+            "why": "Transfer 4 electrons to the balloon. Its net charge is −4; the cloth is +4. The total stays zero."
+          }
+        ]
+      },
+      "charge-forces": {
+        "prompt": "Level 1 · Read the electric forces",
+        "explanation": "An atom contains positive protons and neutral neutrons in its nucleus, with negative electrons around it. Neutral means equal total positive and negative charge, not no charged particles. In ordinary contact charging, electrons transfer; protons remain in nuclei. Count net charge as positive charges minus negative charges. One elementary charge is the magnitude of one proton’s charge, far smaller than a coulomb (C). Like net charges repel; opposite net charges attract. A charged object can also attract a neutral object by polarisation: its charge distribution shifts while its total stays zero. Worked example: A model with 8 protons and 10 electrons has net charge 8 − 10 = −2 elementary charges. If two electrons came from a neutral cloth, that cloth is +2. The pair’s total charge is still zero.",
+        "solution": "Sort these electrical interactions. The signs describe net charge; these are electric forces, not magnetism. → + near + → Repel; − near − → Repel; + near − → Attract; − near + → Attract. Classify by the scientific property, not by how an object looks. Attract and Repel are different categories.\nSort these electrical interactions. The signs describe net charge; these are electric forces, not magnetism. → Two negatively charged balloons → Repel; Positive sphere and negative sphere → Attract; Two positive spheres → Repel; Negative balloon and positive cloth → Attract. Classify by the scientific property, not by how an object looks. Attract and Repel are different categories.\nSort these electrical interactions. The signs describe net charge; these are electric forces, not magnetism. → −2 near −3 → Repel; +2 near −1 → Attract; +4 near +1 → Repel; −1 near +3 → Attract. Classify by the scientific property, not by how an object looks. Attract and Repel are different categories.",
+        "variants": [
+          {
+            "type": "sort",
+            "prompt": "Sort these electrical interactions. The signs describe net charge; these are electric forces, not magnetism.",
+            "bins": [
+              {
+                "key": "attract",
+                "label": "Attract"
+              },
+              {
+                "key": "repel",
+                "label": "Repel"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "+ near +",
+                "key": "repel"
+              },
+              {
+                "id": "t1",
+                "label": "− near −",
+                "key": "repel"
+              },
+              {
+                "id": "t2",
+                "label": "+ near −",
+                "key": "attract"
+              },
+              {
+                "id": "t3",
+                "label": "− near +",
+                "key": "attract"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Attract and Repel are different categories."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort these electrical interactions. The signs describe net charge; these are electric forces, not magnetism.",
+            "bins": [
+              {
+                "key": "attract",
+                "label": "Attract"
+              },
+              {
+                "key": "repel",
+                "label": "Repel"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "Two negatively charged balloons",
+                "key": "repel"
+              },
+              {
+                "id": "t1",
+                "label": "Positive sphere and negative sphere",
+                "key": "attract"
+              },
+              {
+                "id": "t2",
+                "label": "Two positive spheres",
+                "key": "repel"
+              },
+              {
+                "id": "t3",
+                "label": "Negative balloon and positive cloth",
+                "key": "attract"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Attract and Repel are different categories."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort these electrical interactions. The signs describe net charge; these are electric forces, not magnetism.",
+            "bins": [
+              {
+                "key": "attract",
+                "label": "Attract"
+              },
+              {
+                "key": "repel",
+                "label": "Repel"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "−2 near −3",
+                "key": "repel"
+              },
+              {
+                "id": "t1",
+                "label": "+2 near −1",
+                "key": "attract"
+              },
+              {
+                "id": "t2",
+                "label": "+4 near +1",
+                "key": "repel"
+              },
+              {
+                "id": "t3",
+                "label": "−1 near +3",
+                "key": "attract"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Attract and Repel are different categories."
+          }
+        ]
+      },
+      "charge-wall": {
+        "prompt": "Level 1 · Explain the neutral wall",
+        "explanation": "An atom contains positive protons and neutral neutrons in its nucleus, with negative electrons around it. Neutral means equal total positive and negative charge, not no charged particles. In ordinary contact charging, electrons transfer; protons remain in nuclei. Count net charge as positive charges minus negative charges. One elementary charge is the magnitude of one proton’s charge, far smaller than a coulomb (C). Like net charges repel; opposite net charges attract. A charged object can also attract a neutral object by polarisation: its charge distribution shifts while its total stays zero. Worked example: A model with 8 protons and 10 electrons has net charge 8 − 10 = −2 elementary charges. If two electrons came from a neutral cloth, that cloth is +2. The pair’s total charge is still zero.",
+        "solution": "A negative balloon attracts a wall. Must the wall have positive net charge? → No: a neutral wall can polarise. The charges in a neutral wall can redistribute slightly. Opposite charge is nearer, so attraction can dominate.\nWhich observation is better evidence of the same sign as a known charged object? → Clear repulsion. A neutral object can be attracted by polarisation. Repulsion is better evidence of like net charge.\nWhat changes when a neutral wall polarises? → Its charge distribution. Polarisation rearranges charge distribution; the wall can remain neutral overall.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "A negative balloon attracts a wall. Must the wall have positive net charge?",
+            "options": [
+              "Yes, always",
+              "No: a neutral wall can polarise",
+              "The balloon has become magnetic",
+              "The wall has no electrons"
+            ],
+            "answer": 1,
+            "why": "The charges in a neutral wall can redistribute slightly. Opposite charge is nearer, so attraction can dominate."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which observation is better evidence of the same sign as a known charged object?",
+            "options": [
+              "Attraction alone",
+              "A brighter colour",
+              "Clear repulsion",
+              "A larger mass"
+            ],
+            "answer": 2,
+            "why": "A neutral object can be attracted by polarisation. Repulsion is better evidence of like net charge."
+          },
+          {
+            "type": "choice",
+            "prompt": "What changes when a neutral wall polarises?",
+            "options": [
+              "Its charge distribution",
+              "Its total number of protons must double",
+              "It becomes a battery",
+              "It loses all electrons"
+            ],
+            "answer": 0,
+            "why": "Polarisation rearranges charge distribution; the wall can remain neutral overall."
+          }
+        ]
+      },
+      "spark-materials": {
+        "prompt": "Level 2 · Find a conducting route",
+        "explanation": "A conductor lets charge move through it readily; metals contain mobile electrons and positive ion cores that stay in a lattice. An ion is a particle with net charge; a lattice is an ordered arrangement of particles. Dry plastic, rubber and glass are good insulators. Earthing connects a conductor to Earth, a large reservoir that can receive or supply electrons. With no external charging influence, our isolated metal sphere becomes neutral. A discharge is a sudden transfer of charge, sometimes through air as a spark. Printing, spray painting and particle collection can use controlled electric attraction. These virtual experiments use models, not high-voltage equipment. Worked example: A sphere with net charge −3 has three excess electrons in this selected-particle model. Connect it to Earth and those excess electrons leave. A sphere at +2 instead needs two electrons to arrive from Earth.",
+        "solution": "Sort the dry materials by how readily charge moves through them. → Copper wire → Conductor; Dry rubber → Insulator; Aluminium foil → Conductor; Dry plastic → Insulator; Steel key → Conductor; Dry glass → Insulator. Classify by the scientific property, not by how an object looks. Conductor and Insulator are different categories.\nSort the dry materials by how readily charge moves through them. → Silver contact → Conductor; Dry wooden ruler → Insulator; Copper strip → Conductor; Dry rubber sleeve → Insulator; Aluminium rod → Conductor; Dry glass rod → Insulator. Classify by the scientific property, not by how an object looks. Conductor and Insulator are different categories.\nSort the dry materials by how readily charge moves through them. → Iron nail → Conductor; Dry plastic comb → Insulator; Gold contact → Conductor; Dry ceramic → Insulator; Copper coin → Conductor; Dry rubber band → Insulator. Classify by the scientific property, not by how an object looks. Conductor and Insulator are different categories.",
+        "variants": [
+          {
+            "type": "sort",
+            "prompt": "Sort the dry materials by how readily charge moves through them.",
+            "bins": [
+              {
+                "key": "conductor",
+                "label": "Conductor"
+              },
+              {
+                "key": "insulator",
+                "label": "Insulator"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "Copper wire",
+                "key": "conductor"
+              },
+              {
+                "id": "t1",
+                "label": "Dry rubber",
+                "key": "insulator"
+              },
+              {
+                "id": "t2",
+                "label": "Aluminium foil",
+                "key": "conductor"
+              },
+              {
+                "id": "t3",
+                "label": "Dry plastic",
+                "key": "insulator"
+              },
+              {
+                "id": "t4",
+                "label": "Steel key",
+                "key": "conductor"
+              },
+              {
+                "id": "t5",
+                "label": "Dry glass",
+                "key": "insulator"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Conductor and Insulator are different categories."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the dry materials by how readily charge moves through them.",
+            "bins": [
+              {
+                "key": "conductor",
+                "label": "Conductor"
+              },
+              {
+                "key": "insulator",
+                "label": "Insulator"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "Silver contact",
+                "key": "conductor"
+              },
+              {
+                "id": "t1",
+                "label": "Dry wooden ruler",
+                "key": "insulator"
+              },
+              {
+                "id": "t2",
+                "label": "Copper strip",
+                "key": "conductor"
+              },
+              {
+                "id": "t3",
+                "label": "Dry rubber sleeve",
+                "key": "insulator"
+              },
+              {
+                "id": "t4",
+                "label": "Aluminium rod",
+                "key": "conductor"
+              },
+              {
+                "id": "t5",
+                "label": "Dry glass rod",
+                "key": "insulator"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Conductor and Insulator are different categories."
+          },
+          {
+            "type": "sort",
+            "prompt": "Sort the dry materials by how readily charge moves through them.",
+            "bins": [
+              {
+                "key": "conductor",
+                "label": "Conductor"
+              },
+              {
+                "key": "insulator",
+                "label": "Insulator"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "Iron nail",
+                "key": "conductor"
+              },
+              {
+                "id": "t1",
+                "label": "Dry plastic comb",
+                "key": "insulator"
+              },
+              {
+                "id": "t2",
+                "label": "Gold contact",
+                "key": "conductor"
+              },
+              {
+                "id": "t3",
+                "label": "Dry ceramic",
+                "key": "insulator"
+              },
+              {
+                "id": "t4",
+                "label": "Copper coin",
+                "key": "conductor"
+              },
+              {
+                "id": "t5",
+                "label": "Dry rubber band",
+                "key": "insulator"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Conductor and Insulator are different categories."
+          }
+        ]
+      },
+      "spark-earth": {
+        "prompt": "Level 2 · Earth the charged sphere",
+        "explanation": "A conductor lets charge move through it readily; metals contain mobile electrons and positive ion cores that stay in a lattice. An ion is a particle with net charge; a lattice is an ordered arrangement of particles. Dry plastic, rubber and glass are good insulators. Earthing connects a conductor to Earth, a large reservoir that can receive or supply electrons. With no external charging influence, our isolated metal sphere becomes neutral. A discharge is a sudden transfer of charge, sometimes through air as a spark. Printing, spray painting and particle collection can use controlled electric attraction. These virtual experiments use models, not high-voltage equipment. Worked example: A sphere with net charge −3 has three excess electrons in this selected-particle model. Connect it to Earth and those excess electrons leave. A sphere at +2 instead needs two electrons to arrive from Earth.",
+        "solution": "Earth a metal sphere with initial net charge -3. Attach the cable, close the earth switch and watch it settle. →  Attach the cable, close the earth switch and wait for net charge zero.  A conducting connection lets the excess electrons leave. Without an external charging influence, the sphere becomes neutral.   Explanation:  Excess electrons flow from the sphere to Earth. . A conducting connection lets the excess electrons leave. Without an external charging influence, the sphere becomes neutral.\nEarth a metal sphere with initial net charge +2. Attach the cable, close the earth switch and watch it settle. →  Attach the cable, close the earth switch and wait for net charge zero.  Electrons arrive from Earth to balance the electron deficit. Earth can accept or supply electrons.   Explanation:  Electrons flow from Earth into the electron-deficient sphere. . Electrons arrive from Earth to balance the electron deficit. Earth can accept or supply electrons.\nEarth a metal sphere with initial net charge -4. Attach the cable, close the earth switch and watch it settle. →  Attach the cable, close the earth switch and wait for net charge zero.  A conducting connection lets the excess electrons leave. Without an external charging influence, the sphere becomes neutral.   Explanation:  Excess electrons flow from the sphere to Earth. . A conducting connection lets the excess electrons leave. Without an external charging influence, the sphere becomes neutral.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "earth",
+            "prompt": "Earth a metal sphere with initial net charge -3. Attach the cable, close the earth switch and watch it settle.",
+            "initialNet": -3,
+            "reasons": [
+              "Excess electrons flow from the sphere to Earth.",
+              "Protons leave the sphere.",
+              "Earth has no electric charge."
+            ],
+            "correctReason": 0,
+            "why": "A conducting connection lets the excess electrons leave. Without an external charging influence, the sphere becomes neutral."
+          },
+          {
+            "type": "lab",
+            "kind": "earth",
+            "prompt": "Earth a metal sphere with initial net charge +2. Attach the cable, close the earth switch and watch it settle.",
+            "initialNet": 2,
+            "reasons": [
+              "Electrons flow from Earth into the electron-deficient sphere.",
+              "The sphere loses more electrons.",
+              "Positive protons flow in from Earth."
+            ],
+            "correctReason": 0,
+            "why": "Electrons arrive from Earth to balance the electron deficit. Earth can accept or supply electrons."
+          },
+          {
+            "type": "lab",
+            "kind": "earth",
+            "prompt": "Earth a metal sphere with initial net charge -4. Attach the cable, close the earth switch and watch it settle.",
+            "initialNet": -4,
+            "reasons": [
+              "Excess electrons flow from the sphere to Earth.",
+              "Protons leave the sphere.",
+              "Earth has no electric charge."
+            ],
+            "correctReason": 0,
+            "why": "A conducting connection lets the excess electrons leave. Without an external charging influence, the sphere becomes neutral."
+          }
+        ]
+      },
+      "spark-conservation": {
+        "prompt": "Level 2 · Balance both charge accounts",
+        "explanation": "A conductor lets charge move through it readily; metals contain mobile electrons and positive ion cores that stay in a lattice. An ion is a particle with net charge; a lattice is an ordered arrangement of particles. Dry plastic, rubber and glass are good insulators. Earthing connects a conductor to Earth, a large reservoir that can receive or supply electrons. With no external charging influence, our isolated metal sphere becomes neutral. A discharge is a sudden transfer of charge, sometimes through air as a spark. Printing, spray painting and particle collection can use controlled electric attraction. These virtual experiments use models, not high-voltage equipment. Worked example: A sphere with net charge −3 has three excess electrons in this selected-particle model. Connect it to Earth and those excess electrons leave. A sphere at +2 instead needs two electrons to arrive from Earth.",
+        "solution": "Two initially neutral objects exchange 3 electrons. One ends at −3. The other ends at… → +3. The receiving object gains three electrons; the other loses three. Their total remains zero.\nA balloon loses 2 electrons from a neutral state. Its net charge becomes… → +2. Losing negative charge leaves a positive electron deficit.\nRubbing two objects in an isolated pair changes their total charge by… → Zero. Charge transfers between the objects; it is conserved, not created by rubbing.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Two initially neutral objects exchange 3 electrons. One ends at −3. The other ends at…",
+            "options": [
+              "−3",
+              "0",
+              "+3",
+              "+6"
+            ],
+            "answer": 2,
+            "why": "The receiving object gains three electrons; the other loses three. Their total remains zero."
+          },
+          {
+            "type": "choice",
+            "prompt": "A balloon loses 2 electrons from a neutral state. Its net charge becomes…",
+            "options": [
+              "+2",
+              "−2",
+              "0",
+              "+4"
+            ],
+            "answer": 0,
+            "why": "Losing negative charge leaves a positive electron deficit."
+          },
+          {
+            "type": "choice",
+            "prompt": "Rubbing two objects in an isolated pair changes their total charge by…",
+            "options": [
+              "+2",
+              "−2",
+              "Zero",
+              "Their mass"
+            ],
+            "answer": 2,
+            "why": "Charge transfers between the objects; it is conserved, not created by rubbing."
+          }
+        ]
+      },
+      "spark-uses": {
+        "prompt": "Level 2 · Choose the right electrical effect",
+        "explanation": "A conductor lets charge move through it readily; metals contain mobile electrons and positive ion cores that stay in a lattice. An ion is a particle with net charge; a lattice is an ordered arrangement of particles. Dry plastic, rubber and glass are good insulators. Earthing connects a conductor to Earth, a large reservoir that can receive or supply electrons. With no external charging influence, our isolated metal sphere becomes neutral. A discharge is a sudden transfer of charge, sometimes through air as a spark. Printing, spray painting and particle collection can use controlled electric attraction. These virtual experiments use models, not high-voltage equipment. Worked example: A sphere with net charge −3 has three excess electrons in this selected-particle model. Connect it to Earth and those excess electrons leave. A sphere at +2 instead needs two electrons to arrive from Earth.",
+        "solution": "Classify the main effect in each example. → Toner attracted to selected printer regions → Controlled attraction; Carpet-to-door-handle spark → Sudden discharge; Charged particles collected on plates → Controlled attraction; Lightning through air → Sudden discharge. Classify by the scientific property, not by how an object looks. Controlled attraction and Sudden discharge are different categories.\nClassify the main effect in each example. → Charged paint attracted to a workpiece → Controlled attraction; A visible spark across a small air gap → Sudden discharge; Dust collected by an electrostatic precipitator → Controlled attraction; Cloud-to-ground lightning → Sudden discharge. Classify by the scientific property, not by how an object looks. Controlled attraction and Sudden discharge are different categories.\nClassify the main effect in each example. → Toner held by a charge pattern → Controlled attraction; A sudden electrostatic spark → Sudden discharge; Charged spray attracted towards a panel → Controlled attraction; Charge suddenly travelling through ionised air → Sudden discharge. Classify by the scientific property, not by how an object looks. Controlled attraction and Sudden discharge are different categories.",
+        "variants": [
+          {
+            "type": "sort",
+            "prompt": "Classify the main effect in each example.",
+            "bins": [
+              {
+                "key": "attraction",
+                "label": "Controlled attraction"
+              },
+              {
+                "key": "discharge",
+                "label": "Sudden discharge"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "Toner attracted to selected printer regions",
+                "key": "attraction"
+              },
+              {
+                "id": "t1",
+                "label": "Carpet-to-door-handle spark",
+                "key": "discharge"
+              },
+              {
+                "id": "t2",
+                "label": "Charged particles collected on plates",
+                "key": "attraction"
+              },
+              {
+                "id": "t3",
+                "label": "Lightning through air",
+                "key": "discharge"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Controlled attraction and Sudden discharge are different categories."
+          },
+          {
+            "type": "sort",
+            "prompt": "Classify the main effect in each example.",
+            "bins": [
+              {
+                "key": "attraction",
+                "label": "Controlled attraction"
+              },
+              {
+                "key": "discharge",
+                "label": "Sudden discharge"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "Charged paint attracted to a workpiece",
+                "key": "attraction"
+              },
+              {
+                "id": "t1",
+                "label": "A visible spark across a small air gap",
+                "key": "discharge"
+              },
+              {
+                "id": "t2",
+                "label": "Dust collected by an electrostatic precipitator",
+                "key": "attraction"
+              },
+              {
+                "id": "t3",
+                "label": "Cloud-to-ground lightning",
+                "key": "discharge"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Controlled attraction and Sudden discharge are different categories."
+          },
+          {
+            "type": "sort",
+            "prompt": "Classify the main effect in each example.",
+            "bins": [
+              {
+                "key": "attraction",
+                "label": "Controlled attraction"
+              },
+              {
+                "key": "discharge",
+                "label": "Sudden discharge"
+              }
+            ],
+            "cards": [
+              {
+                "id": "t0",
+                "label": "Toner held by a charge pattern",
+                "key": "attraction"
+              },
+              {
+                "id": "t1",
+                "label": "A sudden electrostatic spark",
+                "key": "discharge"
+              },
+              {
+                "id": "t2",
+                "label": "Charged spray attracted towards a panel",
+                "key": "attraction"
+              },
+              {
+                "id": "t3",
+                "label": "Charge suddenly travelling through ionised air",
+                "key": "discharge"
+              }
+            ],
+            "why": "Classify by the scientific property, not by how an object looks. Controlled attraction and Sudden discharge are different categories."
+          }
+        ]
+      }
+    },
+    "signature": "561a199967ff7c496321972ff6c1d79af6f2d7d74eebd0c6389b6650569ddc75"
+  },
+  "electricity-quest-circuits": {
+    "id": "electricity-quest-circuits",
+    "title": "Voltvale: The Power Quest · Circuits",
+    "course": "Year 9 Science",
+    "topic": "y9-electricity-circuits",
+    "grader": "electricity-quest",
+    "rule": "standard",
+    "rounds": {
+      "circuit-build": {
+        "prompt": "Level 3 · Rebuild the bridge lamp",
+        "explanation": "A cell transfers energy from a chemical store; a battery contains connected cells. A wire conducts, a switch opens or closes a path, and a lamp transfers electrical energy to light and heating. A simple steady direct-current circuit needs a complete conducting loop. DC means the current keeps one direction. Charge is already present in the wires and is not used up by the lamp. Conventional current is defined from positive to negative in the external circuit; electrons in metal drift the opposite way, from negative to positive. In steady series circuits, current is the same before and after the lamp. Worked example: A closed cell–switch–lamp loop can carry steady current. Open the switch and the current stops. If 0.30 A passes before a lamp in a steady series circuit, 0.30 A passes after it too: energy transfers, charge continues.",
+        "solution": "Restore a 3 V single-lamp circuit. Place the cell, switch and lamp in their sockets, then close the switch. →  Put the cell in the source socket, the switch in the control socket and the lamp in the load socket. Close the switch.  A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed.   Explanation:  Charge keeps circulating while the lamp transfers energy. . A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed.\nRestore a 6 V single-lamp circuit. Place the cell, switch and lamp in their sockets, then close the switch. →  Put the cell in the source socket, the switch in the control socket and the lamp in the load socket. Close the switch.  A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed.   Explanation:  Charge keeps circulating while the lamp transfers energy. . A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed.\nRestore a 9 V single-lamp circuit. Place the cell, switch and lamp in their sockets, then close the switch. →  Put the cell in the source socket, the switch in the control socket and the lamp in the load socket. Close the switch.  A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed.   Explanation:  Charge keeps circulating while the lamp transfers energy. . A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "loop",
+            "prompt": "Restore a 3 V single-lamp circuit. Place the cell, switch and lamp in their sockets, then close the switch.",
+            "voltage": 3,
+            "reasons": [
+              "Charge keeps circulating while the lamp transfers energy.",
+              "The lamp uses up the electrons.",
+              "The cell supplies a fresh set of protons."
+            ],
+            "correctReason": 0,
+            "why": "A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed."
+          },
+          {
+            "type": "lab",
+            "kind": "loop",
+            "prompt": "Restore a 6 V single-lamp circuit. Place the cell, switch and lamp in their sockets, then close the switch.",
+            "voltage": 6,
+            "reasons": [
+              "Charge keeps circulating while the lamp transfers energy.",
+              "The lamp uses up the electrons.",
+              "The cell supplies a fresh set of protons."
+            ],
+            "correctReason": 0,
+            "why": "A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed."
+          },
+          {
+            "type": "lab",
+            "kind": "loop",
+            "prompt": "Restore a 9 V single-lamp circuit. Place the cell, switch and lamp in their sockets, then close the switch.",
+            "voltage": 9,
+            "reasons": [
+              "Charge keeps circulating while the lamp transfers energy.",
+              "The lamp uses up the electrons.",
+              "The cell supplies a fresh set of protons."
+            ],
+            "correctReason": 0,
+            "why": "A complete conducting loop permits steady current. The cell transfers energy; the lamp transfers energy to light and heating. Charge is not consumed."
+          }
+        ]
+      },
+      "circuit-parts": {
+        "prompt": "Level 3 · Read the component symbols",
+        "explanation": "A cell transfers energy from a chemical store; a battery contains connected cells. A wire conducts, a switch opens or closes a path, and a lamp transfers electrical energy to light and heating. A simple steady direct-current circuit needs a complete conducting loop. DC means the current keeps one direction. Charge is already present in the wires and is not used up by the lamp. Conventional current is defined from positive to negative in the external circuit; electrons in metal drift the opposite way, from negative to positive. In steady series circuits, current is the same before and after the lamp. Worked example: A closed cell–switch–lamp loop can carry steady current. Open the switch and the current stops. If 0.30 A passes before a lamp in a steady series circuit, 0.30 A passes after it too: energy transfers, charge continues.",
+        "solution": "What does a cell mainly supply to a circuit? → Energy transferred from its chemical store. The mobile charges are already in the conducting circuit; the cell maintains an energy supply.\nA circle with a cross is the usual circuit symbol for… → A lamp. The circle and cross represent a lamp. A cell uses a long and a short line.\nWhat does closing an ideal switch do? → Completes a conducting path. Closing the switch can complete the loop. It does not create the moving charge.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "What does a cell mainly supply to a circuit?",
+            "options": [
+              "A new set of electrons",
+              "Energy transferred from its chemical store",
+              "New protons",
+              "Resistance only"
+            ],
+            "answer": 1,
+            "why": "The mobile charges are already in the conducting circuit; the cell maintains an energy supply."
+          },
+          {
+            "type": "choice",
+            "prompt": "A circle with a cross is the usual circuit symbol for…",
+            "options": [
+              "A cell",
+              "A switch",
+              "A lamp",
+              "A junction"
+            ],
+            "answer": 2,
+            "why": "The circle and cross represent a lamp. A cell uses a long and a short line."
+          },
+          {
+            "type": "choice",
+            "prompt": "What does closing an ideal switch do?",
+            "options": [
+              "Creates charge",
+              "Completes a conducting path",
+              "Uses up electrons",
+              "Removes all resistance"
+            ],
+            "answer": 1,
+            "why": "Closing the switch can complete the loop. It does not create the moving charge."
+          }
+        ]
+      },
+      "circuit-direction": {
+        "prompt": "Level 3 · Follow the charge traffic",
+        "explanation": "A cell transfers energy from a chemical store; a battery contains connected cells. A wire conducts, a switch opens or closes a path, and a lamp transfers electrical energy to light and heating. A simple steady direct-current circuit needs a complete conducting loop. DC means the current keeps one direction. Charge is already present in the wires and is not used up by the lamp. Conventional current is defined from positive to negative in the external circuit; electrons in metal drift the opposite way, from negative to positive. In steady series circuits, current is the same before and after the lamp. Worked example: A closed cell–switch–lamp loop can carry steady current. Open the switch and the current stops. If 0.30 A passes before a lamp in a steady series circuit, 0.30 A passes after it too: energy transfers, charge continues.",
+        "solution": "Conventional current in the external circuit is drawn from… → Positive to negative. Conventional current follows the direction a positive charge would move.\nMobile electrons in the metal external circuit drift from… → Negative to positive. Electrons are negatively charged, so their drift is opposite to conventional current.\nWhat does DC describe? → Current keeps one direction. Direct current keeps one direction; it need not have the same magnitude in every possible situation.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Conventional current in the external circuit is drawn from…",
+            "options": [
+              "Negative to positive",
+              "Positive to negative",
+              "Earth to every lamp",
+              "Either direction in a DC circuit"
+            ],
+            "answer": 1,
+            "why": "Conventional current follows the direction a positive charge would move."
+          },
+          {
+            "type": "choice",
+            "prompt": "Mobile electrons in the metal external circuit drift from…",
+            "options": [
+              "Positive to negative",
+              "The lamp into the glass",
+              "Negative to positive",
+              "The battery centre to Earth"
+            ],
+            "answer": 2,
+            "why": "Electrons are negatively charged, so their drift is opposite to conventional current."
+          },
+          {
+            "type": "choice",
+            "prompt": "What does DC describe?",
+            "options": [
+              "Current keeps one direction",
+              "No charges move",
+              "All components are in parallel",
+              "Voltage is always zero"
+            ],
+            "answer": 0,
+            "why": "Direct current keeps one direction; it need not have the same magnitude in every possible situation."
+          }
+        ]
+      },
+      "circuit-conservation": {
+        "prompt": "Level 3 · Do not spend the electrons",
+        "explanation": "A cell transfers energy from a chemical store; a battery contains connected cells. A wire conducts, a switch opens or closes a path, and a lamp transfers electrical energy to light and heating. A simple steady direct-current circuit needs a complete conducting loop. DC means the current keeps one direction. Charge is already present in the wires and is not used up by the lamp. Conventional current is defined from positive to negative in the external circuit; electrons in metal drift the opposite way, from negative to positive. In steady series circuits, current is the same before and after the lamp. Worked example: A closed cell–switch–lamp loop can carry steady current. Open the switch and the current stops. If 0.30 A passes before a lamp in a steady series circuit, 0.30 A passes after it too: energy transfers, charge continues.",
+        "solution": "A lamp has 0.4 A entering it in a steady series loop. The current leaving it is… → 0.4 A. There is no continuing charge accumulation. The lamp transfers energy, not charge away from the loop.\nIn the Pizza Circuit analogy, the couriers represent… → Charge packets. Couriers circulate like charge; pizzas represent transferred energy. Couriers return after delivery.\nA lamp lights because it transfers… → Electrical energy to light and heating. Energy changes form while charge continues through the circuit.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "A lamp has 0.4 A entering it in a steady series loop. The current leaving it is…",
+            "options": [
+              "0 A",
+              "0.2 A",
+              "0.4 A",
+              "0.8 A"
+            ],
+            "answer": 2,
+            "why": "There is no continuing charge accumulation. The lamp transfers energy, not charge away from the loop."
+          },
+          {
+            "type": "choice",
+            "prompt": "In the Pizza Circuit analogy, the couriers represent…",
+            "options": [
+              "Charge packets",
+              "Energy only",
+              "The cell’s chemical store",
+              "Resistance"
+            ],
+            "answer": 0,
+            "why": "Couriers circulate like charge; pizzas represent transferred energy. Couriers return after delivery."
+          },
+          {
+            "type": "choice",
+            "prompt": "A lamp lights because it transfers…",
+            "options": [
+              "All electrons into light",
+              "Electrical energy to light and heating",
+              "All protons to Earth",
+              "Its resistance into charge"
+            ],
+            "answer": 1,
+            "why": "Energy changes form while charge continues through the circuit."
+          }
+        ]
+      },
+      "meter-place": {
+        "prompt": "Level 4 · Connect the correct meter",
+        "explanation": "Current I is charge Q passing per time t: I = Q/t, measured in amperes (A); 1 A = 1 C/s. Potential difference V is energy E transferred per charge: V = E/Q, measured in volts (V); 1 V = 1 J/C. Power P is energy transferred per time, in watts (W): P = VI and 1 W = 1 J/s. An ammeter has very low resistance and goes in series in the measured path. A voltmeter has high resistance and connects in parallel across two points. Measure current through; measure voltage across. Symbols can have different roles: V denotes voltage and is also the volt unit; I is current, not the number one. Worked example: 6 C passing in 3 s gives I = 6/3 = 2 A. Transferring 12 J to 2 C gives V = 12/2 = 6 V. A 6 V component carrying 0.30 A transfers energy at P = 6 × 0.30 = 1.8 W.",
+        "solution": "Use the ammeter to measure current through the lamp in a 6 V circuit. Drag it to the correct connection. →  Place the ammeter in series in the current path.  An ammeter forms part of the path carrying the current being measured. Its resistance is very low.   Explanation:  An ammeter goes in series and reads amperes (A). . An ammeter forms part of the path carrying the current being measured. Its resistance is very low.\nUse the voltmeter to measure potential difference across the lamp in a 6 V circuit. Drag it to the correct connection. →  Place the voltmeter in parallel across the lamp.  A voltmeter connects across two points. Its high resistance keeps its own current very small.   Explanation:  A voltmeter compares two points in parallel and reads volts (V). . A voltmeter connects across two points. Its high resistance keeps its own current very small.\nUse the ammeter to measure current through the lamp in a 9 V circuit. Drag it to the correct connection. →  Place the ammeter in series in the current path.  An ammeter forms part of the path carrying the current being measured. Its resistance is very low.   Explanation:  An ammeter goes in series and reads amperes (A). . An ammeter forms part of the path carrying the current being measured. Its resistance is very low.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "meter",
+            "prompt": "Use the ammeter to measure current through the lamp in a 6 V circuit. Drag it to the correct connection.",
+            "meter": "ammeter",
+            "voltage": 6,
+            "current": 0.3,
+            "reasons": [
+              "An ammeter goes in series and reads amperes (A).",
+              "An ammeter goes across the supply and reads volts.",
+              "An ammeter measures stored energy."
+            ],
+            "correctReason": 0,
+            "why": "An ammeter forms part of the path carrying the current being measured. Its resistance is very low."
+          },
+          {
+            "type": "lab",
+            "kind": "meter",
+            "prompt": "Use the voltmeter to measure potential difference across the lamp in a 6 V circuit. Drag it to the correct connection.",
+            "meter": "voltmeter",
+            "voltage": 6,
+            "current": 0.3,
+            "reasons": [
+              "A voltmeter compares two points in parallel and reads volts (V).",
+              "A voltmeter breaks the circuit to count electrons.",
+              "A voltmeter reads ohms directly."
+            ],
+            "correctReason": 0,
+            "why": "A voltmeter connects across two points. Its high resistance keeps its own current very small."
+          },
+          {
+            "type": "lab",
+            "kind": "meter",
+            "prompt": "Use the ammeter to measure current through the lamp in a 9 V circuit. Drag it to the correct connection.",
+            "meter": "ammeter",
+            "voltage": 9,
+            "current": 0.45,
+            "reasons": [
+              "An ammeter goes in series and reads amperes (A).",
+              "An ammeter goes across the supply and reads volts.",
+              "An ammeter measures stored energy."
+            ],
+            "correctReason": 0,
+            "why": "An ammeter forms part of the path carrying the current being measured. Its resistance is very low."
+          }
+        ]
+      },
+      "meter-current": {
+        "prompt": "Level 4 · Count charge each second",
+        "explanation": "Current I is charge Q passing per time t: I = Q/t, measured in amperes (A); 1 A = 1 C/s. Potential difference V is energy E transferred per charge: V = E/Q, measured in volts (V); 1 V = 1 J/C. Power P is energy transferred per time, in watts (W): P = VI and 1 W = 1 J/s. An ammeter has very low resistance and goes in series in the measured path. A voltmeter has high resistance and connects in parallel across two points. Measure current through; measure voltage across. Symbols can have different roles: V denotes voltage and is also the volt unit; I is current, not the number one. Worked example: 6 C passing in 3 s gives I = 6/3 = 2 A. Transferring 12 J to 2 C gives V = 12/2 = 6 V. A 6 V component carrying 0.30 A transfers energy at P = 6 × 0.30 = 1.8 W.",
+        "solution": "12 C of charge passes a point in 4 s. Find the steady current. →  I = Q/t · Q = 12 C · t = 4 s → 3 A  Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs. . Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs.\n15 C of charge passes a point in 5 s. Find the steady current. →  I = Q/t · Q = 15 C · t = 5 s → 3 A  Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs. . Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs.\n8 C of charge passes a point in 4 s. Find the steady current. →  I = Q/t · Q = 8 C · t = 4 s → 2 A  Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs. . Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "12 C of charge passes a point in 4 s. Find the steady current.",
+            "expectedValue": 3,
+            "unit": "A",
+            "formula": "I = Q/t · Q = 12 C · t = 4 s",
+            "why": "Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "15 C of charge passes a point in 5 s. Find the steady current.",
+            "expectedValue": 3,
+            "unit": "A",
+            "formula": "I = Q/t · Q = 15 C · t = 5 s",
+            "why": "Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "8 C of charge passes a point in 4 s. Find the steady current.",
+            "expectedValue": 2,
+            "unit": "A",
+            "formula": "I = Q/t · Q = 8 C · t = 4 s",
+            "why": "Divide transferred charge by elapsed time. The answer is a flow rate in amperes, not a stored charge in coulombs."
+          }
+        ]
+      },
+      "meter-voltage": {
+        "prompt": "Level 4 · Price the energy per charge",
+        "explanation": "Current I is charge Q passing per time t: I = Q/t, measured in amperes (A); 1 A = 1 C/s. Potential difference V is energy E transferred per charge: V = E/Q, measured in volts (V); 1 V = 1 J/C. Power P is energy transferred per time, in watts (W): P = VI and 1 W = 1 J/s. An ammeter has very low resistance and goes in series in the measured path. A voltmeter has high resistance and connects in parallel across two points. Measure current through; measure voltage across. Symbols can have different roles: V denotes voltage and is also the volt unit; I is current, not the number one. Worked example: 6 C passing in 3 s gives I = 6/3 = 2 A. Transferring 12 J to 2 C gives V = 12/2 = 6 V. A 6 V component carrying 0.30 A transfers energy at P = 6 × 0.30 = 1.8 W.",
+        "solution": "18 J of energy is transferred when 3 C passes through a component. Find its potential difference. →  V = E/Q · E = 18 J · Q = 3 C → 6 V  Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts. . Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts.\n24 J of energy is transferred when 4 C passes through a component. Find its potential difference. →  V = E/Q · E = 24 J · Q = 4 C → 6 V  Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts. . Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts.\n20 J of energy is transferred when 5 C passes through a component. Find its potential difference. →  V = E/Q · E = 20 J · Q = 5 C → 4 V  Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts. . Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "18 J of energy is transferred when 3 C passes through a component. Find its potential difference.",
+            "expectedValue": 6,
+            "unit": "V",
+            "formula": "V = E/Q · E = 18 J · Q = 3 C",
+            "why": "Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "24 J of energy is transferred when 4 C passes through a component. Find its potential difference.",
+            "expectedValue": 6,
+            "unit": "V",
+            "formula": "V = E/Q · E = 24 J · Q = 4 C",
+            "why": "Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "20 J of energy is transferred when 5 C passes through a component. Find its potential difference.",
+            "expectedValue": 4,
+            "unit": "V",
+            "formula": "V = E/Q · E = 20 J · Q = 5 C",
+            "why": "Potential difference is energy transferred per coulomb. Divide joules by coulombs to get volts."
+          }
+        ]
+      },
+      "meter-power": {
+        "prompt": "Level 4 · Power the market sign",
+        "explanation": "Current I is charge Q passing per time t: I = Q/t, measured in amperes (A); 1 A = 1 C/s. Potential difference V is energy E transferred per charge: V = E/Q, measured in volts (V); 1 V = 1 J/C. Power P is energy transferred per time, in watts (W): P = VI and 1 W = 1 J/s. An ammeter has very low resistance and goes in series in the measured path. A voltmeter has high resistance and connects in parallel across two points. Measure current through; measure voltage across. Symbols can have different roles: V denotes voltage and is also the volt unit; I is current, not the number one. Worked example: 6 C passing in 3 s gives I = 6/3 = 2 A. Transferring 12 J to 2 C gives V = 12/2 = 6 V. A 6 V component carrying 0.30 A transfers energy at P = 6 × 0.30 = 1.8 W.",
+        "solution": "A sign operates at 6 V and 0.5 A. Find its electrical power. →  P = VI · V = 6 V · I = 0.5 A → 3 W  Multiply voltage by current. Power is a rate in watts, not an energy in joules. . Multiply voltage by current. Power is a rate in watts, not an energy in joules.\nA sign operates at 12 V and 0.25 A. Find its electrical power. →  P = VI · V = 12 V · I = 0.25 A → 3 W  Multiply voltage by current. Power is a rate in watts, not an energy in joules. . Multiply voltage by current. Power is a rate in watts, not an energy in joules.\nA sign operates at 9 V and 2 A. Find its electrical power. →  P = VI · V = 9 V · I = 2 A → 18 W  Multiply voltage by current. Power is a rate in watts, not an energy in joules. . Multiply voltage by current. Power is a rate in watts, not an energy in joules.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "A sign operates at 6 V and 0.5 A. Find its electrical power.",
+            "expectedValue": 3,
+            "unit": "W",
+            "formula": "P = VI · V = 6 V · I = 0.5 A",
+            "why": "Multiply voltage by current. Power is a rate in watts, not an energy in joules."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "A sign operates at 12 V and 0.25 A. Find its electrical power.",
+            "expectedValue": 3,
+            "unit": "W",
+            "formula": "P = VI · V = 12 V · I = 0.25 A",
+            "why": "Multiply voltage by current. Power is a rate in watts, not an energy in joules."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "A sign operates at 9 V and 2 A. Find its electrical power.",
+            "expectedValue": 18,
+            "unit": "W",
+            "formula": "P = VI · V = 9 V · I = 2 A",
+            "why": "Multiply voltage by current. Power is a rate in watts, not an energy in joules."
+          }
+        ]
+      },
+      "ohm-supply": {
+        "prompt": "Level 5 · Tune the resistor circuit",
+        "explanation": "Resistance R opposes current for a given potential difference, and is measured in ohms (Ω). For an ohmic conductor at constant temperature, V = IR, so I = V/R and R = V/I. Current is directly proportional to voltage when resistance is fixed. On an I–V graph with current vertical and voltage horizontal, the straight line passes through (0,0). Its gradient means change in current divided by change in voltage: 1/R. Steeper therefore means lower resistance. A metal wire’s resistance increases with length and generally with temperature, and decreases with cross-sectional area. For a uniform wire, R = ρL/A: ρ (rho) is resistivity, a property of the material in ohm metres (Ω m); L is length in metres; A is cross-sectional area in square metres. This A means area, not the ampere unit. For a round wire A = π(d/2)², where d is diameter in metres and π (pi) is approximately 3.14. A filament lamp heats and gives a curved graph; a ratio at one point is not proof of Ohm’s law. Worked example: A 10 Ω resistor needs V = IR = 0.6 × 10 = 6 V for 0.6 A. A wire twice as long has twice the resistance. A wire twice the diameter has four times the area, so one quarter of the resistance, with material and temperature unchanged.",
+        "solution": "Set the supply so a 10 Ω ohmic resistor carries 0.6 A. Keep its temperature constant. →  Set V = IR = 0.6 × 10 = 6 V.  V = IR = 0.6 × 10 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.   Explanation:  At constant resistance and temperature, I = V/R. . V = IR = 0.6 × 10 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.\nSet the supply so a 20 Ω ohmic resistor carries 0.4 A. Keep its temperature constant. →  Set V = IR = 0.4 × 20 = 8 V.  V = IR = 0.4 × 20 = 8 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.   Explanation:  At constant resistance and temperature, I = V/R. . V = IR = 0.4 × 20 = 8 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.\nSet the supply so a 10 Ω ohmic resistor carries 0.9 A. Keep its temperature constant. →  Set V = IR = 0.9 × 10 = 9 V.  V = IR = 0.9 × 10 = 9 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.   Explanation:  At constant resistance and temperature, I = V/R. . V = IR = 0.9 × 10 = 9 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "ohm",
+            "prompt": "Set the supply so a 10 Ω ohmic resistor carries 0.6 A. Keep its temperature constant.",
+            "resistance": 10,
+            "targetCurrent": 0.6,
+            "reasons": [
+              "At constant resistance and temperature, I = V/R.",
+              "Current is the same whatever voltage you choose.",
+              "The resistor uses up charge."
+            ],
+            "correctReason": 0,
+            "why": "V = IR = 0.6 × 10 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R."
+          },
+          {
+            "type": "lab",
+            "kind": "ohm",
+            "prompt": "Set the supply so a 20 Ω ohmic resistor carries 0.4 A. Keep its temperature constant.",
+            "resistance": 20,
+            "targetCurrent": 0.4,
+            "reasons": [
+              "At constant resistance and temperature, I = V/R.",
+              "Current is the same whatever voltage you choose.",
+              "The resistor uses up charge."
+            ],
+            "correctReason": 0,
+            "why": "V = IR = 0.4 × 20 = 8 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R."
+          },
+          {
+            "type": "lab",
+            "kind": "ohm",
+            "prompt": "Set the supply so a 10 Ω ohmic resistor carries 0.9 A. Keep its temperature constant.",
+            "resistance": 10,
+            "targetCurrent": 0.9,
+            "reasons": [
+              "At constant resistance and temperature, I = V/R.",
+              "Current is the same whatever voltage you choose.",
+              "The resistor uses up charge."
+            ],
+            "correctReason": 0,
+            "why": "V = IR = 0.9 × 10 = 9 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R."
+          }
+        ]
+      },
+      "ohm-calculate": {
+        "prompt": "Level 5 · Recover the missing resistance",
+        "explanation": "Resistance R opposes current for a given potential difference, and is measured in ohms (Ω). For an ohmic conductor at constant temperature, V = IR, so I = V/R and R = V/I. Current is directly proportional to voltage when resistance is fixed. On an I–V graph with current vertical and voltage horizontal, the straight line passes through (0,0). Its gradient means change in current divided by change in voltage: 1/R. Steeper therefore means lower resistance. A metal wire’s resistance increases with length and generally with temperature, and decreases with cross-sectional area. For a uniform wire, R = ρL/A: ρ (rho) is resistivity, a property of the material in ohm metres (Ω m); L is length in metres; A is cross-sectional area in square metres. This A means area, not the ampere unit. For a round wire A = π(d/2)², where d is diameter in metres and π (pi) is approximately 3.14. A filament lamp heats and gives a curved graph; a ratio at one point is not proof of Ohm’s law. Worked example: A 10 Ω resistor needs V = IR = 0.6 × 10 = 6 V for 0.6 A. A wire twice as long has twice the resistance. A wire twice the diameter has four times the area, so one quarter of the resistance, with material and temperature unchanged.",
+        "solution": "A component has 6 V across it and 0.3 A through it. Find its resistance. →  R = V/I · V = 6 V · I = 0.3 A → 20 Ω  Divide potential difference by current. This gives resistance at this operating point in ohms. . Divide potential difference by current. This gives resistance at this operating point in ohms.\nA component has 12 V across it and 0.5 A through it. Find its resistance. →  R = V/I · V = 12 V · I = 0.5 A → 24 Ω  Divide potential difference by current. This gives resistance at this operating point in ohms. . Divide potential difference by current. This gives resistance at this operating point in ohms.\nA component has 9 V across it and 0.3 A through it. Find its resistance. →  R = V/I · V = 9 V · I = 0.3 A → 30 Ω  Divide potential difference by current. This gives resistance at this operating point in ohms. . Divide potential difference by current. This gives resistance at this operating point in ohms.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "A component has 6 V across it and 0.3 A through it. Find its resistance.",
+            "expectedValue": 20,
+            "unit": "Ω",
+            "formula": "R = V/I · V = 6 V · I = 0.3 A",
+            "why": "Divide potential difference by current. This gives resistance at this operating point in ohms."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "A component has 12 V across it and 0.5 A through it. Find its resistance.",
+            "expectedValue": 24,
+            "unit": "Ω",
+            "formula": "R = V/I · V = 12 V · I = 0.5 A",
+            "why": "Divide potential difference by current. This gives resistance at this operating point in ohms."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "A component has 9 V across it and 0.3 A through it. Find its resistance.",
+            "expectedValue": 30,
+            "unit": "Ω",
+            "formula": "R = V/I · V = 9 V · I = 0.3 A",
+            "why": "Divide potential difference by current. This gives resistance at this operating point in ohms."
+          }
+        ]
+      },
+      "ohm-wire": {
+        "prompt": "Level 5 · Build the right resistance wire",
+        "explanation": "Resistance R opposes current for a given potential difference, and is measured in ohms (Ω). For an ohmic conductor at constant temperature, V = IR, so I = V/R and R = V/I. Current is directly proportional to voltage when resistance is fixed. On an I–V graph with current vertical and voltage horizontal, the straight line passes through (0,0). Its gradient means change in current divided by change in voltage: 1/R. Steeper therefore means lower resistance. A metal wire’s resistance increases with length and generally with temperature, and decreases with cross-sectional area. For a uniform wire, R = ρL/A: ρ (rho) is resistivity, a property of the material in ohm metres (Ω m); L is length in metres; A is cross-sectional area in square metres. This A means area, not the ampere unit. For a round wire A = π(d/2)², where d is diameter in metres and π (pi) is approximately 3.14. A filament lamp heats and gives a curved graph; a ratio at one point is not proof of Ohm’s law. Worked example: A 10 Ω resistor needs V = IR = 0.6 × 10 = 6 V for 0.6 A. A wire twice as long has twice the resistance. A wire twice the diameter has four times the area, so one quarter of the resistance, with material and temperature unchanged.",
+        "solution": "Make the wire resistance 2 times its reference value. The reference is 1 m long and 1 mm in diameter. Keep material and temperature unchanged. →  Choose length 2 m and diameter 1 mm: 2/1² = 2.  R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area.   Explanation:  Resistance increases with length and decreases with cross-sectional area. . R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area.\nMake the wire resistance one quarter of its reference value. The reference is 1 m long and 1 mm in diameter. Keep material and temperature unchanged. →  Choose length 1 m and diameter 2 mm: 1/2² = 0.25.  R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area.   Explanation:  Resistance increases with length and decreases with cross-sectional area. . R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area.\nMake the wire resistance 4 times its reference value. The reference is 1 m long and 1 mm in diameter. Keep material and temperature unchanged. →  Choose length 4 m and diameter 1 mm: 4/1² = 4.  R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area.   Explanation:  Resistance increases with length and decreases with cross-sectional area. . R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "wire",
+            "prompt": "Make the wire resistance 2 times its reference value. The reference is 1 m long and 1 mm in diameter. Keep material and temperature unchanged.",
+            "targetRatio": 2,
+            "reasons": [
+              "Resistance increases with length and decreases with cross-sectional area.",
+              "Diameter and area are the same quantity.",
+              "Longer wires always have lower resistance."
+            ],
+            "correctReason": 0,
+            "why": "R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area."
+          },
+          {
+            "type": "lab",
+            "kind": "wire",
+            "prompt": "Make the wire resistance one quarter of its reference value. The reference is 1 m long and 1 mm in diameter. Keep material and temperature unchanged.",
+            "targetRatio": 0.25,
+            "reasons": [
+              "Resistance increases with length and decreases with cross-sectional area.",
+              "Diameter and area are the same quantity.",
+              "Longer wires always have lower resistance."
+            ],
+            "correctReason": 0,
+            "why": "R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area."
+          },
+          {
+            "type": "lab",
+            "kind": "wire",
+            "prompt": "Make the wire resistance 4 times its reference value. The reference is 1 m long and 1 mm in diameter. Keep material and temperature unchanged.",
+            "targetRatio": 4,
+            "reasons": [
+              "Resistance increases with length and decreases with cross-sectional area.",
+              "Diameter and area are the same quantity.",
+              "Longer wires always have lower resistance."
+            ],
+            "correctReason": 0,
+            "why": "R = ρL/A. For a circular wire, A = π(d/2)², so the resistance ratio is L/d² when L and d are compared with the 1 m, 1 mm reference. Doubling diameter quadruples area."
+          }
+        ]
+      },
+      "ohm-graph": {
+        "prompt": "Level 5 · Read the I–V clue",
+        "explanation": "Resistance R opposes current for a given potential difference, and is measured in ohms (Ω). For an ohmic conductor at constant temperature, V = IR, so I = V/R and R = V/I. Current is directly proportional to voltage when resistance is fixed. On an I–V graph with current vertical and voltage horizontal, the straight line passes through (0,0). Its gradient means change in current divided by change in voltage: 1/R. Steeper therefore means lower resistance. A metal wire’s resistance increases with length and generally with temperature, and decreases with cross-sectional area. For a uniform wire, R = ρL/A: ρ (rho) is resistivity, a property of the material in ohm metres (Ω m); L is length in metres; A is cross-sectional area in square metres. This A means area, not the ampere unit. For a round wire A = π(d/2)², where d is diameter in metres and π (pi) is approximately 3.14. A filament lamp heats and gives a curved graph; a ratio at one point is not proof of Ohm’s law. Worked example: A 10 Ω resistor needs V = IR = 0.6 × 10 = 6 V for 0.6 A. A wire twice as long has twice the resistance. A wire twice the diameter has four times the area, so one quarter of the resistance, with material and temperature unchanged.",
+        "solution": "On an I-vertical, V-horizontal graph, a steeper ohmic straight line means… → Lower resistance. Its gradient is I/V = 1/R. A larger gradient corresponds to a smaller resistance.\nFor an ohmic resistor, which condition must remain constant when testing V and I? → Its temperature and other physical conditions. Ohm’s law assumes unchanged physical conditions, including temperature.\nWhy is a filament lamp’s I–V graph curved? → Its temperature and resistance change. The filament heats as current rises. Resistance changes, so the graph is not an ohmic straight line.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "On an I-vertical, V-horizontal graph, a steeper ohmic straight line means…",
+            "options": [
+              "Higher resistance",
+              "Lower resistance",
+              "No charge carriers",
+              "Higher temperature always"
+            ],
+            "answer": 1,
+            "why": "Its gradient is I/V = 1/R. A larger gradient corresponds to a smaller resistance."
+          },
+          {
+            "type": "choice",
+            "prompt": "For an ohmic resistor, which condition must remain constant when testing V and I?",
+            "options": [
+              "Its temperature and other physical conditions",
+              "The current must stay zero",
+              "The voltage must never change",
+              "Its length must double each time"
+            ],
+            "answer": 0,
+            "why": "Ohm’s law assumes unchanged physical conditions, including temperature."
+          },
+          {
+            "type": "choice",
+            "prompt": "Why is a filament lamp’s I–V graph curved?",
+            "options": [
+              "Charge disappears",
+              "Its temperature and resistance change",
+              "It has no electrons",
+              "A graph cannot show lamps"
+            ],
+            "answer": 1,
+            "why": "The filament heats as current rises. Resistance changes, so the graph is not an ohmic straight line."
+          }
+        ]
+      },
+      "power-paths": {
+        "prompt": "Level 6 · Keep the branch lights working",
+        "explanation": "Series components share one path: the same steady current passes through them and total resistance adds, R_total = R₁ + R₂. The subscript 1 or 2 labels a component. In parallel, branches share the same pair of connection points and therefore the same voltage. Total current is I_total = I₁ + I₂, where each branch follows I = V/R for an ohmic resistor. An open parallel branch can leave another branch working. At fixed voltage, adding a parallel branch increases supply current. A fuse or circuit breaker interrupts excessive current; residual-current protection detects current imbalance, and protective earth provides a fault path for suitable equipment. These have different jobs. Keep real classroom work to approved low-voltage equipment. Worked example: 20 Ω and 40 Ω in parallel across 6 V carry 6/20 = 0.30 A and 6/40 = 0.15 A. Supply current is 0.45 A. In series the resistance is 60 Ω, so supply current is only 6/60 = 0.10 A.",
+        "solution": "Arrange two lamps in parallel. Keep lamp A lit while the other branch switch is open. →  Choose parallel, switch A ON and switch B OFF.  In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents.   Explanation:  Parallel branches have independent paths; series components share one path. . In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents.\nArrange the two lamps in series and close both switches so both lamps light. →  Choose series, switch A ON and switch B ON.  In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents.   Explanation:  Parallel branches have independent paths; series components share one path. . In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents.\nArrange two lamps in parallel. Keep lamp B lit while the other branch switch is open. →  Choose parallel, switch A OFF and switch B ON.  In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents.   Explanation:  Parallel branches have independent paths; series components share one path. . In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "network",
+            "prompt": "Arrange two lamps in parallel. Keep lamp A lit while the other branch switch is open.",
+            "targetConnection": "parallel",
+            "targetA": true,
+            "targetB": false,
+            "reasons": [
+              "Parallel branches have independent paths; series components share one path.",
+              "A lamp consumes all the current before the next lamp.",
+              "Parallel means the current must be equal in every branch."
+            ],
+            "correctReason": 0,
+            "why": "In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents."
+          },
+          {
+            "type": "lab",
+            "kind": "network",
+            "prompt": "Arrange the two lamps in series and close both switches so both lamps light.",
+            "targetConnection": "series",
+            "targetA": true,
+            "targetB": true,
+            "reasons": [
+              "Parallel branches have independent paths; series components share one path.",
+              "A lamp consumes all the current before the next lamp.",
+              "Parallel means the current must be equal in every branch."
+            ],
+            "correctReason": 0,
+            "why": "In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents."
+          },
+          {
+            "type": "lab",
+            "kind": "network",
+            "prompt": "Arrange two lamps in parallel. Keep lamp B lit while the other branch switch is open.",
+            "targetConnection": "parallel",
+            "targetA": false,
+            "targetB": true,
+            "reasons": [
+              "Parallel branches have independent paths; series components share one path.",
+              "A lamp consumes all the current before the next lamp.",
+              "Parallel means the current must be equal in every branch."
+            ],
+            "correctReason": 0,
+            "why": "In series, either open switch interrupts the only path. In parallel, opening one branch does not break the other. The supply current is the sum of branch currents."
+          }
+        ]
+      },
+      "power-total": {
+        "prompt": "Level 6 · Add the branch currents",
+        "explanation": "Series components share one path: the same steady current passes through them and total resistance adds, R_total = R₁ + R₂. The subscript 1 or 2 labels a component. In parallel, branches share the same pair of connection points and therefore the same voltage. Total current is I_total = I₁ + I₂, where each branch follows I = V/R for an ohmic resistor. An open parallel branch can leave another branch working. At fixed voltage, adding a parallel branch increases supply current. A fuse or circuit breaker interrupts excessive current; residual-current protection detects current imbalance, and protective earth provides a fault path for suitable equipment. These have different jobs. Keep real classroom work to approved low-voltage equipment. Worked example: 20 Ω and 40 Ω in parallel across 6 V carry 6/20 = 0.30 A and 6/40 = 0.15 A. Supply current is 0.45 A. In series the resistance is 60 Ω, so supply current is only 6/60 = 0.10 A.",
+        "solution": "Two parallel resistors of 20 Ω and 40 Ω share a 6 V supply. Find the total supply current. →  I_total = V/R₁ + V/R₂ · V = 6 V · R₁ = 20 Ω · R₂ = 40 Ω → 0.44999999999999996 A  Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction. . Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction.\nTwo parallel resistors of 20 Ω and 60 Ω share a 12 V supply. Find the total supply current. →  I_total = V/R₁ + V/R₂ · V = 12 V · R₁ = 20 Ω · R₂ = 60 Ω → 0.8 A  Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction. . Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction.\nTwo parallel resistors of 30 Ω and 60 Ω share a 6 V supply. Find the total supply current. →  I_total = V/R₁ + V/R₂ · V = 6 V · R₁ = 30 Ω · R₂ = 60 Ω → 0.30000000000000004 A  Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction. . Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "Two parallel resistors of 20 Ω and 40 Ω share a 6 V supply. Find the total supply current.",
+            "expectedValue": 0.44999999999999996,
+            "unit": "A",
+            "formula": "I_total = V/R₁ + V/R₂ · V = 6 V · R₁ = 20 Ω · R₂ = 40 Ω",
+            "why": "Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "Two parallel resistors of 20 Ω and 60 Ω share a 12 V supply. Find the total supply current.",
+            "expectedValue": 0.8,
+            "unit": "A",
+            "formula": "I_total = V/R₁ + V/R₂ · V = 12 V · R₁ = 20 Ω · R₂ = 60 Ω",
+            "why": "Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction."
+          },
+          {
+            "type": "lab",
+            "kind": "calculation",
+            "prompt": "Two parallel resistors of 30 Ω and 60 Ω share a 6 V supply. Find the total supply current.",
+            "expectedValue": 0.30000000000000004,
+            "unit": "A",
+            "formula": "I_total = V/R₁ + V/R₂ · V = 6 V · R₁ = 30 Ω · R₂ = 60 Ω",
+            "why": "Both branches have the supply voltage. Calculate each branch current separately, then add them at the junction."
+          }
+        ]
+      },
+      "power-decisions": {
+        "prompt": "Level 6 · Make the safe scientific choice",
+        "explanation": "Series components share one path: the same steady current passes through them and total resistance adds, R_total = R₁ + R₂. The subscript 1 or 2 labels a component. In parallel, branches share the same pair of connection points and therefore the same voltage. Total current is I_total = I₁ + I₂, where each branch follows I = V/R for an ohmic resistor. An open parallel branch can leave another branch working. At fixed voltage, adding a parallel branch increases supply current. A fuse or circuit breaker interrupts excessive current; residual-current protection detects current imbalance, and protective earth provides a fault path for suitable equipment. These have different jobs. Keep real classroom work to approved low-voltage equipment. Worked example: 20 Ω and 40 Ω in parallel across 6 V carry 6/20 = 0.30 A and 6/40 = 0.15 A. Supply current is 0.45 A. In series the resistance is 60 Ω, so supply current is only 6/60 = 0.10 A.",
+        "solution": "Which statement about a fuse or circuit breaker is correct? → It interrupts excessive current. Fuses and circuit breakers interrupt excessive current; other protective devices have different roles.\nFor a school investigation, which equipment should you use? → Approved low-voltage equipment under the school’s procedure. This game models low-voltage circuits. Real experiments must follow the school’s procedure with approved equipment.\nWhich statement correctly links charge and energy? → Energy transfers while charge is conserved. A cell supplies energy; charge circulates and is conserved. Current is charge per second; voltage is energy per charge.",
+        "variants": [
+          {
+            "type": "choice",
+            "prompt": "Which statement about a fuse or circuit breaker is correct?",
+            "options": [
+              "It creates extra charge",
+              "It interrupts excessive current",
+              "It measures every voltage",
+              "It replaces all other protection"
+            ],
+            "answer": 1,
+            "why": "Fuses and circuit breakers interrupt excessive current; other protective devices have different roles."
+          },
+          {
+            "type": "choice",
+            "prompt": "For a school investigation, which equipment should you use?",
+            "options": [
+              "An opened household mains socket",
+              "Approved low-voltage equipment under the school’s procedure",
+              "An improvised high-voltage source",
+              "A lightning conductor during a storm"
+            ],
+            "answer": 1,
+            "why": "This game models low-voltage circuits. Real experiments must follow the school’s procedure with approved equipment."
+          },
+          {
+            "type": "choice",
+            "prompt": "Which statement correctly links charge and energy?",
+            "options": [
+              "Both are consumed by the first lamp",
+              "Energy transfers while charge is conserved",
+              "Current and voltage are identical",
+              "A cell makes new electrons every second"
+            ],
+            "answer": 1,
+            "why": "A cell supplies energy; charge circulates and is conserved. Current is charge per second; voltage is energy per charge."
+          }
+        ]
+      },
+      "power-beacon": {
+        "prompt": "Level 6 · Restore the city beacon",
+        "explanation": "Series components share one path: the same steady current passes through them and total resistance adds, R_total = R₁ + R₂. The subscript 1 or 2 labels a component. In parallel, branches share the same pair of connection points and therefore the same voltage. Total current is I_total = I₁ + I₂, where each branch follows I = V/R for an ohmic resistor. An open parallel branch can leave another branch working. At fixed voltage, adding a parallel branch increases supply current. A fuse or circuit breaker interrupts excessive current; residual-current protection detects current imbalance, and protective earth provides a fault path for suitable equipment. These have different jobs. Keep real classroom work to approved low-voltage equipment. Worked example: 20 Ω and 40 Ω in parallel across 6 V carry 6/20 = 0.30 A and 6/40 = 0.15 A. Supply current is 0.45 A. In series the resistance is 60 Ω, so supply current is only 6/60 = 0.10 A.",
+        "solution": "Set the supply so a 20 Ω ohmic resistor carries 0.3 A. Keep its temperature constant. →  Set V = IR = 0.3 × 20 = 6 V.  V = IR = 0.3 × 20 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.   Explanation:  At constant resistance and temperature, I = V/R. . V = IR = 0.3 × 20 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.\nSet the supply so a 30 Ω ohmic resistor carries 0.2 A. Keep its temperature constant. →  Set V = IR = 0.2 × 30 = 6 V.  V = IR = 0.2 × 30 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.   Explanation:  At constant resistance and temperature, I = V/R. . V = IR = 0.2 × 30 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.\nSet the supply so a 20 Ω ohmic resistor carries 0.5 A. Keep its temperature constant. →  Set V = IR = 0.5 × 20 = 10 V.  V = IR = 0.5 × 20 = 10 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.   Explanation:  At constant resistance and temperature, I = V/R. . V = IR = 0.5 × 20 = 10 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R.",
+        "variants": [
+          {
+            "type": "lab",
+            "kind": "ohm",
+            "prompt": "Set the supply so a 20 Ω ohmic resistor carries 0.3 A. Keep its temperature constant.",
+            "resistance": 20,
+            "targetCurrent": 0.3,
+            "reasons": [
+              "At constant resistance and temperature, I = V/R.",
+              "Current is the same whatever voltage you choose.",
+              "The resistor uses up charge."
+            ],
+            "correctReason": 0,
+            "why": "V = IR = 0.3 × 20 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R."
+          },
+          {
+            "type": "lab",
+            "kind": "ohm",
+            "prompt": "Set the supply so a 30 Ω ohmic resistor carries 0.2 A. Keep its temperature constant.",
+            "resistance": 30,
+            "targetCurrent": 0.2,
+            "reasons": [
+              "At constant resistance and temperature, I = V/R.",
+              "Current is the same whatever voltage you choose.",
+              "The resistor uses up charge."
+            ],
+            "correctReason": 0,
+            "why": "V = IR = 0.2 × 30 = 6 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R."
+          },
+          {
+            "type": "lab",
+            "kind": "ohm",
+            "prompt": "Set the supply so a 20 Ω ohmic resistor carries 0.5 A. Keep its temperature constant.",
+            "resistance": 20,
+            "targetCurrent": 0.5,
+            "reasons": [
+              "At constant resistance and temperature, I = V/R.",
+              "Current is the same whatever voltage you choose.",
+              "The resistor uses up charge."
+            ],
+            "correctReason": 0,
+            "why": "V = IR = 0.5 × 20 = 10 V. On an I–V graph, I is vertical and V horizontal; the straight-line gradient is 1/R."
+          }
+        ]
+      }
+    },
+    "signature": "ace8ce5c9bc9e6bdb86f65fb0980b3a2898aaddf768b71f3d50643d56f227ccf"
   }
 };
 var parseRpgTerms_ = function parseRpgExpression(raw){
@@ -24649,4 +25973,23 @@ var parseRpgTerms_ = function parseRpgExpression(raw){
  const map={},seen=new Set();let simplified=true;
  for(const chunk of chunks){const match=chunk.match(/^([+-]?)(\d*)([xyz])?(?:\^([123]))?$/);if(!match||!match[2]&&!match[3]||match[4]&&!match[3])return null;const key=match[3]?match[3]+(match[4]&&match[4]!=='1'?'^'+match[4]:''):'constant';const n=(match[1]==='-'?-1:1)*(match[2]?Number(match[2]):1);if(!Number.isSafeInteger(n)||Math.abs(n)>999)return null;if(seen.has(key))simplified=false;seen.add(key);if(n===0&&(chunks.length>1||key!=='constant'))simplified=false;map[key]=(map[key]||0)+n;}
  const result={};for(const key of Object.keys(map).sort())if(map[key])result[key]=map[key];return {map:result,simplified};
+};
+var gradeElectricityAnswer_ = function gradeElectricityAnswer(v,a){
+ if(!v||!a||typeof a!=='object')return false;
+ if(v.type==='choice')return Number.isInteger(a.choice)&&a.choice===v.answer;
+ if(v.type==='sort')return !!a.placements&&typeof a.placements==='object'&&!Array.isArray(a.placements)&&Object.keys(a.placements).length===v.cards.length&&v.cards.every(c=>a.placements[c.id]===c.key);
+ const s=a.values;if(!s||typeof s!=='object'||Array.isArray(s))return false;
+ if(v.correctReason!==undefined&&a.reason!==v.correctReason)return false;
+ const number=(n,min,max)=>typeof n==='number'&&Number.isFinite(n)&&n>=min&&n<=max;
+ const integer=(n,min,max)=>number(n,min,max)&&Number.isInteger(n);
+ const near=(a,b)=>Math.abs(a-b)<=1e-6;
+ if(v.kind==='charge')return integer(s.transfers,0,6)&&-s.transfers===v.targetNet;
+ if(v.kind==='earth')return s.wire===true&&s.grounded===true&&s.settled===true&&s.net===0;
+ if(v.kind==='loop')return s.slots?.source==='cell'&&s.slots?.control==='switch'&&s.slots?.load==='lamp'&&s.closed===true;
+ if(v.kind==='meter')return s.placement===(v.meter==='ammeter'?'series':'parallel');
+ if(v.kind==='calculation')return number(s.value,-1e6,1e6)&&near(s.value,v.expectedValue)&&s.unit===v.unit;
+ if(v.kind==='ohm')return integer(s.voltage,0,12)&&near(s.voltage/v.resistance,v.targetCurrent);
+ if(v.kind==='wire')return integer(s.length,1,4)&&integer(s.diameter,1,3)&&near(s.length/s.diameter**2,v.targetRatio);
+ if(v.kind==='network')return s.connection===v.targetConnection&&s.a===v.targetA&&s.b===v.targetB;
+ return false;
 };

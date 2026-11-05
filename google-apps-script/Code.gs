@@ -362,10 +362,10 @@ function gameAnswerText_(game, question, answer) {
     return 'Carrier: '+(carriers[answer.carrier]||'Not selected')+'; Destination: '+(targets[answer.target]||'Not selected')+'; Explanation: '+(Number.isInteger(answer.explanation)&&question.options[answer.explanation]||'Not answered');
   }
   if (game.grader === 'organic' && typeof answer === 'object') return question.kind === 'molecule' ? 'Group: '+(answer.group||'Not selected')+'; Family: '+(answer.family==='acid'?'Carboxylic acid':answer.family==='alcohol'?'Alcohol':'Not selected')+'; Explanation: '+(question.options[answer.reason]||'Not answered') : (question.options[answer.choice]||'Not answered');
-  if (game.grader === 'like-terms-rpg' && typeof answer === 'object') {
+  if ((game.grader === 'like-terms-rpg' || game.grader === 'electricity-quest') && typeof answer === 'object') {
     var variant=Number.isInteger(answer.variant)&&question.variants[answer.variant];
     if (!variant) return 'No valid challenge variant';
-    var response=variant.type==='choice'?(variant.options[answer.choice]||'Not selected'):variant.type==='sort'?variant.cards.map(function(c){var bin=variant.bins.find(function(b){return answer.placements&&b.key===answer.placements[c.id];});return c.label+' → '+(bin?bin.label:'Not placed');}).join('; '):String(answer.expression||'Not answered');
+    var response=variant.type==='choice'?(variant.options[answer.choice]||'Not selected'):variant.type==='sort'?variant.cards.map(function(c){var bin=variant.bins.find(function(b){return answer.placements&&b.key===answer.placements[c.id];});return c.label+' → '+(bin?bin.label:'Not placed');}).join('; '):variant.type==='lab'?Object.keys(answer.values||{}).map(function(k){var value=answer.values[k];return k+': '+(value&&typeof value==='object'?JSON.stringify(value):String(value));}).join('; ')+(variant.reasons?' | Explanation: '+(variant.reasons[answer.reason]||'Not selected'):''):String(answer.expression||'Not answered');
     if(answer.merge)response+='; Pair coefficient: '+answer.merge.left+' + ('+answer.merge.right+') → '+answer.merge.submitted;
     return variant.prompt+' | '+response+(answer.usedWorkedSolution?' | Studied a worked example, then solved a fresh question':'');
   }
@@ -386,7 +386,12 @@ function gameGrade_(game, question, p) {
     else if (variant) {var parsed=typeof a.expression==='string'&&parseRpgTerms_(a.expression);correct=!!parsed&&parsed.simplified&&JSON.stringify(parsed.map)===JSON.stringify(variant.expected);}
   }
   if (!correct) throw new Error('Game solution does not match');
+  if (game.grader === 'electricity-quest') {
+    var electricityVariant=a&&Number.isInteger(a.variant)&&a.variant>=0&&question.variants[a.variant];
+    if (!electricityVariant || !gradeElectricityAnswer_(electricityVariant,a)) throw new Error('Game solution does not match');
+  }
   if (game.grader === 'like-terms-rpg' && a.usedWorkedSolution) return 1;
+  if (game.grader === 'electricity-quest' && a.usedWorkedSolution) return 1;
   return p.assisted ? 1 : game.rule === 'dispatch' ? (p.attempts > 1 ? 2 : 3) : Math.max(1, 4-p.attempts);
 }
 function saveGameAnswer_(p) {
@@ -423,7 +428,7 @@ function repairGameSummaries_(answers,sessions) {
     var identity=JSON.stringify(r.slice(3,10).concat(r[12],total));
     if(rows.some(function(v){return v[13]<1||v[13]>total||JSON.stringify(v.slice(3,10).concat(v[12],v[14]))!==identity;}))return;
     var stars=rows.reduce(function(n,v){return n+v[20];},0),max=total*3,completed=rows.map(function(v){return v[1];}).sort().pop();
-    var title=r[8]==='like-terms-rpg'?r[9]+' · '+r[11].split(' · ')[0]:r[9];
+    var title=['like-terms-rpg','electricity-quest-static','electricity-quest-circuits'].includes(r[8])?r[9]+' · '+r[11].split(' · ')[0]:r[9];
     append_(sessions,[id,completed,r[3],r[4],r[5],r[6],r[7],r[8],title,r[12],total,stars,max,Math.round(100*stars/max)]);known.add(id);repaired++;
   });return repaired;
 }

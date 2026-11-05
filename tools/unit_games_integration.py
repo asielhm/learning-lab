@@ -32,3 +32,5 @@ def integrate():
  (ROOT/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
  from like_terms_rpg import integrate_quest
  integrate_quest()
+ from electricity_quest import integrate_electricity_quest
+ integrate_electricity_quest()

@@ -22,10 +22,10 @@ function drawLandmark(ctx,level,time,lowMotion){
   rect(1,55,62,9,'#d8c78d');rect(6,50,52,5,'#9d90b9');rect(8,15,9,35,'#c5b3d6');rect(47,15,9,35,'#c5b3d6');rect(5,8,54,9,'#e2cf94');rect(13,2,38,7,'#aa93bf');rect(25,30,17,20,'#6d5a87');rect(29,22,9,9,'#f5da80');rect(27,24,13,4,'#f5da80');rect(32,18,3,16,'#fff0c0');
  }
 }
-export function drawWorld(ctx,map,objects,actor,state,{time=0,lowMotion=false,path=[],target=null,particles=[]}={}){
- const th=THEMES[Object.keys(THEMES)[state.level]],tile=32;ctx.clearRect(0,0,640,384);ctx.imageSmoothingEnabled=false;
+export function drawWorld(ctx,map,objects,actor,state,{time=0,lowMotion=false,path=[],target=null,particles=[],landmark=drawLandmark,theme=null}={}){
+ const th=theme||THEMES[Object.keys(THEMES)[state.level]],tile=32;ctx.clearRect(0,0,640,384);ctx.imageSmoothingEnabled=false;
  for(let y=0;y<12;y++)for(let x=0;x<20;x++){const k=map[y][x],px=x*tile,py=y*tile;ctx.fillStyle=k==='#'?th.wall:k==='~'?th.water:k==='='||k==='B'?th.path:th.floor;ctx.fillRect(px,py,tile,tile);if(k==='#'){ctx.fillStyle=th.tree;ctx.fillRect(px+2,py+2,28,11);ctx.fillRect(px+10,py+17,21,12);}else if(k==='T'){ctx.fillStyle='#6b594b';ctx.fillRect(px+12,py+17,8,14);ctx.fillStyle=th.tree;ctx.fillRect(px+4,py+3,24,19);ctx.fillRect(px+8,py,16,26);}else if(k==='~'){ctx.fillStyle='#d1e5dd88';const wave=lowMotion?0:Math.floor(time/500)%3;ctx.fillRect(px+3+wave*3,py+8,14,2);ctx.fillRect(px+12-wave*2,py+23,15,2);}else{ctx.fillStyle=th.shade;const n=(x*17+y*13+state.level*7)%9;if(n<4){ctx.fillRect(px+3+n*4,py+6,3,2);ctx.fillRect(px+19,py+22-n,2,4);}if(k==='B'){ctx.fillStyle='#9f805e';for(let j=0;j<4;j++)ctx.fillRect(px+j*8,py,2,32);}}}
- drawLandmark(ctx,state.level,time,lowMotion);
+ landmark(ctx,state.level,time,lowMotion);
  // Small flowers and crystal flecks make the floor readable without hiding paths.
  for(let y=1;y<11;y++)for(let x=1;x<19;x++)if(map[y][x]==='.'&&(x*7+y*11)%19===0){ctx.fillStyle=['#f1d29b','#dcb1bd','#d4dba2'][state.level%3];ctx.fillRect(x*tile+7,y*tile+12,5,3);ctx.fillRect(x*tile+8,y*tile+10,3,7);ctx.fillStyle='#567451';ctx.fillRect(x*tile+9,y*tile+17,2,4);}
  ctx.fillStyle='#ffe8a580';for(const[x,y]of path)ctx.fillRect(x*tile+14,y*tile+14,5,5);

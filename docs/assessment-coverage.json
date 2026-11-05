@@ -2159,6 +2159,40 @@
         "oxygen2": "activities/y9/science/blood-vessels/prepare.html#game-blood-dispatch-oxygen2"
       }
     },
+    "electricity-quest-circuits": {
+      "path": "activities/y9/science/electricity/circuits/prepare.html",
+      "rounds": {
+        "circuit-build": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-circuit-build",
+        "circuit-parts": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-circuit-parts",
+        "circuit-direction": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-circuit-direction",
+        "circuit-conservation": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-circuit-conservation",
+        "meter-place": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-meter-place",
+        "meter-current": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-meter-current",
+        "meter-voltage": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-meter-voltage",
+        "meter-power": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-meter-power",
+        "ohm-supply": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-ohm-supply",
+        "ohm-calculate": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-ohm-calculate",
+        "ohm-wire": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-ohm-wire",
+        "ohm-graph": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-ohm-graph",
+        "power-paths": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-power-paths",
+        "power-total": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-power-total",
+        "power-decisions": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-power-decisions",
+        "power-beacon": "activities/y9/science/electricity/circuits/prepare.html#game-electricity-quest-circuits-power-beacon"
+      }
+    },
+    "electricity-quest-static": {
+      "path": "activities/y9/science/electricity/static/prepare.html",
+      "rounds": {
+        "charge-particles": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-charge-particles",
+        "charge-transfer": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-charge-transfer",
+        "charge-forces": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-charge-forces",
+        "charge-wall": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-charge-wall",
+        "spark-materials": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-spark-materials",
+        "spark-earth": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-spark-earth",
+        "spark-conservation": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-spark-conservation",
+        "spark-uses": "activities/y9/science/electricity/static/prepare.html#game-electricity-quest-static-spark-uses"
+      }
+    },
     "gas-picture": {
       "path": "activities/y9/science/gas-laws/prepare.html",
       "rounds": {

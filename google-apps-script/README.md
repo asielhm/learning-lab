@@ -51,7 +51,7 @@ Local server/browser checks cover all 25 banks, identity requirements, recording
 
 ## Recorded question games
 
-The game catalogue includes 44 games / 221 rounds across Y7 Maths, Y9 Science,
+The game catalogue includes 46 recording entries / 245 rounds (45 student games; Voltvale has two topic parts) across Y7 Maths, Y9 Science,
 Y10 Physics and Y10 Chemistry. Public `assets/records/games.json` fingerprints
 match the catalogue appended to QuestionBank.gs. The capability endpoint returns
 `gameManifest` separately, preserving protocol-3 revision compatibility. Old

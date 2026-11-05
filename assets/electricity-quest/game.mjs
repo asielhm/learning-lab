@@ -1,0 +1,10 @@
+import{LEVELS,GAME,questById,recordingIds,gameForLevel}from'./data.mjs?v=1';
+import*as model from'./model.mjs?v=1';
+import*as ui from'./ui.mjs?v=1';
+import*as math from'./physics.mjs?v=1';
+import{extension}from'./lab.mjs';
+import{drawWorld}from'./art.mjs';
+import{createWorld as baseWorld}from'../like-terms-rpg/world.mjs?v=2';
+import{startAdventure}from'../pixel-adventure/engine.mjs?v=1';
+const createWorld=(canvas,state,callbacks,options)=>baseWorld(canvas,state,callbacks,{...options,model,drawWorld});
+startAdventure({LEVELS,GAME,questById,model,ui,math,createWorld,extension,recordingIds,gameForLevel,copy:{title:'Voltvale electricity adventure',mentor:'Engineer Sol',reward:'Your investigation restored a power crystal.',endingTitle:'You powered up Voltvale!',rank:'guardian of the electric city',finalRule:'Charge is conserved. A complete circuit lets current flow; voltage transfers energy per charge, and resistance helps determine the current.'}});

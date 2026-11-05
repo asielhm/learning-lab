@@ -396,6 +396,24 @@
       "signature": "459bb97cfa30a48c47ef7a29cf5c62a10c8bcb99248db6796d07853b5cd8c754",
       "roundCount": 24,
       "preparation": "activities/y7/maths/algebra-ii/prepare.html"
+    },
+    {
+      "id": "electricity-quest-static",
+      "title": "Voltvale: The Power Quest · Static charge",
+      "course": "Year 9 Science",
+      "topic": "y9-electricity-static",
+      "signature": "561a199967ff7c496321972ff6c1d79af6f2d7d74eebd0c6389b6650569ddc75",
+      "roundCount": 8,
+      "preparation": "activities/y9/science/electricity/static/prepare.html"
+    },
+    {
+      "id": "electricity-quest-circuits",
+      "title": "Voltvale: The Power Quest · Circuits",
+      "course": "Year 9 Science",
+      "topic": "y9-electricity-circuits",
+      "signature": "ace8ce5c9bc9e6bdb86f65fb0980b3a2898aaddf768b71f3d50643d56f227ccf",
+      "roundCount": 16,
+      "preparation": "activities/y9/science/electricity/circuits/prepare.html"
     }
   ]
 }

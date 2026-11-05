@@ -1,7 +1,7 @@
 # Teaching, games and teacher records
 
-Revision coverage remains 25 banks / 1,640 questions. Games add 44 catalogued games
-with 221 rounds. The course menu covers Y7 Maths, Y9 Science, Y10 Physics and Y10
+Revision coverage remains 25 banks / 1,640 questions. Games add 46 catalogued games
+with 245 rounds. The course menu covers Y7 Maths, Y9 Science, Y10 Physics and Y10
 Chemistry; Y9 games are Name That Gas Law (9), Mystery Word (30) and Transport
 Dispatch (10). Other simulations' practical controls and notebooks remain local.
 

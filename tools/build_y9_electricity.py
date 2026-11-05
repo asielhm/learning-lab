@@ -88,3 +88,5 @@ subprocess.run([sys.executable,str(ROOT/'tools/build_circuit_studio.py')],cwd=RO
 # Preserve the shared author wordmark when regenerating this section.
 from brand import apply_branding
 apply_branding()
+from electricity_quest import integrate_electricity_quest
+integrate_electricity_quest()
